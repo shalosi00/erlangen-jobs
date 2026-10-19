@@ -188,3 +188,11 @@ come from CDNs. Includes a real-browser screenshot; a GitHub Actions workflow
 | `geo_precision` | `city` | `street` (25 rows) or `city` centroid |
 | `geo_source` | `gazetteer` | `google\|photon\|zippopotam\|gazetteer\|cache` |
 
+### Hosting the map
+
+`map/index.html` is fully self-contained — open it directly from `file://`
+(double-click), no server needed. GitHub Pages is not available for private
+repos on the free plan (verified via API); if you make the repo public:
+Settings → Pages → *Deploy from a branch* → `main` / `/(root)` → map served
+at `https://shalosi00.github.io/erlangen-jobs/map/`.
+
