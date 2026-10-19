@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Network-layer unit tests (offline, 33 checks)
+        run: python tests/test_net_resilience.py
+
+      - name: Map-builder unit tests (offline, 21 checks)
+        run: python tests/test_build_map.py
+
+      - name: End-to-end pipeline (offline seed, no network)
+        run: python tests/e2e_test.py --live 0
+
+      - name: Map build smoke (bundled geocoded CSV)
+        run: |
+          python scripts/build_map.py --outdir /tmp/mapsmoke
+          test -s /tmp/mapsmoke/index.html
+          test -s /tmp/mapsmoke/jobs.geojson
+          grep -q '"payload"' /tmp/mapsmoke/index.html
+
+  strict-no-ip-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail if any network script can bypass the proxy pool
+        run: |
+          ! grep -rn --include='*.py' -E 'requests\.(get|post|head)\(' scripts/ \
+            | grep -v net_resilience.py
+          grep -q 'allow_direct' scripts/net_resilience.py
