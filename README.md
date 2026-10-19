@@ -161,3 +161,30 @@ offline). Address candidates are extracted from every job description
 (Arbeitsort/Standort/street+PLZ patterns). Cached in
 `data/work/address_geo_cache.json` — reruns are incremental and fill
 street-level precision over time.
+
+## Interactive map (stage 7)
+
+![map overview](map/screenshot.png)
+
+```bash
+bash run.sh --build-map           # or: .venv/bin/python scripts/build_map.py
+# -> map/index.html  (self-contained: double-click to open, no server needed)
+# -> map/jobs.geojson (1 feature per job, for GIS reuse)
+```
+
+Self-contained **Leaflet** map of every job in the final CSV: 1,413 jobs
+collapse into employer pins (one pin per company+location, popup lists all of
+that employer's postings with direct links), marker color = source portal,
+marker clustering, live search (title/employer), per-portal filters, top-25
+employer fly-to, dark Esri basemap. The geocoded dataset is embedded inline —
+the HTML renders offline from `file://`; only Leaflet/JS libs and map tiles
+come from CDNs. Includes a real-browser screenshot; a GitHub Actions workflow
+(`.github/workflows/ci.yml`) rebuilds and smoke-tests the map on every push.
+
+| column | example | meaning |
+|---|---|---|
+| `company_address` | `Nürnberg (Korridor-Gemeinde)` | resolved address / town |
+| `lat`, `lon` | `49.589157, 10.981207` | WGS84 workplace coords |
+| `geo_precision` | `city` | `street` (25 rows) or `city` centroid |
+| `geo_source` | `gazetteer` | `google\|photon\|zippopotam\|gazetteer\|cache` |
+

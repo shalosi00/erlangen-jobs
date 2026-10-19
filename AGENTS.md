@@ -38,11 +38,16 @@ scripts/net_resilience.py        shared self-adaptive network layer (see below);
 scripts/enrich_addresses.py      stage 6 (optional): company_address + lat/lon columns
                                  providers: GOOGLE_MAPS_API_KEY → photon → zippopotam (proxy pool) → offline gazetteer
                                  cache data/work/address_geo_cache.json (negative-caching, resumable)
+scripts/build_map.py             stage 7 (optional): self-contained Leaflet map from the geocoded CSV
+                                 → map/index.html (data embedded inline, works from file://) + map/jobs.geojson
+                                 aggregates rows per (company, lat, lon); portal-colored pins; offline-tested in tests/test_build_map.py
 scripts/de_job_score.py          optional LLM top-10 via `z-ai chat` binary (degrades gracefully if absent)
 scripts/de_job_scan.py           standalone DE-wide jobspy scan utility (not part of the Erlangen chain)
 scripts/split_final_5.py         standalone record-aware N-split (--src, --parts, --outdir)
 tests/test_net_resilience.py     33 offline unit tests (local mock HTTP + fake proxy)
+tests/test_build_map.py          21 offline unit tests for the map builder (aggregation, XSS escaping, GeoJSON)
 tests/e2e_test.py                19 E2E checks: (A) leak-audit, (B) refusal tests, (C) offline full chain, (D) optional live
+.github/workflows/ci.yml         GitHub Actions CI: unit tests + offline e2e + map smoke + strict no-IP audit
 setup.sh / run.sh                bootstrap / arg-forwarding wrapper
 data/rail_corridor.json          corridor gazetteer: 23 stations, 62 towns, tier trunk_direct|transfer1
 data/geocode_cache.json          pre-seeded Nominatim cache (632 KB)
@@ -74,7 +79,12 @@ All flags optional. Key groups:
 - filters: `--fresh-days 30`, `--max-km 50`, `--station-km 3.0`, `--include-remote`, `--no-prefilter`, `--no-fp-guard`
 - descriptions: `--fetch-desc`, `--limit-desc N`, `--desc-phase {all,li,direct,indeed,csv}`, `--desc-checkpoint P`
 - network policy: `--proxy-refresh`, `--allow-direct` (opt-out), `--no-proxy` (requires allow-direct)
-- output: `--out P`, `--parts N`, `--workdir P`
+- output: `--out P`, `--parts N`, `--workdir P`, `--enrich-geo`, `--build-map`
+
+Rebuild counts decay over time by design: `--fresh-days 30` ages postings out
+(the bundled 1,413-row reference snapshot was cut 2026-10-18; offline rebuilds
+later drift downward, e.g. 1,379 on 10-20 — the e2e asserts a floor of 1,300
+plus parts integrity, not fossil parity).
 
 Exit codes: 0 = ok; 1 = honest failure (message on stderr). Friendly hint is printed when `data/raw/` is empty (suggests `--sweep`).
 
