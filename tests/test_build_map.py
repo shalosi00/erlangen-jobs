@@ -33,7 +33,7 @@ def row(title="Engineer", company="ACME GmbH", lat="49.58", lon="11.01",
 
 # ------------------------------------------------------------- aggregation
 print("aggregate():")
-markers, skipped = bm.aggregate([
+markers, skipped, _spread = bm.aggregate([
     row(), row(title="DevOps", date_posted="2026-10-12"),          # same company+point -> 1 marker
     row(company="Other AG", lat="49.4", lon="10.5"),               # different company -> own marker
     row(lat="", lon=""), row(lat="99.9", lon="999"),               # bad coords -> skipped
@@ -45,7 +45,7 @@ check("jobs sorted newest first", markers[0]["jobs"][0]["d"] == "2026-10-12")
 check("main portal picked", markers[0]["portal"].lower() == "indeed")
 check("popup has company", "ACME GmbH" in markers[0]["popup"])
 
-m2, s2 = bm.aggregate([row(company="<script>alert(1)</script> AG",
+m2, s2, _ = bm.aggregate([row(company="<script>alert(1)</script> AG",
                            title="T</script>X", portal="WeirdPortal")])
 check("company HTML-escaped in popup", "<script>" not in m2[0]["popup"]
       and "&lt;script&gt;" in m2[0]["popup"])
