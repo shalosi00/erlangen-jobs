@@ -4,7 +4,7 @@ __pycache__/
 .venv/
 
 # transient runtime state (proxy pool status, geocode query cache, run logs)
-data/work/
+data/work*/
 
 # os / editor noise
 .DS_Store

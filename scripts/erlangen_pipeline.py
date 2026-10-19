@@ -86,6 +86,11 @@ def _enrich_file(csv_path, args):
     run(cmd)
     print(f"stage 6: geo-enriched {csv_path}")
 
+def _map_file(csv_path):
+    """Stage 7: render the geocoded final CSV into a self-contained Leaflet map."""
+    run([sys.executable, os.path.join(SCRIPTS, "build_map.py"), "--input", csv_path])
+    print(f"stage 7: map written to {os.path.join(BASE, 'map')}")
+
 
 def main():
     ap = argparse.ArgumentParser(description="Erlangen job pipeline -> one final CSV")
@@ -135,6 +140,10 @@ def main():
                          "(map-ready; Google if GOOGLE_MAPS_API_KEY set, else "
                          "Photon/zippopotam via proxy pool + offline gazetteer; "
                          "cached, resumable)")
+    ap.add_argument("--build-map", action="store_true",
+                    help="stage 7: render the final CSV into map/index.html "
+                         "(self-contained Leaflet map; needs lat/lon, so run "
+                         "together with --enrich-geo or on a geocoded CSV)")
     args = ap.parse_args()
 
     if args.no_proxy and not args.allow_direct:
@@ -228,6 +237,8 @@ def main():
         print(f"output: {fin}")
         if args.enrich_geo:
             _enrich_file(fin, args)
+        if args.build_map:
+            _map_file(fin)
         if args.parts:
             _split_parts(fin, args.parts)
         return
@@ -264,6 +275,8 @@ def main():
         _split_parts(out, args.parts)
     if args.enrich_geo:
         _enrich_file(out, args)
+    if args.build_map:
+        _map_file(out)
 
     dt = time.time() - t0
     from collections import Counter
