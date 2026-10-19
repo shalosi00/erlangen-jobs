@@ -14,7 +14,7 @@ Usage:
   python3 scripts/build_map.py --input download/erlangen_jobs_final_20261018_geo.csv
   python3 scripts/build_map.py --outdir map --title "Erlangen Job Corridor"
 """
-import argparse, csv, datetime, html, json, os, re, sys
+import argparse, csv, datetime, html, json, math, os, re, sys
 from collections import Counter, defaultdict
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -95,8 +95,9 @@ def aggregate(rows):
         badges = " ".join(
             f'<span class="badge" style="background:{portal_color(p)}">{html.escape(str(p))}&nbsp;·&nbsp;{c}</span>'
             for p, c in portal_names.most_common(6))
-        prec_badge = ('<span class="prec">≈ city centroid</span>' if precision == "city"
-                      else '<span class="prec street">street-level</span>')
+        prec_badge = ('<span class="prec">≈ town centre</span>' if precision == "city"
+                      else '<span class="prec poi">company POI</span>' if precision == "poi"
+                      else '<span class="prec street">street address</span>')
         rows_html = []
         for j in jobs[:8]:
             link = (f'<a href="{html.escape(j["u"], quote=True)}" target="_blank" rel="noopener">'
@@ -117,7 +118,28 @@ def aggregate(rows):
             "color": color, "popup": popup, "jobs": jobs,
         })
     markers.sort(key=lambda m: -m["n"])
-    return markers, skipped
+
+    # Spread employers that share an identical point (city-centroid stacks):
+    # deterministic golden-angle spiral, so EVERY company gets its own dot.
+    # True coordinates stay in jobs.geojson; the HTML uses the spread position.
+    by_point = defaultdict(list)
+    for m in markers:
+        by_point[(m["lat"], m["lon"])].append(m)
+    n_spread = 0
+    for (lat, lon), ms in by_point.items():
+        if len(ms) < 2:
+            continue
+        n = len(ms)
+        for i, m in enumerate(sorted(ms, key=lambda x: x["company"])):
+            ang = i * 2.39996323                              # golden angle
+            # sunflower disc: radii fill 0..cap uniformly, lon corrected for
+            # latitude so the spread looks circular, not elliptical
+            rad = 0.009 * math.sqrt((i + 0.5) / n)
+            m["lat"] = round(lat + rad * math.cos(ang), 6)
+            m["lon"] = round(lon + rad * math.sin(ang) / math.cos(math.radians(lat)), 6)
+            m["spread"] = True
+            n_spread += 1
+    return markers, skipped, n_spread
 
 # ------------------------------------------------------------------ geojson
 def build_geojson(rows):
@@ -144,8 +166,6 @@ TEMPLATE = r"""<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>__TITLE__</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
-<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
 <style>
 :root{--bg:#10151c;--panel:#161d27;--edge:#232d3b;--txt:#dbe4ee;--dim:#8296ac;--hot:#4dabf7}
 *{box-sizing:border-box}html,body{margin:0;height:100%;background:var(--bg);color:var(--txt);
@@ -187,6 +207,7 @@ TEMPLATE = r"""<!DOCTYPE html>
 .pa{color:var(--dim);font-size:12px;margin:2px 0 6px}
 .prec{font-size:10px;border:1px solid var(--edge);border-radius:20px;padding:1px 7px;color:var(--dim)}
 .prec.street{border-color:#12b886;color:#12b886}
+.prec.poi{border-color:#b197fc;color:#b197fc}
 .badge{display:inline-block;font-size:10px;border-radius:20px;padding:1px 7px;margin-left:4px;color:#fff}
 .pj{list-style:none;margin:8px 0 0;padding:0;max-height:250px;overflow:auto}
 .pj li{padding:6px 0;border-top:1px solid var(--edge)}
@@ -213,7 +234,7 @@ li.more{color:var(--dim);font-size:12px}
   <div id="toplist"></div>
   <footer>
    Generated __GENERATED__ · data: <code>__CSV__</code><br>
-   Scraped via strict proxy-only network · geocoding: OSM gazetteer/Photon<br>
+   Scraped via strict proxy-only network · company-level geocoding: Photon/OSM<br>
    <a href="https://github.com/shalosi00/erlangen-jobs" target="_blank" rel="noopener">github.com/shalosi00/erlangen-jobs</a>
   </footer>
  </div>
@@ -221,7 +242,6 @@ li.more{color:var(--dim);font-size:12px}
 </div>
 <script id="payload" type="application/json">__PAYLOAD__</script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script>
 const P = JSON.parse(document.getElementById('payload').textContent);
 const esc = s => { const d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; };
@@ -231,21 +251,20 @@ const ctr = P.markers.length
   ? [P.markers.reduce((s,m)=>s+m.lat,0)/P.markers.length,
      P.markers.reduce((s,m)=>s+m.lon,0)/P.markers.length]
   : [49.55, 10.95];
-map.setView(ctr, 9);
+map.setView(ctr, 10);
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
-  maxZoom: 16,
+  maxZoom: 17,
   attribution: 'Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors'
 }).addTo(map);
 
-const cluster = L.markerClusterGroup({ chunkedLoading: true, maxClusterRadius: 48,
-  showCoverageOnHover: false, spiderfyOnMaxZoom: true });
+// every employer is its OWN marker — no clustering
+const layer = L.layerGroup().addTo(map);
 const all = P.markers.map(m => {
   const c = L.circleMarker([m.lat, m.lon], {
-    radius: 7, color: '#0b0f14', weight: 1.5, fillColor: m.color, fillOpacity: .92 });
+    radius: 5.5, color: '#eef4fb', weight: 1.1, fillColor: m.color, fillOpacity: .88 });
   c.bindPopup(m.popup, { maxWidth: 360 });
   c._m = m; return c;
 });
-cluster.addLayers(all); map.addLayer(cluster);
 
 function applyFilters(){
   const q = document.getElementById('search').value.trim().toLowerCase();
@@ -257,10 +276,13 @@ function applyFilters(){
                m.jobs.some(j => (j.t||'').toLowerCase().includes(q)))) return false;
     return true;
   });
-  cluster.clearLayers(); cluster.addLayers(keep);
+  layer.clearLayers(); keep.forEach(c => layer.addLayer(c));
+  const prec = P.prec || {};
+  const streetish = (prec.street||0) + (prec.poi||0);
   document.getElementById('stats').innerHTML =
-    `<b>${keep.reduce((s,c)=>s+c._m.n,0)}</b> jobs · <b>${keep.length}</b> employers · ${P.townCount} towns` +
-    ` <span class="count-badge">${P.nSkipped ? P.nSkipped + ' unlocated' : '100% located'}</span>`;
+    `<b>${keep.reduce((s,c)=>s+c._m.n,0)}</b> jobs · <b>${keep.length}</b> employers · ${P.townCount} locations` +
+    ` <span class="count-badge">${streetish} at real address</span>` +
+    (P.nSkipped ? ` <span class="count-badge">${P.nSkipped} unlocated</span>` : '');
 }
 document.getElementById('search').addEventListener('input', applyFilters);
 
@@ -284,13 +306,14 @@ P.topEmployers.forEach(e => {
     <span class="en">${e.n}</span>`;
   d.onclick = () => {
     const c = all.find(x => x._m.company === e.company);
-    if (c) { map.flyTo([c._m.lat, c._m.lon], 13, { duration: .8 });
+    if (c) { const z = (c._m.precision === 'street' || c._m.precision === 'poi') ? 15 : 13;
+             map.flyTo([c._m.lat, c._m.lon], z, { duration: .8 });
              setTimeout(() => c.openPopup(), 850); }
   };
   tdiv.appendChild(d);
 });
 
-document.getElementById('reset').onclick = () => map.setView(ctr, 9);
+document.getElementById('reset').onclick = () => map.setView(ctr, 10);
 applyFilters();
 </script>
 </body>
@@ -313,7 +336,7 @@ def main():
 
     src = a.input or latest_geo_csv()
     rows = load_rows(src)
-    markers, skipped = aggregate(rows)
+    markers, skipped, n_spread = aggregate(rows)
     portals = Counter(m["portal"] for m in markers)
     colors_seen = {}
     plist = []
@@ -323,10 +346,11 @@ def main():
     towns = {m["address"] for m in markers if m["address"]}
     top_emp = [{"company": m["company"], "n": m["n"], "address": m["address"],
                 "color": m["color"]} for m in markers[:25]]
+    prec = dict(Counter(m["precision"] or "city" for m in markers))
 
     payload = {
         "markers": markers, "portals": plist, "topEmployers": top_emp,
-        "townCount": len(towns), "nSkipped": skipped,
+        "townCount": len(towns), "nSkipped": skipped, "prec": prec,
         "generated": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
     }
     os.makedirs(a.outdir, exist_ok=True)
@@ -343,8 +367,10 @@ def main():
     print(f"input : {os.path.basename(src)} ({len(rows)} rows)")
     print(f"output: {out_html} ({os.path.getsize(out_html)//1024} KB)")
     print(f"        {out_gj} ({len(gj['features'])} features)")
-    print(f"map   : {n_jobs} jobs @ {len(markers)} employer pins, "
-          f"{len(plist)} portals, {len(towns)} towns, street-precision rows: {street}")
+    print(f"map   : {n_jobs} jobs @ {len(markers)} individual employer pins, "
+          f"{len(plist)} portals, {len(towns)} unique addresses")
+    print(f"geo   : street={prec.get('street',0)} poi={prec.get('poi',0)} "
+          f"city={prec.get('city',0)} | {n_spread} stacked pins spread apart")
 
 if __name__ == "__main__":
     main()
