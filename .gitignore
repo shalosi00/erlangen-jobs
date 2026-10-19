@@ -1,0 +1,13 @@
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# transient runtime state (proxy pool status, geocode query cache, run logs)
+data/work/
+
+# os / editor noise
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
