@@ -190,8 +190,8 @@ def _unfold_name(t):
     return t.title()
 
 # ---------------------------------------------------------------- geocoders
-_LAST_HIT = {"google": 0.0, "nominatim": 0.0, "photon": 0.0}
-_MIN_GAP = {"google": 0.12, "nominatim": 1.1, "photon": 0.35}
+_LAST_HIT = {"google": 0.0, "nominatim": 0.0, "photon": 0.0, "mapsco": 0.0}
+_MIN_GAP = {"google": 0.12, "nominatim": 1.1, "photon": 0.35, "mapsco": 0.22}
 
 def _pace(prov):
     wait = _MIN_GAP[prov] - (time.time() - _LAST_HIT[prov])
@@ -274,6 +274,23 @@ def geo_photon(q, allow_direct):
         return {"lat": c[1], "lon": c[0], "display": disp, "source": "photon", "precision": prec}
     return None
 
+def geo_mapsco(q, key, allow_direct):
+    """geocode.maps.co — Nominatim-grade forward geocoder, API-keyed (5 req/s
+    free demo tier). Key comes from GEOCODE_MAPS_API_KEY, never logged/committed."""
+    _pace("mapsco")
+    u = ("https://geocode.maps.co/search?format=jsonv2&countrycodes=de&q="
+         + urllib.parse.quote(q) + "&api_key=" + key)
+    j = _fetch_json(u, {"Accept": "application/json"}, allow_direct=allow_direct)
+    r = j if isinstance(j, list) else []
+    if r:
+        a = r[0].get("address") or {}
+        prec = "street" if (a.get("house_number") or a.get("road")) else "city"
+        return {"lat": float(r[0]["lat"]), "lon": float(r[0]["lon"]),
+                "display": r[0].get("display_name", q), "source": "mapsco",
+                "precision": prec, "category": r[0].get("category", ""),
+                "name": r[0].get("name", "")}
+    return None
+
 def geo_zippopotam(q, allow_direct):
     """PLZ -> city centroid fallback (query like '91052 Erlangen')."""
     m = re.match(r"^(\d{5})\b", q.strip())
@@ -310,7 +327,7 @@ def save_cache(cache):
 def norm_key(s):
     return re.sub(r"[^a-zäöüß0-9]+", " ", (s or "").lower()).strip()
 
-def resolve(query, cache, provider, google_key, allow_direct, deadline):
+def resolve(query, cache, provider, google_key, allow_direct, deadline, mapsco_key=""):
     k = norm_key(query)
     if not k:
         return None
@@ -326,6 +343,9 @@ def resolve(query, cache, provider, google_key, allow_direct, deadline):
     hit = None
     if provider == "auto" and google_key and time.time() <= deadline:
         hit = geo_google(query, google_key, allow_direct)
+    if not hit and (provider == "mapsco" or (provider == "auto" and mapsco_key)) \
+            and mapsco_key and time.time() <= deadline:
+        hit = geo_mapsco(query, mapsco_key, allow_direct)
     if not hit and provider in ("auto", "photon") and time.time() <= deadline:
         hit = geo_photon(query, allow_direct)
     if not hit and provider in ("auto", "zippopotam") and time.time() <= deadline:
@@ -344,7 +364,8 @@ def main():
     ap.add_argument("--input", default=None, help="final CSV (default: newest download/erlangen_jobs_final_*.csv)")
     ap.add_argument("--out", default=None, help="output CSV (default: overwrite input atomically)")
     ap.add_argument("--limit", type=int, default=0, help="only first N rows (smoke)")
-    ap.add_argument("--provider", default="auto", choices=["auto", "google", "nominatim", "photon", "zippopotam", "offline"])
+    ap.add_argument("--provider", default="auto",
+                    choices=["auto", "google", "mapsco", "nominatim", "photon", "zippopotam", "offline"])
     ap.add_argument("--budget-sec", type=int, default=1200, help="max network time (cache makes reruns resume)")
     ap.add_argument("--allow-direct", action="store_true", help="opt-out of strict no-IP mode (not recommended)")
     a = ap.parse_args()
@@ -368,6 +389,7 @@ def main():
 
     cache = load_cache()
     google_key = os.environ.get("GOOGLE_MAPS_API_KEY", "")
+    mapsco_key = os.environ.get("GEOCODE_MAPS_API_KEY", "")
     provider = a.provider
     deadline = time.time() + a.budget_sec
     t0 = time.time()
@@ -393,7 +415,7 @@ def main():
         if gazetteer_city(q):
             continue
         tried += 1
-        hit = resolve(q, cache, provider, google_key, a.allow_direct, deadline)
+        hit = resolve(q, cache, provider, google_key, a.allow_direct, deadline, mapsco_key)
         resolved += 1 if hit else 0
         if tried % 25 == 0:
             save_cache(cache)
