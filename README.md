@@ -146,21 +146,28 @@ For machine-readable documentation (automation, agents): see **AGENTS.md**.
 ## Map-ready geo enrichment (stage 6)
 
 ```bash
-bash run.sh --enrich-geo          # adds 5 columns to the final CSV
-# or standalone:
-.venv/bin/python scripts/enrich_addresses.py --out download/final.csv
+bash run.sh --enrich-geo          # full automatic chain, every pass budget-capped & resumable
+bash run.sh --enrich-geo --geo-budget 600   # more time per pass
 ```
 
 New columns: `company_address` (resolved street address or town), `lat`, `lon`
-(WGS84, map-ready), `geo_precision` (`street` | `city`), `geo_source`.
-Providers: **Google Geocoding** (activates automatically when
-`GOOGLE_MAPS_API_KEY` is exported — best quality, $5/1k, 10k free/mo),
-then **Photon** + zippopotam through the strict proxy pool, then the bundled
-offline gazetteer (62 corridor towns + 457 cached lookups → 100% coverage
-offline). Address candidates are extracted from every job description
-(Arbeitsort/Standort/street+PLZ patterns). Cached in
-`data/work/address_geo_cache.json` — reruns are incremental and fill
-street-level precision over time.
+(WGS84, map-ready), `geo_precision` (`street` | `poi` | `city`), `geo_source`.
+
+Stage 6 tries, in order, until every record has a place:
+
+| pass | source | key needed | notes |
+|------|--------|------------|-------|
+| 6a | row-level: address in description, zippopotam, gazetteer | — | 100% coverage floor |
+| 6b | Photon by **company name** (location-biased) | — | proxy pool |
+| 6c | geocode.maps.co by company name | `GEOCODE_MAPS_API_KEY` | Nominatim-grade, ~4.5 req/s |
+| 6d | **Google Maps via headless browser** | — | `agent-browser` CLI; resumable; no API key |
+| 6e | street lines mined from job descriptions | — | house-number + ≤12 km gates |
+
+Every later pass only touches employers still at town-centroid precision;
+results are sanity-gated (distance to the town, name match, no highways) so a
+wrong pin never replaces an honest one. Caches live in `data/work/` — reruns
+are incremental. Current snapshot: **1,257 / 1,413 rows (89%) at a real
+address**, the rest carry an honest "≈ town centre" badge on the map.
 
 ## Interactive map (stage 7)
 
@@ -173,9 +180,10 @@ bash run.sh --build-map           # or: .venv/bin/python scripts/build_map.py
 ```
 
 Self-contained **Leaflet** map of every job in the final CSV: 1,413 jobs
-collapse into employer pins (one pin per company+location, popup lists all of
-that employer's postings with direct links), marker color = source portal,
-marker clustering, live search (title/employer), per-portal filters, top-25
+collapse into employer pins (one pin per company+location, popup lists ALL of
+that employer's postings with direct clickable links), marker color = source
+portal, no clustering — every company is its own dot (stacked pins fan out in
+a sunflower spiral), live search (title/employer), per-portal filters, top-25
 employer fly-to, dark Esri basemap. The geocoded dataset is embedded inline —
 the HTML renders offline from `file://`; only Leaflet/JS libs and map tiles
 come from CDNs. Includes a real-browser screenshot; a GitHub Actions workflow

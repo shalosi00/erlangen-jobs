@@ -48,7 +48,19 @@ def ab(cmd, timeout=40):
         return ""
 
 def clean_company(name):
-    return re.sub(r"\s+", " ", re.sub(r"\([^)]*\)", "", name or "")).strip()
+    """Strip parens, emojis/pipes (portal junk like 'mamgo | Talente 🔗 Jobs'),
+    legal suffixes stay — Google matches them fine, but noise hurts."""
+    c = re.sub(r"\([^)]*\)", " ", name or "")
+    c = re.sub(r"[^\w\s&+.\-]|_", " ", c, flags=re.UNICODE)   # kill |, 🔗, emojis
+    return re.sub(r"\s+", " ", c).strip(" -")
+
+def name_from_url(place_url):
+    """Fallback place name from the canonical /maps/place/<slug>/... URL."""
+    try:
+        slug = place_url.split("/maps/place/")[1].split("/")[0]
+        return urllib.parse.unquote(slug.replace("+", " ")).strip()
+    except Exception:
+        return ""
 
 def load_json():
     if os.path.exists(POI_JSON):
@@ -65,14 +77,22 @@ def save_json(d):
     os.replace(tmp, POI_JSON)
 
 def lookup_one(company, city, clat, clon):
-    """One Google Maps search. Returns hit dict (or {'reject': reason})."""
-    q = f"{clean_company(company)} {city}"
+    """One Google Maps search (with a no-city fallback query). Returns hit
+    dict or {'reject': reason}. Wrong-city/rejected results are NOT retried."""
+    cc = clean_company(company)
+    hit = _lookup_query(f"{cc} {city}", company, city, clat, clon)
+    if hit is None and cc:                                  # one fallback attempt
+        hit = _lookup_query(cc, company, city, clat, clon)
+    return hit if hit is not None else {"reject": "no-place-url", "q": cc}
+
+def _lookup_query(q, company, city, clat, clon):
+    cc = clean_company(company)
     url = "https://www.google.com/maps/search/" + urllib.parse.quote_plus(q) + "?hl=en"
     ab(["open", url], timeout=45)
-    deadline = time.time() + 14
+    deadline = time.time() + 16
     place_url = ""
     while time.time() < deadline:
-        time.sleep(2.0)
+        time.sleep(1.2)
         u = ab(["get", "url"], timeout=20)
         if "/maps/place/" in u:
             place_url = u
@@ -82,14 +102,14 @@ def lookup_one(company, city, clat, clon):
     if not place_url:
         # try clicking the first result card, then wait for a real place page
         ab(["eval", "var e=document.querySelector('a.hfpxzc'); if(e){e.click();} 0"], timeout=25)
-        deadline2 = time.time() + 10
+        deadline2 = time.time() + 12
         while time.time() < deadline2:
-            time.sleep(2.0)
+            time.sleep(1.2)
             place_url = ab(["get", "url"], timeout=20)
             if "/maps/place/" in place_url:
                 break
         if "/maps/place/" not in place_url:
-            return {"reject": "no-place-url", "q": q}
+            return None                                   # caller may retry another query
     m = re.search(r"!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)", place_url) or \
         re.search(r"/@(-?\d+\.\d+),(-?\d+\.\d+)", place_url)
     if not m:
@@ -97,9 +117,9 @@ def lookup_one(company, city, clat, clon):
     lat, lon = float(m.group(1)), float(m.group(2))
     # poll until the place panel has actually replaced the results list
     info, name, addr = "", "", ""
-    deadline3 = time.time() + 8
+    deadline3 = time.time() + 12
     while time.time() < deadline3:
-        time.sleep(1.5)
+        time.sleep(1.2)
         info = ab(["eval", "(document.querySelector('h1')||{textContent:''}).textContent"
                            " + ' ||| ' + ((document.querySelector('button[data-item-id=\"address\"]')"
                            "||{ariaLabel:''}).ariaLabel || '')"], timeout=25)
@@ -107,16 +127,26 @@ def lookup_one(company, city, clat, clon):
         name, _, addr = info.partition(" ||| ")
         if name and name.strip().lower() not in ("results", ""):
             break
+    if not name or name.strip().lower() == "results":
+        slug = name_from_url(place_url)
+        if slug:
+            name = slug                                     # URL slug is authoritative
     addr = re.sub(r"^Address:\s*", "", (addr or "")).strip().strip('"').strip().rstrip(",")
     name = (name or "").strip().strip('"')
     # ---- sanity gates
     dist = haversine(clat, clon, lat, lon)
     if dist > 30:
         return {"reject": f"far-{dist:.0f}km", "q": q, "name": name}
-    ctok = _fold(clean_company(company)).split()[0] if clean_company(company) else ""
-    if ctok and ctok not in _fold(name):
-        if not (city and city.split()[0].lower() in _fold(addr).lower()):
-            return {"reject": "name-mismatch", "q": q, "name": name}
+    # name gate: ANY meaningful company token must appear in the result name.
+    # ('The Adecco Group' -> 'Adecco ...', 'FAU Erlangen-Nürnberg' -> 'University
+    # of Erlangen-Nuremberg'). A bare city name as the result is NOT a match.
+    ALIAS = {"telekom": "tmobile", "tmobile": "telekom"}
+    toks = [re.sub(r"[^a-z0-9]", "", t) for t in _fold(cc).split()]
+    toks = [t for t in toks if len(t) >= 2]
+    toks += [ALIAS[t] for t in list(toks) if t in ALIAS]
+    name_f = _fold(name)
+    if not any(t in name_f for t in toks):
+        return {"reject": "name-mismatch", "q": q, "name": name}
     return {"lat": lat, "lon": lon, "name": name, "address": addr,
             "km": round(dist, 1), "source": "google-maps", "q": q}
 
