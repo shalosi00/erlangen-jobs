@@ -196,6 +196,26 @@ come from CDNs. Includes a real-browser screenshot; a GitHub Actions workflow
 | `geo_precision` | `city` | `street` (25 rows) or `city` centroid |
 | `geo_source` | `gazetteer` | `google\|photon\|zippopotam\|gazetteer\|cache` |
 
+### Company overview map (`map/companies.html`)
+
+```bash
+python3 scripts/build_companies_map.py            # fetch (cached, resumable) + render
+python3 scripts/build_companies_map.py --counts   # per-category volumes only
+```
+
+A second, independent map: **literally every named company between Bamberg and
+Nürnberg as its own point** — not just job employers. Companies come straight
+from OpenStreetMap via a Photon letter-sweep over the corridor (10,943
+companies: 6,942 retail / 2,532 office / 823 craft / 646 industry), so no
+geocoding is needed — coordinates ship with the data. Employers that appear in
+the current job CSV get a yellow "hiring now" ring with the open-job count
+(614 companies at build time). Sidebar: live search, per-category filters,
+"only companies with job openings" toggle; popups show address, category and
+the newest posting. Traffic is pool-first; `ERL_ALLOW_DIRECT=1` opts into the
+fast direct lane. Progress is cached per letter (`data/work/photon_tiles/`) —
+rerun to resume after an interrupted sweep. Offline-tested in
+`tests/test_companies_map.py` (14 tests).
+
 ### Hosting the map
 
 `map/index.html` is fully self-contained — open it directly from `file://`
