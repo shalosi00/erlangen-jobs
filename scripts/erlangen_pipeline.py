@@ -26,7 +26,7 @@ Usage:
 Scoring (optional, separate LLM pass):
   python3 scripts/de_job_score.py        # reads the newest erlangen_jobs_final_*.csv
 """
-import argparse, csv, glob, json, os, subprocess, sys, time
+import argparse, csv, glob, json, os, shutil, subprocess, sys, time
 from datetime import date
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -78,13 +78,42 @@ def _split_parts(src, parts):
           f"— integrity OK ({total} == {n})")
 
 def _enrich_file(csv_path, args):
-    """Stage 6: add company_address + lat/lon (map-ready) to the final CSV."""
-    cmd = [sys.executable, os.path.join(SCRIPTS, "enrich_addresses.py"),
-           "--input", csv_path, "--out", csv_path, "--budget-sec", "1500"]
-    if args.allow_direct:
-        cmd.append("--allow-direct")
-    run(cmd)
-    print(f"stage 6: geo-enriched {csv_path}")
+    """Stage 6: make EVERY record map-ready — automatic best-effort chain:
+      6a row-level enrich (address in description, zippopotam, gazetteer)
+      6b per-COMPANY geocode, Photon by name (proxy pool)
+      6c per-COMPANY geocode, geocode.maps.co by name (needs GEOCODE_MAPS_API_KEY)
+      6d per-COMPANY Google-Maps lookup via headless browser — no API key
+         (needs agent-browser CLI; resumable data/work/google_poi.json)
+      6e description mining: literal street lines inside job postings
+    Every stage is budget-capped, cached and resumable; each later stage only
+    touches rows still at town-centroid precision."""
+    run([sys.executable, os.path.join(SCRIPTS, "enrich_addresses.py"),
+         "--input", csv_path, "--out", csv_path, "--budget-sec", "1500"]
+        + (["--allow-direct"] if args.allow_direct else []))
+    print("stage 6a: row-level geo-enriched", csv_path)
+
+    run([sys.executable, os.path.join(SCRIPTS, "geocode_companies.py"),
+         "--input", csv_path, "--budget-sec", str(args.geo_budget)])
+    print("stage 6b: per-company Photon pass done")
+
+    if os.environ.get("GEOCODE_MAPS_API_KEY"):
+        run([sys.executable, os.path.join(SCRIPTS, "geocode_companies.py"),
+             "--input", csv_path, "--provider", "mapsco",
+             "--budget-sec", str(args.geo_budget)])
+        print("stage 6c: per-company maps.co pass done")
+    else:
+        print("stage 6c: skipped (set GEOCODE_MAPS_API_KEY for the maps.co pass)")
+
+    if shutil.which("agent-browser"):
+        run([sys.executable, os.path.join(SCRIPTS, "google_poi_lookup.py"),
+             "--input", csv_path, "--budget-sec", str(args.geo_budget)])
+        print("stage 6d: headless Google-Maps pass done (no API key)")
+    else:
+        print("stage 6d: skipped (agent-browser CLI not found)")
+
+    run([sys.executable, os.path.join(SCRIPTS, "mine_desc_addresses.py"),
+         "--input", csv_path, "--budget-sec", str(max(120, args.geo_budget // 2))])
+    print("stage 6e: description-mining pass done")
 
 def _map_file(csv_path):
     """Stage 7: render the geocoded final CSV into a self-contained Leaflet map."""
@@ -136,10 +165,13 @@ def main():
                          "(record-aware, order preserved; writes "
                          "<out>_part{i}_of_N.csv/.json). 0 = off")
     ap.add_argument("--enrich-geo", action="store_true",
-                    help="stage 6: add company_address + lat/lon columns "
-                         "(map-ready; Google if GOOGLE_MAPS_API_KEY set, else "
-                         "Photon/zippopotam via proxy pool + offline gazetteer; "
-                         "cached, resumable)")
+                    help="stage 6: add company_address + lat/lon columns and run "
+                         "the full automatic per-company geo chain (Photon + "
+                         "maps.co if GEOCODE_MAPS_API_KEY + headless Google-Maps "
+                         "if agent-browser + description mining; all cached, "
+                         "resumable, budget-capped)")
+    ap.add_argument("--geo-budget", type=int, default=420,
+                    help="stage 6: per-pass network budget in seconds (default 420)")
     ap.add_argument("--build-map", action="store_true",
                     help="stage 7: render the final CSV into map/index.html "
                          "(self-contained Leaflet map; needs lat/lon, so run "

@@ -35,9 +35,17 @@ scripts/commute_filter.py        stage 2: rail-corridor geo filter (data/rail_co
 scripts/fetch_descriptions.py    stage 4: phases li → direct → indeed → csv; checkpoint data/work/desc_checkpoint.json;
                                  --write-csv → download/erlangen_jobs_final_<date>.csv sorted date desc
 scripts/net_resilience.py        shared self-adaptive network layer (see below); CLI: harvest|status|live
-scripts/enrich_addresses.py      stage 6 (optional): company_address + lat/lon columns
+scripts/enrich_addresses.py      stage 6a (optional): company_address + lat/lon columns
                                  providers: GOOGLE_MAPS_API_KEY → photon → zippopotam (proxy pool) → offline gazetteer
                                  cache data/work/address_geo_cache.json (negative-caching, resumable)
+scripts/geocode_companies.py     stage 6b/6c: per-COMPANY geocode so every employer gets its own map point;
+                                 --provider photon|mapsco (mapsco = geocode.maps.co, needs GEOCODE_MAPS_API_KEY,
+                                 ~4.5 req/s); sanity gates (≤25 km, town match, highways rejected); cache data/work/
+scripts/google_poi_lookup.py     stage 6d: headless-browser Google-Maps lookup — NO API key (agent-browser CLI;
+                                 set AGENT_BROWSER_PROXY to route via a pool proxy); resumable data/work/google_poi.json;
+                                 name gates: any company token must match, wrong-branch (far) results rejected
+scripts/mine_desc_addresses.py   stage 6e: mine literal German street lines out of job descriptions and geocode
+                                 them (house number + ≤12 km gates); cache keys "dm:" in the shared cache
 scripts/build_map.py             stage 7 (optional): self-contained Leaflet map from the geocoded CSV
                                  → map/index.html (data embedded inline, works from file://) + map/jobs.geojson
                                  aggregates rows per (company, lat, lon); portal-colored pins; offline-tested in tests/test_build_map.py
@@ -79,7 +87,7 @@ All flags optional. Key groups:
 - filters: `--fresh-days 30`, `--max-km 50`, `--station-km 3.0`, `--include-remote`, `--no-prefilter`, `--no-fp-guard`
 - descriptions: `--fetch-desc`, `--limit-desc N`, `--desc-phase {all,li,direct,indeed,csv}`, `--desc-checkpoint P`
 - network policy: `--proxy-refresh`, `--allow-direct` (opt-out), `--no-proxy` (requires allow-direct)
-- output: `--out P`, `--parts N`, `--workdir P`, `--enrich-geo`, `--build-map`
+- output: `--out P`, `--parts N`, `--workdir P`, `--enrich-geo` (full automatic geo chain 6a–6e, per-pass budget `--geo-budget N`), `--build-map`
 
 Rebuild counts decay over time by design: `--fresh-days 30` ages postings out
 (the bundled 1,413-row reference snapshot was cut 2026-10-18; offline rebuilds

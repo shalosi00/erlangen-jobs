@@ -99,12 +99,12 @@ def aggregate(rows):
                       else '<span class="prec poi">company POI</span>' if precision == "poi"
                       else '<span class="prec street">street address</span>')
         rows_html = []
-        for j in jobs[:8]:
+        for j in jobs[:150]:
             link = (f'<a href="{html.escape(j["u"], quote=True)}" target="_blank" rel="noopener">'
                     f'{html.escape(j["t"] or "(no title)")}</a>') if j["u"] else html.escape(j["t"] or "")
             meta = " · ".join(x for x in (j["p"], j["d"], f'{j["km"]} km' if j["km"] else "", j["line"]) if x)
             rows_html.append(f'<li><div class="jt">{link}</div><div class="jm">{html.escape(meta)}</div></li>')
-        more = f'<li class="more">+ {n - 8} more job(s) — see CSV</li>' if n > 8 else ""
+        more = f'<li class="more">+ {n - 150} more job(s) — see CSV</li>' if n > 150 else ""
         popup = (
             f'<div class="pp">'
             f'<div class="pc">{html.escape(company)}</div>'
@@ -234,7 +234,8 @@ li.more{color:var(--dim);font-size:12px}
   <div id="toplist"></div>
   <footer>
    Generated __GENERATED__ · data: <code>__CSV__</code><br>
-   Scraped via strict proxy-only network · company-level geocoding: Photon/OSM<br>
+   Scraped via strict proxy-only network · per-company geocoding chain:
+   Photon → maps.co → headless Google-Maps → description mining<br>
    <a href="https://github.com/shalosi00/erlangen-jobs" target="_blank" rel="noopener">github.com/shalosi00/erlangen-jobs</a>
   </footer>
  </div>

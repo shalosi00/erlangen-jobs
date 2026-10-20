@@ -158,7 +158,10 @@ def strict_live(n):
     if os.path.exists(out_csv):
         with open(out_csv, newline="", encoding="utf-8") as f:
             n_rows = sum(1 for _ in csv.DictReader(f))
-        check("live: final CSV written (1,413 rows)", n_rows == 1413, f"rows={n_rows}")
+        # snapshot cut 10-18 = 1,413 rows; --fresh-days 30 ages postings out
+        # every day (1,379 on 10-20, ...). Assert the documented decay floor,
+        # not an exact count that would break as the snapshot ages.
+        check("live: final CSV written (>=1,300 rows)", n_rows >= 1300, f"rows={n_rows}")
         parts = sorted(glob.glob(out_csv.replace(".csv", "_part*_of_3.csv")))
         check("live: 3 parts written (--parts 3)", len(parts) == 3, f"found={len(parts)}")
     if os.path.exists(cp):
