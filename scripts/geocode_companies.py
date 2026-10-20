@@ -81,6 +81,78 @@ def _lean_fetch(url, H, timeout=9):
     except Exception:
         return None
 
+_MSCO_LOCK = threading.Lock()
+_MSCO_LAST = [0.0]
+_MSCO_GAP = 0.22                       # free tier: 5 req/s -> stay at ~4.5 req/s
+
+def _pace_mapsco():
+    """GLOBAL pacer — the API quota is per key, not per worker thread."""
+    with _MSCO_LOCK:
+        wait = _MSCO_GAP - (time.time() - _MSCO_LAST[0])
+        if wait > 0:
+            time.sleep(wait)
+        _MSCO_LAST[0] = time.time()
+
+def mapsco_forward(q):
+    """geocode.maps.co (Nominatim-grade, API-keyed). Returns (feature|None, ok).
+    ok=False = network flake. Key read from GEOCODE_MAPS_API_KEY, never logged."""
+    key = os.environ.get("GEOCODE_MAPS_API_KEY", "")
+    if not key:
+        return None, True              # no key configured -> definitive skip
+    _pace_mapsco()
+    u = ("https://geocode.maps.co/search?format=jsonv2&countrycodes=de&q="
+         + urllib.parse.quote(q) + "&api_key=" + key)
+    H = {"Accept": "application/json"}
+    for _ in range(3):
+        r = _lean_fetch(u, H, timeout=12)
+        if r is not None:
+            try:
+                j = r.json()
+            except Exception:
+                return None, False     # 2xx but broken body -> flake
+            lst = j if isinstance(j, list) else []
+            return (lst[0] if lst else None), True
+    return None, False
+
+def score_mapsco(f, company, city, clat, clon):
+    """Score a Nominatim-jsonv2 result. (score, hit|None); hit=None = not the company."""
+    try:
+        lat, lon = float(f["lat"]), float(f["lon"])
+    except (KeyError, TypeError, ValueError):
+        return -99, None
+    dist = haversine(clat, clon, lat, lon)
+    if dist > 25:
+        return -99, None
+    a = f.get("address") or {}
+    rcity = _fold(str(a.get("city") or a.get("town") or a.get("village")
+                      or a.get("county") or ""))
+    if rcity and _fold(city) not in rcity and rcity not in _fold(city) and dist > 12:
+        return -99, None
+    cat = str(f.get("category") or "")
+    hn, road, name = a.get("house_number"), a.get("road"), str(f.get("name") or "")
+    s = 0.0
+    if hn:
+        s += 3
+    if road:
+        s += 2
+    if cat in POI_KEYS:
+        s += 1.5
+    cc = clean_company(company)
+    ctok = _fold(cc).split()[0] if cc else ""
+    if ctok and ctok in _fold(name):
+        s += 1.5
+    if cat in REJECT_KEYS and not hn:
+        s -= 4
+    if dist < 3:
+        s += 1
+    prec = "street" if (hn or road or cat in POI_KEYS) else \
+           ("poi" if (ctok and ctok in _fold(name)) else "city")
+    disp = ", ".join(str(x) for x in (name, road, hn, a.get("postcode"),
+                                      a.get("city") or a.get("town") or a.get("village"),
+                                      a.get("state")) if x) or f.get("display_name") or city
+    return s, {"lat": round(lat, 6), "lon": round(lon, 6), "display": disp[:120],
+               "source": "mapsco", "precision": prec, "km": round(dist, 1)}
+
 def photon_biased(q, lat, lon):
     """Photon with location bias. Returns (features, ok) — ok=False = network flake."""
     _pace_fast()
@@ -136,9 +208,10 @@ def score_feature(f, company, city, clat, clon):
 def q_disp(city):
     return city or ""
 
-def resolve_employer(company, city, clat, clon, cache):
-    """Best Photon answer for one employer; returns hit dict or None (keeps city)."""
-    key = f"co:{norm_key(company)}:{norm_key(city)}"
+def resolve_employer(company, city, clat, clon, cache, provider="photon"):
+    """Best geocoder answer for one employer; returns hit dict or None (keeps city)."""
+    pfx = "cm:" if provider == "mapsco" else "co:"
+    key = f"{pfx}{norm_key(company)}:{norm_key(city)}"
     if key in cache:
         hit = cache[key]
         return dict(hit, source="cache:" + str(hit.get("source", "?"))) if hit else None
@@ -146,12 +219,19 @@ def resolve_employer(company, city, clat, clon, cache):
     best = None
     definitive_empty = True
     for q in (f"{cc}, {city}", cc):
-        feats, ok = photon_biased(q, clat, clon)
+        if provider == "mapsco":
+            f, ok = mapsco_forward(q)
+            feats = [f] if f else []
+        else:
+            feats, ok = photon_biased(q, clat, clon)
         if not ok:
             definitive_empty = False                  # network flake — retry later
             continue
         if feats:
-            s, hit = score_feature(feats[0], cc, city, clat, clon)
+            if provider == "mapsco":
+                s, hit = score_mapsco(feats[0], cc, city, clat, clon)
+            else:
+                s, hit = score_feature(feats[0], cc, city, clat, clon)
             if hit and (best is None or s > best[0]):
                 best = (s, hit)
     if best and best[0] > 0:
@@ -160,8 +240,8 @@ def resolve_employer(company, city, clat, clon, cache):
                       "source": hit["source"], "precision": hit["precision"]}
         return hit
     if definitive_empty:
-        # photon answered (no features, or only things that are clearly NOT the
-        # company — roads/admin places/other towns). Retrying is pointless.
+        # geocoder answered (no features, or only things that are clearly NOT
+        # the company — roads/admin places/other towns). Retrying is pointless.
         cache[key] = None
     return None
 
@@ -170,6 +250,9 @@ def main():
     ap.add_argument("--input", default=None)
     ap.add_argument("--budget-sec", type=int, default=480)
     ap.add_argument("--all", action="store_true", help="also re-resolve street-level rows")
+    ap.add_argument("--provider", default="photon", choices=["photon", "mapsco"],
+                    help="mapsco = geocode.maps.co (needs GEOCODE_MAPS_API_KEY env); "
+                         "only upgrades rows still at town-centroid precision")
     a = ap.parse_args()
 
     src = a.input
@@ -187,17 +270,22 @@ def main():
         if c not in fieldnames:
             fieldnames.append(c)
 
-    # distinct employers still sitting on the city centroid
+    # distinct employers worth (re)placing
     emp = {}
     for r in rows:
         if not r.get("lat"):
             continue
-        if not a.all and r.get("geo_precision") == "street":
+        prec_now = r.get("geo_precision") or "city"
+        if a.provider == "mapsco":
+            if prec_now != "city":
+                continue          # upgrade pass: only town-centroid rows
+        elif not a.all and prec_now == "street":
             continue
         emp.setdefault((r["company"], r["city"]), (r["lat"], r["lon"]))
 
     cache = load_cache()
-    todo = sorted(k for k in emp if f"co:{norm_key(k[0])}:{norm_key(k[1])}" not in cache)
+    pfx = "cm:" if a.provider == "mapsco" else "co:"
+    todo = sorted(k for k in emp if pfx + norm_key(k[0]) + ":" + norm_key(k[1]) not in cache)
     print(f"input: {os.path.basename(src)} ({len(rows)} rows) | employers to place: "
           f"{len(emp)} | already answered: {len(emp) - len(todo)} | budget: {a.budget_sec}s")
 
@@ -207,7 +295,7 @@ def main():
     def work(key):
         company, city = key
         clat, clon = emp[key]
-        return key, resolve_employer(company, city, float(clat), float(clon), cache)
+        return key, resolve_employer(company, city, float(clat), float(clon), cache, a.provider)
 
     done = 0
     chunk_it = iter(todo)
@@ -232,10 +320,17 @@ def main():
     # write back
     stats = {"street": 0, "poi": 0, "city": 0}
     for r in rows:
-        if not r.get("lat") or (not a.all and r.get("geo_precision") == "street"):
-            stats[r.get("geo_precision") or "city"] = stats.get(r.get("geo_precision") or "city", 0) + 1
+        if not r.get("lat"):
+            stats["city"] = stats.get("city", 0) + 1
             continue
-        hit = resolve_employer(r["company"], r["city"], float(r["lat"]), float(r["lon"]), cache)
+        prec_now = r.get("geo_precision") or "city"
+        skip = ((a.provider == "mapsco" and prec_now != "city")
+                or (a.provider != "mapsco" and not a.all and prec_now == "street"))
+        if skip:
+            stats[prec_now] = stats.get(prec_now, 0) + 1
+            continue
+        hit = resolve_employer(r["company"], r["city"], float(r["lat"]), float(r["lon"]),
+                               cache, a.provider)
         if hit:
             r["company_address"] = hit["display"]
             r["lat"], r["lon"] = hit["lat"], hit["lon"]
