@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://www.pangram.com/blog",
+    "name": "Wie funktioniert die KI-Erkennung?",
+    "snippet": "KI-Detektoren verwenden maschinelles Lernen, um KI-generierte Inhalte zu erkennen, indem sie Muster, Strukturen und Wortwahl identifizieren.",
+    "host_name": "www.pangram.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://support.apple.com/de-ch",
+    "name": "Wenn Touch ID auf dem Mac nicht funktioniert",
+    "snippet": "Lösche deinen Fingerabdruck und füge ihn in den Touch ID-Einstellungen erneut hinzu. Oder füge einen anderen Fingerabdruck hinzu und verwende diesen. Read more",
+    "host_name": "support.apple.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.fairtrade.net/ch-de",
+    "name": "Wie funktioniert Fairtrade?",
+    "snippet": "Fairtrade entwickelt strenge Standards:für die gesamte Lieferkette – mit Kriterien für Produzent:innen, Arbeiter:innen, Händler:innen sowie andere Partner:innen ... Read more",
+    "host_name": "www.fairtrade.net",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.tezba.de/projekte",
+    "name": "Es funktioniert?!",
+    "snippet": "Was genau ist eine MINT-Bildungserlebnisreise? Eine MINT-Bildungserlebnisreise ist eine gemeinsame Zeit des dialogischen und kooperativen Lernens. Read more",
+    "host_name": "www.tezba.de",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.wdrmaus.de",
+    "name": "Internet - Die Seite mit der Maus",
+    "snippet": "Armin erklärt, wie das Internet funktioniert . Er zeigt, was passiert, wenn man eine Seite aufruft und die Daten in den Kabeln unterwegs sind., Die Sendung ...",
+    "host_name": "www.wdrmaus.de",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://support.google.com/mail/thread/410718800/gmail-funktioniert-nicht-mehr-mit-outlook?hl=de",
+    "name": "Gmail funktioniert nicht mehr mit Outlook",
+    "snippet": "Feb 17, 2026 — Hallo, seit gestern funktioniert mein GMail Konto nicht mehr in Outlook.\nDas ganze an 5 PCs, ich habe die Konten dann entfernt und wollte Sie neu hinzufügen, ...",
+    "host_name": "support.google.com",
+    "rank": 5,
+    "date": "Feb 17, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.ardmediathek.de",
+    "name": "Die Maus - Wie funktioniert ein Schrittzähler? - hier anschauen",
+    "snippet": "Und wie der funktioniert , erfährt Christoph von Maik Schneider. In seinem Modell entsteht durch Bewegung Strom, den man schließlich messen kann.",
+    "host_name": "www.ardmediathek.de",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  }
+]

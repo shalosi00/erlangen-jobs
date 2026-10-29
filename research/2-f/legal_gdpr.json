@@ -1,0 +1,29 @@
+[
+  {
+    "url": "https://www.imdb.com",
+    "name": "Des (TV Mini Series 2020)",
+    "snippet": "DCI Peter Jay (Daniel Mays) investigates a blocked drain which leads to serial killer Dennis \" Des \" Nilsen (David Tennant). When asked about the human remains, ... Read more",
+    "host_name": "www.imdb.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://en.wikipedia.org",
+    "name": "Data Encryption Standard",
+    "snippet": "The Data Encryption Standard is a symmetric-key algorithm for the encryption of digital data. Although its short key length of 56 bits makes it too insecure ... Read more",
+    "host_name": "en.wikipedia.org",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.cancer.gov",
+    "name": "Diethylstilbestrol (DES) Exposure and Cancer",
+    "snippet": "Jan 31, 2025 — A fact sheet about the drug DES (diethylstilbestrol), a synthetic form of estrogen, and the health issues, including cancer risks, ...",
+    "host_name": "www.cancer.gov",
+    "rank": 2,
+    "date": "Jan 31, 2025",
+    "favicon": ""
+  }
+]

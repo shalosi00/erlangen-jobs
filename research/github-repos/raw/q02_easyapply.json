@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://github.com",
+    "name": "madingess/EasyApplyBot: Automate LinkedIn Easy Apply",
+    "snippet": "This Python and Selenium-based bot automates applying to jobs using the Easy Apply feature on LinkedIn. Key Features. Apply to thousands of jobs effortlessly. Read more",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://dev.to",
+    "name": "I Built a LinkedIn Easy Apply Bot in Python Here's What I",
+    "snippet": "Jul 6, 2026 — The project is a Python CLI tool that opens Chrome, logs into LinkedIn, searches for Easy Apply jobs, fills simple application forms, uploads a ... Read more",
+    "host_name": "dev.to",
+    "rank": 1,
+    "date": "Jul 6, 2026",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://github.com",
+    "name": "DEENUU1/job-scraper: 🔎 Job offers scraper: bulldogjob.pl",
+    "snippet": "Job scraper A program that allows you to scrape job offers from many websites and save new offers in Google Sheet, .XLSX file or SQLite database with local web",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://jobapis.github.io",
+    "name": "Open Source - JobApis",
+    "snippet": "With this package, PHP developers can access multiple job board APIs with a single client and a few lines of code. Currently supports over 12 job boards . Read more",
+    "host_name": "jobapis.github.io",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  }
+]

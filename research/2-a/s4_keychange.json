@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://context7.com",
+    "name": "Arbeitsagentur Jobsuche API (bundesapi",
+    "snippet": "Python client for accessing the Arbeitsagentur Jobsuche API , providing programmatic access to Germany's largest job database with search, filtering, and job ...",
+    "host_name": "context7.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.rs",
+    "name": "jobsuche - Rust",
+    "snippet": "Rust interface for the Bundesagentur für Arbeit Jobsuche API . This crate provides a client for interacting with Germany's Federal Employment Agency ... Read more",
+    "host_name": "docs.rs",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com",
+    "name": "bundesAPI/jobsuche-api: API zur Bundesagentur für Arbeit",
+    "snippet": "Arbeitsagentur Jobsuche API . Die Bundesagentur für Arbeit verfügt über die größte Datenbank für offene Stellen in Deutschland. Obwohl sie vollständig staatlich ... Read more",
+    "host_name": "github.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://scrappa.co",
+    "name": "Bundesagentur für Arbeit Jobsuche API | Stellenangebote",
+    "snippet": "Search Bundesagentur für Arbeit Jobsuche data via Scrappa's simplified Stellenangebote API. Separate from the official agency API and documentation.",
+    "host_name": "scrappa.co",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://apify.com",
+    "name": "Bundesagentur für Arbeit Jobbörse Scraper: Germany Jobs",
+    "snippet": "5 days ago — It lists jobs from Germany's federal job board (Bundesagentur für Arbeit, the Jobbörse) for any search and place: title, employer, occupation, ...",
+    "host_name": "apify.com",
+    "rank": 4,
+    "date": "Oct 6, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.arbeitsagentur.de",
+    "name": "Info and support for international workers | Federal",
+    "snippet": "Official information and advice for workers who wish to live and work in Germany. Start your career in Germany now!",
+    "host_name": "www.arbeitsagentur.de",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://andreasfischer1985.github.io",
+    "name": "API-Kollektion web.arbeitsagentur.de",
+    "snippet": "Hier Stellensuche nach neusten Jobs oder Ausbildungsplätzen starten in einer der größten Jobbörsen Deutschlands. URL: https://www. arbeitsagentur . de /jobsuche/ ... Read more",
+    "host_name": "andreasfischer1985.github.io",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  }
+]

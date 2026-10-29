@@ -1,0 +1,1046 @@
+{
+ "meta": {
+  "generated_at": "2026-10-18 11:25:09",
+  "erlangen_center": {
+   "lat": 49.5964,
+   "lon": 11.0044
+  },
+  "max_km_from_erlangen": 50.0,
+  "sources": [
+   "S-Bahn Nürnberg Netz ab 14.12.2025 (nahverkehr-franken.de/VGN)",
+   "de.wikipedia.org: Bahnstrecke Nürnberg–Bamberg",
+   "de.wikipedia.org / bahnrelikte.net: Bahnstrecke Treuchtlingen–Nürnberg",
+   "en.wikipedia.org: Hallstadt (b Bamberg) station (Bamberg–Hof line)",
+   "de.wikipedia.org: Bahnstrecke Erlangen-Bruck–Herzogenaurach (no PV)",
+   "OpenStreetMap via Nominatim (station verification + coordinates)"
+  ],
+  "constraint": "company on a rail line running N or S from Erlangen, <=50 km from Erlangen center, near a train station"
+ },
+ "stations": [
+  {
+   "name": "Bamberg Hbf",
+   "query": "Bahnhof Bamberg",
+   "branch": "north",
+   "tier": "trunk_direct",
+   "line": "S1/RE",
+   "enabled": true,
+   "lat": 49.9006357,
+   "lon": 10.8997336,
+   "dist_km": 34.66,
+   "source": "osm/nominatim",
+   "osm_name": "Bamberg",
+   "osm_type": "station",
+   "osm_display": "Bamberg, Ludwigstraße, Gärtnerstadt, Bamberg, Bayern, 96052, Deutschland"
+  },
+  {
+   "name": "Strullendorf",
+   "query": "Bahnhof Strullendorf",
+   "branch": "north",
+   "tier": "trunk_direct",
+   "line": "S1",
+   "enabled": true,
+   "lat": 49.8455444,
+   "lon": 10.9616242,
+   "dist_km": 27.87,
+   "source": "osm/api",
+   "osm_name": "Strullendorf",
+   "osm_type": "halt",
+   "osm_display": "Strullendorf"
+  },
+  {
+   "name": "Hirschaid",
+   "query": "Bahnhof Hirschaid",
+   "branch": "north",
+   "tier": "trunk_direct",
+   "line": "S1",
+   "enabled": true,
+   "lat": 49.8196205,
+   "lon": 10.991139,
+   "dist_km": 24.84,
+   "source": "osm/api",
+   "osm_name": "Hirschaid",
+   "osm_type": "halt",
+   "osm_display": "Hirschaid"
+  },
+  {
+   "name": "Eggolsheim",
+   "query": "Bahnhof Eggolsheim",
+   "branch": "north",
+   "tier": "trunk_direct",
+   "line": "S1",
+   "enabled": true,
+   "lat": 49.7744058,
+   "lon": 11.037247,
+   "dist_km": 19.93,
+   "source": "osm/api",
+   "osm_name": "Eggolsheim",
+   "osm_type": "halt",
+   "osm_display": "Eggolsheim"
+  },
+  {
+   "name": "Forchheim Nord",
+   "query": "Bahnhof Forchheim Nord",
+   "branch": "north",
+   "tier": "trunk_direct",
+   "line": "S1",
+   "enabled": true,
+   "lat": 49.7169143,
+   "lon": 11.0700855,
+   "dist_km": 14.21,
+   "source": "osm/api",
+   "osm_name": "Forchheim (Oberfr)",
+   "osm_type": "station",
+   "osm_display": "Forchheim (Oberfr)"
+  },
+  {
+   "name": "Forchheim (Oberfr)",
+   "query": "Bahnhof Forchheim",
+   "branch": "north",
+   "tier": "trunk_direct",
+   "line": "S1/RE",
+   "enabled": true,
+   "lat": 49.7169143,
+   "lon": 11.0700855,
+   "dist_km": 14.21,
+   "source": "osm/api",
+   "osm_name": "Forchheim (Oberfr)",
+   "osm_type": "station",
+   "osm_display": "Forchheim (Oberfr)"
+  },
+  {
+   "name": "Kersbach",
+   "query": "Bahnhof Kersbach",
+   "branch": "north",
+   "tier": "trunk_direct",
+   "line": "S1",
+   "enabled": true,
+   "lat": 49.6865192,
+   "lon": 11.0607374,
+   "dist_km": 10.81,
+   "source": "osm/api",
+   "osm_name": "Kersbach",
+   "osm_type": "halt",
+   "osm_display": "Kersbach"
+  },
+  {
+   "name": "Baiersdorf",
+   "query": "Bahnhof Baiersdorf",
+   "branch": "north",
+   "tier": "trunk_direct",
+   "line": "S1",
+   "enabled": true,
+   "lat": 49.6558864,
+   "lon": 11.0368507,
+   "dist_km": 7.02,
+   "source": "osm/api",
+   "osm_name": "Baiersdorf",
+   "osm_type": "halt",
+   "osm_display": "Baiersdorf"
+  },
+  {
+   "name": "Erlangen-Bruck",
+   "query": "Erlangen-Bruck",
+   "branch": "north",
+   "tier": "trunk_direct",
+   "line": "S1",
+   "enabled": true,
+   "lat": 49.5698161,
+   "lon": 10.9970931,
+   "dist_km": 3.0,
+   "source": "osm/nominatim",
+   "osm_name": "Erlangen-Bruck",
+   "osm_type": "halt",
+   "osm_display": "Erlangen-Bruck, Am Brucker Bahnhof, Bruck, Erlangen, Bayern, 91058, Deutschland"
+  },
+  {
+   "name": "Erlangen Hbf",
+   "query": "Bahnhof Erlangen",
+   "branch": "north",
+   "tier": "trunk_direct",
+   "line": "S1/RE",
+   "enabled": true,
+   "note": "manual coords; OSM node collision with historic station at city center",
+   "lat": 49.5968,
+   "lon": 11.0315,
+   "dist_km": 1.95,
+   "osm_name": "Erlangen",
+   "osm_type": "node",
+   "source": "manual (Bahnhofplatz; on S1 axis lon~11.031 between center and Bruck)"
+  },
+  {
+   "name": "Fürth (Bay) Hbf",
+   "query": "Bahnhof Fürth",
+   "branch": "south",
+   "tier": "trunk_direct",
+   "line": "S1/RE",
+   "enabled": true,
+   "lat": 49.46972,
+   "lon": 10.98998,
+   "dist_km": 14.12,
+   "source": "de.wikipedia REST summary",
+   "osm_name": "Fürth Hardhöhe",
+   "osm_type": "station",
+   "osm_display": "Fürth Hardhöhe",
+   "note": "coords from de.wikipedia article (was U-Bahn Hardhöhe node, excluded)"
+  },
+  {
+   "name": "Nürnberg Hbf",
+   "query": "Nürnberg Hauptbahnhof",
+   "branch": "south",
+   "tier": "trunk_direct",
+   "line": "S1/RE",
+   "enabled": true,
+   "lat": 49.4451991,
+   "lon": 11.0823089,
+   "dist_km": 17.73,
+   "source": "osm/nominatim",
+   "osm_name": "Nürnberg Hauptbahnhof",
+   "osm_type": "station",
+   "osm_display": "Nürnberg Hauptbahnhof, Mitteltunnel, Tafelhof, Altstadt und engere Innenstadt, Nürnberg, Bayern, 90443, Deutsc"
+  },
+  {
+   "name": "Nürnberg-Reichelsdorf",
+   "query": "Bahnhof Nürnberg-Reichelsdorf",
+   "branch": "south",
+   "tier": "transfer1",
+   "line": "S2",
+   "enabled": true,
+   "lat": 49.3821641,
+   "lon": 11.0388552,
+   "dist_km": 23.95,
+   "source": "osm/api",
+   "osm_name": "Nürnberg-Reichelsdorf",
+   "osm_type": "halt",
+   "osm_display": "Nürnberg-Reichelsdorf"
+  },
+  {
+   "name": "Reichelsdorfer Keller",
+   "query": "Bahnhof Reichelsdorfer Keller",
+   "branch": "south",
+   "tier": "transfer1",
+   "line": "S2",
+   "enabled": false,
+   "note": "no station found (wikidata+osm), disabled"
+  },
+  {
+   "name": "Nürnberg-Eibach",
+   "query": "Bahnhof Nürnberg-Eibach",
+   "branch": "south",
+   "tier": "transfer1",
+   "line": "S2",
+   "enabled": true,
+   "lat": 49.4096947,
+   "lon": 11.0477545,
+   "dist_km": 21.0,
+   "source": "osm/nominatim",
+   "osm_name": "Nürnberg-Eibach",
+   "osm_type": "halt",
+   "osm_display": "Nürnberg-Eibach, Heinz-Leschanowsky-Weg, Röthenbach Ost, Südwestliche Außenstadt, Nürnberg, Bayern, 90451, Deu"
+  },
+  {
+   "name": "Nürnberg-Katzwang",
+   "query": "Bahnhof Katzwang",
+   "branch": "south",
+   "tier": "transfer1",
+   "line": "S2",
+   "enabled": false,
+   "note": "no station found (wikidata+osm), disabled"
+  },
+  {
+   "name": "Schwabach-Limbach",
+   "query": "Bahnhof Schwabach-Limbach",
+   "branch": "south",
+   "tier": "transfer1",
+   "line": "S2",
+   "enabled": true,
+   "lat": 49.3263737,
+   "lon": 11.0353749,
+   "dist_km": 30.11,
+   "source": "osm/api",
+   "osm_name": "Schwabach",
+   "osm_type": "station",
+   "osm_display": "Schwabach"
+  },
+  {
+   "name": "Schwabach",
+   "query": "Bahnhof Schwabach",
+   "branch": "south",
+   "tier": "transfer1",
+   "line": "S2/RB",
+   "enabled": true,
+   "lat": 49.3263737,
+   "lon": 11.0353749,
+   "dist_km": 30.11,
+   "source": "osm/api",
+   "osm_name": "Schwabach",
+   "osm_type": "station",
+   "osm_display": "Schwabach"
+  },
+  {
+   "name": "Rednitzhembach",
+   "query": "Bahnhof Rednitzhembach",
+   "branch": "south",
+   "tier": "transfer1",
+   "line": "S2",
+   "enabled": true,
+   "lat": 49.3038612,
+   "lon": 11.0638331,
+   "dist_km": 32.81,
+   "source": "osm/api",
+   "osm_name": "Rednitzhembach",
+   "osm_type": "halt",
+   "osm_display": "Rednitzhembach"
+  },
+  {
+   "name": "Roth",
+   "query": "Bahnhof Roth",
+   "branch": "south",
+   "tier": "transfer1",
+   "line": "S2/RB",
+   "enabled": true,
+   "lat": 49.2411608,
+   "lon": 11.0825733,
+   "dist_km": 39.9,
+   "source": "osm/nominatim",
+   "osm_name": "Roth",
+   "osm_type": "station",
+   "osm_display": "Roth, Bahnhofstraße, Kauernhofen, Roth, Landkreis Roth, Bayern, 91154, Deutschland"
+  },
+  {
+   "name": "Georgensgmünd",
+   "query": "Bahnhof Georgensgmünd",
+   "branch": "south",
+   "tier": "transfer1",
+   "line": "RB",
+   "enabled": true,
+   "lat": 49.1833199,
+   "lon": 11.0161047,
+   "dist_km": 45.94,
+   "source": "osm/api",
+   "osm_name": "Georgensgmünd",
+   "osm_type": "station",
+   "osm_display": "Georgensgmünd"
+  },
+  {
+   "name": "Mühlstetten",
+   "query": "Bahnhof Mühlstetten",
+   "branch": "south",
+   "tier": "transfer1",
+   "line": "RB",
+   "enabled": true,
+   "lat": 49.1515295,
+   "lon": 11.0079514,
+   "dist_km": 49.47,
+   "source": "osm/api",
+   "osm_name": "Mühlstetten",
+   "osm_type": "halt",
+   "osm_display": "Mühlstetten"
+  },
+  {
+   "name": "Allersberg (Rothsee)",
+   "query": "Bahnhof Allersberg",
+   "branch": "south",
+   "tier": "transfer1",
+   "line": "S5",
+   "enabled": true,
+   "lat": 49.2617946,
+   "lon": 11.2126676,
+   "dist_km": 40.14,
+   "source": "osm/api",
+   "osm_name": "Allersberg (Rothsee)",
+   "osm_type": "station",
+   "osm_display": "Allersberg (Rothsee)"
+  },
+  {
+   "name": "Hallstadt (b Bamberg)",
+   "query": "Bahnhof Hallstadt",
+   "branch": "north",
+   "tier": "transfer1",
+   "line": "RB",
+   "enabled": true,
+   "lat": 49.9297669,
+   "lon": 10.8855239,
+   "dist_km": 38.04,
+   "source": "osm/api-v2",
+   "osm_name": "Hallstadt Hp",
+   "osm_type": "node",
+   "osm_display": "Hallstadt Hp"
+  },
+  {
+   "name": "Breitengüßbach",
+   "query": "Bahnhof Breitengüßbach",
+   "branch": "north",
+   "tier": "transfer1",
+   "line": "RB",
+   "enabled": true,
+   "lat": 49.9666481,
+   "lon": 10.8871188,
+   "dist_km": 42.02,
+   "source": "osm/api",
+   "osm_name": "Breitengüßbach",
+   "osm_type": "station",
+   "osm_display": "Breitengüßbach"
+  },
+  {
+   "name": "Feucht",
+   "query": "Bahnhof Feucht",
+   "branch": "southeast",
+   "tier": "excluded_branch",
+   "line": "S2/S3 east",
+   "enabled": false,
+   "note": "east leg of S2/S3 — not north/south from Erlangen",
+   "lat": 49.3760672,
+   "lon": 11.2204435,
+   "dist_km": 29.05,
+   "source": "osm/api",
+   "osm_name": "Feucht Ost",
+   "osm_type": "halt",
+   "osm_display": "Feucht Ost"
+  },
+  {
+   "name": "Altdorf (b Nürnberg)",
+   "query": "Bahnhof Altdorf bei Nürnberg",
+   "branch": "southeast",
+   "tier": "excluded_branch",
+   "line": "S2 east",
+   "enabled": false,
+   "note": "east leg",
+   "lat": 49.3900779,
+   "lon": 11.3533455,
+   "dist_km": 34.08,
+   "source": "osm/api",
+   "osm_name": "Altdorf (b Nürnberg)",
+   "osm_type": "station",
+   "osm_display": "Altdorf (b Nürnberg)"
+  },
+  {
+   "name": "Neumarkt (Oberpf)",
+   "query": "Bahnhof Neumarkt",
+   "branch": "east",
+   "tier": "excluded_branch",
+   "line": "S3",
+   "enabled": false,
+   "note": "east, separate line, transfer Nürnberg",
+   "lat": 49.2733225,
+   "lon": 11.4566709,
+   "dist_km": 48.58,
+   "source": "osm/nominatim",
+   "osm_name": "Neumarkt (Oberpf)",
+   "osm_type": "station",
+   "osm_display": "Neumarkt (Oberpf), Bahnhofplatz, Hasenheide, Neumarkt in der Oberpfalz, Landkreis Neumarkt in der Oberpfalz, B"
+  },
+  {
+   "name": "Lauf (links d. Pegnitz)",
+   "query": "Bahnhof Lauf links der Pegnitz",
+   "branch": "east",
+   "tier": "excluded_branch",
+   "line": "S1 east leg",
+   "enabled": false,
+   "note": "S1 east leg after Nürnberg — not N-S from Erlangen",
+   "lat": 49.51257,
+   "lon": 11.2777895,
+   "dist_km": 21.81,
+   "source": "osm/api",
+   "osm_name": "Lauf (rechts Pegnitz)",
+   "osm_type": "station",
+   "osm_display": "Lauf (rechts Pegnitz)"
+  },
+  {
+   "name": "Röthenbach (l. Pegnitz)",
+   "query": "Bahnhof Röthenbach an der Pegnitz",
+   "branch": "east",
+   "tier": "excluded_branch",
+   "line": "S1 east leg",
+   "enabled": false,
+   "lat": 49.4833202,
+   "lon": 11.2460973,
+   "dist_km": 21.5,
+   "source": "osm/api",
+   "osm_name": "Röthenbach-Steinberg",
+   "osm_type": "halt",
+   "osm_display": "Röthenbach-Steinberg"
+  },
+  {
+   "name": "Hersbruck (l. Pegnitz)",
+   "query": "Bahnhof Hersbruck links der Pegnitz",
+   "branch": "east",
+   "tier": "excluded_branch",
+   "line": "S1 east leg",
+   "enabled": false,
+   "lat": 49.5100865,
+   "lon": 11.4235994,
+   "dist_km": 31.73,
+   "source": "osm/api",
+   "osm_name": "Hersbruck (rechts der Pegnitz)",
+   "osm_type": "station",
+   "osm_display": "Hersbruck (rechts der Pegnitz)"
+  },
+  {
+   "name": "Ansbach",
+   "query": "Bahnhof Ansbach",
+   "branch": "southwest",
+   "tier": "excluded_branch",
+   "line": "S4 west",
+   "enabled": false,
+   "lat": 49.2979431,
+   "lon": 10.5777328,
+   "dist_km": 45.31,
+   "source": "osm/api",
+   "osm_name": "Ansbach",
+   "osm_type": "station",
+   "osm_display": "Ansbach"
+  },
+  {
+   "name": "Wicklesgreuth",
+   "query": "Bahnhof Wicklesgreuth",
+   "branch": "southwest",
+   "tier": "excluded_branch",
+   "line": "S4 west",
+   "enabled": false,
+   "lat": 49.3106251,
+   "lon": 10.711622,
+   "dist_km": 38.18,
+   "source": "osm/api",
+   "osm_name": "Wicklesgreuth",
+   "osm_type": "station",
+   "osm_display": "Wicklesgreuth"
+  },
+  {
+   "name": "Heilsbronn",
+   "query": "Bahnhof Heilsbronn",
+   "branch": "southwest",
+   "tier": "excluded_branch",
+   "line": "S4 west",
+   "enabled": false,
+   "lat": 49.3458084,
+   "lon": 10.7906727,
+   "dist_km": 31.86,
+   "source": "osm/api",
+   "osm_name": "Heilsbronn",
+   "osm_type": "station",
+   "osm_display": "Heilsbronn"
+  },
+  {
+   "name": "Neustadt (Aisch)",
+   "query": "Bahnhof Neustadt an der Aisch",
+   "branch": "northwest",
+   "tier": "excluded_branch",
+   "line": "S6 via Fürth",
+   "enabled": false,
+   "lat": 49.5742893,
+   "lon": 10.6097212,
+   "dist_km": 28.56,
+   "source": "osm/api",
+   "osm_name": "Neustadt (Aisch) Mitte",
+   "osm_type": "halt",
+   "osm_display": "Neustadt (Aisch) Mitte"
+  },
+  {
+   "name": "Herzogenaurach",
+   "query": "Bahnhof Herzogenaurach",
+   "branch": "west",
+   "tier": "excluded_branch",
+   "line": "Aurachtalbahn (no PV)",
+   "enabled": false,
+   "note": "disused branch, NO passenger service; StUB tram planned instead | no station found (wikidata+osm), disabled"
+  }
+ ],
+ "towns": {
+  "Erlangen": {
+   "lat": 49.5891571,
+   "lon": 10.9812072,
+   "dist_km": 1.86,
+   "nearest_station": "Erlangen-Bruck",
+   "nearest_station_km": 2.44,
+   "status": "corridor_town"
+  },
+  "Fürth": {
+   "lat": 49.4885711,
+   "lon": 10.9587203,
+   "dist_km": 12.43,
+   "nearest_station": "Fürth (Bay) Hbf",
+   "nearest_station_km": 3.08,
+   "status": "corridor_town"
+  },
+  "Nürnberg": {
+   "lat": 49.453872,
+   "lon": 11.077298,
+   "dist_km": 16.7,
+   "nearest_station": "Nürnberg Hbf",
+   "nearest_station_km": 1.03,
+   "status": "corridor_town"
+  },
+  "Baiersdorf": {
+   "lat": 49.6568679,
+   "lon": 11.0311232,
+   "dist_km": 6.99,
+   "nearest_station": "Baiersdorf",
+   "nearest_station_km": 0.43,
+   "status": "corridor_town"
+  },
+  "Forchheim": {
+   "lat": 49.7200789,
+   "lon": 11.05792,
+   "dist_km": 14.28,
+   "nearest_station": "Forchheim Nord",
+   "nearest_station_km": 0.94,
+   "status": "corridor_town"
+  },
+  "Eggolsheim": {
+   "lat": 49.7721617,
+   "lon": 11.0535303,
+   "dist_km": 19.86,
+   "nearest_station": "Eggolsheim",
+   "nearest_station_km": 1.2,
+   "status": "corridor_town"
+  },
+  "Hirschaid": {
+   "lat": 49.8165907,
+   "lon": 10.9897659,
+   "dist_km": 24.51,
+   "nearest_station": "Hirschaid",
+   "nearest_station_km": 0.35,
+   "status": "corridor_town"
+  },
+  "Strullendorf": {
+   "lat": 49.8439391,
+   "lon": 10.9700482,
+   "dist_km": 27.64,
+   "nearest_station": "Strullendorf",
+   "nearest_station_km": 0.63,
+   "status": "corridor_town"
+  },
+  "Bamberg": {
+   "lat": 49.8916044,
+   "lon": 10.8868478,
+   "dist_km": 33.89,
+   "nearest_station": "Bamberg Hbf",
+   "nearest_station_km": 1.36,
+   "status": "corridor_town"
+  },
+  "Hallstadt": {
+   "lat": 49.928801,
+   "lon": 10.8754637,
+   "dist_km": 38.1,
+   "nearest_station": "Hallstadt (b Bamberg)",
+   "nearest_station_km": 0.73,
+   "status": "corridor_town"
+  },
+  "Breitengüßbach": {
+   "lat": 49.971513,
+   "lon": 10.8848831,
+   "dist_km": 42.58,
+   "nearest_station": "Breitengüßbach",
+   "nearest_station_km": 0.56,
+   "status": "corridor_town"
+  },
+  "Schwabach": {
+   "lat": 49.3346915,
+   "lon": 11.0294139,
+   "dist_km": 29.16,
+   "nearest_station": "Schwabach-Limbach",
+   "nearest_station_km": 1.02,
+   "status": "corridor_town"
+  },
+  "Rednitzhembach": {
+   "lat": 49.3014921,
+   "lon": 11.0782974,
+   "dist_km": 33.22,
+   "nearest_station": "Rednitzhembach",
+   "nearest_station_km": 1.08,
+   "status": "corridor_town"
+  },
+  "Roth": {
+   "lat": 49.2368842,
+   "lon": 11.1181016,
+   "dist_km": 40.81,
+   "nearest_station": "Roth",
+   "nearest_station_km": 2.62,
+   "status": "corridor_town"
+  },
+  "Georgensgmünd": {
+   "lat": 49.1904112,
+   "lon": 11.0159272,
+   "dist_km": 45.15,
+   "nearest_station": "Georgensgmünd",
+   "nearest_station_km": 0.79,
+   "status": "corridor_town"
+  },
+  "Mühlstetten": {
+   "lat": 49.1520864,
+   "lon": 11.009621,
+   "dist_km": 49.41,
+   "nearest_station": "Mühlstetten",
+   "nearest_station_km": 0.14,
+   "status": "corridor_town"
+  },
+  "Allersberg": {
+   "lat": 49.2513012,
+   "lon": 11.2356812,
+   "dist_km": 41.86,
+   "nearest_station": "Allersberg (Rothsee)",
+   "nearest_station_km": 2.04,
+   "status": "corridor_town"
+  },
+  "Bubenreuth": {
+   "lat": 49.6277003,
+   "lon": 11.0143385,
+   "dist_km": 3.55,
+   "nearest_station": "Baiersdorf",
+   "nearest_station_km": 3.53,
+   "status": "off_corridor"
+  },
+  "Möhrendorf": {
+   "lat": 49.6397123,
+   "lon": 11.0014431,
+   "dist_km": 4.82,
+   "nearest_station": "Baiersdorf",
+   "nearest_station_km": 3.12,
+   "status": "off_corridor"
+  },
+  "Spardorf": {
+   "lat": 49.605003,
+   "lon": 11.0558406,
+   "dist_km": 3.83,
+   "nearest_station": "Erlangen Hbf",
+   "nearest_station_km": 1.98,
+   "status": "off_corridor"
+  },
+  "Adelsdorf": {
+   "lat": 49.4697435,
+   "lon": 10.6855288,
+   "dist_km": 26.98,
+   "nearest_station": "Fürth (Bay) Hbf",
+   "nearest_station_km": 22.0,
+   "status": "off_corridor"
+  },
+  "Herzogenaurach": {
+   "lat": 49.5690382,
+   "lon": 10.8819998,
+   "dist_km": 9.33,
+   "nearest_station": "Erlangen-Bruck",
+   "nearest_station_km": 8.3,
+   "status": "off_corridor"
+  },
+  "Ansbach": {
+   "lat": 49.3028611,
+   "lon": 10.5722288,
+   "dist_km": 45.18,
+   "nearest_station": "Schwabach-Limbach",
+   "nearest_station_km": 33.67,
+   "status": "off_corridor"
+  },
+  "Heilsbronn": {
+   "lat": 49.3375301,
+   "lon": 10.7890008,
+   "dist_km": 32.72,
+   "nearest_station": "Schwabach-Limbach",
+   "nearest_station_km": 17.9,
+   "status": "off_corridor"
+  },
+  "Neustadt an der Aisch": {
+   "lat": 49.5800045,
+   "lon": 10.6087584,
+   "dist_km": 28.58,
+   "nearest_station": "Erlangen-Bruck",
+   "nearest_station_km": 28.02,
+   "status": "off_corridor"
+  },
+  "Emskirchen": {
+   "lat": 49.550254,
+   "lon": 10.7184987,
+   "dist_km": 21.24,
+   "nearest_station": "Erlangen-Bruck",
+   "nearest_station_km": 20.21,
+   "status": "off_corridor"
+  },
+  "Schlüsselfeld": {
+   "lat": 49.7569182,
+   "lon": 10.6186266,
+   "dist_km": 33.0,
+   "nearest_station": "Bamberg Hbf",
+   "nearest_station_km": 25.73,
+   "status": "off_corridor"
+  },
+  "Scheinfeld": {
+   "lat": 49.6653406,
+   "lon": 10.462567,
+   "dist_km": 39.77,
+   "nearest_station": "Erlangen-Bruck",
+   "nearest_station_km": 39.95,
+   "status": "off_corridor"
+  },
+  "Abtswind": {
+   "lat": 49.7701407,
+   "lon": 10.3745265,
+   "dist_km": 49.26,
+   "nearest_station": "Bamberg Hbf",
+   "nearest_station_km": 40.37,
+   "status": "off_corridor"
+  },
+  "Cadolzburg": {
+   "lat": 49.4591406,
+   "lon": 10.8563868,
+   "dist_km": 18.63,
+   "nearest_station": "Fürth (Bay) Hbf",
+   "nearest_station_km": 9.73,
+   "status": "off_corridor"
+  },
+  "Langenzenn": {
+   "lat": 49.4946086,
+   "lon": 10.7948937,
+   "dist_km": 18.88,
+   "nearest_station": "Fürth (Bay) Hbf",
+   "nearest_station_km": 14.36,
+   "status": "off_corridor"
+  },
+  "Zirndorf": {
+   "lat": 49.445762,
+   "lon": 10.9560462,
+   "dist_km": 17.11,
+   "nearest_station": "Fürth (Bay) Hbf",
+   "nearest_station_km": 3.62,
+   "status": "off_corridor"
+  },
+  "Stein bei Nürnberg": {
+   "lat": 49.4252777,
+   "lon": 11.0176745,
+   "dist_km": 19.05,
+   "nearest_station": "Nürnberg-Eibach",
+   "nearest_station_km": 2.78,
+   "status": "off_corridor"
+  },
+  "Ammerndorf": {
+   "lat": 49.4206774,
+   "lon": 10.8514713,
+   "dist_km": 22.44,
+   "nearest_station": "Fürth (Bay) Hbf",
+   "nearest_station_km": 11.4,
+   "status": "off_corridor"
+  },
+  "Großhabersdorf": {
+   "lat": 49.4047474,
+   "lon": 10.7886762,
+   "dist_km": 26.4,
+   "nearest_station": "Fürth (Bay) Hbf",
+   "nearest_station_km": 16.25,
+   "status": "off_corridor"
+  },
+  "Lauf an der Pegnitz": {
+   "lat": 49.5118126,
+   "lon": 11.2813381,
+   "dist_km": 22.08,
+   "nearest_station": "Nürnberg Hbf",
+   "nearest_station_km": 16.17,
+   "status": "off_corridor"
+  },
+  "Röthenbach an der Pegnitz": {
+   "lat": 49.485011,
+   "lon": 11.2474853,
+   "dist_km": 21.47,
+   "nearest_station": "Nürnberg Hbf",
+   "nearest_station_km": 12.73,
+   "status": "off_corridor"
+  },
+  "Feucht": {
+   "lat": 49.3752531,
+   "lon": 11.2158185,
+   "dist_km": 28.95,
+   "nearest_station": "Nürnberg Hbf",
+   "nearest_station_km": 12.4,
+   "status": "off_corridor"
+  },
+  "Schwarzenbruck": {
+   "lat": 49.3554558,
+   "lon": 11.2410609,
+   "dist_km": 31.78,
+   "nearest_station": "Allersberg (Rothsee)",
+   "nearest_station_km": 10.62,
+   "status": "off_corridor"
+  },
+  "Burgthann": {
+   "lat": 49.3570358,
+   "lon": 11.3169596,
+   "dist_km": 34.91,
+   "nearest_station": "Allersberg (Rothsee)",
+   "nearest_station_km": 13.01,
+   "status": "off_corridor"
+  },
+  "Altdorf bei Nürnberg": {
+   "lat": 49.3858107,
+   "lon": 11.3564341,
+   "dist_km": 34.57,
+   "nearest_station": "Allersberg (Rothsee)",
+   "nearest_station_km": 17.28,
+   "status": "off_corridor"
+  },
+  "Winkelhaid": {
+   "lat": 49.2126384,
+   "lon": 10.8363216,
+   "dist_km": 44.37,
+   "nearest_station": "Georgensgmünd",
+   "nearest_station_km": 13.46,
+   "status": "off_corridor"
+  },
+  "Neumarkt in der Oberpfalz": {
+   "lat": 49.2800542,
+   "lon": 11.4585353,
+   "dist_km": 48.12,
+   "nearest_station": "Allersberg (Rothsee)",
+   "nearest_station_km": 17.95,
+   "status": "off_corridor"
+  },
+  "Pilsach": {
+   "lat": 49.3216533,
+   "lon": 11.5030806,
+   "dist_km": 47.25,
+   "nearest_station": "Allersberg (Rothsee)",
+   "nearest_station_km": 22.09,
+   "status": "off_corridor"
+  },
+  "Wendelstein": {
+   "lat": 49.3555126,
+   "lon": 11.1432998,
+   "dist_km": 28.6,
+   "nearest_station": "Nürnberg-Reichelsdorf",
+   "nearest_station_km": 8.12,
+   "status": "off_corridor"
+  },
+  "Hilpoltstein": {
+   "lat": 49.1893907,
+   "lon": 11.1920909,
+   "dist_km": 47.25,
+   "nearest_station": "Allersberg (Rothsee)",
+   "nearest_station_km": 8.19,
+   "status": "off_corridor"
+  },
+  "Kammerstein": {
+   "lat": 49.293185,
+   "lon": 10.9739043,
+   "dist_km": 33.79,
+   "nearest_station": "Schwabach-Limbach",
+   "nearest_station_km": 5.79,
+   "status": "off_corridor"
+  },
+  "Heroldsberg": {
+   "lat": 49.5331766,
+   "lon": 11.1526565,
+   "dist_km": 12.8,
+   "nearest_station": "Nürnberg Hbf",
+   "nearest_station_km": 11.02,
+   "status": "off_corridor"
+  },
+  "Uttenreuth": {
+   "lat": 49.5967852,
+   "lon": 11.0694929,
+   "dist_km": 4.69,
+   "nearest_station": "Erlangen Hbf",
+   "nearest_station_km": 2.74,
+   "status": "off_corridor"
+  },
+  "Neunkirchen am Brand": {
+   "lat": 49.6126495,
+   "lon": 11.1300058,
+   "dist_km": 9.23,
+   "nearest_station": "Erlangen Hbf",
+   "nearest_station_km": 7.31,
+   "status": "off_corridor"
+  },
+  "Heßdorf": {
+   "lat": 49.6264695,
+   "lon": 10.9105504,
+   "dist_km": 7.54,
+   "nearest_station": "Erlangen-Bruck",
+   "nearest_station_km": 8.86,
+   "status": "off_corridor"
+  },
+  "Kleinsendelbach": {
+   "lat": 49.5939893,
+   "lon": 11.1592415,
+   "dist_km": 11.16,
+   "nearest_station": "Erlangen Hbf",
+   "nearest_station_km": 9.21,
+   "status": "off_corridor"
+  },
+  "Dormitz": {
+   "lat": 49.5960879,
+   "lon": 11.1210915,
+   "dist_km": 8.41,
+   "nearest_station": "Erlangen Hbf",
+   "nearest_station_km": 6.46,
+   "status": "off_corridor"
+  },
+  "Pegnitz": {
+   "lat": 49.75649,
+   "lon": 11.540944,
+   "dist_km": 42.51,
+   "nearest_station": "Forchheim Nord",
+   "nearest_station_km": 34.12,
+   "status": "off_corridor"
+  },
+  "Mistelgau": {
+   "lat": 49.9114995,
+   "lon": 11.4644655,
+   "dist_km": 48.17,
+   "nearest_station": "Eggolsheim",
+   "nearest_station_km": 34.22,
+   "status": "off_corridor"
+  },
+  "Obertrubach": {
+   "lat": 49.695295,
+   "lon": 11.3496854,
+   "dist_km": 27.18,
+   "nearest_station": "Forchheim Nord",
+   "nearest_station_km": 20.25,
+   "status": "off_corridor"
+  },
+  "Ebermannstadt": {
+   "lat": 49.7802113,
+   "lon": 11.1875112,
+   "dist_km": 24.32,
+   "nearest_station": "Eggolsheim",
+   "nearest_station_km": 10.81,
+   "status": "off_corridor"
+  },
+  "Gößweinstein": {
+   "lat": 49.7694317,
+   "lon": 11.3369898,
+   "dist_km": 30.7,
+   "nearest_station": "Forchheim Nord",
+   "nearest_station_km": 20.05,
+   "status": "off_corridor"
+  },
+  "Marktredwitz": {
+   "lat": 50.0009915,
+   "lon": 12.0856433,
+   "dist_km": 89.7,
+   "nearest_station": "Eggolsheim",
+   "nearest_station_km": 79.22,
+   "status": "outside_50km"
+  },
+  "Höchstadt an der Aisch": {
+   "lat": 49.7035803,
+   "lon": 10.8047235,
+   "dist_km": 18.67,
+   "nearest_station": "Baiersdorf",
+   "nearest_station_km": 17.52,
+   "status": "off_corridor"
+  },
+  "Wachenroth": {
+   "lat": 49.75002,
+   "lon": 10.7169608,
+   "dist_km": 26.83,
+   "nearest_station": "Strullendorf",
+   "nearest_station_km": 20.52,
+   "status": "off_corridor"
+  },
+  "Burgebrach": {
+   "lat": 49.8282487,
+   "lon": 10.7412932,
+   "dist_km": 31.98,
+   "nearest_station": "Bamberg Hbf",
+   "nearest_station_km": 13.92,
+   "status": "off_corridor"
+  }
+ }
+}

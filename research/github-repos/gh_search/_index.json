@@ -1,0 +1,686 @@
+{
+ "speedyapply/JobSpy": {
+  "stars": 4463,
+  "pushed": "2026-10-10",
+  "lang": "Python",
+  "desc": "Jobs scraper library for LinkedIn, Indeed, Glassdoor, ZipRecruiter, Bayt, Naukri, BDJobs & HelloWork",
+  "archived": false,
+  "url": "https://github.com/speedyapply/JobSpy",
+  "cat": "jobspy"
+ },
+ "PaulMcInnis/JobFunnel": {
+  "stars": 2193,
+  "pushed": "2025-12-10",
+  "lang": "Python",
+  "desc": "Scrape job websites into a single spreadsheet with no duplicates.",
+  "archived": true,
+  "url": "https://github.com/PaulMcInnis/JobFunnel",
+  "cat": "scrapers_py"
+ },
+ "oxylabs/how-to-scrape-google-jobs": {
+  "stars": 1769,
+  "pushed": "2026-06-19",
+  "lang": "Python",
+  "desc": "Learn how to build your own Google Jobs scraper that simultaneously scrapes Google Jobs for multiple search queries and geo-locati",
+  "archived": false,
+  "url": "https://github.com/oxylabs/how-to-scrape-google-jobs",
+  "cat": "scrapers_py"
+ },
+ "eatmoreduck/boss-zhipin-scraper": {
+  "stars": 1550,
+  "pushed": "2026-10-11",
+  "lang": "Python",
+  "desc": "Boss\u76f4\u8058\u722c\u866b / BOSS\u76f4\u8058\u804c\u4f4d\u6570\u636e\u6293\u53d6\u5de5\u5177\uff0c\u57fa\u4e8e Chrome CDP \u534f\u8bae\u590d\u7528\u771f\u5b9e\u767b\u5f55\u6001\uff0c\u7ed5\u8fc7\u5b57\u4f53\u53cd\u722c\uff0c\u8f93\u51fa\u660e\u6587\u85aa\u8d44 JSON/CSV + \u85aa\u8d44\u6280\u80fd\u5206\u6790\u3002A Chrome-CDP-based BOSS Zhipin job scraper/crawl",
+  "archived": false,
+  "url": "https://github.com/eatmoreduck/boss-zhipin-scraper",
+  "cat": "scrapers_py"
+ },
+ "spinlud/py-linkedin-jobs-scraper": {
+  "stars": 497,
+  "pushed": "2026-09-08",
+  "lang": "Python",
+  "desc": "",
+  "archived": false,
+  "url": "https://github.com/spinlud/py-linkedin-jobs-scraper",
+  "cat": "scrapers_py"
+ },
+ "lucasjinreal/weibo_terminator_workflow": {
+  "stars": 258,
+  "pushed": "2017-05-22",
+  "lang": "Python",
+  "desc": "Update Version of weibo_terminator, This is Workflow Version aim at Get Job Done!",
+  "archived": false,
+  "url": "https://github.com/lucasjinreal/weibo_terminator_workflow",
+  "cat": "scrapers_py"
+ },
+ "arshka/LinkedIn-Job-Scraper": {
+  "stars": 195,
+  "pushed": "2024-02-15",
+  "lang": "Python",
+  "desc": "LinkedIn scraper to retrieve and store a live stream of job postings",
+  "archived": false,
+  "url": "https://github.com/arshka/LinkedIn-Job-Scraper",
+  "cat": "scrapers_py"
+ },
+ "kirkhunter/linkedin-jobs-scraper": {
+  "stars": 190,
+  "pushed": "2016-12-10",
+  "lang": "Python",
+  "desc": "Scrape LinkedIn job postings using Selenium WebDriver with python bindings",
+  "archived": false,
+  "url": "https://github.com/kirkhunter/linkedin-jobs-scraper",
+  "cat": "scrapers_py"
+ },
+ "kalil0321/ats-scrapers": {
+  "stars": 173,
+  "pushed": "2026-09-24",
+  "lang": "Python",
+  "desc": "Open-source ATS job library",
+  "archived": false,
+  "url": "https://github.com/kalil0321/ats-scrapers",
+  "cat": "scrapers_py"
+ },
+ "Kurt-Chan/ai-job-scraper": {
+  "stars": 164,
+  "pushed": "2026-07-20",
+  "lang": "Python",
+  "desc": "",
+  "archived": false,
+  "url": "https://github.com/Kurt-Chan/ai-job-scraper",
+  "cat": "scrapers_py"
+ },
+ "oxylabs/how-to-scrape-indeed": {
+  "stars": 148,
+  "pushed": "2026-06-22",
+  "lang": "Python",
+  "desc": "A tutorial for collecting job postings from Indeed using Python and Oxylabs Web Scraper API.",
+  "archived": false,
+  "url": "https://github.com/oxylabs/how-to-scrape-indeed",
+  "cat": "scrapers_py"
+ },
+ "srikar-kodakandla/linkedin-easyapply-using-AI": {
+  "stars": 133,
+  "pushed": "2024-04-13",
+  "lang": "Python",
+  "desc": "Automate your LinkedIn job applications with AI! This bot utilizes GPT models such as GPT-4, GPT-3.5, and Google's Gemini Pro for ",
+  "archived": false,
+  "url": "https://github.com/srikar-kodakandla/linkedin-easyapply-using-AI",
+  "cat": "easy_apply"
+ },
+ "career-ops-hq/career-ops": {
+  "stars": 74093,
+  "pushed": "2026-10-12",
+  "lang": "JavaScript",
+  "desc": "Open-source AI job search agent and job finder: scan job boards, score each job 1-5 against your CV before you apply, tailor an AT",
+  "archived": false,
+  "url": "https://github.com/career-ops-hq/career-ops",
+  "cat": "trackers"
+ },
+ "Paramchoudhary/ResumeSkills": {
+  "stars": 2658,
+  "pushed": "2026-06-19",
+  "lang": null,
+  "desc": "A collection of AI agent skills focused on resume optimization, job applications, and career development. Built for job seekers, c",
+  "archived": false,
+  "url": "https://github.com/Paramchoudhary/ResumeSkills",
+  "cat": "search_agent"
+ },
+ "pinloop-ai/pinloop-cli": {
+  "stars": 557,
+  "pushed": "2026-10-03",
+  "lang": "TypeScript",
+  "desc": "Job board CLI for coding agents. Search and judge millions of worldwide postings from all white-collar sectors, refreshed hourly.",
+  "archived": false,
+  "url": "https://github.com/pinloop-ai/pinloop-cli",
+  "cat": "search_agent"
+ },
+ "elliottdehn/open-jobs": {
+  "stars": 381,
+  "pushed": "2026-10-11",
+  "lang": "Python",
+  "desc": "~3M live jobs from 36 ATS, enriched with LLM-extracted fields + embeddings, released CC0. Includes agent tooling to search them (h",
+  "archived": false,
+  "url": "https://github.com/elliottdehn/open-jobs",
+  "cat": "search_agent"
+ },
+ "zszszszsz/.config": {
+  "stars": 362,
+  "pushed": "2023-10-05",
+  "lang": "Shell",
+  "desc": "# # Automatically generated file; DO NOT EDIT. # OpenWrt Configuration # CONFIG_MODULES=y CONFIG_HAVE_DOT_CONFIG=y # CONFIG_TARGET",
+  "archived": false,
+  "url": "https://github.com/zszszszsz/.config",
+  "cat": "search_agent"
+ },
+ "wanyichen06/LLMInternSkill": {
+  "stars": 326,
+  "pushed": "2026-08-04",
+  "lang": "Markdown",
+  "desc": "LLMInternSkill: LLM internship resume and job-search Codex Skill for resume polish, JD tailoring, evidence guard, interview grilli",
+  "archived": false,
+  "url": "https://github.com/wanyichen06/LLMInternSkill",
+  "cat": "search_agent"
+ },
+ "matthewprice/JobFinderOS": {
+  "stars": 179,
+  "pushed": "2026-09-23",
+  "lang": "Python",
+  "desc": "An agentic job search that runs on Claude Code: a recruiter, a crawler, and a market analyst writing to an Obsidian vault.",
+  "archived": false,
+  "url": "https://github.com/matthewprice/JobFinderOS",
+  "cat": "search_agent"
+ },
+ "surapuramakhil-org/Job_search_agent": {
+  "stars": 171,
+  "pushed": "2026-08-07",
+  "lang": "Python",
+  "desc": "Job search Agent (AI) searches and applies to jobs on your behalf, creating tailored applications for positions that match your sk",
+  "archived": true,
+  "url": "https://github.com/surapuramakhil-org/Job_search_agent",
+  "cat": "llm_apply"
+ },
+ "mshen1019/Argus": {
+  "stars": 113,
+  "pushed": "2026-02-11",
+  "lang": "Python",
+  "desc": "An AI-powered job search agent that crawls career pages and matches jobs based on your preferences.    ",
+  "archived": false,
+  "url": "https://github.com/mshen1019/Argus",
+  "cat": "search_agent"
+ },
+ "Stupidoodle/swissdevjobs-cli": {
+  "stars": 102,
+  "pushed": "2026-08-28",
+  "lang": "Python",
+  "desc": "Search & apply to ~4,700 salary-transparent tech jobs across 7 countries (\ud83c\udde8\ud83c\udded\ud83c\udde9\ud83c\uddea\ud83c\uddec\ud83c\udde7\ud83c\uddfa\ud83c\uddf8\ud83c\udde8\ud83c\udde6\ud83c\uddf3\ud83c\uddf1\ud83c\uddeb\ud83c\uddf7) from your terminal or AI agent \u2014 zero-de",
+  "archived": false,
+  "url": "https://github.com/Stupidoodle/swissdevjobs-cli",
+  "cat": "search_agent"
+ },
+ "Francis1998/agentic-career-search": {
+  "stars": 101,
+  "pushed": "2026-10-11",
+  "lang": "Python",
+  "desc": "Autonomous AI-agent orchestration engine for job discovery with decision traces, tool adapters, and production-grade run control.",
+  "archived": false,
+  "url": "https://github.com/Francis1998/agentic-career-search",
+  "cat": "search_agent"
+ },
+ "pedrohlucena/hunter": {
+  "stars": 92,
+  "pushed": "2026-04-08",
+  "lang": "Shell",
+  "desc": "AI agent that searches job platforms for openings matching your profile and exports the results as a scored CSV",
+  "archived": false,
+  "url": "https://github.com/pedrohlucena/hunter",
+  "cat": "search_agent"
+ },
+ "GodsScion/Auto_job_applier_linkedIn": {
+  "stars": 2928,
+  "pushed": "2026-09-11",
+  "lang": "Python",
+  "desc": "Make your job hunt easy by automating your application process with this Auto Applier",
+  "archived": false,
+  "url": "https://github.com/GodsScion/Auto_job_applier_linkedIn",
+  "cat": "auto_apply"
+ },
+ "nicolomantini/LinkedIn-Easy-Apply-Bot": {
+  "stars": 1154,
+  "pushed": "2026-10-07",
+  "lang": "Python",
+  "desc": "Automate the application process on LinkedIn",
+  "archived": false,
+  "url": "https://github.com/nicolomantini/LinkedIn-Easy-Apply-Bot",
+  "cat": "easy_apply"
+ },
+ "wodsuz/EasyApplyJobsBot": {
+  "stars": 830,
+  "pushed": "2026-05-18",
+  "lang": "Python",
+  "desc": "A python bot to automatically apply all Linkedin,Glassdoor, etc Easy Apply jobs based on your preferences. Auto login, auto fill a",
+  "archived": false,
+  "url": "https://github.com/wodsuz/EasyApplyJobsBot",
+  "cat": "auto_apply"
+ },
+ "joaosilvalopes/linkedin-easy-apply-bot": {
+  "stars": 373,
+  "pushed": "2025-10-17",
+  "lang": "TypeScript",
+  "desc": "",
+  "archived": false,
+  "url": "https://github.com/joaosilvalopes/linkedin-easy-apply-bot",
+  "cat": "easy_apply"
+ },
+ "coding-ai/EasyApply-Linkedin": {
+  "stars": 309,
+  "pushed": "2024-07-22",
+  "lang": "Python",
+  "desc": "RPA tool for applying to LinkedIn jobs",
+  "archived": false,
+  "url": "https://github.com/coding-ai/EasyApply-Linkedin",
+  "cat": "easy_apply"
+ },
+ "NathanDuma/LinkedIn-Easy-Apply-Bot": {
+  "stars": 257,
+  "pushed": "2023-06-11",
+  "lang": "Python",
+  "desc": "Automate LinkedIn Easy Apply job applications and answer application-specific questions.",
+  "archived": false,
+  "url": "https://github.com/NathanDuma/LinkedIn-Easy-Apply-Bot",
+  "cat": "easy_apply"
+ },
+ "aminblm/linkedin-application-bot": {
+  "stars": 206,
+  "pushed": "2024-01-28",
+  "lang": "Python",
+  "desc": "A python bot to apply all Linkedin Easy Apply jobs based on your preferences.",
+  "archived": false,
+  "url": "https://github.com/aminblm/linkedin-application-bot",
+  "cat": "easy_apply"
+ },
+ "madingess/EasyApplyBot": {
+  "stars": 175,
+  "pushed": "2025-03-12",
+  "lang": "Python",
+  "desc": "Automate LinkedIn Easy Apply job applications and answer application-specific questions.",
+  "archived": false,
+  "url": "https://github.com/madingess/EasyApplyBot",
+  "cat": "easy_apply"
+ },
+ "beatwad/LinkedIn-AI-Job-Applier-Ultimate": {
+  "stars": 171,
+  "pushed": "2026-10-09",
+  "lang": "Python",
+  "desc": "AI-powered LinkedIn and Indeed job application bot with Playwright automation, LLM integration, data anonymization, and Telegram r",
+  "archived": false,
+  "url": "https://github.com/beatwad/LinkedIn-AI-Job-Applier-Ultimate",
+  "cat": "llm_apply"
+ },
+ "AkbarDevop/ai-job-agent": {
+  "stars": 65,
+  "pushed": "2026-04-26",
+  "lang": "JavaScript",
+  "desc": "AI-powered job application automation toolkit \u2014 LinkedIn Easy Apply, Greenhouse, Lever, Jobvite, Ashby, Outlook triage, tracking. ",
+  "archived": false,
+  "url": "https://github.com/AkbarDevop/ai-job-agent",
+  "cat": "easy_apply"
+ },
+ "davidwarshawsky/Easy-Apply-Automater": {
+  "stars": 25,
+  "pushed": "2024-12-12",
+  "lang": "JavaScript",
+  "desc": "Select the job you want on LinkedIn Jobs, press the extension's button and watch it go through the steps.",
+  "archived": false,
+  "url": "https://github.com/davidwarshawsky/Easy-Apply-Automater",
+  "cat": "easy_apply"
+ },
+ "tilo/smarter_csv": {
+  "stars": 1552,
+  "pushed": "2026-10-08",
+  "lang": "Ruby",
+  "desc": "Fastest end-to-end CSV ingestion for Ruby (with C acceleration). SmarterCSV auto-detects formats, applies smart defaults, and retu",
+  "archived": false,
+  "url": "https://github.com/tilo/smarter_csv",
+  "cat": "auto_apply"
+ },
+ "Anshul439/job-auto-apply": {
+  "stars": 274,
+  "pushed": "2026-10-10",
+  "lang": "TypeScript",
+  "desc": "Automates one-click job applications on Wellfound and Instahyre",
+  "archived": false,
+  "url": "https://github.com/Anshul439/job-auto-apply",
+  "cat": "auto_apply"
+ },
+ "Sfedfcv/redesigned-pancake": {
+  "stars": 267,
+  "pushed": "2021-05-16",
+  "lang": null,
+  "desc": "Skip to content github / docs Code Issues 80 Pull requests 35 Discussions Actions Projects 2 Security Insights Merge branch 'main'",
+  "archived": false,
+  "url": "https://github.com/Sfedfcv/redesigned-pancake",
+  "cat": "trackers"
+ },
+ "slothsheepking/jobclaw": {
+  "stars": 231,
+  "pushed": "2026-03-04",
+  "lang": null,
+  "desc": "\ud83e\udd9e AI-powered job hunting agent \u2014 scrapes Boss\u76f4\u8058/LinkedIn, matches your profile, auto-applies. Built with OpenClaw.",
+  "archived": false,
+  "url": "https://github.com/slothsheepking/jobclaw",
+  "cat": "auto_apply"
+ },
+ "imon333/Job-apply-AI-agent": {
+  "stars": 191,
+  "pushed": "2026-06-04",
+  "lang": "Python",
+  "desc": "GitHub Project: AI Job Application Automation \ud83d\ude80 This project automates job searching, CV creation, and applications using Python, ",
+  "archived": false,
+  "url": "https://github.com/imon333/Job-apply-AI-agent",
+  "cat": "auto_apply"
+ },
+ "Liam-Frost/AutoApply": {
+  "stars": 130,
+  "pushed": "2026-08-02",
+  "lang": "Python",
+  "desc": "A personal job application AI Agent for job discovery, fit scoring, tailored materials, form filling, human-gated submission and a",
+  "archived": false,
+  "url": "https://github.com/Liam-Frost/AutoApply",
+  "cat": "auto_apply"
+ },
+ "superhen/Automated-Job-Resume-Matching-Solution": {
+  "stars": 85,
+  "pushed": "2019-08-29",
+  "lang": "Jupyter Notebook",
+  "desc": "According to a 2015 study on job seeking behavior by Pew Research Center, 79% of the job seekers utilized the online resources for",
+  "archived": false,
+  "url": "https://github.com/superhen/Automated-Job-Resume-Matching-Solution",
+  "cat": "auto_apply"
+ },
+ "Rayyan9477/AutoApply-AI-Agentic-Browser-Automation-for-Job-Search": {
+  "stars": 72,
+  "pushed": "2026-08-04",
+  "lang": "Python",
+  "desc": "AutoApply AI is an intelligent system designed to streamline your job search. It automates finding relevant job postings, crafting",
+  "archived": false,
+  "url": "https://github.com/Rayyan9477/AutoApply-AI-Agentic-Browser-Automation-for-Job-Search",
+  "cat": "auto_apply"
+ },
+ "Vlad9572324/hh.ru-clicker": {
+  "stars": 64,
+  "pushed": "2026-10-12",
+  "lang": "Python",
+  "desc": "Script to auto-apply to jobs on hh.ru \u2014 \u0421\u043a\u0440\u0438\u043f\u0442 \u0434\u043b\u044f \u0430\u0432\u0442\u043e\u043e\u0442\u043a\u043b\u0438\u043a\u043e\u0432 \u043d\u0430 hh.ru",
+  "archived": false,
+  "url": "https://github.com/Vlad9572324/hh.ru-clicker",
+  "cat": "auto_apply"
+ },
+ "Azoo92i/AutoApplyMax": {
+  "stars": 63,
+  "pushed": "2026-09-28",
+  "lang": "JavaScript",
+  "desc": "AutoApplyMax \u2014 AI-powered Chrome extension. Auto-apply to jobs on LinkedIn, Indeed & more. AI Resume Generator, Cover Letters, ATS",
+  "archived": false,
+  "url": "https://github.com/Azoo92i/AutoApplyMax",
+  "cat": "auto_apply"
+ },
+ "DaKheera47/job-ops": {
+  "stars": 4003,
+  "pushed": "2026-10-06",
+  "lang": "TypeScript",
+  "desc": "job-ops: DevOps principles applied to job hunting. A self-hosted pipeline to track, analyze, and assist your application process",
+  "archived": false,
+  "url": "https://github.com/DaKheera47/job-ops",
+  "cat": "trackers"
+ },
+ "Gsync/jobsync": {
+  "stars": 1390,
+  "pushed": "2026-10-11",
+  "lang": "TypeScript",
+  "desc": "Job application tracker and AI-powered job search assistant. Helps job seekers manage their search journey with AI resume review, ",
+  "archived": false,
+  "url": "https://github.com/Gsync/jobsync",
+  "cat": "trackers"
+ },
+ "DanielPan12/JobHuntBot": {
+  "stars": 856,
+  "pushed": "2026-10-12",
+  "lang": "JavaScript",
+  "desc": "Agent-led job application workflow with a local progress-tracking dashboard \u2014 works with any AI coding agent that can read files a",
+  "archived": false,
+  "url": "https://github.com/DanielPan12/JobHuntBot",
+  "cat": "trackers"
+ },
+ "offercontext/offerPilot": {
+  "stars": 747,
+  "pushed": "2026-10-12",
+  "lang": "Python",
+  "desc": "\u5f00\u6e90\u3001\u672c\u5730\u4f18\u5148\u7684 AI \u6c42\u804c\u4e0e\u6295\u9012\u7ba1\u7406\u5de5\u5177\uff0c\u652f\u6301\u7b80\u5386\u7ba1\u7406\u3001\u5237\u9898\u7ec3\u4e60\u3001\u6a21\u62df\u9762\u8bd5\u3001\u9762\u8bd5\u590d\u76d8\u3001Offer \u5bf9\u6bd4\u4e0e\u8c08\u85aa\u6307\u5bfc\u3002Open-source, local-first AI job-search workspace and application tracker",
+  "archived": false,
+  "url": "https://github.com/offercontext/offerPilot",
+  "cat": "trackers"
+ },
+ "andrew-shwetzer/career-ops-plugin-do-not-fork-currently-updating-v2-": {
+  "stars": 503,
+  "pushed": "2026-07-23",
+  "lang": "HTML",
+  "desc": "Claude Cowork plugin for job seekers. 9 AI skills: evaluate job postings, generate ATS-optimized resumes, scan company career port",
+  "archived": false,
+  "url": "https://github.com/andrew-shwetzer/career-ops-plugin-do-not-fork-currently-updating-v2-",
+  "cat": "trackers"
+ },
+ "molyswu/hand_detection": {
+  "stars": 282,
+  "pushed": "2022-01-11",
+  "lang": "Python",
+  "desc": "using Neural Networks (SSD) on Tensorflow.  This repo documents steps and scripts used to train a hand detector using Tensorflow (",
+  "archived": false,
+  "url": "https://github.com/molyswu/hand_detection",
+  "cat": "trackers"
+ },
+ "FarzamHejaziK/claude-linkedin-assistant": {
+  "stars": 230,
+  "pushed": "2026-06-09",
+  "lang": null,
+  "desc": "Minimal Claude Code workspace for tracking jobs + sending first-DM LinkedIn outreach via the Claude in Chrome extension. Tracker C",
+  "archived": false,
+  "url": "https://github.com/FarzamHejaziK/claude-linkedin-assistant",
+  "cat": "trackers"
+ },
+ "binoydutt/Resume-Job-Description-Matching": {
+  "stars": 189,
+  "pushed": "2021-07-22",
+  "lang": "Python",
+  "desc": "The purpose of this project was to defeat the current Application Tracking System used by most of the organization to filter out r",
+  "archived": false,
+  "url": "https://github.com/binoydutt/Resume-Job-Description-Matching",
+  "cat": "trackers"
+ },
+ "vesaias/JobNavigator": {
+  "stars": 152,
+  "pushed": "2026-10-11",
+  "lang": "Python",
+  "desc": "Self-hosted job-hunt automation: scrape career pages and job boards, score jobs against your r\u00e9sum\u00e9s with AI, tailor r\u00e9sum\u00e9s and c",
+  "archived": false,
+  "url": "https://github.com/vesaias/JobNavigator",
+  "cat": "llm_apply"
+ },
+ "Donvink/swiss-job-hunter": {
+  "stars": 147,
+  "pushed": "2026-10-09",
+  "lang": "Python",
+  "desc": "Automated job search pipeline for Switzerland \u2014 scrapes 7 job boards, deduplicates, scores against your CV, generates cover letter",
+  "archived": false,
+  "url": "https://github.com/Donvink/swiss-job-hunter",
+  "cat": "trackers"
+ },
+ "rainmanjam/jobspy-api": {
+  "stars": 381,
+  "pushed": "2025-05-29",
+  "lang": "Python",
+  "desc": "Dockerized version of JobSpy job search utility with API key auth, rate limiting, and proxy support.",
+  "archived": false,
+  "url": "https://github.com/rainmanjam/jobspy-api",
+  "cat": "jobspy"
+ },
+ "borgius/jobspy-mcp-server": {
+  "stars": 117,
+  "pushed": "2026-03-13",
+  "lang": "JavaScript",
+  "desc": "MCP server to search for jobs across multiple job listing platforms",
+  "archived": false,
+  "url": "https://github.com/borgius/jobspy-mcp-server",
+  "cat": "jobspy"
+ },
+ "qpwm06/QuickApply": {
+  "stars": 45,
+  "pushed": "2026-10-01",
+  "lang": "Python",
+  "desc": "Local web service powered by JobSpy for job scraping, Codex for resume tuning, and unified application workflow.",
+  "archived": false,
+  "url": "https://github.com/qpwm06/QuickApply",
+  "cat": "jobspy"
+ },
+ "alpharomercoma/ts-jobspy": {
+  "stars": 17,
+  "pushed": "2026-09-17",
+  "lang": "TypeScript",
+  "desc": "TypeScript job scraper for LinkedIn, Indeed, Glassdoor, ZipRecruiter & more - rewritten from python-jobspy",
+  "archived": false,
+  "url": "https://github.com/alpharomercoma/ts-jobspy",
+  "cat": "jobspy"
+ },
+ "haydenthai/Linkedin-Discord-Job-Scraper-Bot": {
+  "stars": 11,
+  "pushed": "2024-11-17",
+  "lang": "Python",
+  "desc": "This library is a Discord bot that automates job postings in Discord channels by scraping job listings from platforms like LinkedI",
+  "archived": false,
+  "url": "https://github.com/haydenthai/Linkedin-Discord-Job-Scraper-Bot",
+  "cat": "jobspy"
+ },
+ "asadintwala/jobspy_scraper_api": {
+  "stars": 9,
+  "pushed": "2025-05-20",
+  "lang": "Python",
+  "desc": "API to scrap jobs from various web sites i.e; LinkedIn, Glassdoor, indeed, google, bayt, zip_recruiter and Naukri according to the",
+  "archived": false,
+  "url": "https://github.com/asadintwala/jobspy_scraper_api",
+  "cat": "jobspy"
+ },
+ "ErickBonruque/iterbot": {
+  "stars": 8,
+  "pushed": "2026-08-18",
+  "lang": "Python",
+  "desc": "Bot de WhatsApp que conecta estudantes da UTFPR a vagas de est\u00e1gio e emprego (vagas online via jobspy + vagas locais de empresas d",
+  "archived": false,
+  "url": "https://github.com/ErickBonruque/iterbot",
+  "cat": "jobspy"
+ },
+ "t0mer/Applyfy": {
+  "stars": 7,
+  "pushed": "2026-09-28",
+  "lang": "Python",
+  "desc": "Self-hosted LinkedIn job digest: a FastAPI + JobSpy scraper API plus an n8n workflow that emails fresh job listings as an HTML tab",
+  "archived": false,
+  "url": "https://github.com/t0mer/Applyfy",
+  "cat": "jobspy"
+ },
+ "chinpeerapat/jobspy-mcp-server": {
+  "stars": 6,
+  "pushed": "2026-08-20",
+  "lang": "Python",
+  "desc": "",
+  "archived": false,
+  "url": "https://github.com/chinpeerapat/jobspy-mcp-server",
+  "cat": "jobspy"
+ },
+ "kaiserkernel/scraping-backend": {
+  "stars": 5,
+  "pushed": "2025-04-08",
+  "lang": "Python",
+  "desc": "Django python JobSpy",
+  "archived": false,
+  "url": "https://github.com/kaiserkernel/scraping-backend",
+  "cat": "jobspy"
+ },
+ "DaKheera47/jobspy-node": {
+  "stars": 5,
+  "pushed": "2026-02-25",
+  "lang": "TypeScript",
+  "desc": "Node.js/TypeScript port of Jobspy. Provides a simple API to scrape job listings from various platforms",
+  "archived": false,
+  "url": "https://github.com/DaKheera47/jobspy-node",
+  "cat": "jobspy"
+ },
+ "Ztrimus/ResumeFlow": {
+  "stars": 228,
+  "pushed": "2026-06-05",
+  "lang": "Python",
+  "desc": "Simplify and improve the job hunting experience by integrating LLMs to automate tasks such as resume and cover letter generation, ",
+  "archived": false,
+  "url": "https://github.com/Ztrimus/ResumeFlow",
+  "cat": "llm_apply"
+ },
+ "gopiashokan/AI-Resume-Analyzer-and-LinkedIn-Scraper-using-Generative-AI": {
+  "stars": 208,
+  "pushed": "2025-03-08",
+  "lang": "Jupyter Notebook",
+  "desc": "Developed an AI application using LLM to analyze user resumes and provided the summarization, strengths, weaknesses, suggestions, ",
+  "archived": false,
+  "url": "https://github.com/gopiashokan/AI-Resume-Analyzer-and-LinkedIn-Scraper-using-Generative-AI",
+  "cat": "llm_apply"
+ },
+ "AnchoringAI/anchoring-ai": {
+  "stars": 155,
+  "pushed": "2023-11-30",
+  "lang": "JavaScript",
+  "desc": "An open-source no-code tool for teams to collaborate on building, evaluating, and hosting applications leveraging GPT and other la",
+  "archived": false,
+  "url": "https://github.com/AnchoringAI/anchoring-ai",
+  "cat": "llm_apply"
+ },
+ "jolie-z/Auto-JobHunter": {
+  "stars": 86,
+  "pushed": "2026-10-02",
+  "lang": "Python",
+  "desc": "\ud83d\ude80 An industrial-grade AI job application system (BOSS/Liepin/51job).  Workflow: Scraping \u27a1\ufe0f SQLite \u27a1\ufe0f LLM Eval \u27a1\ufe0f RPA Delivery. | ",
+  "archived": false,
+  "url": "https://github.com/jolie-z/Auto-JobHunter",
+  "cat": "llm_apply"
+ },
+ "ebarti/JobCtrl": {
+  "stars": 81,
+  "pushed": "2026-10-10",
+  "lang": "Python",
+  "desc": "Open-source, local-first job search app for private discovery, evidence-backed fit scoring, truthful resume tailoring, durable wor",
+  "archived": false,
+  "url": "https://github.com/ebarti/JobCtrl",
+  "cat": "llm_apply"
+ },
+ "BjornMelin/ai-job-scraper": {
+  "stars": 48,
+  "pushed": "2026-10-07",
+  "lang": "Python",
+  "desc": "\ud83d\udd75\ufe0f\u200d\u2642\ufe0f Privacy-focused AI job scraper, local storage, and interactive dashboard. Auto-scrapes AI/ML roles from top companies using ",
+  "archived": false,
+  "url": "https://github.com/BjornMelin/ai-job-scraper",
+  "cat": "llm_apply"
+ },
+ "averatec0773/offeros": {
+  "stars": 44,
+  "pushed": "2026-09-28",
+  "lang": "TypeScript",
+  "desc": "Local-first AI job-application agent: it tracks every application after you apply, explains failures with per-field evidence, and ",
+  "archived": false,
+  "url": "https://github.com/averatec0773/offeros",
+  "cat": "llm_apply"
+ },
+ "rishilahoti/ashby-job-scraper": {
+  "stars": 51,
+  "pushed": "2026-10-09",
+  "lang": "JavaScript",
+  "desc": "Free job board that pulls 70,000+ open jobs from 2,000+ companies straight from their own career pages on Ashby, Greenhouse, Lever",
+  "archived": false,
+  "url": "https://github.com/rishilahoti/ashby-job-scraper",
+  "cat": "ats_feeds"
+ },
+ "adgramigna/job-board-scraper": {
+  "stars": 46,
+  "pushed": "2025-11-27",
+  "lang": "Python",
+  "desc": "Scrapes job listings from popular job boards Greenhouse, Lever, Ashby, and Rippling",
+  "archived": false,
+  "url": "https://github.com/adgramigna/job-board-scraper",
+  "cat": "ats_feeds"
+ },
+ "ghiarishi/job-scraper": {
+  "stars": 13,
+  "pushed": "2024-06-22",
+  "lang": "Python",
+  "desc": "Job Postings Web Scraper is a Python-based tool designed to scrape job listings from Lever and Greenhouse job boards. It retrieves",
+  "archived": false,
+  "url": "https://github.com/ghiarishi/job-scraper",
+  "cat": "ats_feeds"
+ }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://github.com/rorar/EURES-API-Documentation",
+    "name": "EURES Job Search API Documentation",
+    "snippet": "EURES (European Employment Services) Job Search API. This is an unofficial, community-maintained documentation project.",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/topics/eures",
+    "name": "eures · GitHub Topics",
+    "snippet": "This Python-based system automates scraping job listings from the EURES portal, stores them in SQLite, matches them against a candidate's resume using advanced ...",
+    "host_name": "github.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/topics/job-search?l=shell",
+    "name": "job-search · GitHub Topics",
+    "snippet": "EURES API documentation and the inherited/connected endpoints like ESCO/ISCO for job search. An agent skill for Claude Code, Codex, Gemini CLI, Cursor, and ...",
+    "host_name": "github.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://europa.eu/eures/portal",
+    "name": "Find a job in Europe - European Union",
+    "snippet": "Learn how to find a job on EURES, the European Job Mobility Portal, including details on who to contact for more information in your country.",
+    "host_name": "europa.eu",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/navikt/pam-eures-stilling-eksport",
+    "name": "navikt/pam-eures-stilling-eksport",
+    "snippet": "Implementation of the Eures input API, used by EU and EURES to fetch Job Vacancies in Norway.",
+    "host_name": "github.com",
+    "rank": 4,
+    "date": "Dec 1, 2019",
+    "favicon": ""
+  },
+  {
+    "url": "https://apify.com/lexis-solutions/eures-eu-jobs-scraper/api",
+    "name": "EURES EU Jobs Scraper API",
+    "snippet": "EURES EU Jobs Scraper helps you search and scrape job data from eures.europa.eu … to over 2 million job posts in Europe. Pricing from $6.40 / 1,000 results",
+    "host_name": "apify.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/AskEurope/comments/1lbfqkt/working_in_europe_knowing_only_english",
+    "name": "Working in Europe knowing only English: experiences with",
+    "snippet": "Hi everyone!\n\nI'm Italian and I'm considering looking for a job in Europe, but at the moment I only know English. I've discovered the EURES portal, which ...",
+    "host_name": "www.reddit.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/topics/job-search?l=shell&o=asc&s=updated",
+    "name": "job-search · GitHub Topics",
+    "snippet": "requests Complete package for all modules of the. EURES API documentation and the inherited/connected endpoints like ESCO/ISCO for job search and. CVs across ...",
+    "host_name": "github.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

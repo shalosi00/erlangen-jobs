@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://github.com",
+    "name": "bundesAPI/jobsuche-api: API zur Bundesagentur für Arbeit",
+    "snippet": "Arbeitsagentur Jobsuche API . Die Bundesagentur für Arbeit verfügt über die größte Datenbank für offene Stellen in Deutschland. Obwohl sie vollständig staatlich ... Read more",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://context7.com",
+    "name": "Arbeitsagentur Jobsuche API (bundesapi",
+    "snippet": "Python client for accessing the Arbeitsagentur Jobsuche API , providing programmatic access to Germany's largest job database with search, filtering, and job ...",
+    "host_name": "context7.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.rs",
+    "name": "jobsuche - Rust",
+    "snippet": "This crate provides a client for interacting with Germany's Federal Employment Agency (Bundesagentur für Arbeit) job search API . It allows you to search for ... Read more",
+    "host_name": "docs.rs",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://andreasfischer1985.github.io",
+    "name": "API-Kollektion web.arbeitsagentur.de",
+    "snippet": "Jobsuche : Hier Stellensuche nach neusten Jobs oder Ausbildungsplätzen starten in einer der größten Jobbörsen Deutschlands.",
+    "host_name": "andreasfischer1985.github.io",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://lib.rs",
+    "name": "Jobsuche",
+    "snippet": "Germany's largest job database programmatically. Search for jobs , get detailed information, and access employer data through a type-safe, ergonomic Rust API.",
+    "host_name": "lib.rs",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,11 @@
+# Asha FISI job-toolkit — one-shot venv restore (F7, project-review 2026-10-14)
+#   /home/z/.venv/bin/pip install -r requirements.txt
+# The sandbox wipes the venv periodically (5x documented); daily_jobpull.sh
+# self-heals via this file (F9). Loose pins on purpose.
+requests[socks]>=2.31
+pysocks>=1.7
+python-jobspy>=1.2
+curl_cffi>=0.7
+apprise>=1.8
+sqlite-utils>=3.36
+rapidfuzz>=3.10

@@ -1,0 +1,10 @@
+classification,title,company,city,source,url,evidence
+unverifiable,Systemadministrator (m/w/d),ANG GmbH,Erlangen,BA,https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003834249-S,fetch_failed: RuntimeError: BA fetch HTTP 410
+unverifiable,Mitarbeiter IT-Support | Administration | Projekte (m/w/d),NConsult GmbH,"Nürnberg, Mittelfranken",BA,https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003830762-S,fetch_failed: RuntimeError: BA fetch HTTP 410
+unverifiable,1st Level Supporter (m/w/d),NConsult GmbH,Bamberg,BA,https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003830672-S,fetch_failed: RuntimeError: BA fetch HTTP 410
+unverifiable,Linux Administrator (m/w/d),NConsult GmbH,"Nürnberg, Mittelfranken",BA,https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003830208-S,fetch_failed: RuntimeError: BA fetch HTTP 410
+unverifiable,Systemmanager (m/w/d) für Linux Netzwerkinfrastruktur,FERCHAU GmbH Niederlassung Nürnberg City,Röthenbach an der Pegnitz,BA,https://www.arbeitsagentur.de/jobsuche/jobdetail/12265-522292_JB5259677-S,fetch_failed: RuntimeError: BA fetch HTTP 410
+unverifiable,(Junior) IT Manager First Level Support (m/w/d),SIMBA DICKIE GROUP GMBH,Fürth,Indeed,https://de.indeed.com/viewjob?jk=2fc62b848db1054e,fetch_failed: RuntimeError: SSLError via proxy 139.162.78.109
+unverifiable,IT-Systemadministrator (m/w/d),HEGMANNS Gruppe,Nürnberg,Indeed,https://de.indeed.com/viewjob?jk=b784cbebc0c60fd4,fetch_failed: RuntimeError: HTTP 403 via proxy 123.121.98.109
+unverifiable,IT-Support Mitarbeiter (m/w/x),michael schmidt it,"Erlangen,",Talent.com,https://de.talent.com/view?id=613467225960220091,fetch_failed: RuntimeError: HTTP 404 via proxy 111.196.25.246
+unverifiable,Systembetreuer (w/m/d) für Rechenzentrumsbetrieb,siemens,"Erlangen,",Talent.com,https://de.talent.com/view?id=627479271688373604,fetch_failed: RuntimeError: HTTP 404 via proxy 123.121.96.227

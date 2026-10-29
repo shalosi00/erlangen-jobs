@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://developer.adzuna.com",
+    "name": "Search ads",
+    "snippet": "Use this endpoint to retrieve Adzuna's job advertisement listings. Visit the Interactive Endpoint Documentation for full technical details and a playground to ... Read more",
+    "host_name": "developer.adzuna.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://jobspipe.dev",
+    "name": "Adzuna API key, limits and pricing vs JobsPipe (2026)",
+    "snippet": "Sep 29, 2026 — Pricing Free to register, with default limits of 25 calls a minute, 250 a day , 1,000 a week and 2,500 a month. Public tiers from $49/mo",
+    "host_name": "jobspipe.dev",
+    "rank": 1,
+    "date": "Sep 29, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://publicapis.io",
+    "name": "Adzuna API — Free App ID & Key (Instant), Job Data",
+    "snippet": "Yes — the free tier issues an instant App ID/Key pair with a capped number of calls (hundreds per day ), enough for development and small apps.",
+    "host_name": "publicapis.io",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com",
+    "name": "MCP server for Adzuna Job Search API",
+    "snippet": "Rate limits apply - the Adzuna API has usage limits on free tier . Project ... Verify your API credentials at Adzuna Developer Portal; Check the .env file ... Read more",
+    "host_name": "github.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  }
+]

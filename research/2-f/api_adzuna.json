@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://developer.adzuna.com",
+    "name": "Overview",
+    "snippet": "The search endpoints allow you to query our database of job ads. Get employment data . Four endpoints expose the latest trends in salaries and vacancies. Read more",
+    "host_name": "developer.adzuna.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.adzuna.com",
+    "name": "Terms & Conditions",
+    "snippet": "You grant Adzuna a worldwide, royalty- free , licence to use , reproduce, adapt, modify, and distribute your job listing content,",
+    "host_name": "www.adzuna.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://jobspipe.dev",
+    "name": "Adzuna API key, limits and pricing vs JobsPipe (2026)",
+    "snippet": "Sep 29, 2026 — The API is free to register for, with 2,500 calls/month by default (250/day), and supports 16 countries with strongest coverage in the UK and ... Read more",
+    "host_name": "jobspipe.dev",
+    "rank": 2,
+    "date": "Sep 29, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://assets.applytosupply.digitalmarketplace.service.gov.uk",
+    "name": "Jan 2026 - G-Cloud 15 Adzuna Terms and Conditions",
+    "snippet": "The Adzuna API may be used for: 1. Publishing Adzuna ad listings 2. Publishing Jobsworth salary estimates 3. Personal or undergraduate research",
+    "host_name": "assets.applytosupply.digitalmarketplace.service.gov.uk",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://avahr.com",
+    "name": "Adzuna Review",
+    "snippet": "Job applicants can post resumes free of charge. Adzuna also offers API option. This way, any company can display its ads on its website, show data reports and ... Read more",
+    "host_name": "avahr.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

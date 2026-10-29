@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://github.com",
+    "name": "Issues · asimzz/Job-Finder-using-Jooble-API",
+    "snippet": "the app built with BLoC pattern and with help of DDD pattern - Issues · asimzz/ Job -Finder-using- Jooble - API .",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://help.jooble.org",
+    "name": "REST API Documentation - Support : Jooble Help Center",
+    "snippet": "Aug 16, 2026 — This Jooble REST API documentation provides detailed guidance on connecting, retrieving job data , Keywords or job titles to search for. Search ...",
+    "host_name": "help.jooble.org",
+    "rank": 1,
+    "date": "Aug 16, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://public-api.org",
+    "name": "Jooble API - Documentation, Review & Integration Guide",
+    "snippet": "Apr 16, 2026 — The Jooble API provides Job search engine . Authentication via apiKey is required to access the API. This API uses API Key authentication. in  ...",
+    "host_name": "public-api.org",
+    "rank": 2,
+    "date": "Apr 16, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.facts.dev",
+    "name": "Jooble API API details - facts.dev",
+    "snippet": "This API is best for job search and recruitment services . The Jooble API is useful for developers who need to search and display job postings within their ...",
+    "host_name": "www.facts.dev",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://apify.com",
+    "name": "Jooble Jobs Search Scraper API in Python",
+    "snippet": "Sep 30, 2026 — You can access the Jooble Jobs Search Scraper programmatically from your own applications by using the Apify API.",
+    "host_name": "apify.com",
+    "rank": 4,
+    "date": "Sep 30, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://publicapi.dev",
+    "name": "Jooble API",
+    "snippet": "Overview. The Jooble API allows developers to access job search functionality provided by Jooble.org. Users can search for job opportunities across various ...",
+    "host_name": "publicapi.dev",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  }
+]

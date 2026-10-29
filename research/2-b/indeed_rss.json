@@ -1,0 +1,29 @@
+[
+  {
+    "url": "https://www.wprssaggregator.com/Blog",
+    "name": "Creating a Job Board on WordPress",
+    "snippet": "Feb 1, 2026 — Locate the feed URL, typically resembling: 'http://rss. indeed.com/rss ?q=seo+remote&l=remote'. RSS feed generator: Use third-party tools like ... Read more",
+    "host_name": "www.wprssaggregator.com",
+    "rank": 0,
+    "date": "Feb 1, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://thatai.me/workflows/zapier-job-alerts",
+    "name": "Zapier Job Alerts: Get Instant Notifications for New Jobs",
+    "snippet": "Mar 10, 2025 — Free? Indeed , https://www. indeed.com/rss ?q=SOFTWARE+ENGINEER&l=Remote&sort=date, ✓ Yes. Read more",
+    "host_name": "thatai.me",
+    "rank": 1,
+    "date": "Mar 10, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.facebook.com/groups/posts",
+    "name": "This is how we get job updates, we're serious!",
+    "snippet": "our buddy Rob is the mastermind behind the RSS feed that comes in every 1-4 hours from the different sources. ... rss. indeed.com/rss ?q=&l=70401. Neaux Cue and 2 ...",
+    "host_name": "www.facebook.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,527 @@
+
+
+
+<!doctype html>
+<html lang=de>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Berufsstart - Klaus Resch Verlag KG">
+<meta name="google-site-verification" content="WATe2vWypi0X_N3_I7-p5whrrqoT8qKkSfttsN_zQzY">
+<link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<title>Aktuelle Jobs</title>
+<meta name=description content="Wir bieten dir mit unserem Jobportal eine Riesenanzahl von attraktiven Jobs für den Berufseinstieg, Praktika und Abschlussarbeiten."/>
+<meta name=keywords content="jobs, berufsstart" />
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<link href="/css/berufsstart.css" rel="stylesheet">
+</head>
+<body>
+<div id=anfang class="container-menue menuephp">
+<div class=container>
+<nav id=navbar-bs class="navbar navbar-default navbar-static">
+<div class=container-fluid>
+<div class=navbar-header>
+<button class=navbar-toggle type=button data-toggle=collapse data-target=.bs-navbar-collapse>
+<span class=sr-only>Navigation ein-/ausblenden</span>
+<span class=icon-bar>
+</span>
+<span class=icon-bar>
+</span>
+<span class=icon-bar>
+</span>
+</button>
+</div>
+<div class="navbar-collapse bs-navbar-collapse collapse" style="">
+<ul class="nav navbar-nav">
+<li class=dropdown>
+<a id=drop1 href=# class=dropdown-toggle data-toggle=dropdown title="Menü Bewerber">
+<span class=caret></span>Bewerber</a>
+<ul class="dropdown-menu tab1" role=menu aria-labelledby=drop1>
+<li role=presentation>
+<a role=menuitem tabindex=-1 href="/jobs/" title="Finde deinen neuen Job bei Berufsstart">Stellenangebote</a>
+<li role=presentation>
+<a role=menuitem tabindex=-1 href=/jobs/detailsuche.php title="Detailierte Job - Suche bei Berufsstart">Detailsuche</a>
+<li role=presentation>
+<a role=menuitem tabindex=-1 href=/karriere/ title="Redaktion zur Karriere bei Berufsstart">Karriere</a>
+<li role=presentation>
+<a role=menuitem tabindex=-1 href=/fachrichtung/ title="Chancen zur Job - Recherche bei Berufsstart">Chancen</a>
+<li role=presentation>
+<a role=menuitem tabindex=-1 href=/unternehmen/ title="Unternehmen stellen sich dich vor">Unternehmen</a>
+<li role=presentation>
+<a role=menuitem tabindex=-1 href=/service/ title="Services bei Berufsstart">Service</a>
+</ul>
+<li class=dropdown>
+<a href=# id=drop2 class=dropdown-toggle data-toggle=dropdown title="Menü Unternehmen">
+<span class=caret></span>Unternehmen</a>
+<ul class="dropdown-menu tab2" role=menu aria-labelledby=drop2>
+<li role=presentation>
+<form name="stelle" method="post" action="/personalsuche/produkt/">
+<input type="hidden" name="HAP_ID" value="-1" title="Job ausschreiben">
+</form>
+<a href="javascript:document.stelle.submit();">Job ausschreiben</a>
+<li role=presentation>
+<form name="bslogin" method="post" action="https://www.berufsstart.de/personalsuche/login.php" title="Ein Jobangebot auf Berufsstart und 250 Jobportalen ausschreiben">
+<input type="hidden" name="HAP_ID" value="-1" title="Login">
+</form>
+<a href="javascript:document.bslogin.submit();" title="Menü Login für Unternehmen">Login</a>
+<li role=presentation>
+<a role=menuitem tabindex=-1 href=/personalsuche/medien/ title="Menü Medien bei Berufsstart">Medien</a>
+<li role=presentation>
+<a role=menuitem tabindex=-1 href=/personalsuche/jobportal-netzwerk/ title="Menü Jobportal-Netzwerk bei Berufsstart">Jobportal-Netzwerk</a>
+<li role=presentation>
+<a role=menuitem tabindex=-1 href=/personalsuche/service/ title="Menü Service bei Berufsstart">Service</a>
+</ul>
+<li class=dropdown>
+<a href=# id=drop3 class=dropdown-toggle data-toggle=dropdown title="Menü Hochschule">
+<span class=caret></span>Hochschulen</a>
+<ul class="dropdown-menu tab3" role=menu aria-labelledby=drop3>
+<li role=presentation>
+<a role=menuitem tabindex=-1 href=/hochschulen/jobportal-netzwerk.php title="Menü Jobportal-Netzwerk bei Berufsstart">Jobportal-Netzwerk</a>
+<li role=presentation>
+<a role=menuitem tabindex=-1 href=/hochschulen/medien/ title="Menü Medien bei Berufsstart">Medien</a>
+<li role=presentation>
+<a role=menuitem tabindex=-1 href=/hochschulen/service/ title="Menü Service bei Berufsstart">Service</a>
+<li role=presentation>
+<a role=menuitem tabindex=-1 href=/hochschulen/account/ title="Ihr Account bei Berufsstart">Account</a>
+</ul>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+</div>
+<!-- Anfang Freitext -->
+<div class=container-color>
+<div class=container-submenue>
+<div class=container>
+<div class=col-md-8>
+</div>
+<div class=row>
+<div class="col-md-4 col-md-4-right">
+<div class=btn-group>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container startseite-hidden">
+<div class=row>
+<div class=col-md-8>
+<div class=bs-logo>
+<a href=/ title="Startseite von Berufsstart">
+<img src=/images/logo-bs/gelbes-logo-mit-schrift.png alt="Logo von Berufsstart - Der Jobbörse">
+</a>
+</div>
+</div>
+<div class="col-md-4 noshow">
+<div class=container-suche>
+<div class=container-textoben>
+Suche in 1629	
+	
+ Jobs</div>
+<script>
+$(function() {
+var availableTags = ["Praktikum","Bremen","Bauingenieurwesen","Werkstudent","Bonn","Leipzig","Wiesbaden","Trainee","Heilbronn","Abschlussarbeit","Sportwissenschaft","Salzgitter","Naturwissenschaft","Internship","Masterarbeit","Sozialwissenschaften","Jobs Hamburg","Jobs Trier","Praktikum Medizintechnik","Jobs K\u00f6ln","Tourismus","Praktikum Maschinenbau","Jobs Tourismus","Jobs Bank","Jobs Pharma","Jobs Keramik","Jobs Clausthal","Jobs M\u00f6nchengladbach","Jobs Sozial","Jobs Recklinghausen","Jobs Nordhausen","Jobs Neubrandenburg","Jobs Ludwigsburg","Jobs Weimar","Jobs Schmalkalden","Jobs Pirmasens","Jobs Flensburg","Jobs Wildau","Jobs Zittau","Jobs Lippstadt","Jobs Banken Frankfurt","Jobs Vechta","Jobs Kunststoff","Jobs Schleswig-Holstein","Jobs Geisteswissenschaft","Siemens","Jobs Saarland","Jobs Neuss","Jobs Ludwigshafen","Praktikum Augsburg"];
+$( "#begriff-1" ).autocomplete({
+source: availableTags
+});
+});
+</script>
+
+<form method="get" action="/ergebnisliste.php"> 
+<div class="container-suchfeld entry input-group col-xs-12">
+<div role="search" class="search">
+<input class="begriff-1 form-control" name="suchbegriff" 
+value="" type="text" id="begriff-1" required> 
+</div>
+<span class="input-group-btn">
+<button class="btn btn-success btn-add" type="submit">             
+<span class="glyphicon glyphicon-search"></span>
+</button>
+</span>
+</div>
+</form>
+
+<div class=container-textunten>
+<a href=/jobs/detailsuche.php title="Detailsuche von Berufsstart">Erweiterte Job - Suche <span class="glyphicon glyphicon-play-circle"></span></a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Ende Freitext -->
+<div class="container container-breadcrumbs">
+<div class=row>
+<div class=col-md-12>
+<ol class=breadcrumb>
+<li class=active>Ergebnisliste</li>
+</ol>
+</div>
+</div>
+</div>
+<div class=container>
+<div class=row>
+<div class=col-md-3>
+<div class=navbar-header>
+<button class=menue-navbar-toggle type=button data-toggle=collapse data-target=.menue-navbar-collapse> 
+<span class=sr-only>Navigation ein-/ausblenden</span> <span class=icon-bar>
+</span>
+<span class=icon-bar>
+</span>
+<span class=icon-bar>
+</span>
+</button>
+</div>
+<div class="menue-navbar-collapse collapse" style="">
+<div class=well>
+<div style=overflow-y:hidden;overflow-x:hidden>
+<ul class="nav nav-list">
+<li class=list-unstyled>
+<label class="tree-toggler nav-list">
+<a title="Der Einstieg als Trainee" href=/trainee/>Trainee</a>
+</label> <li class=list-unstyled>
+<label class="tree-toggler nav-list">
+<a title="Welche Einflüsse hat ein Praktikum fü die Karriere" href=/karriere/praktikum/>Praktikum</a>
+</label> <li class=list-unstyled>
+<label class="tree-toggler nav-list">
+<a title="Mit welchem Einstiegsgehalt als Absolveten oder Praktikant kann ich rechnen" href=/bewerbung/>Bewerbung</a>
+</label> <li class=list-unstyled>
+<label class="tree-toggler nav-list">
+<a title="Wo gibt es welche Jobmesse und wie kann ich mich auf eine Jobmesse vorbereiten" href=/jobmessen/>Jobmesse</a>
+</label> <li class=list-unstyled>
+<label class="tree-toggler nav-list">
+<a title="Benefits, was die Unternehmen neben dem Gehalt noch bieten" href=/einstiegsgehalt/benefits/>Benefits</a>
+</label> <li class=list-unstyled>
+<label class="tree-toggler nav-list">
+<a title="Welche Einflüsse hat ein Praktikum fü die Karriere" href=/einstiegsgehalt/>Einstiegsgehalt</a>
+</label> <li class=list-unstyled>
+<label class="tree-toggler nav-list">
+<a title="Die Hidden Champions der deutschen Industrie" href=/karriere/hidden-champions/>Hidden Champions</a>
+</label> <li class=list-unstyled>
+<label class="tree-toggler nav-list">
+<a title="Ihr habt gewählt - Eure attraktiven Arbeitgeber" href=/karriere/attraktive-arbeitgeber/>Attraktive Arbeitgeber</a>
+</label> <li class=list-unstyled>
+<label class="tree-toggler nav-list">
+<a title="Erfahrungsberichte von Absolventen und Praktikanten" href=/karriere/erfahrungsberichte/>Erfahrungsberichte</a>
+</label> <li class=list-unstyled>
+<label class="tree-toggler nav-list">
+<a title="Auslandserfahrung - ein notwendiges Übel" href=/karriere/auslandserfahrung/>Auslandserfahrung</a>
+</label> <li class=list-unstyled>
+<label class="tree-toggler nav-list">
+<a title="Bachelor oder Master - Welcher Abschluss reicht für die Karriere" href=/karriere/bachelor-master/>Bachelor oder Master</a>
+</label> <li class=list-unstyled>
+<label class="tree-toggler nav-list">
+<a title="Welche Einflüsse haben Soft Skills" href=/karriere/soft-skills/>Soft-Skills</a>
+</label> <li class=list-unstyled>
+<label class="tree-toggler nav-list">
+<a title="Was ist bei Social Media innerhalb der Bewerbung und Karriere zu beachten" href=/karriere/social-media/>Social Media</a>
+</label> <li class=list-unstyled>
+<label class="tree-toggler nav-list">
+<a title="Sinn und Unsinn von Arbeitgeber-Siegel" href=/karriere/siegel/>Siegel</a>
+</label>
+<li class=list-unstyled>
+<label class="tree-toggler nav-list">
+<a title="Probezeit" href=/karriere/probezeit/>Probezeit</a>
+</label>
+<li class=list-unstyled>
+<label class="tree-toggler nav-list">
+<a title="Probezeit" href=/bewerbung/business-knigge/>Businessknigge</a>
+</label>
+</ul>
+</div>
+</div>
+</div>
+<div class="abstandobenp20 abstanduntenp20 contentimg">
+<div class="panel-group">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title">E-Book</h4>
+</div>
+</div>
+
+<div class="panel panel-default">
+<div class="panel-body panel-strich">
+<div class="panel-col-alonegrey icon">
+<h4 class="panel-title">Berufsstart Bewerbung</h4>
+<br>
+Erhälst du kostenfrei als Buch in deinem CareerCenter oder Fachbereich. Oder falls vergriffen, hier als E-Book oder PDF-Version:<br>
+<br>
+<a class="exograu" href="/personalsuche/medien/Berufsstart-Bewerbung.pdf">
+<img src="/images/icon/icon-pdf.png" alt="Berufsstart Bewerbung als PDF"> als PDF</a> <br>
+<a class="exograu" href="/bewerbung/ebook.php">
+<img src="/images/icon/icon-html.png" alt="Berufsstart Bewerbung als E-Book"> als E-Book</a> <br>
+</div>
+</div>
+</div>
+
+</div>
+</div></div>
+<div class=col-md-9>
+
+<!-- Beginn Banner Content -->
+<div class="abstanduntenp40 mobile-hidden text-center">
+<a href="https://www.berufsstart.de/karriere/attraktive-arbeitgeber/wahl.php" target="new" title="Wahl des attraktiven Arbeitgebers"><img src=/images/banner/attraktive-arbeitgeber.png alt="Content Banner"></a>
+</div>
+<div class="abstanduntenp40">
+</div>
+<!-- Ende Banner Content -->
+
+
+<h1>Dein Suchbegriff: fachinformatiker</h1>
+<div class="rows">
+<div class="col-sm-6 abstandobenp10 abstanduntenp40"></div>
+
+<div class="col-sm-5 abstandobenp10 abstanduntenp40 text-right">
+Erhalte kostenlos die neuesten Job - Empfehlungen von uns für diese Suchanfrage bequem per E-Mail<br>
+
+<!-- Modal -->
+<div class="textinline">
+<!-- Button, der das Modal aufruft -->
+<div class="btn btn-default linkStyletext" data-toggle="modal" data-target="#JobperMail">
+Job per Mail
+</div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="JobperMail" tabindex="-1" role="dialog" aria-labelledby="JobperMailLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <span class="close" data-dismiss="modal"><span aria-hidden="true">
+	<img src=/images/icon/icon-schliessen.png alt="Fenster schliessen"></span></span>
+        <h3 class="modal-title text-left" id="JobperMailLabel">Job per Mail</h3>
+      </div>
+      <div class="modal-body email">
+
+
+       <iframe class="email" src="https://www.berufsstart.de/appscripts/listings/Jobs_per_Mail_Alert.php?SUCHBEGRIFF=fachinformatiker&lang=1&HAP_ID="></iframe> 
+
+
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+		<div class=row><div class="col-md-8 abstanduntenp20">
+		Gefundene Anzeigen:
+		4
+		</div></div>
+		
+			<br>	
+			<div class=row>
+			<div class=col-sm-2>
+			<span>06.10.2026</span><br>
+			
+				<div>
+				</div>
+				
+			</div>
+			<div class=col-sm-8>
+			<div class=row>
+			<div class=col-sm-12>
+			<a href="appscripts/jobs/anzeigenAusgabe.php?AnzeigenID=520542" title="DATAGROUP Köln GmbH - Ausbildung zum Fachinformatiker Systemintegration (all genders) 2027" 
+			target="_blank"><h2>Ausbildung zum Fachinformatiker Systemintegration (all genders) 2027</h2></a>
+			</div>
+			<div class=box-icon>
+			<div class="col-sm-8 infobereich">
+			<span class=post-company>Firma: DATAGROUP Köln GmbH</span><br>
+			<b class=boldn><span class=post-location>Ort: Köln</span></b><br>
+			</div>
+			<div class="col-sm-4 iconbereich">
+			</div>
+			</div>
+			</div>
+			</div>
+			<div class="col-sm-2 contentlogo text-right">
+			<img src=/images/stories/leer.png alt="Logo der Firma" 
+				title="Job-Angebote der Firma" height=40 width=80>
+			</div>
+			</div>
+			<div class=col-sm-12>
+			<div class=row>
+			<div class=account-rahmen>
+			</div>
+			</div>
+			</div>
+			
+			<br>	
+			<div class=row>
+			<div class=col-sm-2>
+			<span>28.09.2026</span><br>
+			
+				<div>
+				</div>
+				
+			</div>
+			<div class=col-sm-8>
+			<div class=row>
+			<div class=col-sm-12>
+			<a href="appscripts/jobs/anzeigenAusgabe.php?AnzeigenID=520633" title="AMCON Software GmbH - Fachinformatiker Anwendungsentwicklung (m/w/d)" 
+			target="_blank"><h2>Fachinformatiker Anwendungsentwicklung (m/w/d)</h2></a>
+			</div>
+			<div class=box-icon>
+			<div class="col-sm-8 infobereich">
+			<span class=post-company>Firma: AMCON Software GmbH</span><br>
+			<b class=boldn><span class=post-location>Ort: Cloppenburg</span></b><br>
+			</div>
+			<div class="col-sm-4 iconbereich">
+			</div>
+			</div>
+			</div>
+			</div>
+			<div class="col-sm-2 contentlogo text-right">
+			<img src=/images/stories/leer.png alt="Logo der Firma" 
+				title="Job-Angebote der Firma" height=40 width=80>
+			</div>
+			</div>
+			<div class=col-sm-12>
+			<div class=row>
+			<div class=account-rahmen>
+			</div>
+			</div>
+			</div>
+			
+			<br>	
+			<div class=row>
+			<div class=col-sm-2>
+			<span>28.09.2026</span><br>
+			
+				<div>
+				</div>
+				
+			</div>
+			<div class=col-sm-8>
+			<div class=row>
+			<div class=col-sm-12>
+			<a href="appscripts/jobs/anzeigenAusgabe.php?AnzeigenID=520634" title="AMCON Software GmbH - Fachinformatiker Systemintegration (m/w/d)" 
+			target="_blank"><h2>Fachinformatiker Systemintegration (m/w/d)</h2></a>
+			</div>
+			<div class=box-icon>
+			<div class="col-sm-8 infobereich">
+			<span class=post-company>Firma: AMCON Software GmbH</span><br>
+			<b class=boldn><span class=post-location>Ort: Cloppenburg</span></b><br>
+			</div>
+			<div class="col-sm-4 iconbereich">
+			</div>
+			</div>
+			</div>
+			</div>
+			<div class="col-sm-2 contentlogo text-right">
+			<img src=/images/stories/leer.png alt="Logo der Firma" 
+				title="Job-Angebote der Firma" height=40 width=80>
+			</div>
+			</div>
+			<div class=col-sm-12>
+			<div class=row>
+			<div class=account-rahmen>
+			</div>
+			</div>
+			</div>
+			
+			<br>	
+			<div class=row>
+			<div class=col-sm-2>
+			<span>13.09.2026</span><br>
+			
+				<div>
+				</div>
+				
+			</div>
+			<div class=col-sm-8>
+			<div class=row>
+			<div class=col-sm-12>
+			<a href="appscripts/jobs/anzeigenAusgabe.php?AnzeigenID=520577" title="evoila Ingolstadt GmbH - Ausbildung Fachinformatiker (m/w/d) Systemintegration" 
+			target="_blank"><h2>Ausbildung Fachinformatiker (m/w/d) Systemintegration</h2></a>
+			</div>
+			<div class=box-icon>
+			<div class="col-sm-8 infobereich">
+			<span class=post-company>Firma: evoila Ingolstadt GmbH</span><br>
+			<b class=boldn><span class=post-location>Ort: Gaimersheim</span></b><br>
+			</div>
+			<div class="col-sm-4 iconbereich">
+			</div>
+			</div>
+			</div>
+			</div>
+			<div class="col-sm-2 contentlogo text-right">
+			<img src=/images/stories/leer.png alt="Logo der Firma" 
+				title="Job-Angebote der Firma" height=40 width=80>
+			</div>
+			</div>
+			<div class=col-sm-12>
+			<div class=row>
+			<div class=account-rahmen>
+			</div>
+			</div>
+			</div>
+			
+</div>
+</div>
+</div>
+
+<div class="container-bs-endpfeil">
+	<div class="container">
+	<a href="#anfang" title="Einfach nach oben gelangen - Trainee, Praktikum, Werkstudent, Abschlussarbeit, Einstiegsgehalt, Bewerbung">
+		<div class="col-md-12">
+		<img src="/images/luecke.gif" alt="Schnell und einfach nach oben gelangen - Berufsstart - deine Jobbörse - hilft dir dabei" 
+		title="Schnell und einfach nach oben gelangen - Berufsstart - deine Jobbörse - hilft dir dabei">
+		</div></a>
+	</div>
+</div>
+<div class="container-footer-gelb">
+	<div class="container">
+		<div class="col-md-4 col-sm-4 col-xs-4 footer-links">
+		</div>
+		<div class="col-md-4 col-sm-4 col-xs-4 logo-footer"><img src="/images/logo-bs/gelber-logo-footer.png" alt="Logo von Berufsstart" title="Logo von Berufsstart - Der Jobbörse für Praktikum, Trainee, Bewerbung und Einstiegsgehalt">
+		</div>
+		<div class="col-md-4 col-sm-4 col-xs-4 footer-rechts"><a href="/klaus-resch-verlag/impressum.php" title="Das Impressum von Berufsstart - rechtlicher Hinweis, AGB">Impressum</a> / <a href="/klaus-resch-verlag/datenschutz.php" title="Das Datenschutz von Berufsstart">Datenschutz</a>
+		</div>
+	</div>
+</div>
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//matomo.berufsstart.de/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+
+<script type='application/ld+json'>
+{ "@context": "https://schema.org", 
+"@type": "Organization", 
+"name": "Berufsstart.de", 
+"telephone": "(0049) 152 / 046 249 9", 
+"url": "https://www.berufsstart.de", 
+"logo": "https://www.berufsstart.de/images/berufsstart-logo.png", 
+"image": "https://www.berufsstart.de/images/berufsstart-titel.png", 
+"sameAs" : [ "https://www.facebook.com/berufsstart/" ], 
+"description": "Wir bieten dir mit unserer Jobbörse eine Riesenanzahl von attraktiven Stellenangeboten für den Berufseinstieg, Trainee-Stellen,Praktika und Abschlussarbeiten. 
+Aber wir belassen es nicht bei der Börse für Jobs alleine, sondern geben dir auch wertvolle Tipps für deine Bewerbung, ein Einstiegsgehalt oder dein perfektes Auftreten auf 
+einer Jobmesse.", 
+"address": 
+{ "@type": "PostalAddress", "streetAddress": "Mühlendamm 3", "addressLocality": "Wildeshausen", "addressRegion": "Wildeshausen", "postalCode": "27793", 
+"addressCountry": "Deutschland" } 
+} 
+</script><script src=https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js></script>
+<script src=/includes/js/bootstrap.min.js></script>
+</body>
+</html>

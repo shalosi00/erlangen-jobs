@@ -1,0 +1,38 @@
+skills/
+node_modules/
+.env
+.venv*/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+tool-results/
+upload/
+*.log
+.claude/
+agent-ctx/
+research/github-repos/clones/
+backups/
+
+# proxy evidence samples (regenerable, large)
+data/proxies/*.html
+.mailtm.json
+data/upload_logs/
+download/AI_AGENT_HANDOVER_*.md
+.atomic-mail/
+db/
+data/upload_logs/
+backups/*.bundle
+
+# session state + plaintext escrow copies (the GIT-COMMITTED tier is
+# scripts/atomicmail_escrow.json.enc — ciphertext only, see CHANNEL.md)
+state/
+.config-mirror/
+.atomicmail.recovery-test/
+logs/
+
+# Task 24d: giant artifacts stay local-only (GitHub 100MB limit, private mirrors)
+backups/*.bundle
+site/full-repo/*.bundle
+research/2-e/vgn_gtfs/

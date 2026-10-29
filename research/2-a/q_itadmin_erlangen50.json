@@ -1,0 +1,469 @@
+{
+  "ergebnisliste" : [ {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "IT-Administrator (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2025-09-16"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "UNBEFRISTET",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "91052",
+        "ort" : "Erlangen",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.5880259,
+      "laenge" : 11.0123432
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2025-07-28"
+    },
+    "datumErsteVeroeffentlichung" : "2025-07-28",
+    "aenderungsdatum" : "2025-09-15T17:33:05.941",
+    "hauptberuf" : "IT-Systemadministrator/in",
+    "alternativBeruf1" : "IT-Administrator/in",
+    "firma" : "LZ Informatik",
+    "arbeitgeberKundennummerHash" : "Y2sqCMC2iw5p6lCs9lxoZxVJYqy8iR0q4jTGHZbYSE8=",
+    "referenznummer" : "12601-11313-1684960-1-S",
+    "entfernung" : 2,
+    "alleBerufe" : [ "IT-Administrator/in", "IT-Systemadministrator/in" ]
+  } ],
+  "maxErgebnisse" : 96,
+  "page" : 1,
+  "size" : 1,
+  "woOutput" : {
+    "bereinigterOrt" : "Erlangen",
+    "suchmodus" : "UMKREISSUCHE",
+    "koordinaten" : [ {
+      "lat" : 49.58198115,
+      "lon" : 10.9875625
+    } ]
+  },
+  "facetten" : {
+    "verguetung" : {
+      "counts" : {
+        "jahr" : 14,
+        "stunde" : 2
+      },
+      "maxCount" : 96
+    },
+    "befristung" : {
+      "counts" : {
+        "1" : 3,
+        "2" : 59,
+        "3" : 34
+      },
+      "maxCount" : 96
+    },
+    "externestellenboersen" : {
+      "counts" : {
+        "false" : 72,
+        "true" : 24
+      },
+      "maxCount" : 96
+    },
+    "behinderung" : {
+      "counts" : {
+        "false" : 54
+      },
+      "maxCount" : 96
+    },
+    "pav" : {
+      "counts" : {
+        "false" : 75,
+        "true" : 21
+      },
+      "maxCount" : 96
+    },
+    "berufsfeld" : {
+      "counts" : {
+        "Elektrotechnik" : 2,
+        "IT-Netzwerktechnik, -Administration, -Organisation" : 73,
+        "Informatik" : 18,
+        "Softwareentwicklung und Programmierung" : 2,
+        "Unternehmensorganisation und -strategie" : 1
+      },
+      "maxCount" : 96
+    },
+    "topberuf" : {
+      "counts" : {
+        "IT-Administrator/in" : 69,
+        "IT-Systemadministrator/in" : 36,
+        "Netzwerkadministrator/in" : 9,
+        "Fachinformatiker/in - Systemintegration" : 24,
+        "Anwendungssystemadministrator/in" : 6,
+        "Systeminformatiker/in" : 4,
+        "Informatiker/in" : 8
+      },
+      "scores" : {
+        "IT-Administrator/in" : 2913108,
+        "IT-Systemadministrator/in" : 507566,
+        "Netzwerkadministrator/in" : 172203,
+        "Fachinformatiker/in - Systemintegration" : 132225,
+        "Anwendungssystemadministrator/in" : 122772,
+        "Systeminformatiker/in" : 57696,
+        "Informatiker/in" : 19850
+      },
+      "maxCount" : 96
+    },
+    "arbeitsort" : {
+      "counts" : {
+        "Adelsdorf, Mittelfranken" : 2,
+        "Fürth, Bayern" : 5,
+        "Lauf an der Pegnitz" : 1,
+        "Mistelgau" : 1,
+        "Burgebrach" : 1,
+        "Merkendorf, Mittelfranken" : 1,
+        "Nürnberg, Mittelfranken" : 48,
+        "Forchheim, Oberfranken" : 1,
+        "Zirndorf, Mittelfranken" : 3,
+        "Neustadt an der Aisch" : 1,
+        "Baiersdorf, Mittelfranken" : 2,
+        "Eckental" : 1,
+        "Hersbruck" : 1,
+        "Wendelstein, Mittelfranken" : 1,
+        "Rednitzhembach" : 1,
+        "Ansbach, Mittelfranken" : 1,
+        "Bamberg" : 9,
+        "Erlangen" : 10,
+        "Heroldsberg" : 3,
+        "Neumarkt in der Oberpfalz" : 3,
+        "Sachsen bei Ansbach" : 1,
+        "Burgthann" : 1,
+        "Königsfeld, Oberfranken" : 1,
+        "Cadolzburg" : 1,
+        "Hallstadt" : 1
+      },
+      "maxCount" : 96
+    },
+    "veroeffentlichtseit" : {
+      "counts" : {
+        "0" : 2,
+        "1" : 2,
+        "14" : 26,
+        "28" : 45,
+        "7" : 19,
+        "alle" : 96
+      },
+      "maxCount" : 96
+    },
+    "schulbildung" : {
+      "counts" : {
+        "0" : 96,
+        "1" : 96,
+        "11" : 96,
+        "12" : 96,
+        "2" : 96,
+        "3" : 96,
+        "4" : 96,
+        "5" : 96,
+        "6" : 96
+      },
+      "maxCount" : 96
+    },
+    "arbeitsort_plz" : {
+      "counts" : {
+        "01069" : 1,
+        "01099" : 1,
+        "04109" : 6,
+        "07745" : 1,
+        "10115" : 6,
+        "10247" : 1,
+        "14770" : 1,
+        "20097" : 1,
+        "20457" : 1,
+        "22083" : 1,
+        "22587" : 4,
+        "24837" : 1,
+        "28195" : 1,
+        "30173" : 1,
+        "30657" : 3,
+        "31553" : 1,
+        "33100" : 1,
+        "38835" : 1,
+        "40210" : 1,
+        "40724" : 2,
+        "44787" : 1,
+        "50674" : 1,
+        "50676" : 1,
+        "51149" : 1,
+        "52064" : 1,
+        "53119" : 4,
+        "53359" : 1,
+        "60322" : 1,
+        "60439" : 1,
+        "60486" : 6,
+        "63263" : 2,
+        "65205" : 1,
+        "70174" : 1,
+        "70771" : 1,
+        "76133" : 1,
+        "80331" : 7,
+        "80637" : 2,
+        "80807" : 1,
+        "80992" : 1,
+        "84028" : 1,
+        "85049" : 1,
+        "86150" : 1,
+        "86156" : 1,
+        "89075" : 4,
+        "90402" : 7,
+        "90403" : 3,
+        "90411" : 3,
+        "90425" : 1,
+        "90427" : 2,
+        "90429" : 1,
+        "90431" : 1,
+        "90441" : 1,
+        "90443" : 3,
+        "90449" : 6,
+        "90451" : 1,
+        "90471" : 4,
+        "90475" : 1,
+        "90478" : 1,
+        "90489" : 8,
+        "90513" : 3,
+        "90530" : 1,
+        "90542" : 1,
+        "90556" : 1,
+        "90559" : 1,
+        "90562" : 3,
+        "90762" : 3,
+        "90765" : 1,
+        "90766" : 1,
+        "91052" : 9,
+        "91058" : 1,
+        "91083" : 2,
+        "91126" : 1,
+        "91207" : 1,
+        "91217" : 1,
+        "91301" : 1,
+        "91325" : 2,
+        "91413" : 1,
+        "91465" : 1,
+        "91522" : 1,
+        "91623" : 1,
+        "91732" : 1,
+        "92318" : 3,
+        "93047" : 1,
+        "93059" : 1,
+        "94051" : 1,
+        "95444" : 1,
+        "95490" : 1,
+        "96047" : 6,
+        "96052" : 3,
+        "96103" : 1,
+        "96138" : 1,
+        "96167" : 1
+      },
+      "maxCount" : 96
+    },
+    "arbeitgeber" : {
+      "counts" : {
+        "ACP IT Solutions AG" : 1,
+        "ANG" : 1,
+        "ANG GmbH" : 1,
+        "ASTRUM IT GmbH" : 1,
+        "AVLDiTEST GmbH" : 1,
+        "Akkodis Germany Tech Experts GmbH" : 7,
+        "Allgeier IT GmbH" : 1,
+        "Ata Solutions GmbH" : 1,
+        "BGS Solutions GmbH" : 1,
+        "BRK Kreisverband Fürth Personalabteilung vertraulich" : 1,
+        "BWI GmbH" : 4,
+        "Bertrandt AG" : 1,
+        "Brodos AG" : 1,
+        "DATAGROUP Operations GmbH Geschäftsstelle Bremen" : 2,
+        "DIS AG NÜRNBERG" : 6,
+        "Docufy GmbH" : 1,
+        "EICS PD GmbH" : 1,
+        "ESB IT-Services e.K. Frank Büttner" : 1,
+        "FERCHAU GmbH Niederlassung Nürnberg City" : 1,
+        "FRANKEN BRUNNEN GmbH & Co. KG" : 1,
+        "Fritz Berger GmbH" : 1,
+        "H&P Höhnen & Partner" : 1,
+        "HERMOS AG" : 1,
+        "Hegmanns AG" : 1,
+        "Helmi Göttler Private Arbeitsvermittlung" : 2,
+        "I.K. Hofmann GmbH" : 1,
+        "IT-Systemhaus der Bundesagentur für Arbeit" : 1,
+        "JFTK GmbH" : 1,
+        "Jentges Personalvermittlung" : 1,
+        "Krauß Armin - EDV Beratung" : 1,
+        "LZ Informatik" : 4,
+        "MCA GROUP" : 1,
+        "MEKRA Lang GmbH & Co.KG" : 1,
+        "NConsult GmbH" : 2,
+        "Neumüller Personalberatung Regina Neumüller e.K." : 1,
+        "Niemetz Torsysteme GmbH" : 1,
+        "OMNINET GmbH" : 1,
+        "ORDIX AG" : 1,
+        "Papp Personal GmbH   Co. KG" : 1,
+        "PlanA Recruitment GmbH" : 1,
+        "Proact Deutschland GmbH" : 1,
+        "PureSolution" : 1,
+        "PureSolution GmbH EDV Dienstleistung und Software" : 1,
+        "Riedel & Pfeuffer GmbH Haus der Gesundheit" : 1,
+        "SG-elektronik Sandra Grundl" : 1,
+        "SIT Solutions GmbH & Co. KG" : 2,
+        "Schmitt GmbH" : 1,
+        "Sill Optics GmbH" : 1,
+        "Sparda-Bank Nürnberg eG" : 1,
+        "Stadt Baiersdorf" : 1,
+        "Sörgel  Michael" : 1,
+        "TR Plast GmbH" : 1,
+        "Tempton Next Level Experts GmbH" : 1,
+        "Terrera AG" : 1,
+        "Thomann GmbH" : 1,
+        "Victoria Consulting GmbH" : 1,
+        "add-on personal & lösungen GmbH" : 1,
+        "agriKomp GmbH" : 1,
+        "alfatraining Bildungszentrum GmbH" : 1,
+        "aquitas GmbH" : 1,
+        "berg-it projektdienstleistungen GmbH" : 2,
+        "eSourceONE GmbH" : 1,
+        "eger + eger Personalmanagement GmbH" : 1,
+        "medatixx" : 2,
+        "mediteam GmbH & Co. KG" : 1,
+        "mgm technology partners" : 1,
+        "mgm technology partners GmbH" : 1,
+        "ncsolution GmbH" : 2,
+        "neumeier AG" : 1,
+        "runmarkt.de Bettina Poulet" : 1,
+        "uniVersa Versicherungen" : 1,
+        "zollsoft GmbH" : 1
+      },
+      "maxCount" : 96
+    },
+    "beruf" : {
+      "counts" : {
+        "Anwendungsprogrammierer/in" : 1,
+        "Anwendungssystemadministrator/in" : 6,
+        "Anwendungssystemberater/in" : 1,
+        "Assistent/in - Informatik (allgemeine Informatik)" : 1,
+        "Cyber-Security-Consultant" : 1,
+        "Datenbankadministrator/in" : 1,
+        "DevOps Engineer" : 1,
+        "EDV-Fachkraft" : 1,
+        "EDV-Sachbearbeiter/in" : 1,
+        "ERP-Systembetreuer/in" : 1,
+        "Entwickler/in Digitale Medien" : 1,
+        "Fachinformatiker/in - Anwendungsentwicklung" : 2,
+        "Fachinformatiker/in - Systemintegration" : 24,
+        "IT-Administrator/in" : 69,
+        "IT-Berater/in" : 1,
+        "IT-Kundenbetreuer/in" : 2,
+        "IT-Lösungsentwickler/in" : 1,
+        "IT-Organisator/in" : 2,
+        "IT-Sicherheitskoordinator/in" : 1,
+        "IT-System-Kaufmann/-frau" : 1,
+        "IT-Systemadministrator/in" : 36,
+        "IT-Systemanalytiker/in" : 1,
+        "Informatiker/in" : 8,
+        "Informatiker/in (Weiterbildung)" : 1,
+        "Informatikkaufmann/-frau" : 1,
+        "KI-Manager/in" : 1,
+        "Kaufmann/-frau - Digitalisierungsmanagement" : 1,
+        "Netzwerk-Servicetechniker/in" : 2,
+        "Netzwerkadministrator/in" : 9,
+        "Operations Manager/in" : 1,
+        "Servicetechniker/in - IT" : 1,
+        "Systeminformatiker/in" : 4,
+        "Third-Level-Supporter/in" : 2,
+        "Wirtschaftsinformatiker/in (Hochschule)" : 1,
+        "Wirtschaftsinformatiker/in - IT-Systeme" : 1
+      },
+      "maxCount" : 96
+    },
+    "homeoffice" : {
+      "counts" : {
+        "prozentual" : 3,
+        "nv_false" : 3,
+        "nv_true" : 20
+      },
+      "maxCount" : 96
+    },
+    "angebotsart" : {
+      "counts" : {
+        "1" : 95,
+        "2" : 1
+      },
+      "maxCount" : 96
+    },
+    "quereinstieg" : {
+      "counts" : {
+        "false" : 91,
+        "true" : 5
+      },
+      "maxCount" : 96
+    },
+    "branche" : {
+      "counts" : {
+        "1" : 2,
+        "11" : 24,
+        "13" : 1,
+        "15" : 1,
+        "17" : 1,
+        "18" : 1,
+        "27" : 5,
+        "28" : 26,
+        "3" : 3,
+        "4" : 1,
+        "5" : 1,
+        "7" : 1,
+        "8" : 1,
+        "9" : 6
+      },
+      "maxCount" : 96
+    },
+    "arbeitszeit" : {
+      "counts" : {
+        "tz" : 8,
+        "vz" : 80
+      },
+      "maxCount" : 96
+    },
+    "eintrittsdatum" : {
+      "counts" : {
+        "10_01_01-now" : 89,
+        "26_10_01-26_11_01" : 44,
+        "26_11_01-26_12_01" : 3,
+        "26_12_01-27_01_01" : 2,
+        "27_01_01-27_02_01" : 1
+      },
+      "maxCount" : 96
+    },
+    "zeitarbeit" : {
+      "counts" : {
+        "false" : 82,
+        "true" : 14
+      },
+      "maxCount" : 96
+    },
+    "topberufsfeld" : {
+      "counts" : {
+        "IT-Netzwerktechnik, -Administration, -Organisation" : 73,
+        "Informatik" : 18,
+        "Softwareentwicklung und Programmierung" : 2,
+        "Elektrotechnik" : 2
+      },
+      "scores" : {
+        "IT-Netzwerktechnik, -Administration, -Organisation" : 757402,
+        "Informatik" : 33944,
+        "Softwareentwicklung und Programmierung" : 575,
+        "Elektrotechnik" : 16
+      },
+      "maxCount" : 96
+    }
+  }
+}

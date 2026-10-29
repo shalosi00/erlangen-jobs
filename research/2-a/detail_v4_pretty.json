@@ -1,0 +1,97 @@
+{
+    "stellenangebotsart": "ARBEIT",
+    "stellenangebotsTitel": "Fachinformatiker Systemintegration (m/w/d)",
+    "stellenangebotsBeschreibung": "**Willkommen bei der ncsolution!**\nWir suchen einen **Fachinformatiker Systemintegration (m/w/d)** f\u00fcr den Einsatz bei unseren Kunden \u2013 sowohl **vor Ort als auch remote** .\n\n### **Ihre Aufgaben \u2013 Vielseitig und spannend**\n\n- **Optimierung und Betreuung** der gesamten IT-Infrastruktur.\n- **Annahme von IT-St\u00f6rungsanfragen** und Fehlerbehebungen sowohl **vor Ort** als auch mit **Remote-Service-Tools** .\n- **Support f\u00fcr Anwender** bei technischen Problemen und IT-Fragen.\n- **Administration und Ausbau der Netzwerkinfrastruktur** , einschlie\u00dflich Verkabelung, Switches, Router, Firewalls und WiFi.\n- Verwaltung von **Nutzerkonten, Computern und Zugriffsrechten** im **Microsoft Active Directory** .\n\n### **Ihr Profil \u2013 Das bringen Sie mit**\n\n- Abgeschlossene **Ausbildung zum Fachinformatiker f\u00fcr Systemintegration** oder eine vergleichbare Ausbildung mit entsprechender Berufserfahrung.\n- Gute Kenntnisse in der **Systembetreuung** innerhalb einer **Microsoft Client- und Serverlandschaft**.\n- **Erweiterte Kenntnisse in Netzwerk- und Internetprotokollen** .\n- Basiswissen in der Administration von **heterogenen Netzwerkumgebungen**, sowohl mit **Windows- als auch Linux-basierten Clients und Servern** .\n- Solides Wissen \u00fcber **PC- und Server-Hardware** .\n- **Sehr gute Deutschkenntnisse** , sowohl schriftlich als auch m\u00fcndlich.\n\n### **Tools & Technologien, mit denen Sie arbeiten werden:**\n\n- **Microsoft Active Directory** zur Verwaltung von Nutzerdaten und Rechten.\n- **Firewalls** und **Router** (z. B. Cisco, Juniper).\n- **WiFi-Technologien** (z. B. Access Points und WLAN-Management).\n- **Remote-Service-Tools** wie **TeamViewer** , **AnyDesk** oder **RDP** .\n- **Netzwerk-Tools** wie **Wireshark** , **Ping** und **Traceroute** .\n- **Microsoft Windows Server** und **Linux** (Ubuntu, CentOS, etc.) f\u00fcr die Administration und Fehlerbehebung.\n- **Virtualisierungsl\u00f6sungen** wie **VMware** oder **Hyper-V** .\n\n### **Warum ncsolution? \u2013 Ihre Vorteile auf einen Blick**\n\n- **Flache Hierarchien**: Feste Ansprechpartner, kurze Dienstwege und schnelle Entscheidungen.\n- **Spannende Projekte**: Unterschiedliche Kunden und Aufgaben sorgen f\u00fcr Abwechslung und neue Herausforderungen.\n- **Weiterbildung und Zertifizierungen**: Wir unterst\u00fctzen Ihre fachliche Entwicklung mit individuell abgestimmten Schulungen.\n- **Sicherheit und Stabilit\u00e4t**: Unbefristete Arbeitsvertr\u00e4ge geben Ihnen Planungssicherheit.\n- **Attraktive Verg\u00fctung**: Je nach Qualifikation und Erfahrung plus attraktive Bonusleistungen.\n- **Rundum-Service bei Reisen**: Wir organisieren und finanzieren Ihre Reisen, damit Sie sich voll und ganz auf Ihre Projekte konzentrieren k\u00f6nnen.\n\n**Ihre Bewerbung:**\n\nStarten Sie jetzt Ihre Karriere bei ncsolution!\n\ud83d\udce9 E-Mail: [bewerbung@ncsolution.de](https://mailto:bewerbung@ncsolution.de)\n\ud83d\udcde Telefon: 0170/9814449\n\ud83c\udf10 Weitere Infos: [www.ncsolution.de](http://www.ncsolution.de)",
+    "arbeitszeitVollzeit": true,
+    "eintrittszeitraum": {
+        "von": "2026-10-09"
+    },
+    "verguetungsangabe": "KEINE_ANGABEN",
+    "vertragsdauer": "KEINE_ANGABE",
+    "stellenlokationen": [
+        {
+            "adresse": {
+                "ort": "Frankfurt am Main",
+                "region": "HESSEN",
+                "land": "DEUTSCHLAND"
+            },
+            "breite": 50.118683534,
+            "laenge": 8.639338966
+        },
+        {
+            "adresse": {
+                "ort": "Mainz am Rhein",
+                "region": "RHEINLAND_PFALZ",
+                "land": "DEUTSCHLAND"
+            },
+            "breite": 49.970297774,
+            "laenge": 8.237055317
+        },
+        {
+            "adresse": {
+                "ort": "Bonn",
+                "region": "NORDRHEIN_WESTFALEN",
+                "land": "DEUTSCHLAND"
+            },
+            "breite": 50.707599687,
+            "laenge": 7.11827511
+        },
+        {
+            "adresse": {
+                "ort": "K\u00f6ln",
+                "region": "NORDRHEIN_WESTFALEN",
+                "land": "DEUTSCHLAND"
+            },
+            "breite": 50.945529796,
+            "laenge": 6.970143959
+        },
+        {
+            "adresse": {
+                "ort": "Potsdam",
+                "region": "BRANDENBURG",
+                "land": "DEUTSCHLAND"
+            },
+            "breite": 52.427516599,
+            "laenge": 13.033361752
+        },
+        {
+            "adresse": {
+                "ort": "Leipzig",
+                "region": "SACHSEN",
+                "land": "DEUTSCHLAND"
+            },
+            "breite": 51.337487591,
+            "laenge": 12.381464842
+        },
+        {
+            "adresse": {
+                "ort": "Jena",
+                "region": "THUERINGEN",
+                "land": "DEUTSCHLAND"
+            },
+            "breite": 50.925016809,
+            "laenge": 11.587563399
+        },
+        {
+            "adresse": {
+                "ort": "Erlangen",
+                "region": "BAYERN",
+                "land": "DEUTSCHLAND"
+            },
+            "breite": 49.582388591,
+            "laenge": 10.984861843
+        }
+    ],
+    "veroeffentlichungszeitraum": {
+        "von": "2026-10-09"
+    },
+    "datumErsteVeroeffentlichung": "2026-10-09",
+    "aenderungsdatum": "2026-10-09T11:12:08.123",
+    "istBetreut": false,
+    "hauptberuf": "Fachinformatiker/in - Systemintegration",
+    "firma": "ncsolution GmbH",
+    "arbeitgeberKundennummerHash": "gsO7t7eBkL2HP0Elw6X6zhsx9TdaaSylUmdbMpywsks=",
+    "allianzpartnerUrl": "http://www.arbeitsagentur.de",
+    "allianzpartnerName": "arbeitsagentur.de",
+    "referenznummer": "10001-1003832993-S"
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://en.wikipedia.org",
+    "name": "APIs",
+    "snippet": "An application programming interface ( API ) is a connection between computers or between computer programs. It is a type of software interface,",
+    "host_name": "en.wikipedia.org",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://aws.amazon.com",
+    "name": "What is an API? - Application Programming Interfaces",
+    "snippet": "APIs are mechanisms that enable two software components to communicate with each other using a set of definitions and protocols. For example, the weather ... Read more",
+    "host_name": "aws.amazon.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.mulesoft.com",
+    "name": "What is an API? (Application Programming Interface)",
+    "snippet": "A beginner-friendly guide to understanding APIs : what they are, how they work, and why they power nearly every digital experience you use. Read more",
+    "host_name": "www.mulesoft.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.ibm.com",
+    "name": "What Is an API (Application Programming Interface)?",
+    "snippet": "Apr 9, 2024 — An application programming interface ( API ) is a contract that enables software to access data or invoke functionality exposed by other software.",
+    "host_name": "www.ibm.com",
+    "rank": 3,
+    "date": "Apr 9, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://openai.com",
+    "name": "API Platform",
+    "snippet": "Our API platform offers our latest models and guides for safety best practices.",
+    "host_name": "openai.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

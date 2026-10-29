@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://apify.com",
+    "name": "Career Page Jobs Scraper: Greenhouse, Lever, Ashby,",
+    "snippet": "Sep 28, 2026 — Greenhouse jobs API and ATS job change feed for Workday, Lever, Ashby, Workable, Personio, Recruitee and Teamtailor career pages. Normalized job ... Read more",
+    "host_name": "apify.com",
+    "rank": 0,
+    "date": "Sep 28, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com",
+    "name": "patilswapnilv/job-scraper: Scrape jobs for greenhouse",
+    "snippet": "This python script helps you to scrape the jobs and their details from a Company job page on Greenhouse ATS . Greenhouse is a popular ATS service and many ... Read more",
+    "host_name": "github.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  }
+]

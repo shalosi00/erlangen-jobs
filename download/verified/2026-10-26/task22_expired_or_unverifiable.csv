@@ -1,0 +1,10 @@
+classification,title,company,city,source,url,evidence
+expired,Systemadministrator (m/w/d),ANG GmbH,Erlangen,BA,https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003834249-S,posting offline (HTTP 410) BA page
+expired,Mitarbeiter IT-Support | Administration | Projekte (m/w/d),NConsult GmbH,"Nürnberg, Mittelfranken",BA,https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003830762-S,posting offline (HTTP 410) BA page
+expired,1st Level Supporter (m/w/d),NConsult GmbH,Bamberg,BA,https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003830672-S,posting offline (HTTP 410) BA page
+expired,Linux Administrator (m/w/d),NConsult GmbH,"Nürnberg, Mittelfranken",BA,https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003830208-S,posting offline (HTTP 410) BA page
+expired,Systemmanager (m/w/d) für Linux Netzwerkinfrastruktur,FERCHAU GmbH Niederlassung Nürnberg City,Röthenbach an der Pegnitz,BA,https://www.arbeitsagentur.de/jobsuche/jobdetail/12265-522292_JB5259677-S,posting offline (HTTP 410) BA page
+unverifiable,(Junior) IT Manager First Level Support (m/w/d),SIMBA DICKIE GROUP GMBH,Fürth,Indeed,https://de.indeed.com/viewjob?jk=2fc62b848db1054e,fetch_failed: RuntimeError: SSLError via proxy 139.162.78.109
+expired,Systembetreuer (w/m/d) für Rechenzentrumsbetrieb,siemens,"Erlangen,",Talent.com,https://de.talent.com/view?id=627479271688373604,posting offline (HTTP 404) direct
+expired,IT-Support Mitarbeiter (m/w/x),michael schmidt it,"Erlangen,",Talent.com,https://de.talent.com/view?id=613467225960220091,posting offline (HTTP 404) direct
+unverifiable,IT-Systemadministrator (m/w/d),HEGMANNS Gruppe,Nürnberg,Indeed,https://de.indeed.com/viewjob?jk=b784cbebc0c60fd4,fetch_failed: RuntimeError: HTTP 401 via proxy 117.0.77.231

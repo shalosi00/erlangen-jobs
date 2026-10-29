@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://github.com",
+    "name": "[Feature Request]: Migration path from ha-deutschebahn #4",
+    "snippet": "Jan 21, 2025 — Unfortunatly nearly all new APIs (including Deutsche Bahn API , HAFAS and so on) only provide data for a station. The \"old\" DB (schiene) API was ... Read more",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "Jan 21, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://gist.github.com",
+    "name": "(German) parser for the timetable API of the Deutsche",
+    "snippet": "(German) parser for the timetable API of the Deutsche Bahn . Still garbage, but displays most data from the API + json is better than xml - db -timetable.js.",
+    "host_name": "gist.github.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  }
+]

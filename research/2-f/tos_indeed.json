@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://www.linkedin.com/posts/seotanvirbd_webscraping-dataengineering-seleniumbase-activity-7377344990802337792-fioZ",
+    "name": "How to scrape job listings from Indeed without getting blocked",
+    "snippet": "Quick reality check: deliberately bypassing Cloudflare or other anti-bot protections crosses legal and ethical lines.",
+    "host_name": "www.linkedin.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://blog.stackademic.com/how-to-scrape-jobs-data-from-indeed-fc7c260c175e",
+    "name": "How to Scrape Jobs Data from Indeed | by Victor Yakubu",
+    "snippet": "To extract data from Indeed, you need to bypass the site's anti-bot protection. Indeed employs advanced security measures that can block scripts ...",
+    "host_name": "blog.stackademic.com",
+    "rank": 1,
+    "date": "Nov 27, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://iproyal.com/blog/how-to-scrape-indeed-job-postings",
+    "name": "How to Scrape Job Postings from Indeed: A Step-by-",
+    "snippet": "When you scrape Indeed, you might face legal issues if you break the site's rules. Indeed's Terms of Service have anti-scraping rules in place.",
+    "host_name": "iproyal.com",
+    "rank": 2,
+    "date": "Mar 23, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@deepworkercopilot/2025-ive-built-a-indeed-job-postings-scraper-with-python-beating-strong-anti-bot-security-0a6520443c66",
+    "name": "2025 : I've built a Indeed Job Postings scraper with Python",
+    "snippet": "In this post, I'll share how I approached scraping Indeed at scale, using Python, Async I/O, BeautifulSoup, and aiohttp while carefully ...",
+    "host_name": "medium.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.piloterr.com/blog/how-to-scrape-indeed",
+    "name": "Scrape Indeed Jobs & Companies",
+    "snippet": "In this article, we will explore possible solutions to bypass their anti-bot measures and successfully scrape jobs and company pages. Indeed ...",
+    "host_name": "www.piloterr.com",
+    "rank": 4,
+    "date": "Nov 12, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://scrapfly.io/blog/posts/how-to-scrape-indeedcom",
+    "name": "How to Scrape Indeed.com (2026 Update)",
+    "snippet": "Tutorial on web scraping job listing data from Indeed.com using Python. How to collect and parse recruitment data without being blocked.",
+    "host_name": "scrapfly.io",
+    "rank": 5,
+    "date": "Oct 4, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://brightdata.com/blog/web-data/best-indeed-scrapers",
+    "name": "9 Best Indeed Scrapers in 2026: Ranked and Tested",
+    "snippet": "This guide ranks 9 Indeed scrapers by success rate, anti-bot bypass strength, pricing, and data quality. Bright Data tops the ranking with a 98.44% average ...",
+    "host_name": "brightdata.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://dev.to/agenthustler/how-to-scrape-indeed-in-2026-job-listings-salaries-and-company-reviews-264o",
+    "name": "How to Scrape Indeed in 2026: Job Listings, Salaries, and",
+    "snippet": "Indeed robots.txt disallows most scraping paths. Their ToS explicitly prohibits automated data collection. That said: Public job listings are ...",
+    "host_name": "dev.to",
+    "rank": 7,
+    "date": "Mar 26, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.indeed.com/q-anti-scraping-jobs.html",
+    "name": "100 Anti Scraping Jobs, Employment",
+    "snippet": "198 Anti Scraping jobs. Apply to Dishwasher, Painter, Shift Leader and more. Hiring now on Indeed.com.",
+    "host_name": "www.indeed.com",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/vixe98/indeed-scraper-anti-bot",
+    "name": "Indeed Scraper Complete Guide: How to Scrape",
+    "snippet": "Indeed's Terms of Service prohibit automated extraction, but ToS restrictions on scraping public data are increasingly unenforceable in practice. Standard ...",
+    "host_name": "github.com",
+    "rank": 9,
+    "date": "",
+    "favicon": ""
+  }
+]

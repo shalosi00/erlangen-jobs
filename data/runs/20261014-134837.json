@@ -1,0 +1,333 @@
+{
+ "ts": "20261014-134837",
+ "git_head": "91904cf",
+ "slug": "fachinformatiker-systemintegration-erlangen-50km-14d",
+ "query": "Fachinformatiker Systemintegration",
+ "city": "Erlangen",
+ "radius": 50,
+ "days": 14,
+ "ok_sources": [
+  "arbeitnow",
+  "ba",
+  "berufsstart",
+  "connecticum",
+  "eures",
+  "getinit",
+  "himalayas",
+  "indeed",
+  "infranken",
+  "jobicy",
+  "kimeta",
+  "linkedin",
+  "remoteok",
+  "remotive",
+  "stellenanzeigen",
+  "talent",
+  "wwr",
+  "xing"
+ ],
+ "ok_display_names": [
+  "Arbeitnow",
+  "BA",
+  "EURES",
+  "Get-in-IT",
+  "InFranken",
+  "Indeed",
+  "Kimeta",
+  "LinkedIn",
+  "Stellenanzeigen.de",
+  "Talent.com",
+  "XING"
+ ],
+ "not_ok_sources": [
+  {
+   "name": "adzuna",
+   "status": "ERROR",
+   "error": "[auth] missing API key: set ADZUNA_APP_ID + ADZUNA_APP_KEY (free: developer.adzuna.com)"
+  },
+  {
+   "name": "jooble",
+   "status": "ERROR",
+   "error": "[auth] missing API key: set JOOBLE_API_KEY (free: jooble.org/api)"
+  },
+  {
+   "name": "careerjet",
+   "status": "ERROR",
+   "error": "[auth] missing API key: set CAREERJET_AFFID (free: careerjet.com/partners/api)"
+  },
+  {
+   "name": "whatjobs",
+   "status": "ERROR",
+   "error": "[auth] missing API key: set WHATJOBS_PUBLISHER_KEY (whatjobs affiliate/publisher program)"
+  }
+ ],
+ "per_source": [
+  {
+   "name": "ba",
+   "status": "OK",
+   "count_raw": 45,
+   "count_kept": 25,
+   "count_rejected": 20,
+   "duration_s": 39.6,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "indeed",
+   "status": "OK",
+   "count_raw": 3,
+   "count_kept": 2,
+   "count_rejected": 1,
+   "duration_s": 0.4,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "linkedin",
+   "status": "OK",
+   "count_raw": 7,
+   "count_kept": 0,
+   "count_rejected": 7,
+   "duration_s": 5.8,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "xing",
+   "status": "OK",
+   "count_raw": 3,
+   "count_kept": 2,
+   "count_rejected": 1,
+   "duration_s": 1.6,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "kimeta",
+   "status": "OK",
+   "count_raw": 10,
+   "count_kept": 5,
+   "count_rejected": 5,
+   "duration_s": 28.2,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "stellenanzeigen",
+   "status": "OK",
+   "count_raw": 39,
+   "count_kept": 0,
+   "count_rejected": 39,
+   "duration_s": 0.6,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "getinit",
+   "status": "OK",
+   "count_raw": 39,
+   "count_kept": 5,
+   "count_rejected": 34,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "connecticum",
+   "status": "OK",
+   "count_raw": 30,
+   "count_kept": 0,
+   "count_rejected": 30,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "infranken",
+   "status": "OK",
+   "count_raw": 24,
+   "count_kept": 1,
+   "count_rejected": 23,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "arbeitnow",
+   "status": "OK",
+   "count_raw": 300,
+   "count_kept": 0,
+   "count_rejected": 300,
+   "duration_s": 0.1,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "adzuna",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "[auth] missing API key: set ADZUNA_APP_ID + ADZUNA_APP_KEY (free: developer.adzuna.com)",
+   "detail": "url="
+  },
+  {
+   "name": "jooble",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "[auth] missing API key: set JOOBLE_API_KEY (free: jooble.org/api)",
+   "detail": "url="
+  },
+  {
+   "name": "careerjet",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "[auth] missing API key: set CAREERJET_AFFID (free: careerjet.com/partners/api)",
+   "detail": "url="
+  },
+  {
+   "name": "whatjobs",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "[auth] missing API key: set WHATJOBS_PUBLISHER_KEY (whatjobs affiliate/publisher program)",
+   "detail": "url="
+  },
+  {
+   "name": "remotive",
+   "status": "OK",
+   "count_raw": 15,
+   "count_kept": 0,
+   "count_rejected": 15,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "remoteok",
+   "status": "OK",
+   "count_raw": 99,
+   "count_kept": 0,
+   "count_rejected": 99,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "jobicy",
+   "status": "OK",
+   "count_raw": 50,
+   "count_kept": 0,
+   "count_rejected": 50,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "berufsstart",
+   "status": "OK",
+   "count_raw": 3,
+   "count_kept": 0,
+   "count_rejected": 3,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "himalayas",
+   "status": "OK",
+   "count_raw": 20,
+   "count_kept": 0,
+   "count_rejected": 20,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "wwr",
+   "status": "OK",
+   "count_raw": 45,
+   "count_kept": 0,
+   "count_rejected": 45,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "talent",
+   "status": "OK",
+   "count_raw": 17,
+   "count_kept": 8,
+   "count_rejected": 9,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "eures",
+   "status": "OK",
+   "count_raw": 100,
+   "count_kept": 0,
+   "count_rejected": 100,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  }
+ ],
+ "outputs": [
+  "/home/z/my-project/download/jobs_fachinformatiker-systemintegration-erlangen-50km-14d_20261014-1350.csv",
+  "/home/z/my-project/download/jobs_fachinformatiker-systemintegration-erlangen-50km-14d_20261014-1350.json",
+  "/home/z/my-project/download/jobs_fachinformatiker-systemintegration-erlangen-50km-14d_20261014-1350_rejected.csv"
+ ],
+ "unique_final": 44,
+ "rejected_total": 801,
+ "proxy_pool": {
+  "alive": 1567,
+  "by_protocol": {
+   "socks5": 847,
+   "http": 477,
+   "socks4": 239,
+   "https": 4
+  },
+  "per_target": {
+   "ba_api": 850,
+   "kimeta": 525,
+   "stellenanzeigen": 578,
+   "jobvector": 3
+  },
+  "dead_marked": 1,
+  "data_file": "/home/z/my-project/data/proxies/validated_proxies.json",
+  "age_hours": 18.0
+ }
+}

@@ -1,0 +1,43 @@
+{
+  "code": 200,
+  "data": {
+    "description": "",
+    "external": {
+      "preload": {
+        "https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/media/WixMadeforDisplayVF_W_Wght.ab35e4df.woff2": {
+          "as": "font",
+          "crossorigin": ""
+        },
+        "https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/media/WixMadeforTextVF_W_Wght.8022447a.woff2": {
+          "as": "font",
+          "crossorigin": ""
+        }
+      }
+    },
+    "html": "<html><head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"robots\" content=\"noindex\">\n    <title>404 Error: Page Not Found</title>\n\n    \n    <script async=\"\" src=\"https://static.parastorage.com/polyfill/v2/polyfill.min.js?features=default,es6,es7,es2017&amp;flags=gated&amp;unknown=polyfill&amp;rum=0\"></script>\n    <script src=\"https://static.parastorage.com/unpkg-semver/fedops-logger@5/fedops-logger.bundle.min.js\"></script>\n    <script>fedopsLogger.reportAppLoadStarted(\"classic-error-pages-statics\");</script>\n    <script src=\"https://static.parastorage.com/unpkg-semver/header-footer-provider/app.bundle.min.js\"></script>\n    <script crossorigin=\"\" src=\"https://static.parastorage.com/unpkg/react@18.2.0/umd/react.production.min.js\"></script>\n    <script crossorigin=\"\" src=\"https://static.parastorage.com/unpkg/react-dom@18.2.0/umd/react-dom.production.min.js\"></script>\n\n    <link rel=\"stylesheet\" href=\"//static.parastorage.com/services/classic-error-pages-statics/1.98.0/app.min.css\">\n\n    <link rel=\"preload\" as=\"font\" href=\"https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/media/WixMadeforTextVF_W_Wght.8022447a.woff2\" crossorigin=\"\">\n    <link rel=\"preload\" as=\"font\" href=\"https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/media/WixMadeforDisplayVF_W_Wght.ab35e4df.woff2\" crossorigin=\"\">\n    <link rel=\"stylesheet\" href=\"https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/madefor.min.css\">\n    <link rel=\"stylesheet\" href=\"https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/madeforDisplay.min.css\">\n\n</head>\n<body>\n<div id=\"root\"><div class=\"ECJ82r\" data-error-code=\"404\" data-hook=\"root\"><div class=\"foBJFG ohOhpx\" data-hook=\"error-app\"><div class=\"yVYGS4 xCL0HT\" data-hook=\"error-layout\"><h2 class=\"OI1Le8\">ERROR: PAGE NOT FOUND</h2><h1 class=\"ivF5iX\" data-hook=\"error-code\">404</h1><div class=\"ZIfBpV\" data-hook=\"error-description\"><div>This page isn’t available.</div></div><a href=\"//www.nbtimes.de\" data-hook=\"error-button\"><button class=\"jjAW4i GGC4dV\">Go to Homepage</button></a></div></div></div></div>\n<script>\n    window.__LOCALE__ = 'en';\n    window.__ERROR_DATA__ = {\n        staticsUrl: '//static.parastorage.com/services/classic-error-pages-statics/1.98.0/',\n        baseDomain: 'wix.com',\n        errorCode: '404-NotBranded',\n        exceptionName: '',\n        serverErrorCode: '-100',\n        data: {},\n        brand: 'wix',\n        requestId: '1791755681.488552906221453'\n    };\n</script>\n<script src=\"//static.parastorage.com/services/classic-error-pages-statics/1.98.0/app.bundle.min.js\"></script>\n\n\n</body></html>",
+    "httpStatus": 404,
+    "httpStatusText": "",
+    "metadata": {
+      "robots": "noindex",
+      "viewport": "width=device-width, initial-scale=1"
+    },
+    "title": "404 Error: Page Not Found",
+    "url": "https://www.nbtimes.de/vgn-ticket-preise-2026-einzelfahrt-monatskarte-abo/",
+    "usage": {
+      "measuredTokens": 0,
+      "outputTokens": 0,
+      "scaledTokens": 793,
+      "tokens": 793
+    },
+    "warning": "Target URL returned error 404: Not Found"
+  },
+  "meta": {
+    "usage": {
+      "measuredTokens": 0,
+      "outputTokens": 0,
+      "scaledTokens": 793,
+      "tokens": 793
+    }
+  },
+  "status": 20000
+}

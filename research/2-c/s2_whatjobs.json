@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://devops.com",
+    "name": "The Whats and Hows of APIs: A New Developer's Guide",
+    "snippet": "Oct 5, 2022 — If you're a new developer, APIs can seem tricky . Here's everything you need to know about how, when and why to use them.",
+    "host_name": "devops.com",
+    "rank": 0,
+    "date": "Oct 5, 2022",
+    "favicon": ""
+  },
+  {
+    "url": "https://developers.welcomekit.co",
+    "name": "Create a job | Welcome to the Jungle Solutions API",
+    "snippet": "Jun 5, 2025 — This endpoint allows you to create a new job record. to add multiple offices on the same job offer",
+    "host_name": "developers.welcomekit.co",
+    "rank": 1,
+    "date": "Jun 5, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://apify.com",
+    "name": "Workable Jobs Scraper | Any Company Careers Page API",
+    "snippet": "6 days ago — You can access the Workable Jobs Scraper: Any Company's Workable Careers Page programmatically from your own applications by using the Apify API ... Read more",
+    "host_name": "apify.com",
+    "rank": 2,
+    "date": "Oct 5, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.hiringopps.com",
+    "name": "API Documentation · HiringOpps Job Board Software",
+    "snippet": "The API allows you to pull candidate applications. API allows to search candidates, view their profiles and download their resumes.",
+    "host_name": "www.hiringopps.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.whatconverts.com",
+    "name": "API Documentation - Overview",
+    "snippet": "From your WhatConverts agency dashboard, select \"Integrations\" then click on \" API Keys\" from the dropdown menu. Click on the button \"Add API Key\". Your API key ... Read more",
+    "host_name": "www.whatconverts.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.westmont.edu",
+    "name": "Business Process Analyst and API Programmer Information",
+    "snippet": "Responsible for clarifying design requirements for server and web-based software applications, designing software to meet those requirements, ... Read more 2 pages",
+    "host_name": "www.westmont.edu",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://community.viktor.ai",
+    "name": "Create a job with REST API - VIKTOR Community",
+    "snippet": "Sep 30, 2024 — Hi, I've been able to create a job using the SDK API . However, I'm a bit confused when trying to create a job using the REST API .",
+    "host_name": "community.viktor.ai",
+    "rank": 6,
+    "date": "Sep 30, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://support.whatfix.com",
+    "name": "Developer API",
+    "snippet": "Sep 16, 2025 — To learn how to generate API tokens and perform operations with REST APIs , refer to the following topics: Developer Guide (opens in new tab) ... Read more",
+    "host_name": "support.whatfix.com",
+    "rank": 7,
+    "date": "Sep 16, 2025",
+    "favicon": ""
+  }
+]

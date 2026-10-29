@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --w: 794px; --h: 1123px;
+    --u: 40px;
+    --primary: #726a50;      /* HEADER_FILL (M tier) */
+    --accent: #907421;       /* ACCENT (XS tier) */
+    --text: #1d1c1a;         /* TEXT_PRIMARY */
+    --muted: #8a8881;        /* TEXT_MUTED */
+    --bg: #ffffff;
+  }
+  @page { size: 794px 1123px; margin: 0; }
+  html, body { margin: 0; padding: 0; background: var(--bg); }
+  .poster {
+    position: relative; width: 794px; height: 1123px;
+    background: var(--bg); font-family: 'Inter', 'Noto Sans SC', sans-serif;
+    border: none; outline: none; box-shadow: none;
+  }
+  /* Layer 1 — background grid (clipped) */
+  .layer1 { position: absolute; inset: 0; overflow: hidden; z-index: 1; }
+  .grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(114,106,80,0.05) 0.5px, transparent 0.5px),
+      linear-gradient(to bottom, rgba(114,106,80,0.05) 0.5px, transparent 0.5px);
+    background-size: 50px 50px;
+  }
+  /* Layer 2 — structure: ultra-thick left anchor line */
+  .layer2 { position: absolute; inset: 0; z-index: 2; }
+  .anchor-line {
+    position: absolute; left: 95px; top: 112px; bottom: 112px;
+    width: 8px; background: var(--primary);
+  }
+  /* Layer 3 — content */
+  .layer3 { position: absolute; inset: 0; z-index: 3; }
+  .kicker {
+    position: absolute; left: 143px; top: 168px;
+    font-size: 16px; font-weight: 400; letter-spacing: 3px;
+    color: var(--text); opacity: 0.6; text-transform: uppercase;
+    max-width: 560px;
+  }
+  .hero {
+    position: absolute; left: 143px; top: 337px;
+    font-size: 58px; font-weight: 900; line-height: 1.15;
+    color: var(--text); max-width: 580px;
+  }
+  .hero .accent { color: var(--primary); }
+  .summary {
+    position: absolute; left: 143px; top: 562px;
+    font-size: 17px; font-weight: 400; line-height: 1.6;
+    color: var(--text); opacity: 0.85; max-width: 476px;
+  }
+  .meta {
+    position: absolute; left: 143px; top: 842px;
+    font-size: 17px; font-weight: 400; line-height: 1.7;
+    color: var(--text); opacity: 0.85; max-width: 520px;
+  }
+  .meta b { font-weight: 700; }
+  .footer {
+    position: absolute; left: 143px; top: 1010px;
+    font-size: 16px; font-weight: 400; letter-spacing: 3px;
+    color: var(--text); opacity: 0.6; text-transform: uppercase;
+  }
+  @media screen {
+    html { background: var(--bg); }
+    body { display: flex; justify-content: center; }
+    .poster { transform-origin: top center; transform: scale(min(1, calc(100vw / 794))); }
+  }
+</style>
+</head>
+<body>
+<div class="poster">
+  <div class="layer1"><div class="grid"></div></div>
+  <div class="layer2"><div class="anchor-line"></div></div>
+  <div class="layer3">
+    <div class="kicker">Report v1.1 Addendum &middot; Tasks 9&ndash;18</div>
+    <div class="hero">ASHA<br>FISI<br>JOB-TOOLKIT</div>
+    <div class="summary">
+      Everything that changed since the 30-page baseline report: two newly
+      unlocked sources, the corrected zero-transfer train whitelist, the
+      project-review fix campaign, persistent job memory with daily digest,
+      and the verified production numbers that supersede the baseline.
+    </div>
+    <div class="meta">
+      <b>Addendum to:</b> FISI Job-Search Toolkit &mdash; Phase 1&ndash;4 Report<br>
+      <b>Scope:</b> Tasks 9&ndash;18 (Oct 2026) &middot; status snapshot 2026-10-14<br>
+      <b>Prepared by:</b> asha.jobtoolkit (agent) &middot; for skorry@atomicmail.io
+    </div>
+    <div class="footer">Supersedes &middot; Baseline Ch&middot; 3&ndash;5 &middot; 2026-10-14</div>
+  </div>
+</div>
+</body>
+</html>

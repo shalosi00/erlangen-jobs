@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Overview</title>
+    <link rel="stylesheet" href="/stylesheets/screen.css" />
+    <link rel="stylesheet" href="/stylesheets/adzuna.css" />  
+    <script src="/javascripts/jquery.js"></script>
+    
+          <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="lUKmKUvWru4V2C9hAwjNCgWySgQ7IdtolvebsJZXxdpY3qpW-s-VGBBsOQTmBrFFasp-AVgywyYUDIEJVz7OCA" />
+          
+          <script src="https://d1nbctyd1bqfhd.cloudfront.net/javascripts/3scale.js"></script>
+          
+          
+        
+    <script>
+      if (window.jQuery && !jQuery.flash) { jQuery.flash = { hide: function(){} }; }
+    </script>
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4VKFS85"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="three-scale">
+      
+      <div class="header">
+        <h1>Adzuna</h1>
+		<h2>api</h2>
+		<ul>
+			<li ><a href="/">Welcome</a></li>
+			<li class="s"><a href="/overview">Overview</a></li>
+          
+          <li ><a href="https://developer.adzuna.com/signup">Register</a></li>
+          <li ><a href="/login">Login</a></li>          
+          
+		</ul>
+        
+        
+        
+      </div>
+      
+        
+      <div id="content" class="b">
+        
+<!--
+  Liquid Debug Help
+
+    You can use following variables:
+    ================================
+    page         => Page     
+    page_title   => String   
+    content      => String   
+    site         => Site     
+    request      => Request  
+    urls         => Urls     
+    site_account => Provider 
+    provider     => Provider 
+    forum        => Forum    
+    today        => Today    
+    i18n         => I18n     
+    content_of   => ContentOf
+    flash        => Flash    
+    model        => NewSignup
+    _menu        => Menu     
+    menu         => Menu     
+    ================================
+    Check more info at https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2-saas/html/liquid_reference/index
+-->
+
+        <div id="flashWrapper" style="display:none;">
+  <div class="ajaxNoticeValid alwaysontop ">
+  </div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  jQuery(document).ready(function(){
+    setTimeout($.flash.hide, 5000);
+  });
+</script>
+
+        <div id="main">
+
+
+
+
+
+
+
+
+<h1>Overview</h1>
+
+<!-- Quickstart -->
+<div class="tip"><h2>Quickstart</h2><p>Expert user? Allergic to lengthy documentation sites?&nbsp;Follow these steps:</p>
+  <ol>
+    <li>
+      <a href="/signup">Register</a> to receive an <strong>app_key</strong> and <strong>app_id</strong>
+    </li>
+    <li>Use the <a href="/activedocs">Interactive Endpoint Documentation</a> to make test calls and see details about all endpoints, parameters, response codes.
+    </li>
+  </ol>
+</div>
+
+<p>Adzuna has created a RESTful API. Currently, the API consists of nine endpoints that can be split into the following sections:</p>
+<ol>
+  <li>
+    <strong>Get ads</strong><br>
+    The <a href="/docs/search">search endpoints</a> allow you to query our database of job ads.
+  </li>
+  <li>
+    <strong>Get employment data</strong><br/>
+    Four endpoints expose the latest trends in salaries and vacancies. <a href="/docs/historical">Historical salary data</a> shows how salaries are changing over time. The <a href="/docs/histogram">histogram</a> returns the distribution of current salaries. And the <a href="/docs/regional">regional data</a> and <a href="/docs/companies">top companies</a> endpoints show the current number of vacancies by region or company.
+  </li>
+  <li><strong>Categories</strong><br/>
+    Use the <a href="/docs/categories">categories</a> endpoint to see the categories that Adzuna applies to jobs.
+  </li>
+  <li><strong>Version</strong><br/>
+    Things change! Call the <a href="/docs/version">version endpoint</a> to find out which API version you're querying.
+  </li>
+</ol>
+  
+<h2>Querying the API</h2>
+<p>The root URL of the API is located at:</p>
+<pre><code>https://api.adzuna.com/v1/api</code></pre>
+<p>Notice that it needs to be appended with the version you're querying. You then concatenate the endpoint you want to query, for example to get Jobs listings in the UK:</p>
+<pre><code>https://api.adzuna.com/v1/api/jobs/gb/search/1</code></pre>
+<p>... and finally you will always need to pass two obligatory parameters. The <strong>app_id</strong> and <strong>app_key</strong>, making the final call look like this:</p>
+<pre><code>https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=<span class="app_id">{YOUR_APP_ID}</span>&app_key=<span class="app_key">{YOUR_APP_KEY}</span></code></pre>
+
+
+<h2>Data encoding</h2>
+
+<p>Every time you make a query the response is returned as an object serialised using JSON,
+JSONP or XML encoding. The format returned is determined by the <code>Accept</code> HTTP
+header, but also be set by the <code>content-type</code> query string parameter which
+overrides the <code>Accept</code> header.</p>
+
+<h3>JSON</h3>
+
+<p>To receive JSON, set your <code>Accept</code> header to <code>application/json</code>. The data
+will then be returned as UTF-8 JSON. Some characters may be escaped as
+  <code>\uXXXX</code>, as described in the JSON specification: <a href="http://www.json.org/">http://www.json.org/</a></p>
+
+<h3>JSONP</h3>
+
+<p>To receive JSON, set your <code>Accept</code> header to <code>application/jsonp</code> or
+alternatively <code>text/javascript</code>. If you do not specify another encoding, the
+API will default to this, making this work from a <code>&lt;script&gt;</code> tag. This works
+similarly to JSON, but causes a function call to be prepended. Specify the
+function to call with the <code>callback</code> query string parameter. More information on <a href="https://www.w3schools.com/js/js_json_jsonp.asp">https://www.w3schools.com/js/js_json_jsonp.asp/</a></p>
+
+<p>This is intended to be used for creating widgets. We have an <a href="/docs/widget_example">example of this in action</a>.</p>
+
+<h3>XML</h3>
+
+<p>The format of the returned XML has not yet been finalised, please consider
+using the JSON formats, or contact Adzuna before use.</p>
+
+<h3>HTML</h3>
+
+<p>For convenience, data is also available as <code>text/html</code>,
+and will be rendered as such if an API endpoint is accessed using an ordinary
+web browser.</p>
+
+<h3>XLSX</h3>
+
+<p>Some data is available in spreadsheet form, as a .xlsx file which may be opened
+using most spreadsheet software including Microsoft Excel.  The MIME type to
+request in your <code>Accept</code> header is
+<code>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</code>.</p>
+
+<h2>Errors</h2>
+
+<p>If your request cannot be handled, an HTTP response code other than 200 will
+be returned and the error will be serialised in the
+serialisation format requested. More details on the <a href="/activedocs">Interactive Endpoint Documentation</a>.</p></div>
+        <div id="sidebar">
+
+<ul id="submenu">
+    <!--<li class="sidebar_header">Documentation</li>-->
+  	<li class="active">
+      <a href="/overview">Overview</a>
+	</li>
+  	<li class="lvl_2 ">
+      <a href="/docs/search">Search ads</a>
+	</li>
+  	<li class="lvl_2 ">
+      <a href="/docs/salary">Salary data</a>
+	</li>
+  
+	<li class="lvl_3 ">
+      <a href="/docs/historical">Historical data</a>
+	</li>
+	<li class="lvl_3 ">
+      <a href="/docs/histogram">Histogram data</a>
+	</li>
+ 	<li class="lvl_3 ">
+      <a href="/docs/regional">Regional data</a>
+	</li> 
+ 	<li class="lvl_3 ">
+      <a href="/docs/companies">Top companies</a>
+	</li>   
+  
+  	<li class="lvl_2 ">
+      <a href="/docs/categories">Categories</a>
+	</li>
+  <li class="lvl_2 "><a href="/docs/jobsworth">Jobsworth</a>
+  </li>
+  
+  	<li class="lvl_2 ">
+      <a href="/docs/version">API Version</a>
+	</li> 
+  <li class="lvl_2 ">
+      <a href="/docs/widget_example">HTML Widget</a>
+	</li>
+  <li class="lvl_2 "><a href="/docs/terms_of_service">Terms of Service</a>  
+</ul>
+
+
+</div>
+      </div>
+      
+      
+      
+		<div class="footer_cat">
+			Ready to start experimenting? - <a href="/signup">Register for an API key now</a>
+		</div>
+      
+      
+      
+      
+
+      <ul class="foot">
+        <li>&copy;&nbsp;2026 ADZUNA LTD.</li>
+      </ul>
+    </div>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T4VKFS85');</script>
+    <!-- End Google Tag Manager -->
+  </body>
+</html>

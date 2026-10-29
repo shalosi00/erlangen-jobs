@@ -1,0 +1,354 @@
+{
+  "ergebnisliste" : [ {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Fachinformatiker Systemintegration (m/w/d)",
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-09"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "ort" : "Erlangen",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.582388591,
+      "laenge" : 10.984861843
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-09"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-09",
+    "aenderungsdatum" : "2026-10-09T11:12:08.123",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "ncsolution GmbH",
+    "arbeitgeberKundennummerHash" : "gsO7t7eBkL2HP0Elw6X6zhsx9TdaaSylUmdbMpywsks=",
+    "referenznummer" : "10001-1003832993-S",
+    "entfernung" : 0,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  } ],
+  "maxErgebnisse" : 56,
+  "page" : 1,
+  "size" : 1,
+  "woOutput" : {
+    "bereinigterOrt" : "Erlangen",
+    "suchmodus" : "UMKREISSUCHE",
+    "koordinaten" : [ {
+      "lat" : 49.58198115,
+      "lon" : 10.9875625
+    } ]
+  },
+  "facetten" : {
+    "verguetung" : {
+      "counts" : {
+        "jahr" : 13
+      },
+      "maxCount" : 56
+    },
+    "befristung" : {
+      "counts" : {
+        "1" : 2,
+        "2" : 31,
+        "3" : 23
+      },
+      "maxCount" : 56
+    },
+    "externestellenboersen" : {
+      "counts" : {
+        "false" : 52,
+        "true" : 4
+      },
+      "maxCount" : 56
+    },
+    "behinderung" : {
+      "counts" : {
+        "false" : 30,
+        "true" : 1
+      },
+      "maxCount" : 56
+    },
+    "pav" : {
+      "counts" : {
+        "false" : 42,
+        "true" : 14
+      },
+      "maxCount" : 56
+    },
+    "berufsfeld" : {
+      "counts" : {
+        "Bauplanung und -überwachung, Architektur" : 1,
+        "Einkauf und Vertrieb" : 1,
+        "IT-Netzwerktechnik, -Administration, -Organisation" : 11,
+        "IT-Systemanalyse, -Anwendungsberatung und -Vertrieb" : 1,
+        "Informatik" : 40,
+        "Softwareentwicklung und Programmierung" : 2
+      },
+      "maxCount" : 56
+    },
+    "topberuf" : {
+      "counts" : {
+        "Fachinformatiker/in - Systemintegration" : 47,
+        "IT-Systemadministrator/in" : 12,
+        "Netzwerkadministrator/in" : 5,
+        "Informatiker/in" : 6,
+        "IT-Administrator/in" : 4,
+        "Wirtschaftsinformatiker/in (Hochschule)" : 3
+      },
+      "scores" : {
+        "Fachinformatiker/in - Systemintegration" : 1510012,
+        "IT-Systemadministrator/in" : 164818,
+        "Netzwerkadministrator/in" : 156150,
+        "Informatiker/in" : 33120,
+        "IT-Administrator/in" : 28127,
+        "Wirtschaftsinformatiker/in (Hochschule)" : 22633
+      },
+      "maxCount" : 56
+    },
+    "arbeitsort" : {
+      "counts" : {
+        "Feucht" : 1,
+        "Röthenbach an der Pegnitz" : 3,
+        "Fürth, Bayern" : 3,
+        "Neunkirchen am Brand" : 1,
+        "Rednitzhembach" : 1,
+        "Schwabach" : 1,
+        "Ansbach, Mittelfranken" : 1,
+        "Erlangen" : 6,
+        "Neumarkt in der Oberpfalz" : 1,
+        "Roth, Mittelfranken" : 1,
+        "Nürnberg, Mittelfranken" : 32,
+        "Burgthann" : 1,
+        "Neustadt an der Aisch" : 1,
+        "Altdorf bei Nürnberg" : 1,
+        "Baiersdorf, Mittelfranken" : 1,
+        "Hersbruck" : 3
+      },
+      "maxCount" : 56
+    },
+    "ausbildungsart" : {
+      "counts" : {
+        "0" : 9
+      },
+      "maxCount" : 56
+    },
+    "veroeffentlichtseit" : {
+      "counts" : {
+        "0" : 1,
+        "1" : 1,
+        "14" : 90,
+        "28" : 133,
+        "7" : 56,
+        "alle" : 305
+      },
+      "maxCount" : 305
+    },
+    "schulbildung" : {
+      "counts" : {
+        "0" : 50,
+        "1" : 50,
+        "11" : 50,
+        "12" : 50,
+        "2" : 50,
+        "3" : 56,
+        "4" : 56,
+        "5" : 56,
+        "6" : 56
+      },
+      "maxCount" : 56
+    },
+    "arbeitsort_plz" : {
+      "counts" : {
+        "04109" : 1,
+        "10115" : 2,
+        "22587" : 1,
+        "53119" : 1,
+        "53359" : 1,
+        "60486" : 7,
+        "80331" : 2,
+        "89075" : 1,
+        "90329" : 1,
+        "90402" : 2,
+        "90409" : 1,
+        "90411" : 2,
+        "90425" : 1,
+        "90429" : 2,
+        "90431" : 2,
+        "90441" : 3,
+        "90459" : 1,
+        "90461" : 1,
+        "90489" : 8,
+        "90518" : 1,
+        "90537" : 1,
+        "90552" : 3,
+        "90559" : 1,
+        "90766" : 1,
+        "91058" : 3,
+        "91077" : 1,
+        "91083" : 1,
+        "91126" : 2,
+        "91154" : 1,
+        "91217" : 3,
+        "91413" : 1,
+        "91522" : 1,
+        "92318" : 1
+      },
+      "maxCount" : 56
+    },
+    "arbeitgeber" : {
+      "counts" : {
+        "ANG GmbH" : 2,
+        "Actief Personalmanagement GmbH Neu-Ulm" : 1,
+        "Akkodis Germany Tech Experts GmbH" : 10,
+        "BFI Informationssysteme GmbH" : 2,
+        "BWI GmbH" : 2,
+        "Bundeseisenbahnvermögen Dienststelle Süd" : 1,
+        "DATEV" : 1,
+        "EXCELLA GmbH & Co. KG" : 1,
+        "FERCHAU GmbH Niederlassung Nürnberg City" : 1,
+        "Fackelmann GmbH & Co.KG" : 2,
+        "Fackelmann GmbH + Co. KG" : 1,
+        "Hays Professional Solutions GmbH Standort Nürnberg" : 1,
+        "Hegmanns AG" : 1,
+        "Helmi Göttler Private Arbeitsvermittlung" : 4,
+        "Krauß Armin - EDV Beratung" : 1,
+        "MMK Personalberatung" : 1,
+        "Minderleinsmühle GmbH & Co. KG Andreas Hubmann" : 1,
+        "NConsult GmbH" : 5,
+        "NETWAYS Managed Services GmbH" : 1,
+        "NETWAYS Professional Services GmbH" : 1,
+        "Neumüller Personalberatung Regina Neumüller e.K." : 4,
+        "Onlineprinters GmbH" : 1,
+        "OrgaCard Siemantel und Alt GmbH" : 1,
+        "Stadt Baiersdorf" : 1,
+        "Suspa GmbH Betriebsstätte Altdorf" : 1,
+        "Tintschl Technik GmbH    " : 2,
+        "berg-it projektdienstleistungen GmbH" : 1,
+        "digatus personal GmbH" : 1,
+        "iSK GmbH Personaldienstleistungen" : 1,
+        "ncsolution GmbH" : 1,
+        "puro Personaldienstleistung GmbH" : 1,
+        "set - software engineering gmbh" : 1
+      },
+      "maxCount" : 56
+    },
+    "beruf" : {
+      "counts" : {
+        "Application-Engineer/-Manager/in" : 1,
+        "BIM-Manager/in" : 1,
+        "Cloud-Architect" : 1,
+        "Data Engineer" : 1,
+        "Datenschutzbeauftragte/r" : 1,
+        "Fachinformatiker/in - Digitale Vernetzung" : 2,
+        "Fachinformatiker/in - Systemintegration" : 47,
+        "IT-Administrator/in" : 4,
+        "IT-Sicherheitskoordinator/in" : 2,
+        "IT-System-Elektroniker/in" : 2,
+        "IT-Systemadministrator/in" : 12,
+        "Informatiker/in" : 6,
+        "Information-Architect" : 1,
+        "Ingenieur/in - Bau" : 1,
+        "Ingenieur/in - Elektrotechnik" : 1,
+        "Ingenieur/in - Mechatronik" : 1,
+        "Kaufmann/-frau - Digitalisierungsmanagement" : 1,
+        "Kaufmann/-frau - IT-System-Management" : 1,
+        "Netzwerk-Servicetechniker/in" : 1,
+        "Netzwerkadministrator/in" : 5,
+        "Requirement-Manager/in" : 1,
+        "Second-Level-Supporter/in" : 2,
+        "Softwareentwickler/in" : 1,
+        "Systemelektroniker/in" : 1,
+        "Systeminformatiker/in" : 1,
+        "Vertriebsingenieur/in" : 1,
+        "Vertriebstechniker/in" : 1,
+        "Wirtschaftsinformatiker/in (Hochschule)" : 3,
+        "Wirtschaftsinformatiker/in - IT-Systeme" : 1
+      },
+      "maxCount" : 56
+    },
+    "homeoffice" : {
+      "counts" : {
+        "prozentual" : 3,
+        "nv_false" : 3,
+        "nv_true" : 3
+      },
+      "maxCount" : 56
+    },
+    "angebotsart" : {
+      "counts" : {
+        "1" : 47,
+        "4" : 9
+      },
+      "maxCount" : 56
+    },
+    "ausbildungsverguetung" : {
+      "counts" : {
+        "monat" : 1
+      },
+      "maxCount" : 56
+    },
+    "quereinstieg" : {
+      "counts" : {
+        "false" : 56
+      },
+      "maxCount" : 56
+    },
+    "branche" : {
+      "counts" : {
+        "11" : 15,
+        "13" : 2,
+        "15" : 2,
+        "17" : 1,
+        "2" : 1,
+        "27" : 5,
+        "28" : 25,
+        "5" : 1
+      },
+      "maxCount" : 56
+    },
+    "arbeitszeit" : {
+      "counts" : {
+        "tz" : 5,
+        "vz" : 52
+      },
+      "maxCount" : 56
+    },
+    "eintrittsdatum" : {
+      "counts" : {
+        "10_01_01-now" : 39,
+        "26_10_01-26_11_01" : 41,
+        "26_11_01-26_12_01" : 4,
+        "26_12_01-27_01_01" : 4,
+        "27_09_01-27_10_01" : 7
+      },
+      "maxCount" : 56
+    },
+    "zeitarbeit" : {
+      "counts" : {
+        "false" : 39,
+        "true" : 17
+      },
+      "maxCount" : 56
+    },
+    "topberufsfeld" : {
+      "counts" : {
+        "Informatik" : 40,
+        "IT-Netzwerktechnik, -Administration, -Organisation" : 11,
+        "Softwareentwicklung und Programmierung" : 2,
+        "IT-Systemanalyse, -Anwendungsberatung und -Vertrieb" : 1,
+        "Bauplanung und -überwachung, Architektur" : 1,
+        "Einkauf und Vertrieb" : 1
+      },
+      "scores" : {
+        "Informatik" : 512681,
+        "IT-Netzwerktechnik, -Administration, -Organisation" : 49083,
+        "Softwareentwicklung und Programmierung" : 1944,
+        "IT-Systemanalyse, -Anwendungsberatung und -Vertrieb" : 502,
+        "Bauplanung und -überwachung, Architektur" : 131,
+        "Einkauf und Vertrieb" : 14
+      },
+      "maxCount" : 56
+    }
+  }
+}

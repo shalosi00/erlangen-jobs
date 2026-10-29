@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://en.wikipedia.org",
+    "name": "GitHub",
+    "snippet": "GitHub is a proprietary developer platform that allows developers to create, store, manage, and share their code. It uses Git to provide distributed version ... Read more",
+    "host_name": "en.wikipedia.org",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://play.google.com/store/apps/details?id=com.github.android&hl=en_US",
+    "name": "GitHub - Apps on Google Play",
+    "snippet": "GitHub for Android lets you move work forward wherever you are. Stay in touch with your team, triage issues, and even merge, right from the app. Learn Python ...",
+    "host_name": "play.google.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  }
+]

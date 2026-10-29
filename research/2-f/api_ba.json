@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://github.com",
+    "name": "bundesAPI/jobsuche-api: API zur Bundesagentur für Arbeit",
+    "snippet": "Gibt an, ob Jobs von Zeitarbeitsfirmen in die Suchergebnisse einbezogen werden sollen (default true). Parameter: size (Optional). Anzahl der Ergebnisse. Read more",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.rs",
+    "name": "jobsuche - Rust",
+    "snippet": "Rust interface for the Bundesagentur für Arbeit Jobsuche API . This crate provides a client for interacting with Germany's Federal Employment Agency ... Read more",
+    "host_name": "docs.rs",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://interoperable-europe.ec.europa.eu",
+    "name": "bund.dev - Interoperable Europe Portal",
+    "snippet": "Bundesagentur für Arbeit: Jobsuche API openapi.yaml Die größte Stellendatenbank Deutschlands durchsuchen, Details zu Stellenanzeigen und Informationen über ... 65 pages",
+    "host_name": "interoperable-europe.ec.europa.eu",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://statistik.arbeitsagentur.de",
+    "name": "API",
+    "snippet": "Seit Dezember 2025 bietet die Statistik der Bundesagentur für Arbeit die Möglichkeit, Daten per Schnittstelle automatisiert zu übergeben. Anhand der ... Read more",
+    "host_name": "statistik.arbeitsagentur.de",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://apify.com",
+    "name": "Bundesagentur für Arbeit Jobbörse Scraper: Germany Jobs",
+    "snippet": "5 days ago — Jobs from Germany's federal job board ( Bundesagentur für Arbeit ) for any search and place: salary, employer, location, home office.",
+    "host_name": "apify.com",
+    "rank": 4,
+    "date": "Oct 6, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://lib.rs",
+    "name": "Jobsuche",
+    "snippet": "Germany's largest job database programmatically. Search for jobs , get detailed information, and access employer data through a type-safe, ergonomic Rust API .",
+    "host_name": "lib.rs",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://fragdenstaat.de",
+    "name": "Dokumente und Unterlagen zum Umbau der API zur Jobörse",
+    "snippet": "Dokumente und Unterlagen zum Umbau der API zur Jobörse Anfrage an: Bundesagentur für Arbeit * Schriftverkehr (E-Mails, Briefe, Fax, etc.) Bundesagentur für ...",
+    "host_name": "fragdenstaat.de",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://support.recruitee.com",
+    "name": "Bundesagentur für Arbeit Integration | Recruitee Hilfe-Center",
+    "snippet": "Mar 20, 2026 — 1. Rufe den Job auf, den du auf der Website der Bundesagentur für Arbeit veröffentlichen möchtest, und gehe dort auf den Promoten-Tab. Read more",
+    "host_name": "support.recruitee.com",
+    "rank": 7,
+    "date": "Mar 20, 2026",
+    "favicon": ""
+  }
+]

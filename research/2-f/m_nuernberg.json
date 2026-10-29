@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://maps.google.com",
+    "name": "Google Maps",
+    "snippet": "Find local businesses, view maps and get driving directions in Google Maps.",
+    "host_name": "maps.google.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://link.springer.com",
+    "name": "Standort | Springer Nature Link",
+    "snippet": "Die Zeitschrift Standort bietet eine multidisziplinäre Plattform für alle Fachthemen der angewandten Geographie und verwandter Fachgebiete.",
+    "host_name": "link.springer.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.sibelco.com",
+    "name": "Standort Meissen",
+    "snippet": "Our Meissen site produces ball clay, kaolin and silica, mainly for the ceramics, tiles, engobes & glazes and sanitaryware industries.",
+    "host_name": "www.sibelco.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://german.stackexchange.com",
+    "name": "What's the difference between \"Standort\" and \"Ort\"?",
+    "snippet": "Feb 2, 2018 — Closed. This question is off-topic. It is not currently accepting answers.              This site is about the usage and rules of the German language. It ...",
+    "host_name": "german.stackexchange.com",
+    "rank": 3,
+    "date": "Feb 2, 2018",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.tripadvisor.com",
+    "name": "STANDORT HAUPTBAHNHOF, Vienna - Favoriten District",
+    "snippet": "Kurkonditorei Oberlaa - Standort Hauptbahnhof, Vienna: rated 4.1 of 5",
+    "host_name": "www.tripadvisor.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.hessenschau.de",
+    "name": "Hilfsorganisation \"Die Arche\" mit neuem Standort in Offenbach",
+    "snippet": "Im Stadtteil Lauterborn hat deshalb die Hilfsorganisation \"Die Arche\" einen neuen Standort eröffnet. Veröffentlicht am 04.10.26 um 21:01 Uhr.",
+    "host_name": "www.hessenschau.de",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  }
+]

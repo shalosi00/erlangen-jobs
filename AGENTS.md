@@ -1,0 +1,137 @@
+# AGENTS.md — machine-facing project guide
+
+> Audience: AI agents / automation operating this repository.
+> Human onboarding is in `README.md` — read that first only if you need narrative context.
+
+## Identity
+
+- **Name**: erlangen-jobs
+- **Purpose**: one-command German job-search pipeline for Erlangen (~50 km, S1 rail corridor): scrape → merge/dedupe → pre-filter → geo-filter → fetch full descriptions → single final CSV (+ optional N parts).
+- **Entry point**: `scripts/erlangen_pipeline.py` (subprocess-orchestrates all stages; every stage is also runnable standalone).
+- **Language/runtime**: Python ≥3.9; deps exactly: `python-jobspy`, `pandas`, `requests` (see `requirements.txt`).
+- **Portability**: all paths derive from `__file__` (`BASE = dirname(dirname(script))`). No absolute paths. Deploy by copying the tree anywhere + `bash setup.sh`.
+
+## Hard invariants (do not violate)
+
+1. **NO-DIRECT networking (default)**: portal/Nominatim traffic must never use the operator's IP. `net_resilience.ProxyPool(strict=True)` returns `None` when the pool is dry → callers fail honestly (`no_proxy_strict` / `no_pool_strict`) instead of direct-connecting. Opt-out requires explicit `--allow-direct` (sets `ERL_ALLOW_DIRECT=1`, inherited by all stages) — never set it silently.
+2. `--no-proxy` without `--allow-direct` → pipeline refuses with exit 1.
+3. Bootstrap exception: harvesting public proxy *lists* may be direct; job portals and Nominatim may not.
+4. Final CSV sort: `--fetch-desc` runs → sort by `date_posted` **desc**; plain runs → sort by `erlangen_km` asc. Do not change without updating `AGENTS.md`.
+5. Part split (stage 5) is record-aware (multiline `description` CSV fields) and integrity-checked (`sum(parts) == total`, else exit).
+6. Sweeps in `data/raw/` are immutable inputs; never rewrite them.
+7. Prefilter: missing/unparseable `date_posted` ⇒ job rejected (freshness cannot be proven).
+
+## File map
+
+```
+scripts/erlangen_pipeline.py     orchestrator; stages 0–5; CLI passthrough (see --help)
+scripts/erlangen_all_portals.py  stage 0 sweep: jobspy (indeed+linkedin+google) → data/raw/erlangen_ALL_portals_<stamp>.json
+scripts/merge_erlangen.py        stage 1: union sweeps + legacy CSV + optional data/interamt_pipeline.md
+                                 → dedupe (title,company,location[:60],url) desc-wins
+                                 → prefilter → data/work/erlangen_master_<stamp>.{json,csv} (+ *_prefilter_rejected.json)
+scripts/job_prefilter.py         pure function prefilter_jobs(rows, fresh_days) → (kept, rejected, stats); NO network
+scripts/commute_filter.py        stage 2: rail-corridor geo filter (data/rail_corridor.json; Nominatim via pool,
+                                 cache data/geocode_cache.json) → data/work/erlangen_commute_filtered_<stamp>.{json,csv} + _report.md
+scripts/fetch_descriptions.py    stage 4: phases li → direct → indeed → csv; checkpoint data/work/desc_checkpoint.json;
+                                 --write-csv → download/erlangen_jobs_final_<date>.csv sorted date desc
+scripts/net_resilience.py        shared self-adaptive network layer (see below); CLI: harvest|status|live
+scripts/enrich_addresses.py      stage 6a (optional): company_address + lat/lon columns
+                                 providers: GOOGLE_MAPS_API_KEY → photon → zippopotam (proxy pool) → offline gazetteer
+                                 cache data/work/address_geo_cache.json (negative-caching, resumable)
+scripts/geocode_companies.py     stage 6b/6c: per-COMPANY geocode so every employer gets its own map point;
+                                 --provider photon|mapsco (mapsco = geocode.maps.co, needs GEOCODE_MAPS_API_KEY,
+                                 ~4.5 req/s); sanity gates (≤25 km, town match, highways rejected); cache data/work/
+scripts/google_poi_lookup.py     stage 6d: headless-browser Google-Maps lookup — NO API key (agent-browser CLI;
+                                 set AGENT_BROWSER_PROXY to route via a pool proxy); resumable data/work/google_poi.json;
+                                 name gates: any company token must match, wrong-branch (far) results rejected
+scripts/mine_desc_addresses.py   stage 6e: mine literal German street lines out of job descriptions and geocode
+                                 them (house number + ≤12 km gates); cache keys "dm:" in the shared cache
+scripts/build_map.py             stage 7 (optional): self-contained Leaflet map from the geocoded CSV
+                                 → map/index.html (data embedded inline, works from file://) + map/jobs.geojson
+                                 aggregates rows per (company, lat, lon); portal-colored pins; offline-tested in tests/test_build_map.py
+scripts/build_companies_map.py   optional: corridor COMPANY OVERVIEW map → map/companies.html — literally every named
+                                 company between Bamberg and Nürnberg as its own point, straight from OpenStreetMap
+                                 (Photon letter-sweep enumerator, pool-first; per-letter cache data/work/photon_tiles/,
+                                 resumable; ERL_ALLOW_DIRECT=1 opts into the fast direct lane). CSV employers get a
+                                 "hiring now" ring + job count. Offline-tested in tests/test_companies_map.py
+scripts/de_job_score.py          optional LLM top-10 via `z-ai chat` binary (degrades gracefully if absent)
+scripts/de_job_scan.py           standalone DE-wide jobspy scan utility (not part of the Erlangen chain)
+scripts/split_final_5.py         standalone record-aware N-split (--src, --parts, --outdir)
+tests/test_net_resilience.py     33 offline unit tests (local mock HTTP + fake proxy)
+tests/test_build_map.py          21 offline unit tests for the map builder (aggregation, XSS escaping, GeoJSON)
+tests/test_companies_map.py      14 offline unit tests for the companies map (bbox, parse+dedupe, Photon adapter, employer match)
+tests/e2e_test.py                19 E2E checks: (A) leak-audit, (B) refusal tests, (C) offline full chain, (D) optional live
+.github/workflows/ci.yml         GitHub Actions CI: unit tests + offline e2e + map smoke + strict no-IP audit
+setup.sh / run.sh                bootstrap / arg-forwarding wrapper
+data/rail_corridor.json          corridor gazetteer: 23 stations, 62 towns, tier trunk_direct|transfer1
+data/geocode_cache.json          pre-seeded Nominatim cache (632 KB)
+data/raw/*.json                  immutable sweeps (one seed sweep bundled for offline demo)
+data/proxies.txt                 proxy seed (auto-regenerated by harvest)
+download/                        final deliverables only
+```
+
+## Stage graph (data flow)
+
+```
+[--sweep] erlangen_all_portals.py
+            └→ data/raw/erlangen_ALL_portals_<stamp>.json
+merge_erlangen.py  (globs newest sweep + erlangen_50km_jobs_*.csv + optional interamt list)
+            └→ data/work/erlangen_master_<stamp>.json          (prefiltered)
+commute_filter.py  (--input master)
+            └→ data/work/erlangen_commute_filtered_<stamp>.json (geo-ok)
+fetch_descriptions.py (--input filtered)   [only with --fetch-desc]
+            └→ download/erlangen_jobs_final_<date>.csv  (date desc, +description)
+               [+ _part{i}_of_N.{csv,json}  with --parts N]
+```
+
+Pipeline picks "newest" by sorted-glob[-1] within `--workdir`; pass `--input` to pin a specific file.
+
+## CLI contract (erlangen_pipeline.py)
+
+All flags optional. Key groups:
+- sources: `--sweep [N]`, `--input FILE`, `--no-network`
+- filters: `--fresh-days 30`, `--max-km 50`, `--station-km 3.0`, `--include-remote`, `--no-prefilter`, `--no-fp-guard`
+- descriptions: `--fetch-desc`, `--limit-desc N`, `--desc-phase {all,li,direct,indeed,csv}`, `--desc-checkpoint P`
+- network policy: `--proxy-refresh`, `--allow-direct` (opt-out), `--no-proxy` (requires allow-direct)
+- output: `--out P`, `--parts N`, `--workdir P`, `--enrich-geo` (full automatic geo chain 6a–6e, per-pass budget `--geo-budget N`), `--build-map`
+
+Rebuild counts decay over time by design: `--fresh-days 30` ages postings out
+(the bundled 1,413-row reference snapshot was cut 2026-10-18; offline rebuilds
+later drift downward, e.g. 1,379 on 10-20 — the e2e asserts a floor of 1,300
+plus parts integrity, not fossil parity).
+
+Exit codes: 0 = ok; 1 = honest failure (message on stderr). Friendly hint is printed when `data/raw/` is empty (suggests `--sweep`).
+
+## Network layer contract (net_resilience.py)
+
+- Import and use: `from net_resilience import resilient_fetch, ProxyPool` (module singleton pool; state `data/work/proxy_pool.json`).
+- `resilient_fetch(url, ...)` → classified retries: 429/403/999 → rotate proxy + exponential cooldown (60·2ⁿ capped 30 min, honors `Retry-After`); 5xx → soft retry; 404/410 → no retry; connect errors → park proxy 120 s. UA + client-hints rotate per request. AIMD pacer per portal class (`li`, `ats`, `indeed`, `google`).
+- Proxy sources (order): `PROXY_LIST` env (comma-sep) → `data/proxies.txt` → auto-harvest (public GitHub lists, validated before use; auto-refill `ensure()` rate-limited to 1 per 5 min).
+- CLI: `harvest` (force +validate), `status` (pool health JSON to stdout), `live` (N test fetches).
+- State: ONE file, self-healing on reload; dead entries dropped.
+- Tests must isolate: overwrite `net_resilience.PROXY_FILE`, pop `PROXY_LIST`/`ERL_ALLOW_DIRECT` env.
+
+## Environment variables
+
+| Var | Meaning | Default |
+|---|---|---|
+| `ERL_ALLOW_DIRECT` | `1` permits direct fallback (opt-out of invariant 1). Set ONLY by `--allow-direct`. | unset (strict) |
+| `PROXY_LIST` | comma-separated proxy URLs, highest priority | unset |
+
+## Verification matrix (run after changes)
+
+```bash
+python3 tests/test_net_resilience.py        # 33/33 must pass, offline
+python3 tests/e2e_test.py                   # A+B+C must pass offline; D optional live
+python3 scripts/erlangen_pipeline.py --no-network --parts 5 --workdir data/work_check --out download/_check.csv
+                                            # expect 1413 rows with bundled seed; then rm -rf data/work_check download/_check*
+python3 scripts/net_resilience.py status    # pool JSON, strict:true
+```
+
+## Extension points
+
+- **New portal** → add a scraper module that emits rows with at least `title, company, location, job_url, date_posted`; register in `merge_erlangen.py` source list.
+- **New corridor/town** → extend `data/rail_corridor.json` (stations + towns arrays); geocode cache self-fills.
+- **Changed filter policy** → `scripts/job_prefilter.py` is pure (no I/O); extend `RULES` chain there; rejected audit JSON is written automatically.
+- **Better street-level geocoding** → export `GOOGLE_MAPS_API_KEY` (Google Geocoding activates first in the chain); Nominatim is intentionally out of the auto chain (blocks proxy IPs, burns retry budget — use `--provider nominatim` explicitly).
+- **Alternative LLM scoring** → `de_job_score.py` shells out to `z-ai chat`; swap the subprocess call, keep the STRICT-JSON contract.

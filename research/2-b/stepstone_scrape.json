@@ -1,0 +1,29 @@
+[
+  {
+    "url": "https://github.com",
+    "name": "Actions · robi-369/stepstone-scraper",
+    "snippet": "Stepstone job listings extractor . scraper development by creating an account on GitHub. Build, test, and deploy your code right from GitHub.",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://apify.com",
+    "name": "StepStone Jobs Scraper for Germany Job Listings API",
+    "snippet": "Sep 27, 2026 — The Stepstone Jobs Scraper Actor extracts detailed job listings from Stepstone in JSON , including titles, companies, and remote work options. Read more",
+    "host_name": "apify.com",
+    "rank": 1,
+    "date": "Sep 27, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://community.n8n.io",
+    "name": "How to Build an Automated Job Finder Agent",
+    "snippet": "Jul 4, 2025 — This guide will show you how to build an automated job finder agent using Scrapeless, n8n, and Google Sheets. You'll create a workflow that ... Read more",
+    "host_name": "community.n8n.io",
+    "rank": 2,
+    "date": "Jul 4, 2025",
+    "favicon": ""
+  }
+]

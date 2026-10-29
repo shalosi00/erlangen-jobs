@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://technologylaw.fkks.com",
+    "name": "Is Your Site's Robots.txt Giving Content to AI Models for Free",
+    "snippet": "Dec 23, 2025 — The Robots Exclusion Protocol file, colloquially called robots . txt , does what it says: instructs automated bots whether and how they may access ...",
+    "host_name": "technologylaw.fkks.com",
+    "rank": 0,
+    "date": "Dec 23, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://de.wikipedia.org",
+    "name": "Robots Exclusion Standard",
+    "snippet": "Der Robots Exclusion Standard (auch bekannt als robots . txt ) ist ein Dateiformat mit Namenskonvention für Webserver, um Bots mitzuteilen, ob und inwieweit ... Read more",
+    "host_name": "de.wikipedia.org",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://bytetunnels.com",
+    "name": "Is robots.txt Legally Binding? Scraping Law Explained",
+    "snippet": "Mar 1, 2026 — The short answer is no – robots.txt is not legally binding . It is not a law, not a contract, and not an enforceable directive. Read more",
+    "host_name": "bytetunnels.com",
+    "rank": 2,
+    "date": "Mar 1, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://usestring.ai",
+    "name": "Does robots.txt legally prevent web scraping? - String AI",
+    "snippet": "No. robots.txt is a voluntary protocol, not law , and no US court has held that ignoring it is by itself unlawful. It still changes your legal position.",
+    "host_name": "usestring.ai",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://developers.google.com/crawling/docs/robots-txt/robots-txt-spec?hl=de",
+    "name": "Wie Google die robots.txt-Spezifikation interpretiert",
+    "snippet": "Eine robots . txt -Datei ist eine einfache Textdatei mit Regeln, die festlegen, welche Crawler auf welche Teile einer Website zugreifen dürfen. This robots . txt ...",
+    "host_name": "developers.google.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.robotstxt.org",
+    "name": "Can a /robots.txt be used in a court of law?",
+    "snippet": "There is no law stating that /robots.txt must be obeyed , nor does it constitute a binding contract between site owner and user, but having a /robots.txt can be ...",
+    "host_name": "www.robotstxt.org",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://blog.ericgoldman.org",
+    "name": "Are Robots.txt Instructions Legally Binding?-Ziff Davis v.",
+    "snippet": "Dec 17, 2025 — Robots . txt files express a website's preferences for robot access. Despite their venerability, there are not many cases discussing the legal ... Read more",
+    "host_name": "blog.ericgoldman.org",
+    "rank": 6,
+    "date": "Dec 17, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.researchgate.net",
+    "name": "(PDF) The Liabilities of Robots.Txt",
+    "snippet": "Drawing on key cases, legal principles, and scholarly discourse, it proposes a legal framework for web scraping disputes. It also addresses the growing ... Read more",
+    "host_name": "www.researchgate.net",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

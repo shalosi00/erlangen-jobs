@@ -1,0 +1,28 @@
+{
+    "bin": {
+        "id": "asha-v11-0858",
+        "readonly": false,
+        "bytes": 0,
+        "bytes_readable": "0 B",
+        "files": 0,
+        "updated_at": "2026-10-26T08:59:18.048239Z",
+        "updated_at_relative": "now",
+        "created_at": "2026-10-26T08:58:06.459381Z",
+        "created_at_relative": "now",
+        "expired_at": "2026-11-02T08:59:18.048239Z",
+        "expired_at_relative": "6 days from now"
+    },
+    "file": {
+        "filename": "asha-jobtoolkit-v11.bundle",
+        "content-type": "application/octet-stream",
+        "bytes": 148065187,
+        "bytes_readable": "148 MB",
+        "md5": "Cnw8fegu04vz7OaByT8GQQ==",
+        "sha1": "0d11a1e9c083cbbdfe499e72e3429ec84b74c7ab",
+        "sha256": "46a7829dadbbd51d7377868929776d5b74c28da5451d16dfbe088832abbe780b",
+        "updated_at": "2026-10-26T08:59:17.919972Z",
+        "updated_at_relative": "now",
+        "created_at": "2026-10-26T08:59:17.919972Z",
+        "created_at_relative": "now"
+    }
+}

@@ -1,0 +1,59 @@
+User-Agent: *
+Disallow: /*marktjagd_pageflip.html*
+Disallow: /site/meinestadt/marktjagdTracking
+Disallow: /jobs-files/
+Disallow: /coop/
+Disallow: /redirect/
+Disallow: /*/redirects/deutsche_bahn
+Disallow: /site/meinestadt/resourceCached/*/htdocs/js/src/leSpecial.js
+Disallow: /*/videostellenanzeigen
+Disallow: /*/ba-preview?id=
+Disallow: /*?*cid=
+Disallow: /*?*hsfp=
+Disallow: /*?*lang=
+Disallow: /*?*loc-interest=
+Disallow: /*?*jobwrds=
+Disallow: /*?*apsi/
+Disallow: /suche*?*page=
+Disallow: /*?*service=
+Allow: /jobs-files/labs/amptest
+Allow: /jobs-files/sitemap/stellen/*
+Allow: /jobs-files/sitemap/google4jobs/*
+Allow: /jobs-files/sitemap/arbeitgeber/*
+Allow: /jobs-files/sitemap/skills/*
+Allow: /jobs-files/sitemap/lehrstellen/*
+
+#27.02.2025 MH
+User-Agent: *
+Disallow: /*?page=
+Disallow: /*&page=
+
+User-Agent: thesubot
+Disallow: /
+
+User-agent: ACONTBOT
+Disallow: /
+
+User-Agent: MAINSEEK_BOT
+Disallow: /
+
+User-agent: Cliqzbot 
+Disallow: /
+
+#19.11.2024 remove bingbot crawl delay
+#User-agent: bingbot
+#Crawl-delay: 1
+
+
+#20.03.2026 sitemaps test
+Sitemap: https://jobs.meinestadt.de/jobs-files/sitemap/stellen/sitemap-index.xml
+Sitemap: https://jobs.meinestadt.de/sitemaps/jobs-jk-index.xml
+Sitemap: https://jobs.meinestadt.de/sitemaps/jobs-az-index.xml
+
+
+#24.03.2026 AdSense Fix
+User-Agent: Mediapartners-Google
+Allow: /*?*cid=
+
+User-agent: Google-Display-Ads-Bot
+Allow: /*?*cid=

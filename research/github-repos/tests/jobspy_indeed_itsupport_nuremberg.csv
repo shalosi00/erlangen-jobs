@@ -1,0 +1,718 @@
+id,site,job_url,job_url_direct,title,company,location,date_posted,job_type,salary_source,interval,min_amount,max_amount,currency,is_remote,job_level,job_function,listing_type,emails,description,company_industry,company_url,company_logo,company_url_direct,company_addresses,company_num_employees,company_revenue,company_description,skills,experience_range,company_rating,company_reviews_count,vacancy_count,work_from_home_type
+in-447f35f2eef58a52,indeed,https://de.indeed.com/viewjob?jk=447f35f2eef58a52,https://join.com/companies/int-groupde/15231153-it-supporter-on-site-engineer?pid=a13795120131dbe48464,IT Supporter / On-Site Engineer,INT Informatik Nachrichtentechnik GmbH,"Nürnberg, BY, Germany",2026-10-10,,direct_data,monthly,3200.0,,EUR,False,,,,,"INT Informatik Nachrichtentechnik GmbH
+
+**Aufgaben**
+------------
+
+* Bereitstellung von technischem Support und Problemlösung für Endbenutzer in Bezug auf Hardware- und Softwareprobleme.
+* Installation, Konfiguration und Wartung von Computersystemen sowie Peripheriegeräten und Netzwerken.
+* Erstellung und Pflege von Dokumentationen zu Support-Anfragen und technischen Anleitungen.
+* Unterstützung bei der Implementierung und Verwaltung von Sicherheitsprotokollen und -verfahren.
+* Zusammenarbeit mit anderen IT-Teams zur Optimierung von IT-Diensten und zur Gewährleistung eines reibungslosen Betriebs.
+
+**Qualifikation**
+-----------------
+
+* Erfahrung im IT-Support oder in einer ähnlichen Rolle
+* Kenntnisse in Windows-Betriebssystemen
+* Gute Problemlösungsfähigkeiten und eine kundenorientierte Denkweise
+* Starke Kommunikationsfähigkeiten in Deutsch
+
+**Benefits**
+------------
+
+* Jobrad
+
+* Wellpass
+
+* Kollegiales Team",,https://de.indeed.com/cmp/Int-Informatik-Nachrichtentechnik-Gmbh,,,,,,,,,1.0,1.0,,
+in-46d0da50c425ae15,indeed,https://de.indeed.com/viewjob?jk=46d0da50c425ae15,https://jobs.paessler.com/Data-Analyst-eng-j909.html,Data Analyst,Paessler GmbH,"Nürnberg, BY, Germany",2026-10-08,,,,,,,False,,,,,"Join our seven-person BI team and work at the intersection of business, data, and enablement. You will clarify decisions, identify the right KPIs, challenge assumptions, and deliver actionable insights. As we expand into a new AI-assisted BI platform, you will help establish governed, AI-assisted self-service analytics, experiment with new analytical approaches, and guide stakeholders through the transition.
+
+**YOUR TASKS**
+--------------
+
+* Partner with Sales, Marketing, Customer Success, Finance, Product, and Revenue Operations to translate business questions into clear analyses and recommendations.
+* Analyze performance drivers such as pipeline, conversion, revenue, customer segments, and product usage, explaining why results changed.
+* Build and maintain trusted analyses, dashboards, KPI definitions, and reusable data products in ThoughtSpot, Power BI, and Azure SQL.
+* Use SQL to explore data, validate hypotheses, and investigate questions beyond existing reports.
+* Improve metric consistency, documentation, lineage, data quality, and the responsible use of data and AI together with Data Engineers and business stakeholders.
+* Enable users through training and practical guidance so self-service analytics supports better decisions without creating competing versions of the truth.
+
+**YOUR PROFILE**
+----------------
+
+* At least two years of experience in data analysis, BI, analytics consulting, or Revenue Operations analytics.
+* Strong business acumen and a track record of influencing decisions through analysis, not only delivering reports.
+* Strong SQL skills and experience with relational databases, data validation, and semantic or dimensional models.
+* Hands-on experience with ThoughtSpot or another modern BI platform such as Power BI, Tableau, or Looker as well as working with LLMs.
+* Clear communication in German (depending on the location) and English, including the ability to explain assumptions, limitations, and trade-offs.
+* A proactive, curious, adaptable, and accountable working style, with the creativity to explore new approaches and the confidence to challenge requests constructively.
+  
+
+**Nice to have**
+
+* Experience with ThoughtSpot Spotter or other search-driven and AI-assisted analytics capabilities.
+* Knowledge of Azure SQL, Microsoft Fabric, Synapse Analytics, Purview, DAX, or governed enterprise datasets.
+* Experience with SaaS, subscription, usage-based licensing, sales operations, or product analytics.
+
+**FACTS FOR YOU**
+-----------------
+
+* Many possibilities to further develop your individual skillset
+* Innovative and creative work environment with plenty of room for new ideas
+* A structured onboarding phase with experienced colleagues
+* Flexible working hours and a family-friendly environment
+* A great working atmosphere in an enthusiastic international team with flat hierarchies
+* Paessler is a fast-growing midsized company that has been in the market for 20 years. The company is focused on long-term goals and is currently comprised of 400+ employees
+
+**INTERESTED?**
+---------------
+
+Your contact person for this great job is Annalena Klein.
+  
+  
+**And at the end, a very important note:**
+  
+For us, diversity is more than just a word — it's a commitment. Our job posts are geared towards all people, regardless of their gender, sexual orientation, background, faith, or physical abilities. We value diversity and strive to create a work environment that prioritizes equal opportunities and inclusion. In line with this objective, please note that candidates with severe disabilities will be given preferential consideration over applicants with equal qualifications. At Paessler, we're determined to break down barriers and provide everyone with the chance to develop their full potential. Please feel free to let us know if you believe there are ways we can improve the wording of our jobs posts or our overall recruitment approach. Let's work together to create a more colorful and inclusive corporate culture!",Internet And Software,https://de.indeed.com/cmp/Paessler-Gmbh-1,https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/af735d00d4350e5e6d002542ff54c24d,http://www.paessler.com,"Thurn-und-Taxis-Straße 14
+90411 Nürnberg",201 to 500,,,,,,,,
+in-d26b96fd7c2ce03b,indeed,https://de.indeed.com/viewjob?jk=d26b96fd7c2ce03b,https://netways.de/jobs/,Apprenticeship as an IT Specialist for System Integration (m/f/d) September 2027,NETWAYS GmbH,"Nürnberg, BY, Germany",2026-10-08,,,,,,,False,,,,jobs@netways.de,"**Apprenticeship as an IT Specialist for System Integration (m/f/d) September 2027**
+  
+
+Are you interested in modern IT systems? Do you want to not only understand how IT works in companies, but also improve it? Then start your apprenticeship as an IT Specialist for System Integration (m/f/d) at NETWAYS Professional Services! With us, you'll learn the ropes from the ground up—and still be right in the thick of things from the very beginning. Working alongside experienced colleagues, you'll use monitoring to provide visibility into our clients' IT environments and help them streamline their operations. And when systems don't fit together easily, you develop solutions that connect them. With us, you'll find your place in the world of IT!
+
+**About NETWAYS**
+
+Since 1995, we have been helping companies build, operate, and further develop their IT infrastructures using the right open-source technologies—with a focus on monitoring and system management. We also offer training, host our own conferences such as OSMC, and provide managed services from our data center in Nuremberg.
+
+What drives us: software with open-source code and a community where knowledge is shared rather than kept under lock and key. We have over 95 employees from more than 17 different countries—working in flat hierarchies with plenty of room to contribute their own ideas.
+
+**Your Responsibilities & Your Scope of Work**
+
+* Teaching the fundamentals of Linux and database administration, as well as programming, through training courses and projects
+* Working with the latest open-source products and supporting experienced consultants during client meetings—both on-site and remotely
+* Supporting our clients in setting up and maintaining their centralized IT monitoring systems, as well as developing custom plugins and extensions
+* Simplifying IT Administration Through Server Provisioning, Patch Management, and Configuration Management
+* Customer Service in Support and IT Outsourcing
+* Participation in cross-departmental projects, webinars, public training sessions, and conferences
+
+**Ideally, you should have:**
+
+* Motivation to learn new things and continue to grow
+* Team spirit and a reliable work ethic
+* Some experience with IT systems is a plus, but not required
+* Interest in the areas of monitoring & observability and configuration management
+
+**Here's why you should start your apprenticeship with us:**
+
+* A diverse training program that offers insights into many different subject areas—this will help you discover where your strengths lie and allow you to develop your skills in a targeted way
+* You'll take on responsibility early on and will be able to manage your own projects
+* Your instructors will guide you every step of the way and support you as you grow.
+* We provide training with the goal of expanding our team in the long term—with real opportunities for your future
+* Your satisfaction and well-being are important to us - that's why we create an environment in which you feel comfortable and can flourish
+
+Curious? On our website, you can learn more about NETWAYS, our customers, and what to expect as an apprentice with us. On the team page, you'll also get a first impression of who you'd be working with in the future.
+
+**If you're interested in growing with us and joining our consulting team, your contact person, Dirk Götz, looks forward to receiving your application! Please send us your application materials (cover letter, resume, transcripts, references) to** **jobs@netways.de**",,https://de.indeed.com/cmp/Netways-Gmbh,,,,,,,,,,,,
+in-942602396301f3ab,indeed,https://de.indeed.com/viewjob?jk=942602396301f3ab,https://jobs.paessler.com/IT-System-Administrator-eng-j908.html,IT System Administrator,Paessler GmbH,"Nürnberg, BY, Germany",2026-10-07,,,,,,,False,,,,,"As an IT Systems Administrator for Paessler, you will be a seasoned IT Generalist on our team helping bring extensive experience in operating IT Infrastructures. You will work to resolve IT issues as part of our Service Desk team, delivering high quality answers and providing outstanding customer support. A deep understanding of Windows Servers, Firewalls, and Network Operations will be critical in our environment. Someone that has been working with Azure, Entra ID, networking and virtualization technologies will be of great impact to our existing team.
+
+**YOUR TASKS**
+--------------
+
+* As part of the IT team, you will ensure the smooth and secure operation of the infrastructures, clients, and services used here at Paessler
+* You perform a wide variety of troubleshooting problems with systems, networks, and clients as part of our IT Helpdesk
+* You support automated delivery, configuration management, and software updates on all end devices and servers, leveraging M365 and Entra ID-integrated tooling where applicable
+* You answer requests from our employees in a timely manner with a high degree of customer satisfaction
+* You assist in problem solving, drawing on your deep familiarity with the M365 ecosystem, including Azure and Entra ID
+* You plan and execute a wide variety of Enterprise IT Projects as assigned
+* You plan, operate, and improve our client management processes and tools, making recommendations for backup solutions, security solutions and other solutions in the IT landscape
+* You support security incident protocol as needed
+
+**YOUR PROFILE**
+----------------
+
+* Senior experience with Windows Server and Client Administration is required
+* Experience with service desk, including providing outstanding support in rapid timeframes
+* You have in-depth expertise (3+ years) managing Microsoft Entra ID (Azure AD), including identity and access management, conditional access policies, hybrid identity/Azure AD Connect, and single sign-on configurations
+* You bring 3+ years of hands-on experience with Microsoft 365 administration and support different departments by implementing the required solutions and enhancements for the successful use of M365 services
+* Relevant certifications such as MS-102 (Microsoft 365 Administrator), SC-300 (Identity and Access Administrator), SC-401 (Administering Information Security in Microsoft 365), CompTIA Network+, CompTIA Security+ are a strong plus
+
+**FACTS FOR YOU**
+-----------------
+
+* Many possibilities to further develop your individual skillset
+* Innovative and creative work environment with plenty of room for new ideas
+* A structured onboarding phase with experienced colleagues
+* Flexible working hours and a family-friendly environment
+* A great working atmosphere in an enthusiastic international team with flat hierarchies
+* Paessler is a fast-growing midsized company that has been in the market for 20 years. The company is focused on long-term goals and is currently comprised of 400+ employees
+
+**INTERESTED?**
+---------------
+
+Your contact person for this great job is Annalena Klein.
+  
+  
+**And at the end, a very important note:**
+  
+For us, diversity is more than just a word — it's a commitment. Our job posts are geared towards all people, regardless of their gender, sexual orientation, background, faith, or physical abilities. We value diversity and strive to create a work environment that prioritizes equal opportunities and inclusion. In line with this objective, please note that candidates with severe disabilities will be given preferential consideration over applicants with equal qualifications. At Paessler, we're determined to break down barriers and provide everyone with the chance to develop their full potential. Please feel free to let us know if you believe there are ways we can improve the wording of our jobs posts or our overall recruitment approach. Let's work together to create a more colorful and inclusive corporate culture!",Internet And Software,https://de.indeed.com/cmp/Paessler-Gmbh-1,https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/af735d00d4350e5e6d002542ff54c24d,http://www.paessler.com,"Thurn-und-Taxis-Straße 14
+90411 Nürnberg",201 to 500,,,,,,,,
+in-2fc62b848db1054e,indeed,https://de.indeed.com/viewjob?jk=2fc62b848db1054e,,(Junior) IT Manager First Level Support (m/w/d),SIMBA DICKIE GROUP GMBH,"Fürth, BY, Germany",2026-10-02,fulltime,,,,,,False,,,,,"**Das bieten wir Ihnen:**
+
+Als einer der Top Five Spielwarenhersteller Europas ist die SIMBA DICKIE GROUP mit circa 2.400 Mitarbeitenden rund um den Globus aktiv. Im Jahr 2025 verzeichnete die Gruppe einen Umsatz von 690,8 Millionen Euro. Das Sortiment umfasst mehr als 4.000 inspirierende Artikel – vom beliebten BIG Bobby Car über Spielhäuser von Smoby Toys bis hin zur Ankleidepuppe Steffi Love von Simba Toys, Holzbausteinen von Eichhorn und Spielzeugautos von Majorette und Dickie Toys. Die Firmenphilosophie der Gruppe lässt sich in fünf Worten zusammenfassen: „We love to make toys“. Dies spiegelt sich auch in den Leitsätzen des Unternehmens wider: Konsumentenfokus, Einfachheit, Mensch im Mittelpunkt, Integrität, nachhaltiger Erfolg, Vielfalt. Unsere Vision lautet: We want to play an essential role in everyone’s childhood – being the most passionate family owned toy company.
+
+Für unseren Hauptsitz in Fürth/Bayern suchen wir ab sofort zur Verstärkung unseres Teams unbefristet in Vollzeit einen
+
+**(Junior) IT Manager First Level Support (m/w/d)**
+
+**Ihr Aufgabengebiet:**
+
+* Annahme, Priorisierung und Bearbeitung von IT-Störungen im First-Level-Support über Ticketsystem, Telefon und Remote-Support
+* Betreuung und Unterstützung der Mitarbeitenden bei allen IT-Anfragen im Tagesgeschäft
+* Installation, Konfiguration und Wartung von PCs, Notebooks, Druckern und mobilen Endgeräten
+* Administration von Benutzerkonten und Berechtigungen im Active Directory sowie Unterstützung bei der Betreuung der Microsoft-Systemlandschaft
+* Mitwirkung bei Rollouts, Software-Updates, Patch-Management sowie IT-On- und Offboarding
+* Unterstützung bei der Administration und Sicherstellung eines störungsfreien LAN-/WLAN-Betriebs in Zusammenarbeit mit externen Dienstleistern
+* Pflege der IT-Dokumentation und Mitwirkung bei der Umsetzung grundlegender IT-Sicherheitsmaßnahmen
+* Unterstützung bei allgemeinen administrativen und organisatorischen Aufgaben im IT-Bereich
+
+**Ihr Profil:**
+
+* Abgeschlossene IT-Ausbildung (z. B. Fachinformatiker für Systemintegration) oder eine vergleichbare Qualifikation
+* Gute Kenntnisse in Microsoft Windows, Active Directory und Microsoft 365
+* Grundkenntnisse in Netzwerktechnologien sowie idealerweise Erfahrung mit Virtualisierung und Ticketsystemen
+* Analytische, strukturierte und lösungsorientierte Arbeitsweise
+* Ausgeprägte Serviceorientierung sowie Freude an der Zusammenarbeit mit Anwendern
+* Gute Deutsch- und Englischkenntnisse in Wort und Schrift
+
+**Das bieten wir Ihnen:**
+
+* Flexible Arbeitszeiten und Homeoffice
+* Leckere und gesundheitsbewusste Verpflegung durch günstige Mittagsgerichte in unserer Kantine inklusive Getränke
+* Sportangebote
+* Fahrradleasing
+* Ideale Verkehrsanbindung – z. B. Bushaltestelle direkt vor der Türe
+* Firmeneigene kostenlose Parkplätze
+* Rabatte und Vergünstigungen in unseren Online Shops und bei ausgewählten Partnern
+* Arbeiten in einem inhabergeführten Familienunternehmen
+
+Art der Stelle: Vollzeit, Festanstellung
+
+Leistungen:
+
+* Essenszuschuss
+* Gleitzeit
+* Homeoffice-Möglichkeit
+* Kostenlose Getränke
+* Kostenloser Parkplatz
+* Mitarbeiter-Rabatt
+
+Arbeitsort: Vor Ort",,https://de.indeed.com/cmp/Simba-Dickie-Group-Gmbh,,,,,,,,,5.0,1.0,,
+in-696995902b721730,indeed,https://de.indeed.com/viewjob?jk=696995902b721730,https://bizlink.helixjobs.com/_/jobad?prj=2193P2559&loc=22,IT Security Analyst (m/f/d),BizLink Industry Germany,"Roth, BY, Germany",2026-10-02,fulltime,,,,,,False,,,,,"**BizLink** is a global provider of connectivity solutions in the field of data and energy management. We provide solutions for industries following global megatrends such as electromobility, industrial automation, medical technology and data centers with cables and cable systems.
+
+With flat hierarchies, short decision-making processes and a corporate culture based on entrepreneurial thinking and acting, we rely on bright and courageous people with whom we can actively shape the future.
+
+**Join us.**
+
+**IT Security Analyst (m/f/d)**
+===============================
+
+For our location in Roth, Germany
+
+### **Your tasks:**
+
+* Security Operations & SOC Management: Serve as a primary technical lead for the Security Operations Center, overseeing the transition to new providers and defining global requirements for threat detection and response.
+* Create Customized Security Playbooks: Develop, document, and update standardized incident response playbooks and operational procedures to streamline threat mitigation across the security team.
+* Infrastructure Analysis & Hardening: Support the ""Digital Perimeter Hardening"" initiative by analyzing network logs, identifying vulnerabilities, and recommending path optimization and re-routing strategies between switches and firewalls.
+* Endpoint Integrity: Monitor the lifecycle and integrity of global endpoints, ensuring consistent patching and permission standards.  
+  Network Security Monitoring: Monitor and analyze network traffic to maintain and enforce granular access control policies.
+* Threat Mitigation: Develop and maintain automated threat mitigation solutions.
+* Cloud & Hybrid Security Monitoring: Monitor cloud environments (Azure, GCP, AWS) for security posture and threat activity, including verifying secure connectivity across Azure VWAN and cloud-native security services.
+* Compliance & Audit: Participate in and support ISO 27001 internal and external audits to ensure global compliance with international security standards.
+
+### **Your talents:**
+
+* Experience: Proven experience as a security analyst or in a related cybersecurity role, working with enterprise-grade technologies and SOC tools.
+* Security Monitoring & Incident Response: Experience deploying and managing SIEM/SOAR systems and EDR/XDR platforms to detect and mitigate threats in real time.
+* Technical Knowledge: Deep understanding of secure protocols and technical configurations
+* Tool Proficiency: Hands-on experience with security platforms such as Trellix, Rapid7, and network monitoring tools like Wireshark.
+* Automation Skills: Familiarity with scripting (e.g., Python, Flask) and API integration for automating security responses and log management.
+* Cloud Expertise: Solid understanding of cloud networking and security architectures within AWS, Azure, or GCP environments.
+* Certifications: Certifications: Industry-recognized cybersecurity certifications are strongly preferred.
+* Communication: Excellent English communication skills, with the ability to articulate complex technical risks to diverse global stakeholders.
+
+### **Our offer:**
+
+* Assignments with room for creativity in a motivated team
+* Continuing training opportunities and career prospects within a highly successful and international group of companies
+* Supportive working environment with short decision-making processes, flat hierarchies, and company events
+* Attractive collectively agreed and performance-based remuneration
+* Employer contribution to a company pension scheme or AVWL
+* 30 days of holiday plus additional paid leave for specific occasions
+* Health promotion with modern and ergonomic workplaces
+
+### **What is next?**
+
+Your online application! We are looking forward to meeting you!
+
+#### **Contact us:**
+
+Ella Luft  
+Tel.: +49 (0)9171 907 4558  
+BizLink Industry Germany GmbH  
+Gildestraße 17  
+91154 Roth",,https://de.indeed.com/cmp/Bizlink-Industry-Germany,,,,,,,,,,,,
+in-2a748a58fc72b017,indeed,https://de.indeed.com/viewjob?jk=2a748a58fc72b017,https://jobdb.softgarden.de/jobdb/public/jobdb/posting/67825297/0/0/IT-ServicetechnikerIn+%28m-w-d%29+Technischer+Support+im+Innendienst.html,IT-ServicetechnikerIn (m/w/d) Technischer Support im Innendienst,PHARMATECHNIK GmbH & Co. KG,"Nürnberg, BY, Germany",2026-10-01,fulltime,,,,,,False,,,,,"**in Vollzeit für unsere Geschäftsstelle in Schnaittach****Deine Aufgaben:**
+
+* Du hast Spaß daran unseren Kunden bei technischen Herausforderungen telefonisch zur Seite zu stehen
+* Du gibst alles um die Anfragen der Kunden lösungsorientiert und zeitnah zu bearbeiten. Im Falle von umfangreichen Störungen leitest du diese gewissenhaft an den Second-Level-Support weiter
+* Du hilfst unseren Kunden bei Ausfall und Störungen an PC’s, Laptops, Druckern und anderen technischen Geräten. Auch bei Störungen der Software (Windows, Linux, Anwendungssoftware) und Client/Server-Netzwerkumgebungen, bist du der erste Ansprechpartner und sorgst dafür, dass schnellstmöglich wieder reibungslos gearbeitet werden kann. Natürlich erhältst du vorher eine ausführliche Einarbeitung
+* Du erklärst dem Kunden Zusammenhänge und das weitere Vorgehen stets nachvollziehbar und verständlich
+
+**Dein Profil:**
+
+* Erfolgreich abgeschlossene technische Berufsausbildung im IT-Bereich
+* Du bringst gute Kenntnisse in der Windowswelt im Umgang mit Hardware-, Software- und Netzwerksystemen mit
+* Du hast Erfahrungen im Bereich Netzwerk TCP/IP
+* Fundiertes technisches Verständnis
+* Sehr gute Kommunikations- und Teamfähigkeit
+* Eigenständige, verantwortungsvolle und lösungsorientierte Arbeitsweise
+* Deine Deutschkenntnisse sind sehr gut in Wort und Schrift",,https://de.indeed.com/cmp/Pharmatechnik-Gmbh-&-Co.-Kg,,,,,,,,,,,,
+in-e60153b69a8c2bcd,indeed,https://de.indeed.com/viewjob?jk=e60153b69a8c2bcd,https://k59932.coveto.de/job-software-support-specialist-m-w-d-nuernberg-6635.html?utm_source=indeed&utm_medium=organic,Software Support Specialist (m/w/d),grey engineering GmbH,"Nürnberg, BY, Germany",2026-10-01,fulltime,direct_data,yearly,52000.0,72000.0,EUR,False,,,,bewerbung@grey-engineering.com,"Wir suchen aktuell:
+
+**Software Support Specialist (m/w/d)**
+=======================================
+
+Nürnberg - Vollzeit
+  
+Gleitzeit, teilweise Rufbereitschaft (ca. 40 Tage/Jahr)
+
+Wir suchen ab Januar 2027 am Standort Nürnberg einen Software Support Specialist (m/w/d) im Umfeld der Logistik. Die Position ist im Rahmen einer 35-Stunden-Woche zu besetzen. Nach der Einarbeitung ist mobiles Arbeit im Umfang von 2-3 Tagen pro Woche möglich.
+
+**Folgende Herausforderungen erwarten Sie als Software Support Specialist (m/w/d):**
+====================================================================================
+
+* Übernahme von Rufbereitschaften im internationalen Kundenumfeld
+* Betreuung von Neu- und Bestandskunden als Service Delivery Manager (m/w/d)
+* Durchführung des Software-Supports einschließlich strukturierter Dokumentation von Servicefällen und Lösungsmaßnahmen
+* Mitarbeit in internationalen Softwareprojekten in den Bereichen CS, MU, PS und IS
+* Durchführung internationaler Projektinbetriebnahmen sowie After-Go-Live-Support
+* Technischer Service-Support für Bestandskunden im Umfeld von WCS- und MFC-Systemen
+* Entwicklung und Anpassung von Softwarelösungen für WCS-, MFC- und OFS-Systeme, insbesondere im Bereich PTL und PbV
+* Analyse, Bearbeitung und Umsetzung von Change Requests für Bestandskunden
+
+**Ihr Profil:**
+===============
+
+* Sie verfügen über Erfahrung im 24/7-Rufbereitschafts-Support auf 2nd-Level-Niveau und sind bereit, eine solche Rufbereitschaft an ca. 40 Tagen pro Jahr zu übernehmen
+* Sie zeichnen sich durch eine ausgeprägte Service- und Kundenorientierung aus und kommunizieren sicher mit internen und externen Ansprechpartnern
+* Sie verfügen über Kenntnisse im Automatisierungsumfeld sowie im Bereich Lagerverwaltungssysteme (WMS) und bringen ein gutes Verständnis für Logistik-IT mit
+* Sie haben Erfahrung im Umgang mit anspruchsvollen Softwarearchitekturen und komplexen technischen Systemlandschaften
+* Sie besitzen fundierte Kenntnisse in der Java-Softwareentwicklung
+* Sie sind sicher im Umgang mit Datenbanken, insbesondere Oracle
+* Sie bringen die Bereitschaft zu gelegentlichen Dienstreisen mit
+* Fließende Deutsch- und Englischkenntnisse in Wort und Schrift zur Kommunikation in einem internationalen Umfeld runden Ihr Profil ab
+
+**Das bieten wir Ihnen:**
+=========================
+
+* Einen unbefristeten Vertrag zur sicheren Zukunftsplanung
+* Eine spannende und abwechslungsreiche Tätigkeit im Rahmen eines innovativen Umfeldes
+* Flexible Arbeitszeiten sowie, je nach Position, die Option zum mobilen Arbeiten zur optimalen Vereinbarung von Familie und Beruf
+* Herausfordernde Tätigkeiten mit einem hohen Maß an Eigenverantwortung
+* Eine attraktive, leistungsgerechte Vergütung – je nach Qualifikation und Erfahrung zwischen 52.000 und 72.000 Euro brutto pro Jahr
+* Corporate Benefits über unsere Online-Plattform
+* Offene Kultur und familiäre Arbeitsatmosphäre
+
+**Haben wir Ihr Interesse geweckt?**
+====================================
+
+Dann bewerben Sie sich als Software Support Specialist (m/w/d) in Nürnberg direkt online.
+
+Alternativ freuen wir uns über die Zusendung Ihrer Bewerbungsunterlagen unter Angabe des frühestmöglichen Eintrittstermins und Ihrer Gehaltsvorstellung per E-Mail an bewerbung@grey-engineering.com.
+
+Dieses Stellenangebot entspricht nicht Ihren beruflichen Wünschen? Wir freuen uns darüber hinaus auch über Initiativbewerbungen.
+
+**Wir freuen uns Sie kennenzulernen!**
+======================================",,https://de.indeed.com/cmp/Grey-Engineering-Gmbh,https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/5f2321451f5d36b1679ad65c586b2731,,,,,,,,5.0,1.0,,
+in-d045257c7766aff8,indeed,https://de.indeed.com/viewjob?jk=d045257c7766aff8,https://www.kraeuter-mix.de/downloadfiles/Stellenangebote/Stellen/1-Wir%20stellen%20ein/Stelle_Mitarbeiter%20IT-Support%2C%20First%20Level%20Support_2026-09.pdf,"Mitarbeiter IT Support, First Level Support",KRÄUTER MIX GmbH,"Abtswind, BY, Germany",2026-09-30,,,,,,,False,,,,bewerbung@kraeuter-mix.de,"Kräuter Mix GmbH
+  
+Personalabteilung
+  
+Wiesentheider Str. 4
+  
+D-97355 Abtswind
+
+Ansprechpartnerin: Alicia Münch
+  
+T +49 9383 204-411
+  
+bewerbung@kraeuter-mix.de
+  
+www.kraeuter-mix.de/karriere
+
+**Wir lassen Talente erblühen!**
+
+**Mitarbeiter IT-Support / First Level Support (m/w/d)**  
+**in Abtswind**
+
+Wir sind ein inhabergeführtes, international tätiges Familienunternehmen mit rund 480 Beschäftigten. Seit über
+  
+100 Jahren sind die Früchte der Natur unsere Leidenschaft und Geschäftsgrundlage. Mit getrockneten pflanzli-
+  
+chen Rohstoffen beliefern wir die Lebensmittel-, Pharma- und Tiernahrungsindustrie sowie den Handel.
+
+**Was sind Ihre Aufgaben?**  
+• Unterstützung unserer Mitarbeitenden bei IT-Fra-
+
+gen und Störungen
+  
+
+* Bearbeitung von Supportanfragen im Hard- und
+
+Softwareumfeld
+  
+
+* Betreuung von Windows-Arbeitsplätzen und Micro-
+
+soft 365
+  
+
+* Einrichtung von Benutzerkonten, Geräten und
+
+Arbeitsplätzen
+  
+
+* Remote-Unterstützung sowie Vor-Ort-Support
+* Verwaltung und Ausgabe von IT-Hardware und
+
+Zubehör
+  
+
+* Zusammenarbeit mit den Kollegen aus System-
+
+administration und Anwendungsentwicklung
+  
+
+* Mitarbeit an der Weiterentwicklung unseres IT-Sup-
+
+ports
+
+**Was bringen Sie mit?**  
+• Ausbildung im IT-Bereich, beispielsweise als
+
+Fachinformatiker für Systemintegration, oder eine
+  
+vergleichbare Qualifikation
+
+* Alternativ entsprechende praktische Erfahrung im
+
+IT-Support
+
+* Gute Kenntnisse in Windows und Microsoft 365
+* Grundkenntnisse in den Bereichen Netzwerk,
+
+Benutzerverwaltung und IT-Hardware
+  
+
+* Serviceorientierte und kommunikative Persönlich-
+
+keit
+  
+
+* Selbstständige, strukturierte und zuverlässige
+
+Arbeitsweise
+  
+
+* Freude daran, Probleme zu lösen und Menschen
+
+zu unterstützen
+
+**Was bietet Ihnen Kräuter Mix?**  
+Sie erwartet ein Arbeitsplatz mit Perspektive in einem stetig und gesund wachsenden Unternehmen. Wir bauen
+  
+auf strukturiertes Onboarding sowie eine zielgerichtete Einarbeitung und ermöglichen vielfältige, oftmals
+  
+individuelle Weiterentwicklungsperspektiven in einem attraktiven Arbeitsumfeld. Sie erhalten die Möglichkeit,
+  
+früh Verantwortung zu übernehmen und im Team mitzugestalten. Wir leben flache Hierarchien, direkte und
+  
+offene Kommunikation und kurze Entscheidungswege. Die betriebliche Gemeinschaft fördern wir durch
+  
+vielfältige Aktivitäten und Angebote.
+
+**Sie möchten Teil unseres Teams werden?**  
+Dann senden Sie Ihre Bewerbung vorzugsweise per **E-Mail**.
+
+Wir freuen uns auf Sie!",,https://de.indeed.com/cmp/Kr%C3%A4uter-Mix-Gmbh,,,,,,,,,,,,
+in-67eb174c9689d62c,indeed,https://de.indeed.com/viewjob?jk=67eb174c9689d62c,https://syntex-69bbee04a05ee.heyrecruit.de/?page=job&id=134354&location=41054&utm_campaign=heyrecruit-multiposting&utm_source=indeed&utm_medium=kostenloses-multiposting,Quereinsteiger gesucht: IT-Support (m/w/d),Syntex,"Fürth, BY, Germany",2026-09-28,fulltime,,,,,,True,,,,,"**Syntex GmbH**
+---------------
+
+Das Syntax Institut ist ein AZAV-zertifizierter Bildungsträger für digitale Zukunftsberufe. Mit praxisnahen Weiterbildungen in IT-Administration, IT-Sicherheit und IT-Systemen im Gesundheitswesen unterstützen wir unsere Teilnehmenden dabei, gefragte Fachkompetenzen aufzubauen und erfolgreich in die IT-Branche einzusteigen.
+
+**Was erwartet dich?**
+----------------------
+
+Du möchtest in die IT einsteigen, hast aber noch keine oder nur wenige Vorkenntnisse? Dann ist unsere Weiterbildung IT-Support genau das Richtige für dich. In nur sechs Monaten lernst du die wichtigsten Grundlagen für den erfolgreichen Einstieg in die IT-Branche und bereitest dich auf gefragte Positionen im Support- und Servicebereich vor.
+
+Das lernst du:
+
+* **IT-Grundlagen:** Erarbeite dir ein solides Fundament in digitalen Arbeitsumgebungen, Betriebssystemen sowie modernen Office- und Kollaborationstools.
+* **IT-Support & Anwenderbetreuung:** Lerne, technische Probleme strukturiert zu analysieren, Lösungen zu finden und Anwender professionell zu unterstützen.
+* **Hardware, Netzwerke & IT-Sicherheit:** Verstehe, wie Computersysteme funktionieren, wie Netzwerke aufgebaut sind und wie Unternehmen ihre IT-Systeme schützen.
+* **Praxisnahe Arbeitsweisen:** Arbeite mit Ticketsystemen, lerne typische Abläufe im Service Desk kennen und bereite dich auf reale Aufgaben im IT-Alltag vor.
+
+**Deine Perspektive**
+
+* IT Support Specialist
+* Service Desk Mitarbeiter
+* IT Support Technician
+* Junior IT Administrator
+
+Nach der Weiterbildung verfügst du über praxisnahe IT-Kenntnisse, bereitest dich auf anerkannte Zertifizierungen vor und bist bestens auf Positionen wie IT Support Specialist, Service Desk Mitarbeiter, Helpdesk Agent oder Junior IT Administrator vorbereitet.
+
+Ideal für: Arbeitssuchende, Berufswechsler und alle, die einen erfolgreichen Einstieg in die IT suchen – auch ohne tiefgehende technische Vorkenntnisse.
+
+**Dein Profil**
+---------------
+
+* Du bist bei der Agentur für Arbeit oder dem Jobcenter gemeldet
+* Du willst beruflich neu durchstarten – z. B. nach Kündigung, Elternzeit oder Pause
+* Du hast Interesse an digitalen Themen – Vorkenntnisse sind nicht nötig!
+* Du bringst gute Deutschkenntnisse (mind. B1) und Lernbereitschaft mit
+
+**Was bieten wir?**
+-------------------
+
+**Deine Vorteile auf einen Blick:**
+
+✅ 100 % kostenfrei mit Bildungsgutschein  
+✅ Online lernen – flexibel von überall  
+✅ Laptop inklusive  
+✅ Praxisprojekte für dein Portfolio  
+✅ Branchenanerkannte IHK-Zertifikate möglich  
+✅ Karriere-Coaching & Unterstützung bei der Jobsuche",,https://de.indeed.com/cmp/Syntex,,http://www.syntexmexico.com,,,,,,,4.2,12.0,,
+in-05b3a2cc27eacb05,indeed,https://de.indeed.com/viewjob?jk=05b3a2cc27eacb05,,IT-Support (1st Level) – Quereinsteiger willkommen! (m/w/d),DDIPO GmbH,"Kitzingen, BY, Germany",2026-09-24,fulltime,,,,,,False,,,,alexander.lang@ddipo.de,"**Über Uns**
+
+Die **DDIPO GmbH** ist ein spezialisierter IT-Dienstleister für die **Systemgastronomie**. Wir sorgen dafür, dass unsere Kunden reibungslos mit ihrer IT arbeiten können – von der Betreuung bestehender Systeme bis hin zur Entwicklung eigener Softwarelösungen.
+
+Für den direkten und persönlichen Kontakt mit unseren Kunden suchen wir **dich** – einen IT-affinen, kommunikationsstarken und lösungsorientierten **Quereinsteiger (m/w/d)** für den **1st Level Support**.
+
+**Deine Aufgaben**
+
+**Direkter Ansprechpartner für unsere Kunden:** Du beantwortest Anfragen per Telefon, E-Mail und Ticketsystem und unterstützt sie bei IT-Problemen im **1st Level Support**.
+
+**Fehleranalyse & Lösungsfindung:** Du hilfst bei Hard- und Softwarefragen und sorgst für eine schnelle und pragmatische Lösung.
+
+**Dokumentation:** Du hältst gelöste Anfragen in unserem Ticketsystem fest, damit alle den Überblick behalten.
+
+**Weiterleitung komplexer Fälle:** Falls eine Lösung nicht direkt möglich ist, gibst du das Problem an den passenden Kollegen weiter.
+
+**Kundenkontakt auf Augenhöhe:** Durch deine freundliche und lösungsorientierte Art trägst du dazu bei, dass sich unsere Kunden gut betreut fühlen.
+
+**Dein Profil**
+
+**Du bist IT-affin:** Du hast eine Begeisterung für Technik und möchtest dein Wissen in der Praxis anwenden – eine klassische IT-Ausbildung ist **kein Muss**!
+
+**Erste IT-Kenntnisse:** Erfahrungen mit Windows-Systemen, Netzwerken, Apple-Geräten oder IT-Support sind von Vorteil, aber kein Muss – wir bringen dir alles bei.
+
+**Kommunikationsstärke:** Du kannst technische Themen verständlich und freundlich erklären.
+
+**Lösungsorientiertes Denken:** Du bleibst auch bei kniffligen IT-Fragen ruhig und suchst nach praktikablen Lösungen.
+
+**Eigeninitiative & Teamgeist:** Du arbeitest selbstständig, hast aber auch Spaß daran, mit Kollegen zusammenzuarbeiten.
+
+**Das bieten wir dir**
+
+**Quereinstieg mit Perspektive:** Wir arbeiten dich intensiv ein und helfen dir, dich fachlich weiterzuentwickeln.
+
+**Abwechslungsreiche Aufgaben:** Kein starrer Support-Alltag – du hast direkten Kontakt zu unseren Kunden und kannst viel mitgestalten.
+
+**Flexibilität:** Wir bieten dir Homeoffice-Möglichkeiten und eine gute Work-Life-Balance.
+
+**Persönliches Arbeitsumfeld:** Du arbeitest in einem Umfeld, in dem direkte Kommunikation und kurze Entscheidungswege wichtig sind.
+
+**Branchennahe IT:** Du lernst die spannende Welt der Systemgastronomie kennen und bist mittendrin statt nur dabei.
+
+**Bereit für deinen IT-Karriere-Start?**
+
+Dann freuen wir uns auf deine **Bewerbung**!
+
+**Sende uns deine Unterlagen per E-Mail an** alexander.lang@ddipo.de
+
+Art der Stelle: Vollzeit
+
+Leistungen:
+
+* Homeoffice-Möglichkeit
+
+Arbeitsort: Zum Teil im Homeoffice in Kitzingen",,https://de.indeed.com/cmp/Ddipo-Gmbh-1,,,,,,,,,,,,
+in-f37d6e963f5a5292,indeed,https://de.indeed.com/viewjob?jk=f37d6e963f5a5292,https://netways.de/jobs/,Apprenticeship as an IT Specialist for Application Development (m/f/d),NETWAYS GmbH,"Nürnberg, BY, Germany",2026-09-22,,,,,,,False,,,,jobs@netways.de,"**Apprenticeship as an IT Specialist for Application Development (m/f/d)**
+  
+
+**Apprenticeship Program for 2027, starting September 1, 2027**
+
+Are you interested in IT, programming, and modern technologies? Do you want to do more than just watch—do you want to develop software yourself and work on real projects? Then start your apprenticeship as an IT Specialist for Application Development (m/f/d) at Icinga! With us, you'll be part of a dedicated development team right from the start and learn step by step how professional software is created. Together with experienced developers, you'll work on exciting projects, learn about modern technologies, and develop solutions that people actually use. Whether you already have some programming experience or are simply highly motivated—we'll help you develop your skills and find your place in the IT world.
+
+#### **About Icinga:**
+
+Icinga GmbH is the developer of one of the best-known open-source systems for IT infrastructure monitoring. Our customers use Icinga to monitor their data centers and hybrid clouds around the world—including DATEV, ING-DiBa, and Deutsche Telekom IT, as well as banks, insurance companies, and automakers from Europe, the U.S., and Asia. What began as a community project in the early years has grown into a company that still operates without investors today: Our code is open source, anyone can contribute to its development, and that is exactly what makes Icinga so adaptable. This is how our customers ensure the smooth operation of their IT infrastructure.
+
+#### **Your Responsibilities & Your Scope of Work**
+
+* Contributing to the development of modern open-source products
+* Use of various programming languages, such as PHP, C++, or Go
+* Working with modern technologies and current development environments
+* Participation in internal and public training courses for professional and personal development
+* Work on a variety of projects—from smaller tasks to solutions for large companies
+* Work with the development team to define your personal focus—tailored to your strengths and interests
+
+#### **Ideally, you should have the following**
+
+* Interest in IT, software development, and new technologies
+* Motivation to learn new things and continue to grow
+* Team spirit and a reliable work ethic
+* First Experiences with Programming
+
+#### **Here's why you should start your apprenticeship with us**
+
+* A diverse training program that offers insights into many different subject areas—this will help you discover where your strengths lie and allow you to develop your skills in a targeted way
+* You'll take on responsibility early on and will be able to manage your own projects
+* Your instructors will guide you every step of the way and support you as you grow.
+* We provide training with the goal of expanding our team in the long term—with real opportunities for your future
+* Your satisfaction and well-being are important to us—that's why we create an environment where you feel comfortable and can thrive
+
+Curious? On our website, you can learn more about NETWAYS and ICINGA, our customers, and what to expect as an apprentice with us. On the team page, you'll also get a first impression of who you'd be working with in the future.
+
+If you're interested in growing with us and learning about the world of software development, your contact person, **Blerim Sheqa**, looks forward to receiving your application! Please send us your application materials (cover letter, resume, transcripts, references) to jobs@netways.de",,https://de.indeed.com/cmp/Netways-Gmbh,,,,,,,,,,,,
+in-badacf46ebf33061,indeed,https://de.indeed.com/viewjob?jk=badacf46ebf33061,https://nlx.cloud/karriere/stellenangebote/it-system-engineer-cloud/,IT System Engineer Cloud,netlogix GmbH & Co. KG,"Nürnberg, BY, Germany",2026-09-22,"parttime, fulltime",,,,,,False,,,,karriere@netlogix.de,"* all genders
+* Nürnberg
+* Homeoffice oder Büro
+* Festanstellung
+* + Vollzeit oder Teilzeit
+
+Bei nlx.cloud betreiben wir Cloudplattformen für mittelständische Kunden und sind Vorreiter in diesem dynamischen Feld. Als Teil unseres Teams wirst du die Zukunft mitgestalten und innovative Lösungen entwickeln, die Unternehmen dabei unterstützen, ihre Ziele zu erreichen. Wenn du dich mit Skalierbarkeit, Sicherheit und Automatisierung von IT-Infrastrukturen auseinandersetzen willst, bist du bei uns genau richtig.
+
+**Wir suchen einen** 
+**IT System Engineer Cloud - VMware Datacenter Virtualization** 
+**(all genders) in Nürnberg**
+--------------------------------------------------------------------------------------------------------------------
+
+Du suchst nach einer neuen Herausforderung, um dein Know-How im Bereich VMware Datacenter Virtualization in einem dynamischen Umfeld auszuleben? Dann freuen wir uns darauf, dich kennenzulernen, denn wir sind auf der Suche nach jemandem wie dir, der unsere spannende Position als IT Systems Engineer Cloud ausfüllen wird. Hier bekommst du die Möglichkeit, deine Expertise in der Cloud-Technologie weiterzuentwickeln und aktiv an der Gestaltung unserer fortschrittlichen IT-Infrastruktur mitzuwirken.
+
+### **Das sind deine täglichen Tasks**
+
+* **Betrieb und Weiterentwicklung:** Du verwaltest und optimierst eine anspruchsvolle VMware vSphere Infrastruktur unter Einsatz relevanter VMware vSphere Produkte wie ESXi, vCenter, Cloud Director, vSAN und NSX.
+* **Optimiere:** Du kümmerst dich um die Wartung der Server- und Speichersysteme, einschließlich unserer Backuplösungen mit VEEAM, sowie um die Pflege der Infrastrukturkomponenten.
+* **Fehlerbehebung und Monitoring:** Du analysierst Störungen und behebst Fehler im Virtualisierungsumfeld, indem du Monitoringsysteme wie Prometheus einsetzt.
+* **Automatisiere:** Bringe aktiv deine Expertise bei der Automatisierung und Überwachung unserer Systemlandschaften ein.
+* **Unterstützung beim Capacity Management:** Gemeinsam mit unserem Team unterstützt du das Capacity Management, indem du Prognosen über den zukünftigen Ressourcenbedarf erstellst. Auf diese Weise tragen wir dazu bei, unsere Ressourcen optimal zu nutzen und für zukünftige Anforderungen gerüstet zu sein.
+* **Nutzung gängiger Tools:** Du nutzt täglich bewährte Tools wie Jira, Confluence und Netbox, um deine Arbeit effektiv zu erledigen und zur nahtlosen Kommunikation und Zusammenarbeit in unserem Team beizutragen.
+
+### **Diese Fähigkeiten bringst du mit**
+
+* **Erfahrung:** Du bringst eine beeindruckende Expertise im Aufbau und der Verwaltung umfangreicher virtueller Infrastrukturen mit VMware mit. Außerdem hast du schonmal als versierter IT-Professional den Second-Level-Support übernommen und Kundenanfragen bearbeitet.
+* **Leidenschaft:** Deine Begeisterung gilt der Automatisierung von umfangreichen IT-Umgebungen, um Prozesse auf höchstem Niveau zu optimieren.
+* **Teamplayer:** Du integrierst dich nahtlos in unser dynamisches Umfeld und trägst aktiv zu einer kollegialen Atmosphäre bei, denn die menschliche Komponente im Team sind dir genauso wichtig wie uns.
+* **Hands on Mentalität:** Mit deiner Selbstständigkeit, Flexibilität und kreativen Herangehensweise trägst du maßgeblich zur Installation, zum Betrieb und Support unserer Systeme bei. Darüber hinaus übernimmst du die wichtige Aufgabe der Dokumentation technischer Sachverhalte.
+* **Background:** Du verfügst über eine abgeschlossene Ausbildung als Fachinformatiker (m/w/d) für Systemintegration oder ein erfolgreich abgeschlossenes Hochschulstudium in Informatik oder verwandten Fachrichtungen.
+  
+
+*Wir sind immer auf der Suche nach außergewöhnlichen Talenten wie dir!*
+  
+*Auch wenn diese Stelle derzeit nicht akut zu besetzen ist, laden wir dich herzlich ein, Teil unseres Talentpools zu werden. Schick uns gerne deine vollständigen Bewerbungsunterlagen zu - wir melden uns bei dir, sobald sich eine spannende Gelegenheit ergibt, die perfekt zu dir passt.*
+
+**Deine Benefits bei uns**
+--------------------------
+
+* **Laptop & Arbeitsausstattung nach Wahl, wird alle 3 Jahre erneuert**
+* **Individueller Weiterbildungsplan für deine Hard Skills**
+* **Persönlichkeitstrainings für deine Soft Skills mit Coach**
+* **Agiles Arbeiten & aktive Mitgestaltung der Unternehmensziele mit OKR-Methodik**
+* **Mitarbeiter werben Mitarbeiter – Bonus**
+* **Mitarbeiterrabatte bei vielen Marken**
+* **Jobrad & Parkplatz direkt auf dem Firmengelände**
+
+* **Möglichkeit einer Betrieblichen Altersvorsorge**
+* **Vertrauensarbeitszeit, flexible Arbeitszeit & Remote Arbeit**
+* **Dusche im Office**
+* **3 Kind krank-Tage bei voller Lohnfortzahlung**
+* **Bürohunde sind herzlich willkommen**
+* **Ergonomische Arbeitsplätze – denn Gesundheit geht vor**
+* **Team-Events, Meetups, Bier um 4, Workshops & Familienfeiern**
+* **Kicker, Billard, Videospiele & Dart: Einfach, weil es ab und zu Spaß macht**
+
+**Du passt perfekt zu uns?**
+----------------------------
+
+Dann sende uns deine Bewerbungsunterlagen und überzeuge uns, dass du genau der Teil der Familie bist, auf den wir gewartet haben.
+  
+Gerne kannst uns eine E-Mail an karriere@netlogix.de senden.",Internet And Software,https://de.indeed.com/cmp/Netlogix-Gmbh-&-Co.-Kg-3,https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/ae1a3df86483978f242644aeb7332bec,http://netlogix.de,"Neuwieder Straße 10
+90411 Nürnberg",51 to 200,,,,,,,,
+in-2d674146a007398b,indeed,https://de.indeed.com/viewjob?jk=2d674146a007398b,https://netways.de/jobs/,Apprenticeship as an IT Specialist for Application Development (m/f/d) starting in September 2027,NETWAYS GmbH,"Nürnberg, BY, Germany",2026-09-22,,,,,,,False,,,,jobs@netways.de,"**Apprenticeship as an IT Specialist for Application Development (m/f/d) starting in September 2027**
+  
+
+Join our Managed Services Development Team! Learn how our cloud platform works and help develop it further alongside your colleagues. Together with other trainees, you’ll learn something new every day, and our trainers will help you discover and develop your potential. That way, you'll be fully prepared for everything that lies ahead after you complete your training.
+
+**About NETWAYS**
+
+Since 1995, we have been helping companies build, operate, and further develop their IT infrastructures using the right open-source technologies—with a focus on monitoring and system management. We also offer training, host our own conferences such as OSMC, and provide managed services from our data center in Nuremberg. What drives us: software with open-source code and a community where knowledge is shared rather than kept under lock and key. We have over 95 employees from more than 17 different countries—working in flat hierarchies with plenty of room to contribute their own ideas.
+
+**Your Responsibilities & Your Scope of Work**
+
+* Working with the latest open-source products in the data center and cloud sectors
+* Insights into Programming Techniques, Installations, Configurations, and System Maintenance
+* Become familiar with all backend and frontend components of our environment
+* Education in a modern language environment using the latest technologies
+* Participation in and support for our internal and public training sessions
+* Attending international open-source conferences
+
+**Ideally, you should have:**
+
+* Interest in IT, software development, and new technologies
+* Motivation to learn new things and continue to grow
+* Team spirit and a reliable work ethic
+* First Experiences with Programming
+
+**Here's why you should start your apprenticeship with us:**
+
+* A diverse training program that offers insights into many different subject areas—this will help you discover where your strengths lie and allow you to develop your skills in a targeted way
+* You'll take on responsibility early on and will be able to manage your own projects
+* Your instructors will guide you every step of the way and support you as you grow.
+* We provide training with the goal of expanding our team in the long term—with real opportunities for your future
+* Your satisfaction and well-being are important to us—that's why we create an environment where you feel comfortable and can thrive
+
+Curious? On our website, you can learn more about NETWAYS, our customers, and what to expect as an apprentice with us. On the team page, you'll also get a first impression of who you'd be working with in the future.
+
+**If you're interested in growing with us and joining our consulting team, your contact person, Sebastian Saemann, looks forward to receiving your application! Please send us your application materials (cover letter, resume, transcripts, references) to** **jobs@netways.de**",,https://de.indeed.com/cmp/Netways-Gmbh,,,,,,,,,,,,
+in-4694be247512b859,indeed,https://de.indeed.com/viewjob?jk=4694be247512b859,https://umweltbank.helixjobs.com/_/jobad?prj=100097P431,IT-Systemadministrator (m/w/d),UmweltBank,"Nürnberg, BY, Germany",2026-09-21,fulltime,,,,,,True,,,,,"*„Ein guter Systemadministrator ist wie ein unsichtbarer Held – man bemerkt ihn erst, wenn er fehlt.“- Christian Maurer, Teamleitung*
+
+**Das macht deinen Job als IT-Systemadministrator (m/w/d) aus:**
+
+* **Anwendersupport**: Du betreust unsere Anwender im 1st und 2nd Level Support – telefonisch sowie über das Ticketsystem. Dazu gehören die Anlage von Usern, die Vergabe von Berechtigungen, die Softwareverteilung sowie die Unterstützung bei allgemeinen IT-Fragen.
+* **Bereitstellung der Hardware**: Du installierst und konfigurierst Laptops und weitere Hardware und bist für deren Ausgabe an unsere Anwender verantwortlich.
+* **Inventarisierung**: Du pflegst und aktualisierst unsere Inventardatenbank und stellst eine vollständige und aktuelle Dokumentation des Hardwarebestands sicher.
+* **Clientadministration**: Du dokumentierst Tickets und Vorgänge einschließlich der jeweiligen Lösungen, administrierst unsere Clientsysteme und stellst deren laufenden Betrieb sicher.
+* **Rollenvergabe**: Du administrierst unser Active Directory sowie Entra ID und stellst eine zuverlässige Benutzer- und Berechtigungsverwaltung sicher.
+* **Verteilermanagement**: Du administrierst Richtlinien, Benutzer und Gruppen in unseren Verzeichnis- und Maildiensten sowie unsere Mail-Verteiler.
+* **Mobile Endgeräte**: Du übernimmst die Administration und Betreuung unserer mobilen Endgeräte.
+
+**Das bringst du mit:**
+
+* Eine fachspezifische, abgeschlossene Ausbildung zum Fachinformatiker Systemintegration oder eine vergleichbare Qualifikation
+* Erfahrungen als IT-Administrator/in für Microsoft-Systeme wie Windows 11/10, M365, Active Directory, Entra ID, Teams, MS Exchange, Jira.
+* Erfahrung im Support Service Desk von Vorteil
+* Zertifizierungen im Microsoft Umfeld, ITIL sowie Erfahrungen in der Finanzbranche sind von Vorteil
+* Erste Erfahrungen in der Zusammenarbeit mit externen Dienstleistern und deren Koordination von Vorteil
+* Ausgeprägte Problemlösungsfähigkeiten, Serviceorientierung und analytisches Denken
+* Eigenverantwortliche und strukturierte Arbeitsweise sowie Teamfähigkeit und Freude an agilem Arbeiten
+* Gute Kommunikationsfähigkeit gegenüber internen und externen Stakeholdern
+* Sehr gute Deutsch- und gute Englischkenntnisse in Wort und Schrift
+
+**Über die UmweltBank**
+
+Die UmweltBank ist mehr als Banking. Wir verbinden moderne Finanzlösungen mit echter Verantwortung. Wir finanzieren nach strengen Kriterien Projekte in den Bereichen erneuerbare Energien sowie Immobilien. Damit stehen wir für unsere Vision „Gemeinsam schaffen wir eine lebenswerte Welt für uns und kommende Generationen“ ein. Dieser Gedanke zieht sich durch alle Bereiche unserer Bank – von Kreditvergaben über unser Girokonto bis hin zu unseren hauseigenen ETFs. Wir leben damit ein modernes Verständnis von Wirtschaftlichkeit: Wirkung und Ertrag gehen Hand in Hand.
+
+Ob am Schreibtisch oder im persönlichen Gespräch mit unseren Kund:innen – wir leben unsere Werte jeden Tag. So gestalten wir gemeinsam eine lebenswerte Zukunft.
+
+Mehr dazu wie wir unser Geschäftsmodell verstehen unter Nachhaltigkeit | UmweltBank",,https://de.indeed.com/cmp/Umweltbank,https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/3ad2924bbf1cf947b4899569b55a4cac,https://www.umweltbank.de/,Nuremberg,201 to 500,Decline to state,Wir sind Deutschlands grüne Bank.,,,4.7,3.0,,

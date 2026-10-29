@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://apps.apple.com",
+    "name": "FEED Mobile - App Store",
+    "snippet": "Instantly connect and enhance your associate experience to see your schedule, news , deals and links to applications you use every day, at your fingertips.",
+    "host_name": "apps.apple.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://play.google.com/store/apps/details?id=com.kroger.feed&hl=en_US",
+    "name": "FEED Mobile - Apps on Google Play",
+    "snippet": "Now you can access FEED from anywhere. Instantly connect and enhance your associate experience to see your schedule, news , deals and links to applications ... Read more",
+    "host_name": "play.google.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.ndda.nd.gov",
+    "name": "Feed Program",
+    "snippet": "The North Dakota Department of Agriculture regulates the registration, distribution, sale, and labeling of commercial feed and pet food products through the ... Read more",
+    "host_name": "www.ndda.nd.gov",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.dukeupress.edu",
+    "name": "A Mass Conspiracy to Feed People: Food Not Bombs and",
+    "snippet": "by DB Giles · Cited by 70 — In A Mass Conspiracy to Feed People, David Boarder Giles explores the ways in which capitalism simultaneously manufactures waste and scarcity. Read more",
+    "host_name": "www.dukeupress.edu",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.linkedin.com",
+    "name": "LinkedIn page",
+    "snippet": "No information is available for this page. Learn why",
+    "host_name": "www.linkedin.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

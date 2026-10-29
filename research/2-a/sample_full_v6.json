@@ -1,0 +1,4366 @@
+{
+  "ergebnisliste" : [ {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Fachinformatiker Systemintegration (m/w/d)",
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-09"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "ort" : "Erlangen",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.582388591,
+      "laenge" : 10.984861843
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-09"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-09",
+    "aenderungsdatum" : "2026-10-09T11:12:08.123",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "ncsolution GmbH",
+    "arbeitgeberKundennummerHash" : "gsO7t7eBkL2HP0Elw6X6zhsx9TdaaSylUmdbMpywsks=",
+    "referenznummer" : "10001-1003832993-S",
+    "entfernung" : 0,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Fachinformatiker*in für Systemintegration",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "90429",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.4562524,
+      "laenge" : 11.0441458
+    } ],
+    "homeofficemoeglich" : false,
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-01"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-01",
+    "aenderungsdatum" : "2026-10-01T07:02:45.743",
+    "externeURL" : "https://studyflix.de/ausbildung/angebote/504499?l=904299&utm_source=ba",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Bechtle AG",
+    "referenznummer" : "16818-100904299-S",
+    "entfernung" : 15,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Fachinformatiker - Systemintegration (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-03"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "91301",
+        "ort" : "Forchheim, Oberfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.716545,
+      "laenge" : 11.0696479
+    } ],
+    "homeofficemoeglich" : false,
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-28"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-28",
+    "aenderungsdatum" : "2026-10-03T07:30:53.260",
+    "externeURL" : "https://www.online-stellenmarkt.net/job-hrba/234974818/",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "fomedia GmbH",
+    "referenznummer" : "11289-234974818-S",
+    "entfernung" : 16,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Fachinformatiker*in für Systemintegration",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "90329",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.4348451,
+      "laenge" : 11.1009042
+    } ],
+    "homeofficemoeglich" : false,
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-29"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-29",
+    "aenderungsdatum" : "2026-09-29T07:03:37.238",
+    "externeURL" : "https://studyflix.de/ausbildung/angebote/491407?l=867381&utm_source=ba",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "DATEV",
+    "referenznummer" : "16818-100867381-S",
+    "entfernung" : 18,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Fachinformatiker für Systemintegration (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-05"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "In der Büg",
+        "hausnummer" : "22",
+        "plz" : "91330",
+        "ort" : "Eggolsheim",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.750974,
+      "laenge" : 11.050443
+    } ],
+    "homeofficemoeglich" : false,
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-08-25"
+    },
+    "datumErsteVeroeffentlichung" : "2026-08-25",
+    "aenderungsdatum" : "2026-10-05T10:56:53.632",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "cfn - care for networks GmbH & Co. KG",
+    "arbeitgeberKundennummerHash" : "gU6Md7dk9n5SsTEF_X444evxJFHg525tTveM_nR-Ej0=",
+    "referenznummer" : "10000-1207641123-S",
+    "entfernung" : 19,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Fachinformatiker/in Systemintegration",
+    "quereinstiegGeeignet" : true,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : true,
+    "arbeitszeitTeilzeitVormittag" : true,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-25"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "UNBEFRISTET",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Pilotystr.",
+        "hausnummer" : "1",
+        "plz" : "90408",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.4593931,
+      "laenge" : 11.0772237
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2025-08-15"
+    },
+    "datumErsteVeroeffentlichung" : "2025-07-15",
+    "aenderungsdatum" : "2026-09-25T14:40:24.200",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "OPAL Hard-und Software Consulting GmbH",
+    "arbeitgeberKundennummerHash" : "dtmx51GGcKqRp9tQkRxn65Bca6upAo9Ig2KTu_gi_OI=",
+    "referenznummer" : "10000-1203121061-S",
+    "entfernung" : 15,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Elektroniker - Systemintegration (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-25"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "91052",
+        "ort" : "Erlangen",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.588025827,
+      "laenge" : 11.012343202
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-25"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-25",
+    "aenderungsdatum" : "2026-09-25T17:06:27.295",
+    "hauptberuf" : "Elektroniker/in - Geräte und Systeme",
+    "alternativBeruf1" : "Elektroniker/in - Betriebstechnik",
+    "alternativBeruf2" : "Industrieelektriker/in - Geräte und Systeme",
+    "firma" : "I.K. Hofmann GmbH Niederlassung Nürnberg",
+    "arbeitgeberKundennummerHash" : "2LKkqbrPO088sRH0TAyhdwTlZqkw8-Yr7jJGuF9GzGM=",
+    "referenznummer" : "11868-13877201-S",
+    "entfernung" : 2,
+    "alleBerufe" : [ "Industrieelektriker/in - Geräte und Systeme", "Elektroniker/in - Geräte und Systeme", "Elektroniker/in - Betriebstechnik" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Fachinformatiker Systemintegration (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-04"
+    },
+    "verguetungsangabe" : "JAHRESGEHALT",
+    "artDerVerguetung" : "GEHALTSSPANNE",
+    "gehaltsspanneVon" : 0.01,
+    "gehaltsspanneBis" : 36000.0,
+    "vertragsdauer" : "UNBEFRISTET",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "92318",
+        "ort" : "Neumarkt in der Oberpfalz",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.284319125,
+      "laenge" : 11.478997762
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-04"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-04",
+    "aenderungsdatum" : "2026-10-04T08:43:34.512",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "puro Personaldienstleistung GmbH",
+    "arbeitgeberKundennummerHash" : "MPBvb1SpyZZ7M0jkMNBQ7L2i_1WAoTNpLVQ_jppPtsw=",
+    "referenznummer" : "13669-B4QJPZOZC7TLDT27-S",
+    "entfernung" : 49,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Fachinformatiker/in für Systemintegration (m/w/d)",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-14"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "UNBEFRISTET",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Kirchenweg",
+        "hausnummer" : "1",
+        "plz" : "90556",
+        "ort" : "Cadolzburg",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.469184,
+      "laenge" : 10.846053
+    } ],
+    "homeofficemoeglich" : true,
+    "homeofficetyp" : "NACH_VEREINBARUNG",
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-01"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-01",
+    "aenderungsdatum" : "2026-09-14T14:29:48.851",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "soflinx GmbH",
+    "arbeitgeberKundennummerHash" : "OTdqr1H86ol7qHRQEBI4yaxVAbBDznd-A2Umpf1Fh5c=",
+    "referenznummer" : "10000-1207715458-S",
+    "entfernung" : 16,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Fachinformatiker/in für Systemintegration",
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Voigtländerstr.",
+        "hausnummer" : "7/9",
+        "plz" : "90489",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.456791,
+      "laenge" : 11.1030975
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-02"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-01",
+    "aenderungsdatum" : "2026-09-02T09:52:43.980",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Bayerisches Landesamt für Steuern Dienststelle Nürnberg",
+    "arbeitgeberKundennummerHash" : "bXhCioWSKOXKdbbXSdW0FW7UWjvftF-iDIQ5avPYBXw=",
+    "referenznummer" : "10001-1003634250-S",
+    "entfernung" : 16,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Fachinformatiker/in Systemintegration (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-14"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Bräunleinsberg",
+        "hausnummer" : "8",
+        "plz" : "91242",
+        "ort" : "Ottensoos",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.5175785,
+      "laenge" : 11.3324374
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2025-02-03"
+    },
+    "datumErsteVeroeffentlichung" : "2025-02-03",
+    "aenderungsdatum" : "2026-09-14T09:02:27.479",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Prögel networks GmbH",
+    "arbeitgeberKundennummerHash" : "0R-r7KdoiRyO1qO5D8ACchdvBIUQhUrQNBPSeOIQyvU=",
+    "referenznummer" : "10000-1201491767-S",
+    "entfernung" : 26,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "FACHINFORMATIKER FÜR SYSTEMINTEGRATION (M/W/D)",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-30"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Adalbert-Pilipp-Str.",
+        "hausnummer" : "21",
+        "plz" : "91522",
+        "ort" : "Ansbach, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.296888,
+      "laenge" : 10.591587
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-08-18"
+    },
+    "datumErsteVeroeffentlichung" : "2026-08-18",
+    "aenderungsdatum" : "2026-09-30T14:42:37.803",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Adalbert Pilipp GmbHZV",
+    "arbeitgeberKundennummerHash" : "-QgwE5ucQVade_Zaii4vvmtDMbTZa55Yeiq79xjaTac=",
+    "referenznummer" : "10001-1003557953-S",
+    "entfernung" : 43,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Fachinformatiker/in - Systemintegration (m/w/d) 2027",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "91085",
+        "ort" : "Weisendorf",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.6277111,
+      "laenge" : 10.8207424
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-11"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-11",
+    "aenderungsdatum" : "2026-09-11T14:55:14.992",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Peter Brehm GmbH",
+    "arbeitgeberKundennummerHash" : "QyOUVeCerI5lmUjqNpUdDlpjlpfOMd-WC0A2cV-RNhM=",
+    "referenznummer" : "10000-1207873099-S",
+    "entfernung" : 13,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Fachinformatiker für Systemintegration (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-28"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "96149",
+        "ort" : "Breitengüßbach",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.9689118,
+      "laenge" : 10.9193484
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-28"
+    },
+    "datumErsteVeroeffentlichung" : "2026-07-20",
+    "aenderungsdatum" : "2026-09-28T10:41:46.792",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Mero TSK International GmbH & Co. KG",
+    "arbeitgeberKundennummerHash" : "lZ0SCb72sAaknE3OSO93yaxnPkuPo06ZyJUN0yOTn-Y=",
+    "referenznummer" : "10000-1207252250-S",
+    "entfernung" : 43,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung Fachinformatiker für Systemintegration (m/w/d) 2027",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Minderleinsmühle",
+        "hausnummer" : "1",
+        "plz" : "91077",
+        "ort" : "Neunkirchen am Brand",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.588704,
+      "laenge" : 11.1447315
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-08"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-08",
+    "aenderungsdatum" : "2026-10-08T11:34:44.520",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Minderleinsmühle GmbH & Co. KG Andreas Hubmann",
+    "arbeitgeberKundennummerHash" : "LIHrPd44_PbIvUYBZfiLpcccPgcqB1PmskY5ynPnJsU=",
+    "referenznummer" : "10000-1208215797-S",
+    "entfernung" : 11,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Fachinformatiker*in (m/w/d) - Systemintegration",
+    "quereinstiegGeeignet" : true,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-06"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "UNBEFRISTET",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Laubenweg",
+        "hausnummer" : "27",
+        "plz" : "90765",
+        "ort" : "Fürth, Bayern",
+        "ortsteil" : "Nordstadt",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.4858184,
+      "laenge" : 10.9979057
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-01"
+    },
+    "datumErsteVeroeffentlichung" : "2025-02-12",
+    "aenderungsdatum" : "2026-10-06T12:28:54.020",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "alternativBeruf1" : "IT-Kundenbetreuer/in",
+    "alternativBeruf2" : "Second-Level-Supporter/in",
+    "firma" : "Zakel Computer GmbH",
+    "arbeitgeberKundennummerHash" : "uZI_64RG7yLCavEaEiNtqmHGKNDF9Q6Qe0nLJTWE_cc=",
+    "referenznummer" : "10001-1001138327-S",
+    "entfernung" : 11,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration", "IT-Kundenbetreuer/in", "Second-Level-Supporter/in" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung zum Fachinformatiker (m/w/d) für Systemintegration",
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "AUSBILDUNGSVERGUETUNG_NACH_JAHREN",
+    "ausbildungsverguetungJahr1" : 1201,
+    "ausbildungsverguetungJahr2" : 1275,
+    "ausbildungsverguetungJahr3" : 1346,
+    "ausbildungsverguetungJahr4" : 1442,
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Nürnberger Str.",
+        "hausnummer" : "12",
+        "plz" : "90537",
+        "ort" : "Feucht",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.380516,
+      "laenge" : 11.213019
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-09"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-09",
+    "aenderungsdatum" : "2026-10-09T13:02:46.125",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "EXCELLA GmbH & Co. KG",
+    "arbeitgeberKundennummerHash" : "6f0zFQRAAazk7tAOU6ELgGDFrkb-1NtgR4asgGkUDXM=",
+    "referenznummer" : "10001-1003834641-S",
+    "entfernung" : 28,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Fachinformatiker Systemintegration (m/w/d)",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : true,
+    "arbeitszeitTeilzeitVormittag" : true,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : false,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-25"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Tucholskystr.",
+        "hausnummer" : "2",
+        "plz" : "90471",
+        "ort" : "Nürnberg, Mittelfranken",
+        "ortsteil" : "Langwasser",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.4139353,
+      "laenge" : 11.1354593
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-25"
+    },
+    "datumErsteVeroeffentlichung" : "2025-09-18",
+    "aenderungsdatum" : "2026-09-25T08:10:39.096",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "alternativBeruf1" : "Netzwerkadministrator/in",
+    "alternativBeruf2" : "IT-Administrator/in",
+    "firma" : "Riedel & Pfeuffer GmbH Haus der Gesundheit",
+    "arbeitgeberKundennummerHash" : "WJnJt2YVq_3pgZUni2Tl8CFCEsheo6Yug8Z8mxevOvs=",
+    "referenznummer" : "10001-1001866790-S",
+    "entfernung" : 22,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration", "Netzwerkadministrator/in", "IT-Administrator/in" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Auszubildende Fachinformatiker (w/m/d) Systemintegration bei KommunalBIT (2027)",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "ort" : "Erlangen",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.5823886,
+      "laenge" : 10.9848618
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-07-23"
+    },
+    "datumErsteVeroeffentlichung" : "2026-07-23",
+    "aenderungsdatum" : "2026-10-06T19:09:21.224",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Kommunal BIT Anstalt d. öffentl. Rechts",
+    "arbeitgeberKundennummerHash" : "dL-42OsDqtnJZVzMbAOY0XhOno10dBPE5YDgEZzORVM=",
+    "referenznummer" : "10000-1207296280-S",
+    "entfernung" : 0,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung Fachinformatiker Systemintegration (m/w/d)",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Sigmundstr.",
+        "hausnummer" : "135",
+        "plz" : "90431",
+        "ort" : "Nürnberg, Mittelfranken",
+        "ortsteil" : "Höfen",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.44987,
+      "laenge" : 11.013354
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-08-17"
+    },
+    "datumErsteVeroeffentlichung" : "2026-08-17",
+    "aenderungsdatum" : "2026-08-17T10:17:07.387",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Hetzner Online GmbH",
+    "arbeitgeberKundennummerHash" : "-uOEJCfym6IPgT8m5mZN5xIbdyTdcO_lPYuFqKtpJSQ=",
+    "referenznummer" : "10000-1207511059-S",
+    "entfernung" : 15,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Fachinformatiker/in - Systemintegration (m/w/d) 2026",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Heisterstr.",
+        "hausnummer" : "4a",
+        "plz" : "90441",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.4279599,
+      "laenge" : 11.0612476
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2025-10-31"
+    },
+    "datumErsteVeroeffentlichung" : "2025-10-31",
+    "aenderungsdatum" : "2025-11-21T10:36:54.024",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Feser, Graf & Co. Automobil Holding GmbH",
+    "arbeitgeberKundennummerHash" : "PRNxL0935HkSJRRLjloiX3TW2jL-5gLWrQ4Q1Rkh_qU=",
+    "referenznummer" : "10000-1204317616-S",
+    "entfernung" : 18,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung Fachinformatiker*in für Systemintegration (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "90441",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.4260968,
+      "laenge" : 11.056897
+    } ],
+    "homeofficemoeglich" : false,
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-08-11"
+    },
+    "datumErsteVeroeffentlichung" : "2026-07-12",
+    "aenderungsdatum" : "2026-08-13T14:57:34.054",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Deutsche Telekom AG",
+    "arbeitgeberKundennummerHash" : "8OXOy1m7_RVbLa7WOdBTIlXVfDi1gjMClhqu0-l4F18=",
+    "referenznummer" : "12444-312562-TA-S",
+    "entfernung" : 18,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung Fachinformatiker Systemintegration (m/w/d)",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Deutschherrnstr.",
+        "hausnummer" : "15-19",
+        "plz" : "90429",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.453893,
+      "laenge" : 11.0640015
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-08-27"
+    },
+    "datumErsteVeroeffentlichung" : "2026-08-27",
+    "aenderungsdatum" : "2026-08-27T15:21:10.488",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Core-Backbone GmbH",
+    "arbeitgeberKundennummerHash" : "OGLhbtpHpbd4wdZ9MzZ1lk0yFP9JTdLtuRcf6xIBBfM=",
+    "referenznummer" : "10000-1207682632-S",
+    "entfernung" : 15,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung Fachinformatiker Systemintegration (m/w/d)",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.4348452,
+      "laenge" : 11.1009041
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2025-09-12"
+    },
+    "datumErsteVeroeffentlichung" : "2025-09-12",
+    "aenderungsdatum" : "2026-08-19T08:43:07.731",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Hetzner Online GmbH",
+    "arbeitgeberKundennummerHash" : "-uOEJCfym6IPgT8m5mZN5xIbdyTdcO_lPYuFqKtpJSQ=",
+    "referenznummer" : "10000-1203747895-S",
+    "entfernung" : 18,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Fachinformatiker für Systemintegration  (m/w/d)",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-23"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "UNBEFRISTET",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Luitpoldstr.",
+        "hausnummer" : "46",
+        "plz" : "96052",
+        "ort" : "Bamberg",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.8992057,
+      "laenge" : 10.8968705
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-04-28"
+    },
+    "datumErsteVeroeffentlichung" : "2026-04-28",
+    "aenderungsdatum" : "2026-09-23T16:36:46.606",
+    "hauptberuf" : "IT-System-Kaufmann/-frau",
+    "alternativBeruf1" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Actief Personalmanagement GmbH Bamberg",
+    "arbeitgeberKundennummerHash" : "3vFViJoUVK0QBkfzNsae5uj6vMRCCLFD0I8JrP0nLSo=",
+    "referenznummer" : "10001-1002987833-S",
+    "entfernung" : 36,
+    "alleBerufe" : [ "IT-System-Kaufmann/-frau", "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung Fachinformatik Systemintegration",
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "AUSBILDUNGSVERGUETUNG_NACH_JAHREN",
+    "ausbildungsverguetungJahr1" : 1455,
+    "ausbildungsverguetungJahr2" : 1532,
+    "ausbildungsverguetungJahr3" : 1620,
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Ostendstr.",
+        "hausnummer" : "100",
+        "plz" : "90482",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.455031458000065,
+      "laenge" : 11.117406741000082
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-04"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-04",
+    "aenderungsdatum" : "2026-09-04T14:56:23.704",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "NÜRNBERGER Lebensversicherung AG",
+    "arbeitgeberKundennummerHash" : "962TTrIB4g0L8_OHU4evDWNuKRiHxtsqAzm0ezK-Sh8=",
+    "referenznummer" : "10001-1003657634-S",
+    "entfernung" : 17,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Fachinformatiker Fachrichtung Systemintegration (m/w/d) 2027",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Kirschenleite",
+        "hausnummer" : "17",
+        "plz" : "91220",
+        "ort" : "Schnaittach",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.567635,
+      "laenge" : 11.3358105
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-07-17"
+    },
+    "datumErsteVeroeffentlichung" : "2026-07-17",
+    "aenderungsdatum" : "2026-07-17T13:07:17.544",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "CLEVER Systemtechnik GmbH",
+    "arbeitgeberKundennummerHash" : "g5J7daGpAQdktr5IxKpkCeaqvQvUwwiKfmLFKA1iOqw=",
+    "referenznummer" : "10000-1207234367-S",
+    "entfernung" : 25,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung (m/w/d) zum Fachinformatiker- Fachrichtung Systemintegration 2027",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Sportplatzstr.",
+        "hausnummer" : "30",
+        "plz" : "90765",
+        "ort" : "Fürth, Bayern",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.505346,
+      "laenge" : 11.0139165
+    } ],
+    "homeofficemoeglich" : false,
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-07-13"
+    },
+    "datumErsteVeroeffentlichung" : "2026-07-13",
+    "aenderungsdatum" : "2026-07-13T13:47:20.485",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "PHOENIX International Holdings GmbH",
+    "arbeitgeberKundennummerHash" : "OKt004HuPSI0kNHjiJHgTsC2UX5NpV-xzObv24LTkU8=",
+    "referenznummer" : "10000-1207172430-S",
+    "entfernung" : 9,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Fachinformatiker Systemintegration (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-09"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "UNBEFRISTET",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "90403",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.454499329,
+      "laenge" : 11.079175953
+    } ],
+    "chiffrenummer" : "2381346c-5a74-40bf-995f-418e85",
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-09"
+    },
+    "datumErsteVeroeffentlichung" : "2026-08-24",
+    "aenderungsdatum" : "2026-10-09T08:39:02.330",
+    "hauptberuf" : "IT-Administrator/in",
+    "firma" : "DIS AG NÜRNBERG",
+    "arbeitgeberKundennummerHash" : "VNRk45zCNY_n2sDLf4eV9G3_K66Xc86ubSRK-INvRcw=",
+    "referenznummer" : "12633-2381346c_JB5228182-S",
+    "entfernung" : 16,
+    "alleBerufe" : [ "IT-Administrator/in" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung Fachinformatiker Systemintegration (m/w/d)",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-17"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Deutschherrnstr.",
+        "hausnummer" : "15-19",
+        "plz" : "90429",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.453893,
+      "laenge" : 11.0640015
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-06-15"
+    },
+    "datumErsteVeroeffentlichung" : "2026-06-15",
+    "aenderungsdatum" : "2026-09-17T13:28:59.982",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Core-Backbone GmbH",
+    "arbeitgeberKundennummerHash" : "OGLhbtpHpbd4wdZ9MzZ1lk0yFP9JTdLtuRcf6xIBBfM=",
+    "referenznummer" : "10000-1206832469-S",
+    "entfernung" : 15,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung zum Fachinformatiker für Systemintegration (m/w/d)",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Mausendorfer Weg",
+        "hausnummer" : "11",
+        "plz" : "91560",
+        "ort" : "Heilsbronn",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.328253,
+      "laenge" : 10.79289
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-08-07"
+    },
+    "datumErsteVeroeffentlichung" : "2026-07-17",
+    "aenderungsdatum" : "2026-09-01T07:06:32.751",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Hans Kupfer u Sohn GmbH & Co. KG",
+    "arbeitgeberKundennummerHash" : "glPT_loDOLAPnpPxfFsKtX0qXpUGPuhlPAOQMb2_o1w=",
+    "referenznummer" : "10001-1003403137-S",
+    "entfernung" : 32,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Auszubildende zum Fachinformatiker (w/m/d) - Systemintegration (Nürnberg)",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Regensburger Str. 104",
+        "plz" : "90478",
+        "ort" : "Nürnberg, Mittelfranken",
+        "ortsteil" : "Zerzabelshof",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.4411299,
+      "laenge" : 11.1065201
+    } ],
+    "chiffrenummer" : "Referenzcode: 2026_E_003018",
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-30"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-30",
+    "aenderungsdatum" : "2026-09-30T17:36:25.035",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Bundesagentur für Arbeit IT-Systemhaus Nürnberg",
+    "arbeitgeberKundennummerHash" : "HPhtKS15HSAU16gX2RDt2XIbdoWwZ7QZ8Grn2IZRA0Y=",
+    "referenznummer" : "10001-1003785884-S",
+    "entfernung" : 18,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung - Fachinformatiker Systemintegration (m/w/d)",
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "AUSBILDUNGSVERGUETUNG_NACH_JAHREN",
+    "ausbildungsverguetungJahr1" : 1303,
+    "ausbildungsverguetungJahr2" : 1365,
+    "ausbildungsverguetungJahr3" : 1444,
+    "ausbildungsverguetungJahr4" : 1497,
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Beethovenstr.",
+        "hausnummer" : "14",
+        "plz" : "91257",
+        "ort" : "Pegnitz",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.757418,
+      "laenge" : 11.5534305
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-10"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-10",
+    "aenderungsdatum" : "2026-09-10T14:47:15.071",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Groeneveld-BEKA GmbH",
+    "arbeitgeberKundennummerHash" : "eqCTh3v3MgiDAEsWPRgaqAw8z9LZV2NvKg2ptmC5CGY=",
+    "referenznummer" : "10001-1003687495-S",
+    "entfernung" : 45,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung zum Fachinformatiker (m/w/d) Systemintegration 2027",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Fronmüllerstr.",
+        "hausnummer" : "71",
+        "plz" : "90763",
+        "ort" : "Fürth, Bayern",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.459095,
+      "laenge" : 11.0017575
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-28"
+    },
+    "datumErsteVeroeffentlichung" : "2026-07-16",
+    "aenderungsdatum" : "2026-09-18T14:43:31.801",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "SOFTWERK GMBH",
+    "arbeitgeberKundennummerHash" : "edM6v8_vEpAG07BOoowg_oyoIeAjm3esJop8eyicUVw=",
+    "referenznummer" : "10000-1207213060-S",
+    "entfernung" : 14,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung Fachinformatiker/in für Systemintegration (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Schmiedpeunt 1",
+        "plz" : "91257",
+        "ort" : "Pegnitz",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.754961,
+      "laenge" : 11.5355295
+    } ],
+    "homeofficemoeglich" : false,
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-26"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-26",
+    "aenderungsdatum" : "2026-09-26T08:03:32.945",
+    "externeURL" : "https://www.ausbildung.de/stellen/ausbildung-fachinformatiker-in-fuer-systemintegration-m-w-d-bei-vfm-versicherungs-finanzmanagement-in-pegnitz-35c42eaa-1b45-4a9d-909d-2d1b3125417d/?utm_campaign=kooperation&utm_medium=jobfeed&utm_source=bundesagentur",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "vfm Versicherungs- & Finanzmanagement",
+    "referenznummer" : "14756-06b11cbdab0e4d03-S",
+    "entfernung" : 44,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung Fachinformatiker*in für Systemintegration (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "96052",
+        "ort" : "Bamberg",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.9116712,
+      "laenge" : 10.8949233
+    } ],
+    "homeofficemoeglich" : false,
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-08-11"
+    },
+    "datumErsteVeroeffentlichung" : "2026-07-12",
+    "aenderungsdatum" : "2026-08-13T14:57:31.553",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Deutsche Telekom AG",
+    "arbeitgeberKundennummerHash" : "8OXOy1m7_RVbLa7WOdBTIlXVfDi1gjMClhqu0-l4F18=",
+    "referenznummer" : "12444-312566-TA-S",
+    "entfernung" : 37,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Elektroingenieur (m/w/d) Systemintegration",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : false,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "UNBEFRISTET",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "90402",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.4508466,
+      "laenge" : 11.0896213
+    } ],
+    "homeofficemoeglich" : false,
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-01"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-01",
+    "aenderungsdatum" : "2026-10-01T08:02:57.458",
+    "externeURL" : "https://bewerbung.jobs/ac756440-a841-4873-8337-64f3a24f36c0?source=00119ac8-3a27-4400-916b-5fea8eefc2a6",
+    "hauptberuf" : "Elektrotechnikermeister/in/Bachelor Professional im Elektrotechniker-Handwerk",
+    "firma" : "MCA Engineering GmbH",
+    "referenznummer" : "14751-351A739-S",
+    "entfernung" : 16,
+    "alleBerufe" : [ "Elektrotechnikermeister/in/Bachelor Professional im Elektrotechniker-Handwerk" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung zum Fachinformatiker für Systemintegration (m/w/d) September 2027",
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Deutschherrnstr.",
+        "hausnummer" : "15-19",
+        "plz" : "90429",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.453893,
+      "laenge" : 11.0640015
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-07"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-07",
+    "aenderungsdatum" : "2026-10-07T09:05:22.891",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "NETWAYS Professional Services GmbH",
+    "arbeitgeberKundennummerHash" : "FLIkTAlg5BCIAkl4OtTSKNFKD1IclaS0ilT2swFseeA=",
+    "referenznummer" : "10001-1003814192-S",
+    "entfernung" : 15,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Fachinformatiker Systemintegration (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : false,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "90443",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.439479,
+      "laenge" : 11.0688731
+    } ],
+    "homeofficemoeglich" : false,
+    "chiffrenummer" : "284189",
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-03"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-03",
+    "aenderungsdatum" : "2026-10-01T07:08:38.769",
+    "externeURL" : "https://www.get-in-it.de/jobsuche/p284189?utm_source=arbeitsagentur&utm_medium=organic&utm_campaign=launch-basic",
+    "hauptberuf" : "IT-Systemadministrator/in",
+    "firma" : "ANG",
+    "referenznummer" : "13644-284189-S",
+    "entfernung" : 17,
+    "alleBerufe" : [ "IT-Systemadministrator/in" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Fachinformatiker/-in für Systemintegration (m/w/d) 2027",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Karl-Spitta-Str.",
+        "hausnummer" : "2",
+        "plz" : "92318",
+        "ort" : "Neumarkt in der Oberpfalz",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.2698925,
+      "laenge" : 11.4549207
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-05-21"
+    },
+    "datumErsteVeroeffentlichung" : "2026-05-21",
+    "aenderungsdatum" : "2026-05-21T11:08:45.339",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "TR Plast GmbH",
+    "arbeitgeberKundennummerHash" : "2pT5lFUV91cpoc3D7MWiV6owuHa6Zm0_fVj-mEvA2MA=",
+    "referenznummer" : "10001-1003107157-S",
+    "entfernung" : 48,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung zum Fachinformatiker - Systemintegration (m/w/d)",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Hardtstr.",
+        "hausnummer" : "16",
+        "plz" : "91522",
+        "ort" : "Ansbach, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.2641381,
+      "laenge" : 10.5958271
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-06-16"
+    },
+    "datumErsteVeroeffentlichung" : "2026-06-16",
+    "aenderungsdatum" : "2026-10-01T08:12:27.204",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "senetics healthcare group GmbH & Co. KG",
+    "arbeitgeberKundennummerHash" : "RJ5X0lJ7ilQUVknEREpR6UKaxSa-SAIPPLnbFD4Mkic=",
+    "referenznummer" : "10000-1206852855-S",
+    "entfernung" : 45,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung Fachinformatiker Systemintegration (m/w/d) in Nürnberg",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Thurn-und-Taxis-Str.",
+        "hausnummer" : "10",
+        "plz" : "90411",
+        "ort" : "Nürnberg, Mittelfranken",
+        "ortsteil" : "Schafhof",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.488336,
+      "laenge" : 11.1277125
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-24"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-24",
+    "aenderungsdatum" : "2026-09-24T14:17:38.861",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "New Elements GmbH",
+    "arbeitgeberKundennummerHash" : "j6h8xmrDGhgd8hMX6Ut5IpQEXef1DMsHjAan97GorYA=",
+    "referenznummer" : "10000-1208020910-S",
+    "entfernung" : 15,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Fachinformatiker/-in Systemintegration (m/w/d) 2027",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "AUSBILDUNGSVERGUETUNG_NACH_JAHREN",
+    "ausbildungsverguetungJahr1" : 1303.0,
+    "ausbildungsverguetungJahr2" : 1365.0,
+    "ausbildungsverguetungJahr3" : 1444.5,
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Hans-Dehn-Str.",
+        "hausnummer" : "1",
+        "plz" : "92318",
+        "ort" : "Neumarkt in der Oberpfalz",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.2678075,
+      "laenge" : 11.4614833
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-06-25"
+    },
+    "datumErsteVeroeffentlichung" : "2026-06-25",
+    "aenderungsdatum" : "2026-09-04T08:36:20.002",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "DEHN SE",
+    "arbeitgeberKundennummerHash" : "ogPn2SdA78xosB_dafCD_vHZV5TxNFI4jCFA54-a7ds=",
+    "referenznummer" : "10001-1003285121-S",
+    "entfernung" : 49,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung zum Fachinformatiker (m/w/d) für Systemintegration 2027",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Seb-Fackelmann-Str",
+        "hausnummer" : "6",
+        "plz" : "91217",
+        "ort" : "Hersbruck",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.5065081,
+      "laenge" : 11.429204
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-07"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-07",
+    "aenderungsdatum" : "2026-10-07T16:07:25.049",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Fackelmann GmbH & Co.KG",
+    "arbeitgeberKundennummerHash" : "yOUcLQwnrO90Wk6W86eNzpUQeI41Z21vTYuq635ve54=",
+    "referenznummer" : "10001-1003817402-S",
+    "entfernung" : 33,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Fachinformatiker für Systemintegration (m/w/d) 2027",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Werner-von-Siemens-Str.",
+        "hausnummer" : "17",
+        "plz" : "91522",
+        "ort" : "Ansbach, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.258791,
+      "laenge" : 10.61352
+    } ],
+    "homeofficemoeglich" : false,
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-08-13"
+    },
+    "datumErsteVeroeffentlichung" : "2026-08-13",
+    "aenderungsdatum" : "2026-08-13T10:37:24.488",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Kaiser Bürotechnik GmbH & Co. KG",
+    "arbeitgeberKundennummerHash" : "AdFDLwNGLithAwUJJAted8fmD_DRkwgYJuXZAMnexrw=",
+    "referenznummer" : "10000-1207526856-S",
+    "entfernung" : 45,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Fachinformatiker/-in für Systemintegration (m/w/d) 2027",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : false,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "AUSBILDUNGSVERGUETUNG_NACH_JAHREN",
+    "ausbildungsverguetungJahr1" : 1275.0,
+    "ausbildungsverguetungJahr2" : 1330.0,
+    "ausbildungsverguetungJahr3" : 1430.0,
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Ingolstädter Str.",
+        "hausnummer" : "51",
+        "plz" : "92318",
+        "ort" : "Neumarkt in der Oberpfalz",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.263327,
+      "laenge" : 11.4612795
+    } ],
+    "chiffrenummer" : "f779",
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-08-20"
+    },
+    "datumErsteVeroeffentlichung" : "2026-08-20",
+    "aenderungsdatum" : "2026-08-25T13:30:58.507",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Pfleiderer Deutschland GmbH",
+    "arbeitgeberKundennummerHash" : "VXuJmLCqJA-o6XQ714w8xMcqjj1biObWWbgFs9oz_Lg=",
+    "referenznummer" : "10000-1207608473-S",
+    "entfernung" : 49,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung zum/zur Fachinformatiker/-in für Systemintegration 2027 (m/w/d)",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Mittelbügweg",
+        "hausnummer" : "90",
+        "plz" : "90571",
+        "ort" : "Schwaig bei Nürnberg",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.479111,
+      "laenge" : 11.218599
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-07-20"
+    },
+    "datumErsteVeroeffentlichung" : "2026-07-20",
+    "aenderungsdatum" : "2026-10-08T09:57:43.193",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Hahn GmbH",
+    "arbeitgeberKundennummerHash" : "HSQkYrwiNg6_nNPigjRn2B33rc3THkoSbDe83pqhSHs=",
+    "referenznummer" : "10000-1207240435-S",
+    "entfernung" : 20,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung Fachinformatiker - Fachrichtung Systemintegration (m/w/d) 2027",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "91487",
+        "ort" : "Vestenbergsgreuth",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.6968087,
+      "laenge" : 10.6586802
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-03"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-03",
+    "aenderungsdatum" : "2026-09-03T14:25:56.923",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Martin Bauer GmbH & Co. KG",
+    "arbeitgeberKundennummerHash" : "uoKihlkoE_S6ROfIdF96SdIuKUrU9SGL1gDW0QZ17_k=",
+    "referenznummer" : "10000-1207774157-S",
+    "entfernung" : 27,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung zum Fachinformatiker für Systemintegration (w/m/d) ab September 2027",
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Deutschherrnstr.",
+        "hausnummer" : "15-19",
+        "plz" : "90429",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.453893,
+      "laenge" : 11.0640015
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-07"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-07",
+    "aenderungsdatum" : "2026-10-07T09:13:22.481",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "NETWAYS Managed Services GmbH",
+    "arbeitgeberKundennummerHash" : "obRhPbctVoZcFNC9TOGLgjuQ9f-98q3IyJITkJ9150A=",
+    "referenznummer" : "10001-1003814303-S",
+    "entfernung" : 15,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung 2027: Fachinformatiker - Systemintegration (m/w/d)",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Kronacher Str.",
+        "hausnummer" : "92",
+        "plz" : "96052",
+        "ort" : "Bamberg",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.922703,
+      "laenge" : 10.9023165
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-02"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-02",
+    "aenderungsdatum" : "2026-09-02T14:43:30.846",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "tegos GmbH",
+    "arbeitgeberKundennummerHash" : "_fSYXBH9hyg0XcAL0xHf50wEk73r2I8Ir5MzJTWiBvE=",
+    "referenznummer" : "10000-1207757626-S",
+    "entfernung" : 38,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung 2027 - Fachinformatiker/in - Systemintegration",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Industriestr.",
+        "hausnummer" : "2",
+        "plz" : "96146",
+        "ort" : "Altendorf, Kreis Bamberg",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.795758,
+      "laenge" : 11.014362
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-08-27"
+    },
+    "datumErsteVeroeffentlichung" : "2026-08-27",
+    "aenderungsdatum" : "2026-08-27T14:17:43.168",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Lohmann-koester GmbH & Co.KG",
+    "arbeitgeberKundennummerHash" : "YTD4PpISyXP7iiRGebVBSdfQ25zLFsiVMFaCUD2n1Ls=",
+    "referenznummer" : "10000-1207681382-S",
+    "entfernung" : 24,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung zum Fachinformatiker für Systemintegration (m/w/d) – September 2027",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "AUSBILDUNGSVERGUETUNG_NACH_JAHREN",
+    "ausbildungsverguetungJahr1" : 1050.0,
+    "ausbildungsverguetungJahr2" : 1150.0,
+    "ausbildungsverguetungJahr3" : 1250.0,
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Südwestpark",
+        "hausnummer" : "43",
+        "plz" : "90449",
+        "ort" : "Nürnberg, Mittelfranken",
+        "ortsteil" : "Gebersdorf",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.428603,
+      "laenge" : 11.0224755
+    } ],
+    "homeofficemoeglich" : true,
+    "homeofficetyp" : "NACH_VEREINBARUNG",
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-16"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-16",
+    "aenderungsdatum" : "2026-09-17T10:17:33.494",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Proact Deutschland GmbH",
+    "arbeitgeberKundennummerHash" : "SSi8P4lme9XsaH8H6675SgcacSPCRFXQjFpSZOY4PLE=",
+    "referenznummer" : "10001-1003717380-S",
+    "entfernung" : 17,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung zum Fachinformatiker für Systemintegration (w/m/d) (Start 2027)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Bechtle Platz",
+        "hausnummer" : "1",
+        "plz" : "90429",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.4562524,
+      "laenge" : 11.0441458
+    } ],
+    "homeofficemoeglich" : false,
+    "chiffrenummer" : "83372",
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-23"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-23",
+    "aenderungsdatum" : "2026-10-06T17:57:27.467",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Bechtle AG",
+    "arbeitgeberKundennummerHash" : "EJiA5e5WtbxLv88mkzJRHL_DgiNrKSJ6r1oaRKtlSIU=",
+    "referenznummer" : "15086-44458742-922-S",
+    "entfernung" : 15,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung Fachinformatiker (m/w/d) Fachrichtung Systemintegration 2027",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Schmiedpeunt",
+        "hausnummer" : "1",
+        "plz" : "91257",
+        "ort" : "Pegnitz",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.754961,
+      "laenge" : 11.5355295
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-05"
+    },
+    "datumErsteVeroeffentlichung" : "2026-08-21",
+    "aenderungsdatum" : "2026-10-05T09:29:26.578",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "vfm Versicherungs- & Finanzmanagement GmbH",
+    "arbeitgeberKundennummerHash" : "M5r0b8cvvdeaRPXLpRH-XeDTvtRmfz_H5KAq4CWnLAo=",
+    "referenznummer" : "10000-1207616911-S",
+    "entfernung" : 44,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung - Fachinformatiker Systemintegration (m/w/d), Werk 1",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-05"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Rudolf-Diesel-Str. 10",
+        "plz" : "91413",
+        "ort" : "Neustadt an der Aisch",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.577931,
+      "laenge" : 10.6368435
+    } ],
+    "homeofficemoeglich" : false,
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-05"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-05",
+    "aenderungsdatum" : "2026-10-05T12:32:11.719",
+    "externeURL" : "https://www.finest-jobs.com/stellenanzeige/Ausbildung-Fachinformatiker-Systemintegration-D-1081037?cp=BA",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Onlineprinters GmbH",
+    "referenznummer" : "12811-2350352-S",
+    "entfernung" : 25,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung Fachinformatiker/in - Systemintegration 2027",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Ebinger Hauptstr.",
+        "hausnummer" : "22",
+        "plz" : "96179",
+        "ort" : "Rattelsdorf, Oberfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 50.0125504,
+      "laenge" : 10.8969521
+    } ],
+    "chiffrenummer" : "2",
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-06-11"
+    },
+    "datumErsteVeroeffentlichung" : "2025-05-19",
+    "aenderungsdatum" : "2026-08-13T11:22:57.421",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "thefi.com GmbH & Co KG    ",
+    "arbeitgeberKundennummerHash" : "05AmegOZwnWV2XqRM7VJ4MlAPXi41GIJtkUXUwDDcxg=",
+    "referenznummer" : "10000-1202535680-S",
+    "entfernung" : 48,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung 2027: Fachinformatiker:in Systemintegration (m/w/d)",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Alte Seilerei",
+        "hausnummer" : "11",
+        "plz" : "96052",
+        "ort" : "Bamberg",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.902606,
+      "laenge" : 10.883142
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-07-20"
+    },
+    "datumErsteVeroeffentlichung" : "2026-07-20",
+    "aenderungsdatum" : "2026-09-25T14:42:14.638",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "whitelisthackers GmbH",
+    "arbeitgeberKundennummerHash" : "IafYJvvGfhBh3845RseFzUpjlInloHYiOBCeIRmc4Xw=",
+    "referenznummer" : "10000-1207245858-S",
+    "entfernung" : 36,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung Fachinformatiker/in – Systemintegration und Digitale Vernetzung (m/w/d)",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-07"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Oberer Bergauerplatz",
+        "hausnummer" : "1",
+        "plz" : "90402",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.4519968,
+      "laenge" : 11.0801224
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-08-05"
+    },
+    "datumErsteVeroeffentlichung" : "2025-12-10",
+    "aenderungsdatum" : "2026-09-07T10:54:31.131",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Opto-Copy GmbH Panagiotis Tsarnouchas",
+    "arbeitgeberKundennummerHash" : "UeT0GmsDDuuv3niPInjh_2jM5ouDQI6f6-h7H2PMY3E=",
+    "referenznummer" : "10001-1002282019-S",
+    "entfernung" : 16,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung 2027 / Fachinformatiker (m/w/d) für Systemintegration",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "AUSBILDUNGSVERGUETUNG_NACH_JAHREN",
+    "ausbildungsverguetungJahr1" : 1443.0,
+    "ausbildungsverguetungJahr2" : 1504.0,
+    "ausbildungsverguetungJahr3" : 1576.0,
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "ort" : "Ansbach, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.2907721,
+      "laenge" : 10.5617593
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-02-19"
+    },
+    "datumErsteVeroeffentlichung" : "2026-02-19",
+    "aenderungsdatum" : "2026-06-10T13:14:58.880",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "VR-Bank Mittelfranken Mitte eG",
+    "arbeitgeberKundennummerHash" : "s3CGes1QL6nBhm3HJzWw5aCnVfTtNlNh1vnJv4X4MD0=",
+    "referenznummer" : "10000-1205561431-S",
+    "entfernung" : 45,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung Fachinformatiker (m/w/d) Fachrichtung Systemintegration 2026",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Schmiedpeunt",
+        "hausnummer" : "1",
+        "plz" : "91257",
+        "ort" : "Pegnitz",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.754961,
+      "laenge" : 11.5355295
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-08-25"
+    },
+    "datumErsteVeroeffentlichung" : "2026-03-25",
+    "aenderungsdatum" : "2026-08-25T09:39:35.270",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "vfm Versicherungs- & Finanzmanagement GmbH",
+    "arbeitgeberKundennummerHash" : "M5r0b8cvvdeaRPXLpRH-XeDTvtRmfz_H5KAq4CWnLAo=",
+    "referenznummer" : "10000-1205963301-S",
+    "entfernung" : 44,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Fachinformatiker/-in - Systemintegration (m/w/d) 2027 (gerne Umschüler)",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "AUSBILDUNGSVERGUETUNG_NACH_JAHREN",
+    "ausbildungsverguetungJahr1" : 1150.0,
+    "ausbildungsverguetungJahr2" : 1202.0,
+    "ausbildungsverguetungJahr3" : 1266.0,
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "An der Heide",
+        "hausnummer" : "17",
+        "plz" : "92353",
+        "ort" : "Postbauer-Heng",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.277925,
+      "laenge" : 11.339415
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-28"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-28",
+    "aenderungsdatum" : "2026-09-30T10:58:02.842",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Bock 1 GmbH & Co.KG",
+    "arbeitgeberKundennummerHash" : "T36KL9OYUEYhnGfcCLB9oYDKCHDrUs4WnKEAJJSvR48=",
+    "referenznummer" : "10001-1003775626-S",
+    "entfernung" : 42,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung Fachinformatiker Systemintegration (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "90429",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.4562524,
+      "laenge" : 11.0441458
+    } ],
+    "homeofficemoeglich" : false,
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-06-02"
+    },
+    "datumErsteVeroeffentlichung" : "2026-06-02",
+    "aenderungsdatum" : "2026-10-01T07:01:26.048",
+    "externeURL" : "https://www.azubi.de/ausbildungsplatz/12389961?utm_campaign=job&utm_medium=premiumcpc&utm_source=BAG&utm_content=job",
+    "hauptberuf" : "Fachinformatiker/in - Anwendungsentwicklung",
+    "firma" : "Core-Backbone GmbH",
+    "referenznummer" : "13649-12389961AZ-S",
+    "entfernung" : 15,
+    "alleBerufe" : [ "Fachinformatiker/in - Anwendungsentwicklung" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung Fachinformatiker Systemintegration (m/w/d) ab sofort",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-24"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Thurn-und-Taxis-Str.",
+        "hausnummer" : "10",
+        "plz" : "90411",
+        "ort" : "Nürnberg, Mittelfranken",
+        "ortsteil" : "Schafhof",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.488336,
+      "laenge" : 11.1277125
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2025-12-18"
+    },
+    "datumErsteVeroeffentlichung" : "2025-12-18",
+    "aenderungsdatum" : "2026-09-24T14:17:28.771",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "New Elements GmbH",
+    "arbeitgeberKundennummerHash" : "j6h8xmrDGhgd8hMX6Ut5IpQEXef1DMsHjAan97GorYA=",
+    "referenznummer" : "10000-1204908795-S",
+    "entfernung" : 15,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Systemadministrator (m/w/d)",
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-09"
+    },
+    "verguetungsangabe" : "JAHRESGEHALT",
+    "artDerVerguetung" : "GEHALTSSPANNE",
+    "gehaltsspanneVon" : 30000,
+    "gehaltsspanneBis" : 42000,
+    "vertragsdauer" : "UNBEFRISTET",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "ort" : "Erlangen",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.58238864200007,
+      "laenge" : 10.984861719000037
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-09"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-09",
+    "aenderungsdatum" : "2026-10-09T12:34:15.589",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "ANG GmbH",
+    "arbeitgeberKundennummerHash" : "80alU6Yhge4-BWuOWzzvpDA9Vn4DkG3wAqz0ih6j7G4=",
+    "referenznummer" : "10001-1003834249-S",
+    "entfernung" : 0,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung Fachinformatiker/in - Systemintegration (m/w/d) ab 2027",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Mailheimer Str.",
+        "hausnummer" : "2",
+        "plz" : "91438",
+        "ort" : "Bad Windsheim",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.5076367,
+      "laenge" : 10.4403313
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-03-27"
+    },
+    "datumErsteVeroeffentlichung" : "2025-04-24",
+    "aenderungsdatum" : "2026-04-30T13:32:40.157",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "NECOTEKGmbH Netzwerk und Computertechnik",
+    "arbeitgeberKundennummerHash" : "QLyqt977OUEjqkC7wyGYyM-rvYPnyE36POYopAgSH_0=",
+    "referenznummer" : "10000-1202309231-S",
+    "entfernung" : 40,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung zum/r Fachinformatiker/in Systemintegration (m/w/d) 2027",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Industriestr.",
+        "hausnummer" : "21",
+        "plz" : "91275",
+        "ort" : "Auerbach in der Oberpfalz",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.685445,
+      "laenge" : 11.6283375
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-08-07"
+    },
+    "datumErsteVeroeffentlichung" : "2026-08-07",
+    "aenderungsdatum" : "2026-08-07T15:55:48.108",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "HEIM & HAUS Handel GmbH",
+    "arbeitgeberKundennummerHash" : "frK31ONLBMzbkkEQZpwbrlFO7cfRax1QZr2DXC9f6EQ=",
+    "referenznummer" : "10000-1207474121-S",
+    "entfernung" : 48,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung - 2027 -  Fachinformatiker für Systemintegration (w/m/d) beim Klinikum Forchheim",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Krankenhausstr.",
+        "hausnummer" : "10",
+        "plz" : "91301",
+        "ort" : "Forchheim, Oberfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.71384,
+      "laenge" : 11.079252
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-08-20"
+    },
+    "datumErsteVeroeffentlichung" : "2026-08-20",
+    "aenderungsdatum" : "2026-09-11T12:31:14.382",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Klinikum Forchheim - Fränkische Schweiz gGmbH",
+    "arbeitgeberKundennummerHash" : "ygPp3wQnVYY92ybdhW2vZqYqL4vBt7cCmrx3QzDQoSw=",
+    "referenznummer" : "10000-1207597922-S",
+    "entfernung" : 16,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Fachinformatiker für Systemintegration (m/w/d) - Start: 01.09.2027",
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "AUSBILDUNGSVERGUETUNG_NACH_JAHREN",
+    "ausbildungsverguetungJahr1" : 1250,
+    "ausbildungsverguetungJahr2" : 1300,
+    "ausbildungsverguetungJahr3" : 1350,
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Willi-Memmert-Str.",
+        "hausnummer" : "90 - 96",
+        "plz" : "91186",
+        "ort" : "Büchenbach, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.272129,
+      "laenge" : 11.03697
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-07-30"
+    },
+    "datumErsteVeroeffentlichung" : "2026-07-17",
+    "aenderungsdatum" : "2026-07-30T08:53:08.559",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Memmert GmbH & Co KG",
+    "arbeitgeberKundennummerHash" : "TjmeCmpMJtBM3nYnhjYi2wgoVgYCXC8JbU63h8JTfto=",
+    "referenznummer" : "10001-1003405576-S",
+    "entfernung" : 35,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Support 2nd Level (m/w/d)",
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-09"
+    },
+    "verguetungsangabe" : "JAHRESGEHALT",
+    "artDerVerguetung" : "GEHALTSSPANNE",
+    "gehaltsspanneVon" : 30000,
+    "gehaltsspanneBis" : 42000,
+    "vertragsdauer" : "UNBEFRISTET",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "ort" : "Erlangen",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.58238864200007,
+      "laenge" : 10.984861719000037
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-09"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-09",
+    "aenderungsdatum" : "2026-10-09T12:45:43.403",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "ANG GmbH",
+    "arbeitgeberKundennummerHash" : "80alU6Yhge4-BWuOWzzvpDA9Vn4DkG3wAqz0ih6j7G4=",
+    "referenznummer" : "10001-1003834441-S",
+    "entfernung" : 0,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Auszubildenden als Fachinformatiker/-in (m/w/d) Fachrichtung Systemintegration 01.09.2027",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Pleinfelder Str.",
+        "hausnummer" : "64",
+        "plz" : "91166",
+        "ort" : "Georgensgmünd",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.177854,
+      "laenge" : 11.0104065
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-06-30"
+    },
+    "datumErsteVeroeffentlichung" : "2026-06-30",
+    "aenderungsdatum" : "2026-09-25T10:04:54.255",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Lux Projektmanagement GmbH & Co KG",
+    "arbeitgeberKundennummerHash" : "3tz3zIVmMj2ZCqt5ErCQdJs3uLWwWXv48QJIHTsZ1Yg=",
+    "referenznummer" : "10000-1207003374-S",
+    "entfernung" : 45,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Netzwerk-Spezialist / Fachinformatiker für Systemintegration (m/w/d) für IT-Schulungs-Haus",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-24"
+    },
+    "verguetungsangabe" : "JAHRESGEHALT",
+    "artDerVerguetung" : "GEHALTSSPANNE",
+    "gehaltsspanneVon" : 33000.0,
+    "gehaltsspanneBis" : 38000.0,
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Thurn-und-Taxis-Str.",
+        "hausnummer" : "10",
+        "plz" : "90411",
+        "ort" : "Nürnberg, Mittelfranken",
+        "ortsteil" : "Schafhof",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.488336,
+      "laenge" : 11.1277125
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-06-15"
+    },
+    "datumErsteVeroeffentlichung" : "2026-06-15",
+    "aenderungsdatum" : "2026-09-24T13:16:15.552",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "alternativBeruf1" : "Netzwerkadministrator/in",
+    "firma" : "New Elements GmbH",
+    "arbeitgeberKundennummerHash" : "j6h8xmrDGhgd8hMX6Ut5IpQEXef1DMsHjAan97GorYA=",
+    "referenznummer" : "10001-1003228507-S",
+    "entfernung" : 15,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration", "Netzwerkadministrator/in" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung Fachinformatiker/in - Systemintegration (m/w/d) Mercedes-Benz Bamberg 2027",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Kärntenstraße 1",
+        "plz" : "96052",
+        "ort" : "Bamberg",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.909419,
+      "laenge" : 10.9038915
+    } ],
+    "homeofficemoeglich" : false,
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-24"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-24",
+    "aenderungsdatum" : "2026-09-25T10:23:42.722",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Auto-Scholz GmbH & Co. KG",
+    "arbeitgeberKundennummerHash" : "Rse94bQZlO5tm4B8bRwDBZXvpXd_tvr73pnFK258YlM=",
+    "referenznummer" : "14476-0006d700bbf001-S",
+    "entfernung" : 37,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Ausbildung zum Fachinformatiker für Systemintegration (m/w/d) ab 01.09.2027",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Fritz-Berger-Str.",
+        "hausnummer" : "1",
+        "plz" : "92318",
+        "ort" : "Neumarkt in der Oberpfalz",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.305537,
+      "laenge" : 11.483874
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-23"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-23",
+    "aenderungsdatum" : "2026-09-23T07:45:46.651",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Fritz Berger GmbH",
+    "arbeitgeberKundennummerHash" : "rSajltSGSDCqUVc8oeFy-5QjLsEDACldhTj3i5e1qqQ=",
+    "referenznummer" : "10000-1207995131-S",
+    "entfernung" : 47,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Systembetreuer (w/m/d) für Rechenzentrumsbetrieb",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-22"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "91052",
+        "ort" : "Erlangen",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.5880258,
+      "laenge" : 11.0123432
+    } ],
+    "homeofficemoeglich" : false,
+    "chiffrenummer" : "511979-de",
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-21"
+    },
+    "datumErsteVeroeffentlichung" : "2026-08-26",
+    "aenderungsdatum" : "2026-09-21T17:23:13.005",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Siemens AG",
+    "arbeitgeberKundennummerHash" : "kMMXym6Me35oUXiBe4YhZNnhsbt6t_xzJPx6op9mbzw=",
+    "referenznummer" : "12465-1597815-2-S",
+    "entfernung" : 2,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "IT-Spezialist Netzwerk & Connectivity (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-02"
+    },
+    "verguetungsangabe" : "JAHRESGEHALT",
+    "artDerVerguetung" : "GEHALTSSPANNE",
+    "gehaltsspanneVon" : 45000.0,
+    "gehaltsspanneBis" : 55000.0,
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "91058",
+        "ort" : "Erlangen",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.560916966,
+      "laenge" : 11.007647684
+    } ],
+    "chiffrenummer" : "VA88-97988-NLST",
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-02"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-02",
+    "aenderungsdatum" : "2026-10-02T07:40:02.081",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "FERCHAU GmbH Niederlassung Nürnberg City",
+    "arbeitgeberKundennummerHash" : "f8YEtBAj-_ETt6iYf5hfIgSCF736qU4ybf5ZOo6f7pQ=",
+    "referenznummer" : "12265-516301_JB5262829-S",
+    "entfernung" : 3,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "IT-Administrator (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-12-14"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "91058",
+        "ort" : "Erlangen",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.560916966,
+      "laenge" : 11.007647684
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-09"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-09",
+    "aenderungsdatum" : "2026-10-09T17:04:27.082",
+    "hauptberuf" : "IT-Systemadministrator/in",
+    "alternativBeruf1" : "Fachinformatiker/in - Systemintegration",
+    "alternativBeruf2" : "Informatiker/in",
+    "firma" : "Helmi Göttler Private Arbeitsvermittlung",
+    "arbeitgeberKundennummerHash" : "wggJNhW6eBrnSIBaducxjT17bO3yTVSxgJ_rBsCEPjg=",
+    "referenznummer" : "12291-13892382-S",
+    "entfernung" : 3,
+    "alleBerufe" : [ "IT-Systemadministrator/in", "Fachinformatiker/in - Systemintegration", "Informatiker/in" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Teamleiter IT-Systemintegration (m/w/d) – Verantwortung, Technik und Kundenführung",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-10"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "UNBEFRISTET",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Sprottauer Str.",
+        "hausnummer" : "23-25",
+        "plz" : "90475",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.416201,
+      "laenge" : 11.1650445
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-08-19"
+    },
+    "datumErsteVeroeffentlichung" : "2026-08-19",
+    "aenderungsdatum" : "2026-09-10T07:31:42.378",
+    "hauptberuf" : "IT-Administrator/in",
+    "alternativBeruf1" : "IT-Kundenbetreuer/in",
+    "alternativBeruf2" : "Anwendungssystemadministrator/in",
+    "firma" : "Ata Solutions GmbH",
+    "arbeitgeberKundennummerHash" : "NMNDEFfvkMJE3UlHB68vjIC-B6cnwgEizXlvpQeFRKs=",
+    "referenznummer" : "10001-1003569842-S",
+    "entfernung" : 22,
+    "alleBerufe" : [ "Anwendungssystemadministrator/in", "IT-Administrator/in", "IT-Kundenbetreuer/in" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "IT-Koordinatorin/ IT-Koordinator (m/w/d)",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : true,
+    "arbeitszeitTeilzeitVormittag" : true,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-09"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "UNBEFRISTET",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Hinterm Bahnhof",
+        "hausnummer" : "35",
+        "plz" : "90459",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.444236,
+      "laenge" : 11.084823
+    } ],
+    "chiffrenummer" : "Süd-2026-035",
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-08"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-08",
+    "aenderungsdatum" : "2026-10-09T10:03:34.858",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Bundeseisenbahnvermögen Dienststelle Süd",
+    "arbeitgeberKundennummerHash" : "P52ZT0AD-1IBNx5fK5ZgJWy4sjp4vugGqoyUhgslsxA=",
+    "referenznummer" : "10001-1003828455-S",
+    "entfernung" : 17,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "stellenangebotsTitel" : "Fachinformatiker*in",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "90329",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.4348451,
+      "laenge" : 11.1009042
+    } ],
+    "homeofficemoeglich" : false,
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-09"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-09",
+    "aenderungsdatum" : "2026-10-09T07:01:25.538",
+    "externeURL" : "https://studyflix.de/ausbildung/angebote/491405?l=867379&utm_source=ba",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "DATEV",
+    "referenznummer" : "16818-100867379-S",
+    "entfernung" : 18,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "IT-Anwendungsbetreuer (m/w/d) Logistik",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-05"
+    },
+    "verguetungsangabe" : "JAHRESGEHALT",
+    "artDerVerguetung" : "GEHALTSSPANNE",
+    "gehaltsspanneVon" : 45000.0,
+    "gehaltsspanneBis" : 50000.0,
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "90411",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.490631694,
+      "laenge" : 11.104084386
+    } ],
+    "chiffrenummer" : "VA97-82290-N",
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-05"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-05",
+    "aenderungsdatum" : "2026-10-05T07:46:40.515",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "FERCHAU GmbH Niederlassung Nürnberg City",
+    "arbeitgeberKundennummerHash" : "f8YEtBAj-_ETt6iYf5hfIgSCF736qU4ybf5ZOo6f7pQ=",
+    "referenznummer" : "12265-490183_JB5264267-S",
+    "entfernung" : 13,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "IT-Spezialist (w/m/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-02"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "UNBEFRISTET",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "91052",
+        "ort" : "Erlangen",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.588025827,
+      "laenge" : 11.012343202
+    } ],
+    "chiffrenummer" : "TR-300879",
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-02"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-02",
+    "aenderungsdatum" : "2026-10-02T18:40:32.278",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "alternativBeruf1" : "Anwendungssystemberater/in",
+    "alternativBeruf2" : "Anwendungssystemadministrator/in",
+    "firma" : "Brunel GmbH NL Mannheim",
+    "arbeitgeberKundennummerHash" : "eGsNVtG5K6jYPNNHqe0gcRwCqbWQeABFI_FbJ_VsZ8g=",
+    "referenznummer" : "12362-TR-300879_624701LS-S",
+    "entfernung" : 2,
+    "alleBerufe" : [ "Anwendungssystemadministrator/in", "Anwendungssystemberater/in", "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Netzwerktechniker (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "UNBEFRISTET",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "90402",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.450846603,
+      "laenge" : 11.089621301
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-01"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-01",
+    "aenderungsdatum" : "2026-10-01T16:09:03.320",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "puro Personaldienstleistung GmbH",
+    "arbeitgeberKundennummerHash" : "MPBvb1SpyZZ7M0jkMNBQ7L2i_1WAoTNpLVQ_jppPtsw=",
+    "referenznummer" : "13669-2AE43M6SJDB3UQKQ-S",
+    "entfernung" : 16,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Junior IT- System Administrator (m/w/d)",
+    "arbeitszeitTeilzeitAbend" : true,
+    "arbeitszeitTeilzeitNachmittag" : true,
+    "arbeitszeitTeilzeitVormittag" : true,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-09"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "UNBEFRISTET",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "90425",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.47595603100007,
+      "laenge" : 11.06000577900005
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-09"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-09",
+    "aenderungsdatum" : "2026-10-09T09:09:27.621",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Neumüller Personalberatung Regina Neumüller e.K.",
+    "arbeitgeberKundennummerHash" : "YXJFHwdHkPMPG5q0ffQdfp8Wg7o6d4uedtTvpb7_X9A=",
+    "referenznummer" : "10001-1003830628-S",
+    "entfernung" : 13,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Mitarbeiter IT-Support | Administration | Projekte (m/w/d)",
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-09"
+    },
+    "verguetungsangabe" : "JAHRESGEHALT",
+    "artDerVerguetung" : "GEHALTSSPANNE",
+    "gehaltsspanneVon" : 34000,
+    "gehaltsspanneBis" : 50000,
+    "vertragsdauer" : "UNBEFRISTET",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.434845143,
+      "laenge" : 11.100904183
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-09"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-09",
+    "aenderungsdatum" : "2026-10-09T09:15:44.173",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "NConsult GmbH",
+    "arbeitgeberKundennummerHash" : "j0aPmLopen8lCLYNYFVQvSNU_Zt6R8pPPsn8NWUkVbA=",
+    "referenznummer" : "10001-1003830762-S",
+    "entfernung" : 18,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Nürnberger Str.",
+        "hausnummer" : "3",
+        "plz" : "91217",
+        "ort" : "Hersbruck",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.50945,
+      "laenge" : 11.42721
+    } ],
+    "homeofficemoeglich" : false,
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-01"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-01",
+    "aenderungsdatum" : "2026-10-01T12:22:46.841",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "ESB IT-Services e.K. Frank Büttner",
+    "arbeitgeberKundennummerHash" : "ookU1q4S-XO1IBWmB8L5DoO0HCXQHLAkxeuMnxiZyuQ=",
+    "referenznummer" : "10000-1208097742-S",
+    "entfernung" : 33,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "IT-Koordinator (m/w/d) mit Verwaltungstätigkeiten in der Kultur- und Öffentlichkeitsarbeit",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : false,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-07"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "91083",
+        "ort" : "Baiersdorf, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.6558211,
+      "laenge" : 11.0414254
+    } ],
+    "homeofficemoeglich" : false,
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-07"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-07",
+    "aenderungsdatum" : "2026-10-07T11:22:07.433",
+    "externeURL" : "https://www.jobware.de/job/063827161?jw_chl_seg=ARBEITSAGENTUR",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Stadt Baiersdorf",
+    "referenznummer" : "12908-063827161-S",
+    "entfernung" : 9,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Onsite Supporter (m/w/d)",
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-09"
+    },
+    "verguetungsangabe" : "JAHRESGEHALT",
+    "artDerVerguetung" : "GEHALTSSPANNE",
+    "gehaltsspanneVon" : 34000,
+    "gehaltsspanneBis" : 48000,
+    "vertragsdauer" : "UNBEFRISTET",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "ort" : "Bamberg",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.894024854000065,
+      "laenge" : 10.893211472000075
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-09"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-09",
+    "aenderungsdatum" : "2026-10-09T09:09:11.317",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "NConsult GmbH",
+    "arbeitgeberKundennummerHash" : "j0aPmLopen8lCLYNYFVQvSNU_Zt6R8pPPsn8NWUkVbA=",
+    "referenznummer" : "10001-1003830623-S",
+    "entfernung" : 35,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Hauptstr.",
+        "hausnummer" : "61a",
+        "plz" : "90607",
+        "ort" : "Rückersdorf, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.494708,
+      "laenge" : 11.2442985
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-08"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-08",
+    "aenderungsdatum" : "2026-10-05T15:58:12.160",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Performance Networks GmbH",
+    "arbeitgeberKundennummerHash" : "vDTEq4Rum6TIlEj-yVfKOshIwQT0-ll0kP-aeWg8EHQ=",
+    "referenznummer" : "10000-1207822025-S",
+    "entfernung" : 21,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-23"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Kleinreuther Weg",
+        "hausnummer" : "87",
+        "plz" : "90408",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.4704738,
+      "laenge" : 11.0707883
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2025-11-11"
+    },
+    "datumErsteVeroeffentlichung" : "2025-11-11",
+    "aenderungsdatum" : "2026-09-23T08:18:51.562",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "proMX AG",
+    "arbeitgeberKundennummerHash" : "iRdnhrx78JbAg4KzE8n6bqHOVYIXGi-USfF-GENcF-c=",
+    "referenznummer" : "10000-1204436120-S",
+    "entfernung" : 14,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "IT Systemtechniker (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-29"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "UNBEFRISTET",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "90402",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.450846603,
+      "laenge" : 11.089621301
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-29"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-29",
+    "aenderungsdatum" : "2026-09-29T15:18:48.183",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "puro Personaldienstleistung GmbH",
+    "arbeitgeberKundennummerHash" : "MPBvb1SpyZZ7M0jkMNBQ7L2i_1WAoTNpLVQ_jppPtsw=",
+    "referenznummer" : "13669-FUHGCK4MJGSNMRK7-S",
+    "entfernung" : 16,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Consultant (m/w/d) - Schwerpunkt Security",
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-07"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Emmericher Str.",
+        "hausnummer" : "13",
+        "plz" : "90411",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.48704,
+      "laenge" : 11.1015135
+    } ],
+    "homeofficemoeglich" : true,
+    "homeofficetyp" : "NACH_VEREINBARUNG",
+    "chiffrenummer" : "JR0278-291",
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-07"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-08",
+    "aenderungsdatum" : "2026-10-07T09:21:02.162",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "MR Datentechnik Vertriebs- und Service GmbH",
+    "arbeitgeberKundennummerHash" : "7bvz-JuW2NcqIsa3nvG8XKWn5B9fYVcA4vkH2tk7fk8=",
+    "referenznummer" : "10001-1003668338-S",
+    "entfernung" : 13,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Experte Rechenzentrum Infrastruktur (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-11-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "UNBEFRISTET",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "90402",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.4508466,
+      "laenge" : 11.0896213
+    } ],
+    "homeofficemoeglich" : true,
+    "homeofficetyp" : "NACH_VEREINBARUNG",
+    "chiffrenummer" : "70690",
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-07"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-07",
+    "aenderungsdatum" : "2026-10-07T14:56:43.550",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "BWI GmbH",
+    "arbeitgeberKundennummerHash" : "YllzIWAR0MdjVsi5dNGOXHuiLy55xF0e_EGmKFbGKr4=",
+    "referenznummer" : "13509-0000211152e001-S",
+    "entfernung" : 16,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "ERP Application Manager (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-29"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "BEFRISTET",
+    "befristungInMonaten" : 12,
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "ort" : "Erlangen",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.582388591,
+      "laenge" : 10.984861843
+    } ],
+    "chiffrenummer" : "894843/1",
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-29"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-21",
+    "aenderungsdatum" : "2026-09-29T10:37:23.423",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "alternativBeruf1" : "IT-System-Elektroniker/in",
+    "alternativBeruf2" : "IT-Systemadministrator/in",
+    "firma" : "Hays Professional Solutions GmbH",
+    "arbeitgeberKundennummerHash" : "ha82_9KzcCSodSBLf7ySrcPPEZSiMHO9wKDp-vkRZTI=",
+    "referenznummer" : "13319-894843/1_623567LS-S",
+    "entfernung" : 0,
+    "alleBerufe" : [ "IT-Systemadministrator/in", "IT-System-Elektroniker/in", "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Systemadministrator (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-25"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "UNBEFRISTET",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "90489",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.458193429,
+      "laenge" : 11.098426766
+    } ],
+    "chiffrenummer" : "JN -032026-74865",
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-25"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-25",
+    "aenderungsdatum" : "2026-09-25T17:02:02.025",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Akkodis Germany Tech Experts GmbH",
+    "arbeitgeberKundennummerHash" : "Ks4zP0qZnV2Fp0oFaFieYngy2QHudD1Z9uwKOlHVGbs=",
+    "referenznummer" : "12634-BB-645490-7878-5065-S",
+    "entfernung" : 16,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "AUSBILDUNG",
+    "ausbildungsart" : "AUSBILDUNG",
+    "arbeitszeitSchichtNachtWochenende" : false,
+    "arbeitszeitTeilzeitAbend" : false,
+    "arbeitszeitTeilzeitNachmittag" : false,
+    "arbeitszeitTeilzeitVormittag" : false,
+    "arbeitszeitTeilzeitFlexibel" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2027-09-01"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Buchheimer Str.",
+        "hausnummer" : "4",
+        "plz" : "91465",
+        "ort" : "Ergersheim",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.507767,
+      "laenge" : 10.3248585
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-28"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-28",
+    "aenderungsdatum" : "2026-09-28T10:30:12.190",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "MEKRA Lang GmbH & Co.KG",
+    "arbeitgeberKundennummerHash" : "9MMvopdb8JIs4Y-P2K8WV4UIO4cYy0GEMWHy1s5wD-Y=",
+    "referenznummer" : "10000-1208051029-S",
+    "entfernung" : 49,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Systemadministrator Netzwerk & Security",
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-07"
+    },
+    "verguetungsangabe" : "JAHRESGEHALT",
+    "artDerVerguetung" : "GEHALTSSPANNE",
+    "gehaltsspanneVon" : 48000,
+    "gehaltsspanneBis" : 60000,
+    "vertragsdauer" : "UNBEFRISTET",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Industriestr.",
+        "hausnummer" : "12-14",
+        "plz" : "90518",
+        "ort" : "Altdorf bei Nürnberg",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.391397,
+      "laenge" : 11.347443
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-07"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-07",
+    "aenderungsdatum" : "2026-10-07T15:26:28.025",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Suspa GmbH Betriebsstätte Altdorf",
+    "arbeitgeberKundennummerHash" : "ouPXJYthg21KAxD8yo93kCyFlwI-H7qmzgkyCcRFYLI=",
+    "referenznummer" : "10001-1003820240-S",
+    "entfernung" : 34,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "IT-Administrator (m/w/d) Cloud & Collaboration",
+    "quereinstiegGeeignet" : false,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-06"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "UNBEFRISTET",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "90489",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.458193429,
+      "laenge" : 11.098426766
+    } ],
+    "chiffrenummer" : "JN -022026-73520",
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-06"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-06",
+    "aenderungsdatum" : "2026-10-06T10:06:11.846",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Akkodis Germany Tech Experts GmbH",
+    "arbeitgeberKundennummerHash" : "Ks4zP0qZnV2Fp0oFaFieYngy2QHudD1Z9uwKOlHVGbs=",
+    "referenznummer" : "12634-BB-645828-7878-3013-S",
+    "entfernung" : 16,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Systems Engineer (m/w/d)",
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-07"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "UNBEFRISTET",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "strasse" : "Emmericher Str.",
+        "hausnummer" : "13",
+        "plz" : "90411",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.4870318,
+      "laenge" : 11.101946
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-07"
+    },
+    "datumErsteVeroeffentlichung" : "2025-01-22",
+    "aenderungsdatum" : "2026-10-07T09:18:42.553",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "MR Datentechnik Vertriebs- und Service GmbH",
+    "arbeitgeberKundennummerHash" : "7bvz-JuW2NcqIsa3nvG8XKWn5B9fYVcA4vkH2tk7fk8=",
+    "referenznummer" : "10000-1185002989-S",
+    "entfernung" : 13,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Cloud & Infrastructure Engineer (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-02"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "UNBEFRISTET",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "90489",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.458193429,
+      "laenge" : 11.098426766
+    } ],
+    "chiffrenummer" : "JN -062026-78176",
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-02"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-02",
+    "aenderungsdatum" : "2026-10-02T07:06:11.635",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "Akkodis Germany Tech Experts GmbH",
+    "arbeitgeberKundennummerHash" : "Ks4zP0qZnV2Fp0oFaFieYngy2QHudD1Z9uwKOlHVGbs=",
+    "referenznummer" : "12634-BB-645727-7878-7446-S",
+    "entfernung" : 16,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  }, {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "IT Servicetechniker (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-09-27"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "UNBEFRISTET",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "plz" : "90402",
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.450846603,
+      "laenge" : 11.089621301
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-09-27"
+    },
+    "datumErsteVeroeffentlichung" : "2026-09-27",
+    "aenderungsdatum" : "2026-09-27T16:18:14.802",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "firma" : "puro Personaldienstleistung GmbH",
+    "arbeitgeberKundennummerHash" : "MPBvb1SpyZZ7M0jkMNBQ7L2i_1WAoTNpLVQ_jppPtsw=",
+    "referenznummer" : "13669-B30FAPWH9FJNJ14Q-S",
+    "entfernung" : 16,
+    "alleBerufe" : [ "Fachinformatiker/in - Systemintegration" ]
+  } ],
+  "maxErgebnisse" : 305,
+  "page" : 1,
+  "size" : 100,
+  "woOutput" : {
+    "bereinigterOrt" : "Erlangen",
+    "suchmodus" : "UMKREISSUCHE",
+    "koordinaten" : [ {
+      "lat" : 49.58198115,
+      "lon" : 10.9875625
+    } ]
+  },
+  "facetten" : {
+    "verguetung" : {
+      "counts" : {
+        "jahr" : 33,
+        "stunde" : 2
+      },
+      "maxCount" : 305
+    },
+    "befristung" : {
+      "counts" : {
+        "1" : 8,
+        "2" : 132,
+        "3" : 165
+      },
+      "maxCount" : 305
+    },
+    "externestellenboersen" : {
+      "counts" : {
+        "false" : 290,
+        "true" : 15
+      },
+      "maxCount" : 305
+    },
+    "behinderung" : {
+      "counts" : {
+        "false" : 163,
+        "true" : 1
+      },
+      "maxCount" : 305
+    },
+    "pav" : {
+      "counts" : {
+        "false" : 267,
+        "true" : 38
+      },
+      "maxCount" : 305
+    },
+    "berufsfeld" : {
+      "counts" : {
+        "Bauplanung und -überwachung, Architektur" : 3,
+        "Einkauf und Vertrieb" : 1,
+        "Elektrotechnik" : 17,
+        "Energietechnik" : 5,
+        "IT-Netzwerktechnik, -Administration, -Organisation" : 41,
+        "IT-Systemanalyse, -Anwendungsberatung und -Vertrieb" : 12,
+        "Informatik" : 194,
+        "Kunststoff- und Kautschukherstellung" : 1,
+        "Lagerwirtschaft, Post und Zustellung, Güterumschlag" : 2,
+        "Lehrtätigkeit berufsbildender Fächer und betriebliche Ausbildung" : 1,
+        "Maschinenbau- und Betriebstechnik" : 4,
+        "Mechatronik und Automatisierungstechnik" : 2,
+        "Metallbearbeitung" : 2,
+        "Softwareentwicklung und Programmierung" : 8,
+        "Steuerberatung" : 1,
+        "Technische Forschung und Entwicklung" : 2,
+        "Technische Produktionsplanung und -steuerung" : 3,
+        "Technisches Zeichnen, Konstruktion und Modellbau" : 1,
+        "Unternehmensorganisation und -strategie" : 2
+      },
+      "maxCount" : 305
+    },
+    "topberuf" : {
+      "counts" : {
+        "Fachinformatiker/in - Systemintegration" : 229,
+        "IT-Systemadministrator/in" : 37,
+        "Netzwerkadministrator/in" : 14,
+        "IT-Administrator/in" : 25,
+        "Servicetechniker/in - IT" : 15,
+        "Second-Level-Supporter/in" : 8,
+        "IT-System-Elektroniker/in" : 13,
+        "Fachinformatiker/in - Digitale Vernetzung" : 5,
+        "Informatiker/in" : 22,
+        "First-Level-Supporter/in" : 8,
+        "Systeminformatiker/in" : 5,
+        "IT-Kundenbetreuer/in" : 6,
+        "Fachinformatiker/in - Anwendungsentwicklung" : 10,
+        "Anwendungssystemadministrator/in" : 4,
+        "IT-System-Kaufmann/-frau" : 3,
+        "IT-Sicherheitskoordinator/in" : 3,
+        "Kaufmann/-frau - Digitalisierungsmanagement" : 3,
+        "Wirtschaftsinformatiker/in (Hochschule)" : 5,
+        "Ingenieur/in - Systems Engineering" : 3,
+        "Ingenieur/in - Mechatronik" : 3
+      },
+      "scores" : {
+        "Fachinformatiker/in - Systemintegration" : 1207744,
+        "IT-Systemadministrator/in" : 53036,
+        "Netzwerkadministrator/in" : 41638,
+        "IT-Administrator/in" : 37102,
+        "Servicetechniker/in - IT" : 27416,
+        "Second-Level-Supporter/in" : 21745,
+        "IT-System-Elektroniker/in" : 19700,
+        "Fachinformatiker/in - Digitale Vernetzung" : 14451,
+        "Informatiker/in" : 14423,
+        "First-Level-Supporter/in" : 11806,
+        "Systeminformatiker/in" : 8682,
+        "IT-Kundenbetreuer/in" : 6828,
+        "Fachinformatiker/in - Anwendungsentwicklung" : 6302,
+        "Anwendungssystemadministrator/in" : 5274,
+        "IT-System-Kaufmann/-frau" : 4193,
+        "IT-Sicherheitskoordinator/in" : 2544,
+        "Kaufmann/-frau - Digitalisierungsmanagement" : 2215,
+        "Wirtschaftsinformatiker/in (Hochschule)" : 2006,
+        "Ingenieur/in - Systems Engineering" : 1653,
+        "Ingenieur/in - Mechatronik" : 1347
+      },
+      "maxCount" : 305
+    },
+    "arbeitsort" : {
+      "counts" : {
+        "Feucht" : 1,
+        "Adelsdorf, Mittelfranken" : 2,
+        "Eggolsheim" : 2,
+        "Fürth, Bayern" : 15,
+        "Lauf an der Pegnitz" : 1,
+        "Breitengüßbach" : 1,
+        "Merkendorf, Mittelfranken" : 1,
+        "Nürnberg, Mittelfranken" : 153,
+        "Eltmann" : 1,
+        "Forchheim, Oberfranken" : 5,
+        "Pegnitz" : 4,
+        "Altdorf bei Nürnberg" : 1,
+        "Baiersdorf, Mittelfranken" : 2,
+        "Hersbruck" : 5,
+        "Postbauer-Heng" : 2,
+        "Schwaig bei Nürnberg" : 4,
+        "Röthenbach an der Pegnitz" : 7,
+        "Ansbach, Mittelfranken" : 8,
+        "Birgland" : 1,
+        "Büchenbach, Mittelfranken" : 1,
+        "Bamberg" : 19,
+        "Erlangen" : 23,
+        "Gutenstetten" : 1,
+        "Neumarkt in der Oberpfalz" : 10,
+        "Roth, Mittelfranken" : 14,
+        "Auerbach in der Oberpfalz" : 1,
+        "Burgthann" : 1,
+        "Ottensoos" : 3,
+        "Altendorf, Kreis Bamberg" : 1,
+        "Heilsbronn" : 1,
+        "Georgensgmünd" : 1,
+        "Bad Windsheim" : 1,
+        "Cadolzburg" : 3,
+        "Hallstadt" : 4
+      },
+      "maxCount" : 305
+    },
+    "ausbildungsart" : {
+      "counts" : {
+        "0" : 75,
+        "2" : 3
+      },
+      "maxCount" : 305
+    },
+    "veroeffentlichtseit" : {
+      "counts" : {
+        "0" : 1,
+        "1" : 1,
+        "14" : 90,
+        "28" : 133,
+        "7" : 56,
+        "alle" : 305
+      },
+      "maxCount" : 305
+    },
+    "schulbildung" : {
+      "counts" : {
+        "0" : 242,
+        "1" : 242,
+        "11" : 242,
+        "12" : 248,
+        "2" : 243,
+        "3" : 297,
+        "4" : 303,
+        "5" : 303,
+        "6" : 305
+      },
+      "maxCount" : 305
+    },
+    "arbeitsort_plz" : {
+      "counts" : {
+        "01067" : 1,
+        "01309" : 4,
+        "04109" : 4,
+        "04317" : 1,
+        "09126" : 4,
+        "10115" : 8,
+        "10117" : 1,
+        "12099" : 1,
+        "12347" : 1,
+        "18055" : 1,
+        "20095" : 3,
+        "20355" : 1,
+        "20539" : 1,
+        "22453" : 1,
+        "22587" : 4,
+        "28195" : 1,
+        "28832" : 1,
+        "30159" : 1,
+        "34123" : 1,
+        "35037" : 1,
+        "35390" : 1,
+        "37073" : 1,
+        "38440" : 1,
+        "40212" : 2,
+        "40474" : 1,
+        "42289" : 1,
+        "44135" : 1,
+        "44139" : 1,
+        "50676" : 1,
+        "53119" : 5,
+        "53359" : 1,
+        "55124" : 1,
+        "56070" : 1,
+        "59581" : 1,
+        "60306" : 1,
+        "60313" : 1,
+        "60327" : 1,
+        "60486" : 10,
+        "63263" : 1,
+        "67059" : 1,
+        "68159" : 1,
+        "70173" : 3,
+        "70178" : 1,
+        "70376" : 1,
+        "70771" : 1,
+        "71636" : 1,
+        "74172" : 1,
+        "76131" : 1,
+        "80331" : 11,
+        "80333" : 1,
+        "80335" : 1,
+        "80992" : 1,
+        "81241" : 1,
+        "85049" : 1,
+        "85055" : 2,
+        "85235" : 1,
+        "86150" : 2,
+        "86154" : 1,
+        "86609" : 1,
+        "88436" : 3,
+        "89075" : 4,
+        "89081" : 1,
+        "90329" : 2,
+        "90402" : 19,
+        "90403" : 2,
+        "90408" : 2,
+        "90409" : 7,
+        "90411" : 23,
+        "90419" : 2,
+        "90425" : 2,
+        "90429" : 11,
+        "90431" : 5,
+        "90441" : 7,
+        "90443" : 1,
+        "90449" : 3,
+        "90451" : 3,
+        "90459" : 1,
+        "90461" : 2,
+        "90471" : 7,
+        "90475" : 1,
+        "90478" : 1,
+        "90480" : 1,
+        "90482" : 1,
+        "90489" : 26,
+        "90491" : 1,
+        "90513" : 1,
+        "90518" : 1,
+        "90537" : 1,
+        "90552" : 7,
+        "90556" : 3,
+        "90559" : 1,
+        "90571" : 4,
+        "90607" : 1,
+        "90762" : 1,
+        "90763" : 1,
+        "90765" : 3,
+        "90766" : 2,
+        "91052" : 8,
+        "91058" : 8,
+        "91077" : 1,
+        "91083" : 2,
+        "91085" : 1,
+        "91126" : 2,
+        "91154" : 14,
+        "91166" : 1,
+        "91171" : 1,
+        "91186" : 1,
+        "91207" : 1,
+        "91217" : 5,
+        "91220" : 1,
+        "91242" : 3,
+        "91257" : 4,
+        "91275" : 1,
+        "91301" : 5,
+        "91325" : 2,
+        "91330" : 2,
+        "91413" : 1,
+        "91438" : 1,
+        "91465" : 2,
+        "91468" : 1,
+        "91487" : 1,
+        "91522" : 7,
+        "91541" : 1,
+        "91560" : 1,
+        "91732" : 1,
+        "92262" : 1,
+        "92318" : 10,
+        "92353" : 2,
+        "93047" : 1,
+        "93055" : 1,
+        "93059" : 1,
+        "94032" : 1,
+        "95444" : 2,
+        "96047" : 2,
+        "96049" : 1,
+        "96052" : 11,
+        "96103" : 4,
+        "96146" : 1,
+        "96149" : 1,
+        "96179" : 2,
+        "97070" : 1,
+        "97074" : 2,
+        "97076" : 1,
+        "97084" : 1,
+        "97357" : 1,
+        "97483" : 1
+      },
+      "maxCount" : 305
+    },
+    "arbeitgeber" : {
+      "counts" : {
+        "ACS Services GmbH" : 1,
+        "ANG" : 1,
+        "ANG GmbH" : 2,
+        "ASSDEV GmbH" : 1,
+        "ASTRUM IT GmbH" : 1,
+        "AVLDiTEST GmbH" : 2,
+        "Actief Personalmanagement GmbH Bamberg" : 1,
+        "Actief Personalmanagement GmbH Neu-Ulm" : 1,
+        "Adalbert Pilipp GmbHZV" : 1,
+        "Akkodis Germany Tech Experts GmbH" : 27,
+        "Ata Solutions GmbH" : 1,
+        "Auto-Scholz GmbH & Co. KG" : 1,
+        "BFI Informationssysteme GmbH" : 14,
+        "BWI GmbH" : 6,
+        "Baker Tilly Holding GmbH Wirtschaftsprüfungs- gesellschaft" : 1,
+        "Bayerisches Landesamt für Steuern Dienststelle Nürnberg" : 1,
+        "Bechtle AG" : 5,
+        "Berufsförderungswerk Nürnberg gemeinnützige GmbH" : 1,
+        "Bock 1 GmbH & Co.KG" : 2,
+        "Brose Fahrzeugteile SE & Co. KG" : 2,
+        "Brunel GmbH NL Mannheim" : 1,
+        "Bundesagentur für Arbeit IT-Systemhaus Nürnberg" : 1,
+        "Bundeseisenbahnvermögen Dienststelle Süd" : 1,
+        "CANCOM SE" : 2,
+        "CLEVER Systemtechnik GmbH" : 1,
+        "Core-Backbone GmbH" : 3,
+        "Cs2 ITEC GmbH   Co. KG" : 1,
+        "DATAGROUP Operations GmbH Geschäftsstelle Bremen" : 1,
+        "DATEV" : 2,
+        "DEHN SE" : 1,
+        "DIS AG NÜRNBERG" : 1,
+        "Deutsche Telekom AG" : 2,
+        "EICS PD GmbH" : 1,
+        "ESB IT-Services e.K. Frank Büttner" : 2,
+        "EXCELLA GmbH & Co. KG" : 1,
+        "FERCHAU GmbH Niederlassung Nürnberg City" : 7,
+        "Fackelmann GmbH & Co.KG" : 2,
+        "Fackelmann GmbH + Co. KG" : 1,
+        "Feser, Graf & Co. Automobil Holding GmbH" : 1,
+        "Fritz Berger GmbH" : 2,
+        "Groeneveld-BEKA GmbH" : 1,
+        "HEIM & HAUS Handel GmbH" : 1,
+        "Hahn GmbH" : 1,
+        "Hans Kupfer u Sohn GmbH & Co. KG" : 1,
+        "Hays AG" : 1,
+        "Hays Professional Solutions GmbH" : 1,
+        "Hays Professional Solutions GmbH Standort Nürnberg" : 2,
+        "Hegmanns AG" : 1,
+        "Helmi Göttler Private Arbeitsvermittlung" : 6,
+        "Hetzner Online GmbH" : 2,
+        "Hoffmann SE" : 1,
+        "I.K. Hofmann GmbH" : 3,
+        "I.K. Hofmann GmbH Niederlassung Nürnberg" : 1,
+        "IPI GmbH" : 1,
+        "IT-HAUS GmbH" : 1,
+        "JFTK GmbH" : 1,
+        "Kaiser Bürotechnik GmbH & Co. KG" : 1,
+        "Kieback & Peter GmbH & Co. KG" : 1,
+        "Klinikum Forchheim - Fränkische Schweiz gGmbH" : 1,
+        "Klinikum Nürnberg" : 2,
+        "Kommunal BIT Anstalt d. öffentl. Rechts" : 1,
+        "Krauß Armin - EDV Beratung" : 1,
+        "LEONI Kabel GmbH" : 12,
+        "LZ Informatik" : 3,
+        "Lohmann-koester GmbH & Co.KG" : 1,
+        "Lux Projektmanagement GmbH & Co KG" : 1,
+        "MCA Engineering GmbH" : 1,
+        "MEKRA Lang GmbH & Co.KG" : 2,
+        "MMK Personalberatung" : 1,
+        "MR Datentechnik Vertriebs- und Service GmbH" : 6,
+        "Martin Bauer GmbH & Co. KG" : 1,
+        "Memmert GmbH & Co KG" : 1,
+        "Mero TSK International GmbH & Co. KG" : 1,
+        "NConsult GmbH" : 5,
+        "Neumüller Personalberatung Regina Neumüller e.K." : 4,
+        "New Elements GmbH" : 3,
+        "Opto-Copy GmbH Panagiotis Tsarnouchas" : 2,
+        "PAMEC PAPP GmbH" : 3,
+        "Prögel networks GmbH" : 3,
+        "SIT Solutions GmbH & Co. KG" : 2,
+        "Schmitt GmbH" : 2,
+        "ShaarConsulting" : 2,
+        "Siemens AG" : 2,
+        "SmartTECS Engineers GmbH" : 4,
+        "Stadt Baiersdorf" : 2,
+        "TEMPTON Next Level Experts GmbH" : 2,
+        "TR Plast GmbH" : 2,
+        "Tintschl Technik GmbH    " : 2,
+        "UVEX SAFETY GROUP GmbH" : 3,
+        "berg-it projektdienstleistungen GmbH" : 3,
+        "eSourceONE GmbH" : 2,
+        "ganss personal GmbH" : 2,
+        "ncsolution GmbH" : 2,
+        "neumeier AG" : 3,
+        "premier experts GmbH" : 3,
+        "puro Personaldienstleistung GmbH" : 8,
+        "set - software engineering gmbh" : 2,
+        "shoob.de" : 7,
+        "thefi.com GmbH & Co KG    " : 2,
+        "vfm Versicherungs- & Finanzmanagement GmbH" : 2
+      },
+      "maxCount" : 305
+    },
+    "beruf" : {
+      "counts" : {
+        "Anwendungssystemadministrator/in" : 4,
+        "Anwendungssystemberater/in" : 1,
+        "Application-Engineer/-Manager/in" : 1,
+        "Architekt/in" : 1,
+        "Assistent/in - Informatik (Softwaretechnik)" : 1,
+        "Assistent/in - Informatik (allgemeine Informatik)" : 2,
+        "BIM-Manager/in" : 2,
+        "Bachelor Professional - IT (IT-Beratung)" : 1,
+        "Bachelor Professional - IT (Systemintegration und Vernetzung)" : 2,
+        "Callcenteragent/in" : 2,
+        "Cloud-Architect" : 1,
+        "Cyber-Security-Consultant" : 1,
+        "Data Engineer" : 2,
+        "Datenschutzbeauftragte/r" : 1,
+        "EDV-Fachkraft" : 1,
+        "Elektroanlagenmonteur/in" : 1,
+        "Elektroinstallateur/in" : 1,
+        "Elektroniker/in - Betriebstechnik" : 2,
+        "Elektroniker/in - Energie- und Gebäudetechnik" : 2,
+        "Elektroniker/in - Geräte und Systeme" : 2,
+        "Elektrotechnikermeister/in/Bachelor Professional im Elektrotechniker-Handwerk" : 2,
+        "Fachassistent/in Digitalisierung und IT-Prozesse" : 1,
+        "Fachberater/in - Integrierte Systeme" : 2,
+        "Fachinformatiker/in - Anwendungsentwicklung" : 10,
+        "Fachinformatiker/in - Daten- und Prozessanalyse" : 2,
+        "Fachinformatiker/in - Digitale Vernetzung" : 5,
+        "Fachinformatiker/in - Systemintegration" : 229,
+        "Fachkraft - Lagerlogistik" : 1,
+        "Fachlagerist/in" : 1,
+        "First-Level-Supporter/in" : 8,
+        "Forschungs- und Entwicklungsingenieur/in" : 1,
+        "Helfer/in - Lagerwirtschaft, Transport" : 1,
+        "IT-Administrator/in" : 25,
+        "IT-Berater/in" : 4,
+        "IT-Entwickler/in (Weiterbildung/Ausbildung)" : 1,
+        "IT-Kundenbetreuer/in" : 6,
+        "IT-Organisator/in" : 1,
+        "IT-Projektkoordinator/in" : 2,
+        "IT-Sicherheitskoordinator/in" : 3,
+        "IT-System-Elektroniker/in" : 13,
+        "IT-System-Kaufmann/-frau" : 3,
+        "IT-Systemadministrator/in" : 37,
+        "IT-Systemanalytiker/in" : 1,
+        "IT-Systemplaner/in" : 1,
+        "Industrieelektriker/in - Geräte und Systeme" : 1,
+        "Industriekaufmann/-frau" : 1,
+        "Industriemechaniker/in" : 1,
+        "Informatiker/in" : 22,
+        "Information-Architect" : 1,
+        "Ingenieur/in - Architektur" : 1,
+        "Ingenieur/in - Bau" : 3,
+        "Ingenieur/in - Elektrotechnik" : 9,
+        "Ingenieur/in - Energietechnik" : 1,
+        "Ingenieur/in - Kunststofftechnik" : 1,
+        "Ingenieur/in - Maschinenbau" : 2,
+        "Ingenieur/in - Mechatronik" : 3,
+        "Ingenieur/in - Robotik, Autonome Systeme" : 1,
+        "Ingenieur/in - Systems Engineering" : 3,
+        "KI-Manager/in" : 1,
+        "Kabeljungwerker/in" : 1,
+        "Kaufmann/-frau - Büromanagement" : 1,
+        "Kaufmann/-frau - Dialogmarketing" : 1,
+        "Kaufmann/-frau - Digitalisierungsmanagement" : 3,
+        "Kaufmann/-frau - IT-System-Management" : 2,
+        "Lager- und Transportarbeiter/in" : 1,
+        "Lehrer/in - Schule für Arbeitserziehung" : 1,
+        "Maschinen- und Anlagenführer/in (ohne Angabe des Schwerpunkts)" : 1,
+        "Maschinen- und Anlagenführer/in - Metall-, Kunststofftechnik" : 2,
+        "Mechatroniker/in" : 1,
+        "Netzwerk-Servicetechniker/in" : 2,
+        "Netzwerkadministrator/in" : 14,
+        "Produktentwickler/in" : 1,
+        "Projektleiter/in / Projektmanager/in" : 2,
+        "Requirement-Manager/in" : 1,
+        "Second-Level-Supporter/in" : 8,
+        "Servicetechniker/in - IT" : 15,
+        "Servicetechniker/in - Sicherheits-/Alarmanlagen" : 1,
+        "Softwareentwickler/in" : 2,
+        "Soldat/in auf Zeit - Laufbahngruppe Mannschaften" : 1,
+        "Systemelektroniker/in" : 1,
+        "Systeminformatiker/in" : 5,
+        "Technical-Account-Manager/in" : 1,
+        "Techniker/in - Elektrotechnik (Automatisierungstechnik)/Bachelor Professional in Technik" : 1,
+        "Techniker/in - Elektrotechnik (Energietechnik)/Bachelor Professional in Technik" : 1,
+        "Techniker/in - Elektrotechnik (ohne Schwerpunkt)/Bachelor Professional in Technik" : 4,
+        "Techniker/in - Informatik (Betriebsinformatik)/Bachelor Professional in Technik" : 2,
+        "Techniker/in - Karosserie- und Fahrzeugbautechnik/Bachelor Professional in Technik" : 1,
+        "Techniker/in - Maschinentechnik (ohne Schwerpunkt)/Bachelor Professional in Technik" : 2,
+        "Techniker/in - Mechatronik/Bachelor Professional in Technik" : 1,
+        "Technische/r Produktdesigner/in - Maschinen- und Anlagenkonstruktion" : 1,
+        "Testingenieur/in" : 1,
+        "Third-Level-Supporter/in" : 1,
+        "Vertriebsingenieur/in" : 1,
+        "Vertriebstechniker/in" : 1,
+        "Wirtschaftsinformatiker/in (Fachschule)/Bachelor Professional in Wirtschaft" : 1,
+        "Wirtschaftsinformatiker/in (Hochschule)" : 5,
+        "Wirtschaftsinformatiker/in - IT-Systeme" : 2
+      },
+      "maxCount" : 305
+    },
+    "homeoffice" : {
+      "counts" : {
+        "prozentual" : 4,
+        "nv_false" : 4,
+        "nv_true" : 27
+      },
+      "maxCount" : 305
+    },
+    "angebotsart" : {
+      "counts" : {
+        "1" : 225,
+        "2" : 1,
+        "34" : 1,
+        "4" : 78
+      },
+      "maxCount" : 305
+    },
+    "ausbildungsverguetung" : {
+      "counts" : {
+        "monat" : 9
+      },
+      "maxCount" : 305
+    },
+    "branche" : {
+      "counts" : {
+        "1" : 9,
+        "11" : 66,
+        "13" : 15,
+        "15" : 16,
+        "17" : 4,
+        "18" : 5,
+        "19" : 1,
+        "2" : 2,
+        "21" : 1,
+        "22" : 1,
+        "25" : 1,
+        "27" : 17,
+        "28" : 93,
+        "29" : 1,
+        "3" : 10,
+        "5" : 6,
+        "6" : 5,
+        "7" : 4,
+        "8" : 6,
+        "9" : 28
+      },
+      "maxCount" : 305
+    },
+    "quereinstieg" : {
+      "counts" : {
+        "false" : 298,
+        "true" : 7
+      },
+      "maxCount" : 305
+    },
+    "arbeitszeit" : {
+      "counts" : {
+        "snw" : 2,
+        "tz" : 18,
+        "vz" : 289
+      },
+      "maxCount" : 305
+    },
+    "eintrittsdatum" : {
+      "counts" : {
+        "10_01_01-now" : 221,
+        "26_10_01-26_11_01" : 97,
+        "26_11_01-26_12_01" : 10,
+        "26_12_01-27_01_01" : 4,
+        "27_01_01-27_02_01" : 2,
+        "27_09_01-27_10_01" : 66
+      },
+      "maxCount" : 305
+    },
+    "zeitarbeit" : {
+      "counts" : {
+        "false" : 227,
+        "true" : 78
+      },
+      "maxCount" : 305
+    },
+    "topberufsfeld" : {
+      "counts" : {
+        "Informatik" : 194,
+        "IT-Netzwerktechnik, -Administration, -Organisation" : 41,
+        "IT-Systemanalyse, -Anwendungsberatung und -Vertrieb" : 12,
+        "Elektrotechnik" : 17,
+        "Softwareentwicklung und Programmierung" : 8,
+        "Technische Forschung und Entwicklung" : 2,
+        "Lehrtätigkeit berufsbildender Fächer und betriebliche Ausbildung" : 1
+      },
+      "scores" : {
+        "Informatik" : 402950,
+        "IT-Netzwerktechnik, -Administration, -Organisation" : 22608,
+        "IT-Systemanalyse, -Anwendungsberatung und -Vertrieb" : 2936,
+        "Elektrotechnik" : 1048,
+        "Softwareentwicklung und Programmierung" : 972,
+        "Technische Forschung und Entwicklung" : 146,
+        "Lehrtätigkeit berufsbildender Fächer und betriebliche Ausbildung" : 22
+      },
+      "maxCount" : 305
+    }
+  }
+}

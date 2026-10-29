@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://github.com",
+    "name": "v6.db.transport.rest reports 503 Server Error · Issue #34",
+    "snippet": "Jan 10, 2025 — Since about 3 days i get an 503 Server Error when I try to reach the https:// v6 . db . transport . rest / API . Is this a known issue?",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "Jan 10, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://v6.db.transport.rest",
+    "name": "Getting Started with v6.db.transport.rest🔗",
+    "snippet": "Getting Started with v6.db.transport.rest . Let's walk through the requests that are necessary to implement a typical basic transit app. Read more",
+    "host_name": "v6.db.transport.rest",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://opencollective.ecosyste.ms",
+    "name": "github.com/public-transport/db-vendo-client - Open Collective",
+    "snippet": "An open API service for software projects hosted on Open Collective. JavaScript client for Deutsche Bahn public transport APIs. Issues and Pull Requests , and ...",
+    "host_name": "opencollective.ecosyste.ms",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://probecast.io",
+    "name": "Deutsche Bahn API API Status — Down - Probecast",
+    "snippet": "Sep 19, 2026 — Live status of Deutsche Bahn API API . Current: Down. 30-day uptime: 0.00%%. Avg latency: 10.00s. Track uptime, latency and incidents across ...",
+    "host_name": "probecast.io",
+    "rank": 3,
+    "date": "Sep 19, 2026",
+    "favicon": ""
+  }
+]

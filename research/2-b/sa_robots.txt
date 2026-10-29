@@ -1,0 +1,49 @@
+User-agent: *
+Allow: /fakten/
+Disallow: /api/tracking/
+Disallow: /ajax/jpmbestellen/
+Disallow: /ajax/loadslide/
+Disallow: /ajax/suggestort/
+Disallow: /ajax/jobview/
+Disallow: /general/anzeigeteaserendlos/
+Disallow: /stabi/
+Disallow: /job/drucken/
+Disallow: /followup/
+Disallow: /bf-bewerbung/
+Disallow: /job/geoblocked/
+Disallow: /jpm-unsubscribe/
+Disallow: /job/preview/
+
+User-agent: Yandex
+Disallow: /
+
+User-agent: Linguee
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: grapeshot
+Disallow: /
+User-agent: bingbot
+Allow: /fakten/
+Disallow: /api/tracking/
+Disallow: /ajax/jpmbestellen/
+Disallow: /ajax/loadslide/
+Disallow: /ajax/suggestort/
+Disallow: /ajax/jobview/
+Disallow: /general/anzeigeteaserendlos/
+Disallow: /stabi/
+Disallow: /job/drucken/
+Disallow: /followup/
+Disallow: /bf-bewerbung/
+Disallow: /job/geoblocked/
+Disallow: /jpm-unsubscribe/
+Disallow: /job/preview/
+Disallow: /suche/*fulltext=
+#Sitemaps
+Sitemap: https://www.stellenanzeigen.de/careeasy/sitemap_index.xml
+Sitemap: https://www.stellenanzeigen.de/wp/sitemaps/sitemap.xml
+Sitemap: https://www.stellenanzeigen.de/sitemaps/Ox5gK2ir7deJ69index-sitemap/
+
+ 

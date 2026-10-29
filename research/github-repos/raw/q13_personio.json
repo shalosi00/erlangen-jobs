@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://en.wikipedia.org",
+    "name": "Job (biblical figure)",
+    "snippet": "Job is the central figure of the Book of Job in the Bible. In Islam, Job (Arabic: أيوب, romanized: ʾAyyūb ) is also considered a prophet. Job . Read more",
+    "host_name": "en.wikipedia.org",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.jobsnd.com",
+    "name": "Job Service North Dakota: Home",
+    "snippet": "An official website of the State of North Dakota. Find a Job or Recruit Employees Available jobs in North Dakota. Workforce and employment data Interactive. ...",
+    "host_name": "www.jobsnd.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.eda.gov",
+    "name": "Good Jobs Challenge",
+    "snippet": "The Good Jobs Challenge supports regional workforce training systems to establish sectoral partnerships that train and place workers in good jobs .",
+    "host_name": "www.eda.gov",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.ben-evans.com",
+    "name": "Predicting AI job exposure",
+    "snippet": "May 24, 2026 — Predicting AI job exposure. Many people would like to analyse which jobs , companies and industries are most exposed to AI, and assign scores, ... Read more",
+    "host_name": "www.ben-evans.com",
+    "rank": 3,
+    "date": "May 24, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.wisconsinjobcenter.org",
+    "name": "Directory of Workforce Services - Wisconsin Job Center",
+    "snippet": "Find your closest job center to learn about employment and training services and find the physical location of a job center.",
+    "host_name": "www.wisconsinjobcenter.org",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://labor.hawaii.gov",
+    "name": "American Job Centers – Workforce Development Council",
+    "snippet": "The American Job Centers (also called One-Stop Centers) are a unique collaboration of state and local organizations addressing the workforce development needs ... Read more",
+    "host_name": "labor.hawaii.gov",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.cloud.google.com/bigquery/docs/reference/rest/v2/jobs",
+    "name": "REST Resource: jobs | BigQuery",
+    "snippet": "Jul 2, 2025 — Lists all jobs that you started in the specified project. query. Runs a BigQuery SQL query synchronously and returns query results if the query ... Read more",
+    "host_name": "docs.cloud.google.com",
+    "rank": 6,
+    "date": "Jul 2, 2025",
+    "favicon": ""
+  }
+]

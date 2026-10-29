@@ -1,0 +1,29 @@
+[
+  {
+    "url": "https://gist.github.com",
+    "name": "looking for job using Linkedin API",
+    "snippet": "looking for job using Linkedin API . GitHub Gist: instantly share code, notes, and snippets.",
+    "host_name": "gist.github.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://apify.com",
+    "name": "LinkedIn Jobs Scraper — Job Postings & Salaries OpenAPI",
+    "snippet": "8 days ago — Scrape LinkedIn job postings by keyword and location without login: title, company, salary range, seniority, employment type, full description, ... Read more",
+    "host_name": "apify.com",
+    "rank": 1,
+    "date": "Oct 3, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.scrapingdog.com",
+    "name": "Scrape Job Overview API",
+    "snippet": "Retrieve detailed information about a specific LinkedIn job posting using its job ID. The job ID can be found via the Jobs Search Scraper or directly from a ... Read more",
+    "host_name": "www.scrapingdog.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  }
+]

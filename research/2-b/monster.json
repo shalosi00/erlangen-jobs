@@ -1,0 +1,29 @@
+[
+  {
+    "url": "https://maps.google.com",
+    "name": "Google Maps",
+    "snippet": "Find local businesses, view maps and get driving directions in Google Maps.",
+    "host_name": "maps.google.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://edd.ca.gov",
+    "name": "Employee's Withholding Allowance Certificate (DE 4) Rev. 56",
+    "snippet": "The DE 4 is used to compute the amount of taxes to be withheld from your wages, by your employer, to accurately reflect your state tax withholding obligation. Read more 4 pages",
+    "host_name": "edd.ca.gov",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://dle.rae.es",
+    "name": "de | Definición | Diccionario de la lengua española | RAE",
+    "snippet": "1. f. Letra d y sonido que representa. 1. prep. Denota posesión o pertenencia. La casa de mi padre. La paciencia de Job. 2. prep.",
+    "host_name": "dle.rae.es",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  }
+]

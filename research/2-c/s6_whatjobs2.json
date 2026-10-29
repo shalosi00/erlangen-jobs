@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://www.whatjobs.com",
+    "name": "WhatJobs Publisher Program Terms",
+    "snippet": "WhatJobs shall provide job advertising information such as job title, job description, location, salary, publication date, and the company offering the job. Read more",
+    "host_name": "www.whatjobs.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://publicapi.dev",
+    "name": "WhatJobs API",
+    "snippet": "The WhatJobs API allows affiliates to access job listings and other related data from WhatJobs.com. Affiliates can integrate this API into their own platforms",
+    "host_name": "publicapi.dev",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://public-api.org",
+    "name": "WhatJobs API - Documentation, Review & Integration Guide",
+    "snippet": "Apr 16, 2026 — Include your API key in the Authorization header as a Bearer token. You can obtain your API key by registering on the provider's website. Read more",
+    "host_name": "public-api.org",
+    "rank": 2,
+    "date": "Apr 16, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://publicapis.io",
+    "name": "WhatJobs API — API Key, Docs & Examples",
+    "snippet": "Job search engine Includes API key & authentication setup , code examples in Python, JavaScript and cURL, live uptime status, and the best WhatJobs ...",
+    "host_name": "publicapis.io",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://ejobsitesoftware.com",
+    "name": "Integration of WhatJobs.com with eJobSiteSoftware.com",
+    "snippet": "WhatJobs' API enables real-time job data transfer, ensuring listings are always current. Obtain API credentials from WhatJobs.",
+    "host_name": "ejobsitesoftware.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

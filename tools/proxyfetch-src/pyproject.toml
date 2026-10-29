@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "proxyfetch"
+version = "0.3.1"
+description = "Self-healing free-proxy fetcher: harvest, verify, rotate and browse any URL from the CLI or Python - no intervention required."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "ProxyFetch contributors" }]
+keywords = ["proxy", "scraper", "rotating-proxy", "stealth-browser", "cloaked", "cli", "automation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: System :: Networking :: Proxies",
+]
+# Dependency-light core: aiohttp powers the default fast probe engine,
+# beautifulsoup4 the universal CSS/table extraction; a stdlib thread-pool
+# fallback keeps probing alive without aiohttp.
+dependencies = ["aiohttp>=3.9", "beautifulsoup4>=4.12"]
+
+[project.optional-dependencies]
+# Stealth-browser escalation + proof rendering (CloakBrowser / patched Chromium).
+browser = ["cloakbrowser>=0.5.9"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+proxyfetch = "proxyfetch.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/OWNER/proxyfetch"
+Issues = "https://github.com/OWNER/proxyfetch/issues"
+
+[tool.setuptools.packages.find]
+include = ["proxyfetch*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

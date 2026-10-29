@@ -1,0 +1,160 @@
+{
+  "ergebnisliste" : [ {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "Mitarbeiter IT-Helpdesk / Benutzerservice (m/w/d)",
+    "weitereBerufe" : [ "IT-Supporter/in" ],
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-11"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "UNBEFRISTET",
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.434845143,
+      "laenge" : 11.100904183
+    } ],
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-11"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-11",
+    "aenderungsdatum" : "2026-10-11T16:09:37.494",
+    "hauptberuf" : "Fachinformatiker/in - Systemintegration",
+    "alternativBeruf1" : "IT-System-Elektroniker/in",
+    "alternativBeruf2" : "Kaufmann/-frau - IT-System-Management",
+    "firma" : "MMK Personalberatung",
+    "arbeitgeberKundennummerHash" : "3AXrIteB-sthgwrdq-7zzAskIxI4gLxwk1lfVS31up8=",
+    "referenznummer" : "10001-1003838081-S",
+    "entfernung" : 18,
+    "alleBerufe" : [ "IT-System-Elektroniker/in", "Fachinformatiker/in - Systemintegration", "Kaufmann/-frau - IT-System-Management", "IT-Supporter/in" ]
+  } ],
+  "maxErgebnisse" : 1,
+  "page" : 1,
+  "size" : 1,
+  "woOutput" : {
+    "bereinigterOrt" : "Erlangen",
+    "suchmodus" : "UMKREISSUCHE",
+    "koordinaten" : [ {
+      "lat" : 49.58198115,
+      "lon" : 10.9875625
+    } ]
+  },
+  "facetten" : {
+    "befristung" : {
+      "counts" : {
+        "2" : 1
+      },
+      "maxCount" : 1
+    },
+    "externestellenboersen" : {
+      "counts" : {
+        "false" : 1
+      },
+      "maxCount" : 1
+    },
+    "pav" : {
+      "counts" : {
+        "true" : 1
+      },
+      "maxCount" : 1
+    },
+    "berufsfeld" : {
+      "counts" : {
+        "Informatik" : 1
+      },
+      "maxCount" : 1
+    },
+    "arbeitsort" : {
+      "maxCount" : 1
+    },
+    "veroeffentlichtseit" : {
+      "counts" : {
+        "0" : 1,
+        "1" : 1,
+        "14" : 90,
+        "28" : 133,
+        "7" : 56,
+        "alle" : 305
+      },
+      "maxCount" : 305
+    },
+    "schulbildung" : {
+      "counts" : {
+        "0" : 1,
+        "1" : 1,
+        "11" : 1,
+        "12" : 1,
+        "2" : 1,
+        "3" : 1,
+        "4" : 1,
+        "5" : 1,
+        "6" : 1
+      },
+      "maxCount" : 1
+    },
+    "arbeitgeber" : {
+      "counts" : {
+        "MMK Personalberatung" : 1
+      },
+      "maxCount" : 1
+    },
+    "beruf" : {
+      "counts" : {
+        "Fachinformatiker/in - Systemintegration" : 1,
+        "IT-System-Elektroniker/in" : 1,
+        "Kaufmann/-frau - IT-System-Management" : 1
+      },
+      "maxCount" : 1
+    },
+    "angebotsart" : {
+      "counts" : {
+        "1" : 1
+      },
+      "maxCount" : 1
+    },
+    "branche" : {
+      "counts" : {
+        "27" : 1
+      },
+      "maxCount" : 1
+    },
+    "quereinstieg" : {
+      "counts" : {
+        "false" : 1
+      },
+      "maxCount" : 1
+    },
+    "arbeitszeit" : {
+      "counts" : {
+        "vz" : 1
+      },
+      "maxCount" : 1
+    },
+    "eintrittsdatum" : {
+      "counts" : {
+        "10_01_01-now" : 1,
+        "26_10_01-26_11_01" : 1
+      },
+      "maxCount" : 1
+    },
+    "zeitarbeit" : {
+      "counts" : {
+        "false" : 1
+      },
+      "maxCount" : 1
+    },
+    "topberufsfeld" : {
+      "counts" : {
+        "Informatik" : 1
+      },
+      "scores" : {
+        "Informatik" : 1008855
+      },
+      "maxCount" : 1
+    }
+  }
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://scrapfly.io",
+    "name": "How to Bypass Datadome Anti Scraping in 2026",
+    "snippet": "Indepth look at how to add Datadome bypass to web scrapers . How does it detect web scraping and how to avoid avoiding being blocked.",
+    "host_name": "scrapfly.io",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://datadome.co",
+    "name": "How to add real-time bot protection to your Cloudflare site.",
+    "snippet": "Dec 21, 2018 — The DataDome logic is executed before the regular Cloudflare process, and can therefore block access even to pages in the Cloudflare cache.",
+    "host_name": "datadome.co",
+    "rank": 1,
+    "date": "Dec 21, 2018",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.zenrows.com",
+    "name": "How to Bypass DataDome: Complete Guide 2026",
+    "snippet": "Jan 16, 2026 — Learn how to effectively bypass DataDome's security measures and protect your web scraping activities with smart strategies.",
+    "host_name": "www.zenrows.com",
+    "rank": 2,
+    "date": "Jan 16, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://tendem.ai",
+    "name": "How Anti-Bot Systems Work and How to Scrape Anyway",
+    "snippet": "May 13, 2026 — Cloudflare began blocking AI-based scraping by default in July 2025 . DataDome now runs over 85,000 customer-specific machine learning models,",
+    "host_name": "tendem.ai",
+    "rank": 3,
+    "date": "May 13, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://scrapebadger.com",
+    "name": "How to Bypass Cloudflare Anti-Bot Protection (2026)",
+    "snippet": "Sep 28, 2026 — This deep technical guide covers TLS fingerprinting, JS challenges, Turnstile bypass, and the complete Python implementation — from ...",
+    "host_name": "scrapebadger.com",
+    "rank": 4,
+    "date": "Sep 28, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.sitepoint.com",
+    "name": "Modern Web Scraping: How to Actually Bypass Anti-Bot",
+    "snippet": "Feb 19, 2026 — Your web scraper keeps getting blocked ? Learn why rotating IPs fail, how Cloudflare detects bots , and what strategies actually bypass modern ...",
+    "host_name": "www.sitepoint.com",
+    "rank": 5,
+    "date": "Feb 19, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.brightdata.com",
+    "name": "How Bright Data handles anti-bot blocking",
+    "snippet": "Learn how modern anti-bot systems detect scrapers across 4 layers , why DIY bypasses are costly, and how Bright Data's products defeat each detection layer.",
+    "host_name": "docs.brightdata.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.cloudflare.com",
+    "name": "Cloudflare Just Changed How AI Crawlers Scrape",
+    "snippet": "Jul 1, 2025 — In September 2024 , Cloudflare introduced the option to block AI crawlers in a single click. halts scraping while they determine their AI ...",
+    "host_name": "www.cloudflare.com",
+    "rank": 7,
+    "date": "Jul 1, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://decodo.com",
+    "name": "Datadome Bypass Guide: Proven Strategies for 2026",
+    "snippet": "Discover effective DataDome bypass methods for web scraping . Learn how to avoid detection and access protected content with practical tips.",
+    "host_name": "decodo.com",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  }
+]

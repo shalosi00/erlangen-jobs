@@ -1,0 +1,29 @@
+[
+  {
+    "url": "https://github.com",
+    "name": "Official Go SDK for the JobsPipe API - search live job",
+    "snippet": "The official Go SDK for the JobsPipe API: search live, normalized job postings from 30+ ATS feeds and job boards, and detect the technology stack behind any ... Read more",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://gist.github.com",
+    "name": "List of sites to find remote front-end developer jobs",
+    "snippet": "https://remotefront.io Here you can search remote jobs without visiting 10+ remote job boards. You can also use the auto application feature. Read more",
+    "host_name": "gist.github.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://dev.to",
+    "name": "A remote jobs API from five public job boards, normalised",
+    "snippet": "Sep 26, 2026 — Remote Jobs Scraper & Aggregator API calls the five sources, parses salaries into numbers, maps locations to a compact remoteRegion , unifies ... Read more",
+    "host_name": "dev.to",
+    "rank": 2,
+    "date": "Sep 26, 2026",
+    "favicon": ""
+  }
+]

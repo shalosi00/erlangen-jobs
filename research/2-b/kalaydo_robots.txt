@@ -1,0 +1,17 @@
+User-agent: Googlebot
+Disallow: /api/tracking/
+Disallow: /job/drucken/
+Disallow: /bewerbung/
+Disallow: /followup/
+
+Disallow: /jpm-unsubscribe/
+Disallow: /job/preview/
+
+User-agent: Yandex
+Disallow: /
+
+User-agent: Linguee
+Disallow: /
+
+User-agent: grapeshot
+Disallow: /

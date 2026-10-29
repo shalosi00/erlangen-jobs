@@ -1,0 +1,309 @@
+{
+  "ergebnisliste" : [ {
+    "stellenangebotsart" : "ARBEIT",
+    "stellenangebotsTitel" : "IT-Systemelektroniker (m/w/d)",
+    "quereinstiegGeeignet" : false,
+    "arbeitszeitVollzeit" : true,
+    "eintrittszeitraum" : {
+      "von" : "2026-10-06"
+    },
+    "verguetungsangabe" : "KEINE_ANGABEN",
+    "vertragsdauer" : "KEINE_ANGABE",
+    "istGeringfuegigeBeschaeftigung" : false,
+    "stellenlokationen" : [ {
+      "adresse" : {
+        "ort" : "Nürnberg, Mittelfranken",
+        "region" : "BAYERN",
+        "land" : "DEUTSCHLAND"
+      },
+      "breite" : 49.434845143,
+      "laenge" : 11.100904183
+    } ],
+    "chiffrenummer" : "39032",
+    "veroeffentlichungszeitraum" : {
+      "von" : "2026-10-06"
+    },
+    "datumErsteVeroeffentlichung" : "2026-10-06",
+    "aenderungsdatum" : "2026-10-06T14:49:01.685",
+    "hauptberuf" : "IT-Systemadministrator/in",
+    "firma" : "Actief Personalmanagement GmbH Neu-Ulm",
+    "arbeitgeberKundennummerHash" : "pPf7KGgjE6ceE8erpc11PbULQkUmWxL8-BZEmwmdWGY=",
+    "referenznummer" : "12384-975189579-S",
+    "entfernung" : 18,
+    "alleBerufe" : [ "IT-Systemadministrator/in" ]
+  } ],
+  "maxErgebnisse" : 35,
+  "page" : 1,
+  "size" : 1,
+  "woOutput" : {
+    "bereinigterOrt" : "Erlangen",
+    "suchmodus" : "UMKREISSUCHE",
+    "koordinaten" : [ {
+      "lat" : 49.58198115,
+      "lon" : 10.9875625
+    } ]
+  },
+  "facetten" : {
+    "verguetung" : {
+      "counts" : {
+        "jahr" : 5
+      },
+      "maxCount" : 35
+    },
+    "befristung" : {
+      "counts" : {
+        "1" : 2,
+        "2" : 22,
+        "3" : 11
+      },
+      "maxCount" : 35
+    },
+    "externestellenboersen" : {
+      "counts" : {
+        "false" : 35
+      },
+      "maxCount" : 35
+    },
+    "behinderung" : {
+      "counts" : {
+        "false" : 26
+      },
+      "maxCount" : 35
+    },
+    "pav" : {
+      "counts" : {
+        "false" : 28,
+        "true" : 7
+      },
+      "maxCount" : 35
+    },
+    "berufsfeld" : {
+      "counts" : {
+        "Elektrotechnik" : 24,
+        "Energietechnik" : 4,
+        "IT-Netzwerktechnik, -Administration, -Organisation" : 2,
+        "Informatik" : 3,
+        "Maschinenbau- und Betriebstechnik" : 1,
+        "Objekt-, Personen-, Brandschutz, Arbeitssicherheit" : 1
+      },
+      "maxCount" : 35
+    },
+    "topberuf" : {
+      "counts" : {
+        "Systemelektroniker/in" : 9,
+        "Systemtechniker/in (Telekommunikationstechnik)" : 4,
+        "Servicetechniker/in - IT" : 9,
+        "IT-System-Elektroniker/in" : 9,
+        "Fachinformatiker/in - Systemintegration" : 5,
+        "Elektroinstallateur/in" : 3
+      },
+      "scores" : {
+        "Systemelektroniker/in" : 2326000,
+        "Systemtechniker/in (Telekommunikationstechnik)" : 894418,
+        "Servicetechniker/in - IT" : 768375,
+        "IT-System-Elektroniker/in" : 716546,
+        "Fachinformatiker/in - Systemintegration" : 41344,
+        "Elektroinstallateur/in" : 7785
+      },
+      "maxCount" : 35
+    },
+    "arbeitsort" : {
+      "counts" : {
+        "Burgebrach" : 1,
+        "Bamberg" : 2,
+        "Nürnberg, Mittelfranken" : 32
+      },
+      "maxCount" : 35
+    },
+    "ausbildungsart" : {
+      "counts" : {
+        "0" : 2
+      },
+      "maxCount" : 35
+    },
+    "veroeffentlichtseit" : {
+      "counts" : {
+        "14" : 7,
+        "28" : 17,
+        "7" : 3,
+        "alle" : 35
+      },
+      "maxCount" : 35
+    },
+    "schulbildung" : {
+      "counts" : {
+        "0" : 33,
+        "1" : 33,
+        "11" : 33,
+        "12" : 33,
+        "2" : 33,
+        "3" : 35,
+        "4" : 35,
+        "5" : 35,
+        "6" : 35
+      },
+      "maxCount" : 35
+    },
+    "arbeitsort_plz" : {
+      "counts" : {
+        "04103" : 1,
+        "04109" : 13,
+        "07743" : 1,
+        "10115" : 13,
+        "22587" : 13,
+        "30159" : 1,
+        "30657" : 7,
+        "34117" : 1,
+        "35037" : 1,
+        "35390" : 1,
+        "37073" : 1,
+        "39126" : 1,
+        "40724" : 6,
+        "53119" : 13,
+        "53819" : 1,
+        "60306" : 1,
+        "60486" : 13,
+        "80331" : 14,
+        "86150" : 1,
+        "89075" : 13,
+        "90402" : 18,
+        "90409" : 1,
+        "90431" : 1,
+        "90443" : 5,
+        "90449" : 1,
+        "90471" : 1,
+        "93047" : 1,
+        "94032" : 1,
+        "95444" : 1,
+        "96049" : 1,
+        "96052" : 1,
+        "96138" : 1,
+        "97070" : 1,
+        "99084" : 1
+      },
+      "maxCount" : 35
+    },
+    "arbeitgeber" : {
+      "counts" : {
+        "Actief Personalmanagement GmbH Neu-Ulm" : 1,
+        "BFI Informationssysteme GmbH" : 3,
+        "BWI GmbH" : 13,
+        "Deutsche Prüftechnik GmbH" : 1,
+        "GfTD Services GmbH" : 1,
+        "Hays AG" : 1,
+        "I.K. Hofmann GmbH" : 1,
+        "IT-HAUS GmbH" : 1,
+        "Ludwig Elektro- u. Netzwerk- technik GmbH & Co.KG" : 1,
+        "STWB Stadtwerke Bamberg GmbH" : 1,
+        "SYMAG GmbH & Co. KG" : 1,
+        "Sozialstiftung Bamberg" : 1,
+        "TEMPTON Next Level Experts GmbH" : 2,
+        "TEMPTON Technik GmbH" : 3,
+        "Vodafone GmbH" : 1,
+        "berg-it projektdienstleistungen GmbH" : 1,
+        "ganss personal GmbH" : 1,
+        "puro Personaldienstleistung GmbH" : 1
+      },
+      "maxCount" : 35
+    },
+    "beruf" : {
+      "counts" : {
+        "Elektroanlagenmonteur/in" : 1,
+        "Elektrofachkraft für festgelegte Tätigkeiten" : 1,
+        "Elektroinstallateur/in" : 3,
+        "Elektroniker/in - Automatisierungs- und Systemtechnik" : 1,
+        "Elektroniker/in - Energie- und Gebäudetechnik" : 1,
+        "Elektroniker/in - Geräte und Systeme" : 1,
+        "Elektroniker/in - Informations- und Systemtechnik" : 1,
+        "Elektroniker/in - Informations- und Telekommunikationstechnik" : 2,
+        "Elektroniker/in - Prüffeld" : 1,
+        "Fachinformatiker/in - Systemintegration" : 5,
+        "IT-System-Elektroniker/in" : 9,
+        "IT-Systemadministrator/in" : 2,
+        "Kommunikationselektroniker/in - Telekommunikationstechnik" : 2,
+        "Netzwerkadministrator/in" : 1,
+        "Servicetechniker/in - IT" : 9,
+        "Servicetechniker/in - Sicherheits-/Alarmanlagen" : 2,
+        "Systemelektroniker/in" : 9,
+        "Systemtechniker/in (Telekommunikationstechnik)" : 4,
+        "Techniker/in - Elektrotechnik (Informations- und Kommunikationstechnik)/Bachelor Professional in Technik" : 1,
+        "Techniker/in - Elektrotechnik (ohne Schwerpunkt)/Bachelor Professional in Technik" : 2,
+        "Wartungs- und Servicetechniker/in - Maschinenbau" : 1
+      },
+      "maxCount" : 35
+    },
+    "ausbildungsverguetung" : {
+      "counts" : {
+        "monat" : 1
+      },
+      "maxCount" : 35
+    },
+    "angebotsart" : {
+      "counts" : {
+        "1" : 33,
+        "4" : 2
+      },
+      "maxCount" : 35
+    },
+    "quereinstieg" : {
+      "counts" : {
+        "false" : 35
+      },
+      "maxCount" : 35
+    },
+    "branche" : {
+      "counts" : {
+        "1" : 1,
+        "11" : 18,
+        "13" : 3,
+        "18" : 1,
+        "2" : 1,
+        "27" : 1,
+        "28" : 9,
+        "9" : 1
+      },
+      "maxCount" : 35
+    },
+    "arbeitszeit" : {
+      "counts" : {
+        "vz" : 35
+      },
+      "maxCount" : 35
+    },
+    "eintrittsdatum" : {
+      "counts" : {
+        "10_01_01-now" : 25,
+        "26_10_01-26_11_01" : 7,
+        "26_11_01-26_12_01" : 6,
+        "26_12_01-27_01_01" : 1,
+        "27_01_01-27_02_01" : 1,
+        "27_09_01-27_10_01" : 2
+      },
+      "maxCount" : 35
+    },
+    "zeitarbeit" : {
+      "counts" : {
+        "false" : 31,
+        "true" : 4
+      },
+      "maxCount" : 35
+    },
+    "topberufsfeld" : {
+      "counts" : {
+        "Elektrotechnik" : 24,
+        "Informatik" : 3,
+        "IT-Netzwerktechnik, -Administration, -Organisation" : 2,
+        "Energietechnik" : 4,
+        "Objekt-, Personen-, Brandschutz, Arbeitssicherheit" : 1
+      },
+      "scores" : {
+        "Elektrotechnik" : 238792,
+        "Informatik" : 6621,
+        "IT-Netzwerktechnik, -Administration, -Organisation" : 3828,
+        "Energietechnik" : 2891,
+        "Objekt-, Personen-, Brandschutz, Arbeitssicherheit" : 817
+      },
+      "maxCount" : 35
+    }
+  }
+}

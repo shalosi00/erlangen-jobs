@@ -1,0 +1,64 @@
+{
+ "checked_at": "2026-10-26T08:13:05+00:00",
+ "candidates": 31139,
+ "alive_phase1": 152,
+ "rows_written": 152,
+ "sources": {
+  "monosans/proxy-list": {
+   "proto": "json",
+   "status": 200,
+   "n_raw": 941,
+   "n_new": 941,
+   "fetch_s": 0.2
+  },
+  "TheSpeedX/PROXY-List": {
+   "proto": "socks5",
+   "status": 200,
+   "n_raw": 2870,
+   "n_new": 2783,
+   "fetch_s": 0.0
+  },
+  "proxifly/free-proxy-list": {
+   "proto": "socks5",
+   "status": 200,
+   "n_raw": 12000,
+   "n_new": 11681,
+   "fetch_s": 0.1
+  },
+  "zloi-user/hideip.me": {
+   "proto": "socks5",
+   "status": 200,
+   "n_raw": 135,
+   "n_new": 53,
+   "fetch_s": 0.0
+  },
+  "roosterkid/openproxylist": {
+   "proto": "socks5",
+   "status": 200,
+   "n_raw": 7,
+   "n_new": 5,
+   "fetch_s": 0.0
+  },
+  "Zaeem20/FREE_PROXIES_LIST": {
+   "proto": "http",
+   "status": 200,
+   "n_raw": 97,
+   "n_new": 13,
+   "fetch_s": 0.0
+  },
+  "clarketm/proxy-list": {
+   "proto": "http",
+   "status": 200,
+   "n_raw": 400,
+   "n_new": 0,
+   "fetch_s": 0.0
+  },
+  "MuRongPIG/Proxy-Master": {
+   "proto": "socks5",
+   "status": 200,
+   "n_raw": 2500,
+   "n_new": 2486,
+   "fetch_s": 0.1
+  }
+ }
+}

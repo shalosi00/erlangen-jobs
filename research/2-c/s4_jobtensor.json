@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://api.techmap.io/rss-api",
+    "name": "Techmap's Job Postings RSS Feed (1.6)",
+    "snippet": "Mar 17, 2025 — This API provides access to full job postings in long RSS format, sourced through web crawling and scraping from various platforms, with jobs ... Read more",
+    "host_name": "api.techmap.io",
+    "rank": 0,
+    "date": "Mar 17, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://jobdatafeeds.com/job-api",
+    "name": "Job Posting API - 250 Countries, Free Tier - Techmap",
+    "snippet": "The RSS Feed API provides a streamlined and efficient way to access and distribute job posting data in a standardized RSS format.",
+    "host_name": "jobdatafeeds.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.greenhouse.io/job-board",
+    "name": "Introduction – Job Board API",
+    "snippet": "With our Job Board API , you will have easy access to a simple JSON representation of your company's offices, departments, and published jobs .",
+    "host_name": "docs.greenhouse.io",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.arbeitnow.com/blog/job-board-api",
+    "name": "Job Board API",
+    "snippet": "Aug 1, 2026 — A public free Job Board API with jobs from Applicant Tracking Systems. requires no API key and API has been documented . This provides jobs from ...",
+    "host_name": "www.arbeitnow.com",
+    "rank": 3,
+    "date": "Aug 1, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://remotive.com/remote-jobs/rss-feed",
+    "name": "Remote Jobs RSS Feed",
+    "snippet": "Check out our RSS Feed documentation . Prefer using our API? Check out our public remote jobs API ! We share 70,000+ remote jobs with our private users!",
+    "host_name": "remotive.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://theirstack.com/job-posting-api",
+    "name": "Job Postings API",
+    "snippet": "1 day ago — Access real-time job postings from 362k websites across 195 countries . Search and filter 251M jobs by 25+ criteria including skills, salary, ...",
+    "host_name": "theirstack.com",
+    "rank": 5,
+    "date": "Oct 10, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://jobtensor.com/top-occupations-it-branche",
+    "name": "Germany's 100 most in-demand IT jobs in 2026",
+    "snippet": "Find out which jobs in the IT industry are most in-demand and where your skills and experiences will make the biggest difference.",
+    "host_name": "jobtensor.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://mantiks.io/job-posting-api/germany-technology",
+    "name": "Germany Technology Job postings API",
+    "snippet": "Seamlessly integrate Germany Technology job postings , access all the Denmark labor market data to automate job listings with our powerful API.",
+    "host_name": "mantiks.io",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,2492 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<!-- Layout Seite, Standard -->
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" />
+<script>
+var siteUrls = {
+	"trip":"/verbindungen/",
+	"tripcaption":"Fahrplanauskunft",
+	"mapTitles": {
+			"default": "Karte",
+			"fnMapShowRoute": "Fahrtroute",
+			"fnSetFromEFA_origin": "Start aus Karte wählen",
+			"fnSetFromEFA_destination": "Ziel aus Karte wählen",
+			"fnSetFromEFA_via": "Zwischenstopp aus Karte wählen",
+			"fnSetFromEFA_dm": "Punkt aus Karte wählen",
+			"fnLoadLine": "Linienverlauf"
+		},
+	"gpsPos":"aktuelle Position"
+}
+</script>
+	<title>Suche | VGN</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+<meta name="Title" content="Suche | VGN" /> 
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+
+<meta name="Creator" content="roccas GmbH, N&uuml;rnberg, http://www.roccas.de/" />
+<meta name="Generator" content="roccas InfoBase, http://www.roccas.de/" />
+
+<meta name="revisit-after" content="30 days" />
+<link rel="icon" href="/favicon.ico?f" type="image/vnd.microsoft.icon">
+
+
+<meta name="robots" content="index" />
+<meta name="robots" content="all" />
+
+
+<meta name="language" content="de" /> 
+
+
+<link href="/ib/site/elements/SourceSans2025.css" rel="stylesheet">
+
+
+<style type="text/css">
+.input .Icon.map {
+	display:none;
+}
+.IconCaption {
+	text-indent:-9999px;
+	font-size:1;
+	line-height:0;
+	display:block;
+}
+audio {
+  width: 180px;
+}
+audio::-webkit-media-controls-volume-slider, 
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-timeline-container, 
+audio::-webkit-media-controls-time-remaining-display,  
+audio::-webkit-media-controls-timeline {
+  display: none !important;
+}
+
+audio::-webkit-media-controls-panel {
+  padding: 0 0 0 1px;
+  justify-content: center; /*control panel elements are flex positioned*/
+}
+</style>
+
+
+<link rel="stylesheet" href="/ib/site/elements/css-2025_0602.css"><script type="text/javascript">
+var COOKIE_REQUIRED = 1;
+var COOKIE_FUNCTIONAL = 1;
+var COOKIE_STATISTIC = 1;
+var COOKIE_REQUIRED = 0;
+var COOKIE_FUNCTIONAL = 0;
+var COOKIE_STATISTIC = 0;
+function fnSpinner() {
+}
+function fnSpinnerHide() {
+}
+var isSSOUser = 0;
+var SSOMode2024 = 0;
+var SSOMode2024 = 1;
+</script>
+
+<script type="text/javascript" src="/ib/site/elements/js-2025_0602.js" ></script>
+
+<script type='text/javascript'>isAdmin=0;</script><script type='text/javascript'>var Edition="de";</script>
+<script type="text/javascript" src="/ib/site/elements/js2-2025_0602.js" ></script>
+
+<link rel="canonical" href="https://www.vgn.de/suche/"/>
+<meta property="og:title" content="Suche" />
+<meta property="og:url" content="https://www.vgn.de/suche/" />
+<meta property="og:image" content="" />
+<meta property="og:site_name" content="VGN" />
+
+
+</head>
+
+
+<body class="hidden-sn 										 noIsAdmin1		NOCOOKIE		 needHyphens lang_de">
+
+<!-- IsAliveMark -->
+
+<div class="output">
+	<a href="#Inhaltsbereich" >Navigation überspringen</a>
+	
+
+<!--noindex-->
+
+
+			<!-- Sidebar navigation -->
+			<ul id="slide-out" class="side-nav right-aligned light-side-nav custom-scrollbar">
+				<!--<div style="height:70px;"></div>-->
+				<!--Search Form-->
+				<li class="main1" style="min-height:50px;">
+					<a class="close" href="#" style="padding-right:20px;padding-top:20px;opacity:1;"><i class="fa rcOutput-close"><span class="IconCaption">Menü schließen</span></i></a>
+										<form id="searchSideForm" class="search-form" role="search" action="/suche/" method="post">
+						<div class="form-group">
+							<input type="hidden" name="results" value="50">
+							<input type="text" class="form-control" id="searchSide" name="query" placeholder="Seite durchsuchen &hellip;">
+							<a class="searchBN waves-effect" href="#"><i class="fa rcOutput-search"><span class="IconCaption">Volltextsuche</span></i></a>
+						</div>
+					</form>
+									</li>
+				<!--/.Search Form-->
+
+				<!-- Side navigation links -->
+				<li class="main">
+					<ul class="main">
+												<li>
+							<a class="waves-effect arrow-l" href="/verbindungen/" title="Verbindungen"
+								><i class="fa left rcOutput-connection"></i><span>Ver­bin­dungen</span></a>
+						</li>
+												<li>
+							<a class="waves-effect arrow-l" href="/abfahrten/" title="Abfahrten"
+								><i class="fa left rcOutput-departures"></i><span>Abfahrten</span></a>
+						</li>
+												<li>
+							<a class="waves-effect arrow-l" href="/tickets/" title="Tickets &amp; Preise"
+								><i class="fa left rcOutput-tickets"></i><span>Tickets &amp; Preise</span></a>
+						</li>
+												<li>
+							<a class="waves-effect arrow-l" href="/fahrplanaenderungen/" title="Fahrplanänderungen"
+								><i class="fa left rcOutput-reports"></i><span>Fahr­plan­ände­rungen</span></a>
+						</li>
+											</ul>
+				</li>
+				<li class="nav2">
+					<ul class="collapsible collapsible-accordion">
+																																																	<li class="sub">
+								<a class="rcLink waves-effect waves-light arrow-l "
+									href="/netz-fahrplaene/"
+									title="Netz &amp; Fahrpläne">
+									<i class="fa left rcOutput-timetable"></i>
+									Netz & Fahrpläne								</a>
+								<a class="rcIcon waves-effect waves-light collapsible-header" href="#"><i class="fa rcOpen rcOutput-keyboard-arrow-down"><span class="IconCaption">Menü erweitern</span></i><i class="fa rcClose rcOutput-close"><span class="IconCaption">Menü schließen</span></i></a>
+								<ul class="sub2 collapsible-body">
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/netz-fahrplaene/linien/"
+											title="Linienfahrpläne">
+											Li­ni­en­fahr­plä­ne										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/netz-fahrplaene/aushangfahrplaene/"
+											title="Aushangfahrpläne">
+											Aus­hang­fahr­plä­ne										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/netz-fahrplaene/ast-aushangfahrplaene/"
+											title="AST-Aushangfahrpläne">
+											AST-Aus­hang­fahr­plä­ne										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/netz-fahrplaene/liniennetze/"
+											title="Liniennetze">
+											Li­ni­en­netze										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/netz-fahrplaene/anrufsammeltaxi/"
+											title="Anrufsammeltaxi">
+											An­ruf­sam­mel­taxi										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/netz-fahrplaene/rufbus/"
+											title="Rufbus">
+											Rufbus										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/netz-fahrplaene/ondemand/"
+											title="On-Demand-Verkehr">
+											On-Demand-Verkehr										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/netz-fahrplaene/tarifzonenplaene/"
+											title="Tarifzonenpläne">
+											Ta­rif­zo­nen­plä­ne										</a>
+									</li>
+																</ul>
+							</li>
+																			<li class="sub">
+								<a class="rcLink waves-effect waves-light arrow-l "
+									href="/freizeit/"
+									title="Freizeit-Tipps">
+									<i class="fa left rcOutput-leisure"></i>
+									Frei­zeit-Tipps								</a>
+								<a class="rcIcon waves-effect waves-light collapsible-header" href="#"><i class="fa rcOpen rcOutput-keyboard-arrow-down"><span class="IconCaption">Menü erweitern</span></i><i class="fa rcClose rcOutput-close"><span class="IconCaption">Menü schließen</span></i></a>
+								<ul class="sub2 collapsible-body">
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/freizeit/familienexpedition"
+											title="Familienexpedition">
+											Familienexpedition										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/freizeit/staedtetouren/"
+											title="Städtetouren">
+											Städtetouren										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/freizeit/bonusziele/"
+											title="Bonusziele">
+											Bonusziele										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/freizeit/wandern/"
+											title="Wander-Routen">
+											Wandern										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/freizeitlinien/"
+											title="Freizeitlinien">
+											Frei­zeit­li­ni­en										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/freizeit/genusstouren"
+											title="Genusstouren">
+											Genusstouren										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/naturparke"
+											title="Naturpark-Erlebnis">
+											Naturpark-Erlebnis										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/freizeit/radtouren/"
+											title="Radtouren">
+											Radtouren										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/freizeit/wandern/archiv"
+											title="Archiv Wander-Routen">
+											Archiv Wander-Routen										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/freizeit/radtouren/archiv"
+											title="Archiv Radtouren">
+											Archiv Radtouren										</a>
+									</li>
+																</ul>
+							</li>
+																			<li class="sub">
+								<a class="rcLink waves-effect waves-light arrow-l "
+									href="/service/"
+									title="Service">
+									<i class="fa left rcOutput-service"></i>
+									Service								</a>
+								<a class="rcIcon waves-effect waves-light collapsible-header" href="#"><i class="fa rcOpen rcOutput-keyboard-arrow-down"><span class="IconCaption">Menü erweitern</span></i><i class="fa rcClose rcOutput-close"><span class="IconCaption">Menü schließen</span></i></a>
+								<ul class="sub2 collapsible-body">
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/service/smaxi"
+											title="VGNsmaxi – mein Schulportal">
+											VGNsmaxi										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/service/meinvgn"
+											title="meinVGN – mein Login für alle VGN-Dienste">
+											meinVGN										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/service/app/"
+											title="Natürlich ist der VGN auch digital unterwegs für Sie">
+											App »VGN Fahrplan & Tickets«										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/8829bc26-3774-bbab-6791-b57c05f2546d"
+											title="VGN Onlineshop">
+											VGN On­line­shop										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/service/kundenbueros-verkaufsstellen/"
+											title="Kundenbüros &amp; Verkaufsstellen">
+											Kun­den­bü­ros & Ver­kaufs­stel­len										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/service/prospekt-versand/"
+											title="Prospekt-Versand">
+											Prospekt-Versand										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/service/downloads/"
+											title="Downloads">
+											Downloads										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/service/einfach-erklaert"
+											title="Einfach erklärt – alles rund um den VGN.">
+											Ein­fach erklärt										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/service/park-and-ride/"
+											title="Park &amp; Ride-Parkplätze">
+											Park & Ride										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/service/nightliner/"
+											title="Wochenend-Kavalier: Der Nachtbus für Nachtschwärmer">
+											NightLiner										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/service/bus-stoppt/"
+											title="Nachts hält der Bus für Sie auch zwischen den Haltestellen">
+											Extra-Stopp										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/service/taxiruf/"
+											title="Wir lassen Sie auch nach dem Aussteigen nicht gehen">
+											Taxiruf										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/service/mobilitaetsberater/"
+											title="Mobilitätsberater">
+											Mo­bi­li­täts­be­ra­ter										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/service/infomobil/"
+											title="Das VGN-InfoMobil: Für Sie im gesamten Verbundgebiet unterwegs!">
+											VGN-InfoMobil										</a>
+									</li>
+																</ul>
+							</li>
+																			<li class="sub">
+								<a class="rcLink waves-effect waves-light arrow-l "
+									href="/ratgeber/"
+									title="Ihr Verbund für die unterschiedlichsten Bedürfnisse">
+									<i class="fa left rcOutput-adviser"></i>
+									Rat­ge­ber								</a>
+								<a class="rcIcon waves-effect waves-light collapsible-header" href="#"><i class="fa rcOpen rcOutput-keyboard-arrow-down"><span class="IconCaption">Menü erweitern</span></i><i class="fa rcClose rcOutput-close"><span class="IconCaption">Menü schließen</span></i></a>
+								<ul class="sub2 collapsible-body">
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/ratgeber/mobilitaet-fuer-alle/"
+											title="Ein barrierefreier Nahverkehr nützt allen">
+											Bar­ri­e­re­frei­heit										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/ratgeber/kinder/"
+											title="Wir begleiten Ihre Kinder beim Großwerden">
+											Kinder										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/ratgeber/fahrrad/"
+											title="Sie fahren Ihre Radtour. Den Rest fahren wir">
+											Fahr­rad­mit­nah­me										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/ratgeber/fundbueros/"
+											title="Was liegen lassen geht schnell, was wiederfinden oft auch">
+											Fund­sachen										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/ratgeber/tiere/"
+											title="Ihr Hund darf gerne mit uns Gassi fahren">
+											Mitnahme von Hunden und kleinen Tieren										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/ratgeber/verbundpass/"
+											title="Erst der Verbundpass macht aus einer Zeitkarte Ihre Zeitkarte">
+											Ver­bund­pass										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/ratgeber/verbundpass-ausbildung/"
+											title="Mit einem Verbundpass Ausbildung sparst du jeden Monat">
+											Ver­bund­pass Aus­bil­dung										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/ratgeber/zonenkarte/"
+											title="Auf der Zonenkarte steht, wo Ihre MobiCard fährt">
+											Zo­nen­karte										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/ratgeber/vgn-tarif/"
+											title="Zonen, Tarife und Preisstufen: Das Wichtigste zum VGN-Tarif">
+											VGN-Tarif										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/ratgeber/kurzstrecke/"
+											title="Ein paar Stationen fahren lohnt sich nicht? – Von wegen">
+											Kurz­stre­cken­re­ge­lung										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/ratgeber/betriebsschluss/"
+											title="Für den VGN ist der Tag erst um 3 Uhr morgens vorbei">
+											Be­triebs­schluss										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/ratgeber/preisaenderung-jahreswechsel/"
+											title="Trotz neuer Preise: Ihr altes Ticket verfällt noch lange nicht">
+											Preis­än­de­rung zum Jah­res­wech­sel										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/ratgeber/feiertage/"
+											title="An Feiertagen sind auch unsere Ticketregeln ganz entspannt">
+											Fei­er­tage										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/ratgeber/nuernberg-hauptbahnhof/"
+											title="Hauptbahnhof Nürnberg">
+											Haupt­bahn­hof Nürn­berg										</a>
+									</li>
+																</ul>
+							</li>
+																			<li class="sub">
+								<a class="rcLink waves-effect waves-light arrow-l "
+									href="/neuigkeiten/"
+									title="Neues aus dem VGN">
+									<i class="fa left rcOutput-news"></i>
+									Neuigkeiten								</a>
+								<a class="rcIcon waves-effect waves-light collapsible-header" href="#"><i class="fa rcOpen rcOutput-keyboard-arrow-down"><span class="IconCaption">Menü erweitern</span></i><i class="fa rcClose rcOutput-close"><span class="IconCaption">Menü schließen</span></i></a>
+								<ul class="sub2 collapsible-body">
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/neuigkeiten/herbst"
+											title="Herbstausflüge im VGN">
+											Herbstausflüge im VGN										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/neuigkeiten/express-490e"
+											title="Neue Expressbuslinie 490 E">
+											Neue Expressbus­linie 490 E										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/neuigkeiten/generalsanierung"
+											title="Beliebte Wandertipps wieder mit dem Zug erreichbar">
+											Beliebte Wandertipps wieder mit dem Zug erreichbar										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/neuigkeiten/freifahrten-herzo-gun"
+											title="Freie Fahrt in Herzogenaurach und Gunzenhausen">
+											Freie Fahrt in Herzogen­aurach und Gun­zen­hau­sen										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/neuigkeiten/freizeittipps-2026"
+											title="Sieben neue VGN-­Freizeit-Tipps für Outdoor, Stadt und Genuss">
+											Sieben neue VGN-­Frei­zeit-Tipps für Outdoor, Stadt und Genuss										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/neuigkeiten/tarifreform"
+											title="Tarifreform im VGN">
+											Tarifreform im VGN										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/neuigkeiten/fahrgastbefragung"
+											title="Fahrgastbefragung im VGN">
+											Fahr­gastbefragung im VGN										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/neuigkeiten/egon-next-level"
+											title="egon in deiner VGN App">
+											egon in deiner VGN App										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/neuigkeiten/staedtetipps"
+											title="Kultur und Genuss in der City: VGN-Streifzüge durch Ansbach, Bamberg, Fürth und Forchheim">
+											Kultur und Genuss in der City										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/neuigkeiten/fahrplaene-digital"
+											title="VGN setzt voll auf digitale Fahrplaninformation">
+											VGN setzt voll auf digitale Fahrplanin­for­ma­ti­on										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/neuigkeiten/smaxi"
+											title="VGNsmaxi – mein Schulportal">
+											VGNsmaxi – mein Schulportal										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/neuigkeiten/escooter"
+											title="Mitnahmeverbot für eScooter">
+											Mitnahmeverbot für eScooter										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/neuigkeiten/spnv"
+											title="Diese Züge fahren im VGN">
+											Diese Züge fahren im VGN										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/neuigkeiten/instagram-freizeit"
+											title="Der VGN Freizeitverkehr auf Instagram">
+											VGN Frei­zeit auf Instagram										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="Javascript:fnOpenWindow('0461912c-75cb-745e-c6b5-1990b65f7a32','/neuigkeiten/manni_semester','e1920710-fc82-967a-22bb-0e78ad270efa')"
+											title="Manni Semester - Der Botschafter des ermäßigten Deutschlandtickets">
+											Manni Se­mes­ter										</a>
+									</li>
+																</ul>
+							</li>
+																			<li class="sub">
+								<a class="rcLink waves-effect waves-light arrow-l "
+									href="/fuer/"
+									title="Der VGN für alle">
+									<i class="fa left rcOutput-your-vgn"></i>
+									VGN für alle								</a>
+								<a class="rcIcon waves-effect waves-light collapsible-header" href="#"><i class="fa rcOpen rcOutput-keyboard-arrow-down"><span class="IconCaption">Menü erweitern</span></i><i class="fa rcClose rcOutput-close"><span class="IconCaption">Menü schließen</span></i></a>
+								<ul class="sub2 collapsible-body">
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/fuer/schueler/"
+											title="Im günstigsten Fall bekommst du dein Schulticket kostenlos">
+											Schülerinnen und Schüler										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/fuer/studierende/"
+											title="Für den täglichen Weg zur Uni">
+											Stu­die­rende										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/fuer/pendler/"
+											title="Für Ihr Leben vor und nach der Arbeit">
+											Pendler										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/fuer/touristen/"
+											title="Von A nach B heißt bei uns VGN">
+											Touristen										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/fuer/messegaeste/"
+											title="Wir bringen Sie stressfrei zur Messe Nürnberg">
+											Mes­se­be­suchende										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/fuer/stadion-arena-nuernberg/"
+											title="Nur so zum Spaß:  Wir fahren Sie direkt vors Stadion und vor die Arena">
+											Sta­di­on­gän­ger in Nürn­berg										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/fuer/stadion-fuerth/"
+											title="Der VGN für Kleeblatt-Fans">
+											Sta­di­on­gän­ger in Fürth										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/fuer/flugreisende/"
+											title="Kein Stau, kein Stress: Manchmal können Bus und Bahn fliegen">
+											Flug­rei­sen­de										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/fuer/unternehmen/"
+											title="Der VGN für Unternehmen">
+											Un­ter­neh­men										</a>
+									</li>
+																									<li class="sub2">
+										<a class="waves-effect waves-light arrow-l "
+											href="/fuer/stadt-menschen/"
+											title="Nutzen Sie unsere gesammelte Stadt-Erfahrung">
+											Städter und Stadt­be­su­cher										</a>
+									</li>
+																</ul>
+							</li>
+											</ul>
+				</li>
+
+
+				<!--/. Side navigation links -->
+				<!--<div class="sidenav-bg mask-strong"></div>-->
+				<li class="nav2 nav3">
+					<a class="link waves-effect" href="/en/"><i class="fa rcOutput-english"></i>English</a>
+					<!--
+					<a class="link waves-effect" href="/kontakt/"><i class="fa rcOutput-arrow-forward"></i>Service &amp; Kontakt</a>
+					<a class="link waves-effect" href="/ueber-uns/"><i class="fa rcOutput-arrow-forward"></i>&Uuml;ber uns</a>
+					-->
+											<a class="link waves-effect" href="/web-entwickler/" title="Web-Entwickler">
+							<i class="fa rcOutput-arrow-forward"></i>Web-Entwickler						</a>
+											<a class="link waves-effect" href="/presse/" title="Presse">
+							<i class="fa rcOutput-arrow-forward"></i>Presse						</a>
+											<a class="link waves-effect" href="/planungsprojekte/" title="Planungsprojekte">
+							<i class="fa rcOutput-arrow-forward"></i>Pla­nungs­pro­jekte						</a>
+											<a class="link waves-effect" href="/intern/" title="Willkommen!">
+							<i class="fa rcOutput-arrow-forward"></i>VGN-Intern						</a>
+											<a class="link waves-effect" href="/barrierefreiheitserklaerung" title="Erklärung zur Barrierefreiheit">
+							<i class="fa rcOutput-arrow-forward"></i>Erklärung zur Bar­ri­e­re­frei­heit						</a>
+											<a class="link waves-effect" href="/stellenangebote" title="Stellenangebote">
+							<i class="fa rcOutput-arrow-forward"></i>Stellenan­ge­bote						</a>
+																<a class="link waves-effect" href="/regelungen/" title="Regelungen im VGN: VGN-Gemeinschaftstarif">
+							<i class="fa rcOutput-arrow-forward"></i>Re­ge­lungen						</a>
+											<a class="link waves-effect" href="/ueber-uns/" title="Verkehrsverbund Großraum Nürnberg: Wir begleiten Ihr mobiles Leben">
+							<i class="fa rcOutput-arrow-forward"></i>Über uns						</a>
+											<a class="link waves-effect" href="/kontakt/" title="Helfen Sie uns besser zu werden!">
+							<i class="fa rcOutput-arrow-forward"></i>Kon­takt						</a>
+											<a class="link waves-effect" href="/impressum/" title="Impressum">
+							<i class="fa rcOutput-arrow-forward"></i>Impressum						</a>
+											<a class="link waves-effect" href="/datenschutz/" title="Datenschutzerklärung">
+							<i class="fa rcOutput-arrow-forward"></i>Da­ten­schutz						</a>
+									</li>
+				<li class="nav2 nav4">
+					<p class="h2">Wir sind f&uuml;r Sie da:</p>
+					<div class="service">
+						<i class="fa rcOutput-service-mobile"></i>
+						24h-Servicetelefon:<br>
+						0911 270 75-99					</div>
+					
+					<a href="mailto:info@vgn.de" class="service waves-effect">
+						<i class="fa rcOutput-email"></i>
+						info@vgn.de					</a>
+				</li>
+			</ul>
+			<!--/. Sidebar navigation -->
+			
+<!--/noindex-->
+
+</div>
+
+
+
+<div id="Layoutrahmen">
+	<div id="Layoutbereich" class="output">
+
+		<header class="navheader noprint mainHeader">
+			
+<!--noindex-->
+
+<div class="navcnt">
+	<nav class="navbar fixed-top xxnavbar-toggleable-md navbar-dark scrolling-navbar double-nav" style="display:block;">
+		<div class="LogoO"><a class="Logo" href="/" title="zur Startseite"
+			><img src="/ib/site/elements/layout/Logo.svg" alt=""></a></div>
+		<!-- SideNav slide-out button -->
+		<div class="nav1">
+			<div class="nav2 nav2a">
+				<div class="sru">
+					<img src="/ib/site/elements/layout/sru.svg" alt="">
+				</div>
+				<div class="quicklinks">
+											<a class="waves-effect " href="/verbindungen/" title="Verbindungen"
+							><i class="fa rcOutput-connection"></i><span class="caption hidden-sm-down">Ver­bin­dungen</span></a>
+											<a class="waves-effect " href="/abfahrten/" title="Abfahrten"
+							><i class="fa rcOutput-departures"></i><span class="caption hidden-sm-down">Abfahrten</span></a>
+											<a class="waves-effect " href="/tickets/" title="Tickets &amp; Preise"
+							><i class="fa rcOutput-tickets"></i><span class="caption hidden-sm-down">Tickets &amp; Preise</span></a>
+											<a class="waves-effect hidden-rcs" href="/fahrplanaenderungen/" title="Fahrplanänderungen"
+							><i class="fa rcOutput-reports"></i><span class="caption hidden-sm-down">Fahr­plan­ände­rungen</span></a>
+									</div>
+			</div>
+
+			<div class="nav2 nav2b">
+				<div class="nav3">
+					<div class="mainnav hidden-sm-down">
+																																										<a class=" waves-effect" href="/netz-fahrplaene/" title="Netz &amp; Fahrpläne">
+							<span class="caption">Netz & Fahrpläne</span>
+						</a>
+																		<a class=" waves-effect" href="/freizeit/" title="Freizeit-Tipps">
+							<span class="caption">Frei­zeit-Tipps</span>
+						</a>
+																		<a class=" waves-effect" href="/service/" title="Service">
+							<span class="caption">Service</span>
+						</a>
+																		<a class=" waves-effect" href="/ratgeber/" title="Ihr Verbund für die unterschiedlichsten Bedürfnisse">
+							<span class="caption">Rat­ge­ber</span>
+						</a>
+																		<a class=" waves-effect" href="/neuigkeiten/" title="Neues aus dem VGN">
+							<span class="caption">Neuigkeiten</span>
+						</a>
+																		<a class=" waves-effect" href="/fuer/" title="Der VGN für alle">
+							<span class="caption">VGN für alle</span>
+						</a>
+											</div>
+					<div class="icnav">
+																<div class="mnsearch ">
+						<form action="/suche/">
+							<div style="display:inline-block;position:relative;vertical-align:top;z-index:1;">
+								<div class="md-form" style="">
+									<input class="form-control" type="text" name="query" style="margin:0; padding:0; height:48px;">
+									<input type="hidden" name="results" value="50">
+								</div>
+							</div>
+							<a href="#" class="waves-effect" title="Volltextsuche">
+								<i class="fa rcOutput-search"></i> <span class="hidden-scrolled caption">Suche</span>
+							</a>
+						</form>
+						</div>
+																						<style type="text/css">
+							.SSO {
+								display:inline-block;
+								vertical-align:top;
+							}
+							.SSO:not(.noAccount) .bnLogin {
+								display:none;
+							}
+							.SSO.noAccount .bnUser {
+								display:none;
+							}
+							.myBN:not(.myBNSSO) {
+								display:none ! important;
+							}
+						</style>
+						<script>
+						function fnSSO_Logout() {
+							delete_cookie("Identity", "/");
+							jQuery(".SSO").addClass("noAccount");
+							jQuery(".myBNSSO").removeClass("myBNSSO");
+							isSSOUser = 0;
+							fnMoreOverflow_Off();
+							jQuery(".EFA-Favourites-Container").remove();
+						}
+						var isSSOMode = true;
+						var testdummy = 1;
+						</script>
+												<script>
+							var isSSOUser = 0;
+						</script>
+						<div class="SSO noAccount">
+							<!--
+							<a href="/ib/site/tools/SSOLogin.php/suche/" class="bnLogin waves-effect nocaption">
+								<i class="fa rcOutput-login"></i>
+							</a>
+							-->
+							<!--
+							<a href="javascript:showMyMenu()" class="bnAccount waves-effect nocaption">
+								<i class="fa rcOutput-logged-in"></i>
+							</a>
+							-->
+							<span class="MoreOverflow bnLogin" style="vertical-align:top; width:auto; height:auto;">
+								<a class="Button NT-Inline waves-effect" href="#" title="mein_VGN-Anmeldung"><span class="HiddenText">mein_VGN</span><span class="fa rcOutput-login"></span></a>
+									
+								<span class="Menu">
+									<span class="Menu-2">
+										<a href="/ib/site/tools/SSOLogin.php/suche/" class="Schalter waves-effect" data-title="Login">
+											<span class="Icon rcOutput-login"></span>
+											Login										</a>
+									</span>
+								</span>
+							</span>
+							<span class="MoreOverflow bnUser" style="vertical-align:top; width:auto; height:auto;">
+								<a class="Button NT-Inline waves-effect" href="#" title="mein_VGN-Konto"><span class="HiddenText">mein_VGN</span><span class="fa rcOutput-logged-in"></span></a>
+									
+								<span class="Menu">
+									<span class="Menu-2">
+										<span style="padding:12px; display:block; white-space:initial;">
+											angemeldet als:											<b style="display:inline-block; vertical-align:top; white-space:nowrap;text-overflow:ellipsis;overflow:hidden;max-width:200px;"
+												></b>
+										</span>
+<!--
+<a href="#" class="Schalter Favoriten waves-effect" data-title="Favoriten">
+					<span class="Icon rcOutput-star-outline"></span>
+					Favoriten			</a>
+-->
+										<a href="https://nutzerkonto.vgn.de" target="_blank" class="Schalter waves-effect" data-title="Nutzerkonto">
+											<span class="Icon rcOutput-login"></span>
+											Nutzerkonto										</a>
+										<a href="#" class="Schalter Favoriten waves-effect" data-title="Favoriten">
+											<span class="Icon rcOutput-star-outline"></span>
+											Favoriten										</a>
+										<a href="javascript:fnSSO_Logout()" class="Schalter waves-effect" data-title="Abmelden">
+											<span class="Icon rcOutput-logoff"></span>
+											Abmelden										</a>
+									</span>
+								</span>
+							</span>
+						</div>
+						
+												<a href="/en/" class="hidden-sm-down waves-effect nocaption" title="to english version">
+							<i class="fa rcOutput-english"></i>
+						</a>
+						<a href="#" class="bnUp waves-effect nocaption" title="Men&uuml; einblenden"><i class="fa rcOutput-menu"></i></a>
+						<a href="#" data-activates="slide-out" class="hidden-md-up waves-effect button-sidebar"
+							title="Men&uuml; einblenden"><i class="fa rcOutput-menu"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</nav>
+	
+</div>
+
+<!--/noindex-->
+
+		</header>
+
+		<!--noindex-->
+		<header class="FilterHeader noprint" style="display:none;">
+			<div class="FilterHeader2">
+			<nav class="FilterHeaderContent">
+				<div class="inner">
+					<div class="left">
+						<a class="filterShowFilter filterShowFilterMain nav-link waves-effect" href="#"><i class="fa rcOutput-chevron-left"></i><span class="caption filterHits">Treffer <span class="filterHits2"></span></span></a>
+						<a class="filterShowFilter filterShowFilterPT nav-link waves-effect" href="#"><i class="fa rcOutput-chevron-left"></i><span class="caption filterHits">Vergleich <span class="filterHits2"></span></span></a>
+					</div>
+					
+					<div class="right">
+						<a class="filterShowCart waves-effect" href="#"><i class="fa rcOutput-mailorder"></i><span class="caption_container"><span class="caption">Prospektbestellung </span><span class="productCount"></span></span></a>
+						<a class="filterShowFilterOpen waves-effect" href="#"><i class="fa rcOutput-preferences"></i><span class="caption">Filter <span class="filterCount"></span></span></a>
+						<a class="filterShowMap waves-effect" href="#"><i class="fa rcOutput-area"></i><span class="caption">Zeige Karte</span></a>
+					</div>
+					<img src="/ib/site/elements/layout/Logo.svg" class="PrintLogo" alt="" aria-hidden="true" style="display:none">
+				</div>
+			</nav>
+			</div>
+		</header>
+		<header class="SectionHeader noprint" id="spybar">
+			<nav class="SectionHeader2"><div class="SectionHeader2b">
+				<a class="sectionBack waves-effect" href="#"><i class="fa rcOutput-chevron-left"></i></a>
+				<div class="SectionHeader3"></div>
+			</div></nav>
+		</header>
+
+		<!--/noindex-->
+		
+		
+		
+		<div id="Layoutbereich_Innen" style="overflow:hidden;">
+			<main id="Inhaltsbereich">
+			
+				
+
+				<div id="Inhaltsbereich_Innen">
+
+					<!-- Mittlere Spalte -->
+					<div class="container-fluid">
+
+												<div class="row">
+							<div class="col-12">
+								<!--noindex-->
+								<div style="margin-bottom:0.5em; line-height:1.5em;"><a href="/">Start</a> <span style="display:inline-block;margin-top:calc(1em - 19px);vertical-align:text-top;"><span class="Icon rcOutput-chevron-right" style="display:block;font-size:16px;"></span></span> <a href="/suche/">Suche</a></div>
+								<div id="bnCart"><a class="btn btn-primary waves-effect" href="/service/prospekt-versand/"
+									>Prospektbestellung <span class="productCount3">0</span><i class="fa rcOutput-chevron-right"></i></a></div>
+								<!--/noindex-->
+																										<h1>
+										Suche																			</h1>
+															</div>
+						</div>
+						<div class="clear"></div>
+						
+						<div>
+
+									
+		
+		
+										
+		
+		
+						
+
+<!-- Kasten Hyperparagraphs -->
+
+
+<!-- Einleitungstext, Menue -->
+	<div class="row"><div class="BoxGap Box_Search_Sphinx Box_idx0 col-12 col-lg-12">
+<style type="text/css">
+em {
+	font-weight:bold;
+}
+</style>
+<div class="BoxPadding">
+
+<!-- Suchmaske -->
+<div class="FilterArea" style="background:#ebebeb;">
+<form class="Filter" action="/suche/" method="get" name="search" id="searchForm" style="margin-top:2em;">
+<div class="FormAHF FormAHF2">
+
+	<input type="hidden" name="results" value="50">
+	<div class="md-form">
+		<!--<i class="fa fa-envelope prefix"></i>-->
+		<input type="text" id="query" name="query" class="form-control" value="" placeholder="Suchbegriff">
+		<!--<label class="active" for="query">Suchbegriff</label>-->
+	</div>
+	
+	<!-- Schaltflaeche senden -->
+	<div class="text-right">
+		<a class="btn btn-primary waves-effect" href="Javascript:jQuery('#searchForm').submit()">
+			<span>Suchen<span class="fa right rcOutput-arrow-forward"></span></span>
+		</a>
+	</div>
+
+</div>
+</form>
+</div>
+
+<script type="text/javascript">
+		var suggest_Search_Tools;
+	jQuery(document).ready(function(){
+		options = { 
+			serviceUrl:'/ib/site/tools/Search_Suggest.php',
+			minChars:2, 
+			//delimiter: /(,|;)\s*/, // regex or character
+			maxHeight:300,
+			//width:220,
+			zIndex: 9999,
+			deferRequestBy: 0, //miliseconds
+			params: {}, //aditional parameters
+			noCache: false, //default is false, set to true to disable caching
+			// callback function:
+			onSelect: function(value, data) {
+				jQuery('#query').val(data.name);
+				jQuery("#searchForm").submit();
+			}
+		};
+		suggest_Search_Tools = jQuery('#query').autocompleteSearch(options);
+	});
+</script>
+
+<!-- Ergebnis -->
+
+<div style="margin:0 auto; margin-top:2em;">
+</div>
+
+</div>
+</div></div>	
+
+
+
+<!-- Abschnitte -->
+
+
+
+
+
+
+
+													</div>
+
+
+						<div>
+							<!-- Ausgabebereich 3 -->
+														
+						</div>
+						
+						<div>
+													</div>
+
+						<div class="clear"></div>
+
+					</div>
+
+				</div>
+			</main>
+			
+		</div>
+		
+	</div>
+
+			
+
+
+<!-- Sitemap, Fuss -->
+
+<!--noindex-->
+
+<footer class="page-footer output noprint">
+	<div class="container-fluid">
+		<div class="borderB" style="margin-bottom:20px;">
+			<div class="row">
+				<div class="col-md-6 col-12 xxNavA" style="position:relative; margin-bottom:-10px;">
+					<img src="/ib/site/elements/layout/Logo.svg" alt="" style="display:block; position:absolute; left:0; top:0; width:20%; transform: scale(1.2);">
+					<div style="padding-left:20%;">
+						
+
+<!-- Kasten Redaktion, Baustein -->
+
+<div><!-- No Padding (Nested) -->
+
+<div><div class="row"><div class="BoxGap Box_Text Box_idx0 col-12 col-lg-12">
+
+<!-- Kasten Text -->
+
+
+	<!-- einspaltiger Text -->
+	<div class="RichText">
+		
+<p class="h3">Ver­kehrs­ver­bund Groß­raum Nürn­berg</p>
+<p>22.000 Qua­drat­ki­lo­me­ter. 130 Ver­kehrs­un­ter­neh­men. 1.100 Linien. Eine Fahr­kar­te.</p>	</div>
+
+
+</div></div></div>
+</div>
+
+					</div>
+				</div>
+				<div class="col-md-6 col-12 xxNavA hidden-sm-down" style="image-rendering:-webkit-optimize-contrast">
+					
+
+<!-- Kasten Firmenuebersicht, Partner -->
+
+<p class="h5" style="text-transform:none;">Partner im VGN</p>
+<div class="row" style="margin:0;">
+	<div class="col-1" style="padding:0 1% 0 0;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;-webkit-flex: 0 0 10%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;">
+		<a href="/ueber-uns/gesellschafter/"
+		data-title="VAG Verkehrs-Aktiengesellschaft" class="gesellschafter hoverEffect"
+		
+		><img src="/ib/site/elements/Leer.gif"
+			data-src="/ib/site/documents/image/media/parAddressList_Partner_Thumb1a/87b948ea-5a3d-6ebb-3fe2-52dac19633d4_9948c20d-b183-69bf-fcc6-794902a497f9_cntIdImage_6e4db1e3c35ca66fb6a14fed241fa683.jpg?Width=80&amp;Height=40&amp;Extend=80x40&amp;Sharpen=0&amp;Quality=90&amp;OF=adapt&amp;Confirm=1" 
+				alt=""
+			></a>
+	</div>
+	<div class="col-1" style="padding:0 1% 0 0;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;-webkit-flex: 0 0 10%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;">
+		<a href="/ueber-uns/gesellschafter/"
+		data-title="DB Regio AG" class="gesellschafter hoverEffect"
+		
+		><img src="/ib/site/elements/Leer.gif"
+			data-src="/ib/site/documents/image/media/parAddressList_Partner_Thumb1a/dbe0edf5-4b40-0c5f-0b32-425c19f11d47_a3733a2b-14a8-bbe5-469f-541fb2c8e08e_cntIdImage_6e4db1e3c35ca66fb6a14fed241fa683.jpg?Width=80&amp;Height=40&amp;Extend=80x40&amp;Sharpen=0&amp;Quality=90&amp;OF=adapt&amp;Confirm=1" 
+				alt=""
+			></a>
+	</div>
+	<div class="col-1" style="padding:0 1% 0 0;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;-webkit-flex: 0 0 10%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;">
+		<a href="/ueber-uns/gesellschafter/"
+		data-title="Erlanger Stadtwerke" class="gesellschafter hoverEffect"
+		
+		><img src="/ib/site/elements/Leer.gif"
+			data-src="/ib/site/documents/image/media/parAddressList_Partner_Thumb1a/5460f135-84ff-462f-82fe-800d224c755b_3fa2ccc5-cd75-7e91-4aa8-e320dd1ae826_cntIdImage_6e4db1e3c35ca66fb6a14fed241fa683.jpg?Width=80&amp;Height=40&amp;Extend=80x40&amp;Sharpen=0&amp;Quality=90&amp;OF=adapt&amp;Confirm=1" 
+				alt=""
+			></a>
+	</div>
+	<div class="col-1" style="padding:0 1% 0 0;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;-webkit-flex: 0 0 10%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;">
+		<a href="/ueber-uns/gesellschafter/"
+		data-title="infra fürth verkehr gmbh" class="gesellschafter hoverEffect"
+		
+		><img src="/ib/site/elements/Leer.gif"
+			data-src="/ib/site/documents/image/media/parAddressList_Partner_Thumb1a/076d2191-ec2c-15eb-68f2-fd715b8cde4b_44841217-bd17-01b7-2d72-8d5fc9234f48_cntIdImage_6e4db1e3c35ca66fb6a14fed241fa683.jpg?Width=80&amp;Height=40&amp;Extend=80x40&amp;Sharpen=0&amp;Quality=90&amp;OF=adapt&amp;Confirm=1" 
+				alt=""
+			></a>
+	</div>
+	<div class="col-1" style="padding:0 1% 0 0;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;-webkit-flex: 0 0 10%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;">
+		<a href="/ueber-uns/gesellschafter/"
+		data-title="Stadtwerke Bayreuth Verkehr und" class="gesellschafter hoverEffect"
+		
+		><img src="/ib/site/elements/Leer.gif"
+			data-src="/ib/site/documents/image/media/parAddressList_Partner_Thumb1a/ce729e7d-f300-f763-22ef-35f20d728719_53dc2b63-528b-04d8-9d37-77682108cdfd_cntIdImage_6e4db1e3c35ca66fb6a14fed241fa683.jpg?Width=80&amp;Height=40&amp;Extend=80x40&amp;Sharpen=0&amp;Quality=90&amp;OF=adapt&amp;Confirm=1" 
+				alt=""
+			></a>
+	</div>
+	<div class="col-1" style="padding:0 1% 0 0;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;-webkit-flex: 0 0 10%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;">
+		<a href="/ueber-uns/gesellschafter/"
+		data-title="Omnibusverkehr Franken GmbH (OVF)" class="gesellschafter hoverEffect"
+		
+		><img src="/ib/site/elements/Leer.gif"
+			data-src="/ib/site/documents/image/media/parAddressList_Partner_Thumb1a/8a38b89f-9ae6-8e83-e346-a9ae8317f159_2d7ed017-1dcb-a326-c1d2-724dbaf4b812_cntIdImage_6e4db1e3c35ca66fb6a14fed241fa683.jpg?Width=80&amp;Height=40&amp;Extend=80x40&amp;Sharpen=0&amp;Quality=90&amp;OF=adapt&amp;Confirm=1" 
+				alt=""
+			></a>
+	</div>
+	<div class="col-1" style="padding:0 1% 0 0;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;-webkit-flex: 0 0 10%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;">
+		<a href="/ueber-uns/gesellschafter/"
+		data-title="Stadtverkehr Schwabach GmbH" class="gesellschafter hoverEffect"
+		
+		><img src="/ib/site/elements/Leer.gif"
+			data-src="/ib/site/documents/image/media/parAddressList_Partner_Thumb1a/624bef90-0da9-9633-ce59-9233574f6f0c_a88a2f68-5275-23cc-59de-25f34d5dbc2c_cntIdImage_6e4db1e3c35ca66fb6a14fed241fa683.jpg?Width=80&amp;Height=40&amp;Extend=80x40&amp;Sharpen=0&amp;Quality=90&amp;OF=adapt&amp;Confirm=1" 
+				alt=""
+			></a>
+	</div>
+	<div class="col-1" style="padding:0 1% 0 0;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;-webkit-flex: 0 0 10%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;">
+		<a href="/ueber-uns/gesellschafter/"
+		data-title="Stadtwerke Bamberg" class="gesellschafter hoverEffect"
+		
+		><img src="/ib/site/elements/Leer.gif"
+			data-src="/ib/site/documents/image/media/parAddressList_Partner_Thumb1a/f9cfcc1c-c7a1-135f-f09f-2cb8aab834e6_decf1331-fec1-b033-7b5d-6fd77ca4454d_cntIdImage_6e4db1e3c35ca66fb6a14fed241fa683.jpg?Width=80&amp;Height=40&amp;Extend=80x40&amp;Sharpen=0&amp;Quality=90&amp;OF=adapt&amp;Confirm=1" 
+				alt=""
+			></a>
+	</div>
+	<div class="col-1" style="padding:0 1% 0 0;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;-webkit-flex: 0 0 10%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;">
+		<a href="/ueber-uns/gesellschafter/"
+		data-title="GPV GmbH" class="gesellschafter hoverEffect"
+		
+		><img src="/ib/site/elements/Leer.gif"
+			data-src="/ib/site/documents/image/media/parAddressList_Partner_Thumb1a/274c7e6b-be9b-6603-411a-abe1b0a0652a_5e3fc88e-0ec2-b34f-08db-90e2dec42f2c_cntIdImage_6e4db1e3c35ca66fb6a14fed241fa683.jpg?Width=80&amp;Height=40&amp;Extend=80x40&amp;Sharpen=0&amp;Quality=90&amp;OF=adapt&amp;Confirm=1" 
+				alt=""
+			></a>
+	</div>
+	<div class="col-1" style="padding:0 1% 0 0;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;-webkit-flex: 0 0 10%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;">
+		<a href="/ueber-uns/gesellschafter/"
+		data-title="GkV Gesellschaft kommunaler" class="gesellschafter hoverEffect"
+		
+		><img src="/ib/site/elements/Leer.gif"
+			data-src="/ib/site/documents/image/media/parAddressList_Partner_Thumb1a/14875bff-d75f-9035-b7a6-ef9429d061e2_2e9e0c17-113b-9647-d53a-c03e37f89a53_cntIdImage_6e4db1e3c35ca66fb6a14fed241fa683.jpg?Width=80&amp;Height=40&amp;Extend=80x40&amp;Sharpen=0&amp;Quality=90&amp;OF=adapt&amp;Confirm=1" 
+				alt=""
+			></a>
+	</div>
+</div>				</div>
+			</div>
+		</div>
+		<div class="borderB">
+			<div class="row">
+				<div class="col-md-3 col-12">
+					<div class="mainChapter borderB2" style="padding-bottom:20px;margin-bottom:7px;margin-top:-0px;">
+											<a class="waves-effect" href="/verbindungen/" title="Verbindungen"
+							><i class="fa rcOutput-connection"></i><span class="caption">Ver­bin­dungen</span></a>
+											<a class="waves-effect" href="/abfahrten/" title="Abfahrten"
+							><i class="fa rcOutput-departures"></i><span class="caption">Abfahrten</span></a>
+											<a class="waves-effect" href="/tickets/" title="Tickets &amp; Preise"
+							><i class="fa rcOutput-tickets"></i><span class="caption">Tickets &amp; Preise</span></a>
+											<a class="waves-effect" href="/fahrplanaenderungen/" title="Fahrplanänderungen"
+							><i class="fa rcOutput-reports"></i><span class="caption">Fahr­plan­ände­rungen</span></a>
+										</div>
+					<div class="borderB2 borderDevice">
+						
+
+<!-- Kasten Redaktion, Baustein -->
+
+<div><!-- No Padding (Nested) -->
+
+<div><div class="row"><div class="BoxGap Box_Text Box_idx0 col-12 col-lg-12">
+
+<!-- Kasten Text -->
+
+
+	<!-- einspaltiger Text -->
+	<div class="RichText">
+		<p class="h3">Wir sind für Sie da:</p>
+<p style="text-align: left;">24h-Ser­vice­te­le­fon:<br /><a href="tel:09112707599" target="_blank">0911 27075-99</a><a href="mailto:info@vgn.de"><br /></a><a href="/kontakt/" >Zum Kon­taktformular</a></p>	</div>
+
+
+</div></div></div>
+</div>
+
+					</div>
+				</div>
+				<div class="col-md-6 col-12 xxNavB xxNavB1">
+					<div class="row">
+						<!-- Ebene 1 -->
+
+		<!-- mobile accordion -->
+
+																																				
+							<!-- Inhalte Ebene 1 -->
+							<div class="col-md-6 col-12 margin">
+								<p class="h5 title"><a class="xxwaves-light" 
+									href="/netz-fahrplaene/"
+									title="Netz &amp; Fahrpläne">
+									Netz & Fahrpläne								</a></p>
+									
+								<!-- Ebene 2 -->
+															<ul class="hidden-sm-down">
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/netz-fahrplaene/linien/" 				
+											title="Linienfahrpläne">
+											Li­ni­en­fahr­plä­ne										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/netz-fahrplaene/aushangfahrplaene/" 				
+											title="Aushangfahrpläne">
+											Aus­hang­fahr­plä­ne										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/netz-fahrplaene/ast-aushangfahrplaene/" 				
+											title="AST-Aushangfahrpläne">
+											AST-Aus­hang­fahr­plä­ne										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/netz-fahrplaene/liniennetze/" 				
+											title="Liniennetze">
+											Li­ni­en­netze										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/netz-fahrplaene/anrufsammeltaxi/" 				
+											title="Anrufsammeltaxi">
+											An­ruf­sam­mel­taxi										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/netz-fahrplaene/rufbus/" 				
+											title="Rufbus">
+											Rufbus										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/netz-fahrplaene/tarifzonenplaene/" 				
+											title="Tarifzonenpläne">
+											Ta­rif­zo­nen­plä­ne										</a>
+
+																</ul>
+							
+
+							</div>
+							
+												
+							<!-- Inhalte Ebene 1 -->
+							<div class="col-md-6 col-12 margin">
+								<p class="h5 title"><a class="xxwaves-light" 
+									href="/freizeit/"
+									title="Freizeit-Tipps">
+									Frei­zeit-Tipps								</a></p>
+									
+								<!-- Ebene 2 -->
+															<ul class="hidden-sm-down">
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/freizeit/staedtetouren/" 				
+											title="Städtetouren">
+											Städtetouren										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/freizeit/bonusziele/" 				
+											title="Bonusziele">
+											Bonusziele										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/freizeit/wandern/" 				
+											title="Wander-Routen">
+											Wandern										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/freizeitlinien/" 				
+											title="Freizeitlinien">
+											Frei­zeit­li­ni­en										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/freizeit/genusstouren" 				
+											title="Genusstouren">
+											Genusstouren										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/freizeit/radtouren/" 				
+											title="Radtouren">
+											Radtouren										</a>
+
+																</ul>
+							
+
+							</div>
+							
+												
+							<!-- Inhalte Ebene 1 -->
+							<div class="col-md-6 col-12 margin">
+								<p class="h5 title"><a class="xxwaves-light" 
+									href="/service/"
+									title="Service">
+									Service								</a></p>
+									
+								<!-- Ebene 2 -->
+															<ul class="hidden-sm-down">
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/service/app/" 				
+											title="Natürlich ist der VGN auch digital unterwegs für Sie">
+											App »VGN Fahrplan & Tickets«										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/8829bc26-3774-bbab-6791-b57c05f2546d" 				
+											title="VGN Onlineshop">
+											VGN On­line­shop										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/service/kundenbueros-verkaufsstellen/" 				
+											title="Kundenbüros &amp; Verkaufsstellen">
+											Kun­den­bü­ros & Ver­kaufs­stel­len										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/service/prospekt-versand/" 				
+											title="Prospekt-Versand">
+											Prospekt-Versand										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/service/downloads/" 				
+											title="Downloads">
+											Downloads										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/service/park-and-ride/" 				
+											title="Park &amp; Ride-Parkplätze">
+											Park & Ride										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/service/nightliner/" 				
+											title="Wochenend-Kavalier: Der Nachtbus für Nachtschwärmer">
+											NightLiner										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/service/bus-stoppt/" 				
+											title="Nachts hält der Bus für Sie auch zwischen den Haltestellen">
+											Extra-Stopp										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/service/taxiruf/" 				
+											title="Wir lassen Sie auch nach dem Aussteigen nicht gehen">
+											Taxiruf										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/service/mobilitaetsberater/" 				
+											title="Mobilitätsberater">
+											Mo­bi­li­täts­be­ra­ter										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/service/infomobil/" 				
+											title="Das VGN-InfoMobil: Für Sie im gesamten Verbundgebiet unterwegs!">
+											VGN-InfoMobil										</a>
+
+																</ul>
+							
+
+							</div>
+							
+												
+							<!-- Inhalte Ebene 1 -->
+							<div class="col-md-6 col-12 margin">
+								<p class="h5 title"><a class="xxwaves-light" 
+									href="/ratgeber/"
+									title="Ihr Verbund für die unterschiedlichsten Bedürfnisse">
+									Rat­ge­ber								</a></p>
+									
+								<!-- Ebene 2 -->
+															<ul class="hidden-sm-down">
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/ratgeber/mobilitaet-fuer-alle/" 				
+											title="Ein barrierefreier Nahverkehr nützt allen">
+											Bar­ri­e­re­frei­heit										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/ratgeber/kinder/" 				
+											title="Wir begleiten Ihre Kinder beim Großwerden">
+											Kinder										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/ratgeber/fahrrad/" 				
+											title="Sie fahren Ihre Radtour. Den Rest fahren wir">
+											Fahr­rad­mit­nah­me										</a>
+
+																
+									<!-- Inhalte Ebene 2 -->
+									<li>
+										<a class="xxwaves-light" href="/ratgeber/fundbueros/" 				
+											title="Was liegen lassen geht schnell, was wiederfinden oft auch">
+											Fund­sachen										</a>
+
+																																																																								</ul>
+							
+
+							</div>
+							
+												
+							<!-- Inhalte Ebene 1 -->
+							<div class="col-md-6 col-12 margin">
+								<p class="h5 title"><a class="xxwaves-light" 
+									href="/neuigkeiten/"
+									title="Neues aus dem VGN">
+									Neuigkeiten								</a></p>
+									
+								<!-- Ebene 2 -->
+							
+
+							</div>
+							
+												
+					</div>
+				</div>
+
+				<div class="col-md-3 col-12 xxNavB xxNavB2">
+
+		<!-- mobile accordion -->
+					<p class="h5 title"><a href="/fuer/">VGN für alle</a></p>
+					<div class="hidden-sm-down">
+						<div class="borderB2" style="padding-bottom:3px;margin-bottom:0.5rem;">
+							<!-- Werkzeugmenue -->
+							<ul>
+							<!-- Seitenuebersicht -->		
+															<li>
+									<a class="xxwaves-light" href="/fuer/schueler/" title="Im günstigsten Fall bekommst du dein Schulticket kostenlos">
+										Schülerinnen und Schüler									</a>
+								</li>
+															<li>
+									<a class="xxwaves-light" href="/fuer/studierende/" title="Für den täglichen Weg zur Uni">
+										Stu­die­rende									</a>
+								</li>
+															<li>
+									<a class="xxwaves-light" href="/fuer/pendler/" title="Für Ihr Leben vor und nach der Arbeit">
+										Pendler									</a>
+								</li>
+															<li>
+									<a class="xxwaves-light" href="/fuer/touristen/" title="Von A nach B heißt bei uns VGN">
+										Touristen									</a>
+								</li>
+															<li>
+									<a class="xxwaves-light" href="/fuer/messegaeste/" title="Wir bringen Sie stressfrei zur Messe Nürnberg">
+										Mes­se­be­suchende									</a>
+								</li>
+															<li>
+									<a class="xxwaves-light" href="/fuer/stadion-arena-nuernberg/" title="Nur so zum Spaß:  Wir fahren Sie direkt vors Stadion und vor die Arena">
+										Sta­di­on­gän­ger in Nürn­berg									</a>
+								</li>
+															<li>
+									<a class="xxwaves-light" href="/fuer/stadion-fuerth/" title="Der VGN für Kleeblatt-Fans">
+										Sta­di­on­gän­ger in Fürth									</a>
+								</li>
+															<li>
+									<a class="xxwaves-light" href="/fuer/flugreisende/" title="Kein Stau, kein Stress: Manchmal können Bus und Bahn fliegen">
+										Flug­rei­sen­de									</a>
+								</li>
+															<li>
+									<a class="xxwaves-light" href="/fuer/unternehmen/" title="Der VGN für Unternehmen">
+										Un­ter­neh­men									</a>
+								</li>
+															<li>
+									<a class="xxwaves-light" href="/fuer/stadt-menschen/" title="Nutzen Sie unsere gesammelte Stadt-Erfahrung">
+										Städter und Stadt­be­su­cher									</a>
+								</li>
+														</ul>
+						</div>
+						<ul>
+						<!-- Seitenuebersicht -->		
+													<li>
+								<a href="/web-entwickler/" title="Web-Entwickler"
+																>
+									Web-Entwickler								</a>
+							</li>
+													<li>
+								<a href="/presse/" title="Presse"
+																>
+									Presse								</a>
+							</li>
+													<li>
+								<a href="/planungsprojekte/" title="Planungsprojekte"
+																>
+									Pla­nungs­pro­jekte								</a>
+							</li>
+													<li>
+								<a href="/intern/" title="Willkommen!"
+								 target="_blank"								>
+									VGN-Intern								</a>
+							</li>
+													<li>
+								<a href="/barrierefreiheitserklaerung" title="Erklärung zur Barrierefreiheit"
+																>
+									Erklärung zur Bar­ri­e­re­frei­heit								</a>
+							</li>
+													<li>
+								<a href="/stellenangebote" title="Stellenangebote"
+																>
+									Stellenan­ge­bote								</a>
+							</li>
+																		</ul>
+				</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="footer-copyright">
+        <div class="container-fluid">
+			<div class="borderB" style="padding-bottom:10px;margin-bottom:10px;display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: space-evenly;">
+				<!-- Seitenuebersicht -->		
+										<a class="waves-light" style="padding:0 10px;" href="/regelungen/" title="Regelungen im VGN: VGN-Gemeinschaftstarif">
+							Re­ge­lungen						</a>
+										<a class="waves-light" style="padding:0 10px;" href="/ueber-uns/" title="Verkehrsverbund Großraum Nürnberg: Wir begleiten Ihr mobiles Leben">
+							Über uns						</a>
+										<a class="waves-light" style="padding:0 10px;" href="/kontakt/" title="Helfen Sie uns besser zu werden!">
+							Kon­takt						</a>
+										<a class="waves-light" style="padding:0 10px;" href="/impressum/" title="Impressum">
+							Impressum						</a>
+										<a class="waves-light" style="padding:0 10px;" href="/datenschutz/" title="Datenschutzerklärung">
+							Da­ten­schutz						</a>
+											</div>
+			<div style="text-align:center>"><img src="/ib/site/elements/layout/sru.svg" alt="" style="width:30%;max-width:160px;"></div>
+		</div>
+	</div>
+
+
+</footer>
+
+<!--/noindex-->
+
+</div>
+
+
+<div 
+class="CookieBanner output out" aria-hidden="true"
+>
+<!--noindex-->
+	<div class="DialogFrame">
+	<div class="Dialog">
+	<div class="Dialog2">
+		<p class="h3">Cookie-Einstellungen</p>
+		<p>Unsere Webseite verwendet Cookies. Diese haben verschiedene Funktionen.<br>
+		&nbsp;<br>
+		Die Einwilligung in die Verwendung der nicht notwenigen Cookies können Sie jederzeit widerrufen. Weitere Informationen zu den von uns eingesetzten Cookies finden Sie in unserer Datenschutzerklärung.<br>
+		&nbsp;<br>
+		Zur Teilnahme an Gewinnspielen müssen die notwendigen Cookies aktiviert sein. Weitere Informationen finden sie im <a href="/datenschutz/" target="_blank">Datenschutz</a>.</p>
+		
+		<div class="Group">
+			<a class="ToggleButton waves-effect" href="#"><i class="fa rcOutput-keyboard-arrow-down"></i></a>
+			<p class="h5 opt"><i class="fa rcOutput-check"></i><span class="caption">Notwendige Cookies</span></p>
+			<div class="Detail" style="display:none;">
+				<p>Sie dokumentieren Ihre  Einwilligung in die Verwendung von Cookies und speichern die von Ihnen gegebene gewählten Cookie-Einstellungen ("notwendige Cookies").</p>
+				<p>Der Cookie wird benötigt, um die von Ihnen getroffenen Cookie-Einstellungen zu speichern.</p>
+				<table>
+					<tr>
+						<th>Name</th>
+						<th>Zweck</th>
+						<th>Ablauf</th>
+						<th>Anbieter</th>
+					</tr>
+					<tr>
+						<td>CookieConsent</td>
+						<td>Speichert die Einwilligung zur Verwendung der gewählten Cookies.</td>
+						<td>10 Jahre</td>
+						<td>VGN</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="Group">
+			<a class="ToggleButton waves-effect" href="#"><i class="fa rcOutput-keyboard-arrow-down"></i></a>
+			<div class="switch">
+				<label for="Cookie_Functional">
+				<input type="checkbox" id="Cookie_Functional" name="Cookie_Functional" value="functional"
+					checked>
+				<span class="lever"></span>
+				<span class="caption h5">Funktionale Cookies</span>
+				</label>
+			</div>
+			<div class="Detail" style="display:none;">
+				<p>Sie stellen zusätzliche Merkmale bereit ("funktionale Cookies").</p>
+				<p>Durch diese Cookies erinnert sich die Website an Ihre Entscheidungen und bietet zusätzliche Funktionen. Die Daten werden von uns nicht ausgewertet.</p>
+				<table>
+					<tr>
+						<th>Name</th>
+						<th>Zweck</th>
+						<th>Ablauf</th>
+						<th>Anbieter</th>
+					</tr>
+					<tr>
+						<td>mCKI</td>
+						<td>Ermöglicht die Speicherung von Punkten oder Verbindungen in der Fahrplanauskunft als Historie bzw. als Favoriten sowie von Zeitkarten für den Anschlussfahrschein-Rechner, so dass Sie diese später nicht erneut eingeben müssen.</td>
+						<td>10 Jahre</td>
+						<td>VGN</td>
+					</tr>
+					<tr>
+						<td>AuthUser</td>
+						<td>Speichert Ihre Anmeldung an unseren Dienst mein_VGN, so dass Sie die Anmeldung nicht bei jedem Besuch der Website wiederholen müssen.</td>
+						<td>10 Jahre</td>
+						<td>VGN</td>
+					</tr>
+					<tr>
+						<td>DMSort</td>
+						<td>Speichert die von Ihnen gewählte Sortierung der Abfahrten im Abfahrtsmonitor.</td>
+						<td>Sitzungsende</td>
+						<td>VGN</td>
+					</tr>
+					<tr>
+						<td>notified</td>
+						<td>Speichert, dass Sie ggf. einen aktuellen Hinweis auf der Startseite oder in der Fahrplanauskunft gesehen und geschlossen haben, eine so dass Sie dieselben Hinweis nicht erneut angezeigt bekommen.</td>
+						<td>Sitzungsende</td>
+						<td>VGN</td>
+					</tr>
+					<tr>
+						<td>Vote</td>
+						<td>Ermöglicht die Bewertung von Freizeittipps. Stellt sicher, dass Tipps nicht mehrfach bewertet werden können und die Bewertungen damit aussagekräftiger sind.</td>
+						<td>Sitzungsende</td>
+						<td>VGN</td>
+					</tr>
+					<tr>
+						<td>Rating</td>
+						<td>Ermöglicht die Bewertung von FAQ. Stellt sicher, dass FAQ nicht mehrfach bewertet werden können und die Bewertungen damit aussagekräftiger sind.</td>
+						<td>Sitzungsende</td>
+						<td>VGN</td>
+					</tr>
+					<tr>
+						<td>SId</td>
+						<td>Ermöglicht die Speicherung von Prospekten, die Sie bestellen möchten in einem Warenkorb und ermöglicht so eine schnellere Bestellung.</td>
+						<td>Sitzungsende</td>
+						<td>VGN</td>
+					</tr>
+				</table>
+				<p style="margin-top:1em; margin-bottom:0;">
+				Bei den persönlichen Cookie-Einstellungen wird gespeichert, ob diese Cookies gesetzt werden sollen.
+				</p>
+			</div>
+		</div>
+		<div class="Group">
+			<a class="ToggleButton waves-effect" href="#"><i class="fa rcOutput-keyboard-arrow-down"></i></a>
+			<div class="switch">
+				<label for="Cookie_Statistic">
+				<input type="checkbox" id="Cookie_Statistic" name="Cookie_Statistic" value="statistic"
+					>
+				<span class="lever"></span>
+				<span class="caption h5">Statistik-Cookies</span>
+				</label>
+			</div>
+			<div class="Detail" style="display:none;">
+				<p>Sie ermöglichen uns Auswertungen des Nutzerverhaltens, die der Weiterentwicklung unserer Dienste dienen ("Statistik-Cookies").</p>
+				<p>Diese Cookies helfen uns, mit Hilfe pseudonymisierter Daten das Nutzungsverhalten auf unserer Website zu analysieren und unser Angebot weiter zu entwickeln.</p>
+				<p>
+				Cookie-Beschreibungen laut Dokumentation:
+				</p>
+				<table>
+					<tr>
+						<th>Name</th>
+						<th>Zweck</th>
+						<th>Ablauf</th>
+						<th>Anbieter</th>
+					</tr>
+					<tr>
+						<td>_pk_id</td>
+						<td>wird verwendet, um einige Details &uuml;ber den Benutzer zu speichern, z. B. die eindeutige Besucher-ID</td>
+						<td>13 Monate</td>
+						<td>VGN</td>
+					</tr>
+					<tr>
+						<td>_pk_ref</td>
+						<td>zum Speichern der Attributionsinformationen, der Referrer, der urspr&uuml;nglich zum Besuch der Website verwendet wurde</td>
+						<td>6 Monate</td>
+						<td>VGN</td>
+					</tr>
+					<tr>
+						<td>_pk_ses , _pk_cvar, _pk_hsr</td>
+						<td>kurzlebige Cookies zum vor&uuml;bergehenden Speichern von Daten f&uuml;r den Besuch</td>
+						<td>30-90 Minuten</td>
+						<td>VGN</td>
+					</tr>
+					<tr>
+						<td>PIWIK_SESSID</td>
+						<td>Sitzungs-Id</td>
+						<td>Sitzungsende</td>
+						<td>VGN</td>
+					</tr>
+					<tr>
+						<td>piwik_ignore</td>
+						<td>speichert, dass der Nutzer kein Tracking durch Piwik w&uuml;nscht</td>
+						<td>2 Jahre</td>
+						<td>VGN</td>
+					</tr>
+					<tr>
+						<td>test</td>
+						<td>Testcookie zur Pr&uuml;fung der Cookieunterst&uuml;tzung</td>
+						<td>l&auml;uft sofort ab</td>
+						<td>VGN</td>
+					</tr>
+					</table>
+					<p style="margin-top:1em; margin-bottom:0;">Bei den pers&ouml;nlichen Cookie-Einstellungen wird gespeichert, ob diese Cookies zum Zweck der Auswertung gesetzt werden d&uuml;rfen.</p>
+			</div>
+		</div>
+		<div class="buttons" style="margin:0px -6px 20px 0">
+			<a id="Cookie_Selected" class="btn btn-outline-primary waves-light bnDummy" href="#">Auswahl speichern<i class="fa rcOutput-chevron-right"></i></a>
+			<a id="Cookie_All" class="btn btn-primary waves-effect bnDummy" href="#">Alle Cookies zulassen<i class="fa rcOutput-chevron-right"></i></a>
+		</div>
+	</div>
+	</div>
+	</div>
+<!--/noindex-->
+</div>
+<script type="text/javascript">
+	function cookieSettings() {
+		jQuery('.CookieBanner').removeClass('out').attr("aria-hidden", "false");
+	}
+	jQuery(".CookieBanner .Group a.ToggleButton").on("click", function() {
+		jQuery(this).closest(".Group").toggleClass("expanded");
+		if(jQuery(this).closest(".Group").hasClass("expanded")) {
+			jQuery(this).closest(".Group").find(".Detail").show("blind");
+		}
+		else {
+			jQuery(this).closest(".Group").find(".Detail").hide("blind");
+		}
+	});
+	jQuery(".CookieBanner #Cookie_All").on("click", function(e) {
+		e.stopPropagation();
+		e.preventDefault();
+		jQuery(".CookieBanner input").prop("checked", true);
+		setCookieConsent(getCookieConsent());
+	});
+	jQuery(".CookieBanner #Cookie_Selected").on("click", function(e) {
+		e.stopPropagation();
+		e.preventDefault();
+		setCookieConsent(getCookieConsent());
+	});
+	function getCookieConsent() {
+		var ar = ["required"];
+		jQuery(".CookieBanner input").filter(":checked").each(function() {
+			ar.push(jQuery(this).val());
+		});
+		return ar.join(",");
+	}
+var cc = getCookie("CookieConsent");
+if(typeof(cc) == "undefined" || !cc || cc.indexOf("required") < 0) {
+	jQuery('.CookieBanner').removeClass('out').attr("aria-hidden", "false");
+}
+function delete_cookie( name, path, domain ) {
+  if( get_cookie( name ) ) {
+    document.cookie = name + "=" +
+      ((path) ? ";path="+path:"")+
+      ((domain)?";domain="+domain:"") +
+      ";expires=Thu, 01 Jan 1970 00:00:01 GMT";
+  }
+}
+function get_cookie(name){
+    return getCookie(name)?true:false;
+}
+	function setCookieConsent(pm) {
+		var data = {
+			settings:pm,
+			flags:"",
+			message:jQuery(".CookieBanner").html()
+		}
+		var _ajax = jQuery.ajax({
+				url: '/ib/site/tools/CookieConsent.php',
+				type:'post',
+				async:true,
+				data: data
+			}
+		).done(function(data, textStatus, jqXHR) {
+			var resp = jQuery.parseJSON(jqXHR.responseText);
+			if(typeof(resp) == "object") {
+				if(resp.code == 1) { // Success
+					var today = new Date();
+					var expire = new Date();
+					expire.setTime(today.getTime() + 3600000*24*365*10);
+					document.cookie = "CookieConsent=" + pm + ";path=/;expires="+expire.toGMTString();
+					//document.cookie = "CookieConsentVA=required;path=/;expires="+expire.toGMTString();
+					jQuery(".CookieBanner").addClass("out").attr("aria-hidden", "true");
+					COOKIE_REQUIRED = 1;
+					jQuery("body").removeClass("NCB");
+					if(pm.indexOf("statistic") >= 0) {
+						COOKIE_STATISTIC = 1;
+						try {
+							fnInitPiwik();
+						}
+						catch(e) {}
+					}
+					if(pm.indexOf("functional") >= 0) {
+						jQuery("body").removeClass("NOCOOKIE");
+						COOKIE_FUNCTIONAL = 1;
+					}
+					else {
+						jQuery("body").addClass("NOCOOKIE");
+						jQuery("body").removeClass("mein_VGN");
+						COOKIE_FUNCTIONAL = 0;
+						delete_cookie("mCKI","/");
+						delete_cookie("mCKI","/",".vgn.de");
+						delete_cookie("AuthUser","/");
+						delete_cookie("AuthUser","/",".vgn.de");
+						delete_cookie("SId","/");
+						delete_cookie("SId","/",".vgn.de");
+					}
+					jQuery(document).trigger("CookieChange");
+				}
+			}
+		});
+	}
+</script>
+
+
+	
+	<!--noindex-->
+	<div class="output">
+		<div id="popup" class="popup_block">
+			<div id="popup_Head" class="popup-Head"></div>
+			<div id="popup_Content" class="popup-Content"><div id="popup_Content2" class="popup-Content2"></div></div>
+		</div>
+		<div id="popup_Ticket" class="popup_block popup_draggable">
+			<div id="popup_Ticket_Head" class="popup-Head"></div>
+			<div id="popup_Ticket_Content" class="popup-Content"><div id="popup_Ticket_Content2" class="popup-Content2"></div></div>
+		</div>
+		<div id="popup_Message" class="popup_block popup_draggable NoticeContainer">
+			<div id="popup_Message_Head" class="popup-Head">
+				<div class="Dialog-Header">
+					<div class="close-Container"><a href="#" class="Schalter NT-Inline close NoticeBtn"
+						data-title=""><span class="Icon rcOutput-close"></span><span
+						class="HiddenText"></span></a></div>
+					<div class="EFA-Ueberschriftszeile">
+						</div>
+				</div>
+			</div>
+			<div id="popup_Message_Content" class="popup-Content"><div id="popup_Message_Content2" class="popup-Content2">Test</div></div>
+		</div>
+		<div id="popup_Print" class="popup_block popup_draggable">
+			<div id="popup_Print_Head" class="popup-Head">
+				<div class="Dialog-Header">
+					<div class="close-Container"><a href="#" class="Schalter NT-Inline close"
+						data-title="Verbindungen drucken"><span class="Icon rcOutput-chevron-left"></span><span
+						class="HiddenText">Verbindungen drucken</span></a></div>
+					<div class="EFA-Ueberschriftszeile">
+						Verbindungen drucken</div>
+				</div>
+			</div>
+			<div id="popup_Print_Content" class="popup-Content"><div id="popup_Print_Content2" class="popup-Content2">
+				<div class="Dialog-Header">
+					<div class="close-Container"><a href="#" class="Schalter NT-Inline close"
+						data-title="Verbindungen drucken"><span class="Icon rcOutput-chevron-left"></span><span
+						class="HiddenText">Verbindungen drucken</span></a></div>
+					<div class="EFA-Ueberschriftszeile">
+						Verbindungen drucken</div>
+				</div>
+				<form id="PrintSelection" style="margin-top:0;">
+					<input type="hidden" name="request" value="">
+					<p>Hier können Sie die Verbindungen als PDF herunterladen.</p>
+					<p>Wählen Sie die Darstellungsoption:</p>
+					<div class="form-inline" style="margin-bottom:1em;">
+						<div class="form-group">
+							<input type="radio" id="print_overview" name="display" value="1" checked=""><label for="print_overview">Übersicht</label>
+						</div>
+						<div class="form-group">
+							<input type="radio" id="print_detail" name="display" value="2"><label for="print_detail">Detail</label>
+						</div>
+					</div>
+					<p>Wählen Sie die gewünschten Fahrten:</p>
+					<div class="PrintSelection"></div>
+				</form>
+				<div style="text-align:center">
+					<a class="btn btn-primary waves-effect waves-light" style="display:inline-block;" href="Javascript:fnHidePopups();" title="Abbrechen">Abbrechen <i class="fa rcOutput-close"></i></a>
+					<a class="btn btn-secondary waves-effect" style="display:inline-block;" href="#" target="_blank" title="PDF erstellen">Erstellen <span class="fa rcOutput-send"></span></a>
+				</div>
+			</div></div>
+		</div>
+		
+		<div id="popup_Map" class="popup_block">
+			<div id="popup_Map_Head" class="popup-Head">
+				<div class="Dialog-Header">
+					<div class="close-Container"><a href="#" class="Schalter NT-Inline close"
+						data-title="Karte schließen"><span class="Icon rcOutput-chevron-left"></span><span
+						class="HiddenText">Karte schließen</span></a></div>
+					<div class="EFA-Ueberschriftszeile">
+						Karte</div>
+				</div>
+			</div>
+			<div id="popup_Map_Content"><div id="popup_Map_Content2">
+				<div class="Dialog-Header">
+					<div class="close-Container"><a href="#" class="Schalter NT-Inline close"
+						data-title="Karte schließen"><span class="Icon rcOutput-chevron-left"></span><span
+						class="HiddenText">Karte schließen</span></a></div>
+					<div class="EFA-Ueberschriftszeile">
+						Karte</div>
+				</div>
+				<div id="mapid" style=""></div>
+								<div id="prControls" style="" class="FormWhite">
+					<div class="form-group">
+						<input type="checkbox" id="prPOI_free" name="prPOI_free" value="1">
+						<label for="prPOI_free">nur kostenfreie Anlagen</label>
+					</div>
+					<div class="form-group">
+						<input type="checkbox" id="prPOI_spaces" name="prPOI_spaces" value="1">
+						<label for="prPOI_spaces">nur Anlagen mit freien Plätzen</label>
+					</div>
+					<div class="clear"></div>
+				</div>
+							</div></div>
+		</div>
+	</div>
+	<div id="dankeLoader-overlay"></div>
+	<div id="dankeLoader" style="display: none;">
+		<div class="preloader-wrapper big active">
+			<div class="spinner-layer spinner-hl-only">
+			  <div class="circle-clipper left">
+				<div class="circle"></div>
+			  </div><div class="gap-patch">
+				<div class="circle"></div>
+			  </div><div class="circle-clipper right">
+				<div class="circle"></div>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+<!--/noindex-->
+<script src="/ib/site/elements/js/jStorage.js"></script>
+<script src="/ib/site/elements/js/favourite.js?a"></script>
+<script type="text/javascript">
+/*
+	jQuery(".btn-eTicket").on("click", function(e) {
+		var lnk = jQuery(this).attr("href");
+		fnShowPop("popup", "/ib/site/tools/popupE-Ticket.php?dest=" + encodeURIComponent(lnk));
+		e.stopPropagation();
+		e.preventDefault();
+	});
+*/
+function openAnchorAccordion() {
+    if (window.location.hash) {
+        var $target = $('body').find(window.location.hash);
+        if ($target.closest(".pageacc").length > 0) {
+            //$target.closest(".pageacc").find("section").removeClass("expanded");
+			var $targetAccordion = $target.closest('section').addClass("expanded");
+			return;
+			//window.location.hash = "";
+			//jQuery("body,html").scrollTop($target.offset().top - 100);
+        }
+    }
+	jQuery(".pageacc").find("section").eq(0).addClass("expanded");
+}
+
+openAnchorAccordion();
+
+</script>
+
+<script type="text/javascript">
+	if(jQuery(".Box_Custom_EFA_Trip").length > 0) {
+		fnInitPrintPop();
+		jQuery(".btn-Print").on("click", function(e) {
+			fnShowPop("popup_Print");
+			e.stopPropagation();
+			e.preventDefault();
+		});
+	}
+	var topM = jQuery(".EFATopMessage_Priority_10");
+	if(topM.length > 0) {
+		jQuery("#popup_Message_Content2").html(topM.eq(0).clone());
+		jQuery("#popup_Message_Content2 a.NoticeBtn").remove();
+		jQuery("#popup_Message").attr("data-id", topM.eq(0).attr("data-id"));
+		jQuery("#popup_Message_Content2 .row").removeClass("row");
+		jQuery("#popup_Message_Content2 .BoxGap").attr("class", "");
+		jQuery("#popup_Message_Content2 .Text_Hinterlegung").removeClass("Text_Hinterlegung");
+		var vw = jQuery(window).width();
+		if(vw < 768) {
+			fnShowPop("popup_Message");
+		}
+		else {
+			jQuery(window).resize(function() {
+				var vw = jQuery(window).width();
+				if(vw < 768) {
+					if(jQuery("#popup_Message").length > 0) {
+						fnShowPop("popup_Message");
+					}
+				}
+			});
+		}
+	}
+	else {
+		jQuery("#popup_Message").remove();
+	}
+</script>
+
+
+<script type="text/javascript" src="/ib/site/elements/js3-2025_0602.js" ></script>
+
+
+<!--noindex-->
+
+<script type="text/javascript">
+window.mapFolder = "karte-osm";
+</script>
+<script type="text/javascript">
+jQuery(window).load(function() {
+setTimeout(function() {
+	var cnt = 0;
+	//fnTestMap(null, null);;
+	var cnt = 8;
+$.cachedScript("/ib/site/elements/leaflet/leaflet-src.js?2025_1105").done(function( data, textStatus, jqxhr ) { cnt--; fnTestMap(jqxhr,"/ib/site/elements/leaflet/leaflet-src.js?2025_1105"); }); 
+$.cachedScript("/ib/site/elements/leaflet/proj4-src.js").done(function( data, textStatus, jqxhr ) { cnt--; fnTestMap(jqxhr,"/ib/site/elements/leaflet/proj4-src.js"); }); 
+$.cachedScript("/ib/site/elements/leaflet/addons.js?2025_1105").done(function( data, textStatus, jqxhr ) { cnt--; fnTestMap(jqxhr,"/ib/site/elements/leaflet/addons.js?2025_1105"); }); 
+$.cachedScript("/ib/site/elements/leaflet/zoom.js?2025_1105").done(function( data, textStatus, jqxhr ) { cnt--; fnTestMap(jqxhr,"/ib/site/elements/leaflet/zoom.js?2025_1105"); }); 
+$.cachedScript("/ib/site/elements/leaflet/map.js?2025_1105").done(function( data, textStatus, jqxhr ) { cnt--; fnTestMap(jqxhr,"/ib/site/elements/leaflet/map.js?2025_1105"); }); 
+$.cachedScript("/ib/site/elements/leaflet/interface.js?2025_1105").done(function( data, textStatus, jqxhr ) { cnt--; fnTestMap(jqxhr,"/ib/site/elements/leaflet/interface.js?2025_1105"); }); 
+$.cachedScript("/ib/site/elements/leaflet/poi.js?2025_1105").done(function( data, textStatus, jqxhr ) { cnt--; fnTestMap(jqxhr,"/ib/site/elements/leaflet/poi.js?2025_1105"); }); 
+$.cachedScript("/ib/site/elements/leaflet/lines.js?2025_1105").done(function( data, textStatus, jqxhr ) { cnt--; fnTestMap(jqxhr,"/ib/site/elements/leaflet/lines.js?2025_1105"); }); 
+	function fnTestMap(xhr, script) {
+		if(cnt == 0) {
+			fnInitLLAddons();
+			jQuery(window).trigger('map:scriptloaded');
+		}
+	}
+}, 100);
+});
+</script>
+
+
+
+<!--/noindex-->
+
+
+<link href="/ib/site/elements/css/fzt.css?e" rel="stylesheet">
+<script src="/ib/site/elements/js/fzt.js?d"></script>
+
+<style type="text/css">
+
+</style>
+<script>
+
+</script>
+<style type="text/css">
+.output .side-nav p.h2 {
+    margin: 0;
+    padding: 0 20px;
+	color:white;
+}
+.output .card .card-title a {
+	color:inherit ! important;
+}
+footer.output p.h5 {
+	text-transform:none;
+}
+</style>	
+
+
+
+
+	<!-- PhotoSwipe -->
+
+<!--noindex-->
+<div id="mdb-lightbox-uixx"></div>
+<div class="output">
+	<div id="gallery" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="pswp__bg"></div>
+		<div class="pswp__scroll-wrap">
+		  <div class="pswp__container">
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+			<div class="pswp__item"></div>
+		  </div>
+		  <div class="pswp__ui pswp__ui--hidden">
+			<div class="pswp__top-bar">
+				<div class="pswp__counter"></div>
+				<button class="pswp__button pswp__button--close" title="ButtonClose"></button>
+								<button class="pswp__button pswp__button--fs" title="ButtonFullscreen"></button>
+				<button class="pswp__button pswp__button--zoom" title="ButtonZoom"></button>
+				<div class="pswp__preloader">
+					<div class="pswp__preloader__icn">
+					  <div class="pswp__preloader__cut">
+						<div class="pswp__preloader__donut"></div>
+					  </div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="pswp__loading-indicator"><div class="pswp__loading-indicator__line"></div></div> -->
+			<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+				<div class="pswp__share-tooltip">
+									</div>
+			</div>
+			<button class="pswp__button pswp__button--arrow--left" title="ButtonBack"></button>
+			<button class="pswp__button pswp__button--arrow--right" title="ButtonNext"></button>
+			<div class="pswp__caption">
+			  <div class="pswp__caption__center">
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</div>
+</div>
+	<script type="text/javascript">
+	var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+		// parse slide data (url, title, size ...) from DOM elements 
+		// (children of gallerySelector)
+		var parseThumbnailElements = function(el) {
+			var thumbElements = jQuery(el).find("a[data-size]"), // shbgr el.childNodes,
+				numNodes = thumbElements.length,
+				items = [],
+				figureEl,
+				linkEl,
+				size,
+				item;
+
+			for(var i = 0; i < numNodes; i++) {
+
+				figureEl = thumbElements[i]; // <figure> element
+
+				// include only element nodes 
+				if(figureEl.nodeType !== 1) {
+					continue;
+				}
+
+				linkEl = figureEl; // shbgr figureEl.children[0]; // <a> element
+
+				if(!linkEl.hasAttribute('data-size')) {
+					continue;
+				}
+				size = linkEl.getAttribute('data-size').split('x');
+
+				// create slide object
+				item = {
+					src: linkEl.getAttribute('href'),
+					w: parseInt(size[0], 10),
+					h: parseInt(size[1], 10)
+				};
+
+
+
+				/* shbgr if(figureEl.children.length > 1) {
+					// <figcaption> content
+					item.title = figureEl.children[1].innerHTML; 
+				} */
+				var t1 = linkEl.getAttribute('data-title');
+				var t2 = linkEl.getAttribute('data-title2');
+				if(t1)
+					t1 = "<span class=\"pswp__caption1\">" + t1 + "</span>";
+				if(t1 && t2) {
+					t1 = t1 + " &ndash; " + t2;
+					t2 = "";
+				}
+				item.title = t1 + t2;
+
+				if(linkEl.children.length > 0) {
+					// <img> thumbnail element, retrieving thumbnail url
+					// item.msrc = linkEl.children[0].getAttribute('src'); // aspect
+				} 
+
+				item.el = figureEl; // save link to element for getThumbBoundsFn
+				items.push(item);
+			}
+
+			return items;
+		};
+
+		// find nearest parent element
+		var closest = function closest(el, fn) {
+			return el && ( fn(el) ? el : closest(el.parentNode, fn) );
+		};
+
+		// triggers when user clicks on thumbnail
+		var onThumbnailsClick = function(e) {
+			e = e || window.event;
+			e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+			var eTarget = e.target || e.srcElement;
+
+			// find root element of slide
+			var clickedListItem = closest(eTarget, function(el) {
+				return (el.tagName && el.tagName.toUpperCase() === 'A' && jQuery(el).attr("data-size")); // shbgr FIGURE
+			});
+
+			if(!clickedListItem) {
+				e.returnValue = true;
+				return;
+			}
+
+			// find index of clicked item by looping through all child nodes
+			// alternatively, you may define index via data- attribute
+			var clickedGallery = jQuery(clickedListItem).closest(".Bildgalerie")[0], // shbgr clickedListItem.parent
+				childNodes = jQuery(clickedGallery).find("a[data-size]"), // shbgr clickedListItem.parentNode.childNodes
+				numChildNodes = childNodes.length,
+				nodeIndex = 0,
+				index;
+
+			for (var i = 0; i < numChildNodes; i++) {
+				if(childNodes[i].nodeType !== 1) { 
+					continue; 
+				}
+
+				if(childNodes[i] === clickedListItem) {
+					index = nodeIndex;
+					break;
+				}
+				nodeIndex++;
+			}
+
+
+
+			if(index >= 0) {
+				// open PhotoSwipe if valid index found
+				openPhotoSwipe( index, clickedGallery );
+			}
+			return false;
+		};
+
+		// parse picture index and gallery index from URL (#&pid=1&gid=2)
+		var photoswipeParseHash = function() {
+			var hash = window.location.hash.substring(1),
+			params = {};
+
+			if(hash.length < 5) {
+				return params;
+			}
+
+			var vars = hash.split('&');
+			for (var i = 0; i < vars.length; i++) {
+				if(!vars[i]) {
+					continue;
+				}
+				var pair = vars[i].split('=');  
+				if(pair.length < 2) {
+					continue;
+				}           
+				params[pair[0]] = pair[1];
+			}
+
+			if(params.gid) {
+				params.gid = parseInt(params.gid, 10);
+			}
+
+			return params;
+		};
+
+		var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+			var pswpElement = document.querySelectorAll('.pswp')[0],
+				gallery,
+				options,
+				items;
+
+			items = parseThumbnailElements(galleryElement);
+
+			// define options (if needed)
+			options = {
+
+				// define gallery index (for URL)
+				galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+				loop: false,
+				barsSize: {top:0, bottom:0},
+				
+				showHideOpacity:true,
+				getThumbBoundsFn:false,
+				xxgetThumbBoundsFn: function(index) {
+					// See Options -> getThumbBoundsFn section of documentation for more info
+					var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+						pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+						rect = thumbnail.getBoundingClientRect(); 
+
+					return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+				}
+
+			};
+
+			// PhotoSwipe opened from URL
+			if(fromURL) {
+				if(options.galleryPIDs) {
+					// parse real index when custom PIDs are used 
+					// http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+					for(var j = 0; j < items.length; j++) {
+						if(items[j].pid == index) {
+							options.index = j;
+							break;
+						}
+					}
+				} else {
+					// in URL indexes start from 1
+					options.index = parseInt(index, 10) - 1;
+				}
+			} else {
+				options.index = parseInt(index, 10);
+			}
+
+			// exit if index not found
+			if( isNaN(options.index) ) {
+				return;
+			}
+
+			if(disableAnimation) {
+				options.showAnimationDuration = 0;
+			}
+
+			// Pass data to PhotoSwipe and initialize it
+			gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+			gallery.init();
+		};
+
+		// loop through all gallery elements and bind events
+		var galleryElements = document.querySelectorAll( gallerySelector );
+
+		for(var i = 0, l = galleryElements.length; i < l; i++) {
+			galleryElements[i].setAttribute('data-pswp-uid', i+1);
+			galleryElements[i].onclick = onThumbnailsClick;
+		}
+
+		// Parse URL and open gallery if it contains #&pid=3&gid=1
+		var hashData = photoswipeParseHash();
+		if(hashData.pid && hashData.gid) {
+			openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
+		}
+	};
+	function singleImageClick(elem) {
+		var pswpElement = document.querySelectorAll('.pswp')[0],
+				gallery,
+				options,
+				items,
+				index;
+		linkEl = jQuery(elem);
+		if(!elem.hasAttribute('data-size')) {
+			return false;
+		}
+		size = elem.getAttribute('data-size').split('x');
+		// create slide object
+		var item = {
+			el: elem,
+			src: elem.getAttribute('href'),
+			w: parseInt(size[0], 10),
+			h: parseInt(size[1], 10)
+		};
+		var t1 = elem.getAttribute('data-title');
+		var t2 = elem.getAttribute('data-title2');
+		if(t1)
+			t1 = "<span class=\"pswp__caption1\">" + t1 + "</span>";
+		if(t1 && t2) {
+			t1 = t1 + " &ndash; " + t2;
+			t2 = "";
+		}
+		item.title = t1 + t2;
+		
+		if(linkEl.children.length > 0) {
+			// <img> thumbnail element, retrieving thumbnail url
+			//item.msrc = linkEl.find("img").attr('src'); // aspect
+		} 
+		
+		items = [item];
+		index = 0;
+
+		// define options (if needed)
+		options = {
+			// define gallery index (for URL)
+			galleryUID: 1, //galleryElement.getAttribute('data-pswp-uid'),
+			barsSize: {top:0, bottom:0},
+
+			getThumbBoundsFn: function(index) {
+				// See Options -> getThumbBoundsFn section of documentation for more info
+				var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+					pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+					rect = thumbnail.getBoundingClientRect(); 
+
+				return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+			}
+
+		};
+		// Pass data to PhotoSwipe and initialize it
+		gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+		gallery.init();
+		return true;
+	}
+	jQuery("a.photoswipe").click(function(e) {
+		if(singleImageClick(this))
+			e.preventDefault();
+	});
+
+	// execute above function
+	initPhotoSwipeFromDOM('.Bildgalerie');
+
+</script>
+<!-- END PhotoSwipe -->
+
+<span id="statistic">
+		<script type="text/javascript"> <!-- 
+			var COUNT="/cgi-bin/count/CP/home;/_/Suche"; 
+			document.write("<img src=\""+COUNT+"?id=6FA4192A-4997-11D7-AE43-00034709FE0C&r="+escape(document.referrer)+"\" style=\"position:absolute; top:0px; left:0px\" width=\"1\" height=\"1\" alt=\"\" />");
+			// --> 
+		</script> 
+		<span id="statisticdata" data-src="/cgi-bin/count/CP/home;/_/Suche?id=6FA4192A-4997-11D7-AE43-00034709FE0C"></span>
+		<noscript> 
+			<img src="/cgi-bin/count/CP/home;/_/Suche?id=6FA4192A-4997-11D7-AE43-00034709FE0C" style="position:absolute; top:0px; left:0px" width="1" height="1" alt="" />
+		</noscript> </span>
+
+<!--/noindex-->
+
+</body>
+</html>

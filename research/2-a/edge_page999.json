@@ -1,0 +1,9 @@
+{
+  "timestamp" : "2026-10-11T21:45:29.465406457Z",
+  "logref" : "567da20e-3071-4e50-bc91-cb0c37d53fe3",
+  "messages" : [ {
+    "code" : "EINGABEN_UNVOLLSTAENDIG_ODER_FEHLERHAFT",
+    "path" : "page",
+    "detail" : "Wert ungültig"
+  } ]
+}

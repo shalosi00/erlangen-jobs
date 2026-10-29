@@ -1,0 +1,29 @@
+[
+  {
+    "url": "https://documenter.getpostman.com",
+    "name": "Publisher APIs",
+    "snippet": "The Postman Documenter generates and maintains beautiful, live documentation for your collections. Never worry about maintaining API documentation again.",
+    "host_name": "documenter.getpostman.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://apify.com",
+    "name": "Career Site Jobs API — Workday, Oracle, Greenhouse &",
+    "snippet": "You can access the Career Site Jobs API — Workday, Oracle, Greenhouse & more programmatically from your own applications by using the Apify API . Read more",
+    "host_name": "apify.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.whatconverts.com",
+    "name": "Connect WhatConverts to Make using API Keys - Help Center",
+    "snippet": "Learn how to connect WhatConverts to Make using API keys or webhooks to automate your lead management workflows. Affiliate Program Login USA: +1-704-469-5324",
+    "host_name": "www.whatconverts.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  }
+]

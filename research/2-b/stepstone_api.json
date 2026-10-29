@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://apis.io",
+    "name": "Workable Public Jobs Api",
+    "snippet": "Workable Public Jobs API . Read- only public endpoint that exposes published jobs for embedding job listings on external careers pages without authentication. Read more",
+    "host_name": "apis.io",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.ziprecruiter.com",
+    "name": "$42-$74/hr Middle Tier Api Application Developer Jobs",
+    "snippet": "Browse 1000+ MIDDLE TIER API APPLICATION DEVELOPER jobs ($42-$74/hr) hiring now. New openings daily. Apply early, get seen first & 1-click ...",
+    "host_name": "www.ziprecruiter.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://apify.com",
+    "name": "StepStone jobs in Austria, Belgium and the Netherlands",
+    "snippet": "Roughly 8,000 jobs in Austria, 8,400 in Belgium and 800 in the Netherlands, each with benefits, skills, the full description and the hiring company's sector, ... Read more",
+    "host_name": "apify.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://api.stepstone.com",
+    "name": "Testing – API StepStone",
+    "snippet": "Feb 5, 2020 — To test the Job Details Service, open Job Details Service Tab and fill in Job URL and Job Board ID fields and click Get Job Details button. Read more",
+    "host_name": "api.stepstone.com",
+    "rank": 3,
+    "date": "Feb 5, 2020",
+    "favicon": ""
+  }
+]

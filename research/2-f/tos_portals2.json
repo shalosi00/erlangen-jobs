@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://apify.com",
+    "name": "Stepstone.de Scraper — Germany Job Listings",
+    "snippet": "4 days ago — Extract structured job listings from stepstone .de — Germany's largest job board with 200,000+ listings. No API key required. Why this scraper? Read more",
+    "host_name": "apify.com",
+    "rank": 0,
+    "date": "Oct 7, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://datasignalslab.com",
+    "name": "XING Jobs Scraper - DataSignals Lab",
+    "snippet": "Scrape XING job listings from Germany, Austria and Switzerland by keyword and location, or paste XING job search URLs.",
+    "host_name": "datasignalslab.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com",
+    "name": "obetzlitkinp/xing-jobs-scraper",
+    "snippet": "Xing Jobs Scraper lets you automatically collect rich, structured job postings from Xing .com using your own search URLs and filters. Read more",
+    "host_name": "github.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://helpcenter.octoparse.com",
+    "name": "Scraping der Jobdetails von XING | Hilfezentrum - Help Center",
+    "snippet": "Aug 6, 2026 — Scraping der Jobdetails von XING · Schritt 1: „Loop URLs“ - um eine Schleife von Ziel-Webseiten zu erstellen · Schritt 2: Hinzufügen eines ... Read more",
+    "host_name": "helpcenter.octoparse.com",
+    "rank": 3,
+    "date": "Aug 6, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.anwalt24.de",
+    "name": "StepStone Fake Stellenangebote: Bekannter Name",
+    "snippet": "Sep 3, 2026 — Der Name StepStone schafft Vertrauen – und genau das nutzen Betrüger aus. Entscheidend ist, ob Recruiter und konkrete Stelle wirklich ...",
+    "host_name": "www.anwalt24.de",
+    "rank": 4,
+    "date": "Sep 3, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.deutschland.de",
+    "name": "Jobbörsen in Deutschland: StepStone, Xing, Truffls",
+    "snippet": "Mar 15, 2019 — In Deutschland Arbeit finden: Die besten Jobbörsen, beliebtesten Business-Netzwerke und innovative Apps finden Sie hier.",
+    "host_name": "www.deutschland.de",
+    "rank": 5,
+    "date": "Mar 15, 2019",
+    "favicon": ""
+  },
+  {
+    "url": "https://mcpmarket.com",
+    "name": "Stepstone Germany Job Scraper | Claude Code Skill",
+    "snippet": "Automate Stepstone Germany job searches with Claude Code . Extract fresh listings, filter for direct employers, and get full job descriptions instantly.",
+    "host_name": "mcpmarket.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.personalwirtschaft.de",
+    "name": "Warum das Crawling von Stellenanzeigen umstritten ist",
+    "snippet": "Nov 20, 2025 — Automatisiertes Auslesen von Stellenanzeigen ist längst Alltag im Recruiting. Doch allzu oft sind die gecrawlten Informationen veraltet oder ...",
+    "host_name": "www.personalwirtschaft.de",
+    "rank": 7,
+    "date": "Nov 20, 2025",
+    "favicon": ""
+  }
+]

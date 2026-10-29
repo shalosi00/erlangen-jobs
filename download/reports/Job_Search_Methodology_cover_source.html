@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    @page { size: 794px 1123px; margin: 0; }
+    :root {
+      --page-bg: #f2f1f0;
+      --card-bg: #ecebe8;
+      --header-fill: #675e45;
+      --border: #c2beb0;
+      --accent: #96771c;
+      --text-primary: #22211f;
+      --text-muted: #87857d;
+      --c-bg: #f2f1f0;
+      --c-accent: #96771c;
+      --c-text: #22211f;
+      --c-muted: #87857d;
+      --c-mid: #675e45;
+      --c-surface: #ecebe8;
+    }
+    html, body {
+      margin: 0; padding: 0;
+      width: 794px; height: 1123px;
+      background: var(--c-bg);
+      color: var(--c-text);
+      font-family: 'Inter', 'Noto Sans SC', sans-serif;
+    }
+    @media screen {
+      html { height: auto; display: flex; justify-content: center; min-height: 100vh; background: var(--c-bg); }
+      body { transform-origin: top center; scale: min(1, calc(100vw / 794), calc(100vh / 1123)); margin: 0 auto; box-shadow: 0 0 60px rgba(0,0,0,0.18); }
+    }
+    .cover {
+      width: 794px; height: 1123px; position: relative; box-sizing: border-box;
+      border: none; outline: none; box-shadow: none;
+    }
+    /* Layer 1 - background grid, clipped, 2% opacity */
+    .layer-bg {
+      position: absolute; inset: 0; overflow: hidden; z-index: 1;
+      background-image:
+        repeating-linear-gradient(0deg, rgba(34,33,31,0.02) 0, rgba(34,33,31,0.02) 0.5px, transparent 0.5px, transparent 50px),
+        repeating-linear-gradient(90deg, rgba(34,33,31,0.02) 0, rgba(34,33,31,0.02) 0.5px, transparent 0.5px, transparent 50px);
+    }
+    /* Layer 2 - ultra-thick left anchor line at 0.12*W, 10%H to 90%H */
+    .layer-structure { position: absolute; inset: 0; z-index: 2; }
+    .anchor-line {
+      position: absolute;
+      left: 91px; width: 8px;
+      top: 112px; bottom: 112px;
+      background: var(--c-accent);
+    }
+    /* Layer 3 - content, left edge = line + >=1U gap */
+    .layer-content { position: absolute; inset: 0; z-index: 3; }
+    .kicker {
+      position: absolute; left: 145px; top: 168px;
+      font-size: 16px; font-weight: 400; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--c-text); opacity: 0.6;
+      max-width: 560px;
+    }
+    .hero {
+      position: absolute; left: 145px; top: 337px;
+      font-size: 56px; font-weight: 900; line-height: 1.15;
+      color: var(--c-text); max-width: 580px;
+    }
+    .summary {
+      position: absolute; left: 145px; top: 561px;
+      font-size: 17px; font-weight: 400; line-height: 1.6;
+      color: var(--c-text); opacity: 0.85; max-width: 476px;
+    }
+    .meta {
+      position: absolute; left: 145px; top: 842px;
+      font-size: 20px; font-weight: 300; line-height: 1.5;
+      color: var(--c-text); opacity: 0.85; max-width: 500px;
+    }
+    .meta .org { font-weight: 500; }
+    .footer {
+      position: absolute; left: 145px; top: 1010px;
+      font-size: 16px; font-weight: 400; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--c-text); opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="cover">
+    <div class="layer-bg"></div>
+    <div class="layer-structure">
+      <div class="anchor-line"></div>
+    </div>
+    <div class="layer-content">
+      <div class="kicker">Research Brief &middot; Programmatic Job Hunting</div>
+      <div class="hero">Job Search<br>Methodology &amp;<br>File Organization</div>
+      <div class="summary">What 2025&ndash;2026 evidence says about running a job search as a
+        measurable pipeline &mdash; and how to organize the results so every posting,
+        follow-up, and conversion rate lives in files that survive.</div>
+      <div class="meta"><span class="org">FISI Toolkit &middot; Research 3-a</span><br>
+        Erlangen &middot; 50 km region &middot; October 2026</div>
+      <div class="footer">Task 21 &middot; Perfect Files Edition</div>
+    </div>
+  </div>
+</body>
+</html>

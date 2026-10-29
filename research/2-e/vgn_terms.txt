@@ -1,0 +1,41 @@
+Nutzungsbedingungen
+
+1. Geltungsbereich
+
+Die Nutzungshinweise gelten für das OpenData-Angebot (im Folgenden: »OpenData-Service«) der Verkehrsverbund Großraum Nürnberg GmbH (VGN) unter dem Verzeichnis www.vgn.de/web-entwickler/open-data/  und www.vgn.de/opendata/.
+
+2. Betreiber und Hosting
+
+Betreiber des OpenData-Service ist die Verkehrsverbund Großraum Nürnberg GmbH. Die technische Umsetzung des OpenData-Service sowie das Hosting erfolgt auf Servern der Verkehrsverbund Großraum Nürnberg GmbH.
+
+3. Beschreibung des Angebots
+
+(1) Der OpenData-Service bietet einen einfachen Zugang zu Soll-Fahrplandaten der Verkehrsverbund Großraum Nürnberg GmbH.
+
+(2) Das Angebot enthält möglicherweise Links zu externen Webseiten Dritter, auf deren Inhalte die Verkehrsverbund Großraum Nürnberg GmbH keinen Einfluss hat. Deshalb kann die Verkehrsverbund Großraum Nürnberg GmbH für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der verlinkten Seiten verantwortlich. Die verlinkten Seiten wurden von der Verkehrsverbund Großraum Nürnberg GmbH zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle von verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen wird die Verkehrsverbund Großraum Nürnberg GmbH derartige Links umgehend entfernen.
+
+4. Bereitstellung und Weiterentwicklung des OpenData-Service
+
+Die Verkehrsverbund Großraum Nürnberg GmbH behält sich vor, die unter dem OpenData-Service bereitgestellten Dienste und Inhalte zu ändern, abweichende Dienste anzubieten, diese ganz oder teilweise einzustellen und gewährleistet keine Erreichbarkeit ihrer Server.
+
+5. Nutzung
+
+(1) Sie dürfen bei der Nutzung des OpenData-Service keine Software oder sonstigen Mechanismen verwenden, welche die Funktionstüchtigkeit des OpenData-Service stören oder die Infrastruktur unzumutbar belasten können. Die Verkehrsverbund Großraum Nürnberg GmbH behält sich vor, den Zugang zu beschränken oder zu verwehren.
+
+(2) Sie sind für die Nutzung des OpenData-Service und der dort bereitgestellten Daten und sonstigen Inhalte allein verantwortlich. Dabei müssen Sie diese Nutzungsbedingungen und die jeweiligen Lizenzbedingungen einhalten. Mit der Nutzung des OpenData-Service akzeptieren Sie diese Nutzungsbedingungen.
+
+(3) Die Verkehrsverbund Großraum Nürnberg GmbH stellt die Fahrplandaten seines Verkehrsgebietes auf Basis der Lizenz »Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 3.0 Deutschland« (CC BY-SA 3.0) als Open Data zur kommerziellen und nicht kommerziellen Nutzung zur Verfügung.
+
+(4) Der Betreiber ist berechtigt Informationen über die, ganz oder teilweise auf Basis des OpenData-Service angebotenen Daten, Dokumente, Anwendungen und Dienste zu veröffentlichen und für eine Berichterstattung zu verwenden. Eine Veröffentlichung (Verknüpfung) der Anwendungen und Dienste im Rahmen des Webauftritts www.vgn.de ist zulässig.
+
+6. Haftungs- und Gewährleistungsausschluss
+
+Die Verkehrsverbund Großraum Nürnberg GmbH stellt Daten und sonstige Inhalte dieses OpenData-Service so wie sie sind und ohne jede Gewähr bereit. Die Verkehrsverbund Großraum Nürnberg GmbH übernimmt insbesondere keine Verantwortung für Vollständigkeit, Fehlerfreiheit, Verfügbarkeit, Eignung für einen bestimmten Zweck, Freiheit von Rechten Dritter, Aktualität oder Aktualisierung. Die Verkehrsverbund Großraum Nürnberg GmbH haftet nicht für Schäden, die Ihnen durch die Nutzung entstehen oder die beim Aufrufen oder Herunterladen von Daten oder anderen Inhalten dieses OpenData-Service durch Computerviren verursacht werden. Dies gilt nicht im Fall einer zwingenden gesetzlichen Haftung der Verkehrsverbund Großraum Nürnberg GmbH.
+
+7. Hinweise zu Marken- und anderen Schutzrechten
+
+Die Verkehrsverbund Großraum Nürnberg GmbH räumt Ihnen keine Rechte ein, die über die mit der Lizenz an den bereitgestellten Daten eingeräumten Rechte hinausgehen. Bitte beachten Sie Marken-, Design-, sonstige gewerbliche Schutz- und Urheberrechte der Verkehrsverbund Großraum Nürnberg GmbH. Insbesondere die Verwendung der Marken der Verkehrsverbund Großraum Nürnberg GmbH ist ohne ihre vorherige Zustimmung ausgeschlossen.
+
+8. Änderungen dieser Nutzungsbedingungen
+
+Die Verkehrsverbund Großraum Nürnberg GmbH behält sich vor, diese Nutzungsbedingungen jederzeit ohne Nennung von Gründen zu ändern.

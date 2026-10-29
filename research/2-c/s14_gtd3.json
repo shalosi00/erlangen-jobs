@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://en.wikipedia.org",
+    "name": "APIs",
+    "snippet": "The main policies for releasing an API are: Private: The API is for internal company use only. Partner : Only specific business partners can use the API . Read more",
+    "host_name": "en.wikipedia.org",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://aws.amazon.com",
+    "name": "What is an API? - Application Programming Interfaces",
+    "snippet": "API endpoints are the final touchpoints in the API communication system. These include server URLs, services, and other specific digital locations",
+    "host_name": "aws.amazon.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.mulesoft.com",
+    "name": "What is an API? (Application Programming Interface)",
+    "snippet": "APIs can also be products. Businesses often offer API access as a paid service, charging customers or partners to use their data or functionality. For instance, ... Read more",
+    "host_name": "www.mulesoft.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.ibm.com",
+    "name": "What Is an API (Application Programming Interface)?",
+    "snippet": "Apr 9, 2024 — APIs are the connective tissue between enterprise systems, services and partners, and it's vital to understand how they are working. A failing ... Read more",
+    "host_name": "www.ibm.com",
+    "rank": 3,
+    "date": "Apr 9, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://openai.com",
+    "name": "API Platform",
+    "snippet": "Our API platform offers our latest models and guides. The all-in-one platform for agents Build agents that use your context and tools to get work done across ...",
+    "host_name": "openai.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

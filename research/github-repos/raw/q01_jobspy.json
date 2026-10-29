@@ -1,0 +1,29 @@
+[
+  {
+    "url": "https://github.com",
+    "name": "DEENUU1/job-scraper: 🔎 Job offers scraper: bulldogjob.pl",
+    "snippet": "Job scraper A program that allows you to scrape job offers from many websites and save new offers in Google Sheet, .XLSX file or SQLite database with local web",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://dev.to",
+    "name": "Scraping 400+ LinkedIn Jobs with Python",
+    "snippet": "Jan 20, 2025 — Scraping 400+ LinkedIn Jobs with Python . Scrape job data using Python Filter. JobSpy and JobsParser are also compatible with other job boards ...",
+    "host_name": "dev.to",
+    "rank": 1,
+    "date": "Jan 20, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://scrapeops.io",
+    "name": "Python Scrapy - Build A LinkedIn Jobs Scraper [2026]",
+    "snippet": "In this article we will focus on building a production LinkedIn spider using Python Scrapy that will scrape LinkedIn Jobs. available on Github here. available ...",
+    "host_name": "scrapeops.io",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  }
+]

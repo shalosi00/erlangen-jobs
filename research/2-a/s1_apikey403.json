@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://www.api.org",
+    "name": "American Petroleum Institute | API",
+    "snippet": "The American Petroleum Institute ( API ) is the only national trade association that represents all aspects of America's oil and natural gas industry.",
+    "host_name": "www.api.org",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/API",
+    "name": "APIs",
+    "snippet": "REST API allows developers to access core Twitter data and the Search API provides methods for developers to interact with Twitter Search and trends data .",
+    "host_name": "en.wikipedia.org",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://apiabroad.com",
+    "name": "Find Your Experiential Program Abroad, Study, Gap, Intern - API",
+    "snippet": "Login your experiential learning journey with API and launch your personal and professional growth. Search available program options and the classes that are ...",
+    "host_name": "apiabroad.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://aws.amazon.com",
+    "name": "What is an API? - Application Programming Interfaces",
+    "snippet": "API stands for Application Programming Interface . REST stands for Representational State Transfer. REST defines a set of functions like GET, PUT, DELETE, etc. ...",
+    "host_name": "aws.amazon.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://api-pt.com",
+    "name": "API",
+    "snippet": "With API , you have people and results you can rely on to meet all your proficiency testing needs. Online portal management. Result submission reports. Read more",
+    "host_name": "api-pt.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.mulesoft.com/api/what-is-an-api",
+    "name": "What is an API? (Application Programming Interface)",
+    "snippet": "REST is the most widely used architecture for web APIs. It uses standard HTTP methods like GET and POST to interact with resources.",
+    "host_name": "www.mulesoft.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.ibm.com/Home/Think/Topics",
+    "name": "What Is an API (Application Programming Interface)?",
+    "snippet": "Apr 9, 2024 — An application programming interface ( API ) is a contract that enables software to access data or invoke functionality exposed by other ...",
+    "host_name": "www.ibm.com",
+    "rank": 6,
+    "date": "Apr 9, 2024",
+    "favicon": ""
+  },
+  {
+    "url": "https://openai.com/api",
+    "name": "API Platform",
+    "snippet": "Our API platform offers our latest models and guides for safety best practices.",
+    "host_name": "openai.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

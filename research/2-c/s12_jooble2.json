@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://www.key.com",
+    "name": "KeyBank | Banking, Credit Cards, Mortgages, and Loans",
+    "snippet": "Enjoy the benefits of being a KeyBank client. We offer checking & savings accounts, credit cards, insurance, and loans. Open your KeyBank account today!",
+    "host_name": "www.key.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://open.spotify.com",
+    "name": "KEY!",
+    "snippet": "Listen to KEY ! on Spotify. Artist · 94.1K monthly listeners. 2022 Singles and EPs. Coming from the Mecca of rap music, Support Free Mobile App Popular by",
+    "host_name": "open.spotify.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.php.net",
+    "name": "key - Manual",
+    "snippet": "The key () function simply returns the key of the array element that's currently being pointed to by the internal pointer. It does not move the pointer in any ... Read more",
+    "host_name": "www.php.net",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://processing.org",
+    "name": "key / Reference",
+    "snippet": "The system variable key always contains the value of the most recent key on the keyboard that was used (either pressed or released).",
+    "host_name": "processing.org",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://developer.mozilla.org",
+    "name": "KeyboardEvent: key property - Web APIs | MDN",
+    "snippet": "Sep 2, 2026 — The KeyboardEvent interface's key read-only property returns the value of the key pressed by the user, taking into consideration the state ...",
+    "host_name": "developer.mozilla.org",
+    "rank": 4,
+    "date": "Sep 2, 2026",
+    "favicon": ""
+  }
+]

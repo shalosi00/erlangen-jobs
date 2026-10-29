@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://help.xing.com",
+    "name": "Which API interfaces does XING offer?",
+    "snippet": "Dec 3, 2025 — The XING API enables you to publish job advertisements on XING Jobs and monitor their status and performance.",
+    "host_name": "help.xing.com",
+    "rank": 0,
+    "date": "Dec 3, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com",
+    "name": "How to get consumer key and secret? · Issue #14",
+    "snippet": "Jan 5, 2017 — the XING public API has been closed. https:// dev . xing .com/. This developer group will no longer be operated in 2017.",
+    "host_name": "github.com",
+    "rank": 1,
+    "date": "Jan 5, 2017",
+    "favicon": ""
+  },
+  {
+    "url": "https://dev.xing.com",
+    "name": "XING E-Recruiting API Documentation",
+    "snippet": "The XING E-Recruiting API allows to post job postings on XING Jobs as well as monitoring their status and performance.",
+    "host_name": "dev.xing.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://parse.bot",
+    "name": "XING Jobs API – Search & Job Detail - Parse.bot",
+    "snippet": "Sep 21, 2026 — XING previously offered a developer platform at dev.xing.com, but that API was retired and is no longer available to new developers.",
+    "host_name": "parse.bot",
+    "rank": 3,
+    "date": "Sep 21, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.entireweb.com",
+    "name": "Is XING Down Right Now? Live Status, Outages and",
+    "snippet": "XING is operating normally right now (5 October 2026). Entireweb Status records no ongoing major outages or problems. In the past 24 hours, XING has received 0 ... Read more",
+    "host_name": "www.entireweb.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

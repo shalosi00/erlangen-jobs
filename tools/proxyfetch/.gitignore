@@ -1,0 +1,32 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+.venv/
+venv/
+
+# --- tooling ---
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- runtime state & artifacts (never commit) ---
+out/
+*.live_*.json
+*.live_*.csv
+last_success.html
+_proof.html
+_proof.json
+winners.json
+rotator_pool.txt
+rotator.log
+
+# --- editors / OS ---
+.idea/
+.vscode/
+.DS_Store

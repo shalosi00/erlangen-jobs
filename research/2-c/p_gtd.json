@@ -1,0 +1,88 @@
+{
+  "code": 200,
+  "data": {
+    "description": "",
+    "external": {
+      "alternate": {
+        "https://germantechjobs.de/rss": {
+          "type": "application/rss+xml"
+        }
+      },
+      "dns-prefetch": {
+        "https://cdn.by.wonderpush.com/": {},
+        "https://static.germantechjobs.de/": {},
+        "https://static.swissdevjobs.ch/": {}
+      },
+      "icon": {
+        "https://static.germantechjobs.de/utilities/favicon.ico": {}
+      },
+      "manifest": {
+        "https://static.germantechjobs.de/utilities/manifest.json": {}
+      },
+      "preconnect": {
+        "https://cdn.by.wonderpush.com/": {},
+        "https://static.germantechjobs.de/": {},
+        "https://static.swissdevjobs.ch/": {}
+      },
+      "preload": {
+        "https://static.germantechjobs.de/logo-images/germantech-jobs-transparent.png": {
+          "as": "image",
+          "fetchpriority": "high"
+        },
+        "https://static.swissdevjobs.ch/fontsv1/icomoon-v14.ttf": {
+          "as": "font",
+          "crossorigin": "anonymous",
+          "type": "font/ttf"
+        },
+        "https://static.swissdevjobs.ch/fontsv1/nunito-v9-latin-700.woff2": {
+          "as": "font",
+          "crossorigin": "anonymous",
+          "type": "font/woff2"
+        },
+        "https://static.swissdevjobs.ch/fontsv1/nunito-v9-latin-regular.woff2": {
+          "as": "font",
+          "crossorigin": "anonymous",
+          "type": "font/woff2"
+        }
+      }
+    },
+    "html": "<html><head><title data-react-helmet=\"true\"></title><meta name=\"robots\" content=\"index, follow, max-image-preview:large\" data-react-helmet=\"true\"><meta name=\"apple-itunes-app\" content=\"app-id=6470950598\"><link rel=\"canonical\" id=\"canonical-placeholder\" data-react-helmet=\"true\"><meta name=\"description\" data-react-helmet=\"true\"><link rel=\"alternate\" type=\"application/rss+xml\" href=\"https://germantechjobs.de/rss\"><link rel=\"dns-prefetch\" href=\"https://static.germantechjobs.de/\"><link rel=\"preconnect\" href=\"https://static.germantechjobs.de/\"><link rel=\"dns-prefetch\" href=\"https://static.swissdevjobs.ch\"><link rel=\"preconnect\" href=\"https://static.swissdevjobs.ch\"><link rel=\"dns-prefetch\" href=\"https://cdn.by.wonderpush.com\"><link rel=\"preconnect\" href=\"https://cdn.by.wonderpush.com\"><link rel=\"preload\" href=\"https://static.swissdevjobs.ch/fontsv1/nunito-v9-latin-700.woff2\" as=\"font\" type=\"font/woff2\" crossorigin=\"anonymous\"><link rel=\"preload\" href=\"https://static.swissdevjobs.ch/fontsv1/nunito-v9-latin-regular.woff2\" as=\"font\" type=\"font/woff2\" crossorigin=\"anonymous\"><link rel=\"preload\" href=\"https://static.swissdevjobs.ch/fontsv1/icomoon-v14.ttf\" as=\"font\" type=\"font/ttf\" crossorigin=\"anonymous\"><link rel=\"preload\" href=\"https://static.germantechjobs.de/logo-images/germantech-jobs-transparent.png\" as=\"image\" fetchpriority=\"high\"><link rel=\"shortcut icon\" href=\"https://static.germantechjobs.de/utilities/favicon.ico\"><link rel=\"manifest\" href=\"https://static.germantechjobs.de/utilities/manifest.json\"><script>!function(){function e(e){if([\"SCRIPT\",\"STYLE\",\"LINK\"].indexOf(e.tagName)>=0){var o=e.onerror;e.onerror=function(r){if(!r||!r.srcElement)return;r.path=r.path||[];for(var t=\"\",n=0;n<r.path.length;n++){var a=r.path[n];a!==window?(t+=a.nodeName,t+=a.id?\"#\"+a.id:\"\",t+=a.className?\".\"+a.className.split(\" \").join(\".\"):\"\",n<r.path.length&&(t+=\" > \")):t+=\"Window\"}console.log(\"ERROR: DOM path:\",t);const i=window.navigator.userAgent||\"\";var s=r.srcElement.src||r.srcElement.href;if(s&&s.includes(\"static\")&&!s.includes(\"twitter\")&&!s.includes(\"hotjar\")&&!s.includes(\"cloudflare\")){var l=\"Custom ERROR: Couldn't load \"+r.srcElement.tagName+\": \"+s;console.log(\"ERROR: Before sending to server: \"+l),fetch(\"/api/errors/report\",{method:\"POST\",headers:{\"Content-Type\":\"application/json\"},body:JSON.stringify({errorMessage:l,url:window.location.href,errorType:\"LoadingError-\"+e.tagName,userAgent:i,resourcePath:s})}),i.toLowerCase().includes(\"google\")||i.toLowerCase().includes(\"prerender\")?setTimeout((()=>{location.reload()}),1e3):setTimeout((()=>{location.reload()}),3e3)}s.includes(\"twitter\")||s.includes(\"facebook\")||s.includes(\"hotjar\")||console.error(\"ERROR: Couldn't \"+r.srcElement.tagName+\": \"+s),o&&o.call(e,r)}}}var o=window.MutationObserver||window.WebKitMutationObserver;o&&new o((function(o){[].forEach.call(o,(function(o){[].forEach.call(o.addedNodes,e)}))})).observe(document,{childList:!0,subtree:!0})}()</script><script>window.__detailedJob=\"JOB_PLACEHOLDER\"</script><script async=\"\" data-domain=\"germantechjobs.de\" src=\"https://pla-ble-tics.sdj.workers.dev/plauana/script.js\" data-api=\"https://pla-ble-tics.sdj.workers.dev/plauana/event\"></script><script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,shrink-to-fit=no\"><meta name=\"theme-color\" content=\"#1065bb\"><meta property=\"og:site_name\" content=\"GermanTechJobs\"><meta property=\"og:image:width\" content=\"1200\"><meta property=\"og:image:height\" content=\"630\"><meta property=\"og:image:type\" content=\"image/jpeg\"><meta property=\"og:type\" content=\"article\"><meta property=\"article:author\" content=\"GermanTechJobs Editorial Team\"><meta property=\"article:section\" content=\"Jobs, Recruiting, IT\"><meta property=\"article:tag\" content=\"Jobs, Recruiting, IT\"><meta name=\"twitter:card\" content=\"summary_large_image\"><meta name=\"twitter:site\" content=\"@GermanTechJobs\"><meta name=\"twitter:creator\" content=\"@GermanTechJobs\"><style>#html-placeholder{font-size:1.25em;margin-top:2em;font-family:sans-serif}.navbar-font{font-size:.9em}.navbar-color{background-color:#1066bc}</style><script defer=\"defer\" src=\"/static/js/main.6cef14be.js\"></script><link href=\"/static/css/main.6e4cb003.css\" rel=\"stylesheet\"></head><body class=\"main-background\"><noscript>You need to enable JavaScript to see this website -> go to your browser settings.</noscript><div id=\"root\"></div><div id=\"html-placeholder\" class=\"text-center\"><center>Almost ready 😊</center><center style=\"margin-top:1em;margin-left:1em;margin-right:1em\">If this page doesn't load within 10 seconds, please refresh!</center></div></body></html>",
+    "httpStatus": 200,
+    "httpStatusText": "OK",
+    "metadata": {
+      "apple-itunes-app": "app-id=6470950598",
+      "article:author": "GermanTechJobs Editorial Team",
+      "article:section": "Jobs, Recruiting, IT",
+      "article:tag": "Jobs, Recruiting, IT",
+      "og:image:height": "630",
+      "og:image:type": "image/jpeg",
+      "og:image:width": "1200",
+      "og:site_name": "GermanTechJobs",
+      "og:type": "article",
+      "robots": "index, follow, max-image-preview:large",
+      "theme-color": "#1065bb",
+      "twitter:card": "summary_large_image",
+      "twitter:creator": "@GermanTechJobs",
+      "twitter:site": "@GermanTechJobs",
+      "viewport": "width=device-width,initial-scale=1,shrink-to-fit=no"
+    },
+    "publishedTime": "Sat, 10 Oct 2026 12:19:29 GMT",
+    "title": "",
+    "url": "https://germantechjobs.de/en/developer-api",
+    "usage": {
+      "measuredTokens": 0,
+      "outputTokens": 0,
+      "scaledTokens": 1287,
+      "tokens": 1287
+    }
+  },
+  "meta": {
+    "usage": {
+      "measuredTokens": 0,
+      "outputTokens": 0,
+      "scaledTokens": 1287,
+      "tokens": 1287
+    }
+  },
+  "status": 20000
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "url": "https://data.gov.de",
+    "name": "Suche",
+    "snippet": "Mar 11, 2025 — GTFS Sollfahrplandaten. Verkehrsverbund Rhein-Sieg stellt den. Verbundraum als GTFS -Datensatz in einem ZIP-Verzeichnis zur Verfügung.",
+    "host_name": "data.gov.de",
+    "rank": 0,
+    "date": "Mar 11, 2025",
+    "favicon": ""
+  },
+  {
+    "url": "https://play.google.com/store/apps/developer?id=Verkehrsverbund+Gro%C3%9Fraum+N%C3%BCrnberg+GmbH&hl=hy",
+    "name": "Verkehrsverbund Großraum Nürnberg GmbH",
+    "snippet": "Android հավելվածներ Verkehrsverbund Großraum Nürnberg GmbH -ից Google Play-ում ... VGN Fahrplan & Tickets. Verkehrsverbund Großraum Nürnberg GmbH . Read more",
+    "host_name": "play.google.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://opendata.vag.de",
+    "name": "VAG Verkehrs-Aktiengesellschaft Nürnberg - Организације",
+    "snippet": "VAG-OpenData · Скупови података · Организације · Групе · О сервису · Impressum. Search Datasets... Почетак · Организације · VAG Verkehrs-Aktiengesellschaft ... Read more",
+    "host_name": "opendata.vag.de",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  }
+]

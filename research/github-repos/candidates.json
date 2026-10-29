@@ -1,0 +1,146 @@
+[
+ {
+  "repo": "DEENUU1/job-scraper",
+  "queries": [
+   "q01_jobspy",
+   "q05_aggregator"
+  ],
+  "titles": [
+   "DEENUU1/job-scraper: \ud83d\udd0e Job offers scraper: bulldogjob.pl"
+  ],
+  "snippets": [
+   "Job scraper A program that allows you to scrape job offers from many websites and save new offers in Google Sheet, .XLSX file or SQLite database with "
+  ],
+  "count": 2
+ },
+ {
+  "repo": "asimzz/Job-Finder-using-Jooble-API",
+  "queries": [
+   "q16_jooble"
+  ],
+  "titles": [
+   "Issues \u00b7 asimzz/Job-Finder-using-Jooble-API"
+  ],
+  "snippets": [
+   "the app built with BLoC pattern and with help of DDD pattern - Issues \u00b7 asimzz/ Job -Finder-using- Jooble - API ."
+  ],
+  "count": 1
+ },
+ {
+  "repo": "bundesAPI/jobsuche-api",
+  "queries": [
+   "q04_arbeitsagentur"
+  ],
+  "titles": [
+   "bundesAPI/jobsuche-api: API zur Bundesagentur f\u00fcr Arbeit"
+  ],
+  "snippets": [
+   "Arbeitsagentur Jobsuche API . Die Bundesagentur f\u00fcr Arbeit verf\u00fcgt \u00fcber die gr\u00f6\u00dfte Datenbank f\u00fcr offene Stellen in Deutschland. Obwohl sie vollst\u00e4ndig"
+  ],
+  "count": 1
+ },
+ {
+  "repo": "emredurukn/awesome-job-boards",
+  "queries": [
+   "q08_awesome"
+  ],
+  "titles": [
+   "A curated list of awesome job boards"
+  ],
+  "snippets": [
+   "A curated list of awesome job boards. Robotics and automation roles (AMR, humanoid, drones, ROS) across US, UK, and Europe. Remote Jobs API - Free, no"
+  ],
+  "count": 1
+ },
+ {
+  "repo": "jsun969/job-tracker",
+  "queries": [
+   "q11_tracker"
+  ],
+  "titles": [
+   "jsun969/job-tracker: A simple app to track job applications."
+  ],
+  "snippets": [
+   "Track the different stages of your job applications with a timeline \u00b7 Organise your applications into categories (Upcoming, Ongoing, Offer, Closed) \u00b7 "
+  ],
+  "count": 1
+ },
+ {
+  "repo": "madingess/EasyApplyBot",
+  "queries": [
+   "q02_easyapply"
+  ],
+  "titles": [
+   "madingess/EasyApplyBot: Automate LinkedIn Easy Apply"
+  ],
+  "snippets": [
+   "This Python and Selenium-based bot automates applying to jobs using the Easy Apply feature on LinkedIn. Key Features. Apply to thousands of jobs effor"
+  ],
+  "count": 1
+ },
+ {
+  "repo": "navikt/pam-eures-stilling-eksport",
+  "queries": [
+   "q10_eures"
+  ],
+  "titles": [
+   "navikt/pam-eures-stilling-eksport"
+  ],
+  "snippets": [
+   "Implementation of the Eures input API, used by EU and EURES to fetch Job Vacancies in Norway."
+  ],
+  "count": 1
+ },
+ {
+  "repo": "patilswapnilv/job-scraper",
+  "queries": [
+   "q06_ats"
+  ],
+  "titles": [
+   "patilswapnilv/job-scraper: Scrape jobs for greenhouse"
+  ],
+  "snippets": [
+   "This python script helps you to scrape the jobs and their details from a Company job page on Greenhouse ATS . Greenhouse is a popular ATS service and "
+  ],
+  "count": 1
+ },
+ {
+  "repo": "rabiuk/job-scraper",
+  "queries": [
+   "q07_germany"
+  ],
+  "titles": [
+   "rabiuk/job-scraper: A Python tool to scrape Software"
+  ],
+  "snippets": [
+   "A Python-based job hunting tool designed to help Software Engineer (SWE) new grads and interns apply first by scraping job postings from multiple sour"
+  ],
+  "count": 1
+ },
+ {
+  "repo": "rorar/EURES-API-Documentation",
+  "queries": [
+   "q10_eures"
+  ],
+  "titles": [
+   "EURES Job Search API Documentation"
+  ],
+  "snippets": [
+   "EURES (European Employment Services) Job Search API. This is an unofficial, community-maintained documentation project."
+  ],
+  "count": 1
+ },
+ {
+  "repo": "talqadi7/CoverLetterGenerator",
+  "queries": [
+   "q17_llm_resume"
+  ],
+  "titles": [
+   "talqadi7/CoverLetterGenerator: Personalized cover letter"
+  ],
+  "snippets": [
+   "Automated Cover Letter Generator . This project produces personalized cover letters based on the input of company name, job position, and job descript"
+  ],
+  "count": 1
+ }
+]

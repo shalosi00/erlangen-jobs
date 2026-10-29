@@ -1,0 +1,337 @@
+[
+ {
+  "name": "kimeta",
+  "url": "https://www.kimeta.de/fachinformatiker-jobs-erlangen",
+  "status": 503,
+  "final_url": "https://www.kimeta.de/fachinformatiker-jobs-erlangen",
+  "len": 592,
+  "file": "kimeta_www_kimeta_de_503.html",
+  "sigs": [],
+  "ctype": "text/html"
+ },
+ {
+  "name": "kimeta",
+  "url": "https://www.kimeta.de/suche?q=fachinformatiker+erlangen",
+  "status": 503,
+  "final_url": "https://www.kimeta.de/suche?q=fachinformatiker+erlangen",
+  "len": 592,
+  "file": "kimeta_www_kimeta_de_503.html",
+  "sigs": [],
+  "ctype": "text/html"
+ },
+ {
+  "name": "jobvector",
+  "url": "https://www.jobvector.de/suche?q=fachinformatiker&l=Erlangen",
+  "status": 403,
+  "final_url": "https://www.jobvector.de/suche?q=fachinformatiker&l=Erlangen",
+  "len": 5854,
+  "file": "jobvector_www_jobvector_de_403.html",
+  "sigs": [
+   "cf_challenge"
+  ],
+  "ctype": "text/html"
+ },
+ {
+  "name": "jobvector",
+  "url": "https://www.jobvector.de/jobboerse?searchterm=fachinformatiker",
+  "status": 403,
+  "final_url": "https://www.jobvector.de/jobboerse?searchterm=fachinformatiker",
+  "len": 5845,
+  "file": "jobvector_www_jobvector_de_403.html",
+  "sigs": [
+   "cf_challenge"
+  ],
+  "ctype": "text/html"
+ },
+ {
+  "name": "get-in-it",
+  "url": "https://www.get-in-it.de/jobs?keywords=fachinformatiker&locations=Erlangen",
+  "status": 404,
+  "final_url": "https://www.get-in-it.de/jobs?keywords=fachinformatiker&locations=Erlangen",
+  "len": 55980,
+  "file": "get-in-it_www_get-in-it_de_404.html",
+  "sigs": [],
+  "ctype": "text/html"
+ },
+ {
+  "name": "get-in-it",
+  "url": "https://www.get-in-it.de/",
+  "status": 200,
+  "final_url": "https://www.get-in-it.de/",
+  "len": 99850,
+  "file": "get-in-it_www_get-in-it_de_200.html",
+  "sigs": [
+   "next_data",
+   "react_app"
+  ],
+  "ctype": "text/html"
+ },
+ {
+  "name": "absolventa",
+  "url": "https://www.absolventa.de/jobs?q=fachinformatiker",
+  "status": 200,
+  "final_url": "https://www.absolventa.de/jobs?q=fachinformatiker",
+  "len": 419316,
+  "file": "absolventa_www_absolventa_de_200.html",
+  "sigs": [
+   "jsonld_jobposting",
+   "api_hint"
+  ],
+  "ctype": "text/html"
+ },
+ {
+  "name": "absolventa",
+  "url": "https://www.absolventa.de/jobs/fachinformatiker-erlangen",
+  "status": 404,
+  "final_url": "https://www.absolventa.de/jobs/stadt/fachinformatiker-erlangen",
+  "len": 114370,
+  "file": "absolventa_www_absolventa_de_404.html",
+  "sigs": [],
+  "ctype": "text/html"
+ },
+ {
+  "name": "stellenanzeigen",
+  "url": "https://www.stellenanzeigen.de/fachinformatiker/erlangen/",
+  "status": 404,
+  "final_url": "https://www.stellenanzeigen.de/fachinformatiker/erlangen/",
+  "len": 137738,
+  "file": "stellenanzeigen_www_stellenanzeigen_de_404.html",
+  "sigs": [
+   "cf_challenge"
+  ],
+  "ctype": "text/html"
+ },
+ {
+  "name": "stellenanzeigen",
+  "url": "https://www.stellenanzeigen.de/suche/?what=fachinformatiker&where=Erlangen",
+  "status": 200,
+  "final_url": "https://www.stellenanzeigen.de/suche/?what=fachinformatiker&where=Erlangen",
+  "len": 509896,
+  "file": "stellenanzeigen_www_stellenanzeigen_de_200.html",
+  "sigs": [
+   "cf_challenge"
+  ],
+  "ctype": "text/html"
+ },
+ {
+  "name": "jobware",
+  "url": "https://www.jobware.de/jobs?jw_jobname=fachinformatiker&jw_jobort=Erlangen",
+  "status": 200,
+  "final_url": "https://www.jobware.de/jobs--fuer-fachinformatiker--in-erlangen",
+  "len": 812518,
+  "file": "jobware_www_jobware_de_200.html",
+  "sigs": [
+   "api_hint"
+  ],
+  "ctype": "text/html"
+ },
+ {
+  "name": "jobware",
+  "url": "https://www.jobware.de/",
+  "error": "ConnectTimeout: HTTPSConnectionPool(host='www.jobware.de', port=443): Max retries exceeded with "
+ },
+ {
+  "name": "gigajob",
+  "url": "https://www.gigajob.com/de/suche?q=fachinformatiker&l=Erlangen",
+  "status": 401,
+  "final_url": "https://www.indeed.com/",
+  "len": 1675,
+  "file": "gigajob_www_gigajob_com_401.html",
+  "sigs": [
+   "cf_challenge"
+  ],
+  "ctype": "text/html"
+ },
+ {
+  "name": "gigajob",
+  "url": "https://www.gigajob.com/de/stellenangebote-fachinformatiker-erlangen.html",
+  "status": 401,
+  "final_url": "https://www.indeed.com/",
+  "len": 1675,
+  "file": "gigajob_www_gigajob_com_401.html",
+  "sigs": [
+   "cf_challenge"
+  ],
+  "ctype": "text/html"
+ },
+ {
+  "name": "jobrapido",
+  "url": "https://de.jobrapido.com/jobs?q=fachinformatiker&l=Erlangen",
+  "status": 403,
+  "final_url": "https://de.jobrapido.com/jobs?q=fachinformatiker&l=Erlangen",
+  "len": 93,
+  "file": "jobrapido_de_jobrapido_com_403.html",
+  "sigs": [],
+  "ctype": "text/html"
+ },
+ {
+  "name": "trovit",
+  "url": "https://de.trovit.com/jobs/fachinformatiker/erlangen",
+  "error": "ConnectTimeout: HTTPSConnectionPool(host='de.trovit.com', port=443): Max retries exceeded with u"
+ },
+ {
+  "name": "trovit",
+  "url": "https://de.trovit.com/",
+  "error": "ConnectTimeout: HTTPSConnectionPool(host='de.trovit.com', port=443): Max retries exceeded with u"
+ },
+ {
+  "name": "careerjet-api",
+  "url": "https://public.careerjet.com/search/jobs?v=2&locale_code=de_DE&keywords=fachinformatiker&location=Erlangen",
+  "error": "ConnectionError: HTTPSConnectionPool(host='public.careerjet.com', port=443): Max retries exceeded"
+ },
+ {
+  "name": "careerjet-api",
+  "url": "https://api.careerjet.com/search?v=2&locale_code=de_DE&keywords=fachinformatiker&location=Erlangen",
+  "error": "ConnectionError: HTTPSConnectionPool(host='api.careerjet.com', port=443): Max retries exceeded wi"
+ },
+ {
+  "name": "germantechjobs",
+  "url": "https://germantechjobs.de/jobs?search=fachinformatiker",
+  "status": 200,
+  "final_url": "https://devitjobs.jobcopilot.com/signup?utm_source=dot_de_old",
+  "len": 10307,
+  "file": "germantechjobs_germantechjobs_de_200.html",
+  "sigs": [
+   "next_data",
+   "react_app"
+  ],
+  "ctype": "text/html"
+ },
+ {
+  "name": "germantechjobs",
+  "url": "https://germantechjobs.de/jobs/germany/erlangen",
+  "status": 200,
+  "final_url": "https://devitjobs.jobcopilot.com/signup?utm_source=dot_de_old",
+  "len": 10307,
+  "file": "germantechjobs_germantechjobs_de_200.html",
+  "sigs": [
+   "next_data",
+   "react_app"
+  ],
+  "ctype": "text/html"
+ },
+ {
+  "name": "yourfirm",
+  "url": "https://www.yourfirm.de/job/fachinformatiker/erlangen/",
+  "status": 403,
+  "final_url": "https://www.yourfirm.de/job/fachinformatiker/erlangen/",
+  "len": 5826,
+  "file": "yourfirm_www_yourfirm_de_403.html",
+  "sigs": [
+   "cf_challenge"
+  ],
+  "ctype": "text/html"
+ },
+ {
+  "name": "yourfirm",
+  "url": "https://www.yourfirm.de/stellenangebote/?keyword=fachinformatiker",
+  "status": 403,
+  "final_url": "https://www.yourfirm.de/stellenangebote/?keyword=fachinformatiker",
+  "len": 5895,
+  "file": "yourfirm_www_yourfirm_de_403.html",
+  "sigs": [
+   "cf_challenge"
+  ],
+  "ctype": "text/html"
+ },
+ {
+  "name": "interamt",
+  "url": "https://interamt.de/mpi/public/stellensuche.html",
+  "status": 404,
+  "final_url": "https://interamt.de/koop/app/mpi/public/stellensuche.html",
+  "len": 8363,
+  "file": "interamt_interamt_de_404.html",
+  "sigs": [],
+  "ctype": "text/html"
+ },
+ {
+  "name": "interamt",
+  "url": "https://interamt.de/oppa-service/api/v1/stellen?page=1&size=5",
+  "status": 404,
+  "final_url": "https://interamt.de/koop/app/oppa-service/api/v1/stellen?page=1&size=5",
+  "len": 8363,
+  "file": "interamt_interamt_de_404.html",
+  "sigs": [],
+  "ctype": "text/html"
+ },
+ {
+  "name": "berufsstart",
+  "url": "https://www.berufsstart.de/jobs/suche?q=fachinformatiker",
+  "status": 404,
+  "final_url": "https://www.berufsstart.de/jobs/suche?q=fachinformatiker",
+  "len": 10292,
+  "file": "berufsstart_www_berufsstart_de_404.html",
+  "sigs": [],
+  "ctype": "text/html"
+ },
+ {
+  "name": "berufsstart",
+  "url": "https://www.berufsstart.de/stellenboerse/",
+  "status": 404,
+  "final_url": "https://www.berufsstart.de/stellenboerse/",
+  "len": 10294,
+  "file": "berufsstart_www_berufsstart_de_404.html",
+  "sigs": [],
+  "ctype": "text/html"
+ },
+ {
+  "name": "connecticum",
+  "url": "https://www.connecticum.de/jobboerse/suche/?q=fachinformatiker",
+  "status": 200,
+  "final_url": "https://www.connecticum.de/jobs?details=&page=1&volltext=",
+  "len": 122257,
+  "file": "connecticum_www_connecticum_de_200.html",
+  "sigs": [],
+  "ctype": "text/html"
+ },
+ {
+  "name": "connecticum",
+  "url": "https://www.connecticum.de/jobboerse/",
+  "status": 200,
+  "final_url": "https://www.connecticum.de/jobs",
+  "len": 122179,
+  "file": "connecticum_www_connecticum_de_200.html",
+  "sigs": [],
+  "ctype": "text/html"
+ },
+ {
+  "name": "meinefirma",
+  "url": "https://www.meinefirma.de/jobs/fachinformatiker-erlangen",
+  "error": "SSLError: HTTPSConnectionPool(host='www.meinefirma.de', port=443): Max retries exceeded wi"
+ },
+ {
+  "name": "meinefirma",
+  "url": "https://www.meinefirma.de/",
+  "error": "SSLError: HTTPSConnectionPool(host='www.meinefirma.de', port=443): Max retries exceeded wi"
+ },
+ {
+  "name": "fau-jobboard",
+  "url": "https://www.jobboerse.fau.de/jobs/?search=fachinformatiker",
+  "error": "ConnectionError: HTTPSConnectionPool(host='www.jobboerse.fau.de', port=443): Max retries exceeded"
+ },
+ {
+  "name": "fau-jobboard",
+  "url": "https://www.jobboerse.fau.de/",
+  "error": "ConnectionError: HTTPSConnectionPool(host='www.jobboerse.fau.de', port=443): Max retries exceeded"
+ },
+ {
+  "name": "infranken",
+  "url": "https://www.infranken.de/stellenmarkt",
+  "status": 404,
+  "final_url": "https://www.infranken.de/stellenmarkt",
+  "len": 119435,
+  "file": "infranken_www_infranken_de_404.html",
+  "sigs": [],
+  "ctype": "text/html"
+ },
+ {
+  "name": "infranken",
+  "url": "https://jobs.infranken.de/jobs?searchterm=fachinformatiker",
+  "status": 404,
+  "final_url": "https://jobs.infranken.de/jobs?searchterm=fachinformatiker",
+  "len": 39168,
+  "file": "infranken_jobs_infranken_de_404.html",
+  "sigs": [],
+  "ctype": "text/html"
+ }
+]

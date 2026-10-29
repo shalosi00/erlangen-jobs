@@ -1,0 +1,65 @@
+[
+  {
+    "url": "https://github.com",
+    "name": "bundesAPI/jobsuche-api: API zur Bundesagentur für Arbeit",
+    "snippet": "Arbeitsagentur Jobsuche API . Die Bundesagentur für Arbeit verfügt über die größte Datenbank für offene Stellen in Deutschland. Obwohl sie vollständig staatlich ... Read more",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://context7.com",
+    "name": "Arbeitsagentur Jobsuche API (bundesapi",
+    "snippet": "This section provides information on how to access and utilize the OpenAPI documentation for the Arbeitsagentur Jobsuche API .",
+    "host_name": "context7.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.rs",
+    "name": "jobsuche - Rust",
+    "snippet": "It allows you to search for jobs , get detailed job information, and access employer logos. default API key let client",
+    "host_name": "docs.rs",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://scrappa.co",
+    "name": "Bundesagentur für Arbeit Jobsuche API | Stellenangebote",
+    "snippet": "it provides a simplified Stellenangebote API interface to Jobsuche data with API key authentication, structured JSON responses, and interactive docs.",
+    "host_name": "scrappa.co",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://andreasfischer1985.github.io",
+    "name": "API-Kollektion web.arbeitsagentur.de",
+    "snippet": "Jobsuche : Hier Stellensuche nach neusten Jobs oder Ausbildungsplätzen starten in einer der größten Jobbörsen Deutschlands.",
+    "host_name": "andreasfischer1985.github.io",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://publicapi.dev",
+    "name": "Arbeitsamt API - Jobs",
+    "snippet": "To access the Arbeitsamt API , users must obtain an API key by registering on the official website. The API key must be included in the request headers for ... Read more",
+    "host_name": "publicapi.dev",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://pypi.org",
+    "name": "de-jobsuche",
+    "snippet": "Feb 19, 2022 — jobsuche . Die größte Stellendatenbank Deutschlands durchsuchen, Details zu Stellenanzeigen und Informationen über Arbeitgeber abrufen. Read more",
+    "host_name": "pypi.org",
+    "rank": 6,
+    "date": "Feb 19, 2022",
+    "favicon": ""
+  }
+]

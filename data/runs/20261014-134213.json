@@ -1,0 +1,364 @@
+{
+ "ts": "20261014-134213",
+ "git_head": "91904cf",
+ "slug": "fachinformatiker-systemintegration-erlangen-50km-14d",
+ "query": "Fachinformatiker Systemintegration",
+ "city": "Erlangen",
+ "radius": 50,
+ "days": 14,
+ "ok_sources": [
+  "ba",
+  "getinit",
+  "infranken",
+  "kimeta",
+  "stellenanzeigen",
+  "talent",
+  "xing"
+ ],
+ "not_ok_sources": [
+  {
+   "name": "indeed",
+   "status": "ERROR",
+   "error": "NameError: name 'NEAR_RX' is not defined"
+  },
+  {
+   "name": "linkedin",
+   "status": "EMPTY",
+   "error": ""
+  },
+  {
+   "name": "connecticum",
+   "status": "ERROR",
+   "error": "NameError: name 'NEAR_RX' is not defined"
+  },
+  {
+   "name": "arbeitnow",
+   "status": "ERROR",
+   "error": "NameError: name 'NEAR_RX' is not defined"
+  },
+  {
+   "name": "adzuna",
+   "status": "ERROR",
+   "error": "[auth] missing API key: set ADZUNA_APP_ID + ADZUNA_APP_KEY (free: developer.adzuna.com)"
+  },
+  {
+   "name": "jooble",
+   "status": "ERROR",
+   "error": "[auth] missing API key: set JOOBLE_API_KEY (free: jooble.org/api)"
+  },
+  {
+   "name": "careerjet",
+   "status": "ERROR",
+   "error": "[auth] missing API key: set CAREERJET_AFFID (free: careerjet.com/partners/api)"
+  },
+  {
+   "name": "whatjobs",
+   "status": "ERROR",
+   "error": "[auth] missing API key: set WHATJOBS_PUBLISHER_KEY (whatjobs affiliate/publisher program)"
+  },
+  {
+   "name": "remotive",
+   "status": "ERROR",
+   "error": "NameError: name 'NEAR_RX' is not defined"
+  },
+  {
+   "name": "remoteok",
+   "status": "ERROR",
+   "error": "NameError: name 'NEAR_RX' is not defined"
+  },
+  {
+   "name": "jobicy",
+   "status": "ERROR",
+   "error": "NameError: name 'NEAR_RX' is not defined"
+  },
+  {
+   "name": "himalayas",
+   "status": "ERROR",
+   "error": "NameError: name 'NEAR_RX' is not defined"
+  },
+  {
+   "name": "wwr",
+   "status": "ERROR",
+   "error": "NameError: name 'NEAR_RX' is not defined"
+  },
+  {
+   "name": "eures",
+   "status": "ERROR",
+   "error": "NameError: name 'NEAR_RX' is not defined"
+  },
+  {
+   "name": "berufsstart",
+   "status": "ERROR",
+   "error": "[timeout] timeout after 25s: https://www.berufsstart.de/ergebnisliste.php?suchbegriff=Fachinformatiker Systemintegration"
+  }
+ ],
+ "per_source": [
+  {
+   "name": "ba",
+   "status": "OK",
+   "count_raw": 45,
+   "count_kept": 25,
+   "count_rejected": 20,
+   "duration_s": 41.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "indeed",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.5,
+   "http_status": null,
+   "error": "NameError: name 'NEAR_RX' is not defined",
+   "detail": "unexpected — traceback in log"
+  },
+  {
+   "name": "linkedin",
+   "status": "EMPTY",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.3,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "xing",
+   "status": "OK",
+   "count_raw": 3,
+   "count_kept": 2,
+   "count_rejected": 1,
+   "duration_s": 1.3,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "kimeta",
+   "status": "OK",
+   "count_raw": 12,
+   "count_kept": 6,
+   "count_rejected": 6,
+   "duration_s": 26.5,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "stellenanzeigen",
+   "status": "OK",
+   "count_raw": 39,
+   "count_kept": 0,
+   "count_rejected": 39,
+   "duration_s": 1.5,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "getinit",
+   "status": "OK",
+   "count_raw": 39,
+   "count_kept": 5,
+   "count_rejected": 34,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "connecticum",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "NameError: name 'NEAR_RX' is not defined",
+   "detail": "unexpected — traceback in log"
+  },
+  {
+   "name": "infranken",
+   "status": "OK",
+   "count_raw": 24,
+   "count_kept": 1,
+   "count_rejected": 23,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "arbeitnow",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "NameError: name 'NEAR_RX' is not defined",
+   "detail": "unexpected — traceback in log"
+  },
+  {
+   "name": "adzuna",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "[auth] missing API key: set ADZUNA_APP_ID + ADZUNA_APP_KEY (free: developer.adzuna.com)",
+   "detail": "url="
+  },
+  {
+   "name": "jooble",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "[auth] missing API key: set JOOBLE_API_KEY (free: jooble.org/api)",
+   "detail": "url="
+  },
+  {
+   "name": "careerjet",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "[auth] missing API key: set CAREERJET_AFFID (free: careerjet.com/partners/api)",
+   "detail": "url="
+  },
+  {
+   "name": "whatjobs",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "[auth] missing API key: set WHATJOBS_PUBLISHER_KEY (whatjobs affiliate/publisher program)",
+   "detail": "url="
+  },
+  {
+   "name": "remotive",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "NameError: name 'NEAR_RX' is not defined",
+   "detail": "unexpected — traceback in log"
+  },
+  {
+   "name": "remoteok",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "NameError: name 'NEAR_RX' is not defined",
+   "detail": "unexpected — traceback in log"
+  },
+  {
+   "name": "jobicy",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "NameError: name 'NEAR_RX' is not defined",
+   "detail": "unexpected — traceback in log"
+  },
+  {
+   "name": "talent",
+   "status": "OK",
+   "count_raw": 18,
+   "count_kept": 9,
+   "count_rejected": 9,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "himalayas",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "NameError: name 'NEAR_RX' is not defined",
+   "detail": "unexpected — traceback in log"
+  },
+  {
+   "name": "wwr",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "NameError: name 'NEAR_RX' is not defined",
+   "detail": "unexpected — traceback in log"
+  },
+  {
+   "name": "eures",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "NameError: name 'NEAR_RX' is not defined",
+   "detail": "unexpected — traceback in log"
+  },
+  {
+   "name": "berufsstart",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "[timeout] timeout after 25s: https://www.berufsstart.de/ergebnisliste.php?suchbegriff=Fachinformatiker Systemintegration",
+   "detail": "url=https://www.berufsstart.de/ergebnisliste.php?suchbegriff=Fachinformatiker Systemintegration"
+  }
+ ],
+ "outputs": [
+  "/home/z/my-project/download/jobs_fachinformatiker-systemintegration-erlangen-50km-14d_20261014-1343.csv",
+  "/home/z/my-project/download/jobs_fachinformatiker-systemintegration-erlangen-50km-14d_20261014-1343.json",
+  "/home/z/my-project/download/jobs_fachinformatiker-systemintegration-erlangen-50km-14d_20261014-1343_rejected.csv"
+ ],
+ "unique_final": 44,
+ "rejected_total": 132,
+ "proxy_pool": {
+  "alive": 1567,
+  "by_protocol": {
+   "socks5": 847,
+   "http": 477,
+   "socks4": 239,
+   "https": 4
+  },
+  "per_target": {
+   "ba_api": 850,
+   "kimeta": 525,
+   "stellenanzeigen": 578,
+   "jobvector": 3
+  },
+  "dead_marked": 1,
+  "data_file": "/home/z/my-project/data/proxies/validated_proxies.json",
+  "age_hours": 17.9
+ }
+}

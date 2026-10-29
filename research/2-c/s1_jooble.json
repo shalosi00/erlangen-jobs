@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://jooble.org",
+    "name": "Jooble REST API",
+    "snippet": "Our REST API allows you to take search queries from Jooble and post the results on your website in your own design. This is required to obtain a key .",
+    "host_name": "jooble.org",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://publicapis.io",
+    "name": "Jooble API — Free Job Search API Key (Setup Guide &",
+    "snippet": "Request a free Jooble job search API key , see how the POST-based API works, and grab ready-to-use code examples for querying job listings in 60+ countries.",
+    "host_name": "publicapis.io",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://help.jooble.org",
+    "name": "REST API Documentation - Support : Jooble Help Center",
+    "snippet": "Aug 16, 2026 — This guide provides documentation for integrating with the Jooble REST API. Below you will find information about API key generation , endpoints, ... Read more",
+    "host_name": "help.jooble.org",
+    "rank": 2,
+    "date": "Aug 16, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://apify.com",
+    "name": "Jooble Jobs API - Search Job Postings Worldwide",
+    "snippet": "Jul 22, 2026 — Jooble Jobs API turns the Jooble job search into a clean, structured dataset. Enter keywords and a location and get back matching postings from ... Read more",
+    "host_name": "apify.com",
+    "rank": 3,
+    "date": "Jul 22, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://publicapis.dev",
+    "name": "Top 24 Jobs APIs For Developers - Public APIs",
+    "snippet": "A community-made collection of public APIs about jobs . Find these and many other great resources for your projects.",
+    "host_name": "publicapis.dev",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://cleanjobdata.com",
+    "name": "Jooble API: Key, Pricing, Limits & Docs (2026) + Alternative",
+    "snippet": "How to get a Jooble API key , what the free plan allows (500 requests per key), how the REST endpoint works, and where CleanJobData is a better fit.",
+    "host_name": "cleanjobdata.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.arbeitnow.com",
+    "name": "Job Board API",
+    "snippet": "Aug 1, 2026 — You can find the Free Job Search API on the job board, requires no API key and API has been documented. This provides jobs from multiple job ...",
+    "host_name": "www.arbeitnow.com",
+    "rank": 6,
+    "date": "Aug 1, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://publicapi.dev",
+    "name": "Jooble API",
+    "snippet": "The Jooble API allows developers to access job search functionality provided by Jooble .org. Users can search for job opportunities across various industries",
+    "host_name": "publicapi.dev",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  }
+]

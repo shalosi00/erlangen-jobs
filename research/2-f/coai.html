@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Exposed Is the German Job Market to AI? | COAI - Human Compatible AI</title>
+  <meta name="description" content="COAI develops evidence-based threat models of advanced AI, using targeted evaluation to test assumptions that matter for human control."><link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="144x144" href="/assets/images/favicon-144x144.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/favicon-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>How Exposed Is the German Job Market to AI? | COAI - Human Compatible AI</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="How Exposed Is the German Job Market to AI?" />
+<meta name="author" content="Sigurd Schacht" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An analysis of 44 million workers across 266 occupations, inspired by Karpathy’s US study — adapted for Germany’s unique labor market. A opinionated analysis by us" />
+<meta property="og:description" content="An analysis of 44 million workers across 266 occupations, inspired by Karpathy’s US study — adapted for Germany’s unique labor market. A opinionated analysis by us" />
+<link rel="canonical" href="https://coairesearch.org/notes/how-exposed-is-the-german-job-market/" />
+<meta property="og:url" content="https://coairesearch.org/notes/how-exposed-is-the-german-job-market/" />
+<meta property="og:site_name" content="COAI - Human Compatible AI" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-16T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How Exposed Is the German Job Market to AI?" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@Sigurd Schacht" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sigurd Schacht"},"dateModified":"2026-03-16T00:00:00+00:00","datePublished":"2026-03-16T00:00:00+00:00","description":"An analysis of 44 million workers across 266 occupations, inspired by Karpathy’s US study — adapted for Germany’s unique labor market. A opinionated analysis by us","headline":"How Exposed Is the German Job Market to AI?","mainEntityOfPage":{"@type":"WebPage","@id":"https://coairesearch.org/notes/how-exposed-is-the-german-job-market/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://coairesearch.org/assets/images/favicon-512x512.png"},"name":"Sigurd Schacht"},"url":"https://coairesearch.org/notes/how-exposed-is-the-german-job-market/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <meta property="og:image" content="https://coairesearch.org/assets/images/og-image.png" />
+  <meta name="twitter:image" content="https://coairesearch.org/assets/images/og-image.png" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo-link"><img src="/assets/images/Logo_bunt_neu_ot.png" alt="COAI Research home" class="logo"></a>
+    <button type="button" class="nav-menu-button" aria-expanded="false" aria-controls="main-navigation">Menu <span aria-hidden="true">☰</span></button>
+    <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+      
+      <a href="/research/">Research</a><a href="/publications/" aria-current="true">Publications & Notes</a><a href="/about/">About COAI</a><a href="/events/">Events</a><a href="/donate/" class="nav-donate">Support Us</a>
+    </nav>
+  </div>
+</header>
+<script src="/assets/js/navigation.js" defer></script>
+<noscript><style>@media(max-width:768px){.nav-menu-button{display:none}.header-inner{height:auto;flex-wrap:wrap}.main-nav{position:static;visibility:visible;transform:none;opacity:1;pointer-events:auto;width:100%}}</style></noscript>
+
+  <main id="main-content">
+    
+
+<div class="page-context"><div class="container">
+  <nav class="breadcrumbs" aria-label="Breadcrumb"><ol>
+    <li><a href="/">Home</a></li>
+    <li><a href="/publications/">Publications & Notes</a></li>
+    <li><a href="/notes/">Notes</a></li>
+    <li><span aria-current="page">How Exposed Is the German Job Market to AI?</span></li>
+  </ol></nav>
+  
+  <nav class="research-navigation" aria-label="Publication sections"><a href="/publications/">Publications</a><a href="/notes/" aria-current="true">Notes</a></nav>
+  
+</div></div>
+
+
+    <section class="page-content">
+  <div class="container">
+    
+    <h1 class="page-title">How Exposed Is the German Job Market to AI?</h1>
+    
+
+    
+    
+    
+    
+
+    <div class="post-meta-bar">
+      <div class="post-meta-left">
+        <span class="meta-label">Author</span><span>Sigurd Schacht</span>
+        <span class="meta-label">Date</span><span>March 16, 2026</span>
+        
+        
+        
+      </div>
+      <div class="post-meta-right">
+        <span class="meta-label">Share</span>
+        <button class="share-btn" id="copy-link-btn" title="Copy link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          Copy Link
+        </button>
+        <button class="share-btn" id="cite-btn" title="Citation">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Citation
+        </button>
+      </div>
+    </div>
+
+    <div class="post-layout">
+      <article class="post-body" id="post-body">
+        <p><em>An analysis of 44 million workers across 266 occupations, inspired by Karpathy’s US study — adapted for Germany’s unique labor market. A opinionated analysis by us</em></p>
+
+<hr />
+<p><br />
+<em>A note on methodology: This is an exploratory analysis, not a peer-reviewed scientific study. The AI exposure scores reflect the informed but subjective judgment of the author — not a bias-free, empirically validated measurement. Different experts, different rubrics, or different assumptions about the pace of AI adoption would produce different scores. The employment figures per occupation are estimates calibrated to official totals, not exact counts from a single statistical source. Think of this as a structured starting point for discussion, not a definitive verdict.</em></p>
+
+<h2 id="we-scored-266-occupations-to-find-out">We Scored 266 Occupations to Find Out</h2>
+
+<p>In the first two months of 2026 alone, over 45,000 tech workers worldwide have lost their jobs — with more than 9,200 of those cuts directly attributed to AI and automation (RationalFX/Layoffs.fyi tracker, March 2026). Block’s CEO Jack Dorsey announced 4,000 layoffs — 40 percent of the company’s workforce — explicitly citing AI-driven restructuring. WiseTech Global cut 2,000 positions, arguing that generative AI is making “traditional approaches to writing and maintaining code increasingly obsolete.” In 2025, outplacement firm Challenger, Gray &amp; Christmas counted 55,000 job cuts directly attributed to AI across the US — twelve times the number just two years earlier (CBS News, March 2026).</p>
+
+<p>The question is no longer <em>whether</em> AI will reshape the labor market. It’s <em>which</em> jobs, <em>how fast</em>, and <em>how many</em>.</p>
+
+<p>The International Monetary Fund estimated in early 2024 that roughly 40 percent of global employment is exposed to AI — rising to around 60 percent in advanced economies (IMF Staff Discussion Note, January 2024). Goldman Sachs projects that generative AI could automate up to 25 percent of global work hours. The World Economic Forum estimates 92 million jobs displaced by automation by the end of 2026. And yet: economists remain divided on whether this will be a gradual productivity boost or a structural rupture. As CNN reported in early March 2026, “AI isn’t causing a jobs-pocalypse. At least, not yet” — US unemployment sits at 4.3%, only half a percentage point above pre-AI-boom levels.</p>
+
+<p>What’s missing in the global debate is granularity. We hear “40 percent of jobs are exposed” — but which ones? A roofer and a bookkeeper are both “employed,” but their AI exposure couldn’t be more different. Andrej Karpathy recently published an open-source analysis for the United States, scoring 342 occupations from the Bureau of Labor Statistics for AI exposure and visualizing the results as an interactive treemap — area proportional to employment, color from green (safe) to red (exposed).</p>
+
+<p>We set out to do the same for Germany. It turns out Germany’s data infrastructure is arguably even better than the American one — and the results reveal a labor market with a very different AI exposure profile than the US.</p>
+
+<h2 id="germanys-labor-market-in-early-2026-a-unique-moment">Germany’s labor market in early 2026: a unique moment</h2>
+
+<p>Germany finds itself in a peculiar economic position. According to the Federal Statistical Office (Destatis, January 2026 press release), the country averaged roughly <strong>46.0 million employed persons</strong> in 2025 — essentially flat compared to 2024 and marginally below the all-time record. Employment growth, which had been continuous since 2006 (with the exception of the pandemic dip in 2020), has effectively stalled. By January 2026, the number had slipped to 45.5 million seasonally, with a downward trend running since May 2025.</p>
+
+<p>The reason is a collision of forces. On one side, <strong>demographic change</strong>: the baby boomer generation is retiring, and fewer young workers are entering the labor market. The Institute for Employment Research (IAB) estimates Germany needs about 300,000 skilled workers per year from abroad just to maintain current staffing levels. On the other side, a <strong>slowing economy</strong> — particularly in manufacturing, where employment fell by 143,000 (-1.8%) in 2025 alone, while construction lost another 23,000 (-0.9%) (Destatis, January 2026).</p>
+
+<p>This creates a paradox. Even as the Bundesagentur für Arbeit reports shortages in <strong>163 occupations</strong> — predominantly in nursing, healthcare, construction, and the skilled trades (BA Fachkräfteengpassanalyse, 2024) — unemployment is ticking upward: 3.8% adjusted in late 2025, up from 3.2% a year earlier. According to the ifo Institute (February 2025), <strong>28.3% of companies</strong> report being hampered by a shortage of qualified workers. For law and tax firms, that figure hits <strong>75%</strong>. Meanwhile, KfW Research found that in Q2 2025, <strong>27.2% of enterprises</strong> were still adversely affected by staff shortages — down from a peak of 49.7% in summer 2022, but still far above the long-term average. Germany has a two-tier labor market, and AI is about to add a third dimension to it.</p>
+
+<h2 id="the-data">The data</h2>
+
+<p>Germany’s occupational data ecosystem is remarkably rich. The key sources:</p>
+
+<p><strong>BERUFENET</strong> — the Bundesagentur für Arbeit’s comprehensive occupational encyclopedia, listing approximately 3,569 occupations with detailed descriptions of tasks, skills, education requirements, and working conditions. It even has a public REST API (documented at github.com/bundesAPI/berufenet-api), which makes it a more structured data source than scraping the American BLS website, as Karpathy had to do with Playwright.</p>
+
+<p><strong>The KldB 2010</strong> (Klassifikation der Berufe) — Germany’s five-level hierarchical occupation classification system, mapping roughly 18,900 individual job titles into systematically grouped categories. It’s compatible with the international ISCO-08 standard.</p>
+
+<p><strong>The Beschäftigungsstatistik</strong> — the BA’s employment statistics by occupation, with quarterly updates on employee counts, median pay, and demographic breakdowns.</p>
+
+<p><strong>The Entgeltatlas</strong> — median gross salary data by occupation, also queryable via API.</p>
+
+<p>From these sources, we assembled a dataset of <strong>266 occupations covering approximately 44.1 million workers</strong> — close to the Destatis figure of 46 million (the gap reflects difficult-to-classify edge cases and very small occupation categories). Each occupation includes employment count, median monthly gross pay, education level, a German-language job description, and an AI exposure score.</p>
+
+<h2 id="methodology-how-we-scored-each-occupation">Methodology: how we scored each occupation</h2>
+
+<p>Following Karpathy’s approach, each occupation was scored on a single <strong>AI Exposure</strong> axis from 0 to 10 — measuring how much AI will reshape that occupation in the next 5 to 10 years. The score considers:</p>
+
+<p><strong>Direct automation:</strong> Can AI perform the core tasks of this job? A medical transcriptionist’s work (converting doctor dictation to text) is essentially what modern speech-to-text AI does, yielding a score of 10. A roofer’s work (climbing on buildings and laying shingles) is almost impossible for AI to do, yielding a 1.</p>
+
+<p><strong>Productivity multiplier:</strong> Even where AI can’t fully replace a worker, it might make each worker so productive that fewer are needed. One software developer with AI coding assistants might do the work of two or three — not eliminating the role, but potentially reducing headcount over time.</p>
+
+<p><strong>Digital vs. physical:</strong> This is the single strongest predictor. If a job can be done entirely from a home office on a computer, AI exposure is inherently high. If the job requires physical presence — touching patients, climbing scaffolding, driving a truck through narrow streets — there is a natural barrier to AI automation.</p>
+
+<p><strong>Human interaction:</strong> Jobs requiring empathy, authority, social persuasion, or real-time interpersonal judgment are more protected. A psychotherapist’s work depends on therapeutic alliance. A waitress’s value includes the human element of hospitality.</p>
+
+<p><strong>German regulatory context:</strong> This is where our analysis diverges from the US version. Germany’s Handwerksordnung (trade regulations) protects craft occupations through the Meisterpflicht — you need a master craftsperson certification to run many types of businesses. The Berufsordnung protects professions like medicine, law, and notarial services. Works councils (Betriebsräte) give employees a say in technology adoption. These institutional buffers may slow the pace of AI-driven displacement even where the technology is theoretically capable.</p>
+
+<p><strong>Calibration anchors:</strong> We used the same rough scale as Karpathy: 0–1 for roofers and janitors, 2–3 for electricians and nurses, 4–5 for physicians and retail workers, 6–7 for engineers and managers, 8–9 for software developers and data analysts, and 10 for medical transcriptionists.</p>
+
+<p>Each score comes with a written rationale explaining the reasoning.</p>
+
+<h2 id="the-results-43-out-of-10-weighted-by-employment">The results: 4.3 out of 10, weighted by employment</h2>
+
+<p>Across all 266 occupations, the employment-weighted average AI exposure score is <strong>4.3 out of 10</strong>. This means the “average” German worker, weighted by how many people actually hold each job, faces moderate but not extreme AI exposure.</p>
+
+<p>But averages hide dramatic variation.</p>
+
+<p><strong>40.3% of workers (roughly 17.8 million) are in low-exposure occupations (scores 0–3).</strong> These are the cleaning staff, nurses, geriatric care workers, childcare educators, cooks, electricians, construction workers, and firefighters. Their work is physical, site-specific, and requires human presence. AI simply cannot replace a Gebäudereinigerin cleaning an irregularly shaped stairwell, or an Altenpflegerin helping an elderly patient get dressed.</p>
+
+<p><strong>27.6% of workers (about 12.2 million) face moderate exposure (scores 4–5).</strong> This includes truck drivers, retail workers, physicians, teachers, and pharmacists — jobs where AI is changing parts of the work (diagnostics, grading, inventory management) without being able to take over the whole role.</p>
+
+<p><strong>21.3% (9.4 million) face high exposure (scores 6–7).</strong> These are bank clerks, insurance agents, public administration workers, cashiers, marketing managers, and management consultants — occupations where the core work product is primarily digital and processable by AI.</p>
+
+<p><strong>10.8% (4.8 million) face very high exposure (scores 8–10).</strong> These are the office clerks (Bürokaufleute), bookkeepers, secretaries, call center agents, data analysts, software developers, translators, journalists, and the canonical maximum-exposure occupation: medical transcriptionists.</p>
+
+<h3 id="interactive-treemap-ai-exposure-of-the-german-job-market">Interactive Treemap: AI Exposure of the German Job Market</h3>
+
+<div class="interactive-viz-embed">
+  <iframe src="/assets/interactive/ki-exposition-arbeitsmarkt.html" style="width:100%; border:none; border-radius:8px;" loading="lazy" id="treemap-iframe"></iframe>
+</div>
+
+<script>
+(function() {
+  var iframe = document.getElementById('treemap-iframe');
+  // Resize via postMessage from iframe
+  window.addEventListener('message', function(e) {
+    if (e.data && e.data.type === 'treemap-resize') {
+      iframe.style.height = (e.data.height + 20) + 'px';
+    }
+  });
+  // Fallback: poll for height after load
+  iframe.addEventListener('load', function() {
+    function sync() {
+      try { iframe.style.height = iframe.contentDocument.body.scrollHeight + 'px'; } catch(e) {}
+    }
+    setTimeout(sync, 500);
+    setTimeout(sync, 2000);
+    setTimeout(sync, 4000);
+  });
+})();
+</script>
+
+<p><strong>How to read this chart:</strong> Each rectangle represents one of 266 German occupations. The <strong>area</strong> of each rectangle is proportional to the number of people employed in that occupation — so a large rectangle means many workers. The <strong>color</strong> ranges from green (low AI exposure, score 0–3) through yellow (moderate, 4–5) to red (high exposure, 7–10). Occupations are grouped by KldB sector (Landwirtschaft, Produktion, Bau, IT, Verkehr, Handel, Büro, Gesundheit, Medien). <strong>Hover or tap</strong> on any rectangle to see full details: occupation name (German and English), employment count, median monthly gross pay, education level, AI exposure score with rationale, and job description. Use the filter buttons to isolate only high-exposure (≥7) or low-exposure (≤3) occupations.</p>
+
+<p>The treemap makes the key insight immediately visible: the largest green areas (cleaning staff, nurses, geriatric care, childcare educators) represent millions of workers in AI-safe occupations, while the large red areas (office clerks, public administration, bookkeepers, bank clerks) represent the millions most at risk of disruption.</p>
+
+<h2 id="the-sector-map-büro--verwaltung-vs-bau--gebäudetechnik">The sector map: Büro &amp; Verwaltung vs. Bau &amp; Gebäudetechnik</h2>
+
+<p>AI exposure correlates strongly with how “digital” a sector is:</p>
+
+<p>The most exposed sector is <strong>IT &amp; Naturwissenschaft</strong> (average score 7.0), where nearly every occupation involves working on a computer. Data scientists (9), translators (9), content creators (9), and web developers (8) sit at the top.</p>
+
+<p><strong>Büro &amp; Verwaltung</strong> (6.8) is the second most exposed — and by far the largest high-exposure category, with over 10 million workers. This is where the biggest absolute impact will be felt: Bürokaufleute, Buchhalter, Sekretärinnen, Sachbearbeiter, and Bankkaufleute all score 7 or 8. Their work — correspondence, data entry, form processing, scheduling — is exactly what AI is best at.</p>
+
+<p><strong>Medien &amp; Kultur</strong> (6.7) is highly exposed in absolute terms but represents fewer workers (about 900,000). Journalists, graphic designers, copywriters, and librarians all score 7–9.</p>
+
+<p>At the safe end: <strong>Bau &amp; Gebäudetechnik</strong> averages just 2.1 — Maurer, Dachdecker, Sanitärinstallateure, and Gebäudereiniger are among the most protected occupations in the economy. <strong>Landwirtschaft</strong> (1.8) is even safer.</p>
+
+<h2 id="whats-different-about-germany">What’s different about Germany?</h2>
+
+<p>Several factors make Germany’s AI exposure profile distinct from the United States:</p>
+
+<p><strong>The Mittelstand effect.</strong> Germany’s economy is built on small and medium-sized enterprises, many in manufacturing. These companies tend to adopt technology more gradually than large US corporations. The pace of AI adoption may be slower, giving workers more time to adapt.</p>
+
+<p><strong>The dual education system.</strong> Germany’s Ausbildung produces deeply specialized workers — a CNC-Fachkraft or an Industriemechanikerin has years of hands-on training that combines physical skill with theoretical knowledge. These workers are harder to replace than generic office workers because their expertise is embodied, not just informational.</p>
+
+<p><strong>Regulatory buffers.</strong> The Meisterpflicht protects craft occupations. The Berufsordnung protects professional occupations. Works councils give employees a voice in how technology is deployed. Germany’s data protection regime (DSGVO/GDPR) adds friction to AI deployment. None of these prevent AI adoption, but they slow it.</p>
+
+<p><strong>The care economy gap.</strong> Germany is aging fast — by 2060, between 29 and 32 percent of the population will be 67 or older. Demand for Altenpfleger, Krankenpfleger, and Erzieher is growing faster than AI could conceivably displace workers in these fields. These are large, low-exposure occupation groups that will likely grow in absolute employment.</p>
+
+<p><strong>The Fachkräftemangel paradox.</strong> The skilled worker shortage is most severe in exactly the occupations AI is least likely to affect: nursing (score 2–3), healthcare (2–3), construction (1–2), and the skilled trades (2–3). Meanwhile, the occupations most exposed to AI — office administration (7–8), banking (7), insurance (7) — are not facing acute shortages. AI might actually help resolve part of Germany’s labor market imbalance by reducing demand in office-based occupations while human workers remain irreplaceable in care and construction.</p>
+
+<h2 id="the-biggest-occupations-at-risk">The biggest occupations at risk</h2>
+
+<p>The occupations where AI exposure and large employment intersect are where the biggest absolute impact will be felt:</p>
+
+<p>The largest highly-exposed group is <strong>Bürokaufleute</strong> (general office clerks) — 1.28 million workers with a score of 8. Their daily work of correspondence, scheduling, data entry, and document processing is precisely what AI language models and automation tools excel at.</p>
+
+<p><strong>Sachbearbeiter in der öffentlichen Verwaltung</strong> (public administration clerks) — 980,000 workers, score 7. Processing applications, issuing permits, managing cases — all highly procedural work that AI can increasingly handle.</p>
+
+<p><strong>Kaufleute für Büromanagement</strong> (office management clerks) — 750,000 workers, score 8. Similar to general office clerks, with emphasis on organizational coordination.</p>
+
+<p><strong>Bankkaufleute</strong> (bank clerks) — 530,000 workers, score 7. Digital banking, AI fraud detection, and robo-advisory are already transforming this field.</p>
+
+<p>Together, just these four occupation groups represent over 3.5 million workers — roughly 8 percent of Germany’s total workforce — all facing AI exposure scores of 7 or higher.</p>
+
+<h2 id="the-safest-occupations">The safest occupations</h2>
+
+<p>At the other end, the largest protected groups are reassuringly large:</p>
+
+<p><strong>Reinigungskräfte</strong> (cleaning staff) — 880,000 workers, score 1. Physical work in diverse indoor environments. Floor-cleaning robots exist but can’t navigate stairs, bathrooms, or irregularly shaped rooms.</p>
+
+<p><strong>Erzieher/innen</strong> (childcare educators) — 710,000 workers, score 2. Children need human care, attention, socialization, and emotional attunement. AI has essentially no role here.</p>
+
+<p><strong>Altenpfleger/innen</strong> (geriatric nurses) — 640,000 workers, score 2. Physical and emotional care for elderly people. Germany’s demographic trajectory means this occupation will likely grow.</p>
+
+<p><strong>Restaurantfachleute</strong> (waiters/waitresses) — 430,000 workers, score 2. Service work that is physical, social, and in real-time. The human element is the product.</p>
+
+<h2 id="what-this-means--and-what-it-doesnt">What this means — and what it doesn’t</h2>
+
+<p>This analysis does not predict unemployment. A high AI exposure score means the occupation will be substantially <em>reshaped</em> by AI, not necessarily that jobs will disappear. Software developers (score 8) are highly exposed, but demand for software isn’t going to decrease — developers will just become more productive, which could mean fewer new hires over time rather than mass layoffs.</p>
+
+<p>It also doesn’t account for new jobs that AI might create. Just as the internet created roles that didn’t exist in 1990 — social media managers, data engineers, UX designers — AI will likely create occupation categories we can’t yet name.</p>
+
+<p>What the analysis does show is the <em>direction and magnitude</em> of change. Germany’s economy is about to undergo a structural shift where 10 million office and administrative workers face significant disruption, while 18 million workers in physical, care, and craft occupations are largely protected. The policy challenge is clear: how to retrain and transition the former group, while filling growing vacancies in the latter.</p>
+
+<p>The interactive treemap and all data are available as open source. The full dataset of 266 occupations with scores, rationales, employment numbers, and median pay can be used by researchers, policymakers, and journalists to explore the German AI exposure landscape in detail.</p>
+
+<h3 id="sources">Sources</h3>
+
+<p><strong>German labor market data:</strong></p>
+<ul>
+  <li>Statistisches Bundesamt (Destatis): “Erwerbstätigenzahl im Jahresdurchschnitt 2025 fast unverändert,” Pressemitteilung Nr. 001, 2. Januar 2026. ~46.0 Mio. Erwerbstätige. https://www.destatis.de/DE/Presse/Pressemitteilungen/2026/01/PD26_001_13321.html</li>
+  <li>Statistisches Bundesamt (Destatis): “Erwerbstätige mit Wohnort in Deutschland , Januar 2026” Pressemitteilung Nr. 067, 27. Februar 2026. 45.5 Mio. Erwerbstätige, saisonbereinigt. https://www.destatis.de/DE/Presse/Pressemitteilungen/2026/02/PD26_067_132.html</li>
+  <li>Bundesagentur für Arbeit: “Fachkräfteengpassanalyse 2024,” Mai 2025. 163 Engpassberufe, ~439.000 offene Stellen für Fachkräfte. https://www.vbw-bayern.de/Redaktion/Frei-zugaengliche-Medien/Abteilungen-GS/Bildung/2025/Downloads/2024_BA-FK-Engpassanalyse.pdf</li>
+  <li>ifo Institut: “Economic Slowdown Eases Shortage of Skilled Workers in Germany,” Februar 2025. 28,3% der Unternehmen betroffen. https://www.ifo.de/fakten/2025-02-17/konjunkturflaute-entschaerft-fachkraeftemangel</li>
+  <li>KfW Research: “KfW-ifo-Fachkräftebarometer Q2/2025,” 2025. 27,2% der Unternehmen betroffen; Spitzenwert 49,7% im Sommer 2022. https://www.kfw.de/PDF/Download-Center/Konzernthemen/Research/PDF-Dokumente-KfW-ifo-Fachkräftebarometer/KfW-ifo-Fachkraeftebarometer_2025-05.pdf</li>
+  <li>OECD: “Economic Surveys: Germany 2025,” Chapter 3: Addressing Skilled Labour Shortages, Juni 2025. https://www.oecd.org/en/publications/oecd-economic-surveys-germany-2025_39d62aed-en/full-report/addressing-skilled-labour-shortages_9edb78e6.html</li>
+</ul>
+
+<p><strong>AI and labor market impact:</strong></p>
+<ul>
+  <li>IMF Staff Discussion Note: “Gen-AI: Artificial Intelligence and the Future of Work,” Cazzaniga et al., Januar 2024. ~40% der globalen Beschäftigung KI-exponiert; ~60% in fortgeschrittenen Volkswirtschaften. https://www.imf.org/en/publications/staff-discussion-notes/issues/2024/01/14/gen-ai-artificial-intelligence-and-the-future-of-work-542379</li>
+  <li>Challenger, Gray &amp; Christmas via CBS News: “More companies are pointing to AI as they lay off employees,” März 2026. 55.000 KI-bedingte Entlassungen in den USA im Jahr 2025. https://www.cbsnews.com/news/ai-layoffs-2026-artificial-intelligence-amazon-pinterest/</li>
+  <li>RationalFX/Layoffs.fyi via Digital Journal: “Job losses due to AI are mounting up in 2026,” März 2026. 45.363 Tech-Entlassungen weltweit bis März 2026; 9.238 (20%) KI-bedingt. https://www.digitaljournal.com/business/job-losses-due-to-ai-are-mounting-up-in-2026/article</li>
+  <li>CNN Business: “AI isn’t causing a jobs-pocalypse. At least, not yet,” Matt Egan, 2. März 2026. US-Arbeitslosenquote bei 4,3%. https://edition.cnn.com/2026/03/02/business/ai-tech-jobs-layoffs</li>
+  <li>Goldman Sachs Research: Generative AI could automate up to 25% of global work hours; ~300 Mio. Vollzeitstellen betroffen. https://fortune.com/2026/01/13/humans-could-go-the-way-of-horses-goldman-ai-job-apocalypse-unemployment/</li>
+  <li>World Economic Forum: “Future of Jobs Report.” Schätzung: 92 Mio. Arbeitsplätze durch Automatisierung bis Ende 2026 verdrängt; 170 Mio. neue Stellen bis 2030. https://reports.weforum.org/docs/WEF_Future_of_Jobs_2025_Press_Release_DE.pdf</li>
+</ul>
+
+<p><strong>Occupation data and classification:</strong></p>
+<ul>
+  <li>BERUFENET: web.arbeitsagentur.de/berufenet/ — API-Dokumentation: github.com/bundesAPI/berufenet-api. ~3.569 Berufe, ~18.900 Berufsbezeichnungen.</li>
+  <li>KldB 2010 (Klassifikation der Berufe), überarbeitete Fassung 2020: statistik.arbeitsagentur.de.</li>
+  <li>Entgeltatlas: entgeltatlas.arbeitsagentur.de — Mediangehälter nach Beruf.</li>
+</ul>
+
+<p><strong>Methodology inspiration:</strong></p>
+<ul>
+  <li>Karpathy, Andrej: “AI Exposure of the US Job Market,” github.com/karpathy/jobs, 2025. 342 US-Berufe, BLS Occupational Outlook Handbook.</li>
+</ul>
+
+<p><em>Employment figures are calibrated to the Destatis annual average of 46.0 million Erwerbstätige for 2025. AI exposure scores reflect expert assessment using the same rubric as the Karpathy/jobs project, adapted for German regulatory and structural context.</em></p>
+
+      </article>
+      <aside class="toc-sidebar" id="toc-sidebar">
+        <nav class="toc" id="toc">
+          <h4>On this page</h4>
+          <ul id="toc-list"></ul>
+        </nav>
+        
+<div class="newsletter-form newsletter-sidebar" id="newsletter-sidebar">
+  <h4>Newsletter</h4>
+  <p class="newsletter-desc">Stay updated on our latest research and events.</p>
+  <form class="newsletter-form-inner" onsubmit="return submitNewsletter(event, 'sidebar')">
+    <input type="email" placeholder="Your email address" required aria-label="Email address" class="newsletter-email" id="newsletter-email-sidebar">
+    <!-- Honeypot — hidden from humans, bots auto-fill it -->
+    <input type="text" name="website" class="newsletter-hp" id="newsletter-hp-sidebar" tabindex="-1" autocomplete="off">
+    <button type="submit" class="btn btn-primary newsletter-btn" id="newsletter-btn-sidebar">Subscribe</button>
+  </form>
+  <p class="newsletter-msg" id="newsletter-msg-sidebar"></p>
+  <p class="newsletter-privacy">We'll send you a verification email. No spam, unsubscribe anytime.</p>
+</div>
+
+<script>
+function submitNewsletter(e, ctx) {
+  e.preventDefault();
+  var emailInput = document.getElementById('newsletter-email-' + ctx);
+  var hpInput = document.getElementById('newsletter-hp-' + ctx);
+  var msg = document.getElementById('newsletter-msg-' + ctx);
+  var btn = document.getElementById('newsletter-btn-' + ctx);
+  var email = emailInput.value.trim();
+
+  if (!email) return false;
+
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  msg.textContent = '';
+  msg.className = 'newsletter-msg';
+
+  fetch('/api/newsletter', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, website: hpInput.value })
+  })
+  .then(function(resp) { return resp.json(); })
+  .then(function(data) {
+    if (data.status === 'ok') {
+      msg.textContent = data.message === 'Already subscribed'
+        ? 'You are already subscribed!'
+        : 'Please check your inbox to confirm your subscription.';
+      msg.classList.add('newsletter-msg-success');
+      emailInput.value = '';
+    } else {
+      msg.textContent = data.message || 'Something went wrong. Please try again.';
+      msg.classList.add('newsletter-msg-error');
+    }
+  })
+  .catch(function() {
+    msg.textContent = 'Something went wrong. Please try again.';
+    msg.classList.add('newsletter-msg-error');
+  })
+  .finally(function() {
+    btn.disabled = false;
+    btn.textContent = 'Subscribe';
+  });
+
+  return false;
+}
+</script>
+
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- Citation Modal -->
+<div class="modal-overlay" id="cite-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>BibTeX Citation</h3>
+      <button class="modal-close" id="cite-modal-close">&times;</button>
+    </div><pre class="modal-code" id="bibtex-code">@misc{notes-how-exposed-is-the-german-job-market,
+    title = {How Exposed Is the German Job Market to AI?},
+    author = {Sigurd Schacht},
+    howpublished = {\url{https://coairesearch.org/notes/how-exposed-is-the-german-job-market/}},
+    year = {2026},
+    month = {03},
+}</pre>
+    <button class="btn btn-primary modal-copy" id="copy-bibtex-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      Copy
+    </button>
+  </div>
+</div>
+
+<script>
+(function() {
+  // TOC generation
+  var body = document.getElementById('post-body');
+  var list = document.getElementById('toc-list');
+  var sidebar = document.getElementById('toc-sidebar');
+  var headings = body.querySelectorAll('h2, h3');
+
+  if (headings.length < 2) {
+    sidebar.style.display = 'none';
+    body.style.maxWidth = '100%';
+  } else {
+    headings.forEach(function(h, i) {
+      if (!h.id) h.id = 'section-' + i;
+      var li = document.createElement('li');
+      if (h.tagName === 'H3') li.classList.add('toc-sub');
+      var a = document.createElement('a');
+      a.href = '#' + h.id;
+      a.textContent = h.textContent;
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    var links = list.querySelectorAll('a');
+    function onScroll() {
+      var current = '';
+      headings.forEach(function(h) {
+        if (h.getBoundingClientRect().top <= 100) current = h.id;
+      });
+      links.forEach(function(a) {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  // Copy link
+  document.getElementById('copy-link-btn').addEventListener('click', function() {
+    navigator.clipboard.writeText(window.location.href).then(function() {
+      var btn = document.getElementById('copy-link-btn');
+      var orig = btn.innerHTML;
+      btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copied!';
+      setTimeout(function() { btn.innerHTML = orig; }, 2000);
+    });
+  });
+
+  // Citation modal
+  var modal = document.getElementById('cite-modal');
+  document.getElementById('cite-btn').addEventListener('click', function() {
+    modal.classList.add('open');
+  });
+  document.getElementById('cite-modal-close').addEventListener('click', function() {
+    modal.classList.remove('open');
+  });
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) modal.classList.remove('open');
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') modal.classList.remove('open');
+  });
+
+  // Copy bibtex
+  document.getElementById('copy-bibtex-btn').addEventListener('click', function() {
+    var code = document.getElementById('bibtex-code').textContent;
+    navigator.clipboard.writeText(code).then(function() {
+      var btn = document.getElementById('copy-bibtex-btn');
+      var orig = btn.innerHTML;
+      btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copied!';
+      setTimeout(function() { btn.innerHTML = orig; }, 2000);
+    });
+  });
+})();
+</script>
+
+  </main>
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <h4>COAI gGmbH</h4>
+      <p>Josephsplatz 8<br>90403 Nuremberg<br>Germany</p>
+      <p><a href="/cdn-cgi/l/email-protection#b2d1dddcc6d3d1c6f2d1ddd3dbc0d7c1d7d3c0d1da9cddc0d5"><span class="__cf_email__" data-cfemail="abc8c4c5dfcac8dfebc8c4cac2d9ced8cecad9c8c385c4d9cc">[email&#160;protected]</span></a></p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore COAI</h4>
+      <ul>
+        <li><a href="/research">Research</a></li>
+        <li><a href="/research/threat-modeling/">Threat Modeling</a></li>
+        <li><a href="/research/evaluation/">Safety Evaluation</a></li>
+        <li><a href="/tools">Tools &amp; Infrastructure</a></li>
+        <li><a href="/events">Events</a></li>
+        <li><a href="/publications/">Publications &amp; Notes</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/donate">Donate</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://x.com/CoaiResearch" target="_blank" rel="noopener">Twitter / X</a></li>
+        <li><a href="https://www.linkedin.com/company/coairesearch/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#5d3e3233293c3e291d3e323c342f382e383c2f3e3573322f3a">Email</a></li>
+      </ul>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="/impressum">Impressum</a></li>
+        <li><a href="/dataprivacy">Data Privacy</a></li>
+        <li><a href="/codeofconduct">Code of Conduct</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      
+<div class="newsletter-form newsletter-footer" id="newsletter-footer">
+  <h4>Newsletter</h4>
+  <p class="newsletter-desc">Stay updated on our latest research and events.</p>
+  <form class="newsletter-form-inner" onsubmit="return submitNewsletter(event, 'footer')">
+    <input type="email" placeholder="Your email address" required aria-label="Email address" class="newsletter-email" id="newsletter-email-footer">
+    <!-- Honeypot — hidden from humans, bots auto-fill it -->
+    <input type="text" name="website" class="newsletter-hp" id="newsletter-hp-footer" tabindex="-1" autocomplete="off">
+    <button type="submit" class="btn btn-primary newsletter-btn" id="newsletter-btn-footer">Subscribe</button>
+  </form>
+  <p class="newsletter-msg" id="newsletter-msg-footer"></p>
+  <p class="newsletter-privacy">We'll send you a verification email. No spam, unsubscribe anytime.</p>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function submitNewsletter(e, ctx) {
+  e.preventDefault();
+  var emailInput = document.getElementById('newsletter-email-' + ctx);
+  var hpInput = document.getElementById('newsletter-hp-' + ctx);
+  var msg = document.getElementById('newsletter-msg-' + ctx);
+  var btn = document.getElementById('newsletter-btn-' + ctx);
+  var email = emailInput.value.trim();
+
+  if (!email) return false;
+
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  msg.textContent = '';
+  msg.className = 'newsletter-msg';
+
+  fetch('/api/newsletter', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, website: hpInput.value })
+  })
+  .then(function(resp) { return resp.json(); })
+  .then(function(data) {
+    if (data.status === 'ok') {
+      msg.textContent = data.message === 'Already subscribed'
+        ? 'You are already subscribed!'
+        : 'Please check your inbox to confirm your subscription.';
+      msg.classList.add('newsletter-msg-success');
+      emailInput.value = '';
+    } else {
+      msg.textContent = data.message || 'Something went wrong. Please try again.';
+      msg.classList.add('newsletter-msg-error');
+    }
+  })
+  .catch(function() {
+    msg.textContent = 'Something went wrong. Please try again.';
+    msg.classList.add('newsletter-msg-error');
+  })
+  .finally(function() {
+    btn.disabled = false;
+    btn.textContent = 'Subscribe';
+  });
+
+  return false;
+}
+</script>
+
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; 2026 COAI gGmbH. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

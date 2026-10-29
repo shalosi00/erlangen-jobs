@@ -1,0 +1,29 @@
+[
+  {
+    "url": "https://github.com",
+    "name": "rabiuk/job-scraper: A Python tool to scrape Software",
+    "snippet": "A Python-based job hunting tool designed to help Software Engineer (SWE) new grads and interns apply first by scraping job postings from multiple sources and ... Read more",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://apify.com",
+    "name": "StepStone.de Scraper - Germany's Leading Job Board",
+    "snippet": "Professional job scraper for StepStone.de , Germany's leading job board with over 200000+ active job postings across all 16 federal states (Bundesländer)",
+    "host_name": "apify.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://gist.github.com",
+    "name": "How I scraped 2.1 million jobs (including 5335 data",
+    "snippet": "So I wrote a script that fetches jobs from 30k+ company websites' career pages and uses GPT4o-mini to extract relevant information (ex salary, remote, etc.) ... Read more",
+    "host_name": "gist.github.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  }
+]

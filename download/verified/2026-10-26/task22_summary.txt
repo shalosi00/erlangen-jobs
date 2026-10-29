@@ -1,0 +1,87 @@
+Task 22 link check — 2026-10-26T08:52:14.047594+00:00
+Input: jobs_latest.csv (46 jobs, Erlangen+50km, 14d window)
+
+RESULT: 27 entry_ok | 8 needs_experience | 2 needs_review | 7 expired | 2 unverifiable
+
+=== VERIFIED ENTRY-LEVEL (fresh FISI suitable) ===
+* [BA] Mitarbeiter (gn) 1st Level Support @ PAMEC PAPP GmbH (Nürnberg, Mittelfranken)
+  https://www.arbeitsagentur.de/jobsuche/jobdetail/12310-2AYAV2GGEML8HP4M-S
+  evidence: erste Erfahrung / erste Berufserfahrung; Fachinformatiker gesucht
+* [BA] DevOps Platform Engineer OpenShift (m/w/d) @ set - software engineering gmbh (Nürnberg, Mittelfranken)
+  https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003848227-S
+  evidence: Fachinformatiker gesucht
+* [BA] Fachinformatiker Systemintegration (m/w/d) @ cns computer & netzwerk service gmbh (Fürth, Bayern)
+  https://www.arbeitsagentur.de/jobsuche/jobdetail/10000-1208259481-S
+  evidence: Fachinformatiker gesucht
+* [BA] IT-Spezialist KI & Digitalisierung (m/w/d) @ Minderleinsmühle GmbH & Co. KG Andreas Hubmann (Neunkirchen am Brand)
+  https://www.arbeitsagentur.de/jobsuche/jobdetail/10000-1208271879-S
+  evidence: erste Erfahrung / erste Berufserfahrung; Ausbildung (abgeschlossen); Fachinformatiker gesucht
+* [BA] Junior IT- System Administrator (m/w/d) @ Neumüller Personalberatung Regina Neumüller e.K. (Nürnberg, Mittelfranken)
+  https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003830628-S
+  evidence: Junior; Ausbildung (abgeschlossen); Fachinformatiker gesucht
+* [BA] Fachinformatiker Systemintegration (m/w/d) @ ncsolution GmbH (Erlangen)
+  https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003832993-S
+  evidence: Ausbildung (abgeschlossen); Fachinformatiker gesucht
+* [BA] IT Specialist (m/w/d) - Clientmanagement @ Neumüller Personalberatung Regina Neumüller e.K. (Röthenbach an der Pegnitz)
+  https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003831106-S
+  evidence: Fachinformatiker gesucht
+* [BA] IT-Systemadministrator (m/w/d) @ Akkodis Germany Tech Experts GmbH (Nürnberg, Mittelfranken)
+  https://www.arbeitsagentur.de/jobsuche/jobdetail/12634-BB-646012-7878-6530-S
+  evidence: Ausbildung (abgeschlossen); Fachinformatiker gesucht
+* [BA] IT Support Mitarbeiter (m/w/d) Netzwerktechnik @ BFI Informationssysteme GmbH (Nürnberg, Mittelfranken)
+  https://www.arbeitsagentur.de/jobsuche/jobdetail/15297-0ahr6g81-S
+  evidence: Berufseinsteiger; Quereinsteiger willkommen; erste Erfahrung / erste Berufserfahrung; Ausbildung (abgeschlossen)
+* [BA] Systemadministrator Netzwerk & Security @ Suspa GmbH Betriebsstätte Altdorf (Altdorf bei Nürnberg)
+  https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003820240-S
+  evidence: Fachinformatiker gesucht
+* [BA] IT-Service Desk Mitarbeiter (m/w/d) - Referenznummer: 061026-3-NBG @ BFI Informationssysteme GmbH (Nürnberg, Mittelfranken)
+  https://www.arbeitsagentur.de/jobsuche/jobdetail/15297-2u0wf5wb-S
+  evidence: Berufseinsteiger; Quereinsteiger willkommen; Ausbildung (abgeschlossen); Fachinformatiker gesucht
+* [BA] Fachinformatiker Systemintegration (m/w/d) @ puro Personaldienstleistung GmbH (Neumarkt in der Oberpfalz)
+  https://www.arbeitsagentur.de/jobsuche/jobdetail/13669-B4QJPZOZC7TLDT27-S
+  evidence: Berufseinsteiger; Ausbildung (abgeschlossen); Fachinformatiker gesucht
+* [BA] IT System Engineer (m/w/d) z/OS Netzwerk und Security @ Akkodis Germany Tech Experts GmbH (Nürnberg, Mittelfranken)
+  https://www.arbeitsagentur.de/jobsuche/jobdetail/12634-BB-645864-7878-8663-S
+  evidence: Fachinformatiker gesucht
+* [BA] IT-Spezialist Netzwerk & Connectivity (m/w/d) @ FERCHAU GmbH Niederlassung Nürnberg City (Erlangen)
+  https://www.arbeitsagentur.de/jobsuche/jobdetail/12265-516301_JB5262829-S
+  evidence: Ausbildung (abgeschlossen); Fachinformatiker gesucht
+* [BA] System Engineer (m/w/d) Linux @ Akkodis Germany Tech Experts GmbH (Nürnberg, Mittelfranken)
+  https://www.arbeitsagentur.de/jobsuche/jobdetail/12634-BB-645665-7878-7513-S
+  evidence: Fachinformatiker gesucht
+* [BA] "Mein Sport? IT Support!", Supporter (m/w/d) im Help Desk @ Akkodis Germany Tech Experts GmbH (Nürnberg, Mittelfranken)
+  https://www.arbeitsagentur.de/jobsuche/jobdetail/12634-BB-645656-7878-5866-S
+  evidence: erste Erfahrung / erste Berufserfahrung; Fachinformatiker gesucht
+* [BA+XING] IT-Spezialist (w/m/d) @ Brunel GmbH NL Mannheim (Erlangen)
+  https://www.arbeitsagentur.de/jobsuche/jobdetail/12362-TR-300879_624701LS-S
+  evidence: Fachinformatiker gesucht
+* [Get-in-IT] DevOps Engineer (w/m/d) @ Capgemini ()
+  https://www.get-in-it.de/jobsuche/p311769
+  evidence: keine Erfahrungsvoraussetzung im Text gefunden
+* [Get-in-IT] IT-Systemadministrator (m/w/d) - Azure & IT Operations @ DMG MORI Digital GmbH ()
+  https://www.get-in-it.de/jobsuche/p313154
+  evidence: Quereinsteiger willkommen; Ausbildung (abgeschlossen)
+* [Get-in-IT] IT-Administrator (m/w/d) @ Johanniter-Unfall-Hilfe e.V. ()
+  https://www.get-in-it.de/jobsuche/p313305
+  evidence: Ausbildung (abgeschlossen); Fachinformatiker gesucht
+* [InFranken] IT-Administrator (m/w/d) @ H&P Höhnen & Partner (Bamberg)
+  https://jobs.infranken.de/jobs/16416872/IT_Administrator_(m_w_d)_Bamberg_HundP_H%C3%B6hnen_und
+  evidence: keine Erfahrungsvoraussetzung im Text gefunden
+* [Kimeta] Fachinformatiker Systemintegration (m/w/d) - ID 7285 @ BAVARIAHEADHUNTER Schlegel & Wegner GbR (Erlangen)
+  https://www.kimeta.de/display-job/bavariaheadhunter-schlegel-wegner/fachinformatiker-systemintegration-m-w-d-id-7285/972430612.html
+  evidence: Ausbildung (abgeschlossen); Fachinformatiker gesucht
+* [Kimeta] Fachinformatiker Systemintegration (m/w/d) @  (Nürnberg)
+  https://www.kimeta.de/display-job/fachinformatiker-systemintegration-m-w-d/975620364.html
+  evidence: Fachinformatiker gesucht
+* [Kimeta] Technischer Kundenbetreuer - Fachinformatiker für Systemintegration (m/w) @ Hahn GmbH (90571 Schwaig bei Nürnberg)
+  https://www.kimeta.de/display-job/hahn-immobilien-beteiligungs-ag/technischer-kundenbetreuer-fachinformatiker-fuer-systemintegration-m-w/965192470.html
+  evidence: Ausbildung (abgeschlossen); Fachinformatiker gesucht
+* [Talent.com] DevOps Engineer (w/m/d) @ brandad group (Fürth,)
+  https://de.talent.com/view?id=618470822195172825
+  evidence: Fachinformatiker gesucht
+* [Talent.com] Informatiker (m/w/d) System - &Netzwerkadministration @ schilling domke (Forchheim,)
+  https://de.talent.com/view?id=639047614836646720
+  evidence: Fachinformatiker gesucht
+* [Talent.com] IT-Administrator (m/w/d) @ techlister (Erlangen,)
+  https://de.talent.com/view?id=588259219535768316
+  evidence: Fachinformatiker gesucht
