@@ -1,0 +1,315 @@
+{
+ "generated_utc": "2026-10-30T11:11:55.299461+00:00",
+ "hist_total_unique": 3825,
+ "hist_text_indeed": 1977,
+ "hist_linkedin_title_only": 1848,
+ "now_total": 77,
+ "now_ba_fulltext": 30,
+ "now_ba_fail": 7,
+ "hist_text": {
+  "n": 1977,
+  "cert::AZ-900 (Azure Fundamentals)": 0,
+  "cert::AZ-104 (Azure Administrator)": 0,
+  "cert::AZ-800/801 (Windows Server Hybrid)": 0,
+  "cert::AZ-305 (Azure Solutions Architect)": 0,
+  "cert::AZ-500 (Azure Security)": 0,
+  "cert::other AZ-xxx": 0,
+  "cert::MD-102 (M365 Endpoint Admin)": 0,
+  "cert::MS-900 (M365 Fundamentals)": 0,
+  "cert::other MS/SC-xxx": 0,
+  "cert::MCSA/MCSE/MTA (legacy)": 1,
+  "cert::Microsoft Certified/Zertifizierung": 0,
+  "cert::AWS Certified (any)": 0,
+  "cert::Google Cloud Certified": 0,
+  "cert::CompTIA (any)": 0,
+  "cert::CCNA/CCNP (Cisco)": 0,
+  "cert::ITIL": 2,
+  "cert::PRINCE2/PMP": 0,
+  "cert::LPIC (Linux)": 0,
+  "cert::RHCSA/RHCE (Red Hat)": 0,
+  "cert::VCP (VMware)": 0,
+  "cert::CKA/CKAD (Kubernetes)": 0,
+  "cert::CEH/OSCP (Security)": 0,
+  "cert::Fortinet NSE": 0,
+  "cert::SAP Certified": 0,
+  "generic_cert_mention": 9,
+  "skill::windows_server": 3,
+  "skill::ad_entra": 6,
+  "skill::m365_endpoint": 12,
+  "skill::exchange": 4,
+  "skill::network": 96,
+  "skill::security": 63,
+  "skill::virtualization": 7,
+  "skill::docker_k8s": 5,
+  "skill::linux": 18,
+  "skill::cloud_any": 58,
+  "skill::azure": 8,
+  "skill::aws": 4,
+  "skill::gcp": 1,
+  "skill::scripting": 107,
+  "skill::itsm": 63,
+  "skill::sap": 48,
+  "skill::backup": 7,
+  "skill::entry": 377
+ },
+ "now": {
+  "n": 77,
+  "cert::AZ-900 (Azure Fundamentals)": 0,
+  "cert::AZ-104 (Azure Administrator)": 0,
+  "cert::AZ-800/801 (Windows Server Hybrid)": 0,
+  "cert::AZ-305 (Azure Solutions Architect)": 0,
+  "cert::AZ-500 (Azure Security)": 0,
+  "cert::other AZ-xxx": 0,
+  "cert::MD-102 (M365 Endpoint Admin)": 0,
+  "cert::MS-900 (M365 Fundamentals)": 0,
+  "cert::other MS/SC-xxx": 0,
+  "cert::MCSA/MCSE/MTA (legacy)": 1,
+  "cert::Microsoft Certified/Zertifizierung": 1,
+  "cert::AWS Certified (any)": 0,
+  "cert::Google Cloud Certified": 0,
+  "cert::CompTIA (any)": 0,
+  "cert::CCNA/CCNP (Cisco)": 0,
+  "cert::ITIL": 2,
+  "cert::PRINCE2/PMP": 0,
+  "cert::LPIC (Linux)": 0,
+  "cert::RHCSA/RHCE (Red Hat)": 0,
+  "cert::VCP (VMware)": 1,
+  "cert::CKA/CKAD (Kubernetes)": 0,
+  "cert::CEH/OSCP (Security)": 0,
+  "cert::Fortinet NSE": 0,
+  "cert::SAP Certified": 0,
+  "generic_cert_mention": 6,
+  "skill::windows_server": 5,
+  "skill::ad_entra": 4,
+  "skill::m365_endpoint": 5,
+  "skill::exchange": 3,
+  "skill::network": 26,
+  "skill::security": 16,
+  "skill::virtualization": 12,
+  "skill::docker_k8s": 3,
+  "skill::linux": 11,
+  "skill::cloud_any": 10,
+  "skill::azure": 3,
+  "skill::aws": 1,
+  "skill::gcp": 1,
+  "skill::scripting": 12,
+  "skill::itsm": 14,
+  "skill::sap": 2,
+  "skill::backup": 4,
+  "skill::entry": 30
+ },
+ "fisi_now": {
+  "n": 59,
+  "cert::AZ-900 (Azure Fundamentals)": 0,
+  "cert::AZ-104 (Azure Administrator)": 0,
+  "cert::AZ-800/801 (Windows Server Hybrid)": 0,
+  "cert::AZ-305 (Azure Solutions Architect)": 0,
+  "cert::AZ-500 (Azure Security)": 0,
+  "cert::other AZ-xxx": 0,
+  "cert::MD-102 (M365 Endpoint Admin)": 0,
+  "cert::MS-900 (M365 Fundamentals)": 0,
+  "cert::other MS/SC-xxx": 0,
+  "cert::MCSA/MCSE/MTA (legacy)": 1,
+  "cert::Microsoft Certified/Zertifizierung": 1,
+  "cert::AWS Certified (any)": 0,
+  "cert::Google Cloud Certified": 0,
+  "cert::CompTIA (any)": 0,
+  "cert::CCNA/CCNP (Cisco)": 0,
+  "cert::ITIL": 1,
+  "cert::PRINCE2/PMP": 0,
+  "cert::LPIC (Linux)": 0,
+  "cert::RHCSA/RHCE (Red Hat)": 0,
+  "cert::VCP (VMware)": 1,
+  "cert::CKA/CKAD (Kubernetes)": 0,
+  "cert::CEH/OSCP (Security)": 0,
+  "cert::Fortinet NSE": 0,
+  "cert::SAP Certified": 0,
+  "generic_cert_mention": 4,
+  "skill::windows_server": 4,
+  "skill::ad_entra": 3,
+  "skill::m365_endpoint": 3,
+  "skill::exchange": 3,
+  "skill::network": 21,
+  "skill::security": 13,
+  "skill::virtualization": 11,
+  "skill::docker_k8s": 1,
+  "skill::linux": 5,
+  "skill::cloud_any": 7,
+  "skill::azure": 2,
+  "skill::aws": 0,
+  "skill::gcp": 0,
+  "skill::scripting": 8,
+  "skill::itsm": 10,
+  "skill::sap": 1,
+  "skill::backup": 3,
+  "skill::entry": 21
+ },
+ "cert_strength_all_corpora": {
+  "ITIL::mentioned": 6,
+  "MCSA/MCSE/MTA (legacy)::mentioned": 2,
+  "Microsoft Certified/Zertifizierung::mentioned": 1,
+  "VCP (VMware)::mentioned": 1
+ },
+ "examples_explicit_certs": [
+  {
+   "corpus": "hist",
+   "title": "Business Analyst, Schwerpunkt IT-Service Management",
+   "company": "Masoona Consulting GmbH",
+   "source": "indeed",
+   "certs": [
+    "ITIL"
+   ],
+   "evidence": {
+    "ITIL": [
+     "* Analyse, Spezifikation und Optimierung von Geschäftsprozessen, speziell im IT-Service-Management auf der Basis der IT Infrastructure Library (ITIL) * Konzeption ganzheitlicher IT-Lösungen auf der Basis von Ge"
+    ]
+   },
+   "url": "https://de.indeed.com/viewjob?jk=fd37a3ac41ae024e"
+  },
+  {
+   "corpus": "hist",
+   "title": "Lead Enterprise Service Manager (m/w/d)",
+   "company": "ANregiomed gKU",
+   "source": "indeed",
+   "certs": [
+    "ITIL"
+   ],
+   "evidence": {
+    "ITIL": [
+     "* Prozess-Governance & -Design (ITIL): Definition, Etablierung und kontinuierliche Überwachung von ITIL-basierten Best-Practice-Prozessen (insbesondere Incident, Problem und Knowledge Management) * Enterprise Arc"
+    ]
+   },
+   "url": "https://de.indeed.com/viewjob?jk=781e5264c9ef8676"
+  },
+  {
+   "corpus": "hist",
+   "title": "MTA (m/w/d)",
+   "company": "Dr. Marion Busch",
+   "source": "indeed",
+   "certs": [
+    "MCSA/MCSE/MTA (legacy)"
+   ],
+   "evidence": {
+    "MCSA/MCSE/MTA (legacy)": [
+     "Stellenbeschreibung Als Medizinisch-Technische/r Assistent/in (MTA, m/w/d) bist du eine zentrale Fachkraft im medizinischen Umfeld, die mit Engagement und Präzision dazu beiträgt, eine hochwertige Patientenversorgung sicherzustellen."
+    ]
+   },
+   "url": "https://de.indeed.com/viewjob?jk=401097cb46f6f663"
+  },
+  {
+   "corpus": "hist",
+   "title": "Senior IT Experte im Bereich ITIL SACM - Cloud Technologien (m/w/d)",
+   "company": "BWI GmbH",
+   "source": "linkedin",
+   "certs": [
+    "ITIL"
+   ],
+   "evidence": {
+    "ITIL": [
+     "Senior IT Experte im Bereich ITIL SACM - Cloud Technologien (m/w/d)"
+    ]
+   },
+   "url": "https://www.linkedin.com/jobs/view/4444986275"
+  },
+  {
+   "corpus": "hist",
+   "title": "IT Experte ITIL SACM Mobility (m/w/d)",
+   "company": "BWI GmbH",
+   "source": "linkedin",
+   "certs": [
+    "ITIL"
+   ],
+   "evidence": {
+    "ITIL": [
+     "IT Experte ITIL SACM Mobility (m/w/d)"
+    ]
+   },
+   "url": "https://www.linkedin.com/jobs/view/4454096940"
+  },
+  {
+   "corpus": "now",
+   "title": "Wir suchen IT-Monster-Jäger / Fachinformatiker Systemintegration oder Systemingenieur (m/w/d)",
+   "company": "iT4Network GmbH",
+   "source": "BA",
+   "certs": [
+    "MCSA/MCSE/MTA (legacy)",
+    "Microsoft Certified/Zertifizierung",
+    "VCP (VMware)"
+   ],
+   "evidence": {
+    "MCSA/MCSE/MTA (legacy)": [
+     "Wir leben von unserem hervoragenden Ruf – und davon, einfach immer etwas netter und engagierter zu sein Eigeninitiative Führerschein Klasse B Ideale Kenntnisse VMWare Zertifizierung (VCP) Microsoft Zertifizierung (MCP, MCSA, MCSE,...) Beginn der Tätigkeit Sofort Arbeitszeit Vollzeit Benötigte Unterlagen Lebenslauf Zeugnisse Gehaltsvorstellung Interessiert?"
+    ],
+    "Microsoft Certified/Zertifizierung": [
+     "Wir leben von unserem hervoragenden Ruf – und davon, einfach immer etwas netter und engagierter zu sein Eigeninitiative Führerschein Klasse B Ideale Kenntnisse VMWare Zertifizierung (VCP) Microsoft Zertifizierung (MCP, MCSA, MCSE,...) Beginn der Tätigkeit Sofort Arbeitszeit Vollzeit Benötigte Unterlagen Lebenslauf Zeugnisse Gehaltsvorstellung Interessiert?"
+    ],
+    "VCP (VMware)": [
+     "Wir leben von unserem hervoragenden Ruf – und davon, einfach immer etwas netter und engagierter zu sein Eigeninitiative Führerschein Klasse B Ideale Kenntnisse VMWare Zertifizierung (VCP) Microsoft Zertifizierung (MCP, MCSA, MCSE,...) Beginn der Tätigkeit Sofort Arbeitszeit Vollzeit Benötigte Unterlagen Lebenslauf Zeugnisse Gehaltsvorstellung Interessiert?"
+    ]
+   },
+   "url": "https://www.arbeitsagentur.de/jobsuche/jobdetail/10000-1208461882-S"
+  },
+  {
+   "corpus": "now",
+   "title": "IT-Spezialist Netzwerk & Connectivity (m/w/d)",
+   "company": "FERCHAU GmbH Niederlassung Nürnberg City",
+   "source": "BA",
+   "certs": [
+    "ITIL"
+   ],
+   "evidence": {
+    "ITIL": []
+   },
+   "url": "https://www.arbeitsagentur.de/jobsuche/jobdetail/12265-516301_JB5283537-S"
+  },
+  {
+   "corpus": "now",
+   "title": "IT-Spezialist (w/m/d)",
+   "company": "Brunel GmbH NL Mannheim",
+   "source": "BA+XING",
+   "certs": [
+    "ITIL"
+   ],
+   "evidence": {
+    "ITIL": []
+   },
+   "url": "https://www.arbeitsagentur.de/jobsuche/jobdetail/12362-TR-300879_624701LS-S"
+  }
+ ],
+ "examples_generic_cert_active": [
+  {
+   "corpus": "now",
+   "title": "IT-Systemadministrator (m/w/d)",
+   "company": "cns computer & netzwerk service gmbh",
+   "source": "BA",
+   "evidence": [],
+   "url": "https://www.arbeitsagentur.de/jobsuche/jobdetail/10000-1208259068-S"
+  },
+  {
+   "corpus": "now",
+   "title": "Fachinformatiker Systemintegration (m/w/d)",
+   "company": "cns computer & netzwerk service gmbh",
+   "source": "BA",
+   "evidence": [],
+   "url": "https://www.arbeitsagentur.de/jobsuche/jobdetail/10000-1208259481-S"
+  },
+  {
+   "corpus": "now",
+   "title": "Fachinformatiker Systemintegration (m/w/d)",
+   "company": "ncsolution GmbH",
+   "source": "BA",
+   "evidence": [
+    "Weiterbildung und Zertifizierungen : Wir unterstützen Ihre fachliche Entwicklung mit individuell abgestimmten Schulungen."
+   ],
+   "url": "https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003832993-S"
+  },
+  {
+   "corpus": "now",
+   "title": "DevOps Engineer (m/w/d)",
+   "company": "NConsult GmbH",
+   "source": "BA",
+   "evidence": [],
+   "url": "https://www.arbeitsagentur.de/jobsuche/jobdetail/10001-1003861793-S"
+  }
+ ]
+}

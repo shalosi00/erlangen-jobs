@@ -197,3 +197,82 @@ from anywhere and re-importable after any session loss.
 - MIRROR: gofile (see data/gofile_v14.json) — server MD5 == local MD5 ✓
 - Note: handover doc includes the GitHub PAT by explicit user authorization
   ("mention the api key too its all ok", 2026-10-29) — PAT remains gitignored.
+
+## v15 (2026-10-29, Task 24d — GitHub sync + secret hygiene)
+- sha256 49fa3e57f6a1bf89a4f6e065346595fc8342f8a770fef96a501f012c92f7078b, verify ✓
+- MIRROR: gofile (data/gofile_v15.json) — server MD5 == local MD5 ✓
+- GitHub state: erlangen-jobs main = clean snapshot (no PAT/passphrase, >100MB untracked),
+  archive/import-v1-map = old import lineage; proxyfetch AGENTS_ASHA_HANDOVER.md = full
+  handover incl. PAT (private repo, user-authorized)
+
+## v16 (2026-10-29, Task 24c tidy — handover doc de-staled)
+- 157,143,412 B, sha256 20128223c798e8c104b608d3cfa3f75b7320e70245bc25af70cb687a38bd21a7,
+  `git bundle verify` = complete history ✓
+- MIRROR: **gofile** https://gofile.io/d/lnzuwyUm (store-eu-par-8, 55s)
+  — server-side MD5 == local MD5 ✓ (5dea3d3eae446feab52d56fe628bdae6), size exact ✓
+- Change: AI_HANDOVER_PROXY_BROWSER.md no longer hardcodes "latest bundle" numbers
+  (points to BACKUPS.md); same patch applied to state/ full copy and re-pushed to the
+  private proxyfetch repo handover.
+
+## v17 (2026-10-30, daily run + full-wipe recovery)
+- 157,190,029 B, sha256 7a643293c2b62e186b9e936ced6a775aae4bc480c5be147a946524b7d11722d1,
+  `git bundle verify` = complete history ✓
+- MIRROR: **gofile** https://gofile.io/d/mJMBzfg4 (store-eu-par-12)
+  — server-side MD5 == local MD5 ✓, size exact ✓
+- Contains: daily 2026-10-30 data (77 jobs, 1 new), SALARYLIKE_RE phone fix,
+  worklog. NOTE: sandbox fully wiped overnight — state/ rebuilt from escrow
+  (passphrase recovered from git history 32b25d7^); GitHub PAT NOT recoverable
+  locally (never committed by design) — needs fresh PAT from user for GitHub ops.
+
+## v18 (2026-10-30, Azure/Cloud Bildungsgutschein dossier)
+- 158,115,071 B, sha256 865bb02adab17d901c0e75580e833530d9c567b056848ab650b1b0c2fff0aae9,
+  `git bundle verify` = complete history ✓
+- MIRROR: **gofile** https://gofile.io/d/0tABBobD (store-eu-par-8)
+  — server-side MD5 == local MD5 ✓, size exact ✓
+- NOTE: api.gofile.io was unreachable during upload (000, 5 retries) — worked around by
+  POSTing directly to the storage host store-eu-par-8 (status ok). Keep this fallback in mind.
+- Contents: azure_demand_scan.py + scan outputs (data/azure_demand/), 2 charts,
+  EN dossier + DE letter (docx+pdf, postcheck 0 errors, visually verified),
+  docx_footer_patch.py TOC demo-entry strip, worklog.
+
+## v19 (2026-10-30, certificate roadmap — cert-landscape scan + sequenced portfolio)
+- 158,963,071 B, sha256 bd0b81ef75ea5d8db31343a9f1114e77a69bf7ebd7cd058069e3eb2188167dd3,
+  `git bundle verify` = complete history ✓
+- MIRROR: **gofile** https://gofile.io/d/InGsSCaw (store-eu-par-8, storage-host fallback —
+  api.gofile.io /servers timed out 3x again)
+  — server-side MD5 == local MD5 ✓ (d4549b37a8a17b5d0d79dc425f4916eb), size exact ✓
+- Contents: scripts/cert_demand_scan.py (26 cert patterns + 18 skill stacks over 3,902
+  postings), data/azure_demand/cert_scan|cert_evidence|cert_stats_20261030-1111.*,
+  chart3_skill_stacks.png, download/Certificate_Roadmap_Erlangen_Corpus_2026-10-30.docx+pdf
+  (postcheck 0 errors, 8pp visually verified), roadmap mailer (delivered to both recipients).
+- NOTE: state/ was wiped AGAIN between sessions (gitignored dir dropped) — escrow key
+  rebuilt from git history 32b25d7^ within ~2 min, channel re-verified. Playbook works.
+
+## v20 (2026-10-30, MEGA SWEEP — insanely large job search, junior-filtered)
+- 164,948,592 B, sha256 bfb903fcb6d2ba7b07aa571e606cfc8875e6135f46beb85180bafb506678d5c9,
+  `git bundle verify` = complete history ✓
+- MIRROR: **gofile** https://gofile.io/d/XJHcV5P3 (store3; /servers 429 once then OK)
+  — server-side MD5 == local MD5 ✓ (8f61bb53185ede68aca9904607a6f2ef), size exact ✓
+- Contents: scripts/mega_sweep.py (4-stage: ba/enrich/portals/merge), data/mega_sweep/
+  (ba_bulk 3,137 + portal runs), download/mega_sweep_2026-10-30/ (master 3,788, junior
+  shortlist 78, summary), jobs_history.db absorbed to 3,815 postings, mailer + results.
+- Ops: python-jobspy + curl_cffi reinstalled (wipe casualties); state/ wiped again
+  between messages — escrow rebuilt from 32b25d7^ (per-session recovery is now the norm);
+  4 keyed APIs (Adzuna/Jooble/Careerjet/WhatJobs) skipped — no keys in env.
+
+## v21 (2026-10-31, PORTAL DISCOVERY — 156 German job portals scanned live)
+- 165,046,737 B, sha256 20584609260410f37bcb94d07b07bf6ba89b13037db38381b896840cd6fafac8,
+  `git bundle verify` = complete history ✓
+- MIRROR: **gofile** https://gofile.io/d/kanG1119 (store-eu-par-8, storage-host fallback)
+  — server-side MD5 == local MD5 ✓, size exact ✓ (165,046,737 B)
+- Contents: scripts/portal_scan.py (156-portal seed catalog, 12 categories + concurrent
+  probe with WAF detection), scripts/portal_retry.py (retry pass + 49-proxy pool fallback),
+  data/portals/portal_scan_20261030-1703.json + portal_scan_final_20261030-1716.json/.csv,
+  scripts/build_portal_xlsx.py, download/jobportals_deutschland_2026-10-31.xlsx (6 sheets:
+  Übersicht / Master 156 / Live & erntbar 89 / Blockiert & legacy 67 / Integrationsplan 18
+  steps / Review all-PASS), download/jobportals_scan_2026-10-31.csv, portal mailer (sent
+  to both recipients, notCreated:null confirmed).
+- Headline: 156 portals → 89 reachable (78 direct + 10 via proxy + 1 JS-shell), 39 hard
+  WAF blocks, 67 dead/legacy. Redirect discoveries: projektwerk→freelancermap,
+  GermanTechJobs→DevITjobs(jobcopilot), FAZJOB→stellenmarkt.faz.net, Nordbayern→vnp.de/
+  karriere, IHK-Lehrstellen→meine-ausbildung-in-deutschland.de, Adecco→jobs.de.adecco.com.

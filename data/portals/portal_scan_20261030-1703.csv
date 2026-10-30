@@ -1,0 +1,157 @@
+name,url,category,access_hint,status,http,waf,title,in_pipeline,note
+Indeed DE,https://de.indeed.com,generalist,html/WAF,BLOCKED-WAF,401,True,Authenticating...,"yes (1,977 harvested)",Largest aggregator; guest pages blocked by WAF
+LinkedIn Jobs,https://www.linkedin.com/jobs,generalist,js/guest-api,BLOCKED-WAF,200,True,LinkedIn Jobsuche: Finde Jobangebote und Praktikumsplätze in US.,"yes (1,848 harvested)",Guest API rate-limited
+XING Jobs,https://www.xing.com/jobs/search,generalist,js,OK,200,False,Jobs finden - XING,no,DACH network; API needs OAuth
+StepStone,https://www.stepstone.de,generalist,WAF,BLOCKED-WAF,403,True,Access Denied,no,Big board; heavy bot protection
+Monster DE,https://www.monster.de,generalist,html,BLOCKED-WAF,403,True,monster.com,probed r7,Post-merger status unclear
+Glassdoor DE,https://www.glassdoor.de,generalist,WAF,BLOCKED-WAF,403,True,Security | Glassdoor,no,Indeed-group; hard bot wall
+kimeta.de,https://www.kimeta.de,generalist,html+proxy,BLOCKED-WAF,503,True,503 Service Temporarily Unavailable,yes (via proxy pool),Meta-search 1.1M+ ads; proxy mandatory
+Jobware,https://www.jobware.de,generalist,html,CONN-ERR,0,,,no,Specialists/execs; 400 partner platforms
+JobScout24,https://www.jobscout24.de,generalist,html,CONN-ERR,0,,,probed r7,Classic board
+meinestadt.de Jobs,https://jobs.meinestadt.de,generalist,html,BLOCKED-WAF,403,True,Access Denied,probed r7,450k+ regional ads
+Jobboerse.de,https://www.jobboerse.de,generalist,html,CONN-ERR,0,,,no,1.7M ads incl. 180k Ausbildungsplaetze
+Stellenanzeigen.de,https://www.stellenanzeigen.de,generalist,html,BLOCKED-WAF,403,True,,no,75 regional job markets network
+Stellenmarkt.de,https://www.stellenmarkt.de,generalist,html,OK,200,False,Jobbörse: Stellenangebote finden auf Stellenmarkt.de,probed r7,Qualified specialists
+Jobs.de,https://www.jobs.de,generalist,html,OK,200,False,Bot Check,no,
+Jobboerse.com,https://www.jobboerse.com,generalist,html,CONN-ERR,0,,,no,
+Stellenboerse.de,https://www.stellenboerse.de,generalist,html,CONN-ERR,0,,,no,
+Gigajob,https://www.gigajob.com,generalist,html,BLOCKED-WAF,401,True,Authenticating...,no,Free classifieds job board
+Kleinanzeigen.de Jobs,https://www.kleinanzeigen.de/s-jobs,generalist,html,BLOCKED-WAF,403,True,,no,Classifieds (ex-eBay Kleinanzeigen)
+Quoka Jobs,https://www.quoka.de/jobs,generalist,html,BLOCKED-WAF,403,True,Just a moment...,no,Classifieds
+FAZJOB.NET,https://www.fazjob.net,generalist,html,OK,200,False,Jobs und Stellenangebote | FAZ Stellenmarkt,no,FAZ group; specialists/execs
+SZ Jobs,https://jobs.sueddeutsche.de,generalist,html,CONN-ERR,0,,,no,Sueddeutsche Zeitung; strong in Bavaria/BW
+ZEIT Jobs,https://jobs.zeit.de,generalist,html/rss,OK,200,False,ZEIT Stellenmarkt - Jobbörse der ZEIT - Alle aktuellen Jobs im ZEIT Stellenmarkt,no,ZEIT group
+karriere.de,https://www.karriere.de,generalist,html,BLOCKED-WAF,403,True,Just a moment...,no,Handelsblatt Media group
+Tagesspiegel Jobs,https://jobs.tagesspiegel.de,generalist,html,CONN-ERR,0,,,no,
+t3n Jobs,https://t3n.de/jobs,generalist,html,HTTP-406,406,False,,no,Digital/tech/marketing magazine board
+heise Jobs,https://jobs.heise.de,generalist,html,BLOCKED-WAF,503,True,503 Service Temporarily Unavailable,no,Tech magazine board
+Golem Jobs,https://www.golem.de/jobs,generalist,html,HTTP-404,404,False,Seite nicht gefunden - Golem.de,no,Tech magazine board
+Jobworld,https://www.jobworld.de,generalist,html,OK,200,False,"Jobs, Jobsuche und Stellenangebote bei JOBworld",probed r7,
+Kalaydo Jobs,https://www.kalaydo.de/jobs,generalist,html,BLOCKED-WAF,403,True,,probed r7 (dead?),Legacy Cologne portal
+BA Jobboerse,https://www.arbeitsagentur.de/jobsuche,public,api,OK,200,False,Jobsuche der BA – Startseite,yes (core source),Official federal job board; open REST API
+EURES,https://eures.europa.eu/jobs-search,public,api,HTTP-404,404,False,Page not found | EURES (EURopean Employment Services),yes,EU-wide; JSON search endpoint
+Interamt,https://www.interamt.de/koop/app/,public,html,OK,200,False,INTERAMT - Das Karriereportal des öffentlichen Dienstes,no,Federal public-sector career portal (Bund)
+Make it in Germany,https://www.make-it-in-germany.com/en/working-in-germany/job-listings,public,js,OK,200,False,Radware Page,no,Federal portal for international skilled workers
+Berlin.de Jobs,https://www.berlin.de/jobs/,public,html,OK,200,False,HAUPTSTADT MACHEN - Das Berliner Karriereportal - Berlin.de,no,City/state portal incl. public sector
+oeffentlicher-dienst.info,https://www.oeffentlicher-dienst.info,public,html,OK,200,False,ffentlicher-Dienst.Info,no,Public service info + job listings
+Stellenwerk,https://www.stellenwerk.de,public,html,OK,200,False,Studentenjobs in deiner Nähe | stellenwerk,no,University job boards network (HH/MUC/HH...)
+academics.de,https://www.academics.de,public,html,OK,200,False,"academics - der führende Stellenmarkt für Wissenschaft, Forschung, Öffentliches &amp; Gese",no,Science/research/academia (Zeit group)
+jobvector,https://www.jobvector.de,public,html,BLOCKED-WAF,403,True,Just a moment...,no,STEM/medicine/science; Bayer/Siemens/Airbus
+Bundeswehr Karriere,https://www.bundeswehr.de/karriere,public,html,OK,200,False,Startseite | Bundeswehr Karriere,no,Own career portal
+Kirchenjobs,https://www.kirchenjobs.de,public,html,SSL-ERR,0,,,no,Church/charity sector
+Get in IT,https://www.get-in-it.de,tech,html,OK,200,False,get in IT | Finde Deinen Einstieg in die IT-Branche,yes,IT juniors/graduates
+Get in Engineering,https://www.get-in-engineering.de,tech,html,OK,200,False,get in Engineering | Deine Ingenieur-Karriere startet hier,no,Engineering students/graduates
+GermanTechJobs,https://germantechjobs.de,tech,html,OK,200,False,Sign Up,no,IT jobs with salary/stack transparency
+Berlin Startup Jobs,https://berlinstartupjobs.com,tech,html,BLOCKED-WAF,403,True,Just a moment...,no,Berlin startup scene incl. IT support roles
+startup.jobs,https://startup.jobs,tech,js,BLOCKED-WAF,403,True,Just a moment...,no,"Global startup board, DE filter"
+Wellfound,https://wellfound.com/jobs,tech,js,OK,200,False,Find Startup Jobs Near You and Remote Jobs | Wellfound,probed r7,ex-AngelList Talent
+Welcome to the Jungle,https://www.welcometothejungle.com/en/jobs,tech,js,HTTP-202,202,False,,probed r7,ex-Otta; DE section
+Instaffo,https://www.instaffo.com,tech,js,OK,200,False,"Instaffo | Finde die Jobs, die wirklich zu dir passen",no,AI matching job network
+ITsax.de,https://www.itsax.de,tech,html,OK,200,False,ITsax.de bietet Stellen aus dem IT- und Software-Bereich an | ITsax.de,no,"IT specialists/execs, active since 2003"
+ITmitte.de,https://www.itmitte.de,tech,html,OK,200,False,ITmitte.de bietet Stellen aus dem IT- und Software-Bereich an | ITmitte.de,no,IT jobs + forum + network
+Stack Overflow Jobs,https://stackoverflow.com/jobs,tech,html,BLOCKED-WAF,403,True,Just a moment...,no,Likely discontinued
+Jobicy,https://jobicy.com,tech,html/api,BLOCKED-WAF,200,True,Remote Job Board & Career Intelligence Platform | Jobicy,probed r7,Remote tech + RSS/API
+Joberty,https://joberty.com,tech,html,OK,200,False,Joberty,no,Dev community job board
+EnglishJobs.de,https://www.englishjobs.de,tech,html,BLOCKED-WAF,403,True,Just a moment...,probed r7,English-language DE jobs
+freelancermap,https://www.freelancermap.de,freelance,html,OK,200,False,freelancermap | Die Plattform für Freelancer & Projekte,no,Largest DE freelance market
+GULP,https://www.gulp.de,freelance,html,OK,200,False,"Personaldienstleister: IT, Engineering, Life Science | Randstad Professional",no,SAP/engineering freelance (Randstad group)
+freelance.de,https://www.freelance.de,freelance,html,OK,200,False,freelance.de | Plattform für Freelancer &amp; Projekte,no,
+projektwerk,https://www.projektwerk.de,freelance,html,OK,200,False,"freelancermap.de | IT-Projekte für Freelancer, Selbstständige und Freiberufler",no,Project/freelance marketplace
+Malt.de,https://www.malt.de,freelance,js,BLOCKED-WAF,403,True,Just a moment...,no,
+twago,https://www.twago.com,freelance,html,BLOCKED-WAF,200,True,Talent-Pool.com | Talent is family,no,
+Uplink,https://uplink.io,freelance,html,OK,200,False,Uplink,no,IT freelancers
+COMUNDO,https://comundo.com,freelance,js,BLOCKED-WAF,403,True,Just a moment...,no,ex-COMATCH consulting marketplace
+Absolventa,https://www.absolventa.de,junior,html,OK,200,False,"Jobs für Absolventen, Berufseinsteiger &amp; Berufserfahrene | Absolventa",no,Entry-level/graduate focus
+ausbildung.de,https://www.ausbildung.de,junior,html,OK,200,False,Einfach eine Ausbildung oder ein duales Studium finden,no,Apprenticeships
+Azubiyo,https://www.azubiyo.de,junior,html,BLOCKED-WAF,403,True,Just a moment...,no,Ausbildung/Dual study
+Azubi.de,https://www.azubi.de,junior,html,OK,200,False,Azubi.de: Ausbildung &amp; duale Studiengänge in Deutschland,no,Redirect target of ausbildung.de?
+IHK Lehrstellenboerse,https://www.ihk-lehrstellenboerse.de,junior,html,OK,200,False,Ausbildungsplätze | Meine Ausbildung in Deutschland,no,IHK apprenticeship exchange
+Lehrstellen-Radar,https://www.lehrstellen-radar.de,junior,html/app,OK,200,False,Lehrstellenradar LEHRSTELLENRADAR,no,IHK/DIHK apprenticeship radar
+Praktikum.info,https://www.praktikum.info,junior,html,OK,200,False,Praktikum.info: Riesige Auswahl an Praktika,no,Internships/working students/trainees
+StudentJob DE,https://www.studentjob.de,junior,html,BLOCKED-WAF,403,True,403,no,Student/mini jobs
+JobTeaser,https://www.jobteaser.com,junior,js,OK,200,False,"JobTeaser - Praktikum, Studierendenjob oder der erste Job; Ihr nächster Job ist auf JobTea",no,University-embedded boards
+Berufsstart.de,https://www.berufsstart.de,junior,html,OK,200,False,Berufsstart - deine Jobbörse,no,Graduate portal
+Ausbildungsatlas,https://www.ausbildungsatlas.de,junior,html,CONN-ERR,0,,,no,
+Ausbildungspark,https://www.ausbildungspark.com,junior,html,OK,200,False,Eignungstest und Einstellungstest kostenlos &uuml;ben,no,
+InFranken.de Jobs,https://www.infranken.de/jobs,regional,html,OK,200,False,Jobbörse für Bamberg in Franken | jobs.inFranken.de,yes (core regional),Franconia (Erlangen/Nuernberg/Bamberg)
+Regio-Jobanzeiger,https://www.regiojobanzeiger.de,regional,html,CONN-ERR,0,,,no,NRW/Rhineland-Palatinate/Hessen SMEs
+Nordbayern Jobs,https://www.nordbayern.de/jobs,regional,html,OK,200,False,Karriere | VNP –Verlag Nürnberger Presse,no,"NN/NZ publisher, North Bavaria"
+RegioJobs-NI,https://www.regiojobs-ni.de,regional,html,OK,200,False,Jobs in Niedersachsen finden & schalten | RegioJobs-NI – Ihr regionaler Stellenmarkt für F,no,Lower Saxony specialists
+Yourfirm,https://www.yourfirm.de,regional,html,BLOCKED-WAF,403,True,,no,"Mittelstand only (<5,000 employees)"
+jobs-in-franken,https://www.jobs-in-franken.de,regional,html,CONN-ERR,0,,,no,
+Frankenjobs,https://www.frankenjobs.de,regional,html,CONN-ERR,0,,,no,
+Munich Startup Jobs,https://www.munich-startup.de/jobs,regional,html,OK,200,False,Jobs &amp; Co | Munich Startup Platform,no,Munich startup board
+muenchen.de Jobs,https://www.muenchen.de/jobs,regional,html,OK,200,False,Jobs und Stellenangebote in München - muenchen.de,no,City portal
+Karriere-Hamburg,https://www.karriere-hamburg.de,regional,html,OK,200,False,Jobs Hamburg » Regionale Stellenangebote in der Jobbörse,no,Hamburg regional portal
+Karriere-Bremen,https://www.karriere-bremen.de,regional,html,OK,200,False,Jobs Bremen » Regionale Stellenangebote in der Jobbörse,no,Bremen regional portal
+Jobboerse Bayern,https://www.jobboerse.bayern,regional,html,CONN-ERR,0,,,no,
+Jooble DE,https://de.jooble.org,aggregator,html/api-key,BLOCKED-WAF,403,True,Attention Required! | Cloudflare,no,Aggregator; API needs free key
+Careerjet DE,https://www.careerjet.de,aggregator,html/api-key,BLOCKED-WAF,200,True,Careerjet,no,Affiliate search API
+Adzuna DE,https://www.adzuna.de,aggregator,html/api-key,BLOCKED-WAF,405,True,Human Verification,no,Open API with free key
+Talent.com DE,https://de.talent.com,aggregator,html/api-key,OK,200,False,Talent.com: Jobsuche | Finde Jobs in Deiner Nähe,no,ex-Neuvoo
+Jobrapido DE,https://de.jobrapido.com,aggregator,html,BLOCKED-WAF,403,True,,no,
+Jobijoba DE,https://www.jobijoba.de,aggregator,html,OK,200,False,Jobs und Stellenangebote finden - Jobsuchmaschine JobiJoba,no,
+Trovit DE,https://www.trovit.de,aggregator,html,CONN-ERR,0,,,no,
+WhatJobs DE,https://de.whatjobs.com,aggregator,html,OK,200,False,Jobs in Deutschland finden | WhatJobs,no,
+JobisJob DE,https://www.jobisjob.de,aggregator,html,BLOCKED-WAF,403,True,,probed r7,
+Jobleads DE,https://www.jobleads.de,aggregator,html,BLOCKED-WAF,403,True,Just a moment...,no,
+Jobsora DE,https://de.jobsora.com,aggregator,html,BLOCKED-WAF,403,True,Just a moment...,no,Low-trust scraper aggregator
+Joblift,https://joblift.de,aggregator,html,BLOCKED-WAF,405,True,Human Verification,no,Meta-search; shut down ~2023?
+Jobninja,https://jobninja.com,aggregator,js,BLOCKED-WAF,403,True,Just a moment...,probed r7,
+Jobspotting,https://www.jobspotting.com,aggregator,html,CONN-ERR,0,,,no,Likely defunct
+Randstad DE,https://www.randstad.de/jobs/,staffing,js,BLOCKED-WAF,200,True,Jobsuche: Jobs in Zeitarbeit und Festanstellung | Randstad,no,Large agency board
+Adecco DE,https://www.adecco.de/jobs/,staffing,js,OK,200,False,Jobs in Deutschland suchen,no,
+Hays DE,https://www.hays.de/jobs/,staffing,js,OK,200,False,Jobsuche und Projektbörse für Spezialisten | Hays,no,IT staffing
+Manpower DE,https://www.manpower.de/jobs/,staffing,html,OK,200,False,Welcome to ManpowerGroup,no,
+Brunel DE,https://www.brunel.de/de/jobs,staffing,html,SSL-ERR,0,,,enrichment-seen,Seen in corpus (BA ads)
+DIS AG,https://www.dis-ag.com,staffing,js,OK,200,False,DIS AG | Ihr Branchenspezialist mit Stellenangeboten und Personal für Ihre Anforderungen,no,Skilled trades/IT staffing
+Hofmann Personal,https://www.hofmann-personal.de,staffing,html,OK,200,False,Redirecting...,no,
+Amadeus Fire,https://www.amadeus-fire.de,staffing,html,OK,200,False,Einen Moment bitte …,no,
+persona service,https://www.persona.de,staffing,html,OK,200,False,persona service Deutschland,no,
+Trenkwalder DE,https://www.trenkwalder.com/de/,staffing,html,BLOCKED-WAF,403,True,403 Forbidden,no,
+Robert Half DE,https://www.roberthalf.de/jobs,staffing,js,BLOCKED-WAF,200,True,Finden Sie Ihren nächsten Job,no,
+Page Personnel DE,https://www.pagepersonnel.de/jobs,staffing,js,BLOCKED-WAF,403,True,Access denied | www.pagepersonnel.de used Cloudflare to restrict access | www.pagepersonne,no,
+Experteer,https://www.experteer.de,staffing,js,BLOCKED-WAF,403,True,403,no,Senior/executive level
+Hotelcareer,https://www.hotelcareer.de,niche,html,OK,200,False,Hotel Jobs als Koch oder Hotelfachfrau - Hotel Jobbörse | Hotelcareer,no,Hospitality (StepStone group)
+Gastrojobs,https://www.gastrojobs.de,niche,html,OK,200,False,"Jobbörse Gastronomie, Jobs Gastronomie, Gastronomie Jobs, Stellenangebote Restaurant und C",no,
+Medi-Karriere,https://www.medi-karriere.de,niche,html,CONN-ERR,0,,,no,Medicine/health
+Medijobs,https://www.medijobs.de,niche,html,BLOCKED-WAF,200,True,Sicherheitsabfrage,no,Healthcare
+Pflege.jobs,https://pflege.jobs,niche,html,CONN-ERR,0,,,no,Nursing/care
+eFinancialCareers DE,https://www.efinancialcareers.de,niche,html,OK,200,False,System Maintenance,no,Finance/IT in finance
+Bankjob.de,https://www.bankjob.de,niche,html,OK,200,False,Jobbörse für Banking und Finanzwesen | bankjob.de,no,Banks/insurance/accounting
+Salesjob.de,https://www.salesjob.de,niche,html,OK,200,False,Vertrieb Jobs - Aktuelle Stellenangebote &amp; Jobs bei salesjob.de,no,Sales specialists
+Greenjobs.de,https://www.greenjobs.de,niche,html,OK,200,False,greenjobs.de - Umwelt macht Karriere,no,Environment/renewables
+Handwerkerjobs.de,https://handwerkerjobs.de,niche,html,CONN-ERR,0,,,no,Crafts/trades
+Jurajobs,https://www.jurajobs.de,niche,html,OK,200,False,Jobs für Recht &amp; Steuer in Deutschland,no,Legal
+Pharmajobs,https://www.pharmajobs.de,niche,html,HTTP-404,404,False,404 Not Found,no,Pharma
+Sozialjobs,https://www.sozialjobs.de,niche,html,CONN-ERR,0,,,no,Social sector
+Mediengestalter Jobs,https://www.mediengestalter.de/jobs,niche,html,HTTP-404,404,False,404 Not Found,no,Design/creative
+The Local Jobs DE,https://www.thelocal.de/jobs,english,html,BLOCKED-WAF,403,True,403,no,English-language DE news + jobs
+Toytown Germany,https://www.toytowngermany.com/jobs,english,html,CONN-ERR,0,,,no,Expat forum board
+iamexpat.de,https://www.iamexpat.de/career/jobs,english,html,HTTP-404,404,False,IamExpat,no,Expat jobs DE
+InterNations,https://www.internations.org,english,js,OK,200,False,Community for expatriates &amp; global minds | InterNations,no,Expat network
+Connexion-Emploi,https://www.connexion-emploi.com,english,html,OK,200,False,Das Deutsch-Französische Jobportal - Connexion-Emploi,no,Franco-German board since 2005
+We Work Remotely,https://weworkremotely.com,remote,html,OK,200,False,We Work Remotely: Advanced Remote Job Search,no,Largest remote board
+RemoteOK,https://remoteok.com,remote,html/api,OK,200,False,"Remote Jobs in Programming, Design, Sales and more #OpenSalaries",no,Public JSON API
+Remotive,https://remotive.com,remote,html/api,OK,200,False,"Remote Jobs in Programming, Support, Design and more",no,Public API
+Working Nomads,https://www.workingnomads.com/jobs,remote,html/api,BLOCKED-WAF,200,True,Remote Jobs | Working Nomads,no,
+Remote.co,https://remote.co/remote-jobs/,remote,html,TIMEOUT,0,,,no,
+NoFluffJobs,https://nofluffjobs.com/de,remote,js,OK,200,False,"Portal with IT, marketing, sales, HR, remote work job offers | No Fluff Jobs.",no,"EU tech, DE filter"
+JustJoinIT,https://justjoin.it,remote,js/api,OK,200,False,Jobs - 21 026 job offers (October 2026) | Just Join IT,no,EU tech; DE jobs
+FlexJobs,https://www.flexjobs.com,remote,paid,TIMEOUT,0,,,no,Paid membership
+Turing Jobs,https://www.turing.com/jobs,remote,js,BLOCKED-WAF,403,True,,no,Hiring marketplace
+Greenhouse boards,https://boards.greenhouse.io,ats,public-api,OK,200,False,Greenhouse | Software für die Bewerberverfolgung &amp; Einstellungsplattform,no,/v1/boards/{org}/jobs — direct employer data
+Lever,https://jobs.lever.co,ats,public-api,OK,200,False,Lever | Modern Recruiting Software &amp; ATS,no,api.lever.co/v0/postings/{org}
+Ashby,https://jobs.ashbyhq.com,ats,public-api,BLOCKED-WAF,404,True,Jobs,no,posting-api/job-board/{org}
+Recruitee,https://recruitee.com,ats,public-api,OK,200,False,Customizable ATS &amp; hiring software | Tellent Recruitee,no,{co}.recruitee.com/api/offers/
+Personio feeds,https://www.personio.com,ats,public-xml,BLOCKED-WAF,429,True,Vercel Security Checkpoint,no,{co}.jobs.personio.de/xml
+SmartRecruiters,https://jobs.smartrecruiters.com,ats,public-api,OK,200,False,SmartRecruiters Job Search,no,/v1/companies/{id}/postings
+Workable,https://apply.workable.com,ats,public-api,BLOCKED-WAF,200,True,Workable,no,widget/accounts/{org}/jobs
+Softgarden,https://jobs.softgarden.de,ats,xml/rss,CONN-ERR,0,,,no,Per-company feeds
+join.com,https://join.com,ats,html,OK,200,False,Join: das ATS für KMU-Recruiting in Europa,no,ATS job board; sitemap scrape
+Teamtailor,https://www.teamtailor.com,ats,html,OK,200,False,Teamtailor | For hiring people,no,Per-company boards
+d.vinci,https://www.dvinci.de,ats,html,OK,200,False,Recruiting- &amp; Onboarding-Software: Wir sind eure Experten | d.vinci,no,Per-company boards
+dein-stellenmarkt (Joblocal),https://www.dein-stellenmarkt.de,misc,html,CONN-ERR,0,,,no,Regional network (Joblocal)
+Jobregio,https://www.jobregio.de,misc,html,OK,200,False,Dovendi - Domain for sale,no,
+Stellen.com,https://www.stellen.com,misc,html,CONN-ERR,0,,,no,
+CareerBuilder DE,https://www.careerbuilder.de,misc,html,BLOCKED-WAF,403,True,careerbuilder.com,no,US group; DE presence?

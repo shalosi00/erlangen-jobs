@@ -1,0 +1,312 @@
+{
+ "ts": "20261030-163614",
+ "git_head": "ff27d32",
+ "slug": "fachinformatiker-systemintegration-n-rnberg-100km-30d",
+ "query": "Fachinformatiker Systemintegration",
+ "city": "Nürnberg",
+ "radius": 100,
+ "days": 30,
+ "ok_sources": [
+  "arbeitnow",
+  "connecticum",
+  "eures",
+  "getinit",
+  "himalayas",
+  "indeed",
+  "infranken",
+  "jobicy",
+  "kimeta",
+  "remotive",
+  "stellenanzeigen",
+  "talent",
+  "wwr",
+  "xing"
+ ],
+ "ok_display_names": [
+  "EURES",
+  "Get-in-IT",
+  "InFranken",
+  "Indeed",
+  "Kimeta",
+  "Stellenanzeigen.de",
+  "Talent.com",
+  "XING"
+ ],
+ "not_ok_sources": [
+  {
+   "name": "linkedin",
+   "status": "EMPTY",
+   "error": ""
+  },
+  {
+   "name": "adzuna",
+   "status": "ERROR",
+   "error": "[auth] missing API key: set ADZUNA_APP_ID + ADZUNA_APP_KEY (free: developer.adzuna.com)"
+  },
+  {
+   "name": "jooble",
+   "status": "ERROR",
+   "error": "[auth] missing API key: set JOOBLE_API_KEY (free: jooble.org/api)"
+  },
+  {
+   "name": "careerjet",
+   "status": "ERROR",
+   "error": "[auth] missing API key: set CAREERJET_AFFID (free: careerjet.com/partners/api)"
+  },
+  {
+   "name": "whatjobs",
+   "status": "ERROR",
+   "error": "[auth] missing API key: set WHATJOBS_PUBLISHER_KEY (whatjobs affiliate/publisher program)"
+  },
+  {
+   "name": "berufsstart",
+   "status": "EMPTY",
+   "error": ""
+  }
+ ],
+ "per_source": [
+  {
+   "name": "indeed",
+   "status": "OK",
+   "count_raw": 13,
+   "count_kept": 4,
+   "count_rejected": 9,
+   "duration_s": 0.8,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "linkedin",
+   "status": "EMPTY",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 14.7,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "xing",
+   "status": "OK",
+   "count_raw": 16,
+   "count_kept": 4,
+   "count_rejected": 12,
+   "duration_s": 2.9,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "kimeta",
+   "status": "OK",
+   "count_raw": 9,
+   "count_kept": 6,
+   "count_rejected": 3,
+   "duration_s": 1.5,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "stellenanzeigen",
+   "status": "OK",
+   "count_raw": 40,
+   "count_kept": 5,
+   "count_rejected": 35,
+   "duration_s": 1.2,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "getinit",
+   "status": "OK",
+   "count_raw": 39,
+   "count_kept": 7,
+   "count_rejected": 32,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "connecticum",
+   "status": "OK",
+   "count_raw": 28,
+   "count_kept": 0,
+   "count_rejected": 28,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "infranken",
+   "status": "OK",
+   "count_raw": 25,
+   "count_kept": 0,
+   "count_rejected": 25,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "arbeitnow",
+   "status": "OK",
+   "count_raw": 300,
+   "count_kept": 0,
+   "count_rejected": 300,
+   "duration_s": 0.1,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "adzuna",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "[auth] missing API key: set ADZUNA_APP_ID + ADZUNA_APP_KEY (free: developer.adzuna.com)",
+   "detail": "url="
+  },
+  {
+   "name": "jooble",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "[auth] missing API key: set JOOBLE_API_KEY (free: jooble.org/api)",
+   "detail": "url="
+  },
+  {
+   "name": "careerjet",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "[auth] missing API key: set CAREERJET_AFFID (free: careerjet.com/partners/api)",
+   "detail": "url="
+  },
+  {
+   "name": "whatjobs",
+   "status": "ERROR",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "[auth] missing API key: set WHATJOBS_PUBLISHER_KEY (whatjobs affiliate/publisher program)",
+   "detail": "url="
+  },
+  {
+   "name": "remotive",
+   "status": "OK",
+   "count_raw": 12,
+   "count_kept": 0,
+   "count_rejected": 12,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "talent",
+   "status": "OK",
+   "count_raw": 20,
+   "count_kept": 11,
+   "count_rejected": 9,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "berufsstart",
+   "status": "EMPTY",
+   "count_raw": 0,
+   "count_kept": 0,
+   "count_rejected": 0,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "himalayas",
+   "status": "OK",
+   "count_raw": 20,
+   "count_kept": 0,
+   "count_rejected": 20,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "jobicy",
+   "status": "OK",
+   "count_raw": 50,
+   "count_kept": 0,
+   "count_rejected": 50,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "wwr",
+   "status": "OK",
+   "count_raw": 58,
+   "count_kept": 0,
+   "count_rejected": 58,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "eures",
+   "status": "OK",
+   "count_raw": 200,
+   "count_kept": 0,
+   "count_rejected": 200,
+   "duration_s": 0.0,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  }
+ ],
+ "outputs": [
+  "/home/z/my-project/data/mega_sweep/portals/jobs_fachinformatiker-systemintegration-n-rnberg-100km-30d_20261030-1636.csv",
+  "/home/z/my-project/data/mega_sweep/portals/jobs_fachinformatiker-systemintegration-n-rnberg-100km-30d_20261030-1636.json",
+  "/home/z/my-project/data/mega_sweep/portals/jobs_fachinformatiker-systemintegration-n-rnberg-100km-30d_20261030-1636_rejected.csv"
+ ],
+ "unique_final": 34,
+ "rejected_total": 793,
+ "proxy_pool": {
+  "alive": 152,
+  "by_protocol": {
+   "http": 150,
+   "https": 2
+  },
+  "per_target": {
+   "ba_api": 72,
+   "kimeta": 19,
+   "stellenanzeigen": 19,
+   "jobvector": 0
+  },
+  "dead_marked": 0,
+  "data_file": "/home/z/my-project/data/proxies/validated_proxies.json",
+  "age_hours": 104.4
+ }
+}

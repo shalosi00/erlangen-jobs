@@ -187,7 +187,8 @@ through proxies where Python-`requests` passes fine. Therefore:
 - **Backup after EVERY task**: git commit →
   `git bundle create backups/asha-jobtoolkit-vNN.bundle --all` → SHA256 →
   `git bundle verify` → gofile mirror (MD5/size check) → `BACKUPS.md` entry.
-  Latest bundle: **v13** (see BACKUPS.md) → next is v14.
+  Latest bundle: **see `BACKUPS.md` — its newest entry is always current**
+  (do not hardcode bundle numbers in this doc).
 - **Email work**: `python3 scripts/atomicmail_recover.py` FIRST, always.
 - **Daily job task** is scheduled (platform cron job #485352, 07:00
   Atlantic/Reykjavik): `bash scripts/run_daily_task.sh` =

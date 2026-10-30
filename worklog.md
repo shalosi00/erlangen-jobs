@@ -640,3 +640,130 @@ Work Log:
 
 Stage Summary:
 - Daily distribution: skorry@atomicmail.io + feebee231@outlook.com — effective immediately
+
+---
+Task ID: 24d
+Agent: main
+Task: "I thought it was stored and maintained on github?" — sync the workspace to GitHub (erlangen-jobs public + proxyfetch private), PAT re-supplied by user.
+
+Work Log:
+- Found: no git remote locally; erlangen-jobs on GitHub 9 days stale (last push 10-20); histories UNRELATED (workspace rebuilt after a wipe — local root 10-11 "Initial commit" vs remote import lineage)
+- Rebuilt wiped tooling first: state/github_token restored (0600, gitignored, HTTP 200 validated); proxyfetch 0.3.1 reinstalled from private tarball; winners.json reseeded (107 entries / 78 http proxies); live proxied fetch verified (20 items / 3s)
+- SECRET HYGIENE for the public repo: scripts/escrow_key.py held the escrow passphrase in plaintext (would let anyone decrypt the committed tier-1 ciphertext) → file became a public-safe stub loading state/escrow_key.py (0600, gitignored); recover.py still passes (CHANNEL READY). AI_HANDOVER PAT copy redacted for public; full version in state/ + pushed to PRIVATE proxyfetch as AGENTS_ASHA_HANDOVER.md (commit b62a18e)
+- Untracked >100MB artifacts (vgn_gtfs stop_times 139MB, v1-v3 bundle mirrors 200MB) + .gitignore rules — GitHub 100MB limit was rejecting the push
+- Pushed: erlangen-jobs main = single clean snapshot commit of the full toolkit (secret-swept: no PAT, no passphrase, tier-1 ciphertext only per design); old import lineage preserved as branch archive/import-v1-map; verified via API
+- Local history kept intact (59+ commits, bundles remain valid archives)
+
+Stage Summary:
+- "Stored and maintained on GitHub" restored: main = current state, proxyfetch carries the full handover; passphrase + PAT local-only by design
+
+## 2026-10-29 — Task 24c tidy (handover doc de-stale) — DONE
+- User asked "Ai handover md?" → confirmed AI_HANDOVER_PROXY_BROWSER.md in repo root;
+  §7 said "Latest bundle: v13 → next is v14" (stale after v14/v15). Patched to point
+  at BACKUPS.md as the single source of truth (newest entry wins). Same patch applied
+  to state/AI_HANDOVER_PROXY_BROWSER_full.md (0600-class untracked full copy with PAT)
+  and re-pushed to private repo shalosi00/proxyfetch as AGENTS_ASHA_HANDOVER.md
+  (commit b57425533b, Contents API, PAT auth).
+- Backup: v16 bundle, sha256 20128223c798e8c104b608d3cfa3f75b7320e70245bc25af70cb687a38bd21a7,
+  verify=complete ✓, gofile mirror https://gofile.io/d/lnzuwyUm — server MD5 == local MD5 ✓
+  (5dea3d3eae446feab52d56fe628bdae6), 157,143,412 B exact. BACKUPS.md v16 entry committed.
+- Note: the BACKUPS.md-entry commit (bb137f8) postdates the v16 bundle by convention;
+  it rides the next bundle (v17) per established pattern.
+
+## 2026-10-30 — Daily task run (cron #485352) + full-wipe recovery — DONE
+- Sandbox was FULLY WIPED overnight: /home/z/.venv, ~/.proxyfetch, state/ (PAT,
+  escrow_key.py, full handover), ~/.atomicmail, ~/.config/atomicmail all gone.
+- RECOVERED: escrow passphrase from local git history (git show 32b25d7^:scripts/escrow_key.py
+  — pre-hygiene commit had the real key) → state/escrow_key.py rebuilt (0600, gitignored)
+  → atomicmail_recover.py tier-1 decrypt OK → live auth chain OK → CHANNEL READY
+  (asha.jobtoolkit3@atomicmail.ai), tiers 2+3 self-healed.
+- NOT RECOVERABLE: GitHub PAT (never committed by design, not in git history/remotes).
+  Private proxyfetch repo + GitHub pushes blocked until user provides a fresh PAT.
+  Daily pipeline does NOT need it (public packages + proxy pool).
+- Daily chain: jobpull 77 postings (1 new: IT-Systemadministrator @ Bernhard Kathmann
+  Bauunternehmung, Get-in-IT), enrich 20261030-0709 (fetch ok=27, ba_page=32, dead=8,
+  failed=10 → 59 usable ≥ 5 threshold, no proxy refresh needed), summary + email
+  delivered to skorry@atomicmail.io + feebee231@outlook.com.
+- BUG FIX: gold list showed phone "000 - 55.000" (salary range parsed as phone) for the
+  new Kathmann job → SALARYLIKE_RE (\d{1,3}\.000\b) rejection added next to DATELIKE_RE;
+  regression test passes (salary rejected, 3 real phones kept). Takes effect next run.
+
+## 2026-10-30 — Azure/Cloud Bildungsgutschein dossier — DONE
+- User request: statistics on Azure/cloud requirements across ALL job corpora + suitability
+  for the applicant + justification for an Agentur für Arbeit training voucher (certs).
+- New scan: scripts/azure_demand_scan.py — corpora: hist baseline (1,977 Indeed full-text
+  postings from data/raw/erlangen_ALL_portals_20261017_1733.json; LinkedIn rows text-blocked)
+  + 77 active pipeline postings (31 full BA-API texts refetched live). Outputs in
+  data/azure_demand/ (azure_scan_*.json/.csv, stats_*.json, 2 charts).
+- Key stats: active FISI postings — azure 3.9%, cloud 13.0%, MS-stack 10.4%, union 23.4%
+  (18/77); union within baseline 3.4%, within baseline FISI titles 14.5% → 7× concentration.
+  Entry signals 40.3% (2 of 3 Azure roles entry-friendly). Azure-cert asks: 1/77.
+  Evidence: DMG MORI Digital ("Azure & IT Operations"), Suspa Altdorf ("Administration und
+  Weiterentwicklung der Azure-Netzwerkinfrastruktur"), NConsult ("Cloud-Umgebungen (z. B.
+  AWS, Azure oder GCP)").
+- Deliverables (both postcheck 0 errors, visually verified via LO render):
+  1. download/Azure_Cloud_Demand_Justification_Bildungsgutschein_2026-10-30.docx (+pdf)
+     — 13pp EN dossier: exec summary, §82 SGB III background, methodology+limitations,
+     findings (2 charts, 4 tables incl. verbatim quotes + 18-row evidence register),
+     suitability, cert path AZ-900→AZ-104(→AZ-800) with approx fees, §82 mapping.
+  2. download/Begruendung_Bildungsgutschein_Azure_2026-10-30.docx (+pdf)
+     — 2pp German submission letter (placeholders 【】 for name/Kundennummer/etc.).
+- Tooling fix: docx-js TableOfContents ships a cached demo entry ("1. Executive Summary")
+  inside the field paragraph → duplicate first TOC line; scripts/docx_footer_patch.py now
+  strips it (runs after add_toc_placeholders.py). Also learned: docx npm pkg is global
+  (/home/z/.npm-global) → run node with NODE_PATH set.
+
+## 2026-10-30 — Certificate roadmap (user question: which certificates to pursue?) — DONE
+- Built on the morning's Azure dossier: new cert_demand_scan.py over ALL corpora
+  (3,902 unique = 3,825 baseline [1,977 Indeed full-text + 1,848 LinkedIn title-only]
+  + 77 active [30 BA full texts refetched]): 26 explicit cert patterns + 18 skill stacks,
+  every hit stored as verbatim evidence (data/azure_demand/cert_scan|evidence|stats_1111).
+- Findings: explicit certs are rare (3/77 active name concrete certs: iT4Network
+  "VMWare Zertifizierung (VCP), Microsoft Zertifizierung (MCP, MCSA, MCSE,...)", ITIL at
+  FERCHAU + Brunel; baseline only 2 genuine ITIL hits; "MTA" hit = Medizinisch-Technische
+  Assistentin false positive, excluded). Generic "Zertifizierung" willingness 6/77 (7.8%).
+  Skill stacks now: network 33.8% > security 20.8% > ITSM 18.2% > virt 15.6% > Linux 14.3%
+  > cloud 13.0% > MS-ecosystem union 10.4%; cloud/MS union 23.4% (matches dossier).
+- Recommendation (phased): P1 AZ-900 (EUR 53) → P2 AZ-104 (voucher core, US$165 tier) →
+  P3 Network+ (US$399) or MD-102 → P4 Security+ (US$439, V8 ~17 Nov 2026) →
+  P5 post-placement employer-funded: ITIL 4 F, AZ-800, LPIC-1/VCP. Fees verified online
+  (Microsoft Learn, CompTIA street, PeopleCert).
+- Deliverable: download/Certificate_Roadmap_Erlangen_Corpus_2026-10-30.docx (+pdf), 8pp,
+  postcheck 9/9, LO render visually verified. Emailed to skorry@ + feebee231@
+  (recover OK; note: sender ran twice → duplicate mail, harmless).
+- Ops: state/ wiped again between sessions; escrow key rebuilt from 32b25d7^, channel OK.
+  gofile /servers API timed out 3x → storage-host fallback (store-eu-par-8) again.
+
+## 2026-10-30 — MEGA SWEEP (user: insanely large job search, filter junior) — DONE
+- Stage ba: BA Jobsuche v6 bulk, 14 IT queries x 2 geo-tiers (Erlangen 50km +
+  Nürnberg 100km) x veroeffentlichtseit=90, angebotsart=1, pav=false → 6,500 raw hits,
+  3,137 unique. Stage enrich: 2,713 BA v4 jobdetails (100% ok) for entry-signal mining.
+- Stage portals: pipeline fetch over 20 sources (30d, Nürnberg 100km); two runs
+  (before/after reinstalling python-jobspy + curl_cffi); 749 hard-filter rejections
+  included in merge as portal-rejected rows.
+- Stage merge: 4,907 raw → 3,788 unique master (BA 3,025, Arbeitnow 300, EURES 174,
+  WWR 56, Jobicy 50, Get-in-IT 39, Stellenanzeigen 36, ...). Junior classes: strong 43,
+  medium 566, weak 23, excluded 688; relevant 470 → SHORTLIST 78 (relevant ∧ strong/medium).
+- Insight: BA datumErsteVeroeffentlichung = FIRST publication; 1,194 postings first-published
+  >90d ago are still LIVE (long-running junior roles = struggling employers = prime targets);
+  freshness column added (0-30d / 31-90d / 90d+ live).
+- Deliverables: download/mega_sweep_2026-10-30/ (master_ALL CSV+JSON, junior_shortlist CSV
+  ranked strong-first newest-first, summary md). Emailed to both recipients. Job memory
+  now 3,815 postings (baseline for daily new/gone detection).
+
+## 2026-10-31 — Portal discovery: "Suche nach neuen Jobportalen in Deutschland. Finde so viele wie es möglich ist."
+- Built 156-portal seed catalog (12 categories: generalists, public/gov, tech/IT, freelance,
+  junior/Ausbildung, regional, aggregators, staffing, niches, expat, remote, ATS-feeds) from
+  web research (connexion-emploi 10/2026, jobboersencheck, haufe) + prior pipeline knowledge.
+- Live probe (portal_scan.py, 24 threads) → retry pass (portal_retry.py: URL variants + 49
+  proxies from validated_proxies.json). Result: 78 OK direct, 10 OK via proxy (StepStone,
+  karriere.de, BerlinStartupJobs, EnglishJobs, Azubiyo, JobisJob, Jobsora, Experteer, Turing,
+  Personio), 1 JS-shell (Welcome to the Jungle), 39 BLOCKED-STRICT, 28 dead/unreachable.
+- Deliverable: download/jobportals_deutschland_2026-10-31.xlsx (xlsx-skill compliant, QA
+  recalc/audit/scan/validate all clean, Review sheet 6/6 PASS) + flat CSV.
+- Digest emailed to skorry@atomicmail.io + feebee231@outlook.com (2-attachment ops template:
+  XLSX + CSV). Backup v21 mirrored + verified.
+- Next: wire Integrationsplan top-12 (Get in IT, Jobware, SZ/ZEIT/FAZ, Interamt, Stellenwerk,
+  ITsax/ITmitte, Absolventa/ausbildung, aggregators, staffing boards) into the daily pull;
+  register free API keys (Jooble/Adzuna/Careerjet) when user provides them; refresh proxy
+  pool before next kimeta/stellenanzeigen/meinestadt harvest.

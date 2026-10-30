@@ -391,6 +391,7 @@ def extract_date(raw: str, text: str, jsonld: dict | None,
 
 PHONE_RE = re.compile(r"(?:\+49|0049|\b0)[\d\s\-()/\.]{6,20}\d")
 DATELIKE_RE = re.compile(r"\d{1,2}\.\d{1,2}\.\d{2,4}")  # e.g. 04.11.2026
+SALARYLIKE_RE = re.compile(r"\d{1,3}\.000\b")  # German thousands: 40.000 - 55.000 €/Jahr
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}")
 BAD_EMAIL_TLDS = {"png", "jpg", "jpeg", "gif", "webp", "svg", "js", "css",
                   "woff", "woff2", "ico"}
@@ -422,6 +423,8 @@ def extract_contacts(raw: str, text: str, ba: dict | None) -> tuple[str, str, st
     for m in PHONE_RE.finditer(text[:15000]):
         p = m.group(0).strip()
         if DATELIKE_RE.search(p):  # posting deadlines are NOT phone numbers
+            continue
+        if SALARYLIKE_RE.search(p):  # salary ranges (40.000 - 55.000) are NOT phones
             continue
         digits = re.sub(r"\D", "", p)
         if 7 <= len(digits) <= 15:
