@@ -278,8 +278,9 @@ from anywhere and re-importable after any session loss.
   karriere, IHK-Lehrstellen→meine-ausbildung-in-deutschland.de, Adecco→jobs.de.adecco.com.
 
 ## v22 (2026-11-02, PROXYFETCH v0.4.0 — LIGHTPANDA RENDER ENGINE + ERLANGEN-JOBS VENDORED SYNC)
-- 32,883,023 B, sha256 10283c4ea98371b8e4b065299f28c86faa69260d790ae73c084efd5ed5dfd89e,
-  `git bundle verify` = complete history ✓
+- 65,584,110 B, sha256 7ea1a5a6b2af602920391db58f7f674b1b8d3fce57352d8ea599f413ae29ff6b,
+  `git bundle verify` = complete history ✓ (recreated after the erlangen-jobs
+  pre-push amend; first build discarded — never mirrored)
 - MIRROR: gofile unreachable from this sandbox (api.gofile.io timeout) — NOT mirrored this
   round; the verified GitHub push is the remote copy (proxyfetch main bc1cc2a + tag v0.4.0;
   erlangen-jobs main). Retry gofile from an unrestricted network.
