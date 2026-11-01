@@ -13,7 +13,7 @@ import os
 import sys
 import traceback
 
-from . import __version__, errors, userconfig
+from . import __version__, errors, recipes, userconfig
 from .config import Config, default_state_dir
 from .logutil import Logger
 from .pipeline import run as pipeline_run
@@ -55,7 +55,7 @@ def build_parser() -> argparse.ArgumentParser:
                    help="result pages to fetch (default: 3)")
     p.add_argument("--name", metavar="NAME",
                    help="run name for output files (default: derived from host)")
-    p.add_argument("--recipe", choices=("auto", "generic", "autoscout24"),
+    p.add_argument("--recipe", choices=("auto", *sorted(recipes.RECIPES)),
                    default="auto", help="extraction recipe (default: auto-detect)")
     p.add_argument("--out", metavar="DIR",
                    help="output directory (default: ./out or $PROXYFETCH_OUT)")
@@ -97,9 +97,17 @@ def build_parser() -> argparse.ArgumentParser:
 
     b = p.add_argument_group("browser")
     b.add_argument("--headed", action="store_true",
-                   help="show the stealth browser window")
+                   help="show the stealth browser window (forces cloakbrowser; "
+                        "lightpanda is always headless)")
     b.add_argument("--no-browser", action="store_true",
                    help="disable browser escalation/proof entirely")
+    b.add_argument("--browser-engine", choices=("auto", "lightpanda", "cloakbrowser"),
+                   help="render engine: lightpanda (self-healing CDP, proxy-aware) "
+                        "with cloakbrowser fallback, or force one "
+                        "(default: auto; $PROXYFETCH_BROWSER_ENGINE)")
+    b.add_argument("--lightpanda-bin", metavar="PATH",
+                   help="lightpanda binary path (default: $LIGHTPANDA_BIN, "
+                        "$PATH, or common install locations)")
     b.add_argument("--watchdog", type=int, metavar="S",
                    help="hard kill per browser attempt (default: 110)")
     b.add_argument("--locale", help="browser locale, e.g. de-DE")
@@ -299,6 +307,12 @@ def main(argv: list[str] | None = None) -> int:
         cfg.fetch_timeout_s = args.fetch_timeout
     if args.watchdog is not None:
         cfg.watchdog_s = args.watchdog
+    if args.browser_engine:
+        cfg.browser_engine = args.browser_engine
+    elif os.environ.get("PROXYFETCH_BROWSER_ENGINE", "").strip():
+        cfg.browser_engine = os.environ["PROXYFETCH_BROWSER_ENGINE"].strip()
+    if args.lightpanda_bin:
+        cfg.lightpanda_bin = args.lightpanda_bin
 
     logger = Logger(quiet=cfg.quiet, colors=not cfg.no_color,
                     json_lines=cfg.json_logs, log_file=cfg.log_file)

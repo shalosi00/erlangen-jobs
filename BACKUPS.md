@@ -276,3 +276,13 @@ from anywhere and re-importable after any session loss.
   WAF blocks, 67 dead/legacy. Redirect discoveries: projektwerk→freelancermap,
   GermanTechJobs→DevITjobs(jobcopilot), FAZJOB→stellenmarkt.faz.net, Nordbayern→vnp.de/
   karriere, IHK-Lehrstellen→meine-ausbildung-in-deutschland.de, Adecco→jobs.de.adecco.com.
+
+## v22 (2026-11-02, PROXYFETCH v0.4.0 — LIGHTPANDA RENDER ENGINE + ERLANGEN-JOBS VENDORED SYNC)
+- 32,883,023 B, sha256 10283c4ea98371b8e4b065299f28c86faa69260d790ae73c084efd5ed5dfd89e,
+  `git bundle verify` = complete history ✓
+- MIRROR: gofile unreachable from this sandbox (api.gofile.io timeout) — NOT mirrored this
+  round; the verified GitHub push is the remote copy (proxyfetch main bc1cc2a + tag v0.4.0;
+  erlangen-jobs main). Retry gofile from an unrestricted network.
+- Contents: repos/proxyfetch at v0.4.0 (proxyfetch/lightpanda.py, tests/test_lightpanda.py,
+  browser.py engine chain, pipeline proof/escalation integration, CLI flags, docs), tools/
+  proxyfetch + tools/proxyfetch-src in erlangen-jobs synced to v0.4.0, worklog + this entry.

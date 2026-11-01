@@ -52,6 +52,7 @@ count             len(items)
 items[]           recipe-specific; autoscout24: id,title,version,price_eur,
                   year,km,ps,fuel,gear,seller,city,url
 meta.pages_fetched / meta.proxies_used / meta.browser_proof
+meta.browser_proof.engine   "lightpanda" | "cloakbrowser" (which engine rendered)
 meta.engine         "aiohttp" (default) or "threads"
 meta.mode           "direct" (fast path, no proxy) or "proxy"
 files.json / files.csv   (null when --no-save)
@@ -76,7 +77,11 @@ churn.
   arbitrary keys, CSV columns adapt automatically.
 - `--no-direct` — force proxy-only (default tries a direct fetch first;
   `meta.mode` reports what was used).
-- `--no-browser` — set when cloakbrowser isn't installed; HTTP path still works.
+- `--browser-engine lightpanda|cloakbrowser|auto` — render engine for the
+  browser tier. Default `auto`: Lightpanda (self-healing CDP; starts its own
+  server, routes through the pool proxy, accepts cookie walls, dismisses JS
+  dialogs), falling back to CloakBrowser. `--headed` forces CloakBrowser.
+- `--no-browser` — only when neither engine is installed; HTTP path still works.
 - `--quiet` — suppress non-error logs on stderr.
 
 ## Persistent defaults (`proxyfetch config`)
@@ -92,13 +97,21 @@ object on stdout (machine-safe).
 `PROXYFETCH_OUT` (out dir) · `PROXYFETCH_STATE_DIR` (winner cache + config) ·
 `PROXYFETCH_BUDGET` (seconds) · `PROXYFETCH_ENGINE` (`aiohttp`|`threads`) ·
 `PROXYFETCH_CONCURRENCY` (int) · `PROXYFETCH_NO_DIRECT` (`1` = always proxy) ·
-`PROXYFETCH_NO_BROWSER` (`1` = disable).
+`PROXYFETCH_NO_BROWSER` (`1` = disable) · `PROXYFETCH_BROWSER_ENGINE`
+(`lightpanda`|`cloakbrowser`|`auto`).
+
+Lightpanda engine (no prefix): `LIGHTPANDA_BIN` (binary path; else `$PATH` /
+common locations), `LIGHTPANDA_CDP` (external CDP server URL to use instead of
+managing one, or `off` to disable). Servers are reused while healthy,
+restarted when dead, and cleaned up at process exit.
 
 ## Timing expectations
 
 - unblocked target (direct fast path): seconds
 - warm cache: ~40–60s for 3 pages
 - cold start, blocked target: ~1–3 min (harvest → aiohttp verify funnel)
+- browser proof adds ~2–5s when a Lightpanda server is already warm; a cold
+  server start is ~1s
 - budget default 420s bounds everything; partial results returned on timeout.
 
 ## Anti-patterns

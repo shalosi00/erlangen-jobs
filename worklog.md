@@ -767,3 +767,30 @@ Stage Summary:
   ITsax/ITmitte, Absolventa/ausbildung, aggregators, staffing boards) into the daily pull;
   register free API keys (Jooble/Adzuna/Careerjet) when user provides them; refresh proxy
   pool before next kimeta/stellenanzeigen/meinestadt harvest.
+
+## 2026-11-02 — proxyfetch v0.4.0: self-healing Lightpanda render engine (user: "improve with the lightpanda browser")
+- proxyfetch (github.com/shalosi00/proxyfetch, private) upgraded 0.3.2 -> 0.4.0 and pushed
+  (main bc1cc2a, tag v0.4.0): new proxyfetch/lightpanda.py (pure stdlib) is now the DEFAULT
+  browser tier — servers start on demand one per (proxy, locale, timezone) and route through
+  `lightpanda serve --http-proxy`, so proxied renders stay proxied (live-verified through a
+  pool proxy); self-healing on every call (healthy reuse / dead restart / hung reaping /
+  dynamic ports 9222-9230 / binary gone -> honest fallback); raw-WebSocket CDP client with
+  cookie-consent auto-accept (OneTrust, Cookiebot, UserCentrics, CIVIC, CookieScript,
+  CookieYes) + JS-dialog auto-dismiss; processes cleaned up at exit, warm in-process.
+  CloakBrowser stays as extra and --headed fallback. New flags: --browser-engine
+  {auto,lightpanda,cloakbrowser}, --lightpanda-bin; env LIGHTPANDA_BIN / LIGHTPANDA_CDP /
+  PROXYFETCH_BROWSER_ENGINE; payload meta.browser_proof.engine names the renderer.
+- Engine was battle-tested beforehand on the 148-board employer monitor (148 boards /
+  4,802 postings; 118/118 filter, 46/46 daily-scan, 6/6 self-heal, 21/21 verify, e2e green),
+  then ported: 114/114 tests with binary, 113+1 skipped CI-mode; live e2e proof render
+  engine=lightpanda (books.toscrape, 20 items, direct fast path).
+- This repo: tools/proxyfetch + tools/proxyfetch-src synced to the v0.4.0 tree (both were
+  0.3.1-era); diff between them is scripts/ only, as before. Nothing in the pipeline's own
+  networking changed — strict no-direct invariant untouched (the engine routes through the
+  pool proxy, never the operator IP).
+- Backup: v22 bundle created + verified (complete history); gofile mirror unreachable from
+  this sandbox (api.gofile.io timeout) — recorded in BACKUPS.md; the verified GitHub push
+  (main) is the remote copy.
+- Next: reinstall /home/z/.venv proxyfetch from tools/proxyfetch-src after the next sandbox
+  wipe (§2 recipe, now v0.4.0); consider LIGHTPANDA_CDP=off when the binary is absent so
+  proxyfetch degrades to plain-HTTP + cloakbrowser-if-installed.

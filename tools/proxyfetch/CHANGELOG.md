@@ -4,6 +4,63 @@ All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 and the project adheres to [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+## [0.4.0] - 2026-11-02
+
+### Added
+- **Self-healing Lightpanda render engine** (`proxyfetch/lightpanda.py`, pure
+  stdlib). The browser tier now defaults to Lightpanda — a ~35 MB headless
+  browser speaking CDP — instead of requiring the CloakBrowser extra:
+  - servers start on demand, one per (proxy, locale, timezone), and route
+    their HTTP through the pool proxy (`lightpanda serve --http-proxy`), so
+    proxied renders stay proxied — verified live against a free-proxy pool;
+  - self-healing on every call: healthy reuse, dead/hung restart with reaping,
+    dynamic ports 9222-9230, honest fallback to CloakBrowser/plain HTTP;
+  - raw-WebSocket CDP client (RFC 6455): navigate, wait for load,
+    cookie-consent auto-accept (OneTrust, Cookiebot, UserCentrics, CIVIC,
+    CookieScript, CookieYes), JS-dialog auto-dismiss, timeout-bounded HTML;
+  - servers are cleaned up at process exit (never leaked), warm for the
+    process lifetime.
+- CLI: `--browser-engine {auto,lightpanda,cloakbrowser}`, `--lightpanda-bin`;
+  env `PROXYFETCH_BROWSER_ENGINE`, `LIGHTPANDA_BIN`, `LIGHTPANDA_CDP`
+  (external CDP server URL or `off`).
+- `meta.browser_proof.engine` in the machine payload names the engine used.
+- `scripts/seed_from_csv.py` (previously listed under Unreleased; shipped in
+  the 0.3.2 tree) — seed the winner cache from a validated proxy CSV.
+
+### Fixed
+- Browser escalation in `_collect` was gated on CloakBrowser being installed;
+  a Lightpanda-only install (the new default) never got escalation.
+- File modes normalized to 644/755 across the tree (a clone quirk had left
+  everything executable).
+
+### Tests
+- New `tests/test_lightpanda.py`: offline mock CDP server (fragmented
+  WebSocket messages, dialog auto-dismissal, external-endpoint mode) + live
+  smoke (skipif no binary). Suite: 113 passed + 1 skipped in CI mode;
+  114 passed with the binary present. Live end-to-end: direct fast path +
+  CSS extraction + Lightpanda proof render (books.toscrape, 20 items,
+  `browser_proof.engine: lightpanda`).
+
+## [0.3.2] - 2026-11-01
+
+### Fixed
+- **`--recipe` choices were out of sync with the registry**: the CLI accepted
+  only `auto|generic|autoscout24` although the `immobilienscout24` recipe
+  exists and is host-auto-detected. The choices are now derived from
+  `recipes.RECIPES`, so they can never drift again (README CLI table updated).
+- `pyproject.toml` project URLs pointed at the placeholder
+  `github.com/OWNER/proxyfetch` -- now `github.com/shalosi00/proxyfetch`.
+
+### Audit (2026-11-01 full repo test)
+- 102/102 unit tests pass; live end-to-end verified: direct fast path +
+  pagination + CSS extraction (books.toscrape, 40 items), JSON-endpoint mode,
+  HTML-table mode, usage exit code 2, honest `no_results` payload + exit 1 on
+  blocked targets, and the full blocked-target chain (kimeta.de HTTP 503 ->
+  auto pool engagement -> harvest ~13k candidates from 6 public lists ->
+  verify -> fetch through working proxy, `mode: proxy` reported).
+
 ## [0.3.1] - 2026-08-30
 
 ### Fixed

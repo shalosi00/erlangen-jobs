@@ -7,8 +7,9 @@ SUPPLY   direct-fetch fast path (unblocked targets finish in seconds) →
          winner cache (TTL 3h) → harvest 6 public lists → stage1 → stage2
          [aiohttp x300 | threads fallback]
 COLLECT  per-request rotation · 2-strike benching · mid-run self-heal ·
-         stealth-browser escalation
-PROOF    best-effort CloakBrowser render (110s hard watchdog)
+         render escalation (Lightpanda, proxy-aware)
+PROOF    best-effort render — Lightpanda (self-healing CDP, routes through
+         the proxy pool) with CloakBrowser fallback (110s hard watchdog)
 OUTPUT   JSON + CSV artifacts · console table · machine payload (--json)
 EXTRACT  recipes: autoscout24 · generic · css selectors · JSON endpoints ·
          HTML tables · auto chain (table → meta → JSON) · custom parser
@@ -58,6 +59,56 @@ CSV columns adapt to whatever fields your extraction produces.
 Library mode accepts a custom parser: `Config(url=..., parser=my_fn)` where
 `my_fn(html, url) -> list[dict]`.
 
+## Seed the pool from an external proxy file
+
+Already maintain a validated proxy pool elsewhere (own harvester, daily
+pipeline, corporate exit nodes)? Skip public-list harvesting entirely:
+
+```bash
+# one site
+python3 scripts/seed_from_csv.py proxies.csv --site www.kimeta.de
+
+# map per-site boolean columns of your CSV to site hosts
+python3 scripts/seed_from_csv.py proxies.csv \
+    --map kimeta_ok=www.kimeta.de --map stellenanzeigen_ok=www.stellenanzeigen.de
+```
+
+CSV needs `protocol,host,port` (http/https only -- the aiohttp engine cannot
+speak SOCKS). Entries land in `<state-dir>/winners.json`; proxyfetch
+re-verifies every cached entry at run start and drops dead ones, so stale
+seeds are harmless.
+
+## Lightpanda render engine (default since 0.4.0)
+
+The browser tier is a **self-healing Lightpanda CDP engine** (a ~35 MB
+headless browser, ~70 MB RSS under load — vs ~300 MB per Chromium render):
+
+- servers start **on demand**, one per (proxy, locale, timezone), and route
+  their HTTP through `--http-proxy` — so proxied renders stay proxied
+  (verified against a live free-proxy pool);
+- **self-healing on every call**: healthy server → reuse · dead → restart ·
+  hung → reaped · port held → next free port (9222–9230) · binary gone →
+  honest fallback to CloakBrowser or plain HTTP;
+- renders happen over a raw CDP WebSocket (zero pip dependencies):
+  navigate → wait for load → **cookie-consent walls auto-accepted**
+  (OneTrust, Cookiebot, UserCentrics, CIVIC, CookieScript, CookieYes) →
+  **JS dialogs auto-dismissed** → title + HTML out, all timeout-bounded;
+- servers live as long as your process (warm across runs inside it), and
+  are cleaned up at exit — never leaked.
+
+```bash
+# install the binary once (GitHub releases / lightpanda.com); then:
+proxyfetch <url> --browser-engine lightpanda   # force
+proxyfetch <url> --browser-engine cloakbrowser # the old stealth engine
+proxyfetch <url>                               # auto: lightpanda, then cloakbrowser
+```
+
+Environment: `LIGHTPANDA_BIN` (binary path; also found on `$PATH`),
+`LIGHTPANDA_CDP` (use an external CDP server instead of managing one —
+that server's own `--http-proxy` then applies), `PROXYFETCH_BROWSER_ENGINE`.
+CloakBrowser remains available as the `pip install "proxyfetch[browser]`
+extra and as the fallback for `--headed` runs (Lightpanda is headless only).
+
 ## Engine (set once, remembered)
 
 The default probe engine is **aiohttp** (async, concurrency 300, TCP prescan
@@ -84,7 +135,7 @@ in `~/.proxyfetch/config.json` (atomic, validated, corrupt-safe).
 | `URL` / `--url` | required | target URL (scheme optional, https assumed) |
 | `--pages N` | 3 | result pages to fetch |
 | `--name NAME` | host-derived | run name for output files |
-| `--recipe R` | `auto` | `auto` \| `generic` \| `autoscout24` |
+| `--recipe R` | `auto` | `auto` \| `generic` \| `autoscout24` \| `immobilienscout24` |
 | `--css SEL` / `--field N=SEL` | – | CSS item selector + field map (universal extraction) |
 | `--json-key PATH` / `--table N` | – | JSON dot-path / HTML table number |
 | `--page-template TPL` | `?page=N` | pagination template with `{n}` |
@@ -95,7 +146,9 @@ in `~/.proxyfetch/config.json` (atomic, validated, corrupt-safe).
 | `--fresh` | off | ignore cached winners, harvest anew |
 | `--state-dir DIR` | `~/.proxyfetch` | winner cache + saved config |
 | `--budget S` / `--timeout S` | 420 / 40 | wall-clock budget / per-request timeout |
-| `--headed` / `--no-browser` / `--watchdog S` | off / on-proof / 110 | browser escalation |
+| `--headed` / `--no-browser` / `--watchdog S` | off / on-proof / 110 | browser escalation (`--headed` forces CloakBrowser; Lightpanda is headless) |
+| `--browser-engine E` | `auto` | `auto` \| `lightpanda` \| `cloakbrowser` (also `$PROXYFETCH_BROWSER_ENGINE`) |
+| `--lightpanda-bin PATH` | autodetect | explicit Lightpanda binary (also `$LIGHTPANDA_BIN`) |
 | `--locale` / `--timezone` | recipe default | browser profile |
 | `--json` | off | agent mode: single JSON payload on stdout |
 | `--quiet` / `--no-color` / `--json-logs` / `--log-file` / `--debug` | off | logging |
@@ -123,7 +176,7 @@ print(payload["count"], payload["files"])
 
 - **Target-aware verification**: a proxy only wins if it fetches *your* URL and passes content checks — not just a ping.
 - **Extraction recipes**: `autoscout24`, `immobilienscout24`, `generic`, CSS selectors, JSON endpoints, HTML tables and an auto chain; custom parsers in library mode. Never treat embedded tag scripts (`datadome`) as block markers — verify with real content.
-- **Bot-protected sites**: WAF/captcha interstitials (AWS WAF, DataDome, Cloudflare, PerimeterX) are detected and never count as content — the run fails fast with an honest `error.hint` (vendor named) instead of spinning. Free public proxies cannot pass WAF challenges; such targets need a residential proxy.
+- **Bot-protected sites**: WAF/captcha interstitials (AWS WAF, DataDome, Cloudflare, PerimeterX) are detected and never count as content — the run fails fast with an honest `error.hint` (vendor named) instead of spinning. Lightpanda is a real browser, not a WAF bypass: free public proxies still cannot pass challenge walls; such targets need a residential proxy.
 - **Troubleshooting**: exit 3 → retry, lists churn by the minute (`--fresh` forces it). Slow cold start (~1–3 min) is the harvest→verify funnel; warm runs reuse the cache. Never send credentials — public proxies MITM.
 - **Ethics**: public free-proxy lists, light personal automation of pages you may access; respect site terms.
 

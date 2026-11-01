@@ -98,6 +98,8 @@ class Config:
 
     # -- browser escalation ----------------------------------------------
     use_browser: bool = True
+    browser_engine: str = "auto"       # auto | lightpanda | cloakbrowser
+    lightpanda_bin: str | None = None  # explicit binary path (else autodetect)
     headed: bool = False
     watchdog_s: int = 110              # hard kill per browser attempt
     browser_escalation_proxies: int = 3
@@ -130,6 +132,10 @@ class Config:
             raise errors.ConfigError(
                 f"engine must be 'aiohttp' or 'threads' (got {self.engine!r})",
                 hint="proxyfetch config set engine aiohttp")
+        if self.browser_engine not in ("auto", "lightpanda", "cloakbrowser"):
+            raise errors.ConfigError(
+                f"browser_engine must be auto|lightpanda|cloakbrowser "
+                f"(got {self.browser_engine!r})")
         if self.concurrency < 1:
             raise errors.ConfigError(
                 f"--concurrency must be >= 1 (got {self.concurrency})")
@@ -164,6 +170,7 @@ class Config:
             "concurrency": self.concurrency,
             "direct_first": self.direct_first,
             "use_browser": self.use_browser,
+            "browser_engine": self.browser_engine,
             "headed": self.headed,
             "state_dir": str(self.state_dir),
             "out_dir": str(self.out_dir),

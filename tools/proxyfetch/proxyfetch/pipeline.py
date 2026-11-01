@@ -159,8 +159,14 @@ def _run(cfg: Config, logger: Logger, t0: float, deadline: float,
     state_dir.mkdir(parents=True, exist_ok=True)
 
     logger.stage("SUPPLY", f"target={name} recipe={recipe.name} engine={cfg.engine}")
-    if cfg.use_browser and not browser.cloakbrowser_available():
-        logger.warn(browser.install_hint() + " (continuing without escalation)")
+    if cfg.use_browser:
+        avail = browser.engines(cfg.lightpanda_bin)
+        if not any(avail.values()):
+            logger.warn(browser.install_hint() + " (continuing without escalation)")
+        else:
+            logger.info("render engines: "
+                        + " + ".join(k for k, on in avail.items() if on)
+                        + f" (choice={cfg.browser_engine})")
 
     challenge_seen: dict[str, int] = {}
     spec = supply.ProbeSpec(url=cfg.url, verifier=_challenge_aware(
@@ -212,14 +218,16 @@ def _run(cfg: Config, logger: Logger, t0: float, deadline: float,
             headed=cfg.headed, watchdog_s=cfg.watchdog_s,
             locale=cfg.locale or recipe.locale,
             timezone=cfg.timezone or recipe.timezone, work_dir=state_dir,
-            logger=logger)
+            logger=logger, engine=cfg.browser_engine,
+            lightpanda_bin=cfg.lightpanda_bin)
         if proof:
-            browser_proof = {k: proof[k] for k in ("proxy", "title", "articles")}
+            browser_proof = {k: proof[k] for k in ("proxy", "title", "articles", "engine")}
             try:
                 (state_dir / "last_success.html").write_text(proof["html"], encoding="utf-8")
             except OSError:
                 pass
             logger.success(f"browser proof OK via {proof['proxy']} "
+                           f"[{proof['engine']}] "
                            f"| {str(proof['title'])[:60]} | articles={proof['articles']}")
             if proof["proxy"] != "direct":
                 pool.record([proof["proxy"]], site=site, target=name, browser_verified=True)
@@ -315,7 +323,9 @@ def _collect(cfg: Config, recipe, pool: ProxyPool, live: list[str],
             pool.mark(p, False)
 
         # -- browser escalation if urllib failed on this page
-        if page_items is None and cfg.use_browser and browser_mod.cloakbrowser_available():
+        if page_items is None and cfg.use_browser and (
+                browser_mod.cloakbrowser_available()
+                or browser_mod.lightpanda_available(cfg.lightpanda_bin)):
             for p in [x for x in live if x not in dead and not pool.is_dead(x)][:cfg.browser_escalation_proxies]:
                 if interrupt.raised or time.time() >= deadline:
                     break
@@ -324,13 +334,16 @@ def _collect(cfg: Config, recipe, pool: ProxyPool, live: list[str],
                     url, recipe.name, headed=False, watchdog_s=cfg.watchdog_s,
                     locale=cfg.locale or recipe.locale,
                     timezone=cfg.timezone or recipe.timezone,
-                    work_dir=cfg.state_dir, logger=logger, quiet_fail=True)
+                    work_dir=cfg.state_dir, logger=logger, quiet_fail=True,
+                    engine=cfg.browser_engine,
+                    lightpanda_bin=cfg.lightpanda_bin)
                 if proof:
                     parsed = recipe.parse(proof["html"], url)
                     if len(parsed) >= min_items:
                         page_items = parsed
                         pool.mark(p, True)
-                        logger.success(f"page {page}: {len(parsed)} item(s) via BROWSER {p}")
+                        logger.success(f"page {page}: {len(parsed)} item(s) "
+                                       f"via BROWSER {p} [{proof['engine']}]")
                         break
                 pool.mark(p, False)
 

@@ -7,6 +7,32 @@
 
 ---
 
+## UPDATE 2026-11-02 — proxyfetch v0.4.0: Lightpanda render engine
+
+proxyfetch is now at **v0.4.0** (private repo, main `bc1cc2a`, tag `v0.4.0`).
+The browser tier defaults to a **self-healing Lightpanda CDP engine**
+(`proxyfetch/lightpanda.py`, pure stdlib, external ~35 MB binary):
+
+- servers start on demand, one per (proxy, locale, timezone), and route
+  through `lightpanda serve --http-proxy` — **proxied renders stay proxied**
+  (strict no-direct invariant untouched; verified live through a pool proxy);
+- self-healing on every call: healthy reuse / dead restart / hung reaping /
+  dynamic ports 9222–9230; binary absent → honest fallback (cloakbrowser /
+  plain HTTP); servers are cleaned up at process exit;
+- cookie-consent walls auto-accepted, JS dialogs auto-dismissed, all
+  timeouts bounded;
+- new flags `--browser-engine {auto,lightpanda,cloakbrowser}` and
+  `--lightpanda-bin`; env `LIGHTPANDA_BIN`, `LIGHTPANDA_CDP` (external CDP
+  server URL, or `off`), `PROXYFETCH_BROWSER_ENGINE`;
+  `meta.browser_proof.engine` names the renderer in `--json` payloads.
+
+§2's rebuild recipe is unchanged but now installs 0.4.0 from the tarball.
+The binary lives at `tools/lightpanda` in the main project sandbox
+(set `LIGHTPANDA_BIN=/home/z/my-project/tools/lightpanda` if not on $PATH).
+Full story: worklog.md 2026-11-02; tests 114/114 with binary.
+
+---
+
 ## 0. What this stack is (30-second orientation)
 
 Two cooperating tools fetch web data through rotating free proxies:
