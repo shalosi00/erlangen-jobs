@@ -1,0 +1,65 @@
+{
+ "ts": "20261101-085835",
+ "git_head": "1bc8ccd",
+ "slug": "fachinformatiker-systemintegration-erlangen-50km-14d",
+ "query": "Fachinformatiker Systemintegration",
+ "city": "Erlangen",
+ "radius": 50,
+ "days": 14,
+ "ok_sources": [
+  "getinit",
+  "talent"
+ ],
+ "ok_display_names": [
+  "Get-in-IT",
+  "Talent.com"
+ ],
+ "not_ok_sources": [],
+ "per_source": [
+  {
+   "name": "getinit",
+   "status": "OK",
+   "count_raw": 39,
+   "count_kept": 7,
+   "count_rejected": 32,
+   "duration_s": 1.8,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  },
+  {
+   "name": "talent",
+   "status": "OK",
+   "count_raw": 20,
+   "count_kept": 6,
+   "count_rejected": 14,
+   "duration_s": 2.2,
+   "http_status": null,
+   "error": "",
+   "detail": ""
+  }
+ ],
+ "outputs": [
+  "/home/z/my-project/repos_review/erlangen-jobs/download/jobs_fachinformatiker-systemintegration-erlangen-50km-14d_20261101-0858.csv",
+  "/home/z/my-project/repos_review/erlangen-jobs/download/jobs_fachinformatiker-systemintegration-erlangen-50km-14d_20261101-0858.json",
+  "/home/z/my-project/repos_review/erlangen-jobs/download/jobs_fachinformatiker-systemintegration-erlangen-50km-14d_20261101-0858_rejected.csv"
+ ],
+ "unique_final": 13,
+ "rejected_total": 46,
+ "proxy_pool": {
+  "alive": 152,
+  "by_protocol": {
+   "http": 150,
+   "https": 2
+  },
+  "per_target": {
+   "ba_api": 72,
+   "kimeta": 19,
+   "stellenanzeigen": 19,
+   "jobvector": 0
+  },
+  "dead_marked": 0,
+  "data_file": "/home/z/my-project/repos_review/erlangen-jobs/data/proxies/validated_proxies.json",
+  "age_hours": 0.2
+ }
+}

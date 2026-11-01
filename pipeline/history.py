@@ -18,9 +18,10 @@ from __future__ import annotations
 import json, os, sqlite3
 from datetime import datetime, timezone
 
+from pathlib import Path
 from pipeline.core import Job, title_key, norm_txt, canon_url
 
-BASE = "/home/z/my-project"
+BASE = str(Path(__file__).resolve().parent.parent)  # repo root (clone-safe)
 DB_PATH = os.path.join(BASE, "data", "jobs_history.db")
 
 SCHEMA = {

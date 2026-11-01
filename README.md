@@ -37,6 +37,13 @@ low-risk scraping — built around the "apply within 72 h" advantage.
 
 ## Quick start
 
+**Cloned this repo fresh?** Run `bash setup.sh` first — it creates a local
+`.venv` with all dependencies and runs the offline test suite
+(`tests/test_net_resilience.py`, 33 tests). The `/home/z/.venv` path below is
+the deployment-sandbox convention (its venv is wiped periodically and
+self-heals from `requirements.txt`); on any other machine use
+`.venv/bin/python` instead.
+
 ```bash
 # venv restore (sandbox wipes it periodically — F7/F9 self-heal):
 python3 -m venv /home/z/.venv && /home/z/.venv/bin/pip install -r requirements.txt

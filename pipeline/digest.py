@@ -17,9 +17,11 @@ from __future__ import annotations
 import glob, json, os
 from datetime import datetime, timezone
 
+from pathlib import Path
+
 from pipeline import history
 
-RUNS_DIR = "/home/z/my-project/data/runs"
+RUNS_DIR = str(Path(__file__).resolve().parent.parent / "data" / "runs")  # clone-safe
 
 
 def latest_manifest() -> dict | None:

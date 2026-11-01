@@ -17,9 +17,14 @@ from pipeline import geo
 from pipeline import history as history_mod
 from pipeline import digest as digest_mod
 
-LOG_DIR = "/home/z/my-project/logs"
-BASE = "/home/z/my-project"
-RUNS_DIR = "/home/z/my-project/data/runs"
+from pathlib import Path
+
+# Repo root derived from this file (pipeline/ lives one level below) — works
+# for the deployment sandbox AND for fresh clones (a hardcoded /home/z/... made
+# clones write logs/runs into unrelated directories).
+BASE = str(Path(__file__).resolve().parent.parent)
+LOG_DIR = str(Path(BASE) / "logs")
+RUNS_DIR = str(Path(BASE) / "data" / "runs")
 
 # strict 0-transfer whitelist around Erlangen — GENERATED from the verified GTFS
 # analysis (data/geo/transit_whitelist.json, F1). The old hand-typed NEAR_RX

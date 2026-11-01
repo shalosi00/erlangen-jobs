@@ -5,11 +5,15 @@ Jobs.InFranken.de, Talent.com DE. Merges, dedupes, extracts dates best-effort,
 sorts by date desc -> CSV. Politeness: 1.5 s sleep between hits."""
 import csv, html, json, re, sys, time
 from datetime import datetime, timedelta
+from pathlib import Path
 import requests
 
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
 H = {"User-Agent": UA, "Accept-Language": "de-DE,de;q=0.9,en;q=0.5"}
-OUT = "/home/z/my-project/download/aggregator_multi_source_FISI_erlangen.csv"
+# repo root (scrapers/ is one level below) — clone-safe, no hardcoded sandbox path
+_REPO = Path(__file__).resolve().parent.parent
+OUT = str(_REPO / "download" / "aggregator_multi_source_FISI_erlangen.csv")
+_REPO.joinpath("download").mkdir(parents=True, exist_ok=True)
 KEYWORD = sys.argv[1] if len(sys.argv) > 1 else "Fachinformatiker"
 CITY = "Erlangen"
 JUNIOR_RX = re.compile(r"junior|einsteiger|absolvent|trainee|azubi|berufseinsteiger|assistant|praktikum|werkstudent", re.I)
