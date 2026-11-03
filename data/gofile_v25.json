@@ -1,0 +1,22 @@
+{
+ "erlangen-jobs-v25-v1.1.3.bundle": {
+  "downloadPage": "https://gofile.io/d/nH05hN31",
+  "id": "ada6ee61-2b5d-417c-9b81-6bfbcc5ee867",
+  "md5": "f79c5e2201b8190430aac3861ec50240",
+  "size": 45379709,
+  "servers": [
+   "store-eu-par-1"
+  ],
+  "uploaded_utc": "2026-11-03T22:58:59Z"
+ },
+ "proxyfetch-v25-v0.4.1.bundle": {
+  "downloadPage": "https://gofile.io/d/p66PdVO4",
+  "id": "bc68f07e-4bee-4672-b51c-9eddb3d39c8b",
+  "md5": "2c072bf86fd6d998beb389f43e03cfb3",
+  "size": 128235,
+  "servers": [
+   "store-eu-par-1"
+  ],
+  "uploaded_utc": "2026-11-03T22:59:01Z"
+ }
+}
