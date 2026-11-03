@@ -287,3 +287,25 @@ from anywhere and re-importable after any session loss.
 - Contents: repos/proxyfetch at v0.4.0 (proxyfetch/lightpanda.py, tests/test_lightpanda.py,
   browser.py engine chain, pipeline proof/escalation integration, CLI flags, docs), tools/
   proxyfetch + tools/proxyfetch-src in erlangen-jobs synced to v0.4.0, worklog + this entry.
+
+## v23 (2026-11-04, ERLANGEN-JOBS v1.1.2 — HARDCODED-PATH SWEEP, CLONE-SAFE EVERYWHERE)
+- TWO bundles this round (both `git bundle verify` = complete history ✓):
+  - erlangen-jobs-v23-v1.1.2.bundle — 45,392,980 B,
+    sha256 b1748bc0b197c199e50a2c6378b8adf256793c5281fca6d9b44b9a128ce7a51e
+  - proxyfetch-v23-v0.4.1.bundle — 128,235 B,
+    sha256 731617b357557ae679010f3442212538dc931587b230222dd319750ac1104bb6
+- MIRROR: **gofile** (store-eu-par-8) — server-side MD5 == local MD5 ✓, size exact ✓:
+  - erlangen-jobs bundle: https://gofile.io/d/vf5dz5bf (md5 26f795e0811031d46ac2a014d1b7fe11)
+  - proxyfetch bundle: https://gofile.io/d/uabbCMxk (md5 2c072bf86fd6d998beb389f43e03cfb3)
+  - upload metadata archived in data/gofile_v23.json
+- Contents: erlangen-jobs at v1.1.2 (commit 08cc4d6 — 77 files, 346+/140-: all 129
+  hardcoded /home/z references removed; scripts/pipeline derive repo root from __file__,
+  $0/.. or __dirname/..; skill dirs env-overridable with legacy-sandbox fallback;
+  daily-chain venv repo-local; JS dossiers path.join; README/requirements clone-true;
+  pipeline install hints via sys.executable; fixer-induced regressions caught and fixed:
+  ff-strings, def-after-use BASE, 15x missing import os — F821-swept, runtime-smoked).
+  proxyfetch unchanged at v0.4.1 (audited: no hardcoded paths in package code —
+  state dir env-overridable, lightpanda via PATH + common locations).
+- Headline: `rg '/home/z' pipeline/ scripts/ --glob '!*.md'` now returns only the one
+  historical comment in pipeline/__main__.py explaining why paths derive from __file__.
+  Fresh clones pass setup.sh → full test suites on any machine, any user, any layout.
