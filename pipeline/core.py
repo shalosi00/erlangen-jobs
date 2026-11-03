@@ -18,6 +18,10 @@ import unicodedata
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timedelta, timezone
 
+from pipeline import logutil
+
+log = logutil.get("core")
+
 # ---------------------------------------------------------------- models ----
 
 @dataclass
@@ -394,6 +398,7 @@ def write_outputs(kept: list[Job], rejected: list, out_dir: str, slug: str, quie
     ts = datetime.now().strftime("%Y%m%d-%H%M")
     base = f"{out_dir}/jobs_{slug}_{ts}"
     kept = sorted(kept, key=lambda j: (j.date_posted or "0000", not j.ft_unknown), reverse=True)
+    log.info("writing outputs: %d kept, %d rejected -> %s", len(kept), len(rejected), base)
     csv_path = base + ".csv"
     with open(csv_path, "w", newline="", encoding="utf-8-sig") as f:
         w = csv.writer(f)
@@ -422,6 +427,7 @@ def write_outputs(kept: list[Job], rejected: list, out_dir: str, slug: str, quie
         w.writerow(["filter_reason", "source", "title", "company", "city", "url"])
         for j, reason in rejected:
             w.writerow([reason, j.source, j.title, j.company, j.city, j.url])
+    log.info("outputs written: %s | %s | %s", csv_path, json_path, rej_path)
     if not quiet:
         print(f"written: {csv_path}")
         print(f"written: {json_path}")

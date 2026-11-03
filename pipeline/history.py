@@ -22,7 +22,10 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+from pipeline import logutil
 from pipeline.core import Job, canon_url, norm_txt, title_key
+
+log = logutil.get("history")
 
 BASE = str(Path(__file__).resolve().parent.parent)  # repo root (clone-safe)
 DB_PATH = os.path.join(BASE, "data", "jobs_history.db")
@@ -117,6 +120,7 @@ def update(jobs: list[Job]) -> dict:
         rec = _record(j, today)
         old = list(db["postings"].rows_where("pk = ?", [rec["pk"]]))
         if old:
+            log.debug("re-seen: %s | %s", rec["title"][:60], rec["pk"][:48])
             o = old[0]
             db["postings"].update(rec["pk"], {
                 "last_seen": today,
@@ -169,6 +173,8 @@ def update(jobs: list[Job]) -> dict:
                     continue
             db["postings"].insert(rec)
             fresh += 1
+    log.info("memory update: %d fresh, %d re-seen, %d total rows",
+             fresh, known, db["postings"].count)
     return {"fresh": fresh, "known": known, "total": db["postings"].count}
 
 
@@ -207,10 +213,16 @@ def stats() -> dict:
 # ------------------------------------------------------------------ CLI ----
 
 def cmd_history(args) -> int:
+    logutil.ensure_console()      # subcommand runs without run_fetch's setup()
     try:
         return _cmd_history(args)
     except MemoryUnavailable as e:      # F6: CLI stays alive, message actionable
-        print(f"job memory unavailable: {e}", file=__import__('sys').stderr)
+        log.error("job memory unavailable: %s", e)
+        print(f"job memory unavailable: {e}", file=sys.stderr)
+        return 1
+    except Exception as e:
+        log.exception("history command crashed")
+        print(f"history command failed: {type(e).__name__}: {e}", file=sys.stderr)
         return 1
 
 def _cmd_history(args) -> int:
@@ -242,7 +254,7 @@ def _cmd_history(args) -> int:
         return 0
     if args.history_cmd == "search":
         if not args.q:
-            print("usage: pipeline history search <query>", file=__import__('sys').stderr)
+            print("usage: pipeline history search <query>", file=sys.stderr)
             return 1
         rows = search(args.q)
         print(f"FTS '{args.q}': {len(rows)} hits")

@@ -3,9 +3,15 @@
 fetch  — run all (or selected) live sources, apply hard filters, dedupe, write
          CSV+JSON+rejected-audit + a run log. Exit 0 if >=1 source OK, 2 if all failed.
 sources— print the full aggregator catalog (55+ sources) with status/access method.
+
+Logging (v1.2.0): leveled + timestamped + crash-capturing.
+  * console (stderr): INFO by default, DEBUG with -v, WARNING with --quiet
+  * log file logs/pipeline_run_<ts>.log: EVERYTHING incl. full tracebacks
+  * unhandled crashes (main + worker threads) are logged with tracebacks
 """
 import argparse
 import json
+import logging
 import os
 import re
 import sys
@@ -16,7 +22,7 @@ from dataclasses import asdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from pipeline import catalog, geo
+from pipeline import catalog, geo, logutil
 from pipeline import digest as digest_mod
 from pipeline import history as history_mod
 from pipeline.core import FetchCtx, Job, SourceError, SourceResult, classify_job, dedupe, write_outputs
@@ -66,15 +72,12 @@ def run_fetch(args):
     ctx = build_ctx(args)
     os.makedirs(LOG_DIR, exist_ok=True)
     ts = datetime.now().strftime("%Y%m%d-%H%M%S")
-    log_path = f"{LOG_DIR}/pipeline_run_{ts}.log"
-    # held open for the whole run; every log line appends via log()
-    logf = open(log_path, "w", encoding="utf-8")  # noqa: SIM115
-
-    def log(msg):
-        logf.write(msg + "\n")
-        logf.flush()
-        if args.verbose:
-            print(msg)
+    # leveled logging: console (INFO / DEBUG with -v / WARNING with --quiet)
+    # + file handler at DEBUG that keeps EVERYTHING incl. full tracebacks.
+    # Unhandled crashes in any thread are logged by logutil's excepthooks.
+    log, log_path = logutil.setup(verbose=args.verbose, quiet=args.quiet,
+                                  log_dir=LOG_DIR, ts=ts)
+    log.debug("argv: %s", " ".join(sys.argv))
 
     order = [s for s in RUN_ORDER if s in SOURCES]
     if args.sources:
@@ -108,8 +111,9 @@ def run_fetch(args):
         warn = "  WARNING: pool stale (>8h) — consider refresh" if age and age > 8 else ""
         print(f"proxy pool: alive={ps.get('alive', 0)} per_target={ps.get('per_target', {})} "
               f"age={age if age is not None else '?'}h{warn}")
-        log(f"proxy pool {json.dumps(ps)}")
+        log.info("proxy pool %s", json.dumps(ps))
     except Exception as e:
+        log.warning("proxy pool stats unavailable (%s: %s)", type(e).__name__, e)
         print(f"proxy pool: unavailable ({type(e).__name__})")
     print(f"log: {log_path}\n")
 
@@ -158,8 +162,10 @@ def run_fetch(args):
         print(f"  {mark} {sid:<12} {res.status:<6} raw={res.count_raw:<4} kept={res.count_kept:<4} "
               f"rej={res.count_rejected:<4} {res.duration_s:>6}s"
               + (f"  {res.error[:80]}" if res.error else ""))
-        log(f"[{sid}] {res.status} raw={res.count_raw} kept={res.count_kept} "
-            f"rej={res.count_rejected} {res.duration_s}s {res.error} {res.detail}")
+        # full-detail record for the log file (console line above is the summary)
+        log.debug("[%s] %s raw=%d kept=%d rejected=%d %.1fs error=%r detail=%r http=%r",
+                  sid, res.status, res.count_raw, res.count_kept, res.count_rejected,
+                  res.duration_s, res.error, res.detail, res.http_status)
 
     def run_seq(sid: str):
         t0 = time.time()
@@ -170,12 +176,15 @@ def run_fetch(args):
         except SourceError as e:
             res = SourceResult(name=sid, status="ERROR", error=str(e),
                                detail=f"url={e.url} {e.detail}".strip(), http_status=e.http_status)
-            log(f"[{sid}] ERROR {e}")
+            log.error("[%s] source failed: %s", sid, e)
+            log.debug("[%s] SourceError kind=%s url=%s detail=%s",
+                       sid, e.kind, e.url, e.detail)
         except Exception as e:
             res = SourceResult(name=sid, status="ERROR",
                                error=f"{type(e).__name__}: {str(e)[:200]}",
                                detail="unexpected — traceback in log")
-            log(f"[{sid}] UNEXPECTED {traceback.format_exc()}")
+            # full traceback: file always, console too (this is a real bug)
+            log.exception("[%s] UNEXPECTED failure", sid)
         report(sid, res, t0)
 
     def run_par_error(sid: str, e: Exception, t0: float):
@@ -183,12 +192,14 @@ def run_fetch(args):
             res = SourceResult(name=sid, status="ERROR", error=str(e),
                                detail=f"url={e.url} {e.detail}".strip(),
                                http_status=getattr(e, "http_status", None))
-            log(f"[{sid}] ERROR {e}")
+            log.error("[%s] source failed: %s", sid, e)
+            log.debug("[%s] SourceError kind=%s url=%s detail=%s",
+                       sid, e.kind, e.url, e.detail)
         else:
             res = SourceResult(name=sid, status="ERROR",
                                error=f"{type(e).__name__}: {str(e)[:200]}",
                                detail="unexpected — traceback in log")
-            log(f"[{sid}] UNEXPECTED {traceback.format_exc()}")
+            log.exception("[%s] UNEXPECTED failure", sid)
         report(sid, res, t0)
 
     # 1) WAF/proxy/rate-limited sources: always sequential, always first
@@ -252,9 +263,9 @@ def run_fetch(args):
 
     slug = re.sub(r"[^a-z0-9]+", "-", f"{ctx.query}-{ctx.city}-{ctx.radius}km-{ctx.days}d".lower()).strip("-")
     out_paths = write_outputs(final, all_rejected, args.out, slug, quiet=args.quiet)
-    log(f"SUMMARY unique={len(final)} raw={sum(r.count_raw for r in results)} "
-        f"ok={ok_n} err={err_n} skip={skip_n} rejected={len(all_rejected)}")
-    logf.close()
+    log.info("SUMMARY unique=%d raw=%d ok=%d err=%d skip=%d rejected=%d",
+             len(final), sum(r.count_raw for r in results),
+             ok_n, err_n, skip_n, len(all_rejected))
 
     # F11: persistent run manifest — links outputs to per-source stats, survives
     # log wipes (data/ is persisted); powers digest source-down correlation (F10)
@@ -262,6 +273,7 @@ def run_fetch(args):
         write_manifest(ts, ctx, results, slug, out_paths, len(final), len(all_rejected),
                        {k: sorted(v) for k, v in display_names.items()})
     except Exception as e:
+        log.exception("run manifest write failed (non-fatal)")
         print(f"run manifest write failed (non-fatal): {type(e).__name__}: {e}", file=sys.stderr)
 
     # persist into the cross-run job memory (first_seen/last_seen + FTS)
@@ -270,8 +282,10 @@ def run_fetch(args):
         print(f"job memory: +{mem['fresh']} new, {mem['known']} re-seen, "
               f"{mem['total']} total")
     except Exception as e:
+        log.exception("job memory update failed (non-fatal)")
         print(f"job memory update failed (non-fatal): {type(e).__name__}: {e}",
               file=sys.stderr)
+        log.debug("memory failure traceback: %s", traceback.format_exc())
 
     if not args.quiet:
         print("\n--- top 15 by date ---")
@@ -371,12 +385,16 @@ def main(argv=None):
     if getattr(args, "no_geo", False):
         global GEO_SCOPE
         GEO_SCOPE = dict.fromkeys(GEO_SCOPE, "query")   # disable client geo filter
+    # every subcommand gets at least stderr logging (run_fetch replaces this
+    # with the full setup(): file + console + crash hooks)
+    logutil.ensure_console()
     return args.func(args)
 
 if __name__ == "__main__":
     try:
         sys.exit(main())
     except KeyboardInterrupt:
+        logging.getLogger("pipeline").warning("interrupted (SIGINT)")
         print("\ninterrupted", file=sys.stderr)
         sys.exit(130)
     except BrokenPipeError:

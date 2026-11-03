@@ -30,6 +30,10 @@ import json
 import re
 from pathlib import Path
 
+from pipeline import logutil
+
+log = logutil.get("geo")
+
 DATA_FILE = Path(__file__).resolve().parent.parent / "data" / "geo" / "transit_whitelist.json"
 
 _CACHE = None
@@ -65,13 +69,26 @@ def _rx_for(entry: dict) -> re.Pattern:
 def _load() -> dict:
     global _CACHE
     if _CACHE is None:
-        raw = json.loads(DATA_FILE.read_text(encoding="utf-8"))
-        for section in ("whitelist", "borderline", "excluded_1xfer",
-                        "excluded_no_rail", "excluded_far"):
-            for e in raw[section]:
-                e["_rx"] = _rx_for(e)
-        raw["origin"]["_rx"] = _rx_for({"name": raw["origin"]["name"]})
-        _CACHE = raw
+        try:
+            raw = json.loads(DATA_FILE.read_text(encoding="utf-8"))
+            for section in ("whitelist", "borderline", "excluded_1xfer",
+                            "excluded_no_rail", "excluded_far"):
+                for e in raw[section]:
+                    e["_rx"] = _rx_for(e)
+            raw["origin"]["_rx"] = _rx_for({"name": raw["origin"]["name"]})
+            _CACHE = raw
+            log.debug("transit whitelist loaded: %d regular + %d borderline towns",
+                      len(raw["whitelist"]), len(raw["borderline"]))
+        except (OSError, ValueError, KeyError) as e:
+            # The whole geo layer depends on this file -- fail LOUD and clear
+            # instead of a raw FileNotFoundError deep in a regex builder.
+            log.error("transit whitelist data file unusable: %s (%s: %s) -- "
+                      "restore it from git or re-clone the repo",
+                      DATA_FILE, type(e).__name__, e)
+            raise RuntimeError(
+                f"transit whitelist data file unusable: {DATA_FILE} "
+                f"({type(e).__name__}: {e}) — restore it from git or re-clone"
+            ) from e
     return _CACHE
 
 

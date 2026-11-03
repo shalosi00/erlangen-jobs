@@ -23,9 +23,12 @@ from datetime import datetime, timezone
 
 import requests
 
+from pipeline import logutil
 from pipeline.core import Job, SourceError, date_from_text, strip_html
 from pipeline.proxy_pool import mark_dead, pick
 from pipeline.sources._base import check_http, register
+
+log = logutil.get("kimeta")
 
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
@@ -44,32 +47,44 @@ def _slug(s: str) -> str:
 def _fetch_serp(ctx, url: str) -> str:
     """Fetch the SERP through rotating validated proxies; pinpoint failures."""
     last_err = None
-    for _attempt in range(MAX_PROXY_TRIES):
+    for attempt in range(1, MAX_PROXY_TRIES + 1):
         entry = pick("kimeta")
         if entry is None:
+            log.warning("no alive kimeta-validated proxy in pool (attempt %d/%d)",
+                        attempt, MAX_PROXY_TRIES)
             raise SourceError("waf", "no alive kimeta-validated proxy in pool — run: "
                              "python -m pipeline.proxy_pool refresh")
+        via = f"{entry['protocol']}://{entry['host']}:{entry['port']}"
+        log.debug("SERP attempt %d/%d via %s: %s", attempt, MAX_PROXY_TRIES, via, url)
         try:
             r = requests.get(url, headers=UA, proxies=entry["proxies"], timeout=ctx.timeout)
             if r.status_code == 200 and len(r.text) > 50000:
+                log.info("SERP fetched via %s (%d bytes, attempt %d)",
+                         via, len(r.text), attempt)
                 return r.text
             # reachable but not a SERP -> WAF-ish, try next proxy
             check_http(r, "kimeta", url)
+            log.debug("%s answered %d but page too small (%dB) -- rotating",
+                       via, r.status_code, len(r.text))
             last_err = SourceError("parse", f"kimeta 200 but page too small ({len(r.text)}B) "
                                    f"via {entry['host']}", 200, url, r.text[:160])
         except requests.exceptions.Timeout:
+            log.debug("%s timed out after %ss -- marking dead", via, ctx.timeout)
             last_err = SourceError("timeout", f"proxy {entry['host']}:{entry['port']} timed out "
                                    f"after {ctx.timeout}s", url=url)
             mark_dead(entry)
         except requests.exceptions.ProxyError as e:
+            log.debug("%s proxy dead: %s -- marking dead", via, str(e)[:80])
             last_err = SourceError("net", f"proxy dead: {entry['protocol']}://{entry['host']}:"
                                    f"{entry['port']} — {str(e)[:80]}", url=url)
             mark_dead(entry)
         except requests.exceptions.ConnectionError as e:
+            log.debug("%s connection failed: %s -- marking dead", via, str(e)[:80])
             last_err = SourceError("net", f"connection failed via proxy {entry['host']} — "
                                    f"{str(e)[:80]}", url=url)
             mark_dead(entry)
         time.sleep(0.3)
+    log.warning("all %d proxy attempts failed for %s", MAX_PROXY_TRIES, url)
     raise last_err or SourceError("net", "all proxy attempts failed", url=url)
 
 
@@ -114,4 +129,5 @@ def fetch(ctx) -> list[Job]:
         ))
         if len(jobs) >= ctx.max_per_source:
             break
+    log.debug("parsed %d card(s) from %s", len(jobs), url)
     return jobs

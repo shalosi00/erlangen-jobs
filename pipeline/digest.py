@@ -21,7 +21,9 @@ import os
 from datetime import datetime, timezone
 from pathlib import Path
 
-from pipeline import history
+from pipeline import history, logutil
+
+log = logutil.get("digest")
 
 RUNS_DIR = str(Path(__file__).resolve().parent.parent / "data" / "runs")  # clone-safe
 
@@ -34,7 +36,9 @@ def latest_manifest() -> dict | None:
     try:
         with open(paths[-1], encoding="utf-8") as f:
             m = json.load(f)
-    except Exception:
+    except Exception as e:
+        log.warning("run manifest %s unreadable (%s: %s) -- expiry "
+                    "correlation degraded", paths[-1], type(e).__name__, e)
         return None
     today = datetime.now(timezone.utc).strftime("%Y%m%d")
     return m if str(m.get("ts", "")).startswith(today) else None
@@ -125,11 +129,19 @@ def send(text: str) -> tuple[bool, str]:
 
 
 def cmd_digest(args) -> int:
-    text = build_digest()
+    logutil.ensure_console()      # subcommand runs without run_fetch's setup()
+    log.debug("building digest (max_new sections from memory stats)")
+    try:
+        text = build_digest()
+    except Exception as e:
+        log.exception("digest build failed")
+        print(f"digest build failed: {type(e).__name__}: {e}", file=__import__('sys').stderr)
+        return 1
     ok, msg = send(text)
     if not ok and msg.startswith("APPRISE_URL not set"):
         print(msg)
         print(text)
         return 0
+    log.info("digest send: ok=%s msg=%s", ok, msg)
     print(msg)
     return 0 if ok else 1

@@ -994,3 +994,61 @@ Stage Summary:
 - Owner advisory recorded in BACKUPS.md v26: rotate the PAT at GitHub when convenient,
   then update both escrows; rotation is the only complete fix (git history and the
   already-mirrored v23–v25 bundles keep the old value).
+
+## 2026-11-04 — v1.2.0: comprehensive logging sweep (both repos, "spot bugs easily")
+Scope: make every failure observable — leveled logs, ms timestamps, thread context,
+tracebacks on crashes, and visibility for every layer that used to fail silently.
+
+### erlangen-jobs (v1.1.3 -> v1.2.0)
+- NEW pipeline/logutil.py (stdlib logging, zero deps): setup() attaches a DEBUG-level
+  run-log file handler (logs/pipeline_run_<ts>.log — full tracebacks always retained)
+  + a stderr console handler (INFO default, DEBUG with -v, WARNING with --quiet).
+  Format `HH:MM:SS.mmm LEVEL [thread] pipeline.module: msg`. install_excepthooks()
+  routes unhandled crashes from the MAIN and WORKER threads into the log with full
+  tracebacks; captureWarnings(True). ensure_console() gives history/digest
+  subcommands stderr logging without a run-log file.
+- pipeline/__main__.py: the ad-hoc `log()` closure is replaced by the real logger.
+  SourceError -> log.error + kind/url/detail at debug; unexpected failures ->
+  log.exception (traceback in file AND console); manifest/memory failures logged
+  with tracebacks; per-source report records at debug; SUMMARY at info.
+- pipeline/sources/_base.py: check_http logs EVERY non-200 with WAF-suspicion flag
+  + body snippet before raising (single choke point for all 12+ sources).
+- pipeline/sources/ba.py: module logger; enrichment failure buckets logged
+  ("detail enrichment: 41/47 ok — failures: 404=3, net=2"); X-API-BLOCKED early
+  warning now logger.warning (was a raw print via __import__("sys")).
+- pipeline/sources/kimeta.py: every proxy rotation attempt logged (proxy, attempt
+  number, byte size, timeout/dead reasons); empty-pool warning with fix command.
+- pipeline/proxy_pool.py: BUG FIX — corrupt data file used to crash json.loads;
+  now logged + treated as empty pool; stats() gained load_failed flag; mark_dead
+  and fallback-to-any-proxy events logged (lock-safe).
+- pipeline/geo.py: missing/corrupt whitelist now raises a clear RuntimeError naming
+  the file (was a raw FileNotFoundError from deep inside the regex builder).
+- pipeline/core.py: write_outputs logs written paths; pipeline/history.py: update()
+  logs fresh/known/total + per-row re-seen at debug, cmd_history catches+logs all
+  failures; pipeline/digest.py: manifest read failures logged, digest build/send
+  failures logged with tracebacks.
+- tests/test_logging.py NEW (17 tests, offline): handler levels, ms format,
+  crash capture (main + worker thread), pool corruption, geo RuntimeError,
+  check_http logging, ensure_console. Suite now 75 passed, 1 skipped;
+  test_net_resilience.py standalone: 33 PASS.
+- Verified live: `python -m pipeline fetch --sources ba` (47 raw -> 23 kept) and
+  `--sources kimeta` (SERP via rotating proxy, rotation visible in log).
+
+### proxyfetch (v0.4.1 -> v0.5.0, separate repo, pushed there)
+- logutil.Logger: thread-safe emits (lock), ms timestamps (file gets full dates),
+  Logger.exception() with tracebacks to file/NDJSON, debug() gated by --debug /
+  $PROXYFETCH_DEBUG, child(prefix) sub-loggers, per-level stats(), env_banner().
+- NDJSON records: ts_ms, thread, exc, exc_msg, traceback fields.
+- asynchttp: probe batches report failure BUCKETS (TimeoutError=540, status:429=155,
+  verify-fail=85) instead of opaque counts; harvest logs per-mirror failure reasons.
+- pool/userconfig: quarantine + write-failure events now logged (previously silent);
+  userconfig._save OSError -> actionable ConfigError (was a raw traceback).
+- pipeline: env banner + run-config line at start, unexpected errors logged with
+  traceback BEFORE the raise (exit-code contract unchanged), pool stats at DONE.
+- tests/test_logging.py NEW (14 tests); suite 133 passed, 1 skipped; ruff clean.
+
+Notes:
+- Vendored snapshot tools/proxyfetch-src stays pinned at v0.4.1 by design
+  (offline snapshot; not imported by the pipeline).
+- Demo artifacts from the live verification runs were removed before commit;
+  logs/*.log remains gitignored.

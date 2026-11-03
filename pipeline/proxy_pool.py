@@ -16,6 +16,7 @@ CLI:
 
 Free proxies rot fast: refresh at most every few hours; expect 20-60% of yesterday's
 validated proxies to be dead at any time — pick() rotates, mark_dead() prunes.
+A corrupt/unreadable data file is LOGGED and treated as an empty pool (never a crash).
 """
 from __future__ import annotations
 
@@ -26,6 +27,10 @@ import threading
 import time
 from pathlib import Path
 
+from pipeline import logutil
+
+log = logutil.get("proxy_pool")
+
 PROJ = Path(__file__).resolve().parent.parent
 DATA_FILE = PROJ / "data" / "proxies" / "validated_proxies.json"
 TESTER = PROJ / "scripts" / "proxy_tools" / "fetch_and_test.py"
@@ -34,16 +39,31 @@ _lock = threading.Lock()
 _rows: list[dict] = []
 _rr: dict[str, int] = {}
 _dead: list[str] = []
+_load_failed = False
 
 TARGETS = ("ba_api", "kimeta", "stellenanzeigen", "jobvector")
 
 
 def _load() -> None:
-    global _rows
+    global _rows, _load_failed
     with _lock:
         if _rows or not DATA_FILE.exists():
             return
-        _rows = json.loads(DATA_FILE.read_text())
+        try:
+            rows = json.loads(DATA_FILE.read_text(encoding="utf-8"))
+            if not isinstance(rows, list):
+                raise ValueError(f"expected a JSON list, got {type(rows).__name__}")
+            _rows = rows
+            log.info("proxy pool loaded: %d validated proxies from %s",
+                     len(_rows), DATA_FILE.name)
+        except (OSError, ValueError) as e:
+            # corrupt data file must degrade to an empty pool, never a crash
+            _rows = []
+            _load_failed = True
+            log.warning("proxy pool data file unreadable (%s: %s) -- "
+                        "treating as empty; refresh with: "
+                        "python -m pipeline.proxy_pool refresh",
+                        type(e).__name__, e)
 
 
 def _key(row: dict) -> str:
@@ -57,6 +77,9 @@ def pick(target: str) -> dict | None:
         cand = [r for r in _rows if r.get(f"{target}_ok")]
         if not cand:                      # graceful fallback: any alive proxy
             cand = _rows
+            if cand:
+                log.debug("no %s-validated proxy alive -- falling back to any "
+                          "alive proxy (%d)", target, len(cand))
         if not cand:
             return None
         i = _rr.get(target, 0) % len(cand)
@@ -75,12 +98,13 @@ def mark_dead(entry: dict) -> None:
         k = _key(entry)
         _rows = [r for r in _rows if _key(r) != k]
         _dead.append(k)
+        log.debug("marked dead: %s (%d proxies left in pool)", k, len(_rows))
         dead_file = DATA_FILE.parent / "dead.jsonl"
         try:
             with open(dead_file, "a") as f:
                 f.write(k + "\n")
-        except OSError:
-            pass
+        except OSError as e:
+            log.warning("cannot persist dead-proxy log %s (%s)", dead_file, e)
 
 
 def stats() -> dict:
@@ -94,6 +118,7 @@ def stats() -> dict:
             by_proto[r["protocol"]] = by_proto.get(r["protocol"], 0) + 1
         out = {"alive": len(_rows), "by_protocol": by_proto,
                "per_target": per_target, "dead_marked": len(_dead),
+               "load_failed": _load_failed,
                "data_file": str(DATA_FILE)}
         # F12: staleness signal — kimeta degrades silently as the pool rots
         try:
@@ -107,10 +132,13 @@ def stats() -> dict:
 def refresh(threads: int = 700) -> int:
     """Re-run fetch+validate, then reload the pool. Returns subprocess exit code."""
     cmd = [sys.executable, str(TESTER), "--threads", str(threads)]
+    log.info("refreshing proxy pool: %s", " ".join(cmd))
     rc = subprocess.call(cmd)
     with _lock:
         _rows = []
+        _load_failed = False
     _load()
+    log.info("refresh finished rc=%d, pool now holds %d proxies", rc, len(_rows))
     return rc
 
 

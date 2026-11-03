@@ -74,6 +74,33 @@ errors (`auth` / `waf` / `http` / `parse` / `shape` / `timeout` / `net`) with
 URL + response snippet, printed in the summary table and logged — so it is
 always obvious which source broke and why.
 
+### Logging (v1.2.0 — spot bugs easily)
+
+Leveled, millisecond-timestamped logging everywhere, built on stdlib
+`logging` (zero new dependencies):
+
+- **Console (stderr)**: INFO by default — `DEBUG` with `-v/--verbose`,
+  only warnings+errors with `--quiet`.
+- **Log file** `logs/pipeline_run_<ts>.log`: the forensic channel —
+  DEBUG level always, i.e. *everything*: per-source URLs, proxy
+  rotations, filter decisions, memory upserts, and **full tracebacks**
+  for every error (console lines stay compact).
+- **Record format** `HH:MM:SS.mmm LEVEL [thread] pipeline.module: message` —
+  the thread name disambiguates parallel (`--parallel N`) fetches.
+- **Crashes never vanish**: unhandled exceptions in the main thread AND
+  worker threads are routed into the log with complete tracebacks
+  (`logutil.install_excepthooks()`); Python `warnings` are captured too.
+- **Every non-200 answer is logged once** at the shared HTTP choke point
+  (`pipeline/sources/_base.check_http`) with a WAF-suspicion flag and a
+  body snippet, before the typed `SourceError` travels up.
+- **Previously silent layers now log**: corrupt proxy-pool data files
+  (logged + treated as empty pool instead of crashing), missing geo
+  whitelist (clear `RuntimeError` naming the file), BA detail-enrichment
+  failure buckets (`404=3, net=1`), kimeta proxy rotation attempts, memory
+  upsert counts, output writes, manifest failures.
+- `python -m pipeline history ...` and `digest` subcommands attach their
+  own stderr handler automatically (`logutil.ensure_console()`).
+
 ## Legacy quick start (round-2 scraper)
 
 ```bash
