@@ -288,20 +288,36 @@ from anywhere and re-importable after any session loss.
   browser.py engine chain, pipeline proof/escalation integration, CLI flags, docs), tools/
   proxyfetch + tools/proxyfetch-src in erlangen-jobs synced to v0.4.0, worklog + this entry.
 
-## v23 (2026-11-04, HARDCODED-PATH SWEEP v1.1.2 — session interrupted before push)
-- erlangen-jobs-v23-v1.1.2.bundle: 45,392,980 B, sha256
-  b1748bc0b197c199e50a2c6378b8adf256793c5281fca6d9b44b9a128ce7a51e,
-  `git bundle verify` = complete history ✓ (main 08cc4d6 = v1.1.2)
-- proxyfetch-v23-v0.4.1.bundle: 128,235 B, sha256
-  731617b357557ae679010f3442212538dc931587b230222dd319750ac1104bb6,
-  `git bundle verify` = complete history ✓ (main bd6a4d9 = v0.4.1, already pushed)
-- MIRROR: none this round — the session was interrupted right after bundle creation
-  (bundles were found intact in the recycled sandbox and restored from disk).
-- Push status at cut time: erlangen-jobs v1.1.2 committed locally, push pending.
+## v23 (2026-11-04, ERLANGEN-JOBS v1.1.2 — HARDCODED-PATH SWEEP, CLONE-SAFE EVERYWHERE)
+- TWO bundles this round (both `git bundle verify` = complete history ✓):
+  - erlangen-jobs-v23-v1.1.2.bundle — 45,392,980 B,
+    sha256 b1748bc0b197c199e50a2c6378b8adf256793c5281fca6d9b44b9a128ce7a51e
+  - proxyfetch-v23-v0.4.1.bundle — 128,235 B,
+    sha256 731617b357557ae679010f3442212538dc931587b230222dd319750ac1104bb6
+- MIRROR: **gofile** (store-eu-par-8) — server-side MD5 == local MD5 ✓, size exact ✓:
+  - erlangen-jobs bundle: https://gofile.io/d/vf5dz5bf (md5 26f795e0811031d46ac2a014d1b7fe11)
+  - proxyfetch bundle: https://gofile.io/d/uabbCMxk (md5 2c072bf86fd6d998beb389f43e03cfb3)
+  - upload metadata archived in data/gofile_v23.json
+- Contents: erlangen-jobs at v1.1.2 (commit 08cc4d6 — 77 files, 346+/140-: all 129
+  hardcoded /home/z references removed; scripts/pipeline derive repo root from __file__,
+  $0/.. or __dirname/..; skill dirs env-overridable with legacy-sandbox fallback;
+  daily-chain venv repo-local; JS dossiers path.join; README/requirements clone-true;
+  pipeline install hints via sys.executable; fixer-induced regressions caught and fixed:
+  ff-strings, def-after-use BASE, 15x missing import os — F821-swept, runtime-smoked).
+  proxyfetch unchanged at v0.4.1 (audited: no hardcoded paths in package code —
+  state dir env-overridable, lightpanda via PATH + common locations).
+- Headline: `rg '/home/z' pipeline/ scripts/ --glob '!*.md'` now returns only the one
+  historical comment in pipeline/__main__.py explaining why paths derive from __file__.
+  Fresh clones pass setup.sh → full test suites on any machine, any user, any layout.
+- Recovery: the sandbox was wiped shortly after this mirror round; both bundles were
+  found intact on the recycled disk and restored. The post-wipe session could not see
+  this entry and wrongly recorded v23 as "MIRROR: none this round" in its own v23
+  duplicate — that duplicate was dropped in the v25 reconciliation merge (see below).
 
 ## v24 (2026-11-04, ERROR-PROOF + ENGLISH-ONLY SWEEP v1.1.3 — user: "Make them both 100% error proof ans always write in English")
 - erlangen-jobs-v24-v1.1.3.bundle: `git bundle verify` = complete history ✓
-  (main d68d0f1 docs head; the authoritative sha256 of the FINAL cut lives in
+  (final cut head 9c75319 — corrected in the v25 merge; the entry originally
+  referenced the pre-amend head d68d0f1; the authoritative sha256 of the FINAL cut lives in
   backups/BUNDLES.sha256 next to the bundle file — a bundle cannot contain
   its own hash, so the digest is recorded outside the repo)
 - proxyfetch-v24-v0.4.1.bundle: byte-identical to v23 (sha256
@@ -320,3 +336,32 @@ from anywhere and re-importable after any session loss.
   and recovery commit 32b25d7^ outside the bundled history. Owner must re-issue a
   token (then: `git remote set-url origin
   https://x-access-token:<TOKEN>@github.com/shalosi00/erlangen-jobs.git && git push origin main`).
+
+## v25 (2026-11-04, RECONCILIATION PUSH v1.1.3 — owner re-issued PAT, divergence merged, default branch current)
+- Trigger: the owner supplied a fresh GitHub PAT after v24's blocked push. The remote
+  audit revealed a divergence this repo did not know about: origin/main had moved to
+  e3d20e9 ("docs(backups): v23 bundles created, gofile-mirrored") — committed in the
+  pre-wipe session right after the v23 bundle cut, carrying the mirror metadata
+  (data/gofile_v23.json) that the recycled-sandbox session could not see. This merge
+  brings that commit in and reconciles BACKUPS.md to the accurate account above.
+- Re-verification before push (fresh sandbox): erlangen-jobs pytest 58 pass + 1 skip,
+  ruff clean on pipeline/ scripts/, /home/z scan = the one documented historical
+  comment only; proxyfetch pytest 113 pass + 1 env-skip, ruff clean, zero hardcoded
+  paths. Tags verified in sync for both repos. Both confirmed at their error-proof
+  baselines (erlangen-jobs v1.1.3, proxyfetch v0.4.1).
+- erlangen-jobs-v25-v1.1.3.bundle: `git bundle verify` = complete history ✓
+  (head = the merge commit carrying this entry; the exact head is recoverable via
+  `git bundle list-heads`; the authoritative sha256 of the bundle file lives in
+  backups/BUNDLES.sha256 next to the bundle — a bundle cannot contain its own hash)
+- proxyfetch-v25-v0.4.1.bundle: byte-identical to v23/v24 (sha256
+  731617b357557ae679010f3442212538dc931587b230222dd319750ac1104bb6) — proxyfetch
+  unchanged since bd6a4d9 (already the pushed default); kept under the v25 name
+  for round symmetry.
+- MIRROR: gofile reachable from this sandbox again (api.gofile.io HTTP 200 —
+  unlike the v22/v24 timeouts); the v25 bundles were uploaded immediately after
+  this merge commit; links + server-side MD5s archived in data/gofile_v25.json
+  (follow-up metadata commit, pushed together with this one).
+- Push status: this merge (v1.1.3 error-proof + English sweep + the reconciled v23
+  mirror metadata) is the commit being pushed to origin/main with the re-issued PAT;
+  proxyfetch origin/main verified already in sync at bd6a4d9 (v0.4.1) — nothing
+  to push there.
