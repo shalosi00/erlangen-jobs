@@ -365,3 +365,28 @@ from anywhere and re-importable after any session loss.
   mirror metadata) is the commit being pushed to origin/main with the re-issued PAT;
   proxyfetch origin/main verified already in sync at bd6a4d9 (v0.4.1) — nothing
   to push there.
+
+## v26 (2026-11-04, PROXYFETCH SECURITY REDACTION — live PAT removed from the handover doc; rotation advisory)
+- Trigger (v25 session follow-up): the live GitHub PAT turned out to sit VERBATIM in
+  proxyfetch/AGENTS_ASHA_HANDOVER.md — committed 2026-10-29 in b62a18e, user-authorized
+  when the private repo was the only exposure surface — and therefore inside EVERY
+  proxyfetch bundle mirrored to PUBLIC gofile links (v23 uabbCMxk; v24/v25 byte-identical
+  p66PdVO4). Anyone following the links recorded in this ledger could extract a working
+  token. rg sweep: erlangen-jobs itself is token-free; its bundles are not affected.
+- Misdiagnosis corrected: the 2026-10-31 "PAT died with the sandbox wipe" was wrong —
+  losing the local copy cannot kill a server-side credential. The owner re-supplied the
+  same token on 2026-11-04; it API-verifies live (login shalosi00, push permissions on
+  both repos).
+- Fix: proxyfetch handover doc section 1 redacted and pushed (commit 4286bfe, now the
+  default head) — the live value lives ONLY in the main project's gitignored
+  state/github_token (chmod 600) and the local git credential store; restore flow
+  switched to a no-echo read; explicit rotation advisory added.
+- proxyfetch-v26-v0.4.1.bundle: `git bundle verify` = complete history ✓ (head 4286bfe,
+  sha256 1cfd2105c3c902b4959201d852cec585c0bdf42518df76a15df896c3b45c29d5 in
+  backups/BUNDLES.sha256).
+- MIRROR: deliberately NOT gofile-mirrored this round — the bundle's history still
+  contains the pre-rotation PAT (b62a18e and descendants). Upload the v26 bundle (or
+  its successor) only AFTER the owner rotates the token; until rotation the v23/v25
+  gofile links remain the standing exposure and rotation is the only complete fix.
+- Owner action: rotate the PAT at GitHub when convenient, then update state/github_token
+  and the credential store; existing links die with the rotation.

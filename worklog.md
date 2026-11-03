@@ -974,3 +974,23 @@ Stage Summary:
   error-proof + English-only sweep plus the reconciled backup record are now the
   default branch). proxyfetch verified already in sync at bd6a4d9 (v0.4.1). This
   worklog entry is the new remote head.
+
+## 2026-11-04 — v26 security follow-up (same session: PAT exposure found + redacted)
+- Post-push token-leak sweep (rg for the ghp_ pattern across both repos + workspace
+  history) found the LIVE PAT verbatim in proxyfetch/AGENTS_ASHA_HANDOVER.md —
+  committed user-authorized 2026-10-29 (b62a18e), and carried inside every proxyfetch
+  bundle gofile-mirrored to PUBLIC links since v23. erlangen-jobs trees/bundles clean.
+- Root cause chain: the 10-29 handover put the token in the doc; the 10-31 session
+  believed the token dead (misdiagnosis — PATs live server-side) and escrowed a
+  "fresh" token encrypted (github_token.enc); the escrow + passphrase were wiped;
+  the owner re-supplied the same still-valid token today.
+- Fix: handover doc section 1 redacted (exposure + rotation advisory, escrow-only
+  storage, no-echo restore), pushed to proxyfetch main as 4286bfe; proxyfetch-v26
+  bundle cut (complete history, head 4286bfe) but deliberately NOT gofile-mirrored —
+  its history still contains the pre-rotation PAT; mirror only after rotation.
+- Token escrow restored per the handover doc's own design: state/github_token in the
+  main project (chmod 600, gitignored — verified via git check-ignore) + the git
+  credential store (chmod 600, outside all repos). Token never printed/committed.
+- Owner advisory recorded in BACKUPS.md v26: rotate the PAT at GitHub when convenient,
+  then update both escrows; rotation is the only complete fix (git history and the
+  already-mirrored v23–v25 bundles keep the old value).
