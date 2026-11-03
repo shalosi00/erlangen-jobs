@@ -287,3 +287,36 @@ from anywhere and re-importable after any session loss.
 - Contents: repos/proxyfetch at v0.4.0 (proxyfetch/lightpanda.py, tests/test_lightpanda.py,
   browser.py engine chain, pipeline proof/escalation integration, CLI flags, docs), tools/
   proxyfetch + tools/proxyfetch-src in erlangen-jobs synced to v0.4.0, worklog + this entry.
+
+## v23 (2026-11-04, HARDCODED-PATH SWEEP v1.1.2 — session interrupted before push)
+- erlangen-jobs-v23-v1.1.2.bundle: 45,392,980 B, sha256
+  b1748bc0b197c199e50a2c6378b8adf256793c5281fca6d9b44b9a128ce7a51e,
+  `git bundle verify` = complete history ✓ (main 08cc4d6 = v1.1.2)
+- proxyfetch-v23-v0.4.1.bundle: 128,235 B, sha256
+  731617b357557ae679010f3442212538dc931587b230222dd319750ac1104bb6,
+  `git bundle verify` = complete history ✓ (main bd6a4d9 = v0.4.1, already pushed)
+- MIRROR: none this round — the session was interrupted right after bundle creation
+  (bundles were found intact in the recycled sandbox and restored from disk).
+- Push status at cut time: erlangen-jobs v1.1.2 committed locally, push pending.
+
+## v24 (2026-11-04, ERROR-PROOF + ENGLISH-ONLY SWEEP v1.1.3 — user: "Make them both 100% error proof ans always write in English")
+- erlangen-jobs-v24-v1.1.3.bundle: `git bundle verify` = complete history ✓
+  (main d68d0f1 docs head; the authoritative sha256 of the FINAL cut lives in
+  backups/BUNDLES.sha256 next to the bundle file — a bundle cannot contain
+  its own hash, so the digest is recorded outside the repo)
+- proxyfetch-v24-v0.4.1.bundle: byte-identical to v23 (sha256
+  731617b357557ae679010f3442212538dc931587b230222dd319750ac1104bb6) — proxyfetch
+  had zero defects to fix (pytest 113 pass + 1 env-skip, ruff clean, CLI green);
+  main bd6a4d9 already the pushed default. Kept under the v24 name for symmetry.
+- Contents: proxy_tools BASE off-by-one fix (pool file resolved to scripts/data/
+  before), no-traceback proxy-pool loader + guarded cloudscraper import,
+  vendored tools/proxyfetch[-src] refreshed to v0.4.1, live-code prose translated
+  to English (job_prefilter/merge/pipeline/daily_summary/enrich), data/work/
+  gitignored, VERSION 1.1.3, full worklog entry.
+- MIRROR: gofile unreachable from this sandbox (api.gofile.io timeout, same as v22)
+  — the v24 bundles under backups/ are the offline copy of record.
+- Push status at cut time: erlangen-jobs main = v1.1.2 + v1.1.3 (2 commits ahead of
+  origin); push blocked this session — PAT passphrase (state/escrow_key.py) wiped
+  and recovery commit 32b25d7^ outside the bundled history. Owner must re-issue a
+  token (then: `git remote set-url origin
+  https://x-access-token:<TOKEN>@github.com/shalosi00/erlangen-jobs.git && git push origin main`).
