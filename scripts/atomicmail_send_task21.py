@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Task 21 email: methodology research + perfect-files system to skorry@atomicmail.io."""
+import os
 import json
 import subprocess
 
-BASE = "/home/z/my-project"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OPS = f"{BASE}/scripts/atomicmail_daily_ops.json"
 PDF = f"{BASE}/download/reports/Job_Search_Methodology_and_Results_Organization_2026-10-15.pdf"
 CSV = f"{BASE}/download/tracker/application_tracker_2026-10-15.csv"

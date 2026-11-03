@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Background poller: if surge verification mail arrives within 60 min, click it."""
+import os
 import json, re, time, requests
 
-BASE = "/home/z/my-project"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 H = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) Chrome/127.0.0.0 Safari/537.36"}
 deadline = time.time() + 3600
 while time.time() < deadline:

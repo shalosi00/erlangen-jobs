@@ -16,7 +16,7 @@ import os
 import subprocess
 import sys
 
-BASE = "/home/z/my-project"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENC = f"{BASE}/scripts/github_token.enc"
 STATE = f"{BASE}/state/github_token"
 

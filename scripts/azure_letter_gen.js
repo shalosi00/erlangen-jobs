@@ -5,8 +5,10 @@ const {
   AlignmentType, WidthType, BorderStyle, ShadingType,
 } = require("docx");
 const fs = require("fs");
+const path = require("path");
 
-const OUT = "/home/z/my-project/download/Begruendung_Bildungsgutschein_Azure_2026-10-30.docx";
+const ROOT = path.resolve(__dirname, "..");  // repo root — no hardcoded absolute paths
+const OUT = path.join(ROOT, "download", "Begruendung_Bildungsgutschein_Azure_2026-10-30.docx");
 
 const TNR = { ascii: "Times New Roman", eastAsia: "Times New Roman" };
 function p(runsOrText, opts = {}) {

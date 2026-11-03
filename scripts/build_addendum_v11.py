@@ -2,7 +2,14 @@
 """Report v1.1 Addendum body (F18) — ReportLab per briefs/report.md.
 Cover is rendered separately via html2poster.js and merged with pypdf."""
 import sys, os, hashlib
-PDF_SKILL_DIR = "/home/z/my-project/skills/pdf"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PDF_SKILL_DIR = (os.environ.get("PDF_SKILL_DIR")  # explicit override wins
+                 or os.path.join(BASE, "skills", "pdf"))
+if not os.path.isdir(PDF_SKILL_DIR):
+    # legacy sandbox layout: repo clone lives inside the project that carries skills/
+    _legacy = os.path.abspath(os.path.join(BASE, os.pardir, os.pardir, "skills", "pdf"))
+    if os.path.isdir(_legacy):
+        PDF_SKILL_DIR = _legacy
 sys.path.insert(0, os.path.join(PDF_SKILL_DIR, "scripts"))
 
 from reportlab.lib.pagesizes import A4
@@ -382,7 +389,7 @@ story += section("8", "Updated Operations Runbook",
 for cmd, note in [
     ("bash scripts/daily_jobpull.sh [--with-proxies]",
      "daily run: self-heals the venv, fetches all 22 sources, mirrors outputs, pushes the digest"),
-    ("/home/z/.venv/bin/python -m unittest discover -s tests -v",
+    ("python3 -m unittest discover -s tests -v",
      "45 unit tests: filter regressions, whitelist pins, dedupe and memory behaviour"),
     ("python -m pipeline history new|gone|search|stats",
      "query the job memory (what is new today, what expired, full-text search)"),

@@ -12,7 +12,9 @@ ACCENT = "#1B6B7A"
 ACCENT2 = "#D4875A"
 GRID = "#E0E0E0"
 TEXT = "#333333"
-OUT = "/home/z/my-project/data/azure_demand"
+import os
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT = f"{BASE}/data/azure_demand"
 
 # values from cert_stats_20261030-1111.json (now corpus, n=77)
 rows = [

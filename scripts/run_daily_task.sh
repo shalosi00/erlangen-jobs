@@ -7,7 +7,7 @@
 #   --quick  skips the proxy re-validation (~4 min saved)
 set -uo pipefail
 cd "$(dirname "$0")/.."
-PY=/home/z/.venv/bin/python
+PY=.venv/bin/python   # repo-local virtualenv (setup.sh convention; self-healed by daily_jobpull.sh)
 LOG=logs/daily_task_$(date +%Y%m%d-%H%M).log
 mkdir -p logs data/enriched
 

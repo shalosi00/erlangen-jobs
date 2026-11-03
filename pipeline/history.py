@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import json
 import os
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -63,8 +64,8 @@ def _db():
             from sqlite_utils import Database as _D  # F6: lazy import
         except ImportError as e:
             raise MemoryUnavailable(
-                "sqlite-utils missing — job memory unavailable; "
-                "fix: /home/z/.venv/bin/pip install -r requirements.txt") from e
+                f"sqlite-utils missing — job memory unavailable; "
+                f"fix: {sys.executable} -m pip install -r requirements.txt") from e
         Database = _D
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
     db = Database(DB_PATH)

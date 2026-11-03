@@ -2,7 +2,8 @@
 # Deploy a browsable static mirror of the jobtoolkit repo to surge.sh.
 # Surge accounts need NO email verification -> fully self-provisionable.
 set -e
-cd /home/z/my-project
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"   # repo root — no hardcoded absolute paths
+cd "$ROOT"
 
 # 1) fresh mailbox via mail.tm (documented, may be short-lived; surge never verifies)
 DOM=$(curl -s --max-time 20 https://api.mail.tm/domains | python3 -c "import sys,json;print(json.load(sys.stdin)['hydra:member'][0]['domain'])")

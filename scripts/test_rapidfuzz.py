@@ -2,12 +2,15 @@
 Question: does rapidfuzz catch near-dupes our Jaccard misses, WITHOUT false merges?
 Baseline = what dedupe() already merged today (so a match on an already-merged pair
 is expected; interesting = pairs Jaccard misses but rapidfuzz catches)."""
+import os
 import csv, sys
-sys.path.insert(0, "/home/z/my-project")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from pipeline.core import title_key, _jac, norm_txt
 from rapidfuzz import fuzz
 
-rows = list(csv.DictReader(open("/home/z/my-project/download/jobs_latest.csv", encoding="utf-8-sig")))
+import os
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+rows = list(csv.DictReader(open(f"{BASE}/download/jobs_latest.csv", encoding="utf-8-sig")))
 titles = [(r["title"], r["company"], r["city"]) for r in rows]
 print(f"production rows: {len(titles)}")
 

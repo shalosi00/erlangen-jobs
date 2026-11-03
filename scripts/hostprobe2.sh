@@ -7,7 +7,8 @@ MID="$TD/mid.bin"          # 12MB for x0.at limit test
 head -c 32768 /dev/urandom > "$SMALL"
 head -c 12582912 /dev/urandom > "$MID"
 UA="asha-jobtoolkit/1.0 (+https://github.com/agent-backup)"
-OUT=/home/z/my-project/data/backup_probe2.txt
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"   # repo root — no hardcoded absolute paths
+OUT="$ROOT/data/backup_probe2.txt"
 : > "$OUT"
 
 probe() {

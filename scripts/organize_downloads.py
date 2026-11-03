@@ -24,7 +24,7 @@ import shutil
 import sys
 from pathlib import Path
 
-ROOT = Path("/home/z/my-project/download")
+ROOT = Path(__file__).resolve().parent.parent / "download"
 
 # jobs_fachinformatiker-systemintegration-erlangen-50km-14d_20261014-1505[_rejected].ext
 RUNFILE_RX = re.compile(

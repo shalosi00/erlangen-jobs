@@ -6,7 +6,9 @@ import concurrent.futures as cf
 import json, os, re
 import requests
 
-BASE = "/home/z/my-project/research/aggregators-round2/probe"
+_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+BASE = f"{_ROOT}/research/aggregators-round2/probe"
 os.makedirs(BASE, exist_ok=True)
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
 H = {"User-Agent": UA, "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",

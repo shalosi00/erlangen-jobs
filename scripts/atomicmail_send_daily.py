@@ -3,13 +3,14 @@
 Usage: python3 scripts/atomicmail_send_daily.py <summary.md> <enriched.csv> <gold.csv> [to1,to2]
 Default recipients: skorry@atomicmail.io, feebee231@outlook.com (Task 24 add-on)
 """
+import os
 import json
 import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-BASE = "/home/z/my-project"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OPS = f"{BASE}/scripts/atomicmail_daily_ops.json"
 TODAY = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 

@@ -39,16 +39,15 @@ low-risk scraping — built around the "apply within 72 h" advantage.
 
 **Cloned this repo fresh?** Run `bash setup.sh` first — it creates a local
 `.venv` with all dependencies and runs the offline test suite
-(`tests/test_net_resilience.py`, 33 tests). The `/home/z/.venv` path below is
-the deployment-sandbox convention (its venv is wiped periodically and
-self-heals from `requirements.txt`); on any other machine use
-`.venv/bin/python` instead.
+(`tests/test_net_resilience.py`, 33 tests). The deployment sandbox keeps its
+own `~/.venv` (wiped periodically, self-heals from `requirements.txt`);
+this repo standardizes on the repo-local `.venv` for every machine.
 
 ```bash
-# venv restore (sandbox wipes it periodically — F7/F9 self-heal):
-python3 -m venv /home/z/.venv && /home/z/.venv/bin/pip install -r requirements.txt
+# venv restore (self-heals after wipes — or just re-run bash setup.sh):
+python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
-PY=/home/z/.venv/bin/python3        # needs requirements.txt (jobspy, sqlite-utils, ...)
+PY=.venv/bin/python3           # needs requirements.txt (jobspy, sqlite-utils, ...)
 
 # 1) see all 55 aggregator sources and their status/access method
 $PY -m pipeline sources

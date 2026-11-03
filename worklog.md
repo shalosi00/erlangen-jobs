@@ -841,3 +841,55 @@ Stage Summary:
   explicit [tool.ruff] baseline, 111 findings resolved, Logger.warn -> Logger.warning
   (warn alias kept for library API), raise ... from on config errors, 113/113 tests,
   live smoke green (books.toscrape CSS extraction, 20 items, direct fast path).
+
+## 2026-11-04 — Hardcoded-path sweep: clone-safe everywhere, v1.1.2 (user: "Fix any hardcoded stuff leading to problems")
+- Audit: rg sweep found 129 hardcoded `/home/z/...` references across ~70 files (scripts/,
+  pipeline/, docs) — vestiges of the pre-import layout where the toolkit lived directly in
+  `/home/z/my-project`. They violated this repo's own AGENTS.md invariant ("all paths derive
+  from __file__ ... No absolute paths") and broke after every sandbox wipe / on every fresh
+  clone (the exact failure class the 2026-11-03 portability fix addressed for tests/).
+- Fixed (57 files auto-transformed + 20 hand-fixed; every changed file py_compile-gated,
+  reverted on failure):
+  * pipeline/history.py, sources/jobspy_src.py, sources/stellenanzeigen.py: install hints
+    now use `sys.executable -m pip install ...` — correct on ANY machine/venv (was a
+    /home/z/.venv path that only existed on the deployment sandbox).
+  * BASE="/home/z/my-project" module constants (12 atomicmail/gh_recover/mega_sweep/
+    cert_demand_scan/azure_demand_scan/pull_fisi_junior/surge_* scripts) → derived from
+    __file__; every downstream path (state/, scripts/, download/, data/) follows the repo.
+  * Raw string literals (portal_scan/portal_retry/probe_aggregators_r1..r7/gh_search_sweep/
+    mirror_gofile_v19-21/test_* /chart_funnel/merge_report/merge_3a/organize_downloads/
+    proxy_tools/*) → f"{BASE}/..." with a BASE (or _ROOT) constant inserted before first
+    use. mega_sweep.py's subprocess interpreter → sys.executable.
+  * Skill-dir dependencies (build_tracker, build_fisi_xlsx, build_portal_xlsx, report_build,
+    report_body_3a, build_addendum_v11): env override (XLSX_SKILL_DIR / PDF_SKILL_DIR) →
+    repo skills/ → legacy-sandbox-parent fallback; documented in-code.
+  * Shell scripts (daily_jobpull.sh, run_daily_task.sh): PY now repo-local .venv/bin/python
+    (setup.sh convention; self-heal recreates .venv not /home/z/.venv). hostprobe[2].sh,
+    search_github_repos.sh, upload_v6.sh, verify_v6b/c.sh, deploy_surge.sh: ROOT derived
+    from $(dirname $0)/.. — bash -n verified all.
+  * JS dossiers (azure_report_lib/gen.js, azure_letter_gen.js, cert_roadmap_gen.js):
+    const ROOT = path.resolve(__dirname, "..") + path.join — node --check verified all;
+    inter-script require() now relative ("./azure_report_lib.js").
+  * Docs made clone-true: README quick-start uses repo .venv (the /home/z/.venv copy-paste
+    block led fresh-clone users into a nonexistent path); requirements.txt hint idem;
+    atomicmail_recover/make_escrow/mailtm docstrings describe <repo-root>/state and
+    ~/.config tiers instead of sandbox paths.
+- Transform bugs caught by verification and fixed (no silent breakage shipped):
+  * f-string prefix collision (f"/home/z/..." -> ff"...") — py_compile caught, regex fixed
+    to consume the existing f-prefix.
+  * 12 files got the BASE constant AFTER its first use or self-referentially
+    (BASE = f"{BASE}/...") — caught by an order-aware audit, repaired via
+    scripts/repair_base_defs.py (kept in main project, not the repo).
+  * 15 files lacked `import os` at module top (os imported only mid-file) — caught by a
+    F821 (undefined-name) sweep across every changed file + runtime --help smoke tests
+    (portal_scan.py and task22_check_links.py were actually broken and are fixed).
+- proxyfetch (github.com/shalosi00/proxyfetch) audited in the same sweep: NO hardcoded
+  filesystem paths in package code (state dir = $PROXYFETCH_STATE_DIR -> ~/.proxyfetch;
+  lightpanda discovered via PATH + env + common locations; only sandbox-doc references
+  remain in AGENTS_ASHA_HANDOVER.md, which documents the deployment sandbox by design).
+  No changes needed; v0.4.1 remains the latest default.
+- Test evidence after the sweep: ruff baseline clean; net_resilience 33/33, build_map 21/21,
+  companies_map 14/14, dedupe/filters/geo OK, history OK(1 skip); e2e A-C 13/13 offline
+  (--live 0); F821 sweep on all 60 changed files: clean; bash -n all shell scripts: clean;
+  node --check all 4 JS: clean; runtime smoke: test_rapidfuzz.py resolves BASE and reads
+  download/jobs_latest.csv correctly; organize_downloads.py / parse_candidates.py run clean.

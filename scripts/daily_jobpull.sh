@@ -16,7 +16,7 @@
 # documented), flock against overlapping runs, consistent step labels 0-6/6.
 set -uo pipefail
 cd "$(dirname "$0")/.."
-PY=/home/z/.venv/bin/python
+PY=.venv/bin/python   # repo-local virtualenv (setup.sh convention; self-healed below)
 LOG=logs/daily_jobpull_$(date +%Y%m%d-%H%M).log
 mkdir -p logs
 
@@ -30,7 +30,7 @@ fi
 echo "[0/5] venv check" | tee -a "$LOG"
 if [[ ! -x "$PY" ]]; then
   echo "  venv missing entirely — recreating $PY" | tee -a "$LOG"
-  python3 -m venv /home/z/.venv >>"$LOG" 2>&1 || { echo "VENV CREATE FAILED" | tee -a "$LOG"; exit 1; }
+  python3 -m venv .venv >>"$LOG" 2>&1 || { echo "VENV CREATE FAILED" | tee -a "$LOG"; exit 1; }
 fi
 if ! "$PY" -c "import jobspy, sqlite_utils, rapidfuzz, apprise, socks, requests, curl_cffi" >/dev/null 2>&1; then
   echo "  venv broken (expected after a sandbox wipe) — installing requirements.txt" | tee -a "$LOG"

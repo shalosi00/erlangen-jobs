@@ -3,7 +3,9 @@
 Read-only guest scraping; small result counts; no credentials."""
 import sys, traceback
 
-OUT = "/home/z/my-project/research/github-repos/tests"
+import os
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT = f"{BASE}/research/github-repos/tests"
 import os
 os.makedirs(OUT, exist_ok=True)
 
@@ -53,3 +55,4 @@ print(f"indeed_fisi_erlangen:      {n1}")
 print(f"indeed_itsupport_nuremberg:{n2}")
 print(f"linkedin_guest:            {n3}")
 print(f"glassdoor_guest:           {n4}")
+

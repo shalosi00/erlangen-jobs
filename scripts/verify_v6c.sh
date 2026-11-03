@@ -2,7 +2,8 @@
 # x0.at: resumable full download (server cuts ~37MB/attempt) then full hash.
 # filebin: head+tail ranged hash probes.
 set -u
-V=/tmp/v6verify; B=/home/z/my-project/backups/asha-jobtoolkit-20261014-v6.bundle
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"   # repo root — no hardcoded absolute paths
+V=/tmp/v6verify; B="$ROOT/backups/asha-jobtoolkit-20261014-v6.bundle"
 TARGET=cad0d21e3f2a9cc25b672d584a7dfe0f01ee2538e4eecbf30acd9ac0445953ef
 UA="asha-jobtoolkit/1.0"
 SZ=174370824

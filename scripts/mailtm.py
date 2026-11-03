@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 """mail.tm disposable inbox helper — create account, poll messages, extract links.
 Usage:
-  python3 mailtm.py create                 -> prints address; stores creds in /home/z/my-project/.mailtm.json
+  python3 mailtm.py create                 -> prints address; stores creds in <repo-root>/.mailtm.json
   python3 mailtm.py list                   -> list inbox messages
   python3 mailtm.py read <msg_id>          -> print message text/links
   python3 mailtm.py wait-for <substring>   -> poll until a message contains substring; prints its id
 """
 import json, sys, time, re
+import os
 import requests
 
 BASE = "https://api.mail.tm"
-CREDS = "/home/z/my-project/.mailtm.json"
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo root
+CREDS = f"{REPO}/.mailtm.json"
 
 def _headers(tok=None):
     h = {"Accept": "application/json", "Content-Type": "application/json"}

@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Round-4: run a real FISI/Erlangen query per candidate and extract samples."""
 import json, re, requests
+import os
+
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
 H = {"User-Agent": UA, "Accept-Language": "de-DE,de;q=0.9,en;q=0.5"}
@@ -13,7 +16,7 @@ def get(url, **kw):
 
 def save(name, r):
     if r is not None:
-        open(f"/home/z/my-project/research/aggregators-round2/probe/r4_{name}.html", "w", errors="ignore").write(r.text)
+        open(f"{BASE}/research/aggregators-round2/probe/r4_{name}.html", "w", errors="ignore").write(r.text)
     return r
 
 print("== 1 ABSOLVEVENTA text/location params ==")

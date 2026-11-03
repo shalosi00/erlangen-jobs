@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Quick live check: pipeline kimeta source (requests + validated pool) vs
 proxyfetch (aiohttp). Proves which proxied stack fetches kimeta today."""
+import os
 import sys, time
-sys.path.insert(0, "/home/z/my-project")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from pipeline.sources.kimeta import _fetch_serp
 from pipeline.core import FetchCtx  # guess ctx name
@@ -31,3 +32,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+import os

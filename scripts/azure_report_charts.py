@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Charts for the Azure demand justification report (DM-1 palette derived)."""
 import matplotlib
+import os
+
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
@@ -12,7 +15,7 @@ ACCENT = "#1B6B7A"
 ACCENT2 = "#D4875A"  # GO-1 warm contrast for the baseline bar
 GRID = "#E0E0E0"
 TEXT = "#333333"
-OUT = "/home/z/my-project/data/azure_demand"
+OUT = f"{BASE}/data/azure_demand"
 
 
 def save(fig, path):

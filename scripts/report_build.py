@@ -3,9 +3,17 @@
 """Build the Programmatic Job Search Germany report (body PDF, ReportLab)."""
 import os, sys, hashlib, html
 
-PDF_SKILL_DIR = "/home/z/my-project/skills/pdf"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+PDF_SKILL_DIR = (os.environ.get("PDF_SKILL_DIR")  # explicit override wins
+                 or os.path.join(BASE, "skills", "pdf"))
+if not os.path.isdir(PDF_SKILL_DIR):
+    # legacy sandbox layout: repo clone lives inside the project that carries skills/
+    _legacy = os.path.abspath(os.path.join(BASE, os.pardir, os.pardir, "skills", "pdf"))
+    if os.path.isdir(_legacy):
+        PDF_SKILL_DIR = _legacy
 sys.path.insert(0, os.path.join(PDF_SKILL_DIR, "scripts"))
-sys.path.insert(0, "/home/z/my-project/scripts")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import inch
@@ -298,7 +306,7 @@ def build():
     from report_content_c import CHAPTERS_C
     chapters = CHAPTERS_A + CHAPTERS_B + CHAPTERS_C
 
-    out_path = "/home/z/my-project/scripts/out/body.pdf"
+    out_path = f"{BASE}/scripts/out/body.pdf"
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     doc = TocDocTemplate(out_path, pagesize=A4,
                          leftMargin=MARGIN, rightMargin=MARGIN,

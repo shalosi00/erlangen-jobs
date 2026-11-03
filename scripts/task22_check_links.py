@@ -34,6 +34,7 @@ import base64
 import concurrent.futures as cf
 import csv
 import json
+import os
 import re
 import sys
 import time
@@ -43,10 +44,10 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
-sys.path.insert(0, "/home/z/my-project")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from pipeline.proxy_pool import pick, mark_dead  # noqa: E402
 
-ROOT = Path("/home/z/my-project")
+ROOT = Path(__file__).resolve().parent.parent
 CSV_IN = ROOT / "download" / "jobs_latest.csv"
 OUT_DIR = ROOT / "download" / "verified" / datetime.now().strftime("%Y-%m-%d")
 

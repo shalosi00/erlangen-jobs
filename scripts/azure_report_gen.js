@@ -3,8 +3,11 @@ const {
   Document, Packer, Paragraph, TextRun, PageBreak, Header, Footer, PageNumber, NumberFormat,
   AlignmentType, SectionType, TableOfContents,
   P, buildCoverR1, h1, h2, body, b, t, it, caption, figure, table, tableTitle, OUT_MAIN,
-} = require("/home/z/my-project/scripts/azure_report_lib.js");
+} = require("./azure_report_lib.js");
 const fs = require("fs");
+const path = require("path");
+
+const ROOT = path.resolve(__dirname, "..");  // repo root — no hardcoded absolute paths
 
 const pgSize = { width: 11906, height: 16838 };
 const pgMargin = { top: 1440, bottom: 1440, left: 1701, right: 1417 };
@@ -69,12 +72,12 @@ bodyChildren.push(body([t("Four limitations should be noted when weighing the ev
 bodyChildren.push(h1("4.", "Core Findings: Azure and Cloud Requirements in the Regional Market"));
 bodyChildren.push(h2("4.1  Requirement profile of the 77 active postings"));
 bodyChildren.push(body([t("Figure 1 shows the requirement profile of the currently active postings. Entry-level accessibility (40.3%) and networking (33.8%) dominate - both directly favourable for the applicant - followed by virtualization (16.9%), Linux (14.3%), generic cloud (13.0%) and the Microsoft on-premises stack (10.4%). Explicit Azure mentions appear in 3.9% of postings; the union of all Microsoft/cloud families reaches "), b("23.4%"), t(" (18 of 77).")]));
-bodyChildren.push(figure("/home/z/my-project/data/azure_demand/chart1_profile_now.png", 560));
+bodyChildren.push(figure(path.join(ROOT, "data", "azure_demand", "chart1_profile_now.png"), 560));
 bodyChildren.push(caption("Figure 1: Requirement profile of the 77 active Systemintegration postings, Erlangen 50 km, 30 October 2026 (share of postings per keyword family; n = absolute count)."));
 bodyChildren.push(body([t("The profile matches the textbook Systemintegration job: classical network and client-server administration on the ground floor, with the Microsoft cloud layer (Azure, M365, Intune) already present in one posting in four. A certification plan that certifies exactly this layer therefore addresses the single most sharply growing sub-demand in the corpus.")], { after: 200 }));
 bodyChildren.push(h2("4.2  Concentration on the target role"));
 bodyChildren.push(body([t("The decisive comparison is against the regional baseline. Across all professions (Corpus H), Microsoft/cloud skills appear in 3.4% of postings. Within the FISI-relevant titles of the same corpus the share rises to 14.5%, and in the currently active, role-filtered pipeline (Corpus N) to "), b("23.4%"), t(" - a sevenfold concentration from baseline to target role (Figure 2). In other words: an Azure certification is not a general-purpose credential in the Erlangen region; it is a targeted credential whose value concentrates precisely in the occupational niche the applicant is entering.")]));
-bodyChildren.push(figure("/home/z/my-project/data/azure_demand/chart2_concentration.png", 540));
+bodyChildren.push(figure(path.join(ROOT, "data", "azure_demand", "chart2_concentration.png"), 540));
 bodyChildren.push(caption("Figure 2: Share of postings requiring Azure, cloud or Microsoft-stack skills, by corpus. Baseline: all professions (n = 1,977 text-bearing postings); middle: FISI-relevant titles within the baseline (n = 76); right: active Systemintegration pipeline (n = 77)."));
 bodyChildren.push(h2("4.3  Employer evidence"));
 bodyChildren.push(body([t("Three currently active postings name Azure explicitly. All three are direct or verifiable employers with published contact channels (phone and/or application e-mail); their verbatim requirement wording is reproduced below so that the evidence can be checked against the original postings.")]));

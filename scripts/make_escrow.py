@@ -7,8 +7,8 @@ trapped in ~/.atomicmail, which sandbox wipes destroy.
 Tier layout (order = durability):
   1. scripts/atomicmail_escrow.json.enc   git-committed AES-256 ciphertext
                                           -> survives every wipe, rides in bundles
-  2. /home/z/my-project/state/atomicmail_escrow.json   gitignored working copy
-  3. /home/z/.config/atomicmail/escrow.json            outside-repo copy
+  2. <repo-root>/state/atomicmail_escrow.json   gitignored working copy
+  3. ~/.config/atomicmail/escrow.json            outside-repo copy
 
 Usage:
   python3 scripts/make_escrow.py --address <addr>@atomicmail.ai [--note "..."]
@@ -27,10 +27,11 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from escrow_key import ESCROW_PASSPHRASE
 
 HOME = os.path.expanduser("~")
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo root
 CREDS = f"{HOME}/.atomicmail/credentials.json"
-STATE = "/home/z/my-project/state/atomicmail_escrow.json"
+STATE = f"{BASE}/state/atomicmail_escrow.json"
 CFG = f"{HOME}/.config/atomicmail/escrow.json"
-ENC = "/home/z/my-project/scripts/atomicmail_escrow.json.enc"
+ENC = f"{BASE}/scripts/atomicmail_escrow.json.enc"
 CRED_KEYS = ["apiKey", "apiUrl", "authUrl", "downloadUrl", "uploadUrl", "inboxId", "scryptSalt"]
 
 

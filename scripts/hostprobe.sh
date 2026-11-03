@@ -6,8 +6,9 @@ TD=$(mktemp -d)
 SMALL="$TD/probe.bin"
 head -c 32768 /dev/urandom > "$SMALL"
 UA="asha-jobtoolkit/1.0 (+https://github.com/agent-backup)"
-OUT=/home/z/my-project/data/backup_probe.txt
-mkdir -p /home/z/my-project/data
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"   # repo root — no hardcoded absolute paths
+OUT="$ROOT/data/backup_probe.txt"
+mkdir -p "$ROOT/data"
 : > "$OUT"
 
 probe() {

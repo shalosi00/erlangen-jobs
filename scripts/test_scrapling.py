@@ -6,7 +6,9 @@ t0 = time.time()
 from scrapling import Selector
 
 # find a real kimeta SERP capture
-candidates = [c for c in glob.glob("/home/z/my-project/research/aggregators-round2/probe/*kimeta*.html")
+import os
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+candidates = [c for c in glob.glob(f"{BASE}/research/aggregators-round2/probe/*kimeta*.html")
               if "503" not in c]
 print("evidence files:", candidates)
 html = open(candidates[0], encoding="utf-8", errors="ignore").read()

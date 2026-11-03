@@ -1,4 +1,5 @@
-erlangen-jobs 1.1.1 (2026-11-03)
+erlangen-jobs 1.1.2 (2026-11-04)
 pipeline: sweep -> merge+prefilter -> rail-corridor geo -> fetch-desc -> enrich-geo -> build-map
 network: strict no-direct proxy pool
 lint: ruff baseline (live code: pipeline/ tests/ core scripts) — clean
+portability: zero hardcoded /home/z paths — all scripts/pipeline derive repo root from __file__

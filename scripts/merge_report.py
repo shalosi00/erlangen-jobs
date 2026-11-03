@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+import os
+
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # -*- coding: utf-8 -*-
 """Merge cover + body into the final deliverable PDF."""
 from pypdf import PdfReader, PdfWriter
@@ -12,9 +15,9 @@ def normalize(page):
     return page
 
 writer = PdfWriter()
-cover = PdfReader("/home/z/my-project/scripts/out/cover.pdf").pages[0]
+cover = PdfReader(f"{BASE}/scripts/out/cover.pdf").pages[0]
 writer.add_page(normalize(cover))
-for p in PdfReader("/home/z/my-project/scripts/out/body.pdf").pages:
+for p in PdfReader(f"{BASE}/scripts/out/body.pdf").pages:
     writer.add_page(normalize(p))
 writer.add_metadata({
     "/Title": "Programmatic Job Hunting in Germany",
@@ -22,7 +25,7 @@ writer.add_metadata({
     "/Creator": "Z.ai",
     "/Subject": "Verified APIs, feeds and automation recipes for a fast first job in Systemintegration",
 })
-out = "/home/z/my-project/download/Programmatic_Job_Hunting_Germany_Systemintegration.pdf"
+out = f"{BASE}/download/Programmatic_Job_Hunting_Germany_Systemintegration.pdf"
 with open(out, "wb") as f:
     writer.write(f)
 print("merged ->", out, "pages:", len(writer.pages))

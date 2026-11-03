@@ -44,11 +44,13 @@ token = m.group(1)
 print(f"[+] surge token: {token}", flush=True)
 
 # ---- 3. deploy (new domain; remove stale CNAME) ----
-if os.path.exists("/home/z/my-project/site/CNAME"):
-    os.remove("/home/z/my-project/site/CNAME")
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+if os.path.exists(f"{BASE}/site/CNAME"):
+    os.remove(f"{BASE}/site/CNAME")
 DOMAIN = "asha-fisi-jobtoolkit.surge.sh"
 env = {**os.environ, "SURGE_LOGIN": email, "SURGE_TOKEN": token}
-res = subprocess.run(["npx", "-y", "surge", "/home/z/my-project/site", DOMAIN],
+res = subprocess.run(["npx", "-y", "surge", f"{BASE}/site", DOMAIN],
                      env=env, text=True, capture_output=True, timeout=280)
 out = (res.stdout or "") + (res.stderr or "")
 print("[deploy tail]", out.strip()[-300:].replace("\n", " | "), flush=True)
@@ -78,5 +80,5 @@ else:
 
 json.dump({"email": email, "password": pwd, "mailtm_token": mtok,
            "surge_token": token, "site": f"https://{DOMAIN}/"},
-          open("/home/z/my-project/backups/surge_account.json", "w"), indent=2)
+          open(f"{BASE}/backups/surge_account.json", "w"), indent=2)
 print(f"[+] DONE — site: https://{DOMAIN}/  (creds in backups/surge_account.json)", flush=True)

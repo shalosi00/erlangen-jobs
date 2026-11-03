@@ -7,11 +7,13 @@ const {
   TableLayoutType, SectionType, TableOfContents,
 } = require("docx");
 const fs = require("fs");
+const path = require("path");
 const { imageSize } = require("image-size");
 
-const OUT_MAIN = "/home/z/my-project/download/Azure_Cloud_Demand_Justification_Bildungsgutschein_2026-10-30.docx";
-const CH1 = "/home/z/my-project/data/azure_demand/chart1_profile_now.png";
-const CH2 = "/home/z/my-project/data/azure_demand/chart2_concentration.png";
+const ROOT = path.resolve(__dirname, "..");  // repo root — no hardcoded absolute paths
+const OUT_MAIN = path.join(ROOT, "download", "Azure_Cloud_Demand_Justification_Bildungsgutschein_2026-10-30.docx");
+const CH1 = path.join(ROOT, "data", "azure_demand", "chart1_profile_now.png");
+const CH2 = path.join(ROOT, "data", "azure_demand", "chart2_concentration.png");
 
 // ── DM-1 palette (design-system.md) ──
 const P = {

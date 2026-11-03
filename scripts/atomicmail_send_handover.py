@@ -2,7 +2,7 @@
 """Email the AI-agent handover document (with credentials escrow) to skorry@atomicmail.io."""
 import json, subprocess, os
 
-BASE = "/home/z/my-project"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOC = f"{BASE}/download/AI_AGENT_HANDOVER_20261014.md"
 OPS = f"{BASE}/scripts/atomicmail_handover_ops.json"
 

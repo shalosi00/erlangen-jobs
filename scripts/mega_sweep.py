@@ -29,8 +29,8 @@ import time
 import unicodedata
 from datetime import datetime, timezone
 
-sys.path.insert(0, "/home/z/my-project")
-BASE = "/home/z/my-project"
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = f"{BASE}/data/mega_sweep"
 PORTALS_DIR = f"{DATA}/portals"
 TS = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M")
@@ -198,7 +198,7 @@ def stage_enrich():
 
 # ---------------------------------------------------------------- stage: portals
 def stage_portals():
-    cmd = ["/home/z/.venv/bin/python", "-m", "pipeline", "fetch",
+    cmd = [sys.executable, "-m", "pipeline", "fetch",
            "--query", "Fachinformatiker Systemintegration",
            "--city", "Nürnberg", "--radius", "100", "--days", "30",
            "--max-per-source", "300", "--max-pages", "4", "--polite", "0.9",

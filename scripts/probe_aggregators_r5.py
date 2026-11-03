@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """Round-5: final endpoint verification per site."""
 import json, re, requests
+import os
+
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
 H = {"User-Agent": UA, "Accept-Language": "de-DE,de;q=0.9,en;q=0.5"}
-P = "/home/z/my-project/research/aggregators-round2/probe"
+P = f"{BASE}/research/aggregators-round2/probe"
 
 def get(url, **kw):
     try:

@@ -3,7 +3,7 @@ Load jobs_latest.json -> upsert into data/jobs_history.db (pk = dedupe key)
 -> simulate a SECOND run with 1 changed + 1 new row -> verify first_seen stays,
 last_seen updates, and FTS search works."""
 import json, os, sys
-sys.path.insert(0, "/home/z/my-project")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from sqlite_utils import Database
 from pipeline.core import title_key, norm_txt
 
@@ -11,7 +11,9 @@ DB_PATH = "/tmp/smoke_history.db"   # throwaway; production = data/jobs_history.
 if os.path.exists(DB_PATH):
     os.remove(DB_PATH)
 
-rows = json.load(open("/home/z/my-project/download/jobs_latest.json", encoding="utf-8"))
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+rows = json.load(open(f"{BASE}/download/jobs_latest.json", encoding="utf-8"))
 print(f"input postings: {len(rows)}")
 
 def to_record(r, day):

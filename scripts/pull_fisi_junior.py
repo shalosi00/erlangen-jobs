@@ -2,9 +2,10 @@
 """Production pull #1: FISI / junior-first-job postings, Erlangen +50 km, last 14 days.
 Sources: BA Jobsuche v6 (exact radius), JobSpy->Indeed DE + LinkedIn guest, Arbeitnow.
 Read-only, low volume, no credentials. Output: merged CSV sorted by date desc."""
+import os
 import json, re, time, datetime, unicodedata, io, sys, csv
 
-BASE = "/home/z/my-project"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_CSV = f"{BASE}/download/fisi_junior_erlangen50km_last14d.csv"
 CUTOFF = datetime.date.today() - datetime.timedelta(days=14)
 DAYS = 14

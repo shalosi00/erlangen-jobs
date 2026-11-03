@@ -5,7 +5,15 @@ Sheets: Übersicht | Master | Live & erntbar | Blockiert & legacy | Integrations
 import json, sys, os
 from datetime import datetime
 
-SKILL = "/home/z/my-project/skills/xlsx"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+SKILL = (os.environ.get("XLSX_SKILL_DIR")  # explicit override wins
+         or os.path.join(BASE, "skills", "xlsx"))
+if not os.path.isdir(SKILL):
+    # legacy sandbox layout: repo clone lives inside the project that carries skills/
+    _legacy = os.path.abspath(os.path.join(BASE, os.pardir, os.pardir, "skills", "xlsx"))
+    if os.path.isdir(_legacy):
+        SKILL = _legacy
 for p in (SKILL, os.path.join(SKILL, "templates")):
     if p not in sys.path:
         sys.path.insert(0, p)
@@ -13,8 +21,8 @@ from base import *  # design tokens + helpers
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment
 
-SRC = "/home/z/my-project/data/portals/portal_scan_final_20261030-1716.json"
-OUT = "/home/z/my-project/download/jobportals_deutschland_2026-10-31.xlsx"
+SRC = f"{BASE}/data/portals/portal_scan_final_20261030-1716.json"
+OUT = f"{BASE}/download/jobportals_deutschland_2026-10-31.xlsx"
 
 data = json.load(open(SRC))["results"]
 rows = [dict(name=r["name"], url=r.get("final_url") or r["url"], url0=r["url"], cat=r["category"],

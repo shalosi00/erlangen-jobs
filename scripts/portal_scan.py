@@ -5,10 +5,12 @@ concurrently: HTTP status, WAF/block detection, title, redirect target.
 Output: data/portals/portal_scan_<ts>.json + .csv
 """
 import concurrent.futures as cf
-import csv, json, re, ssl, sys, time
+import csv, json, os, re, ssl, sys, time
 from datetime import datetime
 from urllib.parse import urlparse
 import requests
+
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
@@ -252,10 +254,10 @@ def main():
     for r in dead:
         print(f"  [{r['category']:9}] {r['name']:32} {r['status']}")
     import os
-    os.makedirs("/home/z/my-project/data/portals", exist_ok=True)
-    jf = f"/home/z/my-project/data/portals/portal_scan_{ts}.json"
+    os.makedirs(f"{BASE}/data/portals", exist_ok=True)
+    jf = f"{BASE}/data/portals/portal_scan_{ts}.json"
     json.dump({"ts": ts, "count": len(SEEDS), "results": results}, open(jf, "w"), ensure_ascii=False, indent=1)
-    cf_path = f"/home/z/my-project/data/portals/portal_scan_{ts}.csv"
+    cf_path = f"{BASE}/data/portals/portal_scan_{ts}.csv"
     with open(cf_path, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=["name", "url", "category", "access_hint", "status", "http", "waf", "title", "in_pipeline", "note"])
         w.writeheader()

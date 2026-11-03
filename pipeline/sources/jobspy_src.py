@@ -1,6 +1,7 @@
 """Indeed DE + LinkedIn guest via python-jobspy (optional dependency).
 Runs in-process; if the lib is missing the runner records a SKIP with install hint."""
 import re
+import sys
 
 from pipeline.core import Job, SourceError, parse_date
 from pipeline.sources._base import register
@@ -11,7 +12,7 @@ try:
 except Exception:
     HAS_JOBSPY = False
 
-SKIP_MSG = "python-jobspy not installed -> run: /home/z/.venv/bin/pip3 install python-jobspy"
+SKIP_MSG = f"python-jobspy not installed -> run: {sys.executable} -m pip install python-jobspy"
 
 def _is_near(ctx, text: str) -> bool:
     return bool(ctx.near_re and ctx.near_re.search(text or ""))

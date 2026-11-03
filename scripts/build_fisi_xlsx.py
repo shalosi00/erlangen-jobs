@@ -3,7 +3,15 @@
 Sheets: Postings (sorted by date desc) / Summary (live COUNTIF) / Review (cross-checks)."""
 import sys, os, csv, datetime
 
-XLSX_SKILL_DIR = "/home/z/my-project/skills/xlsx"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+XLSX_SKILL_DIR = (os.environ.get("XLSX_SKILL_DIR")  # explicit override wins
+                  or os.path.join(BASE, "skills", "xlsx"))
+if not os.path.isdir(XLSX_SKILL_DIR):
+    # legacy sandbox layout: repo clone lives inside the project that carries skills/
+    _legacy = os.path.abspath(os.path.join(BASE, os.pardir, os.pardir, "skills", "xlsx"))
+    if os.path.isdir(_legacy):
+        XLSX_SKILL_DIR = _legacy
 for sub in [XLSX_SKILL_DIR, os.path.join(XLSX_SKILL_DIR, "templates")]:
     if sub not in sys.path: sys.path.insert(0, sub)
 import base  # design tokens - single source of truth
@@ -11,8 +19,8 @@ from openpyxl import Workbook
 from openpyxl.styles import Font, Alignment
 from openpyxl.utils import get_column_letter
 
-CSV_IN = "/home/z/my-project/download/fisi_junior_erlangen50km_last14d.csv"
-OUT = "/home/z/my-project/download/FISI_Junior_Postings_Erlangen50km_2weeks.xlsx"
+CSV_IN = f"{BASE}/download/fisi_junior_erlangen50km_last14d.csv"
+OUT = f"{BASE}/download/FISI_Junior_Postings_Erlangen50km_2weeks.xlsx"
 
 rows = list(csv.DictReader(open(CSV_IN, encoding="utf-8")))
 rows.sort(key=lambda r: r["date_posted"], reverse=True)

@@ -11,7 +11,9 @@ from curl_cffi import requests as cr
 
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
-DATA = "/home/z/my-project/data/proxies/validated_proxies.json"
+import os
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA = f"{BASE}/data/proxies/validated_proxies.json"
 
 def load_proxies(field, n=6):
     rows = json.load(open(DATA))
@@ -45,7 +47,7 @@ def main():
             if code == 200 and len(html) > 50000:
                 wins += 1
                 if wins == 1:
-                    open("/home/z/my-project/data/proxies/kimeta_sample.html", "w").write(html)
+                    open(f"{BASE}/data/proxies/kimeta_sample.html", "w").write(html)
         except Exception as e:
             print(f"  {p['protocol']:>6} {p['host']}:{p['port']} -> ERR {type(e).__name__}")
 
@@ -64,7 +66,7 @@ def main():
             if code == 200 and len(html) > 50000:
                 wins2 += 1
                 if wins2 == 1:
-                    open("/home/z/my-project/data/proxies/stellenanzeigen_sample.html", "w").write(html)
+                    open(f"{BASE}/data/proxies/stellenanzeigen_sample.html", "w").write(html)
         except Exception as e:
             print(f"  {p['protocol']:>6} {p['host']}:{p['port']} -> ERR {type(e).__name__}")
 
@@ -83,7 +85,7 @@ def main():
                 print(f"  {name:<16} impersonate={imp} -> {r.status_code} {lat}ms len={len(r.text)} "
                       f"JobPosting={r.text.count('JobPosting')}")
                 if r.status_code == 200 and len(r.text) > 50000:
-                    open(f"/home/z/my-project/data/proxies/curlcffi_{name}_{imp}.html", "w").write(r.text)
+                    open(f"{BASE}/data/proxies/curlcffi_{name}_{imp}.html", "w").write(r.text)
                 break
             except Exception as e:
                 print(f"  {name:<16} impersonate={imp} -> ERR {type(e).__name__}: {str(e)[:60]}")

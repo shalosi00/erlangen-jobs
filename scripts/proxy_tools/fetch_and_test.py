@@ -29,12 +29,15 @@ import time
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
+import os
+
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 import requests
 
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"}
-OUT_DIR = Path("/home/z/my-project/data/proxies")
+OUT_DIR = Path(f"{BASE}/data/proxies")
 PRINT_LOCK = threading.Lock()
 
 # (repo, proto, raw_url, format, cap)

@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """merge_3a.py — insert cover as page 0 of body, normalize to A4, write metadata."""
+import os
 from pypdf import PdfReader, PdfWriter
 
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 A4_W, A4_H = 595.28, 841.89
-COVER = "/home/z/my-project/scripts/out/cover_3a.pdf"
-BODY = "/home/z/my-project/scripts/out/body_3a.pdf"
-OUT = "/home/z/my-project/download/reports/Job_Search_Methodology_and_Results_Organization_2026-10-15.pdf"
+COVER = f"{BASE}/scripts/out/cover_3a.pdf"
+BODY = f"{BASE}/scripts/out/body_3a.pdf"
+OUT = f"{BASE}/download/reports/Job_Search_Methodology_and_Results_Organization_2026-10-15.pdf"
 TITLE = "Job Search Methodology and Results Organization"
 
 

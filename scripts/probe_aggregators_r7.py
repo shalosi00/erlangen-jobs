@@ -6,7 +6,9 @@ import json, time, requests
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
       "Accept-Language": "de-DE,de;q=0.9,en;q=0.5"}
-OUT = "/home/z/my-project/research/aggregators-round2/probe/"
+import os
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT = f"{BASE}/research/aggregators-round2/probe/"
 results = []
 
 def probe(name, method, url, save=None, **kw):

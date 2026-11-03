@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """Merge cover + body with cover rescaled to exact body A4 dims."""
 from pypdf import PdfReader, PdfWriter, Transformation
+import os
+
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 BODY = "/tmp/addendum_v11_body.pdf"
 COVER = "/tmp/cover_v11.pdf"
-OUT = "/home/z/my-project/download/FISI_Toolkit_Report_v1.1_Addendum_20261014.pdf"
+OUT = f"{BASE}/download/FISI_Toolkit_Report_v1.1_Addendum_20261014.pdf"
 
 body = PdfReader(BODY)
 cover = PdfReader(COVER)

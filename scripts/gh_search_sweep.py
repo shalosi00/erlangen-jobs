@@ -3,7 +3,9 @@
 Unauthenticated: 10 search calls/min — we use 8, keeping 2 spare."""
 import json, urllib.request, urllib.parse, time, os
 
-OUT = "/home/z/my-project/research/github-repos/gh_search"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+OUT = f"{BASE}/research/github-repos/gh_search"
 os.makedirs(OUT, exist_ok=True)
 H = {"Accept": "application/vnd.github+json", "User-Agent": "jobhunt-research"}
 

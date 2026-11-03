@@ -22,7 +22,15 @@ import hashlib
 import os
 import sys
 
-PDF_SKILL_DIR = "/home/z/my-project/skills/pdf"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+PDF_SKILL_DIR = (os.environ.get("PDF_SKILL_DIR")  # explicit override wins
+                 or os.path.join(BASE, "skills", "pdf"))
+if not os.path.isdir(PDF_SKILL_DIR):
+    # legacy sandbox layout: repo clone lives inside the project that carries skills/
+    _legacy = os.path.abspath(os.path.join(BASE, os.pardir, os.pardir, "skills", "pdf"))
+    if os.path.isdir(_legacy):
+        PDF_SKILL_DIR = _legacy
 sys.path.insert(0, os.path.join(PDF_SKILL_DIR, "scripts"))
 
 from reportlab.lib import colors
@@ -75,7 +83,7 @@ PAGE_W, PAGE_H = A4
 AVAIL_W = PAGE_W - 2 * MARGIN
 AVAIL_H = PAGE_H - 2 * MARGIN
 H1_COND = AVAIL_H * 0.25
-OUT = "/home/z/my-project/scripts/out/body_3a.pdf"
+OUT = f"{BASE}/scripts/out/body_3a.pdf"
 TITLE = "Job Search Methodology and Results Organization"
 
 # ------------------------------------------------------------------ styles
@@ -294,7 +302,7 @@ story.append(P(
     "system, meaning most applications are machine-filtered before a human reads anything; visibility "
     "is a numbers problem before it is a charm problem."))
 story.append(Spacer(1, 24))
-_img = fit_image("/home/z/my-project/scripts/out/funnel_base_rates.png",
+_img = fit_image(f"{BASE}/scripts/out/funnel_base_rates.png",
                  AVAIL_W * 0.92, A4[1] * 0.28)
 story.append(KeepTogether([
     _img,

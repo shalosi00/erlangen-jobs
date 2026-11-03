@@ -96,7 +96,9 @@ if r.status_code not in (200, 201):
 out = {"email": email, "email_password": pwd, "codeberg_user": cb_user,
        "codeberg_password": cb_pass,
        "push_url": f"https://{cb_user}:{cb_pass}@codeberg.org/{cb_user}/jobtoolkit.git"}
-with open("/home/z/my-project/backups/codeberg_account.json", "w") as f:
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+with open(f"{BASE}/backups/codeberg_account.json", "w") as f:
     json.dump(out, f, indent=2)
 print("[+] SUCCESS — credentials saved to backups/codeberg_account.json", flush=True)
 print(json.dumps({k: v for k, v in out.items() if "password" not in k}, indent=2))

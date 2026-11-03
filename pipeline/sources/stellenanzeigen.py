@@ -13,6 +13,8 @@ Requires curl_cffi (TLS fingerprint passes the WAF; plain requests gets 403).
 """
 from __future__ import annotations
 
+import sys
+
 from pipeline.core import Job, SourceError, parse_date
 from pipeline.sources._base import register
 
@@ -32,8 +34,8 @@ NATIONAL_DISTANCE = 3500.0  # sentinel the API returns when a job has no geo
 
 def _cffi_get(ctx, url: str):
     if cr is None:
-        raise SourceError("auth", "curl_cffi not installed -> run: "
-                          "/home/z/.venv/bin/python -m pip install curl_cffi")
+        raise SourceError("auth", f"curl_cffi not installed -> run: "
+                          f"{sys.executable} -m pip install curl_cffi")
     try:
         r = cr.get(url, impersonate="chrome124", timeout=ctx.timeout, headers=HEADERS)
     except Exception as e:

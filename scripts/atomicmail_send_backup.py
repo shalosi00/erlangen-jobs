@@ -2,7 +2,7 @@
 """Send verified v6 bundle mirror links via Atomic Mail JMAP to skorry@atomicmail.io."""
 import json, subprocess, os
 
-BASE = "/home/z/my-project"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OPS = f"{BASE}/scripts/atomicmail_backup_ops.json"
 
 BODY = """Hi Asha,

@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Task 19 email: mail channel is now wipe-proof (escrow + automatic recovery)."""
+import os
 import json
 import subprocess
 
-BASE = "/home/z/my-project"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OPS = f"{BASE}/scripts/atomicmail_escrow_ops.json"
 
 BODY = """Hi Asha,

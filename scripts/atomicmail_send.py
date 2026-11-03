@@ -2,7 +2,7 @@
 """Send Asha's FISI job-toolkit deliverables via Atomic Mail JMAP to skorry@atomicmail.io."""
 import json, subprocess, sys, os
 
-BASE = "/home/z/my-project"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CSV = f"{BASE}/download/jobs_fachinformatiker-systemintegration-erlangen-50km-14d_20261013-1952.csv"
 JSN = f"{BASE}/download/jobs_fachinformatiker-systemintegration-erlangen-50km-14d_20261013-1952.json"
 PDF = f"{BASE}/download/Programmatic_Job_Hunting_Germany_Systemintegration.pdf"

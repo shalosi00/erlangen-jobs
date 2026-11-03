@@ -10,9 +10,12 @@ import sys
 import time
 import urllib.request
 import uuid
+import os
 
-BUNDLE = "/home/z/my-project/backups/asha-jobtoolkit-v21.bundle"
-OUTJSON = "/home/z/my-project/data/gofile_v21.json"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+BUNDLE = f"{BASE}/backups/asha-jobtoolkit-v21.bundle"
+OUTJSON = f"{BASE}/data/gofile_v21.json"
 UA = "Mozilla/5.0 (X11; Linux x86_64) asha-jobtoolkit/19"
 
 

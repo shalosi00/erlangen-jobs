@@ -3,12 +3,13 @@
 Reuses the proven daily-send mechanism (ops template + --attachment).
 Run scripts/atomicmail_recover.py FIRST (standing rule before any email work).
 """
+import os
 import json
 import subprocess
 import sys
 from pathlib import Path
 
-BASE = "/home/z/my-project"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OPS = f"{BASE}/scripts/atomicmail_daily_ops.json"
 PDF = f"{BASE}/download/Certificate_Roadmap_Erlangen_Corpus_2026-10-30.pdf"
 DOCX = f"{BASE}/download/Certificate_Roadmap_Erlangen_Corpus_2026-10-30.docx"

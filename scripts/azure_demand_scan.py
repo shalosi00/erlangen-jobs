@@ -23,10 +23,10 @@ import sys
 from collections import Counter
 from datetime import datetime, timezone
 
-sys.path.insert(0, "/home/z/my-project")
-sys.path.insert(0, "/home/z/my-project/scripts")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-BASE = "/home/z/my-project"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = f"{BASE}/data/azure_demand"
 os.makedirs(OUT, exist_ok=True)
 TS = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M")

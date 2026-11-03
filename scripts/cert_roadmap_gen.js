@@ -5,11 +5,13 @@ const {
   Document, Packer, Paragraph, TextRun, PageBreak, Header, Footer, PageNumber, NumberFormat,
   AlignmentType, SectionType,
   P, h1, h2, body, b, t, it, caption, figure, table, tableTitle,
-} = require("/home/z/my-project/scripts/azure_report_lib.js");
+} = require("./azure_report_lib.js");
 const fs = require("fs");
+const path = require("path");
 
-const OUT = "/home/z/my-project/download/Certificate_Roadmap_Erlangen_Corpus_2026-10-30.docx";
-const CH3 = "/home/z/my-project/data/azure_demand/chart3_skill_stacks.png";
+const ROOT = path.resolve(__dirname, "..");  // repo root — no hardcoded absolute paths
+const OUT = path.join(ROOT, "download", "Certificate_Roadmap_Erlangen_Corpus_2026-10-30.docx");
+const CH3 = path.join(ROOT, "data", "azure_demand", "chart3_skill_stacks.png");
 
 const pgSize = { width: 11906, height: 16838 };
 const pgMargin = { top: 1440, bottom: 1440, left: 1701, right: 1417 };

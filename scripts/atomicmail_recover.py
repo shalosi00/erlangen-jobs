@@ -3,8 +3,8 @@
 
 Restores ~/.atomicmail from the escrow tiers (order = durability):
   1. git-committed ciphertext  scripts/atomicmail_escrow.json.enc  (survives every wipe)
-  2. /home/z/my-project/state/atomicmail_escrow.json               (gitignored)
-  3. /home/z/.config/atomicmail/escrow.json                        (outside repo)
+  2. <repo-root>/state/atomicmail_escrow.json                      (gitignored)
+  3. ~/.config/atomicmail/escrow.json                             (outside repo)
 
 then LIVE-VERIFIES the escrowed apiKey through the real auth chain
 (`atomicmail register --api-key ...` = challenge -> PoW -> session ->
@@ -29,7 +29,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from escrow_key import ESCROW_PASSPHRASE
 
 HOME = os.path.expanduser("~")
-BASE = "/home/z/my-project"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # repo root
 AM_DIR = f"{HOME}/.atomicmail"
 CREDS = f"{AM_DIR}/credentials.json"
 STATE = f"{BASE}/state/atomicmail_escrow.json"

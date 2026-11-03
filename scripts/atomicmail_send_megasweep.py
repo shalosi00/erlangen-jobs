@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Send the MEGA SWEEP results via Atomic Mail JMAP (reuses daily ops template).
 Run scripts/atomicmail_recover.py first (standing rule)."""
+import os
 import json
 import subprocess
 import sys
 from pathlib import Path
 
-BASE = "/home/z/my-project"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OPS = f"{BASE}/scripts/atomicmail_daily_ops.json"
 D = f"{BASE}/download/mega_sweep_2026-10-30"
 ATT = [f"{D}/mega_sweep_summary_20261030-1638.md",
@@ -57,6 +58,7 @@ volume therefore leans on the BA API (the largest, cleanest source anyway).
 
 - Asha's job-toolkit agent (2026-10-30)
 """
+import os
 
 attachments = [p for p in ATT if Path(p).exists()]
 if len(attachments) != 3:

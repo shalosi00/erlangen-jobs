@@ -8,6 +8,9 @@ import concurrent.futures as cf
 import csv, glob, json, random, re, time
 from datetime import datetime
 import requests, urllib3
+import os
+
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 urllib3.disable_warnings()
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -17,7 +20,7 @@ HDRS = {"User-Agent": UA, "Accept": "text/html,application/xhtml+xml,application
 WAF_PAT = re.compile(r"Just a moment|Attention Required|Access denied|captcha|challenge-platform|cf-browser-verification", re.I)
 TITLE_PAT = re.compile(r"<title[^>]*>(.*?)</title>", re.I | re.S)
 
-src = sorted(glob.glob("/home/z/my-project/data/portals/portal_scan_*.json"))[-1]
+src = sorted(glob.glob(f"{BASE}/data/portals/portal_scan_*.json"))[-1]
 scan = json.load(open(src))
 results = scan["results"]
 ts = datetime.now().strftime("%Y%m%d-%H%M")
@@ -96,7 +99,7 @@ with cf.ThreadPoolExecutor(max_workers=8) as ex:
 print(f"  pass1 done in {time.time()-t1:.0f}s", flush=True)
 
 # ---------- pass2: proxy retry for WAF blocks ----------
-pool = json.load(open("/home/z/my-project/data/proxies/validated_proxies.json"))
+pool = json.load(open(f"{BASE}/data/proxies/validated_proxies.json"))
 unlockers = [f"{p['protocol']}://{p['host']}:{p['port']}" for p in pool if p.get("kimeta_ok") or p.get("stellenanzeigen_ok")]
 rest = [f"{p['protocol']}://{p['host']}:{p['port']}" for p in pool if not (p.get("kimeta_ok") or p.get("stellenanzeigen_ok"))]
 random.seed(42)
@@ -139,9 +142,9 @@ print(f"\nSTILL BLOCKED after proxy ({len(strict)}):")
 for r in strict:
     print(f"  {r['name']:34} {r['url'][:60]}")
 
-jf = f"/home/z/my-project/data/portals/portal_scan_final_{ts}.json"
+jf = f"{BASE}/data/portals/portal_scan_final_{ts}.json"
 json.dump({"ts": ts, "count": len(results), "results": results}, open(jf, "w"), ensure_ascii=False, indent=1)
-cf_path = f"/home/z/my-project/data/portals/portal_scan_final_{ts}.csv"
+cf_path = f"{BASE}/data/portals/portal_scan_final_{ts}.csv"
 with open(cf_path, "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=["name", "url", "category", "access_hint", "status", "http", "waf", "title", "via_proxy", "in_pipeline", "note"])
     w.writeheader()

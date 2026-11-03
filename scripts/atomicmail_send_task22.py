@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Task 22 email: per-link verified entry-level FISI list to skorry@atomicmail.io."""
+import os
 import json
 import subprocess
 
-BASE = "/home/z/my-project"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OPS = f"{BASE}/scripts/atomicmail_task22_ops.json"
 CSV_OK = f"{BASE}/download/verified/2026-10-26/task22_entry_ok.csv"
 JSN = f"{BASE}/download/verified/2026-10-26/task22_linkcheck.json"

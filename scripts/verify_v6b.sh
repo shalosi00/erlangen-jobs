@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # Verify round 2: x0.at full (http1.1 + resume), litterbox ranged, filebin 2-step cookies.
 set -u
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"   # repo root — no hardcoded absolute paths
 V=/tmp/v6verify; mkdir -p $V; rm -f $V/*
-B=/home/z/my-project/backups/asha-jobtoolkit-20261014-v6.bundle
+B="$ROOT/backups/asha-jobtoolkit-20261014-v6.bundle"
 TARGET=cad0d21e3f2a9cc25b672d584a7dfe0f01ee2538e4eecbf30acd9ac0445953ef
 UA="asha-jobtoolkit/1.0"
 REF1MB=$(head -c 1048576 "$B" | sha256sum | cut -d' ' -f1)

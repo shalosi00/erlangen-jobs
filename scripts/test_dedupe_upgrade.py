@@ -6,8 +6,9 @@ Cases come from REAL production evidence:
      (different employers, GmbH-token trap)                        -> NO MERGE + FLAG
   D. rapidfuzz unavailable -> graceful Jaccard-only behavior           -> still works
 """
+import os
 import sys
-sys.path.insert(0, "/home/z/my-project")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from pipeline.core import Job, dedupe, canon_url
 import pipeline.core as core
 

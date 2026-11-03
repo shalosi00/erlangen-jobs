@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Upload v6 bundle to 3 agent-friendly hosts in parallel, then report.
-B=/home/z/my-project/backups/asha-jobtoolkit-20261014-v6.bundle
-LOG=/home/z/my-project/data/upload_logs
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"   # repo root — no hardcoded absolute paths
+B="$ROOT/backups/asha-jobtoolkit-20261014-v6.bundle"
+LOG="$ROOT/data/upload_logs"
 UA="asha-jobtoolkit/1.0 (+git bundle backup)"
 mkdir -p "$LOG"; rm -f "$LOG"/*.txt
 

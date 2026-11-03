@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """Parse raw web-search results -> unique GitHub repo candidates."""
 import json, re, glob, collections, os
+import os
 
-RAW = "/home/z/my-project/research/github-repos/raw"
-OUT = "/home/z/my-project/research/github-repos/candidates.json"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+RAW = f"{BASE}/research/github-repos/raw"
+OUT = f"{BASE}/research/github-repos/candidates.json"
 
 REPO_RE = re.compile(r"github\.com/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)", re.I)
 SKIP_PARTS = {"topics", "search", "features", "collections", "trending", "sponsors",

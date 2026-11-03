@@ -2,7 +2,7 @@
 """Task 18 completion email: fix campaign + report v1.1 addendum (attached) + v7 mirrors."""
 import json, subprocess, os
 
-BASE = "/home/z/my-project"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OPS = f"{BASE}/scripts/atomicmail_task18_ops.json"
 PDF = f"{BASE}/download/FISI_Toolkit_Report_v1.1_Addendum_20261014.pdf"
 

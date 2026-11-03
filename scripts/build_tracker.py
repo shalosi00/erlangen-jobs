@@ -15,9 +15,19 @@ import hashlib
 import sys
 from datetime import date, datetime
 from pathlib import Path
+import os
 
-sys.path.insert(0, "/home/z/my-project/skills/xlsx")
-sys.path.insert(0, "/home/z/my-project/skills/xlsx/templates")
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+XLSX_SKILL_DIR = (os.environ.get("XLSX_SKILL_DIR")  # explicit override wins
+                  or os.path.join(BASE, "skills", "xlsx"))
+if not os.path.isdir(XLSX_SKILL_DIR):
+    # legacy sandbox layout: repo clone lives inside the project that carries skills/
+    _legacy = os.path.abspath(os.path.join(BASE, os.pardir, os.pardir, "skills", "xlsx"))
+    if os.path.isdir(_legacy):
+        XLSX_SKILL_DIR = _legacy
+sys.path.insert(0, XLSX_SKILL_DIR)
+sys.path.insert(0, os.path.join(XLSX_SKILL_DIR, "templates"))
 
 import base  # skill design tokens / style factories
 from openpyxl import Workbook
@@ -33,11 +43,11 @@ from base import (  # noqa: E402  (import after palette switch)
     SECONDARY, auto_fit_columns,
 )
 
-OUT_DIR = Path("/home/z/my-project/download/tracker")
+OUT_DIR = Path(f"{BASE}/download/tracker")
 STAMP = date.today().isoformat()
 XLSX = OUT_DIR / f"application_tracker_{STAMP}.xlsx"
 CSV_TWIN = OUT_DIR / f"application_tracker_{STAMP}.csv"
-SEED = Path("/home/z/my-project/download/jobs_latest.csv")
+SEED = Path(f"{BASE}/download/jobs_latest.csv")
 
 STATUSES = ["discovered", "shortlisted", "applied", "interviewing", "offer", "closed", "rejected"]
 HEADERS = ["id", "company", "role", "city", "source", "transit", "first_seen",

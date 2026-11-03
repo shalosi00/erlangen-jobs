@@ -4,7 +4,7 @@ SAVED mail.tm mailbox, deploy, trigger verification, click the link."""
 import glob, json, os, re, subprocess, time
 import requests
 
-BASE = "/home/z/my-project"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 d = json.load(open(f"{BASE}/backups/surge_account.json"))
 email, pwd, mtok = d["email"], d["password"], d.get("mailtm_token")
 H = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) Chrome/127.0.0.0 Safari/537.36"}

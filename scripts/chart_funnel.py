@@ -8,6 +8,9 @@ in the PDF). Palette: cascade ACCENT / ACCENT_2.
 """
 import matplotlib
 import matplotlib.font_manager as fm
+import os
+
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 fm.fontManager.addfont('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf')
 
@@ -45,6 +48,6 @@ for bar, v in zip(bars, values[::-1]):
             str(v), va='center', ha='left', fontsize=12, color=TEXT,
             fontweight='bold', zorder=4)
 
-fig.savefig('/home/z/my-project/scripts/out/funnel_base_rates.png',
+fig.savefig(f"{BASE}/scripts/out/funnel_base_rates.png",
             facecolor='white')
 print('chart saved')

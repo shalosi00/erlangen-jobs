@@ -1,7 +1,8 @@
 #!/bin/bash
 # Wide net: find GitHub repos for programmatic job search.
 # Task 3-2 of worklog. Saves one JSON per query under research/github-repos/raw/
-OUT=/home/z/my-project/research/github-repos/raw
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"   # repo root — no hardcoded absolute paths
+OUT="$ROOT/research/github-repos/raw"
 mkdir -p "$OUT"
 
 declare -A Q=(

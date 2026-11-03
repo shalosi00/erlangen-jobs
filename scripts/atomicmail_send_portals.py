@@ -3,12 +3,13 @@
 Reuses the proven send mechanism (ops template + --attachment).
 Run scripts/atomicmail_recover.py FIRST (standing rule before any email work).
 """
+import os
 import json
 import subprocess
 import sys
 from pathlib import Path
 
-BASE = "/home/z/my-project"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OPS = f"{BASE}/scripts/atomicmail_daily_ops.json"
 XLSX = f"{BASE}/download/jobportals_deutschland_2026-10-31.xlsx"
 CSV = f"{BASE}/download/jobportals_scan_2026-10-31.csv"

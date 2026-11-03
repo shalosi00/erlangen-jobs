@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """Round-2 recon: find the real programmatic endpoints for alive aggregators."""
 import json, os, re, requests
+import os
 
-PROBE = "/home/z/my-project/research/aggregators-round2/probe"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+PROBE = f"{BASE}/research/aggregators-round2/probe"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
 H = {"User-Agent": UA, "Accept-Language": "de-DE,de;q=0.9,en;q=0.5"}
 
