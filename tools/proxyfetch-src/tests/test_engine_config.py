@@ -9,7 +9,7 @@ import threading
 
 import pytest
 
-from proxyfetch import asynchttp, cli, config, errors, supply, userconfig
+from proxyfetch import asynchttp, cli, errors, supply, userconfig
 from proxyfetch.config import Config
 from proxyfetch.logutil import Logger
 

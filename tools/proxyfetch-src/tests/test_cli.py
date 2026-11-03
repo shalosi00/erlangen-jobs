@@ -3,7 +3,7 @@ import json
 
 from proxyfetch import __version__
 from proxyfetch.cli import main
-from proxyfetch.errors import (EXIT_NO_RESULTS, EXIT_OK, EXIT_USAGE)
+from proxyfetch.errors import EXIT_NO_RESULTS, EXIT_OK, EXIT_USAGE
 
 
 class TestCli:

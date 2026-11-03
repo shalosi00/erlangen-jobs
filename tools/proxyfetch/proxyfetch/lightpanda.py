@@ -28,6 +28,7 @@ Page.javascriptDialogOpening) is stable CDP surface.
 """
 from __future__ import annotations
 
+import contextlib
 import json
 import os
 import shutil
@@ -39,8 +40,12 @@ import urllib.request
 from pathlib import Path
 
 __all__ = [
-    "find_binary", "lightpanda_available", "ensure_server",
-    "render", "stop_all", "WSClient",
+    "WSClient",
+    "ensure_server",
+    "find_binary",
+    "lightpanda_available",
+    "render",
+    "stop_all",
 ]
 
 # cookie-consent accept-all buttons, tried in order (walls hide the list
@@ -125,7 +130,7 @@ def cdp_alive(endpoint: str) -> bool:
 # server registry / lifecycle
 # --------------------------------------------------------------------------
 class _Server:
-    __slots__ = ("key", "endpoint", "proc", "log")
+    __slots__ = ("endpoint", "key", "log", "proc")
 
     def __init__(self, key, endpoint, proc, log):
         self.key, self.endpoint, self.proc, self.log = key, endpoint, proc, log
@@ -137,15 +142,11 @@ class _Server:
             self.proc.terminate()          # SIGTERM
             self.proc.wait(timeout=grace_s)
         except Exception:
-            try:
+            with contextlib.suppress(Exception):
                 self.proc.kill()
-            except Exception:
-                pass
         if self.log:
-            try:
+            with contextlib.suppress(Exception):
                 self.log.close()
-            except Exception:
-                pass
 
 
 _REGISTRY: dict[tuple, _Server] = {}      # (proxy, locale, tz) -> _Server
@@ -187,10 +188,11 @@ def _start_server(binary: str, key: tuple, proxy: str | None,
     # file that vanishes on close -- no /tmp litter from library use
     try:
         if os.environ.get("LIGHTPANDA_LOG"):
-            log: object = open(os.environ["LIGHTPANDA_LOG"], "ab",
+            # ownership passes to _Server; handle is closed in .stop()
+            log: object = open(os.environ["LIGHTPANDA_LOG"], "ab",  # noqa: SIM115
                                buffering=0)
         else:
-            log = tempfile.TemporaryFile()
+            log = tempfile.TemporaryFile()  # noqa: SIM115 -- same ownership
     except OSError:
         log = None
     try:
@@ -278,10 +280,9 @@ def ensure_server(proxy: str | None = None, *, locale: str | None = None,
         del _REGISTRY[key]
 
     srv = _start_server(binpath, key, proxy, locale, timezone)
-    if srv is None:
-        # every port held and nothing healthy: clear orphans, one retry
-        if _reap_orphans(binpath):
-            srv = _start_server(binpath, key, proxy, locale, timezone)
+    # every port held and nothing healthy: clear orphans, one retry
+    if srv is None and _reap_orphans(binpath):
+        srv = _start_server(binpath, key, proxy, locale, timezone)
     if srv is None:
         if logger:
             logger.debug("lightpanda: no server could be started "
@@ -348,7 +349,7 @@ class WSClient:
             self.buf += chunk
         head, self.buf = self.buf.split(b"\r\n\r\n", 1)
         if b" 101 " not in head.split(b"\r\n", 1)[0] + b" ":
-            raise IOError(f"ws: upgrade refused: {head[:80]!r}")
+            raise OSError(f"ws: upgrade refused: {head[:80]!r}")
         self._id = 0
         self._oob = 0
 
@@ -410,13 +411,11 @@ class WSClient:
         alert/confirm would block every later evaluate. Response is
         untracked (separate id range) and discarded on arrival."""
         self._oob += 1
-        try:
+        with contextlib.suppress(Exception):
             self.send_json({"id": 1_000_000 + self._oob,
                             "method": "Page.handleJavaScriptDialog",
                             "params": {"accept": False},
                             "sessionId": msg.get("sessionId")})
-        except Exception:
-            pass
 
     def _recv_guarded(self, timeout: float) -> dict:
         """recv_json, but auto-dismiss JS dialogs that arrive mid-wait."""
@@ -452,14 +451,10 @@ class WSClient:
                 return m
 
     def close(self) -> None:
-        try:
+        with contextlib.suppress(Exception):
             self._send_frame(0x8, b"")            # polite close
-        except Exception:
-            pass
-        try:
+        with contextlib.suppress(Exception):
             self.sock.close()
-        except Exception:
-            pass
 
 
 # --------------------------------------------------------------------------
@@ -526,12 +521,10 @@ def render(url: str, endpoint: str, *, timeout_s: float = RENDER_TIMEOUT_S,
 
         if consent:
             js = _CONSENT_JS % json.dumps(CONSENT_SELECTORS)
-            try:
+            with contextlib.suppress(Exception):
                 ws.call("Runtime.evaluate",
                         {"expression": js, "returnByValue": True},
                         session_id=sid, timeout=_left())
-            except Exception:
-                pass
         time.sleep(min(settle_ms / 1000.0, _left()))
 
         out = ws.call("Runtime.evaluate",
@@ -552,9 +545,7 @@ def render(url: str, endpoint: str, *, timeout_s: float = RENDER_TIMEOUT_S,
     finally:
         if ws is not None:
             if target:
-                try:
+                with contextlib.suppress(Exception):
                     ws.call("Target.closeTarget", {"targetId": target},
                             timeout=3.0)
-                except Exception:
-                    pass
             ws.close()

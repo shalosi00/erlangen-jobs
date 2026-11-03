@@ -1,5 +1,9 @@
-erlangen-jobs 1.1.2 (2026-11-04)
+erlangen-jobs 1.1.3 (2026-11-04)
 pipeline: sweep -> merge+prefilter -> rail-corridor geo -> fetch-desc -> enrich-geo -> build-map
 network: strict no-direct proxy pool
 lint: ruff baseline (live code: pipeline/ tests/ core scripts) — clean
 portability: zero hardcoded /home/z paths — all scripts/pipeline derive repo root from __file__
+proxy_tools: BASE chains verified for EVERY nesting depth (proxy_tools/ fix); pool loader
+             fails with actionable messages, never a traceback
+language: all live-code prose (comments, docstrings, CLI help, reports) in English;
+           German match keywords and scraped posting data remain German by design

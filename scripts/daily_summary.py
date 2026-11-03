@@ -66,17 +66,17 @@ def main() -> None:
 
     new_today = [r for r in rows if (r.get("first_seen") or "")[:10] == TODAY]
     lines = [
-        f"# Tägliches Job-Briefing — {TODAY}",
-        f"_{len(rows)} Postings im Bestand, {len(new_today)} neu heute, "
-        f"Anreicherung: {enrich_path.name if enrich_path else '—'}_\n",
+        f"# Daily Job Briefing — {TODAY}",
+        f"_{len(rows)} postings on file, {len(new_today)} new today, "
+        f"enrichment: {enrich_path.name if enrich_path else '—'}_\n",
     ]
 
     # WHERE
     where = {}
     for r in rows:
         where[r.get("source", "?")] = where.get(r.get("source", "?"), 0) + 1
-    lines += ["## WHERE — Quellen-Verteilung (alle Portale)",
-              fmt_table(["Portal", "Jobs", "Anteil"],
+    lines += ["## WHERE — source distribution (all portals)",
+              fmt_table(["Portal", "Jobs", "Share"],
                         [[k, v, f"{100 * v / len(rows):.0f}%"]
                          for k, v in sorted(where.items(),
                                             key=lambda x: -x[1])]), ""]
@@ -114,43 +114,43 @@ def main() -> None:
                     pass
             else:
                 est += 1
-    lines += ["## WHEN — Veröffentlichungsdaten",
-              f"- **{real}** Jobs mit echtem Veröffentlichungsdatum "
-              f"(BA-API / JSON-LD / Seiten-Datum)",
-              f"- **{est}** Jobs ohne Datum auf der Seite → Stattdessen "
-              f"first_seen + dokumentierter Suchfilter",
-              f"- **{miss}** nicht mehr abrufbar (expired/bot-wall) — "
-              f"Zeitfilter dokumentiert",
-              f"- Ältestes Datum: **{max(ages) if ages else '—'} Tage**, "
-              f"neuestes: **{min(ages) if ages else '—'} Tage**",
-              "", "### Zeitfilter pro Quelle (Garantie-Bereich)",
-              fmt_table(["Quelle", "Filter"],
+    lines += ["## WHEN — publication dates",
+              f"- **{real}** jobs with a real publication date "
+              f"(BA-API / JSON-LD / on-page date)",
+              f"- **{est}** jobs without an on-page date → first_seen "
+              f"+ documented search filter instead",
+              f"- **{miss}** no longer reachable (expired/bot-wall) — "
+              f"time filter documented",
+              f"- Oldest date: **{max(ages) if ages else '—'} days**, "
+              f"newest: **{min(ages) if ages else '—'} days**",
+              "", "### Time filter per source (guarantee range)",
+              fmt_table(["Source", "Filter"],
                         sorted({(r.get('source', '?'),
                                  (r.get('time_filter_used', '')
                                   .split(';')[0] if r.get('time_filter_used')
                                   else '—'))
                                 for r in enr.values()}) or
-                        [["—", "noch nicht angereichert"]]), ""]
+                        [["—", "not enriched yet"]]), ""]
 
     # WHAT — new today + entry verdicts
     if new_today:
-        lines += ["## NEU HEUTE",
-                  fmt_table(["Titel", "Firma", "Quelle", "Einstieg (T22)"],
+        lines += ["## NEW TODAY",
+                  fmt_table(["Title", "Company", "Source", "Entry verdict (T22)"],
                             [[r.get("title", ""), r.get("company", ""),
                               r.get("source", ""),
                               enr.get(r.get("url"), {})
                               .get("experience_class_t22", "—")]
                              for r in new_today[:20]]), ""]
     else:
-        lines += ["## NEU HEUTE", "_Keine neuen Jobs heute._", ""]
+        lines += ["## NEW TODAY", "_No new jobs today._", ""]
 
     # WHO — direct employers with contacts
     gold = [r for r in enr.values()
             if r.get("employer_type") == "direct"
             and (r.get("recruiter_phone") or r.get("recruiter_email"))]
     if gold:
-        lines += ["## WHO — Direkt-Arbeitgeber mit Kontaktdaten (keine Zeitarbeit)",
-                  fmt_table(["Arbeitgeber", "Titel", "Telefon", "E-Mail",
+        lines += ["## WHO — direct employers with contact data (no temp agencies)",
+                  fmt_table(["Employer", "Title", "Phone", "Email",
                              "Website", "Original"],
                             [[g.get("employer_direct", ""),
                               g.get("title", ""), g.get("recruiter_phone", ""),

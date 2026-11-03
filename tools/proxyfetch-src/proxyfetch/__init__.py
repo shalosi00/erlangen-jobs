@@ -12,17 +12,31 @@ See AGENTS.md for the machine contract and README.md for the full manual.
 """
 from __future__ import annotations
 
-__version__ = "0.4.0"
+__version__ = "0.4.1"
 
 from .config import Config
-from .errors import (EXIT_ERROR, EXIT_INTERRUPTED, EXIT_NO_PROXIES,
-                     EXIT_NO_RESULTS, EXIT_OK, EXIT_USAGE, ProxyFetchError)
+from .errors import (
+                     EXIT_ERROR,
+                     EXIT_INTERRUPTED,
+                     EXIT_NO_PROXIES,
+                     EXIT_NO_RESULTS,
+                     EXIT_OK,
+                     EXIT_USAGE,
+                     ProxyFetchError,
+)
 from .logutil import Logger
 from .pipeline import run
 
 __all__ = [
-    "Config", "run", "Logger", "ProxyFetchError",
-    "EXIT_OK", "EXIT_NO_RESULTS", "EXIT_USAGE", "EXIT_NO_PROXIES",
-    "EXIT_ERROR", "EXIT_INTERRUPTED",
-    "__version__",
+                     "EXIT_ERROR",
+                     "EXIT_INTERRUPTED",
+                     "EXIT_NO_PROXIES",
+                     "EXIT_NO_RESULTS",
+                     "EXIT_OK",
+                     "EXIT_USAGE",
+                     "Config",
+                     "Logger",
+                     "ProxyFetchError",
+                     "__version__",
+                     "run",
 ]

@@ -25,9 +25,9 @@ def _env_int(name: str, default: int) -> int:
         return default
     try:
         return int(raw)
-    except ValueError:
+    except ValueError as e:
         raise errors.ConfigError(
-            f"environment variable {ENV_PREFIX + name}={raw!r} is not an integer")
+            f"environment variable {ENV_PREFIX + name}={raw!r} is not an integer") from e
 
 
 def _env_bool(name: str, default: bool) -> bool:
@@ -116,7 +116,7 @@ class Config:
     debug: bool = False
 
     # ------------------------------------------------------------------ #
-    def validated(self) -> "Config":
+    def validated(self) -> Config:
         """Fail fast on nonsensical values with actionable messages."""
         if not self.url:
             raise errors.ConfigError(
@@ -150,7 +150,7 @@ class Config:
                 hint="pick one extraction mode per run")
         return self
 
-    def resolved(self) -> "Config":
+    def resolved(self) -> Config:
         """Post-parse normalization (URL scheme, paths)."""
         from .net import normalize_url
         self.url = normalize_url(self.url)

@@ -108,6 +108,7 @@ class TestResolve:
 
     def test_unknown_recipe_raises_config_error(self):
         import pytest
+
         from proxyfetch.errors import ConfigError
         with pytest.raises(ConfigError):
             resolve("nope", "https://example.com")

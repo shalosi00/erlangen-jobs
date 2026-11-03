@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "proxyfetch"
-version = "0.4.0"
+version = "0.4.1"
 description = "Self-healing free-proxy fetcher: harvest, verify, rotate and render any URL from the CLI or Python - now with a self-healing Lightpanda CDP render engine."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -49,3 +49,25 @@ include = ["proxyfetch*"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
+
+# ---------------------------------------------------------------- linting
+# Explicit baseline so `ruff check .` is deterministic across ruff versions.
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+# Correctness, modernization and style. Deliberate exceptions are
+# documented here so the baseline is self-explaining:
+#   * blind-except (BLE001) and try-except-pass/continue (S110/S112):
+#     the proxy pool, harvester and render engine are best-effort
+#     self-healing BY CONTRACT (see AGENTS.md): every broad except is a
+#     "survive, bench and rotate" path -- a dead proxy/host/render must
+#     never abort a run. Failures surface via benching counters, honest
+#     probe rejection and the exit-code contract instead of raised bugs.
+#     (These families are simply not in `select` below.)
+#   * G003/G004 (no f-string/concat in logging): proxyfetch.logutil.Logger
+#     is a custom console+file formatter that takes a fully formatted
+#     string, NOT stdlib logging -- lazy %-interpolation does not apply.
+select = ["E", "W", "F", "I", "UP", "B", "SIM", "RUF", "G", "FURB", "PLW", "EXE", "ISC", "C4"]
+ignore = ["G003", "G004"]

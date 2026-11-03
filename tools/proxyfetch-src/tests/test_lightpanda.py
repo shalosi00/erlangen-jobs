@@ -6,19 +6,17 @@ with Target/Page/Runtime/handleJavaScriptDialog).
 A live smoke test runs only when the lightpanda binary is present
 (skipif); CI has no binary, so the mock carries the coverage there.
 """
+import contextlib
 import json
 import os
 import socket
 import threading
-import time
-from pathlib import Path
-from types import SimpleNamespace
 
 import pytest
 
-from proxyfetch import browser, lightpanda as lp
+from proxyfetch import browser, errors
+from proxyfetch import lightpanda as lp
 from proxyfetch.config import Config
-from proxyfetch import errors
 
 
 # --------------------------------------------------------------------------
@@ -64,10 +62,8 @@ class MockCDP:
         return f"http://127.0.0.1:{self.port}"
 
     def stop(self):
-        try:
+        with contextlib.suppress(OSError):
             self._srv.close()
-        except OSError:
-            pass
 
     def _loop(self):
         while True:
@@ -80,10 +76,8 @@ class MockCDP:
             except Exception:
                 pass
             finally:
-                try:
+                with contextlib.suppress(OSError):
                     conn.close()
-                except OSError:
-                    pass
 
     # -- HTTP + WS dispatch --------------------------------------------------
     def _serve(self, conn):

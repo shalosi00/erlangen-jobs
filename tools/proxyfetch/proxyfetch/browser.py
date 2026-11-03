@@ -20,6 +20,7 @@ honestly. Proof dicts gain ``"engine"``: ``"lightpanda"`` | ``"cloakbrowser"``.
 """
 from __future__ import annotations
 
+import contextlib
 import json
 import multiprocessing as mp
 import os
@@ -210,10 +211,8 @@ def browser_attempt(proxy: str, url: str, recipe_name: str, *,
     if engine in ("auto", "cloakbrowser") and cloakbrowser_available():
         work_dir = str(work_dir)
         for f in (PROOF_JSON, PROOF_HTML):
-            try:
+            with contextlib.suppress(OSError):
                 os.remove(os.path.join(work_dir, f))
-            except OSError:
-                pass
         ctx = mp.get_context("spawn")
         proc = ctx.Process(target=_worker, args=(proxy, url, recipe_name,
                                                  headed, locale, timezone,
@@ -223,7 +222,7 @@ def browser_attempt(proxy: str, url: str, recipe_name: str, *,
         if proc.is_alive():
             proc.terminate()
             proc.join(5)
-            logger.warn(f"browser via {proxy}: HARD-TIMEOUT after {watchdog_s}s "
+            logger.warning(f"browser via {proxy}: HARD-TIMEOUT after {watchdog_s}s "
                         "(killed)")
             return None
         try:

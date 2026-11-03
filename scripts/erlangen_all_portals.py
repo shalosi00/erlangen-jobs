@@ -31,8 +31,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import net_resilience as nr
 import pandas as pd
 
-# Pre-Filter: Negativ-Liste + Frische-Check VOR der CSV-Schreibung
-# (JSON bleibt ungefiltert als Audit-/Merge-Quelle; deaktivierbar: --no-prefilter)
+# Pre-filter: negative list + freshness check BEFORE the CSV write
+# (JSON stays unfiltered as the audit/merge source; disable with --no-prefilter)
 from job_prefilter import prefilter_jobs
 from jobspy import scrape_jobs
 

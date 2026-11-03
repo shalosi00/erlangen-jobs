@@ -53,19 +53,19 @@ TODAY = datetime.now(timezone.utc).date()
 # ------------------------------------------------------------------ registry
 # WHAT TIME PERIOD WAS USED AS FILTER — mirrors pipeline/sources/*.py params
 TIME_FILTERS = {
-    "BA":       "BA-API param veroeffentlichtseit=14 (Veröffentlichung der letzten 14 Tage)",
+    "BA":       "BA-API param veroeffentlichtseit=14 (publications of the last 14 days)",
     "BA+XING":  "BA-API param veroeffentlichtseit=14 (via BA; cross-listed on XING)",
-    "Indeed":   "jobspy hours_old=336 (14 Tage Fenster)",
-    "LinkedIn": "jobspy hours_old=336 (14 Tage Fenster)",
-    "XING":     "jobspy hours_old=336 (14 Tage Fenster)",
+    "Indeed":   "jobspy hours_old=336 (14-day window)",
+    "LinkedIn": "jobspy hours_old=336 (14-day window)",
+    "XING":     "jobspy hours_old=336 (14-day window)",
     "EURES":    "EURES param max_days_old=14",
-    "Kimeta":   "live SERP, kein Quellfilter — Konvention: date_posted = first_seen (Cards tragen kein Datum)",
-    "Talent.com": "kein Quellfilter; Pipeline-Cutoff verwirft parsebare Daten > 14 Tage",
-    "Get-in-IT":  "kein Quellfilter; Pipeline-Cutoff verwirft parsebare Daten > 14 Tage",
-    "InFranken":  "kein Quellfilter; Pipeline-Cutoff verwirft parsebare Daten > 14 Tage",
-    "Talent.com+XING": "kein Quellfilter (Talent); Pipeline-Cutoff verwirft parsebare Daten > 14 Tage",
+    "Kimeta":   "live SERP, no source-side filter — convention: date_posted = first_seen (cards carry no date)",
+    "Talent.com": "no source filter; pipeline cutoff discards parseable dates > 14 days",
+    "Get-in-IT":  "no source filter; pipeline cutoff discards parseable dates > 14 days",
+    "InFranken":  "no source filter; pipeline cutoff discards parseable dates > 14 days",
+    "Talent.com+XING": "no source filter (Talent); pipeline cutoff discards parseable dates > 14 days",
 }
-DEFAULT_TF = "Pipeline-Cutoff: parsebare date_posted > 14 Tage verworfen (Slug '-14d')"
+DEFAULT_TF = "Pipeline cutoff: parseable date_posted > 14 days discarded (slug '-14d')"
 
 PORTAL_DOMAINS = (
     "kimeta.de", "arbeitsagentur.de", "talent.com", "get-in-it.de",

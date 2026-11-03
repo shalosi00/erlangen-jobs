@@ -4,9 +4,9 @@ erlangen_pipeline.py — ONE command, ONE output CSV.
 
 Full chain (all stages support the new filtering options):
   1. merge_erlangen.py   union all raw sweeps -> dedupe -> PRE-FILTER
-                         (Negativ-Liste: Ausbildung/Student, Senior/Mgmt mit
-                          Junior-Ausnahme + FP-Guard, Fremdberufe; Frische-Check
-                          date_posted <= --fresh-days)
+                         (negative list: training/student, senior/mgmt with
+                          junior exception + FP-guard, foreign professions;
+                          freshness check date_posted <= --fresh-days)
   2. commute_filter.py   rail-corridor geo filter (S1 N-S trunk, <=50 km,
                          <=3 km station) — uses cached gazetteer, no network
   3. final CSV           download/erlangen_jobs_final_<stamp>.csv

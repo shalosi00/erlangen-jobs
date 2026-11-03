@@ -13,6 +13,7 @@ Guarantees:
 """
 from __future__ import annotations
 
+import contextlib
 import json
 import signal
 import time
@@ -79,10 +80,8 @@ def run(cfg: Config, logger: Logger | None = None) -> dict:
         return _run(cfg, logger, t0, deadline, interrupt)
     finally:
         if prev_handler is not None:
-            try:
+            with contextlib.suppress(ValueError, OSError):
                 signal.signal(signal.SIGINT, prev_handler)
-            except (ValueError, OSError):
-                pass
 
 
 # ------------------------------------------------------------------ internals
@@ -113,7 +112,7 @@ def _direct_probe(cfg: Config, recipe, logger: Logger,
         if kind:
             if challenge_seen is not None:
                 challenge_seen[kind] = challenge_seen.get(kind, 0) + 1
-            logger.warn(f"direct fetch answered HTTP {e.code} with a "
+            logger.warning(f"direct fetch answered HTTP {e.code} with a "
                         f"bot-challenge page ({kind}) -- target is bot-protected")
         else:
             logger.info(f"direct fetch blocked/failed (HTTP {e.code}) "
@@ -128,7 +127,7 @@ def _direct_probe(cfg: Config, recipe, logger: Logger,
         if kind:
             if challenge_seen is not None:
                 challenge_seen[kind] = challenge_seen.get(kind, 0) + 1
-            logger.warn(f"direct fetch answered with a bot-challenge page "
+            logger.warning(f"direct fetch answered with a bot-challenge page "
                         f"({kind}) -- this target is bot-protected")
         else:
             logger.info("direct fetch yielded no usable content -- "
@@ -162,7 +161,7 @@ def _run(cfg: Config, logger: Logger, t0: float, deadline: float,
     if cfg.use_browser:
         avail = browser.engines(cfg.lightpanda_bin)
         if not any(avail.values()):
-            logger.warn(browser.install_hint() + " (continuing without escalation)")
+            logger.warning(browser.install_hint() + " (continuing without escalation)")
         else:
             logger.info("render engines: "
                         + " + ".join(k for k, on in avail.items() if on)
@@ -222,10 +221,8 @@ def _run(cfg: Config, logger: Logger, t0: float, deadline: float,
             lightpanda_bin=cfg.lightpanda_bin)
         if proof:
             browser_proof = {k: proof[k] for k in ("proxy", "title", "articles", "engine")}
-            try:
+            with contextlib.suppress(OSError):
                 (state_dir / "last_success.html").write_text(proof["html"], encoding="utf-8")
-            except OSError:
-                pass
             logger.success(f"browser proof OK via {proof['proxy']} "
                            f"[{proof['engine']}] "
                            f"| {str(proof['title'])[:60]} | articles={proof['articles']}")
@@ -291,7 +288,7 @@ def _collect(cfg: Config, recipe, pool: ProxyPool, live: list[str],
     page = 1
     while page <= cfg.pages:
         if interrupt.raised or time.time() >= deadline:
-            logger.warn("budget/interrupt reached -- returning what we have")
+            logger.warning("budget/interrupt reached -- returning what we have")
             break
         url = page_url(cfg.url, page, cfg.page_template)
         page_items: list[dict] | None = None
@@ -326,7 +323,8 @@ def _collect(cfg: Config, recipe, pool: ProxyPool, live: list[str],
         if page_items is None and cfg.use_browser and (
                 browser_mod.cloakbrowser_available()
                 or browser_mod.lightpanda_available(cfg.lightpanda_bin)):
-            for p in [x for x in live if x not in dead and not pool.is_dead(x)][:cfg.browser_escalation_proxies]:
+            cand = [x for x in live if x not in dead and not pool.is_dead(x)]
+            for p in cand[:cfg.browser_escalation_proxies]:
                 if interrupt.raised or time.time() >= deadline:
                     break
                 proof = browser_mod.browser_attempt(
@@ -368,7 +366,7 @@ def _collect(cfg: Config, recipe, pool: ProxyPool, live: list[str],
                 results.append(it)
             page += 1
         else:
-            logger.warn(f"page {page}: all paths exhausted -- stopping here")
+            logger.warning(f"page {page}: all paths exhausted -- stopping here")
             break
 
     return results, {"pages_fetched": got_pages, "refreshed": refreshed}

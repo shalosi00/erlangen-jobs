@@ -48,7 +48,6 @@ def write_outputs(items: list[dict], payload: dict, out_dir: Path | str,
 
     columns = list(recipe.csv_columns) or _dynamic_columns(items)
     rows = _csv_rows(items, columns)
-    buf = []
     import io
     sio = io.StringIO()
     w = csv.writer(sio, delimiter=delimiter)
@@ -100,7 +99,7 @@ def recipe_row(item: dict) -> str:
         # generic rendering for non-car items: show the first fields
         parts = []
         for k, v in item.items():
-            if k in ("jsonld",):
+            if k == "jsonld":
                 continue
             s = json.dumps(v, ensure_ascii=False) if isinstance(v, (dict, list)) else str(v or "")
             s = s.replace("\n", " ")

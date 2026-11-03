@@ -9,6 +9,7 @@ Contract (important for AI agents):
 """
 from __future__ import annotations
 
+import contextlib
 import json
 import sys
 import time
@@ -41,7 +42,9 @@ class Logger:
         if colors is None:
             colors = hasattr(self.stream, "isatty") and self.stream.isatty()
         self.colors = colors and not json_lines
-        self.log_file = open(log_file, "a", encoding="utf-8") if log_file else None
+        # Handle is owned for the logger's lifetime and closed in Logger.close().
+        self.log_file = (open(log_file, "a", encoding="utf-8")  # noqa: SIM115
+                         if log_file else None)
 
     # ----------------------------------------------------------------- core
     def _emit(self, level: str, msg: str) -> None:
@@ -77,8 +80,11 @@ class Logger:
     def success(self, msg: str) -> None:
         self._emit("success", msg)
 
-    def warn(self, msg: str) -> None:
+    def warning(self, msg: str) -> None:
         self._emit("warn", msg)
+
+    # Backward-compatible alias (warn was the only name before 0.4.1).
+    warn = warning
 
     def error(self, msg: str) -> None:
         self._emit("error", msg)
@@ -94,7 +100,8 @@ class Logger:
         """Loud stage banner so humans always know where the pipeline is."""
         if self.quiet:
             return
-        suffix = f"  {_DIM}{detail}{_RESET}" if (detail and self.colors) else (f"  {detail}" if detail else "")
+        suffix = (f"  {_DIM}{detail}{_RESET}" if (detail and self.colors)
+                  else (f"  {detail}" if detail else ""))
         if self.colors:
             self.stream.write(f"\n{_BOLD}{_CYAN}== {name} =={_RESET}{suffix}\n")
         else:
@@ -103,8 +110,6 @@ class Logger:
 
     def close(self) -> None:
         if self.log_file:
-            try:
+            with contextlib.suppress(Exception):
                 self.log_file.close()
-            except Exception:
-                pass
             self.log_file = None

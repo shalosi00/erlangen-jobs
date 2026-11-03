@@ -16,10 +16,12 @@ quarantined as ``config.json.corrupt`` and defaults apply.
 """
 from __future__ import annotations
 
+import contextlib
 import json
 import os
+from collections.abc import Callable
 from pathlib import Path
-from typing import Any, Callable
+from typing import Any
 
 from . import errors
 
@@ -52,8 +54,8 @@ def _choice(v: Any, allowed: tuple[str, ...]) -> str:
 def _bounded_int(v: Any, lo: int, hi: int) -> int:
     try:
         n = int(v)
-    except (TypeError, ValueError):
-        raise errors.ConfigError(f"invalid value {v!r} -- expected an integer")
+    except (TypeError, ValueError) as e:
+        raise errors.ConfigError(f"invalid value {v!r} -- expected an integer") from e
     if not (lo <= n <= hi):
         raise errors.ConfigError(f"invalid value {v!r} -- expected {lo}..{hi}")
     return n
@@ -77,10 +79,9 @@ def load(state_dir: Path | None = None) -> dict:
     except FileNotFoundError:
         return {}
     except Exception:
-        try:  # quarantine so the user can inspect what was there
+        # quarantine so the user can inspect what was there
+        with contextlib.suppress(OSError):
             p.replace(p.with_suffix(".json.corrupt"))
-        except OSError:
-            pass
         return {}
 
 

@@ -18,8 +18,8 @@ import pandas as pd
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Pre-Filter: Negativ-Liste + Frische-Check VOR dem Schreiben des Masters
-# (deaktivierbar mit: python3 scripts/merge_erlangen.py --no-prefilter)
+# Pre-filter: negative list + freshness check BEFORE writing the master
+# (disable with: python3 scripts/merge_erlangen.py --no-prefilter)
 NO_PREFILTER = "--no-prefilter" in sys.argv
 if not NO_PREFILTER:
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -121,16 +121,16 @@ print(f"interamt (region-filtered from pipeline.md): {n} added")
 # Save master
 stamp = pd.Timestamp.now().strftime("%Y%m%d_%H%M")
 
-# Pre-Filter VOR dem CSV-Schreiben (Negativ-Liste + 30-Tage-Frische)
+# Pre-filter BEFORE the CSV write (negative list + 30-day freshness)
 if not NO_PREFILTER and prefilter_jobs:
     n_in = len(rows)
     rows, rejected, pf = prefilter_jobs(rows, fresh_days=FRESH_DAYS)
     print(f"\nPRE-FILTER: {n_in} -> {len(rows)} rows "
-          f"({len(rejected)} entfernt, {len(rejected)/max(1,n_in)*100:.1f}%)")
+          f"({len(rejected)} removed, {len(rejected)/max(1,n_in)*100:.1f}%)")
     for reason, n in sorted(pf["by_rule"].items(), key=lambda x: -x[1]):
         print(f"   - {reason}: {n}")
-    print(f"   (Junior-Ausnahme behielt {pf['kept_by_junior_exception']}, "
-          f"FP-Guard behielt {pf['kept_by_fp_guard']})")
+    print(f"   (junior exception kept {pf['kept_by_junior_exception']}, "
+          f"FP-guard kept {pf['kept_by_fp_guard']})")
     rj = f"{OUT}/erlangen_master_{stamp}_prefilter_rejected.json"
     with open(rj, "w", encoding="utf-8") as f:
         json.dump(rejected, f, default=str, ensure_ascii=False, indent=1)

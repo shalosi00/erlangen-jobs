@@ -16,8 +16,8 @@ from __future__ import annotations
 import concurrent.futures as cf
 import random
 import time
+from collections.abc import Callable
 from dataclasses import dataclass
-from typing import Callable
 
 from . import asynchttp, net
 from .config import Config
@@ -101,7 +101,7 @@ def run_check(cands: list[str], probe: Callable[[str], float | None],
     if not cands:
         return out
     with cf.ThreadPoolExecutor(max_workers=min(workers, max(1, len(cands)))) as ex:
-        for cand, res in zip(cands, ex.map(probe, cands)):
+        for cand, res in zip(cands, ex.map(probe, cands), strict=False):
             if res is not None:
                 out.append((cand, res))
     logger.info(f"{label}: {len(out)}/{len(cands)} passed")
@@ -131,10 +131,10 @@ def check_batch(cands: list[str], spec: ProbeSpec, engine: str,
                         f"(aiohttp x{concurrency})")
             return out
         except Exception as e:  # engine must never kill the run
-            logger.warn(f"aiohttp engine error ({type(e).__name__}: {e}) "
+            logger.warning(f"aiohttp engine error ({type(e).__name__}: {e}) "
                         "-- falling back to threads")
     elif engine == "aiohttp":
-        logger.warn(f"aiohttp not installed -- using thread fallback "
+        logger.warning(f"aiohttp not installed -- using thread fallback "
                     f"({asynchttp.install_hint()} for the fast engine)")
     return run_check(cands, _probe_threads(spec), min(100, max(1, concurrency)),
                      logger, label)
@@ -162,7 +162,7 @@ def supply(pool: ProxyPool, cfg: Config, spec: ProbeSpec, logger: Logger
         logger.info(f"round {rnd}: harvesting public proxy lists ...")
         cands = [c for c in harvest(logger) if c not in tested]
         if not cands:
-            logger.warn("no candidates harvested (GitHub reachable?)")
+            logger.warning("no candidates harvested (GitHub reachable?)")
             continue
         random.shuffle(cands)
         pick = cands[:sample_n]
@@ -183,7 +183,7 @@ def supply(pool: ProxyPool, cfg: Config, spec: ProbeSpec, logger: Logger
 def refresh(pool: ProxyPool, cfg: Config, spec: ProbeSpec, logger: Logger,
             exclude: set[str]) -> list[tuple[str, float]]:
     """Self-healing: harvest a fresh batch when the pool dies mid-run."""
-    logger.warn("pool exhausted -- auto re-harvest for fresh proxies ...")
+    logger.warning("pool exhausted -- auto re-harvest for fresh proxies ...")
     cands = [c for c in harvest(logger) if c not in exclude]
     if not cands:
         logger.error("re-harvest returned nothing")

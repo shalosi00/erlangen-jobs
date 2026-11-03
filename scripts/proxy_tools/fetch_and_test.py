@@ -31,7 +31,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 import os
 
-BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# proxy_tools/ is two levels below the repo root -> three dirname hops
+BASE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import requests
 

@@ -18,8 +18,9 @@ from __future__ import annotations
 
 import asyncio
 import concurrent.futures as cf
+import contextlib
 import time
-from typing import Callable
+from collections.abc import Callable
 
 from .net import DEFAULT_HEADERS
 
@@ -90,10 +91,8 @@ async def _prescan(proxies: list[str], timeout: float,
                 _, writer = await asyncio.wait_for(
                     asyncio.open_connection(host, int(port)), timeout)
                 writer.close()
-                try:
+                with contextlib.suppress(Exception):
                     await writer.wait_closed()
-                except Exception:
-                    pass
                 return proxy
             except Exception:
                 return None

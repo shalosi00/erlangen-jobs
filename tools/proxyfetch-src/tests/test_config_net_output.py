@@ -63,10 +63,12 @@ class TestOutput:
         files = write_outputs(items, payload, tmp_path, "demo", recipe)
         assert files["json"].endswith(".json") and files["csv"].endswith(".csv")
 
-        doc = json.loads(open(files["json"], encoding="utf-8").read())
+        with open(files["json"], encoding="utf-8") as f:
+            doc = json.load(f)
         assert doc["count"] == 2 and len(doc["items"]) == 2
 
-        csv_text = open(files["csv"], encoding="utf-8-sig").read()
+        with open(files["csv"], encoding="utf-8-sig") as f:
+            csv_text = f.read()
         lines = csv_text.strip().splitlines()
         assert lines[0].startswith("rank;title")
         assert ";100;" in lines[1]

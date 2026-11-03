@@ -6,7 +6,7 @@ import json
 
 import pytest
 
-from proxyfetch import cli, errors, net, output, recipes, supply
+from proxyfetch import cli, errors, net, output, recipes
 from proxyfetch.config import Config
 from proxyfetch.logutil import Logger
 
@@ -181,7 +181,8 @@ def test_dynamic_csv_columns_from_items(tmp_path):
     r = recipes.resolve("generic", "https://x.com/", css="x")
     items = [{"title": "a", "price": "1"}, {"title": "b", "price": "2", "extra": "e"}]
     files = output.write_outputs(items, {"count": 2}, tmp_path, "t", r)
-    header = open(files["csv"], encoding="utf-8-sig").readline().strip()
+    with open(files["csv"], encoding="utf-8-sig") as f:
+        header = f.readline().strip()
     assert header.split(";") == ["title", "price", "extra"]
 
 

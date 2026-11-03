@@ -7,6 +7,7 @@ one-off script format.
 """
 from __future__ import annotations
 
+import contextlib
 import json
 import os
 import time
@@ -49,10 +50,8 @@ class ProxyPool:
         except Exception:
             # Corrupt cache must never kill a run: start clean, keep the file
             # around for forensics.
-            try:
+            with contextlib.suppress(OSError):
                 os.replace(self.path, self.path.with_suffix(".json.corrupt"))
-            except OSError:
-                pass
 
     def save(self) -> None:
         """Atomic write -- a killed process can never corrupt the cache."""

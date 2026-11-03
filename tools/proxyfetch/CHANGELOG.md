@@ -6,6 +6,38 @@ and the project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.4.1] - 2026-11-03
+
+### Fixed
+- `Logger.warn()` renamed to the canonical `Logger.warning()` — `warn` stays as
+  a backward-compatible alias (library mode callers keep working).
+- Exception chaining: user-facing `ConfigError`/`ProxyFetchError` raises inside
+  `except` blocks now use `raise ... from` (clean tracebacks, clear cause).
+- Dead code: unused `buf` list in `output.py` removed.
+- Example `fetch_agent_json.py` documents the exit-code contract explicitly
+  (`check=False` — failures still emit a valid `proxyfetch.result/v1` payload).
+
+### Changed
+- **Explicit lint baseline** (`[tool.ruff]` in `pyproject.toml`): deterministic
+  rule selection so `ruff check .` stays reproducible across ruff versions.
+  The best-effort self-healing patterns (blind `except`, `except: pass` /
+  `continue` in rotate-and-bench paths) are deliberately not enforced and the
+  decision is documented in the config; the custom `logutil` formatter makes
+  G003/G004 (lazy %-interpolation) inapplicable.
+- 111 lint findings resolved: unused imports, `logging.warn` call sites,
+  `re.S`/`re.I` aliases (`re.DOTALL`/`re.IGNORECASE`), deprecated
+  `typing.Callable` imports, unsorted imports/`__all__`/`__slots__`,
+  `try/except: pass` → `contextlib.suppress`, missing file-handle context
+  managers, ambiguous variable `l` in the autoscout24 recipe, line-length
+  violations, shebang files marked executable.
+- Deliberate ownership patterns documented with `noqa` justifications where
+  they are the design (Lightpanda `_Server` owns the log handle and closes it
+  in `.stop()`; `Logger.close()` owns the mirror file).
+
+### Tests
+- 113 passed / 1 skipped (CI mode) — unchanged; live smoke re-verified
+  (books.toscrape.com CSS extraction, 20 items, direct fast path).
+
 ## [0.4.0] - 2026-11-02
 
 ### Added

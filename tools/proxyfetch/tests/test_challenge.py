@@ -68,7 +68,8 @@ def test_legit_pages_are_not_challenges():
     as24 = ("<html><head><title>Gebrauchtwagen - AutoScout24</title></head>"
             "<body><script src='https://js.datadome.co/tag.js'></script>"
             "<article>listing</article></body></html>")
-    plain = "<html><head><title>Cool gadgets</title></head><body><table><tr><td>a</td></tr></table></body></html>"
+    plain = ("<html><head><title>Cool gadgets</title></head><body><table>"
+             "<tr><td>a</td></tr></table></body></html>")
     assert recipes.challenge_kind(as24) is None
     assert recipes.challenge_kind(plain) is None
     assert recipes.challenge_kind("") is None
@@ -181,7 +182,6 @@ def test_asynchttp_rejects_4xx_even_with_passing_body(wl_server):
 def test_threads_probe_rejects_4xx(wl_server):
     """Thread engine semantics: urllib raises HTTPError on 401 -> no pass."""
     from proxyfetch import supply
-    from proxyfetch.config import Config
     spec = supply.ProbeSpec(url=wl_server + "401", verifier=lambda b: True,
                             timeout=5, read_limit=100)
     out = supply.run_check(["direct"], supply._probe_threads(spec), 2, _Quiet(), "t")

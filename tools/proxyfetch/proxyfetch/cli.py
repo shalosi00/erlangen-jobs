@@ -74,7 +74,8 @@ def build_parser() -> argparse.ArgumentParser:
                    help="max parallel probes for THIS run only "
                         "(default: saved config or 300)")
     g.add_argument("--state-dir", metavar="DIR",
-                   help=f"winner-cache dir (default: {default_state_dir()} or $PROXYFETCH_STATE_DIR)")
+                   help=f"winner-cache dir (default: {default_state_dir()} "
+                        "or $PROXYFETCH_STATE_DIR)")
     g.add_argument("--budget", type=int, metavar="S",
                    help="wall-clock budget in seconds (default: 420)")
     g.add_argument("--timeout", type=float, metavar="S", dest="fetch_timeout",
@@ -135,7 +136,8 @@ def build_config_parser() -> argparse.ArgumentParser:
         description=("Show or set persistent defaults. Resolution: CLI flag "
                      "> env > saved config > built-in default."))
     cp.add_argument("--state-dir", metavar="DIR",
-                    help=f"settings location (default: {default_state_dir()} or $PROXYFETCH_STATE_DIR)")
+                    help=f"settings location (default: {default_state_dir()} "
+                         "or $PROXYFETCH_STATE_DIR)")
     cp.add_argument("--json", action="store_true", dest="json_mode",
                     help="print settings as a single JSON object")
     sub = cp.add_subparsers(dest="config_cmd", metavar="ACTION")
@@ -191,7 +193,7 @@ def _config_main(args) -> int:
         print(json.dumps({**userconfig.defaults(), **saved}, sort_keys=True))
         return errors.EXIT_OK
     print(f"proxyfetch settings ({userconfig.path(state_dir)}):")
-    for k in userconfig.keys():
+    for k in userconfig.keys():  # noqa: SIM118 -- module-level keys(), not a dict
         val = saved.get(k)
         src = "saved" if val is not None else "default"
         print(f"  {k:<14} {val if val is not None else userconfig.default_of(k)!s:<10} [{src}]")
@@ -217,19 +219,19 @@ def resolve_engine(cfg: Config, engine_flag: str | None,
         if raw:
             try:
                 conc = int(raw)
-            except ValueError:
+            except ValueError as e:
                 raise errors.ConfigError(
                     f"environment variable PROXYFETCH_CONCURRENCY={raw!r} "
-                    "is not an integer")
+                    "is not an integer") from e
     if conc is None:
         conc = saved.get("concurrency")
     if conc is not None:
         try:
             cfg.concurrency = int(conc)
-        except (TypeError, ValueError):
+        except (TypeError, ValueError) as e:
             raise errors.ConfigError(
                 f"saved concurrency {conc!r} is not an integer -- fix with: "
-                "proxyfetch config set concurrency 300")
+                "proxyfetch config set concurrency 300") from e
 
 
 def _parse_fields(raw_list: list[str] | None) -> dict | None:
@@ -328,7 +330,7 @@ def main(argv: list[str] | None = None) -> int:
         logger.error("interrupted")
         return _fail(args, cfg, logger, errors.EXIT_INTERRUPTED, "interrupted",
                      "interrupted by user", "partial results may exist in the out dir")
-    except Exception as e:  # noqa: BLE001 -- last-resort guard for the CLI boundary
+    except Exception as e:
         if args.debug:
             traceback.print_exc()
         return _fail(args, cfg, logger, errors.EXIT_ERROR, "internal_error",

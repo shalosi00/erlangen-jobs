@@ -893,3 +893,54 @@ Stage Summary:
   (--live 0); F821 sweep on all 60 changed files: clean; bash -n all shell scripts: clean;
   node --check all 4 JS: clean; runtime smoke: test_rapidfuzz.py resolves BASE and reads
   download/jobs_latest.csv correctly; organize_downloads.py / parse_candidates.py run clean.
+
+## 2026-11-04 — Error-proofing + English-only sweep, v1.1.3 (user: "Make them both 100% error proof ans always write in English")
+- Full-repo error audit (both repos, erlangen-jobs + proxyfetch):
+  * py_compile on every .py (erlangen-jobs 172 incl. tools/, proxyfetch 27) -> 0 failures
+  * ruff F821 undefined-name sweep repo-wide -> 0; ruff baseline (live code) -> clean
+  * hardcoded-path regex (/home/z, /Users/, C:\, /root/) -> 0 hits after fixes
+  * shell-script audit (12 .sh): shebang + absolute-path scan -> clean
+  * Python-floor audit (3.9 for erlangen-jobs, 3.10 for proxyfetch): no match/case, no
+    runtime PEP-604 unions without __future__ annotations -> 0 floor breakers
+- Bug found and fixed — scripts/proxy_tools/ BASE off-by-one (survived the v1.1.2 sweep):
+  * test_unlock.py + fetch_and_test.py live TWO levels under the repo root but derived
+    BASE with only two dirname hops -> pointed at scripts/, so the pool file resolved to
+    scripts/data/proxies/validated_proxies.json (FileNotFoundError traceback). Now three
+    hops = repo root; new verify pass proves EVERY BASE/ROOT chain matches its file depth.
+  * test_unlock.py additionally error-proofed: pool loader catches missing/corrupt/empty
+    JSON with actionable rebuild hints; latency key .get()-defaulted (no KeyError);
+    non-dict rows filtered; cloudscraper import guarded (not in requirements.txt) ->
+    SKIP message instead of traceback; sample writes go through save_sample() with
+    makedirs + OSError guard; verified live (proxies fetched, per-proxy error isolation,
+    clean --help-free run, no traceback).
+  * fetch_and_test.py: BASE fixed the same way (its OUT_DIR writes were going to
+    scripts/data/proxies/). probe_lists.py: clean, no change needed.
+- Vendored proxyfetch snapshots refreshed: tools/proxyfetch + tools/proxyfetch-src
+  synced to the proxyfetch main tree at v0.4.1 (were v0.4.0; scripts/ stays the only
+  difference between the two snapshots, per the established ritual). Vendored test suite
+  run in-tree: 113 pass + 1 env-skip (no lightpanda binary) — exit 0. Untracked
+  __pycache__ noise removed.
+- English-only sweep (user order "always write in English"), German DATA kept German by
+  design (regex match keywords like Senior/Leiter/Pflege, place names like Nürnberg,
+  test fixtures with real German postings):
+  * scripts/job_prefilter.py: docstring, comments, CLI help, console output and the
+    generated _report.md fully translated; stable machine codes (ausbildung_student,
+    fremdberuf, prefilter:*, no_valid_date, stale_date) unchanged — they feed CSVs,
+    the daily digest and e2e assertions.
+  * scripts/erlangen_all_portals.py, scripts/merge_erlangen.py, scripts/erlangen_pipeline.py:
+    German comments / print lines translated.
+  * scripts/daily_summary.py: digest headings and table labels now English ("Daily Job
+    Briefing", "NEW TODAY", "publication dates", source distribution, employer table).
+  * scripts/enrich_jobs.py: TIME_FILTERS source-convention strings + DEFAULT_TF English.
+  * Final German-sentence scanner over pipeline/ tests/ scripts/ scrapers/: 0 remaining.
+- Verification battery (after all edits): net_resilience 33/33, filters 16/16, dedupe,
+  geo, build_map 21/21, companies_map 14/14, history OK(1 env-skip); e2e 20/20 PASS
+  (incl. live strict-proxy part D); ruff clean; proxyfetch repo: pytest 113 pass +
+  1 env-skip, ruff clean, CLI --help green, examples compile.
+- proxyfetch repo: already at v0.4.1 and already pushed; audit found zero defects there,
+  so no new commit was needed — its "100% error-proof" gate is the pushed main itself.
+- Push status: erlangen-jobs main carries v1.1.2 + this v1.1.3 commit; the GitHub push
+  could NOT be completed this session — the PAT passphrase (state/escrow_key.py) was
+  wiped and its recovery commit (32b25d7^) is not part of the bundled history, so the
+  tier-3 escrow needs the owner to re-issue a token. v24 bundle (below) is the offline
+  safety copy of the complete history including v1.1.3.

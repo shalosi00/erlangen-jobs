@@ -16,6 +16,8 @@ proc = subprocess.run(
         "--no-save",
     ],
     capture_output=True, text=True, timeout=600,
+    # non-zero exits still emit a valid result payload (checked below)
+    check=False,
 )
 
 payload = json.loads(proc.stdout)

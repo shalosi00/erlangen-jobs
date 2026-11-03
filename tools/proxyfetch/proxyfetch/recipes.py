@@ -22,8 +22,8 @@ from __future__ import annotations
 import json
 import re
 import urllib.parse
-from dataclasses import dataclass, field
-from typing import Callable
+from collections.abc import Callable
+from dataclasses import dataclass
 
 from . import errors
 from .net import host_of
@@ -52,7 +52,7 @@ class Recipe:
         if challenge_kind(html):
             return False  # WAF/captcha interstitial -- never real content
         head = html[:40000].lower()
-        m = re.search(r"<title[^>]*>(.*?)</title>", head, re.S)
+        m = re.search(r"<title[^>]*>(.*?)</title>", head, re.DOTALL)
         title = m.group(1) if m else ""
         if self.ok_markers and not any(k in head for k in self.ok_markers):
             return False
@@ -111,7 +111,7 @@ def challenge_kind(html: str) -> str | None:
     for vendor, markers in _CHALLENGE_BODY:
         if any(m in head for m in markers):
             return vendor
-    m = re.search(r"<title[^>]*>(.*?)</title>", head, re.S)
+    m = re.search(r"<title[^>]*>(.*?)</title>", head, re.DOTALL)
     if m and any(t in m.group(1).lower() for t in _CHALLENGE_TITLE):
         return "challenge"
     return None
@@ -130,7 +130,7 @@ def _dv(x):
 
 def parse_autoscout24(html: str, base_url: str) -> list[dict]:
     """Extract listings from the Next.js ``__NEXT_DATA__`` payload."""
-    m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', html, re.S)
+    m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', html, re.DOTALL)
     if not m:
         return []
     try:
@@ -139,25 +139,25 @@ def parse_autoscout24(html: str, base_url: str) -> list[dict]:
         return []
     listings = data.get("props", {}).get("pageProps", {}).get("listings") or []
     out: list[dict] = []
-    for l in listings:
+    for li in listings:
         try:
-            if not isinstance(l, dict) or not l.get("id"):
+            if not isinstance(li, dict) or not li.get("id"):
                 continue  # junk/malformed entries are skipped, never fatal
-            v = l.get("vehicle") or {}
+            v = li.get("vehicle") or {}
             det = {d.get("iconName"): _dv(d.get("data"))
-                   for d in (l.get("vehicleDetails") or []) if isinstance(d, dict)}
-            pr = l.get("price") or l.get("pricing") or {}
+                   for d in (li.get("vehicleDetails") or []) if isinstance(d, dict)}
+            pr = li.get("price") or li.get("pricing") or {}
             price = pr.get("priceRaw") or pr.get("consumerPriceRaw") or pr.get("numericPrice")
             km_raw = det.get("mileage_odometer")
             km = int(re.sub(r"[^\d]", "", str(km_raw))) \
                 if km_raw and re.search(r"\d", str(km_raw)) else None
-            seller = l.get("seller") or {}
-            loc = l.get("location") if isinstance(l.get("location"), dict) else {}
+            seller = li.get("seller") or {}
+            loc = li.get("location") if isinstance(li.get("location"), dict) else {}
             city = str(seller.get("cityName") or loc.get("city") or "").strip()
             zipc = str(loc.get("zip") or "").strip()
             out.append({
-                "id": l.get("id"),
-                "title": (v.get("title") or l.get("title") or
+                "id": li.get("id"),
+                "title": (v.get("title") or li.get("title") or
                           f"{v.get('make', '')} {v.get('model', '')}").strip(),
                 "version": v.get("motorTypeName") or v.get("version") or "",
                 "price_eur": int(price) if price else None,
@@ -168,7 +168,7 @@ def parse_autoscout24(html: str, base_url: str) -> list[dict]:
                 "gear": v.get("transmission") or "",
                 "seller": str(seller.get("type", "")),
                 "city": f"{zipc} {city}".strip(),
-                "url": urllib.parse.urljoin(base_url, l.get("url") or ""),
+                "url": urllib.parse.urljoin(base_url, li.get("url") or ""),
             })
         except Exception:
             continue  # one malformed listing must not poison the page
@@ -259,7 +259,7 @@ def _as_int(x):
 
 def parse_immobilienscout24(html: str, base_url: str) -> list[dict]:
     """Extract IS24 search listings from the embedded __NEXT_DATA__ JSON."""
-    m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', html, re.S)
+    m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', html, re.DOTALL)
     if not m:
         return []
     try:
@@ -306,7 +306,7 @@ _WS_RE = re.compile(r"\s+")
 
 
 def _first_text(html: str, pattern: str) -> str:
-    m = re.search(pattern, html, re.I | re.S)
+    m = re.search(pattern, html, re.IGNORECASE | re.DOTALL)
     return _WS_RE.sub(" ", _TAG_RE.sub("", m.group(1))).strip() if m else ""
 
 
@@ -317,12 +317,13 @@ def parse_generic(html: str, base_url: str) -> list[dict]:
     (truncated) so agents still get useful, machine-readable content from
     any URL. Returns [] when nothing meaningful is present.
     """
-    title = _first_text(html, r"<h1[^>]*>(.*?)</h1>") or _first_text(html, r"<title[^>]*>(.*?)</title>")
+    title = (_first_text(html, r"<h1[^>]*>(.*?)</h1>")
+             or _first_text(html, r"<title[^>]*>(.*?)</title>"))
     desc = _first_text(html, r'<meta[^>]+name=["\']description["\'][^>]+content=["\'](.*?)["\']') \
         or _first_text(html, r'<meta[^>]+content=["\'](.*?)["\'][^>]+name=["\']description["\']')
     jsonld: list = []
     for m in re.finditer(r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
-                         html, re.S):
+                         html, re.DOTALL):
         try:
             jsonld.append(json.loads(m.group(1)))
         except Exception:
@@ -351,10 +352,10 @@ _BLOCK_GENERIC = ("access denied", "request blocked",
 def _soup(html: str):
     try:
         from bs4 import BeautifulSoup
-    except ImportError:
+    except ImportError as e:
         raise errors.ConfigError(
             "CSS/table extraction needs beautifulsoup4",
-            hint="pip install beautifulsoup4")
+            hint="pip install beautifulsoup4") from e
     return BeautifulSoup(html, "html.parser")
 
 
@@ -376,7 +377,7 @@ def parse_css(html: str, base_url: str, selector: str = "",
     if not selector:
         return []
     soup = _soup(html)
-    fields = fields if fields else {"text": None}
+    fields = fields or {"text": None}
     out: list[dict] = []
     for el in soup.select(selector):
         item: dict = {}
@@ -522,7 +523,7 @@ def parse_table(html: str, base_url: str,
     for r in data_rows:
         cells = [c.get_text(" ", strip=True) for c in r.find_all(["td", "th"])]
         cells += [""] * (len(keys) - len(cells))
-        item = {k: v for k, v in zip(keys, cells) if v}
+        item = {k: v for k, v in zip(keys, cells, strict=False) if v}
         if item:
             out.append(item)
     return out
