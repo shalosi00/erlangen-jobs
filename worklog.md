@@ -944,3 +944,33 @@ Stage Summary:
   wiped and its recovery commit (32b25d7^) is not part of the bundled history, so the
   tier-3 escrow needs the owner to re-issue a token. v24 bundle (below) is the offline
   safety copy of the complete history including v1.1.3.
+
+## 2026-11-04 — v25 reconciliation push (user: "api key for github to maintain the repos")
+- Owner supplied a fresh GitHub PAT after v24's blocked push. Token configured via the
+  git credential store (chmod 600, outside both repos, never committed); a copy lives
+  under the main project's gitignored state/ dir for cross-session best effort.
+- Pre-push remote audit revealed the v23 divergence this repo did not know about:
+  origin/main had moved to e3d20e9 — the pre-wipe session HAD gofile-mirrored the v23
+  bundles (server-side MD5 == local MD5, data/gofile_v23.json) and pushed that one
+  commit before the wipe. The recycled-sandbox v24 session could not see it and had
+  wrongly recorded v23 as "MIRROR: none this round".
+- Resolution: merged origin/main into main (merge 2f81d1e, no history rewrite — keeps
+  the v24 bundle a valid history prefix). BACKUPS.md reconciled: the remote v23 entry
+  kept as the accurate account (recovery fact from the post-wipe session folded in),
+  the post-wipe v23 duplicate dropped, the v24 entry's stale pre-amend head (d68d0f1)
+  corrected to the final v24 bundle head 9c75319, new v25 entry added.
+- Re-verification battery before push (fresh sandbox): erlangen-jobs pytest 58 pass +
+  1 env-skip, ruff clean (pipeline/ scripts/), /home/z scan = the one documented
+  historical comment only; proxyfetch pytest 113 pass + 1 env-skip, ruff clean, zero
+  hardcoded paths; tags verified in sync for both repos.
+- v25 bundles cut after the merge: erlangen-jobs-v25-v1.1.3.bundle (45,379,709 B,
+  sha256 e2c3a96f258ef7203cee410d916da8e7047c9adb19bd7bfdabc5ca8e13162b4e,
+  `git bundle verify` = complete history, head 2f81d1e); proxyfetch-v25-v0.4.1.bundle
+  byte-identical to v23/v24 (731617b3...) — unchanged since bd6a4d9, kept for symmetry.
+- gofile reachable again this session (api.gofile.io HTTP 200 — unlike the v22/v24
+  timeouts): both v25 bundles uploaded, server-side MD5 == local MD5, size exact;
+  links archived in data/gofile_v25.json (commit 7af131a, same push).
+- PUSH COMPLETED with the re-issued PAT: origin/main e3d20e9 -> 7af131a (the v1.1.3
+  error-proof + English-only sweep plus the reconciled backup record are now the
+  default branch). proxyfetch verified already in sync at bd6a4d9 (v0.4.1). This
+  worklog entry is the new remote head.
