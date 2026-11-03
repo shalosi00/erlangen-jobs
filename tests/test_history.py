@@ -1,10 +1,14 @@
 """F6/F13 tests — job memory degrades gracefully without sqlite_utils and
 merges full provenance (unittest; DB tests skipped when sqlite_utils absent)."""
-import os, sys, tempfile, unittest
-sys.path.insert(0, "/home/z/my-project")
+import os
+import sys
+import tempfile
+import unittest
 
-from pipeline.core import Job
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from pipeline import history
+from pipeline.core import Job
 
 try:
     import sqlite_utils  # noqa: F401
@@ -45,7 +49,7 @@ class TestMemoryMergeF13(unittest.TestCase):
         s2 = history.update([j])
         self.assertEqual(s2["known"], 1)
         self.assertEqual(s2["total"], 1)
-        row = list(history._db()["postings"].rows)[0]
+        row = next(iter(history._db()["postings"].rows))
         self.assertEqual(row["times_seen"], 2)
 
     def test_url_fold_merges_provenance(self):
@@ -56,7 +60,7 @@ class TestMemoryMergeF13(unittest.TestCase):
                 city="Nürnberg", url="https://www.arbeitsagentur.de/jobsuche/jobdetail/12634-BB-64")
         s = history.update([b])
         self.assertEqual(s["total"], 1)          # folded, no second row
-        row = list(history._db()["postings"].rows)[0]
+        row = next(iter(history._db()["postings"].rows))
         self.assertIn("BA", row["source"])       # F13: multi-source provenance kept
         self.assertIn("XING", row["source"])
 
@@ -78,7 +82,7 @@ class TestMemoryMergeF13(unittest.TestCase):
         j2 = Job(source="BA", title="IT-Admin A", company="X GmbH", city="Erlangen",
                  url="https://a.de/a", salary_min=42000.0, salary_max=50000.0, currency="EUR")
         history.update([j2])
-        row = list(history._db()["postings"].rows)[0]
+        row = next(iter(history._db()["postings"].rows))
         self.assertEqual(row["salary_min"], 42000.0)
         self.assertEqual(row["currency"], "EUR")
 

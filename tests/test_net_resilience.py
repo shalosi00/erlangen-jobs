@@ -13,13 +13,17 @@ Focus since self-adaptive-net-2 (strict no-IP mode):
 Run:  python3 scripts/test_net_resilience.py
 Exit 0 = all PASS.
 """
-import json, os, sys, tempfile, threading, time
+import os
+import sys
+import tempfile
+import threading
+import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from typing import ClassVar
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
 import net_resilience
-from net_resilience import (AdaptivePacer, ProxyPool, UARotator,
-                            resilient_fetch)
+from net_resilience import AdaptivePacer, ProxyPool, UARotator, resilient_fetch
 
 TMP = tempfile.mkdtemp(prefix="netres_test_")
 # ISOLATION: tests must not pick up the real proxy file / env pool
@@ -37,8 +41,9 @@ HITS = {"direct": 0, "proxied": 0}      # how requests reached the target
 
 class SeqHandler(BaseHTTPRequestHandler):
     # path -> list of (status, body); last item repeats
-    SEQ = {}
-    log_message = lambda *a, **k: None
+    SEQ: ClassVar[dict] = {}
+    def log_message(*a, **k):
+        return None
 
     def do_GET(self):
         path = self.path.split("?")[0]
@@ -101,7 +106,7 @@ def main():
           f"cool={c - time.time():.1f}s")
 
     # --- 3) fetch: 429,429,200 -> succeeds on try 3 (explicit non-strict) --
-    srv, B = start_server({"/flaky": [(429, b"slow down"), (429, b"still"), (200, b"fine")]})
+    _srv, B = start_server({"/flaky": [(429, b"slow down"), (429, b"still"), (200, b"fine")]})
     pacer = AdaptivePacer(base=0.02, min_d=0.01, max_d=0.05, mult=2.0,
                           cool_base=0.05, cool_max=0.15)
     r, info = resilient_fetch(f"{B}/flaky", pool=None, pacer=pacer, cls="f1",
@@ -176,8 +181,8 @@ def main():
           pool3b.snapshot()["strict_no_direct"] is True)
 
     # --- 9) proxy plumbing: real request through local fake proxy -------------
-    srv2, B2 = start_server({"/ok": [(200, b"target")]})
-    psrv, PURL = start_server({})
+    _srv2, B2 = start_server({"/ok": [(200, b"target")]})
+    psrv, _PURL = start_server({})
     PPORT = psrv.server_address[1]    # real port number from the socket
     pool4 = ProxyPool(state_file=f"{TMP}/p5.json", log=lambda *a: None)
     pool4.add(f"http://127.0.0.1:{PPORT}")

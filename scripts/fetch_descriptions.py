@@ -33,12 +33,19 @@ Usage:
 Output CSV: download/erlangen_jobs_final_<date>.csv — WITH description column,
 sorted by date_posted (newest first), tiebreak by commute distance.
 """
-import argparse, csv, glob, html, json, os, random, re, sys, threading, time
+import argparse
+import csv
+import html
+import json
+import os
+import re
+import sys
+import threading
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date
 from html.parser import HTMLParser
-
-import requests
+from typing import ClassVar
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WORK = os.path.join(BASE, "data", "work")
@@ -47,10 +54,11 @@ CHECKPOINT = os.path.join(WORK, "descriptions.jsonl")
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import net_resilience as nr
 
+
 # ------------------------------------------------------------------ html -> text
 class _TextExtract(HTMLParser):
-    BLOCK = {"p", "div", "br", "li", "ul", "ol", "h1", "h2", "h3", "h4", "section", "tr"}
-    SKIP = {"script", "style", "noscript"}
+    BLOCK: ClassVar[set] = {"p", "div", "br", "li", "ul", "ol", "h1", "h2", "h3", "h4", "section", "tr"}
+    SKIP: ClassVar[set] = {"script", "style", "noscript"}
 
     def __init__(self):
         super().__init__(convert_charrefs=True)
@@ -91,12 +99,12 @@ def strip_tag_block(fragment):
 # ------------------------------------------------------------------ extraction helpers
 RE_LI_MARKUP = re.compile(
     r'<div class="show-more-less-html__markup[^"]*"(?:\s[^>]*)?>(.*?)</div>\s*(?:</section>|<div class="show-more)',
-    re.S)
+    re.DOTALL)
 RE_LD_JSON = re.compile(
-    r'<script[^>]+application/ld\+json[^>]*>(.*?)</script>', re.S)
+    r'<script[^>]+application/ld\+json[^>]*>(.*?)</script>', re.DOTALL)
 RE_META_DESC = re.compile(
-    r'<meta[^>]+name=["\']description["\'][^>]+content=["\'](.*?)["\']', re.I | re.S)
-RE_SCRIPT_TAGS = re.compile(r"<(script|style|noscript)\b.*?</\1>", re.I | re.S)
+    r'<meta[^>]+name=["\']description["\'][^>]+content=["\'](.*?)["\']', re.IGNORECASE | re.DOTALL)
+RE_SCRIPT_TAGS = re.compile(r"<(script|style|noscript)\b.*?</\1>", re.IGNORECASE | re.DOTALL)
 
 def extract_linkedin(resp_text):
     m = RE_LI_MARKUP.search(resp_text)
@@ -177,7 +185,7 @@ def indeed_harvest(queries, log=print, pool=None):
     from jobspy import scrape_jobs
     found = {}
     gap = 6.0
-    for i, q in enumerate(queries, 1):
+    for _i, q in enumerate(queries, 1):
         try:
             px = pool.as_list() if pool else None
             if not px:
@@ -221,19 +229,19 @@ _lock = threading.Lock()
 def load_checkpoint():
     done = {}
     if os.path.exists(CHECKPOINT):
-        for line in open(CHECKPOINT, encoding="utf-8"):
-            try:
-                rec = json.loads(line)
-                if rec.get("description") and len(rec["description"]) > 100:
-                    done[rec["job_url"]] = rec
-            except Exception:
-                continue
+        with open(CHECKPOINT, encoding="utf-8") as f:
+            for line in f:
+                try:
+                    rec = json.loads(line)
+                    if rec.get("description") and len(rec["description"]) > 100:
+                        done[rec["job_url"]] = rec
+                except Exception:
+                    continue
     return done
 
 def save_rec(rec):
-    with _lock:
-        with open(CHECKPOINT, "a", encoding="utf-8") as f:
-            f.write(json.dumps(rec, ensure_ascii=False, default=str) + "\n")
+    with _lock, open(CHECKPOINT, "a", encoding="utf-8") as f:
+        f.write(json.dumps(rec, ensure_ascii=False, default=str) + "\n")
 
 # ------------------------------------------------------------------ main
 def main():
@@ -288,7 +296,8 @@ def main():
     _POOL, _PACER_got = nr.build(pool=pool)
     seed_pacer(max(0.5, args.li_min))
 
-    jobs = json.load(open(args.input))
+    with open(args.input, encoding="utf-8") as f:
+        jobs = json.load(f)
     print(f"jobs: {len(jobs)} from {os.path.basename(args.input)}")
 
     existing = load_checkpoint()
@@ -368,7 +377,7 @@ def main():
     # ---- phase: indeed re-search
     if args.phase in ("all", "indeed"):
         existing = load_checkpoint()
-        have = set(existing) | {j.get("job_url") for j in jobs
+        set(existing) | {j.get("job_url") for j in jobs
                                 if len(str(j.get("description") or "")) > 100
                                 and "indeed.com" in (j.get("job_url") or "")}
         need = [j for j in jobs if "indeed.com" in (j.get("job_url") or "")
@@ -418,7 +427,9 @@ def main():
             return v if isinstance(v, (int, float)) else 999
         out_rows.sort(key=lambda r: (
             0 if r.get("date_posted") else 1,
-            tuple(-int(x) for x in str(r.get("date_posted") or "0000-00-00")[:10].split("-")) if r.get("date_posted") else (0, 0, 0),
+            tuple(-int(x) for x in
+                  str(r.get("date_posted") or "0000-00-00")[:10].split("-"))
+            if r.get("date_posted") else (0, 0, 0),
             _km(r),
         ))
         ts = date.today().strftime("%Y%m%d")

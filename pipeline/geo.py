@@ -25,7 +25,9 @@ keep every row — their server-side radius already bounds geography — and the
 transit column makes the 1-transfer noise filterable/sortable for Asha.
 """
 from __future__ import annotations
-import json, re
+
+import json
+import re
 from pathlib import Path
 
 DATA_FILE = Path(__file__).resolve().parent.parent / "data" / "geo" / "transit_whitelist.json"
@@ -55,9 +57,9 @@ def _frag(name: str) -> str:
     return frag or re.escape(name.lower())
 
 
-def _rx_for(entry: dict) -> "re.Pattern":
-    names = [entry["name"]] + entry.get("aliases", [])
-    return re.compile(r"(?i)\b(?:%s)\b" % "|".join(_frag(n) for n in names))
+def _rx_for(entry: dict) -> re.Pattern:
+    names = [entry["name"], *entry.get("aliases", [])]
+    return re.compile(r"(?i)\b(?:{})\b".format("|".join(_frag(n) for n in names)))
 
 
 def _load() -> dict:
@@ -123,7 +125,7 @@ def classify_job_location(j) -> str:
     return transit_for(wide, getattr(j, "plz", ""))
 
 
-def zero_xfer_rx() -> "re.Pattern":
+def zero_xfer_rx() -> re.Pattern:
     """Hard-filter regex: ONLY regular 0-transfer municipalities (limited
     IC61-only towns and 61-65min borderline towns deliberately excluded —
     they arrive via radius-scoped sources and stay filterable via `transit`)."""
@@ -131,5 +133,5 @@ def zero_xfer_rx() -> "re.Pattern":
     frags = [_frag(data["origin"]["name"])]
     for e in data["whitelist"]:
         if not e.get("limited"):
-            frags.extend(_frag(n) for n in [e["name"]] + e.get("aliases", []))
-    return re.compile(r"(?i)\b(?:%s)\b" % "|".join(frags))
+            frags.extend(_frag(n) for n in [e["name"], *e.get("aliases", [])])
+    return re.compile(r"(?i)\b(?:{})\b".format("|".join(frags)))

@@ -1,9 +1,12 @@
 """F2/F3/F4 regression tests — the three CONFIRMED filter false-positives from
 research/project-review/findings.md, plus baseline behavior pins (unittest)."""
-import sys, unittest
-sys.path.insert(0, "/home/z/my-project")
+import os
+import sys
+import unittest
 
-from pipeline.core import Job, classify_job, PARTTIME_RX, EXPERIENCE_BODY_RX
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from pipeline.core import EXPERIENCE_BODY_RX, PARTTIME_RX, Job, classify_job
 
 
 def mk(title="IT-Supporter (m/w/d)", company="Test GmbH", desc="", employment_raw=""):
@@ -105,7 +108,7 @@ class TestF4AusbildungBoilerplate(unittest.TestCase):
         for t in ("Werkstudent IT-Support", "Praktikant Systemadministration",
                   "Working Student IT"):
             j = mk(title=t)
-            keep, reason = classify_job(j)
+            keep, _reason = classify_job(j)
             self.assertFalse(keep, t)
 
 
@@ -121,7 +124,7 @@ class TestBaselines(unittest.TestCase):
 
     def test_ft_unknown_flag(self):
         j = mk(title="IT-Admin", desc="Spannende Aufgaben in moderner Umgebung.")
-        keep, reason = classify_job(j)
+        keep, _reason = classify_job(j)
         self.assertTrue(keep)
         self.assertTrue(j.ft_unknown)
 

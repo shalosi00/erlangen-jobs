@@ -24,8 +24,8 @@ from datetime import datetime, timezone
 import requests
 
 from pipeline.core import Job, SourceError, date_from_text, strip_html
-from pipeline.sources._base import register, check_http
-from pipeline.proxy_pool import pick, mark_dead
+from pipeline.proxy_pool import mark_dead, pick
+from pipeline.sources._base import check_http, register
 
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
@@ -44,7 +44,7 @@ def _slug(s: str) -> str:
 def _fetch_serp(ctx, url: str) -> str:
     """Fetch the SERP through rotating validated proxies; pinpoint failures."""
     last_err = None
-    for attempt in range(MAX_PROXY_TRIES):
+    for _attempt in range(MAX_PROXY_TRIES):
         entry = pick("kimeta")
         if entry is None:
             raise SourceError("waf", "no alive kimeta-validated proxy in pool — run: "
@@ -75,10 +75,10 @@ def _fetch_serp(ctx, url: str) -> str:
 
 # card anchor: href="/display-job/..."  (redirect hop to the original board)
 CARD_RX = re.compile(
-    r'<a[^>]+href="(/display-job/[^"]+)"[^>]*>(.*?)</a>', re.S)
+    r'<a[^>]+href="(/display-job/[^"]+)"[^>]*>(.*?)</a>', re.DOTALL)
 COMPANY_RX = re.compile(r'\b cn">([^<]{2,90})<')
-TITLE_RX = re.compile(r'\b jt">(.*?)</h3>', re.S)
-CITY_RX = re.compile(r'pin-svg[^>]*>.*?<span[^>]*>([^<]{2,60})</span>', re.S)
+TITLE_RX = re.compile(r'\b jt">(.*?)</h3>', re.DOTALL)
+CITY_RX = re.compile(r'pin-svg[^>]*>.*?<span[^>]*>([^<]{2,60})</span>', re.DOTALL)
 
 
 @register("kimeta", geo_scope="query")

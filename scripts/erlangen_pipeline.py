@@ -26,7 +26,15 @@ Usage:
 Scoring (optional, separate LLM pass):
   python3 scripts/de_job_score.py        # reads the newest erlangen_jobs_final_*.csv
 """
-import argparse, csv, glob, json, os, shutil, subprocess, sys, time
+import argparse
+import csv
+import glob
+import json
+import os
+import shutil
+import subprocess
+import sys
+import time
 from datetime import date
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,7 +47,7 @@ FINAL_COLS = ["title", "company", "location", "city", "direction", "station",
 
 def run(cmd):
     print(f"\n$ {' '.join(cmd)}", flush=True)
-    r = subprocess.run(cmd)
+    r = subprocess.run(cmd, check=False)  # rc checked explicitly below
     if r.returncode != 0:
         sys.exit(f"stage failed: {' '.join(cmd)}")
 
@@ -265,7 +273,7 @@ def main():
         run(cmd)
         fin = newest(os.path.join(DOWNLOAD, "erlangen_jobs_final_*.csv"), DOWNLOAD) \
             if not args.out else args.out
-        print(f"\n=== FINAL (with descriptions, sorted by date) ===")
+        print("\n=== FINAL (with descriptions, sorted by date) ===")
         print(f"output: {fin}")
         if args.enrich_geo:
             _enrich_file(fin, args)
@@ -276,7 +284,8 @@ def main():
         return
 
     # ---- stage 3: ONE final CSV ------------------------------------------
-    jobs = json.load(open(filtered))
+    with open(filtered, encoding="utf-8") as f:
+        jobs = json.load(f)
     for j in jobs:
         d = str(j.get("date_posted") or "")[:10]
         try:
@@ -313,7 +322,7 @@ def main():
     dt = time.time() - t0
     from collections import Counter
     by_dir = Counter(j["commute"]["direction"] for j in jobs)
-    print(f"\n=== FINAL ===")
+    print("\n=== FINAL ===")
     print(f"{len(jobs)} jobs -> {out}  ({dt:.1f}s total)")
     print("by direction:", dict(by_dir.most_common()))
     print(f"columns: {', '.join(FINAL_COLS)}")

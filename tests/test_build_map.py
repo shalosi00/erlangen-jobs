@@ -10,7 +10,9 @@ Covers:
 
 Run:  python3 tests/test_build_map.py      (exit 0 = all PASS)
 """
-import json, os, sys
+import json
+import os
+import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
 import build_map as bm
@@ -23,11 +25,11 @@ def check(name, cond, extra=""):
 
 def row(title="Engineer", company="ACME GmbH", lat="49.58", lon="11.01",
         portal="Indeed", addr="Erlangen (Korridor-Gemeinde)", prec="city", **kw):
-    r = dict(title=title, company=company, lat=lat, lon=lon,
-             source_portal=portal, company_address=addr, geo_precision=prec,
-             job_url="https://example.test/x", job_url_direct="",
-             date_posted="2026-10-10", erlangen_km="3.2", line="S1",
-             station="Erlangen", location="Erlangen, Bavaria", is_remote="")
+    r = {"title": title, "company": company, "lat": lat, "lon": lon,
+             "source_portal": portal, "company_address": addr, "geo_precision": prec,
+             "job_url": "https://example.test/x", "job_url_direct": "",
+             "date_posted": "2026-10-10", "erlangen_km": "3.2", "line": "S1",
+             "station": "Erlangen", "location": "Erlangen, Bavaria", "is_remote": ""}
     r.update(kw)
     return r
 
@@ -84,5 +86,6 @@ check("embedded JSON parses", js["markers"][0]["company"].endswith("AG"))
 # ------------------------------------------------------------- summary
 print(f"\n{len(PASS)} PASS, {len(FAIL)} FAIL")
 if FAIL:
-    print("FAILED:", ", ".join(FAIL)); sys.exit(1)
+    print("FAILED:", ", ".join(FAIL))
+    sys.exit(1)
 print("ALL PASS")

@@ -1,11 +1,11 @@
 """Indeed DE + LinkedIn guest via python-jobspy (optional dependency).
 Runs in-process; if the lib is missing the runner records a SKIP with install hint."""
-import re, sys
+import re
+
 from pipeline.core import Job, SourceError, parse_date
 from pipeline.sources._base import register
 
 try:
-    import pandas  # jobspy dep check
     import jobspy
     HAS_JOBSPY = True
 except Exception:
@@ -26,7 +26,7 @@ def fetch(ctx) -> list[Job]:
             location=f"{ctx.city}, Bayern", results_wanted=60,
             hours_old=ctx.days * 24, country_indeed="germany")
     except Exception as e:
-        raise SourceError("net", f"jobspy indeed failed: {type(e).__name__}: {str(e)[:140]}")
+        raise SourceError("net", f"jobspy indeed failed: {type(e).__name__}: {str(e)[:140]}") from e
     out = []
     for row in df.to_dict(orient="records"):
         loc = row.get("location") or ""
@@ -62,7 +62,7 @@ def fetch(ctx) -> list[Job]:
             location=f"{ctx.city}, Bavaria", results_wanted=40,
             hours_old=ctx.days * 24)
     except Exception as e:
-        raise SourceError("net", f"jobspy linkedin failed: {type(e).__name__}: {str(e)[:140]}")
+        raise SourceError("net", f"jobspy linkedin failed: {type(e).__name__}: {str(e)[:140]}") from e
     out = []
     for row in df.to_dict(orient="records"):
         loc = row.get("location") or ""

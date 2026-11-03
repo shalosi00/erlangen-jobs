@@ -1,10 +1,14 @@
 """The 5 HTML boards verified working with plain requests from this IP (round-2
 probes): Connecticum, Get-in-IT, Berufsstart.de, Jobs.InFranken.de, Talent.com DE.
 Parse recipes in research/aggregators-round2/findings.md §A."""
-import json, re, time
+import json
+import re
+import time
+
 import requests
+
 from pipeline.core import Job, SourceError, date_from_text, strip_html
-from pipeline.sources._base import register, check_http
+from pipeline.sources._base import check_http, register
 
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                      "(KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
@@ -13,10 +17,10 @@ UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3
 def _get(ctx, url):
     try:
         r = requests.get(url, headers=UA, timeout=ctx.timeout, allow_redirects=True)
-    except requests.exceptions.Timeout:
-        raise SourceError("timeout", f"timeout after {ctx.timeout}s: {url}", url=url)
+    except requests.exceptions.Timeout as e:
+        raise SourceError("timeout", f"timeout after {ctx.timeout}s: {url}", url=url) from e
     except requests.exceptions.ConnectionError as e:
-        raise SourceError("net", f"connection failed: {str(e)[:110]}", url=url)
+        raise SourceError("net", f"connection failed: {str(e)[:110]}", url=url) from e
     check_http(r, "html", url)
     time.sleep(ctx.sleep)
     return r.text
@@ -25,7 +29,9 @@ def _get(ctx, url):
 def fetch(ctx) -> list[Job]:
     h = _get(ctx, f"https://www.connecticum.de/jobs?searchterm={ctx.query}&submit=1")
     jobs, seen = [], set()
-    for m in re.finditer(r'<a[^>]+href="((?:https://www\.connecticum\.de)?/jobs/[a-z0-9-]+-\d{6,})"[^>]*>(.*?)</a>', h, re.S):
+    conn_rx = (r'<a[^>]+href="((?:https://www\.connecticum\.de)?'
+               r'/jobs/[a-z0-9-]+-\d{6,})"[^>]*>(.*?)</a>')
+    for m in re.finditer(conn_rx, h, re.DOTALL):
         url, inner = m.group(1), strip_html(m.group(2))
         if url in seen or len(inner) < 8:
             continue
@@ -44,13 +50,15 @@ def fetch(ctx) -> list[Job]:
 def fetch(ctx) -> list[Job]:
     h = _get(ctx, f"https://www.get-in-it.de/jobsuche?was={ctx.query}&wo={ctx.city}")
     jobs, seen = [], set()
-    for m in re.finditer(r'<a[^>]+class="CardJob_jobCard[^"]*"[^>]+href="(/jobsuche/p\d+)[^"]*"[^>]*>(.*?)</a>', h, re.S):
+    getin_rx = (r'<a[^>]+class="CardJob_jobCard[^"]*"[^>]+'
+                r'href="(/jobsuche/p\d+)[^"]*"[^>]*>(.*?)</a>')
+    for m in re.finditer(getin_rx, h, re.DOTALL):
         url, block = m.group(1), m.group(2)
         if url in seen:
             continue
         seen.add(url)
         mt = re.search(r'CardJob_jobTitle[^>]*>([^<]+)<', block)
-        mc = re.search(r'CardJob_logo[^>]*>.*?title="([^"]{2,80})"', block, re.S)
+        mc = re.search(r'CardJob_logo[^>]*>.*?title="([^"]{2,80})"', block, re.DOTALL)
         title = strip_html(mt.group(1)) if mt else strip_html(block)
         if len(title) < 6:
             continue
@@ -67,7 +75,9 @@ def fetch(ctx) -> list[Job]:
 def fetch(ctx) -> list[Job]:
     h = _get(ctx, f"https://www.berufsstart.de/ergebnisliste.php?suchbegriff={ctx.query}")
     jobs, seen = [], set()
-    for m in re.finditer(r'<a[^>]+href="(appscripts/jobs/anzeigenAusgabe\.php\?AnzeigenID=\d+)"[^>]*>(.*?)</a>', h, re.S):
+    bs_rx = (r'<a[^>]+href="(appscripts/jobs/anzeigenAusgabe\.php\?AnzeigenID=\d+)"'
+             r'[^>]*>(.*?)</a>')
+    for m in re.finditer(bs_rx, h, re.DOTALL):
         url, inner = m.group(1), strip_html(m.group(2))
         if url in seen or len(inner) < 8:
             continue
@@ -85,8 +95,9 @@ def fetch(ctx) -> list[Job]:
     h = _get(ctx, f"https://jobs.infranken.de/suchergebnisse?Searchterm={ctx.query}")
     jobs, seen = [], set()
     # split into cards: <h2 class="job-name"> ... up to next <h2 class="job-name">
-    starts = [m.start() for m in re.finditer(r'<h2 class="job-name">\s*<a href="(/jobs/\d+/[^"]*)"[^>]*>(.*?)</a>', h, re.S)]
-    for idx, sm in enumerate(re.finditer(r'<h2 class="job-name">\s*<a href="(/jobs/\d+/[^"]*)"[^>]*>(.*?)</a>', h, re.S)):
+    talent_rx = r'<h2 class="job-name">\s*<a href="(/jobs/\d+/[^"]*)"[^>]*>(.*?)</a>'
+    starts = [m.start() for m in re.finditer(talent_rx, h, re.DOTALL)]
+    for idx, sm in enumerate(re.finditer(talent_rx, h, re.DOTALL)):
         url = sm.group(1)
         title = strip_html(sm.group(2))
         if url in seen or len(title) < 6:
@@ -94,11 +105,11 @@ def fetch(ctx) -> list[Job]:
         seen.add(url)
         block = h[sm.start(): starts[idx + 1] if idx + 1 < len(starts) else sm.start() + 4000]
         md = re.search(r'<div class="date-company-city">\s*<span>([^<]{6,12})</span>\s*'
-                       r'<a[^>]*>\s*<span[^>]*>([^<]+)</span>\s*</a>\s*<span>([^<]+)</span>', block, re.S)
+                       r'<a[^>]*>\s*<span[^>]*>([^<]+)</span>\s*</a>\s*<span>([^<]+)</span>', block, re.DOTALL)
         date = md.group(1).strip() if md else ""
         company = strip_html(md.group(2)) if md else ""
         city = strip_html(md.group(3)) if md else ""
-        mdesc = re.search(r'<div class="job-description">(.*?)</div>', block, re.S)
+        mdesc = re.search(r'<div class="job-description">(.*?)</div>', block, re.DOTALL)
         jobs.append(Job(
             source="InFranken", title=title[:140], company=company, city=city,
             date_posted=date_from_text(date),
@@ -111,7 +122,7 @@ def fetch(ctx) -> list[Job]:
 def fetch(ctx) -> list[Job]:
     h = _get(ctx, f"https://de.talent.com/jobs?k={ctx.query}&l={ctx.city}")
     urls = []
-    m = re.search(r'<script type="application/ld\+json">(.*?)</script>', h, re.S)
+    m = re.search(r'<script type="application/ld\+json">(.*?)</script>', h, re.DOTALL)
     if m:
         try:
             j = json.loads(m.group(1))
@@ -122,7 +133,7 @@ def fetch(ctx) -> list[Job]:
             pass
     if not urls:
         urls = ["https://de.talent.com" + u for u in re.findall(r'href="(/view\?id=\d+)"', h)]
-    blocks = re.findall(r'<h2[^>]*>(.*?)</h2>(.*?)(?=<h2|\Z)', h, re.S)
+    blocks = re.findall(r'<h2[^>]*>(.*?)</h2>(.*?)(?=<h2|\Z)', h, re.DOTALL)
     jobs, seen = [], set()
     for i, url in enumerate(urls):
         title, company, loc = "", "", ctx.city
@@ -134,7 +145,7 @@ def fetch(ctx) -> list[Job]:
             if len(parts) >= 2:
                 company = parts[0].strip()[:70]
                 loc = parts[1].split()[0].strip()[:40] or ctx.city
-        if not title or len(title) < 8 or re.search(r"mehr anzeigen|faq|städte", title, re.I):
+        if not title or len(title) < 8 or re.search(r"mehr anzeigen|faq|städte", title, re.IGNORECASE):
             continue
         if url in seen:
             continue

@@ -15,18 +15,25 @@ Opt-out only via --allow-direct (uses your IP — not recommended).
 
 Output: data/raw/erlangen_ALL_portals_<stamp>.json + download/erlangen_ALL_portals_<stamp>.csv
 """
-import argparse, json, os, sys, time, csv, traceback, random
+import argparse
+import csv
+import json
+import os
+import random
+import sys
+import time
+import traceback
 import warnings
+
 warnings.filterwarnings("ignore")
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import net_resilience as nr
+import pandas as pd
 
 # Pre-Filter: Negativ-Liste + Frische-Check VOR der CSV-Schreibung
 # (JSON bleibt ungefiltert als Audit-/Merge-Quelle; deaktivierbar: --no-prefilter)
 from job_prefilter import prefilter_jobs
-
-import pandas as pd
 from jobspy import scrape_jobs
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -216,10 +223,10 @@ def main():
     csv_rows = rows
     if not args.no_prefilter and rows:
         csv_rows, rej, pf = prefilter_jobs(rows)
-        log("pre-filter CSV: %d -> %d rows (%d removed: %s)"
-            % (len(rows), len(csv_rows), len(rej),
-               ", ".join(f"{k}={v}" for k, v in sorted(pf["by_rule"].items(),
-                                                      key=lambda x: -x[1]))))
+        by_rule = ", ".join(f"{k}={v}" for k, v in sorted(pf["by_rule"].items(),
+                                                          key=lambda x: -x[1]))
+        log(f"pre-filter CSV: {len(rows)} -> {len(csv_rows)} rows "
+            f"({len(rej)} removed: {by_rule})")
     csv_path = out_json.replace(".json", ".csv").replace(RAW_DIR, OUT_DIR)
     if csv_rows:
         pd.DataFrame(csv_rows).to_csv(csv_path, index=False, quoting=csv.QUOTE_MINIMAL)

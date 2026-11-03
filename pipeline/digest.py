@@ -14,9 +14,11 @@ rows whose sources all failed/were not run today are labelled "source-down"
 instead of implying the posting expired.
 """
 from __future__ import annotations
-import glob, json, os
-from datetime import datetime, timezone
 
+import glob
+import json
+import os
+from datetime import datetime, timezone
 from pathlib import Path
 
 from pipeline import history
@@ -30,7 +32,8 @@ def latest_manifest() -> dict | None:
     if not paths:
         return None
     try:
-        m = json.load(open(paths[-1], encoding="utf-8"))
+        with open(paths[-1], encoding="utf-8") as f:
+            m = json.load(f)
     except Exception:
         return None
     today = datetime.now(timezone.utc).strftime("%Y%m%d")
@@ -95,8 +98,8 @@ def build_digest(max_new: int = 12) -> str:
             lines.append("")
             lines.append("(no fetch manifest for today — expiry lines are unreliable)")
 
-    lines += ["", f"memory: {st['total']} postings since {st['first_seen_ever']}, "
-                  f"{st['seen_today']} re-seen today"]
+    lines += ["", (f"memory: {st['total']} postings since {st['first_seen_ever']}, "
+                  f"{st['seen_today']} re-seen today")]
     return "\n".join(lines)
 
 
@@ -115,8 +118,8 @@ def send(text: str) -> tuple[bool, str]:
         ok = getattr(res, "status", res)
         ok_val = ok == 0 if isinstance(ok, int) else getattr(ok, "name", "") == "SUCCESS"
         return (bool(ok_val),
-                f"apprise -> {url.split('://')[0]}://{url.split('://', 1)[-1].split('/')[0]}: "
-                f"{getattr(ok, 'name', ok)}")
+                (f"apprise -> {url.split('://')[0]}://{url.split('://', 1)[-1].split('/')[0]}: "
+                f"{getattr(ok, 'name', ok)}"))
     except Exception as e:
         return False, f"apprise send failed: {type(e).__name__}: {str(e)[:120]}"
 

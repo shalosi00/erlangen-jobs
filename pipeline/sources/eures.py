@@ -1,9 +1,11 @@
 """EURES (EU portal) — POST search with full text in the response.
 Mirrors BA postings + EU cross-border. Working host verified: europa.eu/eures/api."""
 import time
+
 import requests
-from pipeline.core import Job, SourceError, strip_html, parse_date
-from pipeline.sources._base import register, check_http
+
+from pipeline.core import Job, SourceError, parse_date, strip_html
+from pipeline.sources._base import check_http, register
 
 URL = "https://europa.eu/eures/api/jv-searchengine/public/jv-search/search"
 H = {"User-Agent": "asha-jobtoolkit/1.0", "Content-Type": "application/json"}
@@ -23,22 +25,24 @@ def fetch(ctx) -> list[Job]:
         }
         try:
             r = requests.post(URL, json=body, headers=H, timeout=ctx.timeout)
-        except requests.exceptions.Timeout:
-            raise SourceError("timeout", f"EURES timeout after {ctx.timeout}s", url=URL)
+        except requests.exceptions.Timeout as e:
+            raise SourceError("timeout", f"EURES timeout after {ctx.timeout}s", url=URL) from e
         except requests.exceptions.ConnectionError as e:
-            raise SourceError("net", f"EURES connection failed: {str(e)[:120]}", url=URL)
+            raise SourceError("net", f"EURES connection failed: {str(e)[:120]}", url=URL) from e
         check_http(r, "eures", URL)
         try:
             data = r.json()
         except Exception as e:
-            raise SourceError("parse", f"EURES non-JSON ({str(e)[:80]})", http_status=200, url=URL)
+            raise SourceError("parse", f"EURES non-JSON ({str(e)[:80]})", http_status=200, url=URL) from e
         jvs = data.get("jvs")
         if jvs is None:
             raise SourceError("shape", "EURES: key 'jvs' missing", http_status=200, url=URL,
                               detail=str(list(data.keys()))[:200])
         for v in jvs:
             loc = v.get("locationMap") or {}
-            loc_str = ", ".join(str(x) for x in [loc.get("city"), loc.get("country", {}).get("label", "") if isinstance(loc.get("country"), dict) else loc.get("country")] if x)
+            c = loc.get("country")
+            country = c.get("label", "") if isinstance(c, dict) else c
+            loc_str = ", ".join(str(x) for x in [loc.get("city"), country] if x)
             emp = v.get("employer") or {}
             jobs.append(Job(
                 source="EURES",

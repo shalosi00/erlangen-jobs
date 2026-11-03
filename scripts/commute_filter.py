@@ -28,7 +28,17 @@ Outputs (in download/):
   erlangen_commute_filtered_<ts>.json/.csv   passing jobs + commute annotations
   erlangen_commute_report_<ts>.md            stats, per-station breakdown, audit
 """
-import json, csv, math, os, re, sys, time, argparse, urllib.parse, urllib.request
+import argparse
+import contextlib
+import csv
+import json
+import math
+import os
+import re
+import sys
+import time
+import urllib.parse
+import urllib.request
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CORR_FILE = os.path.join(BASE, "data", "rail_corridor.json")
@@ -79,7 +89,7 @@ def _geo_opener():
 REGION_TAILS = re.compile(
     r",\s*(BY|Bavaria|Bayern|Germany|Deutschland|Oberfranken|Oberbayern|"
     r"Middle Franconia|Mittelfranken|Upper Franconia|Lower Bavaria|"
-    r"Greater Nuremberg Metropolitan Area|Nürnberger Land)\s*$", re.I)
+    r"Greater Nuremberg Metropolitan Area|Nürnberger Land)\s*$", re.IGNORECASE)
 
 CITY_ALIASES = {
     "nuremberg": "Nürnberg", "nuernberg": "Nürnberg", "nurnberg": "Nürnberg",
@@ -115,16 +125,18 @@ def parse_city(location):
     if low in CITY_ALIASES:
         return CITY_ALIASES[low], low.startswith("greater"), raw
     # district prefixes: "Erlangen-Tennenlohe" -> "Erlangen"
-    m = re.match(r"^(Erlangen|Nürnberg|Nuremberg|Fürth|Fürth|Bamberg|Schwabach|Baiersdorf|Forchheim)-", s, re.I)
+    city_rx = (r"^(Erlangen|Nürnberg|Nuremberg|Fürth|Fürth|Bamberg|Schwabach|"
+               r"Baiersdorf|Forchheim)-")
+    m = re.match(city_rx, s, re.IGNORECASE)
     if m:
         head = m.group(1)
         head = "Nürnberg" if head.lower() in ("nürnberg", "nuremberg") else head
         return head, False, raw
     # "Lauf a.d.Pegnitz" style
-    s2 = re.sub(r"\ba\.\s*d\.\s*", "an der ", s, flags=re.I)
+    s2 = re.sub(r"\ba\.\s*d\.\s*", "an der ", s, flags=re.IGNORECASE)
     if s2.lower() in CITY_ALIASES:
         return CITY_ALIASES[s2.lower()], False, raw
-    return (s if s else None), False, raw
+    return (s or None), False, raw
 
 # ---------------------------------------------------------------- geo helpers
 def haversine(a, b):
@@ -143,7 +155,8 @@ def load_cache():
 
 def save_cache(c):
     tmp = CACHE_FILE + ".tmp"
-    json.dump(c, open(tmp, "w"), ensure_ascii=False, indent=0)
+    with open(tmp, "w") as f:
+        json.dump(c, f, ensure_ascii=False, indent=0)
     os.replace(tmp, CACHE_FILE)
 
 def geocode(city, cache, network=True):
@@ -168,27 +181,21 @@ def geocode(city, cache, network=True):
                 req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "de"})
                 with opener.open(req, timeout=25) as r:
                     res = json.load(r)
-                try:
+                with contextlib.suppress(Exception):
                     _GEO_POOL.report(px_used, status=200)
-                except Exception:
-                    pass
                 break
             except urllib.error.HTTPError as e:
                 wait = 8 if e.code == 429 else 2 + 3 * attempt   # throttle -> longer backoff
                 print(f"  ! geocode({city}) HTTP {e.code}, retry in {wait}s", flush=True)
-                try:
+                with contextlib.suppress(Exception):
                     _GEO_POOL.report(px_used, error=f"http_{e.code}")
-                except Exception:
-                    pass
                 if attempt == 2:
                     break
                 time.sleep(wait)
             except Exception as e:
                 print(f"  ! geocode({city}) error {e}, retrying", flush=True)
-                try:
+                with contextlib.suppress(Exception):
                     _GEO_POOL.report(px_used, error=str(e)[:80])
-                except Exception:
-                    pass
                 if attempt == 2:
                     break
                 time.sleep(2 + 3 * attempt)
@@ -208,7 +215,7 @@ def geocode(city, cache, network=True):
         cand.append((rank.get(r_.get("type"), 6), -float(r_.get("importance") or 0), r_))
     if not cand:
         return None
-    best = sorted(cand, key=lambda x: (x[0], x[1]))[0][2]
+    best = min(cand, key=lambda x: (x[0], x[1]))[2]
     return float(best["lat"]), float(best["lon"])
 
 # ---------------------------------------------------------------- main filter
@@ -231,12 +238,14 @@ def main():
                     help="prefilter: disable senior/mgmt false-positive guard")
     args = ap.parse_args()
 
-    corr = json.load(open(CORR_FILE))
+    with open(CORR_FILE, encoding="utf-8") as f:
+        corr = json.load(f)
     stations = [s for s in corr["stations"] if s.get("enabled")]
     towns = corr["towns"]
     E = (corr["meta"]["erlangen_center"]["lat"], corr["meta"]["erlangen_center"]["lon"])
 
-    jobs = json.load(open(args.input))
+    with open(args.input, encoding="utf-8") as f:
+        jobs = json.load(f)
     print(f"loaded {len(jobs)} jobs from {os.path.basename(args.input)}")
 
     # -------- optional text pre-filter (before ANY geo work) --------
@@ -272,11 +281,11 @@ def main():
                 best, bd = s, d
         return best, bd
 
-    for i, job in enumerate(jobs):
+    for _i, job in enumerate(jobs):
         loc = job.get("location") or ""
-        city, metro, raw = parse_city(loc)
+        city, metro, _raw = parse_city(loc)
         is_remote = str(job.get("is_remote", "False")).lower() == "true" or \
-                    "remote" in loc.lower() and "area" not in loc.lower()
+                    ("remote" in loc.lower() and "area" not in loc.lower())
         rec_reason = None
         anno = None
 
@@ -288,11 +297,11 @@ def main():
             t = towns[city]
             if t["status"] == "corridor_town" and t["dist_km"] <= args.max_km:
                 st, sd = nearest_station(t["lat"], t["lon"])
-                anno = dict(city=city, lat=t["lat"], lon=t["lon"],
-                            erlangen_km=t["dist_km"], nearest_station=st["name"],
-                            station_km=round(sd, 2), direction=st["branch"],
-                            tier=st["tier"], line=st["line"],
-                            match="town", metro_approx=metro)
+                anno = {"city": city, "lat": t["lat"], "lon": t["lon"],
+                            "erlangen_km": t["dist_km"], "nearest_station": st["name"],
+                            "station_km": round(sd, 2), "direction": st["branch"],
+                            "tier": st["tier"], "line": st["line"],
+                            "match": "town", "metro_approx": metro}
             elif t["status"] == "outside_50km" or t["dist_km"] > args.max_km:
                 rec_reason = f"outside_{int(args.max_km)}km"
             else:
@@ -311,11 +320,11 @@ def main():
                 else:
                     st, sd = nearest_station(lat, lon)
                     if sd <= args.station_km:
-                        anno = dict(city=city, lat=lat, lon=lon,
-                                    erlangen_km=round(dist_e, 2), nearest_station=st["name"],
-                                    station_km=round(sd, 2), direction=st["branch"],
-                                    tier=st["tier"], line=st["line"],
-                                    match="geocode", metro_approx=metro)
+                        anno = {"city": city, "lat": lat, "lon": lon,
+                                    "erlangen_km": round(dist_e, 2), "nearest_station": st["name"],
+                                    "station_km": round(sd, 2), "direction": st["branch"],
+                                    "tier": st["tier"], "line": st["line"],
+                                    "match": "geocode", "metro_approx": metro}
                     else:
                         rec_reason = f"no_station_within_{int(args.station_km)}km"
             net_calls += 1
@@ -338,7 +347,8 @@ def main():
     os.makedirs(args.outdir, exist_ok=True)
     ts = time.strftime("%Y%m%d_%H%M")
     out_base = os.path.join(args.outdir, f"{args.prefix}_filtered_{ts}")
-    json.dump(passing, open(out_base + ".json", "w"), ensure_ascii=False, indent=1)
+    with open(out_base + ".json", "w", encoding="utf-8") as f:
+        json.dump(passing, f, ensure_ascii=False, indent=1)
     with open(out_base + ".csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         cols = ["title", "company", "location", "commute_city", "commute_direction",
@@ -353,7 +363,8 @@ def main():
                         j.get("date_posted"), j.get("is_remote"),
                         j.get("job_url"), j.get("job_url_direct")])
     if args.save_rejected:
-        json.dump(rejected, open(out_base + "_rejected.json", "w"), ensure_ascii=False, indent=1)
+        with open(out_base + "_rejected.json", "w", encoding="utf-8") as f:
+            json.dump(rejected, f, ensure_ascii=False, indent=1)
 
     # ---------------- report
     from collections import Counter
@@ -374,8 +385,8 @@ def main():
         rep.append(f"**Pre-filter**: {pf_stats['input']} -> {pf_stats['kept']} jobs "
                    f"({pf_stats['rejected']} removed by text/date rules)\n")
     rep.append("## Result\n")
-    rep.append(f"| | jobs |")
-    rep.append(f"|---|---|")
+    rep.append("| | jobs |")
+    rep.append("|---|---|")
     rep.append(f"| **PASS (on corridor)** | **{len(passing)}** |")
     rep.append(f"| rejected | {len(rejected)} |")
     rep.append(f"| of which direct trains (no transfer) | {tier_direct} |")
@@ -422,10 +433,12 @@ def main():
                "Lauf/Röthenbach/Hersbruck (S1 east leg), Ansbach/Wicklesgreuth/Heilsbronn (S4 west), "
                "Neustadt/Aisch+Emskirchen (S6 NW), **Herzogenaurach (adidas/Schaeffler HQ — "
                "Aurachtalbahn has NO passenger service; StUB tram planned)**\n")
-    open(out_base + "_report.md", "w").write("\n".join(rep))
-    json.dump(rep, open("/dev/null", "w"))  # no-op guard
+    with open(out_base + "_report.md", "w", encoding="utf-8") as f:
+        f.write("\n".join(rep))
+    with open(os.devnull, "w") as f:  # no-op guard: rep must stay JSON-serializable
+        json.dump(rep, f)
 
-    print(f"\n=== RESULT ===")
+    print("\n=== RESULT ===")
     if pf_stats:
         print(f"pre-filter: {pf_stats['input']} -> {pf_stats['kept']}")
     print(f"PASS:  {len(passing)}  ({tier_direct} direct-train)")

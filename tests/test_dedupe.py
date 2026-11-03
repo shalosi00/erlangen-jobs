@@ -1,9 +1,12 @@
 """Dedupe layer tests — ported from scripts/test_dedupe_upgrade.py (Task 12
 production evidence) into the F15 unittest suite, plus F19 stopword pin."""
-import sys, unittest
-sys.path.insert(0, "/home/z/my-project")
+import os
+import sys
+import unittest
 
-from pipeline.core import Job, dedupe, canon_url, _jac, title_key
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from pipeline.core import Job, _jac, canon_url, dedupe, title_key
 
 try:
     import rapidfuzz  # noqa: F401
@@ -62,6 +65,7 @@ class TestF19Stopwords(unittest.TestCase):
     def test_no_duplicate_stopwords(self):
         # regression: 'den' appeared twice in the stopword set literal
         import inspect
+
         from pipeline import core
         src = inspect.getsource(core._jac)
         self.assertEqual(src.count('"den"'), 1)

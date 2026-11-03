@@ -14,7 +14,14 @@ Usage:
   python3 scripts/build_map.py --input download/erlangen_jobs_final_20261018_geo.csv
   python3 scripts/build_map.py --outdir map --title "Erlangen Job Corridor"
 """
-import argparse, csv, datetime, html, json, math, os, re, sys
+import argparse
+import csv
+import datetime
+import html
+import json
+import math
+import os
+import sys
 from collections import Counter, defaultdict
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -52,7 +59,7 @@ _PRETTY = {"indeed": "Indeed", "linkedin": "LinkedIn", "stepstone": "Stepstone",
            "xing": "XING", "glassdoor": "Glassdoor", "arbeitsagentur": "Arbeitsagentur"}
 
 def pretty_portal(p):
-    core = p[len("jobspy-"):] if p.startswith("jobspy-") else p
+    core = p.removeprefix("jobspy-")
     return _PRETTY.get(core.lower(), core)
 
 def aggregate(rows):
@@ -236,7 +243,8 @@ li.more{color:var(--dim);font-size:12px}
    Generated __GENERATED__ · data: <code>__CSV__</code><br>
    Scraped via strict proxy-only network · per-company geocoding chain:
    Photon → maps.co → headless Google-Maps → description mining<br>
-   <a href="https://github.com/shalosi00/erlangen-jobs" target="_blank" rel="noopener">github.com/shalosi00/erlangen-jobs</a>
+   <a href="https://github.com/shalosi00/erlangen-jobs" target="_blank"
+      rel="noopener">github.com/shalosi00/erlangen-jobs</a>
   </footer>
  </div>
  <div id="map"><button id="reset">Reset view</button></div>
@@ -245,7 +253,8 @@ li.more{color:var(--dim);font-size:12px}
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 const P = JSON.parse(document.getElementById('payload').textContent);
-const esc = s => { const d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; };
+const esc = s => { const d = document.createElement('div');
+  d.textContent = s == null ? '' : String(s); return d.innerHTML; };
 
 const map = L.map('map', { zoomControl: true });
 const ctr = P.markers.length
@@ -253,7 +262,9 @@ const ctr = P.markers.length
      P.markers.reduce((s,m)=>s+m.lon,0)/P.markers.length]
   : [49.55, 10.95];
 map.setView(ctr, 10);
-L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+const TILES = 'https://server.arcgisonline.com/ArcGIS/rest/services/'
+  + 'Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}';
+L.tileLayer(TILES, {
   maxZoom: 17,
   attribution: 'Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors'
 }).addTo(map);
@@ -364,7 +375,7 @@ def main():
         json.dump(gj, f, ensure_ascii=False)
 
     n_jobs = sum(m["n"] for m in markers)
-    street = sum(1 for r in rows if r.get("geo_precision") == "street")
+    sum(1 for r in rows if r.get("geo_precision") == "street")
     print(f"input : {os.path.basename(src)} ({len(rows)} rows)")
     print(f"output: {out_html} ({os.path.getsize(out_html)//1024} KB)")
     print(f"        {out_gj} ({len(gj['features'])} features)")

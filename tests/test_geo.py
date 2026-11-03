@@ -4,8 +4,11 @@ Source of truth: research/2-e/findings.md §3.1-3.3 via
 data/geo/transit_whitelist.json. The pins below are the ones specced in
 research/project-review/findings.md F1, plus data-integrity checks.
 """
-import sys, unittest
-sys.path.insert(0, "/home/z/my-project")
+import os
+import sys
+import unittest
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from pipeline import geo
 from pipeline.core import Job

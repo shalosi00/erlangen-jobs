@@ -36,3 +36,6 @@ logs/
 backups/*.bundle
 site/full-repo/*.bundle
 research/2-e/vgn_gtfs/
+
+# e2e offline-chain workspace (regenerated on every tests/e2e_test.py run)
+data/work_e2e/

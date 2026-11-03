@@ -1,10 +1,13 @@
 """XING Jobs via logged-out server-side-rendered search page.
 The /ki page embeds the full GraphQL response in serverData.APOLLO_STATE.
 Yellow zone: ONE request per poll, polite sleep, back off immediately on 403."""
-import json, re
+import json
+import re
+
 import requests
+
 from pipeline.core import Job, SourceError, parse_date
-from pipeline.sources._base import register, check_http
+from pipeline.sources._base import check_http, register
 
 H = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
@@ -46,17 +49,17 @@ def _extract_apollo_state(html: str) -> dict:
         return json.loads(raw)
     except json.JSONDecodeError as e:
         raise SourceError("parse", f"XING: APOLLO_STATE invalid JSON ({str(e)[:80]})", http_status=200,
-                          detail=f"raw size {len(raw)}")
+                          detail=f"raw size {len(raw)}") from e
 
 @register("xing", geo_scope="query")
 def fetch(ctx) -> list[Job]:
     url = f"https://www.xing.com/jobs/search?keywords={ctx.query}&location={ctx.city}"
     try:
         r = requests.get(url, headers=H, timeout=ctx.timeout, allow_redirects=True)
-    except requests.exceptions.Timeout:
-        raise SourceError("timeout", f"XING timeout after {ctx.timeout}s", url=url)
+    except requests.exceptions.Timeout as e:
+        raise SourceError("timeout", f"XING timeout after {ctx.timeout}s", url=url) from e
     except requests.exceptions.ConnectionError as e:
-        raise SourceError("net", f"XING connection failed: {str(e)[:120]}", url=url)
+        raise SourceError("net", f"XING connection failed: {str(e)[:120]}", url=url) from e
     check_http(r, "xing", url)
     r.encoding = "utf-8"   # requests defaults to latin-1 for text/html w/o charset
     state = _extract_apollo_state(r.text)

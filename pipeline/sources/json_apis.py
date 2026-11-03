@@ -1,9 +1,9 @@
 """Keyless JSON APIs: Arbeitnow, Remotive, RemoteOK, Jobicy v2. All remote/global
 boards except Arbeitnow (DE) — geo filter client-side via ctx.near_re."""
-import time
 import requests
-from pipeline.core import Job, SourceError, strip_html, parse_date
-from pipeline.sources._base import register, check_http
+
+from pipeline.core import Job, SourceError, parse_date, strip_html
+from pipeline.sources._base import check_http, register
 
 H = {"User-Agent": "asha-jobtoolkit/1.0"}
 
@@ -12,10 +12,10 @@ def fetch(ctx) -> list[Job]:
     url = "https://www.arbeitnow.com/api/job-board-api"
     try:
         r = requests.get(url, headers=H, timeout=ctx.timeout)
-    except requests.exceptions.Timeout:
-        raise SourceError("timeout", f"Arbeitnow timeout after {ctx.timeout}s", url=url)
+    except requests.exceptions.Timeout as e:
+        raise SourceError("timeout", f"Arbeitnow timeout after {ctx.timeout}s", url=url) from e
     except requests.exceptions.ConnectionError as e:
-        raise SourceError("net", f"Arbeitnow connection failed: {str(e)[:110]}", url=url)
+        raise SourceError("net", f"Arbeitnow connection failed: {str(e)[:110]}", url=url) from e
     check_http(r, "arbeitnow", url)
     data = r.json().get("data")
     if data is None:
@@ -42,10 +42,10 @@ def fetch(ctx) -> list[Job]:
     url = "https://remotive.com/api/remote-jobs?limit=100"
     try:
         r = requests.get(url, headers=H, timeout=ctx.timeout)
-    except requests.exceptions.Timeout:
-        raise SourceError("timeout", f"Remotive timeout after {ctx.timeout}s", url=url)
+    except requests.exceptions.Timeout as e:
+        raise SourceError("timeout", f"Remotive timeout after {ctx.timeout}s", url=url) from e
     except requests.exceptions.ConnectionError as e:
-        raise SourceError("net", f"Remotive connection failed: {str(e)[:110]}", url=url)
+        raise SourceError("net", f"Remotive connection failed: {str(e)[:110]}", url=url) from e
     check_http(r, "remotive", url)
     jobs = r.json().get("jobs")
     if jobs is None:
@@ -71,10 +71,10 @@ def fetch(ctx) -> list[Job]:
     url = "https://remoteok.com/api"
     try:
         r = requests.get(url, headers=H, timeout=ctx.timeout)
-    except requests.exceptions.Timeout:
-        raise SourceError("timeout", f"RemoteOK timeout after {ctx.timeout}s", url=url)
+    except requests.exceptions.Timeout as e:
+        raise SourceError("timeout", f"RemoteOK timeout after {ctx.timeout}s", url=url) from e
     except requests.exceptions.ConnectionError as e:
-        raise SourceError("net", f"RemoteOK connection failed: {str(e)[:110]}", url=url)
+        raise SourceError("net", f"RemoteOK connection failed: {str(e)[:110]}", url=url) from e
     check_http(r, "remoteok", url)
     data = r.json()
     if not isinstance(data, list):
@@ -104,10 +104,10 @@ def fetch(ctx) -> list[Job]:
     url = "https://jobicy.com/api/v2/remote-jobs?count=50"
     try:
         r = requests.get(url, headers=H, timeout=ctx.timeout)
-    except requests.exceptions.Timeout:
-        raise SourceError("timeout", f"Jobicy timeout after {ctx.timeout}s", url=url)
+    except requests.exceptions.Timeout as e:
+        raise SourceError("timeout", f"Jobicy timeout after {ctx.timeout}s", url=url) from e
     except requests.exceptions.ConnectionError as e:
-        raise SourceError("net", f"Jobicy connection failed: {str(e)[:110]}", url=url)
+        raise SourceError("net", f"Jobicy connection failed: {str(e)[:110]}", url=url) from e
     check_http(r, "jobicy", url)
     jobs = r.json().get("jobs")
     if jobs is None:

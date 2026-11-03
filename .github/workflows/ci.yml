@@ -22,6 +22,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Lint (ruff baseline on live code)
+        run: |
+          pip install ruff
+          ruff check .
+
       - name: Network-layer unit tests (offline, 33 checks)
         run: python tests/test_net_resilience.py
 
@@ -43,8 +48,21 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-      - name: Fail if any network script can bypass the proxy pool
+      - name: Fail if any daily-chain network script can bypass the proxy pool
         run: |
-          ! grep -rn --include='*.py' -E 'requests\.(get|post|head)\(' scripts/ \
-            | grep -v net_resilience.py
-          grep -q 'allow_direct' scripts/net_resilience.py
+          # Scope: the strict no-direct contract covers the daily fetch chain --
+          # the same five files tests/e2e_test.py part A audits. The rest of
+          # scripts/ is frozen research evidence (mail ops, portal probes,
+          # sweeps) that legitimately talks to non-portal APIs and is out of
+          # scope. NOTE: the old `! grep ... | grep -v` form was a no-op under
+          # bash -e (a !-pipeline is errexit-exempt, so the step always passed)
+          # -- this form can actually fail.
+          cd scripts
+          if grep -nE 'requests\.(get|post|head)\(' \
+               net_resilience.py fetch_descriptions.py erlangen_all_portals.py \
+               commute_filter.py erlangen_pipeline.py \
+             | grep -v '^net_resilience\.py'; then
+            echo "::error::direct requests.* call found outside the proxy layer"
+            exit 1
+          fi
+          grep -q 'allow_direct' net_resilience.py

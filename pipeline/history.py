@@ -15,11 +15,13 @@ F6: sqlite_utils is imported LAZILY — a wiped dependency must not take the
 whole CLI down (fetch/sources/digest keep working without the memory).
 """
 from __future__ import annotations
-import json, os, sqlite3
-from datetime import datetime, timezone
 
+import json
+import os
+from datetime import datetime, timezone
 from pathlib import Path
-from pipeline.core import Job, title_key, norm_txt, canon_url
+
+from pipeline.core import Job, canon_url, norm_txt, title_key
 
 BASE = str(Path(__file__).resolve().parent.parent)  # repo root (clone-safe)
 DB_PATH = os.path.join(BASE, "data", "jobs_history.db")
@@ -58,11 +60,11 @@ def _db():
     global Database
     if "Database" not in globals() or Database is None:
         try:
-            from sqlite_utils import Database as _D   # F6: lazy import
-        except ImportError:
+            from sqlite_utils import Database as _D  # F6: lazy import
+        except ImportError as e:
             raise MemoryUnavailable(
                 "sqlite-utils missing — job memory unavailable; "
-                "fix: /home/z/.venv/bin/pip install -r requirements.txt")
+                "fix: /home/z/.venv/bin/pip install -r requirements.txt") from e
         Database = _D
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
     db = Database(DB_PATH)
@@ -128,8 +130,8 @@ def update(jobs: list[Job]) -> dict:
                 "city": rec["city"] or o.get("city") or "",
                 "plz": rec.get("plz") or o.get("plz") or "",
                 "is_remote": max(rec["is_remote"], o.get("is_remote") or 0),
-                "salary_min": rec["salary_min"] if rec["salary_min"] else o.get("salary_min"),
-                "salary_max": rec["salary_max"] if rec["salary_max"] else o.get("salary_max"),
+                "salary_min": rec["salary_min"] or o.get("salary_min"),
+                "salary_max": rec["salary_max"] or o.get("salary_max"),
                 "currency": rec["currency"] or o.get("currency") or "",
             })
             known += 1
@@ -158,8 +160,8 @@ def update(jobs: list[Job]) -> dict:
                         "junior_signal": rec["junior_signal"] or h.get("junior_signal") or "",
                         "ft_unknown": min(rec["ft_unknown"], h.get("ft_unknown") or 0),
                         "is_remote": max(rec["is_remote"], h.get("is_remote") or 0),
-                        "salary_min": rec["salary_min"] if rec["salary_min"] else h.get("salary_min"),
-                        "salary_max": rec["salary_max"] if rec["salary_max"] else h.get("salary_max"),
+                        "salary_min": rec["salary_min"] or h.get("salary_min"),
+                        "salary_max": rec["salary_max"] or h.get("salary_max"),
                         "currency": rec["currency"] or h.get("currency") or "",
                     })
                     known += 1
@@ -196,7 +198,7 @@ def stats() -> dict:
         "total": t.count,
         "first_seen_ever": (list(t.rows_where("1=1 ORDER BY first_seen LIMIT 1")) or
                             [{}])[0].get("first_seen", ""),
-        "seen_today": list(t.rows_where("last_seen = ?", [today], select="count(*) c"))[0]["c"],
+        "seen_today": next(iter(t.rows_where("last_seen = ?", [today], select="count(*) c")))["c"],
         "db_bytes": os.path.getsize(DB_PATH) if os.path.exists(DB_PATH) else 0,
     }
 
@@ -213,7 +215,8 @@ def cmd_history(args) -> int:
 def _cmd_history(args) -> int:
     if args.history_cmd == "update":
         src = args.infile or os.path.join(BASE, "download", "jobs_latest.json")
-        rows = json.load(open(src, encoding="utf-8"))
+        with open(src, encoding="utf-8") as f:
+            rows = json.load(f)
         jobs = [Job(source=r["source"], title=r["title"], company=r["company"],
                     city=r.get("city") or "", url=r.get("url") or "",
                     date_posted=r.get("date_posted") or "",

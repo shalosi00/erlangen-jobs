@@ -13,8 +13,6 @@ Requires curl_cffi (TLS fingerprint passes the WAF; plain requests gets 403).
 """
 from __future__ import annotations
 
-from datetime import datetime, timezone
-
 from pipeline.core import Job, SourceError, parse_date
 from pipeline.sources._base import register
 
@@ -39,7 +37,7 @@ def _cffi_get(ctx, url: str):
     try:
         r = cr.get(url, impersonate="chrome124", timeout=ctx.timeout, headers=HEADERS)
     except Exception as e:
-        raise SourceError("net", f"curl_cffi request failed: {type(e).__name__}: {str(e)[:90]}", url=url)
+        raise SourceError("net", f"curl_cffi request failed: {type(e).__name__}: {str(e)[:90]}", url=url) from e
     if r.status_code != 200:
         raise SourceError("waf" if r.status_code in (403, 429) else "http",
                           f"HTTP {r.status_code} from {url}", r.status_code, url, r.text[:160])
@@ -77,7 +75,7 @@ def fetch(ctx) -> list[Job]:
     try:
         model = r.json()["jobAdSearchResultModel"]
     except Exception as e:
-        raise SourceError("shape", f"unexpected API body: {e}", 200, url, r.text[:160])
+        raise SourceError("shape", f"unexpected API body: {e}", 200, url, r.text[:160]) from e
     jobs = []
     for a in model.get("jobAds", []):
         ja = a.get("jobAd") or {}

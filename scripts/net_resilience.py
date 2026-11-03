@@ -35,9 +35,17 @@ CLI:
 """
 from __future__ import annotations
 
-import argparse, json, os, random, re, sys, threading, time
+import argparse
+import contextlib
+import json
+import os
+import random
+import re
+import threading
+import time
 from collections import OrderedDict
 from concurrent.futures import ThreadPoolExecutor
+from typing import ClassVar
 
 import requests
 
@@ -49,7 +57,7 @@ HEALTH_FILE = os.path.join(WORK, "net_health.json")
 
 THROTTLE_CODES = {429, 403, 999}          # 999 = linkedin-specific deny
 PERMANENT_CODES = {404, 410}              # never retry
-RE_UA = re.compile(r"^(Mozilla|Opera)", re.I)
+RE_UA = re.compile(r"^(Mozilla|Opera)", re.IGNORECASE)
 
 # ------------------------------------------------------------------ UA rotation
 _UAS = [
@@ -57,15 +65,19 @@ _UAS = [
      '"Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"'),
     ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
      '"Google Chrome";v="126", "Chromium";v="126", "Not_A Brand";v="24"'),
-    ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+    (("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+     "(KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"),
      '"Google Chrome";v="130", "Chromium";v="130", "Not_A Brand";v="24"'),
     ("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0", None),
-    ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15", None),
-    ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0",
+    (("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 "
+     "(KHTML, like Gecko) Version/17.6 Safari/605.1.15"), None),
+    (("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+     "Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"),
      '"Microsoft Edge";v="131", "Chromium";v="131", "Not_A Brand";v="24"'),
     ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
      '"Google Chrome";v="128", "Chromium";v="128", "Not_A Brand";v="24"'),
-    ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36",
+    (("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) "
+     "Chrome/129.0.0.0 Safari/537.36"),
      '"Google Chrome";v="129", "Chromium";v="129", "Not_A Brand";v="24"'),
 ]
 
@@ -108,8 +120,18 @@ class UARotator:
 
 # ------------------------------------------------------------------ proxy pool
 class _Entry:
-    __slots__ = ("url", "ok", "fail", "bans", "consec", "cool_until",
-                 "retired", "last_used", "latency", "created")
+    __slots__ = (
+        "bans",
+        "consec",
+        "cool_until",
+        "created",
+        "fail",
+        "last_used",
+        "latency",
+        "ok",
+        "retired",
+        "url",
+    )
 
     def __init__(self, url):
         self.url, self.ok, self.fail, self.bans = url, 0, 0, 0
@@ -170,10 +192,11 @@ class ProxyPool:
             self.add(p)
         if os.path.exists(PROXY_FILE):
             try:
-                for line in open(PROXY_FILE, encoding="utf-8"):
-                    line = line.strip()
-                    if line and not line.startswith("#"):
-                        self.add(line)
+                with open(PROXY_FILE, encoding="utf-8") as f:
+                    for raw in f:
+                        line = raw.strip()
+                        if line and not line.startswith("#"):
+                            self.add(line)
             except Exception as e:
                 self.log(f"[pool] proxy file unreadable: {e}")
         n = self.healthy_count()
@@ -188,7 +211,9 @@ class ProxyPool:
     def _load_state(self):
         if self.state_file and os.path.exists(self.state_file):
             try:
-                for d in json.load(open(self.state_file)).values():
+                with open(self.state_file, encoding="utf-8") as f:
+                    state = json.load(f)
+                for d in state.values():
                     if d.get("retired"):
                         continue                       # drop dead history
                     if d.get("ok", 0) == 0 and d.get("fail", 0) > 0:
@@ -307,7 +332,7 @@ class ProxyPool:
         with self.lock:
             e = self.entries.get(url)
             if e is None:
-                e = self.add(url) and self.entries[url] or _Entry(url)
+                e = (self.add(url) and self.entries[url]) or _Entry(url)
                 self.entries[url] = e
             now = time.time()
             e.last_used = now
@@ -377,7 +402,7 @@ class ProxyPool:
         self.log(f"[pool] validation done: {good}/{len(urls)} healthy")
         return good
 
-    HARVEST_URLS = [
+    HARVEST_URLS: ClassVar[list] = [
         "https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=8000",
         "https://proxy-list.download/api/v1/get?type=http",
         "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt",
@@ -510,11 +535,9 @@ class AdaptivePacer:
                 cool = min(self.cool_max,
                            self.cool_base * (2 ** (c["consec_throttle"] - 1)))
                 if retry_after:
-                    try:
+                    with contextlib.suppress(TypeError, ValueError):
                         cool = max(cool, min(float(int(retry_after)),
                                              self.cool_max))
-                    except (TypeError, ValueError):
-                        pass
                 c["cool_until"] = max(c["cool_until"], now + cool)
             elif ok:
                 c["oks"] += 1
@@ -673,7 +696,8 @@ def health_dump(extra=None):
              "pacer": _GLOBAL_PACER.snapshot()}
         if extra:
             d.update(extra)
-        json.dump(d, open(HEALTH_FILE, "w"), indent=1)
+        with open(HEALTH_FILE, "w", encoding="utf-8") as f:
+            json.dump(d, f, indent=1)
     except Exception:
         pass
 
@@ -698,7 +722,7 @@ def _cli():
     os.environ.pop("ERL_ALLOW_DIRECT", None)
     if a.allow_direct:
         os.environ["ERL_ALLOW_DIRECT"] = "1"
-    pool, pacer = build(log=print)
+    pool, _pacer = build(log=print)
     if a.cmd == "harvest":
         n = pool.harvest(min_healthy=a.min)
         print(f"healthy after harvest: {n}")

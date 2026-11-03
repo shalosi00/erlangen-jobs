@@ -794,3 +794,50 @@ Stage Summary:
 - Next: reinstall /home/z/.venv proxyfetch from tools/proxyfetch-src after the next sandbox
   wipe (§2 recipe, now v0.4.0); consider LIGHTPANDA_CDP=off when the binary is absent so
   proxyfetch degrades to plain-HTTP + cloakbrowser-if-installed.
+
+## 2026-11-03 — Maintenance sweep: fix all problems, lint baseline, v1.1.1 (user: "fix all proxyfetch and erlangen-jobs problems and commit and make them latest default versions")
+- CI-RED bug fixed: tests/e2e_test.py asserted a hard "freshness floor 1,300 rows" against the
+  BUNDLED 2026-10-17/18 raw sweep, which ages out BY DESIGN (--fresh-days 30, observed
+  30-35 rows/day) — the floor rotted (872 rows on 11-03) and broke CI for no pipeline reason.
+  Now decay-aware: floor = 1413 - 45/day since the cut, skipped with an honest message once
+  the snapshot is exhausted (~11-17); new proportional check "geo stage keeps a sane share
+  of the master" (final >= 50% of master) guards the geo filter independent of snapshot age.
+  Part D (live) got the same decay logic. Re-baseline any time with a fresh --sweep.
+- Portability bug fixed: tests/test_dedupe.py, test_filters.py, test_geo.py, test_history.py
+  hardcoded sys.path.insert(0, "/home/z/my-project") — direct execution failed on EVERY
+  machine (verified: ModuleNotFoundError before the fix). Now derive the repo root from
+  __file__; all five suites pass BOTH as `python tests/<x>.py` and via unittest discovery.
+- Lint baseline established (ruff.toml): live code only (pipeline/**, tests/**, 7 core
+  scripts — research/probe evidence stays frozen, never "cleaned up"). Documented,
+  deliberate ignores: BLE001/S110/S112 (best-effort source isolation BY DESIGN), UP017
+  (Python 3.9 floor), G003/G004 (print-style logging), PLW0603 (module-state singletons),
+  E402 (sys.path bootstrap convention), RUF001/RUF002 (German en-dashes are real data;
+  filter regexes intentionally match [-u2013]); F811 per-file in pipeline/sources/*
+  (the register-and-redefine pattern is the design). 300+ findings resolved for real:
+  35x raise ... from (typed SourceError chaining), 60x dict() -> {}, 41x import sorting,
+  27x re.S/re.I -> re.DOTALL/re.IGNORECASE, 22x open() with-context-managers, 27x long-line
+  wraps, 11x shebang chmod +x, 5x ambiguous l/I renames, 4x ClassVar annotations,
+  3x explicit subprocess check=False, 2x loop-var overwrite renames, rss_apis lambda-in-loop
+  B023 bound explicitly, sources/__init__ re-export markers + __all__.
+- CI guard was a NO-OP (found while checking github actions history: the last 5 main runs all
+  concluded FAILURE — the test job at the rotted e2e floor, exactly as above). The
+  strict-no-ip-audit step used `! grep ... | grep -v ...` under bash -e -o pipefail: a
+  !-pipeline is errexit-exempt, so its failure was swallowed and the step could NEVER fail
+  (reproduced locally: always exit 0). Fixed in .github/workflows/ci.yml: the audit is now
+  scoped to the five daily-chain network files (same files e2e part A audits — frozen
+  research evidence like mail ops/probes legitimately talks to non-portal APIs and is out
+  of scope), written as `if grep ...; then exit 1; fi` so it actually fires. Verified:
+  passes on the clean tree, exit 1 on a planted violation. Added a ruff lint step to the
+  test job to guard the new baseline.
+- Test evidence after the sweep: net_resilience 33/33 PASS, build_map 21/21 PASS, e2e A-C
+  13/13 PASS (was 11/12 with the rotted floor FAILING), all 5 unittest suites OK, CI map
+  smoke OK (1,413 jobs, 769 pins), LIVE fetch re-verified (BA 43 raw -> 19 kept 38s, EURES
+  100 raw OK 11s, dedupe/filters/output/job-memory all green) — strict no-direct invariant
+  untouched (audit steps A/B green).
+- Hygiene: data/work_e2e/ gitignored (regenerable e2e workspace); tracked data artifacts
+  (jobs_history.db, jobs_latest.csv/json) restored to HEAD so the commit is pure code;
+  ad-hoc validation fetch outputs removed.
+- proxyfetch (github.com/shalosi00/proxyfetch) v0.4.1 pushed in the same maintenance sweep:
+  explicit [tool.ruff] baseline, 111 findings resolved, Logger.warn -> Logger.warning
+  (warn alias kept for library API), raise ... from on config errors, 113/113 tests,
+  live smoke green (books.toscrape CSS extraction, 20 items, direct fast path).

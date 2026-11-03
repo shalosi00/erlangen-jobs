@@ -1,0 +1,46 @@
+# Lint baseline for the LIVE code of this repo (pipeline CLI, tests, and the
+# core pipeline scripts). The bulk of scripts/ and research/ is frozen probe
+# /sweep evidence from the research rounds — it is deliberately NOT linted;
+# do not "clean up" evidence files.
+#
+# Deliberate exceptions (decisions, not accidents):
+#   * F811 in pipeline/sources/*.py: `fetch` is REDEFINED per source on
+#     purpose — every definition registers itself via @register(...) first;
+#     the catalog keeps the functions, the module name is just a slot.
+#   * blind-except (BLE001) / except-pass (S110/S112): the fetch pipeline is
+#     best-effort BY DESIGN — "every source is isolated; one broken source
+#     must never kill the run." Failures surface as typed errors
+#     (auth/waf/http/parse/shape/timeout/net) + the summary table.
+#   * UP017 (datetime.UTC alias): repo floor is Python 3.9 (see setup.sh);
+#     the timezone.utc spelling stays until the floor moves to 3.11+.
+#   * G003/G004 (lazy %-interpolation in logging): this pipeline logs via
+#     print()/custom formatting, not stdlib logging.
+#   * PLW0603 (global statement): the core modules keep deliberate module-level
+#     state (proxy pool, geocode cache, geo pool, checkpoint, DB handle) — the
+#     singleton-through-module-attribute pattern is the tested design of the
+#     net layer (33 unit tests); converting to class state is risk without gain.
+#   * E402 (import not at top): scripts/ and tests/ bootstrap sys.path to the
+#     repo root BEFORE importing pipeline — imports after that are structural.
+#   * RUF001/RUF002 (ambiguous unicode): German job postings legitimately use
+#     en-dashes („450 – €", Bamberg–Erlangen–Nürnberg) and filter regexes
+#     intentionally match both dash forms — not ambiguous to us.
+target-version = "py39"
+line-length = 120
+include = [
+    "pipeline/**/*.py",
+    "tests/**/*.py",
+    "scripts/net_resilience.py",
+    "scripts/erlangen_pipeline.py",
+    "scripts/merge_erlangen.py",
+    "scripts/commute_filter.py",
+    "scripts/fetch_descriptions.py",
+    "scripts/erlangen_all_portals.py",
+    "scripts/build_map.py",
+]
+
+[lint]
+select = ["E", "W", "F", "I", "UP", "B", "SIM", "RUF", "G", "FURB", "PLW", "EXE", "ISC", "C4"]
+ignore = ["BLE001", "S110", "S112", "UP017", "G003", "G004", "PLW0603", "E402", "RUF001", "RUF002"]
+
+[lint.per-file-ignores]
+"pipeline/sources/*.py" = ["F811"]

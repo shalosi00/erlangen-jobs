@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Offline unit tests for build_companies_map.py (parse, dedupe, adapter,
 employer matching, bbox). Run: python3 tests/test_companies_map.py"""
-import os, sys, unittest
+import os
+import sys
+import unittest
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(BASE, "scripts"))
@@ -22,7 +24,8 @@ class TestCorridorBbox(unittest.TestCase):
 
     def test_bbox_is_sane(self):
         s, w, n, e = bcm.corridor_bbox()
-        self.assertLess(s, n); self.assertLess(w, e)
+        self.assertLess(s, n)
+        self.assertLess(w, e)
 
 
 class TestParseCompanies(unittest.TestCase):
@@ -32,7 +35,8 @@ class TestParseCompanies(unittest.TestCase):
                          "addr:street": "Werner-von-Siemens-Str.",
                          "addr:housenumber": "1", "addr:city": "Erlangen"}}]
         cs, dropped = bcm.parse_companies(els)
-        self.assertEqual(len(cs), 1); self.assertEqual(dropped, 0)
+        self.assertEqual(len(cs), 1)
+        self.assertEqual(dropped, 0)
         c = cs[0]
         self.assertEqual(c["n"], "Siemens AG")
         self.assertEqual(c["k"], "office")
@@ -42,7 +46,8 @@ class TestParseCompanies(unittest.TestCase):
         els = [{"type": "N", "id": 2, "lat": 49.5, "lon": 11.0,
                 "tags": {"office": "company"}}]
         cs, dropped = bcm.parse_companies(els)
-        self.assertEqual(len(cs), 0); self.assertEqual(dropped, 1)
+        self.assertEqual(len(cs), 0)
+        self.assertEqual(dropped, 1)
 
     def test_categories(self):
         def el(i, tags):
@@ -64,7 +69,8 @@ class TestParseCompanies(unittest.TestCase):
                {"type": "W", "id": 2, "lat": 49.5004, "lon": 11.0004,
                 "tags": {"name": "Alpha GmbH", "office": "company"}}]
         cs, dropped = bcm.parse_companies(els)
-        self.assertEqual(len(cs), 1); self.assertEqual(dropped, 1)
+        self.assertEqual(len(cs), 1)
+        self.assertEqual(dropped, 1)
 
     def test_keeps_same_name_far_apart(self):
         els = [{"type": "N", "id": 1, "lat": 49.50, "lon": 11.00,
@@ -86,7 +92,8 @@ class TestFeatureAdapter(unittest.TestCase):
         els = bcm.features_to_elements([f])
         self.assertEqual(len(els), 1)
         e = els[0]
-        self.assertEqual(e["lat"], 49.588); self.assertEqual(e["lon"], 11.007)
+        self.assertEqual(e["lat"], 49.588)
+        self.assertEqual(e["lon"], 11.007)
         self.assertEqual(e["tags"]["office"], "company")
         self.assertEqual(e["tags"]["addr:street"], "Dr.-Gustav-Heinemann-Str.")
 

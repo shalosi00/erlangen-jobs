@@ -1,10 +1,13 @@
 """Bundesagentur für Arbeit Jobsuche v6 — the authoritative German source.
 Public static key (jobboerse-jobsuche), angebotsart=1 (SV-pflichtig, excludes
 Ausbildung server-side), pav=false (excludes agencies), exact km radius."""
-import base64, time
+import base64
+import time
+
 import requests
+
 from pipeline.core import Job, SourceError, strip_html
-from pipeline.sources._base import register, check_http
+from pipeline.sources._base import check_http, register
 
 H = {"X-API-Key": "jobboerse-jobsuche", "User-Agent": "asha-jobtoolkit/1.0"}
 BASE = "https://rest.arbeitsagentur.de/jobboerse/jobsuche-service"
@@ -17,16 +20,16 @@ def fetch(ctx) -> list[Job]:
                f"&veroeffentlichtseit={ctx.days}&angebotsart=1&pav=false&size=100&page={page}")
         try:
             r = requests.get(url, headers=H, timeout=ctx.timeout)
-        except requests.exceptions.Timeout:
-            raise SourceError("timeout", f"BA v6 list timeout after {ctx.timeout}s", url=url)
+        except requests.exceptions.Timeout as e:
+            raise SourceError("timeout", f"BA v6 list timeout after {ctx.timeout}s", url=url) from e
         except requests.exceptions.ConnectionError as e:
-            raise SourceError("net", f"BA v6 connection failed: {str(e)[:120]}", url=url)
+            raise SourceError("net", f"BA v6 connection failed: {str(e)[:120]}", url=url) from e
         check_http(r, "ba", url)
         try:
             data = r.json()
         except Exception as e:
             raise SourceError("parse", f"BA v6 non-JSON body ({str(e)[:80]})", http_status=200, url=url,
-                              detail=r.text[:200])
+                              detail=r.text[:200]) from e
         sts = data.get("ergebnisliste")
         if sts is None:
             raise SourceError("shape", "BA v6: key 'ergebnisliste' missing — API contract changed",
@@ -46,7 +49,9 @@ def fetch(ctx) -> list[Job]:
                 date_posted=(s.get("datumErsteVeroeffentlichung")
                              or (s.get("veroeffentlichungszeitraum") or {}).get("von") or "")[:10],
                 url="https://www.arbeitsagentur.de/jobsuche/jobdetail/" + refnr,
-                employment_raw="Vollzeit" if s.get("arbeitszeitVollzeit") else "Teilzeit" if s.get("arbeitszeitTeilzeit") else "",
+                employment_raw=("Vollzeit" if s.get("arbeitszeitVollzeit")
+                                else "Teilzeit" if s.get("arbeitszeitTeilzeit")
+                                else ""),
                 external_id=refnr,
                 notes=f"{s.get('entfernung','')}km" if s.get("entfernung") else "",
             )

@@ -1,36 +1,39 @@
 """RSS sources: We Work Remotely (DevOps/Sysadmin + Programming), Himalayas.
 Remote/global — geo + keyword filter client-side. Parse via stdlib xml.etree."""
-import re, time
+import time
 import xml.etree.ElementTree as ET
+
 import requests
+
 from pipeline.core import Job, SourceError, strip_html
-from pipeline.sources._base import register, check_http
+from pipeline.sources._base import check_http, register
 
 H = {"User-Agent": "asha-jobtoolkit/1.0"}
 
 def _parse_rss(url: str, ctx) -> list:
     try:
         r = requests.get(url, headers=H, timeout=ctx.timeout)
-    except requests.exceptions.Timeout:
-        raise SourceError("timeout", f"RSS timeout after {ctx.timeout}s: {url}", url=url)
+    except requests.exceptions.Timeout as e:
+        raise SourceError("timeout", f"RSS timeout after {ctx.timeout}s: {url}", url=url) from e
     except requests.exceptions.ConnectionError as e:
-        raise SourceError("net", f"RSS connection failed: {str(e)[:110]}", url=url)
+        raise SourceError("net", f"RSS connection failed: {str(e)[:110]}", url=url) from e
     check_http(r, "rss", url)
     try:
         root = ET.fromstring(r.content)
     except ET.ParseError as e:
         raise SourceError("parse", f"RSS XML invalid: {e}", http_status=200, url=url,
-                          detail=r.text[:200])
+                          detail=r.text[:200]) from e
     items = root.findall(".//item")
     out = []
     for it in items:
-        get = lambda tag: (it.findtext(tag) or "").strip()
-        out.append(dict(
-            title=get("title"), company="", url=get("link"),
-            date=(get("pubDate") or "")[:25],
-            desc=strip_html(get("description"))[:4000],
-            cats=",".join(e.text or "" for e in it.findall("category")),
-        ))
+        def get(tag, _it=it):  # bind the loop var explicitly (B023-safe)
+            return (_it.findtext(tag) or "").strip()
+        out.append({
+            "title": get("title"), "company": "", "url": get("link"),
+            "date": (get("pubDate") or "")[:25],
+            "desc": strip_html(get("description"))[:4000],
+            "cats": ",".join(e.text or "" for e in it.findall("category")),
+        })
     return out
 
 def _pubdate_to_iso(s: str) -> str:

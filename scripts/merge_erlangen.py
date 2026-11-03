@@ -8,7 +8,12 @@ Sources:
 Dedupe key: (title, company, location, url). Records with description win.
 Output: download/erlangen_master_<stamp>.csv/.json + stats print.
 """
-import json, glob, os, re, sys
+import glob
+import json
+import os
+import re
+import sys
+
 import pandas as pd
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -70,7 +75,8 @@ RAW = os.path.join(os.path.dirname(OUT), "data", "raw") if OUT.endswith("downloa
 sweep_files = sorted(glob.glob(f"{RAW}/erlangen_ALL_portals_*.json") +
                      glob.glob(f"{OUT}/erlangen_ALL_portals_*.json"))
 if sweep_files:
-    data = json.load(open(sweep_files[-1]))
+    with open(sweep_files[-1], encoding="utf-8") as f:
+        data = json.load(f)
     for r in data:
         add(r, "jobspy-" + str(r.get("source_site") or r.get("site") or "?"))
     print(f"sweep file: {os.path.basename(sweep_files[-1])} -> {len(data)} rows")
@@ -88,25 +94,28 @@ if prev and os.path.exists(prev):
     print(f"prev scan: {len(df)} rows -> {n} added")
 
 # 3) interamt (career-ops pipeline.md rows, region-filtered)
-REGION = re.compile(r"Erlangen|Nürnberg|Nurnberg|Fürth|Bamberg|Bayreuth|Herzogenaurach|Schwabach|Ansbach|Lauf an der|Forchheim|Höchstadt", re.I)
+REGION = re.compile(r"Erlangen|Nürnberg|Nurnberg|Fürth|Bamberg|Bayreuth|"
+                    r"Herzogenaurach|Schwabach|Ansbach|Lauf an der|Forchheim|Höchstadt",
+                    re.IGNORECASE)
 pm = os.path.join(BASE_DIR, "data", "interamt_pipeline.md")
 n = 0
 if os.path.exists(pm):
-    for line in open(pm):
-        line = line.strip()
-        m = re.match(r"^- \[.\]\s*(https?://\S+)\s*\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)", line)
-        if not m:
-            continue
-        url, company, title, loc = (g.strip() for g in m.groups())
-        if not REGION.search(loc):
-            continue
-        posted = None
-        pm2 = re.search(r"posted:\s*(\d{4}-\d{2}-\d{2})", line)
-        if pm2:
-            posted = pm2.group(1)
-        if add({"title": title, "company": company, "location": loc, "job_url": url,
-                "description": None, "date_posted": posted}, "interamt"):
-            n += 1
+    with open(pm, encoding="utf-8") as f:
+        for raw in f:
+            line = raw.strip()
+            m = re.match(r"^- \[.\]\s*(https?://\S+)\s*\|\s*([^|]+)\|\s*([^|]+)\|\s*([^|]+)", line)
+            if not m:
+                continue
+            url, company, title, loc = (g.strip() for g in m.groups())
+            if not REGION.search(loc):
+                continue
+            posted = None
+            pm2 = re.search(r"posted:\s*(\d{4}-\d{2}-\d{2})", line)
+            if pm2:
+                posted = pm2.group(1)
+            if add({"title": title, "company": company, "location": loc, "job_url": url,
+                    "description": None, "date_posted": posted}, "interamt"):
+                n += 1
 print(f"interamt (region-filtered from pipeline.md): {n} added")
 
 # Save master
@@ -123,12 +132,14 @@ if not NO_PREFILTER and prefilter_jobs:
     print(f"   (Junior-Ausnahme behielt {pf['kept_by_junior_exception']}, "
           f"FP-Guard behielt {pf['kept_by_fp_guard']})")
     rj = f"{OUT}/erlangen_master_{stamp}_prefilter_rejected.json"
-    json.dump(rejected, open(rj, "w"), default=str, ensure_ascii=False, indent=1)
+    with open(rj, "w", encoding="utf-8") as f:
+        json.dump(rejected, f, default=str, ensure_ascii=False, indent=1)
     print(f"   rejected audit: {rj}")
 
 mj = f"{OUT}/erlangen_master_{stamp}.json"
 mc = f"{OUT}/erlangen_master_{stamp}.csv"
-json.dump(rows, open(mj, "w"), default=str, ensure_ascii=False)
+with open(mj, "w", encoding="utf-8") as f:
+    json.dump(rows, f, default=str, ensure_ascii=False)
 pd.DataFrame(rows).to_csv(mc, index=False)
 
 print(f"\nMASTER (vorgefiltert): {len(rows)} unique jobs")
@@ -144,6 +155,7 @@ for p, c in sorted(by.items(), key=lambda x: -x[1]):
 dup_hits = {k: v for k, v in stats.items() if v}
 print(f"\ncross-source overlaps absorbed: {dup_hits}")
 
-with_sal = sum(1 for r in rows if r.get("salary_min_amount") or r.get("salary_max_amount") or r.get("min_amount") or r.get("max_amount"))
+with_sal = sum(1 for r in rows if r.get("salary_min_amount") or r.get("salary_max_amount")
+                or r.get("min_amount") or r.get("max_amount"))
 remote = sum(1 for r in rows if str(r.get("is_remote") or "").lower() in ("true", "1"))
 print(f"with salary: {with_sal} | remote-flagged: {remote}")

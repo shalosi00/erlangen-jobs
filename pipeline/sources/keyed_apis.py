@@ -3,10 +3,10 @@
   jooble    JOOBLE_API_KEY                   jooble.org/api
   careerjet CAREERJET_AFFID                  careerjet.com/partners/api
   whatjobs  WHATJOBS_PUBLISHER_KEY           whatjobs affiliate program"""
-import time
 import requests
+
 from pipeline.core import Job, SourceError, strip_html
-from pipeline.sources._base import register, check_http
+from pipeline.sources._base import check_http, register
 
 H = {"User-Agent": "asha-jobtoolkit/1.0"}
 
@@ -23,10 +23,10 @@ def fetch(ctx) -> list[Job]:
            f"&max_days_old={ctx.days}&results_per_page=50")
     try:
         r = requests.get(url, headers=H, timeout=ctx.timeout)
-    except requests.exceptions.Timeout:
-        raise SourceError("timeout", f"Adzuna timeout after {ctx.timeout}s", url="api.adzuna.com")
+    except requests.exceptions.Timeout as e:
+        raise SourceError("timeout", f"Adzuna timeout after {ctx.timeout}s", url="api.adzuna.com") from e
     except requests.exceptions.ConnectionError as e:
-        raise SourceError("net", f"Adzuna connection failed: {str(e)[:110]}", url="api.adzuna.com")
+        raise SourceError("net", f"Adzuna connection failed: {str(e)[:110]}", url="api.adzuna.com") from e
     check_http(r, "adzuna", "api.adzuna.com/v1/api/jobs/de/search")
     out = []
     for j in r.json().get("results", []):
@@ -54,10 +54,10 @@ def fetch(ctx) -> list[Job]:
     body = {"keywords": ctx.query, "location": ctx.city, "page": 1}
     try:
         r = requests.post(url, json=body, headers=H, timeout=ctx.timeout)
-    except requests.exceptions.Timeout:
-        raise SourceError("timeout", f"Jooble timeout after {ctx.timeout}s", url="jooble.org/api")
+    except requests.exceptions.Timeout as e:
+        raise SourceError("timeout", f"Jooble timeout after {ctx.timeout}s", url="jooble.org/api") from e
     except requests.exceptions.ConnectionError as e:
-        raise SourceError("net", f"Jooble connection failed: {str(e)[:110]}", url="jooble.org/api")
+        raise SourceError("net", f"Jooble connection failed: {str(e)[:110]}", url="jooble.org/api") from e
     if r.status_code in (403, 404):
         raise SourceError("auth", f"Jooble rejected key (HTTP {r.status_code}) — check JOOBLE_API_KEY",
                           r.status_code, url, r.text[:150])
@@ -87,11 +87,11 @@ def fetch(ctx) -> list[Job]:
            f"keywords={ctx.query}&location={ctx.city}&locale_code=de_DE&affid={affid}")
     try:
         r = requests.get(url, headers=H, timeout=ctx.timeout)
-    except requests.exceptions.Timeout:
-        raise SourceError("timeout", "Careerjet timeout", url="public.api.careerjet.net")
+    except requests.exceptions.Timeout as e:
+        raise SourceError("timeout", "Careerjet timeout", url="public.api.careerjet.net") from e
     except requests.exceptions.ConnectionError as e:
         raise SourceError("net", f"Careerjet unreachable from this network (known DC block): {str(e)[:90]}",
-                          url="public.api.careerjet.net")
+                          url="public.api.careerjet.net") from e
     check_http(r, "careerjet", "public.api.careerjet.net/v4/search")
     data = r.json()
     if data.get("type") == "ERROR":
@@ -122,10 +122,10 @@ def fetch(ctx) -> list[Job]:
            f"&user_ip=127.0.0.1&user_agent=asha&keyword={ctx.query}&location={ctx.city}")
     try:
         r = requests.get(url, headers=H, timeout=ctx.timeout)
-    except requests.exceptions.Timeout:
-        raise SourceError("timeout", "WhatJobs timeout", url="api.whatjobs.com")
+    except requests.exceptions.Timeout as e:
+        raise SourceError("timeout", "WhatJobs timeout", url="api.whatjobs.com") from e
     except requests.exceptions.ConnectionError as e:
-        raise SourceError("net", f"WhatJobs connection failed: {str(e)[:110]}", url="api.whatjobs.com")
+        raise SourceError("net", f"WhatJobs connection failed: {str(e)[:110]}", url="api.whatjobs.com") from e
     if r.status_code in (401, 403, 410):
         raise SourceError("auth", f"WhatJobs rejected credentials (HTTP {r.status_code})",
                           r.status_code, url, r.text[:150])

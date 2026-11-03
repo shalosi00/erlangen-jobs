@@ -4,20 +4,23 @@ fetch  — run all (or selected) live sources, apply hard filters, dedupe, write
          CSV+JSON+rejected-audit + a run log. Exit 0 if >=1 source OK, 2 if all failed.
 sources— print the full aggregator catalog (55+ sources) with status/access method.
 """
-import argparse, os, sys, time, traceback, re, json
+import argparse
+import json
+import os
+import re
+import sys
+import time
+import traceback
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import asdict
 from datetime import datetime, timedelta, timezone
-
-from pipeline.core import (FetchCtx, Job, SourceResult, SourceError, classify_job,
-                           dedupe, write_outputs, norm_txt)
-from pipeline.sources import SOURCES, GEO_SCOPE, RUN_ORDER
-from pipeline import catalog
-from pipeline import geo
-from pipeline import history as history_mod
-from pipeline import digest as digest_mod
-
 from pathlib import Path
+
+from pipeline import catalog, geo
+from pipeline import digest as digest_mod
+from pipeline import history as history_mod
+from pipeline.core import FetchCtx, Job, SourceError, SourceResult, classify_job, dedupe, write_outputs
+from pipeline.sources import GEO_SCOPE, RUN_ORDER, SOURCES
 
 # Repo root derived from this file (pipeline/ lives one level below) — works
 # for the deployment sandbox AND for fresh clones (a hardcoded /home/z/... made
@@ -64,7 +67,8 @@ def run_fetch(args):
     os.makedirs(LOG_DIR, exist_ok=True)
     ts = datetime.now().strftime("%Y%m%d-%H%M%S")
     log_path = f"{LOG_DIR}/pipeline_run_{ts}.log"
-    logf = open(log_path, "w", encoding="utf-8")
+    # held open for the whole run; every log line appends via log()
+    logf = open(log_path, "w", encoding="utf-8")  # noqa: SIM115
 
     def log(msg):
         logf.write(msg + "\n")
@@ -289,7 +293,8 @@ def write_manifest(ts, ctx, results, slug, out_paths, n_final, n_rejected, displ
     try:
         import subprocess
         head = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=BASE,
-                              capture_output=True, text=True, timeout=5).stdout.strip()
+                              capture_output=True, text=True, timeout=5,
+                              check=False).stdout.strip()
     except Exception:
         head = ""
     try:
@@ -365,7 +370,7 @@ def main(argv=None):
     args = ap.parse_args(argv)
     if getattr(args, "no_geo", False):
         global GEO_SCOPE
-        GEO_SCOPE = {k: "query" for k in GEO_SCOPE}   # disable client geo filter
+        GEO_SCOPE = dict.fromkeys(GEO_SCOPE, "query")   # disable client geo filter
     return args.func(args)
 
 if __name__ == "__main__":

@@ -9,8 +9,13 @@ Anything ambiguous is KEPT but flagged (ft_unknown) so the CSV stays filterable
 instead of silently dropping rows that lack a description.
 """
 from __future__ import annotations
-import csv, html, json, re, time, unicodedata
-from dataclasses import dataclass, field, asdict
+
+import csv
+import html
+import json
+import re
+import unicodedata
+from dataclasses import asdict, dataclass, field
 from datetime import datetime, timedelta, timezone
 
 # ---------------------------------------------------------------- models ----
@@ -27,7 +32,7 @@ class FetchCtx:
     max_pages: int = 2
     max_per_source: int = 200
     keys: dict = field(default_factory=dict)   # API keys from env
-    near_re: "re.Pattern" = None               # 50-km whitelist (compiled)
+    near_re: re.Pattern = None               # 50-km whitelist (compiled)
     cutoff: str = ""                            # ISO date cutoff
 
 @dataclass
@@ -86,13 +91,13 @@ def norm_txt(s: str) -> str:
     if not s:
         return ""
     s = unicodedata.normalize("NFKD", s)
-    s = re.sub(r"\(m/w/d\)|\(m/w/x\)|\(d/m/w\)|\(w/m/d\)|\(m/w\)", " ", s, flags=re.I)
+    s = re.sub(r"\(m/w/d\)|\(m/w/x\)|\(d/m/w\)|\(w/m/d\)|\(m/w\)", " ", s, flags=re.IGNORECASE)
     s = re.sub(r"[^a-z0-9äöüß ]", " ", s.lower())
     return re.sub(r"\s+", " ", s).strip()
 
 # internal posting reference numbers agencies re-print in titles ("... ID 7285",
 # "... ID SW72", "Ref-Nr: ABC123") -> stripped for dedupe comparison only
-_REF_RX = re.compile(r"\b(id|ref\.?(?:-?nr)?|job-?id|referenz)\b\s*[:#]?\s*[\w-]+", re.I)
+_REF_RX = re.compile(r"\b(id|ref\.?(?:-?nr)?|job-?id|referenz)\b\s*[:#]?\s*[\w-]+", re.IGNORECASE)
 
 def title_key(title: str) -> str:
     """Normalized title WITHOUT agency reference IDs (dedupe-only key)."""
@@ -235,9 +240,7 @@ def classify_job(j: Job) -> tuple[bool, str]:
             else:
                 return False, "experience(desc)"
     # 4) full-time only: confirm via structured field or description
-    if re.search(r"(?i)vollzeit|full", j.employment_raw or ""):
-        pass
-    elif has_vz_desc:
+    if re.search(r"(?i)vollzeit|full", j.employment_raw or "") or has_vz_desc:
         pass
     elif has_tz_desc and has_vz_desc:
         pass  # offers both; FT available
@@ -385,7 +388,8 @@ def days_old(j: Job) -> str:
         return ""
 
 def write_outputs(kept: list[Job], rejected: list, out_dir: str, slug: str, quiet=False):
-    import os, shutil
+    import os
+    import shutil
     os.makedirs(out_dir, exist_ok=True)
     ts = datetime.now().strftime("%Y%m%d-%H%M")
     base = f"{out_dir}/jobs_{slug}_{ts}"
